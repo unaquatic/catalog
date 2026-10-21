@@ -9,6 +9,7 @@
 // -providers names: "listed" keeps the providers the rules list.
 //
 //	go run ./cmd/catalog build -o catalog.json
+//	go run ./cmd/catalog build -save-upstream models-dev.json -o catalog.json   # as go generate ./data/ does
 //	go run ./cmd/catalog build -providers listed -o catalog-listed.json
 //	go run ./cmd/catalog build -rules my-rules.json -notes
 //	go run ./cmd/catalog build -in catalog-models-dev.json -providers anthropic,openai,vercel -notes
@@ -18,6 +19,7 @@
 package main
 
 import (
+	"bytes"
 	"context"
 	"encoding/json"
 	"flag"
@@ -79,6 +81,9 @@ type BuildOptions struct {
 	Out string
 	// Notes lists every note of the report, not only how many there are.
 	Notes bool
+	// Upstream is a file to write models.dev's catalog.json to, as Indent
+	// writes it, or "" for none.
+	Upstream string
 }
 
 var buildCmd = &cmdline.Command[BuildOptions]{
@@ -90,6 +95,7 @@ var buildCmd = &cmdline.Command[BuildOptions]{
 		fs.StringVar(&o.Out, "out", "", out)
 		fs.StringVar(&o.Out, "o", "", out)
 		fs.BoolVar(&o.Notes, "notes", false, "List the tier offerings and every note of the mapping")
+		fs.StringVar(&o.Upstream, "save-upstream", "", "Write models.dev's catalog.json to `file` too, indented with its keys sorted")
 	},
 	Exclusive: [][]string{{"source", "in"}},
 	Run: func(ctx context.Context, o BuildOptions, _ []string) error {
@@ -98,9 +104,23 @@ var buildCmd = &cmdline.Command[BuildOptions]{
 }
 
 // Build builds the catalog as o says, writes it to o.Out or to stdout, and
-// reports what the mapping did on stderr.
+// models.dev's catalog.json to o.Upstream, and reports what the mapping did
+// on stderr.
 func Build(ctx context.Context, o BuildOptions, stdout, stderr io.Writer) error {
-	c, rep, err := Load(ctx, o.SourceOptions, time.Now())
+	data, source, err := ReadSource(ctx, o.SourceOptions)
+	if err != nil {
+		return err
+	}
+	if o.Upstream != "" {
+		doc, err := Indent(data)
+		if err != nil {
+			return fmt.Errorf("%s: %w", source, err)
+		}
+		if err := os.WriteFile(o.Upstream, doc, 0o644); err != nil {
+			return err
+		}
+	}
+	c, rep, err := Map(data, source, o.SourceOptions, time.Now())
 	if err != nil {
 		return err
 	}
@@ -126,6 +146,12 @@ func Load(ctx context.Context, o SourceOptions, now time.Time) (*gateway.Catalog
 	if err != nil {
 		return nil, gateway.Report{}, err
 	}
+	return Map(data, source, o, now)
+}
+
+// Map maps data, the models.dev catalog.json read from source, as o says,
+// stamping the result as generated at now.
+func Map(data []byte, source string, o SourceOptions, now time.Time) (*gateway.Catalog, gateway.Report, error) {
 	b, err := modelsdev.DecodeBundle(data)
 	if err != nil {
 		return nil, gateway.Report{}, fmt.Errorf("%s: %w", source, err)
@@ -184,6 +210,26 @@ func ReadSource(ctx context.Context, o SourceOptions) (data []byte, source strin
 		return nil, "", err
 	}
 	return resp.Data, o.Source, nil
+}
+
+// Indent returns the JSON document data with every object's keys sorted and
+// two spaces of indent, its numbers as data writes them, so that one
+// download of models.dev's catalog.json diffs line by line against another.
+func Indent(data []byte) ([]byte, error) {
+	dec := json.NewDecoder(bytes.NewReader(data))
+	dec.UseNumber()
+	var v any
+	if err := dec.Decode(&v); err != nil {
+		return nil, err
+	}
+	var buf bytes.Buffer
+	enc := json.NewEncoder(&buf)
+	enc.SetIndent("", "  ")
+	enc.SetEscapeHTML(false)
+	if err := enc.Encode(v); err != nil {
+		return nil, err
+	}
+	return buf.Bytes(), nil
 }
 
 // ParseIDs reads a comma-separated list of provider IDs, leaving out empty

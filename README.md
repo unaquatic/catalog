@@ -28,6 +28,8 @@ go get github.com/unaquatic/catalog
 go run ./cmd/catalog build -o catalog.json        # build the catalog from models.dev
 go run ./cmd/catalog serve                        # serve it, and browse it at http://localhost:4100
 go run ./cmd/catalog snapshot -providers anthropic,openai -o snapshot.json   # the catalog flow compiles in
+go generate ./data/                               # update data/ from models.dev
+go run ./cmd/catalog serve -in data/models-dev.json   # serve the committed data, with no network
 ```
 
 ## Packages
@@ -36,6 +38,7 @@ go run ./cmd/catalog snapshot -providers anthropic,openai -o snapshot.json   # t
 - `gateway/gatewaytest` — catalogs for tests, built from models.dev api.json documents.
 - `modelsdev` — models.dev's catalog.json, and the cache and fetcher of downloads.
 - `cmd/catalog` — builds the catalog, serves it with a page that browses it, and writes snapshots.
+- `data` — models.dev's catalog.json (`models-dev.json`) and the catalog built from it (`catalog.json`), committed so that each update is a diff.
 
 ## License
 

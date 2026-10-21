@@ -2,6 +2,7 @@ package main
 
 import (
 	"context"
+	"encoding/json"
 	"errors"
 	"flag"
 	"fmt"
@@ -11,6 +12,7 @@ import (
 	"net/http/httptest"
 	"os"
 	"path/filepath"
+	"reflect"
 	"slices"
 	"strconv"
 	"strings"
@@ -49,6 +51,46 @@ func TestBuildFromFile(t *testing.T) {
 		"catalog: merged [openai/gpt-6-astra-fast]; derived [openai/gpt-6-astra-pro openai/gpt-6.1-sol-pro]\n"
 	if !strings.HasPrefix(stderr.String(), want) {
 		t.Errorf("report = %q, want it to start with %q", stderr.String(), want)
+	}
+}
+
+// TestBuildSavesUpstream checks that build -save-upstream writes the
+// models.dev catalog.json it read, the same document, indented with its keys
+// sorted, so that the same document writes the same file whatever order its
+// keys come in.
+func TestBuildSavesUpstream(t *testing.T) {
+	dir := t.ArtifactDir()
+	up := filepath.Join(dir, "models-dev.json")
+	if err := buildCmd.Execute(t.Context(), []string{"-in", fixture, "-save-upstream", up, "-o", filepath.Join(dir, "catalog.json")}); err != nil {
+		t.Fatalf("build: %v", err)
+	}
+	saved, err := os.ReadFile(up)
+	if err != nil {
+		t.Fatal(err)
+	}
+	orig, err := os.ReadFile(fixture)
+	if err != nil {
+		t.Fatal(err)
+	}
+	var a, b any
+	if err := json.Unmarshal(saved, &a); err != nil {
+		t.Fatalf("saved upstream: %v", err)
+	}
+	if err := json.Unmarshal(orig, &b); err != nil {
+		t.Fatal(err)
+	}
+	if !reflect.DeepEqual(a, b) {
+		t.Error("the saved upstream differs from the document read")
+	}
+	if !strings.HasPrefix(string(saved), "{\n  \"") || !strings.HasSuffix(string(saved), "}\n") {
+		t.Errorf("saved upstream starts %q; want it indented", string(saved[:min(len(saved), 20)]))
+	}
+	again, err := Indent([]byte(`{"b": 1.50, "a": {"d": [2, "<x>"], "c": null}}`))
+	if err != nil {
+		t.Fatal(err)
+	}
+	if want := "{\n  \"a\": {\n    \"c\": null,\n    \"d\": [\n      2,\n      \"<x>\"\n    ]\n  },\n  \"b\": 1.50\n}\n"; string(again) != want {
+		t.Errorf("Indent = %q, want %q: keys sorted, numbers as written, no HTML escapes", again, want)
 	}
 }
 

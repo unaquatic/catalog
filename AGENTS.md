@@ -8,9 +8,11 @@ The model catalog of flow: built from models.dev's catalog.json by the mapping i
 go test ./...                                          # all tests
 go test ./gateway/ -run TestFromModelsDevGolden -update   # regenerate gateway/testdata/catalog.golden.json
 go run ./cmd/catalog serve                             # browse the catalog at http://localhost:4100
+go generate ./data/                                    # update data/ from models.dev
 ```
 
 - A change to the mapping or the rules updates the golden catalog and commits the reviewed `testdata/catalog.golden.json` diff.
+- `data/` holds models.dev's catalog.json (`models-dev.json`, keys sorted and indented) and the catalog built from it (`catalog.json`). Update both with `go generate ./data/`, and after a change to the mapping or the rules, so the committed catalog matches the code; commit them in a commit of their own.
 - Flow compiles in a snapshot of the catalog (`internal/catalog/snapshot.json` in flow). Regenerate it there with `go generate ./internal/catalog/` while `go run ./cmd/catalog serve` runs.
 - `cmd/catalog/index.html` embeds type16, the font of flow's landing page (`cmd/landing/index.html` in flow). Copy the font across when either changes.
 
