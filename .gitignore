@@ -1,0 +1,12 @@
+# IDE
+.idea/
+.claude
+.opencode/
+.cursor
+
+# Built binaries and catalogs
+/catalog
+*.catalog.json
+
+# Logs
+logs/
