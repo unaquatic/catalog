@@ -219,6 +219,24 @@ func (s *Store) cached() *modelsdev.Entry {
 	}
 }
 
+// Link sets each model's Providers to the providers that offer it, in ID
+// order, as the offerings say: after a change of them, as a patch makes.
+func (c *Catalog) Link() {
+	providers := make(map[ModelID][]ProviderID, len(c.Models))
+	for pid, p := range c.Providers {
+		for id := range p.Models {
+			providers[id] = append(providers[id], pid)
+		}
+	}
+	for id, m := range c.Models {
+		m.Providers = slices.Sorted(slices.Values(providers[id]))
+		if m.Providers == nil {
+			m.Providers = []ProviderID{}
+		}
+		c.Models[id] = m
+	}
+}
+
 // Keep returns a copy of c with only providers ps, and only the models one
 // of them offers, and their labs and families, as the Snapshot keeps the
 // built-in providers.

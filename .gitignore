@@ -18,3 +18,6 @@ logs/
 # Deploy secrets
 .env
 *.env
+
+# A remap patch under review
+/remap.json

@@ -45,7 +45,7 @@ var rootCmd = &cmdline.Command[cmdline.NoOptions]{
 	Name:     "catalog",
 	Short:    "Build and serve flow's model catalog",
 	Banner:   "Build flow's model catalog from models.dev, and serve it with a page that browses it.",
-	Commands: []cmdline.Node{buildCmd, serveCmd, snapshotCmd},
+	Commands: []cmdline.Node{buildCmd, updateCmd, remapCmd, applyCmd, serveCmd, snapshotCmd},
 }
 
 // SourceOptions choose the models.dev catalog to build from, and what to

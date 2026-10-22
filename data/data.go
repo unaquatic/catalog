@@ -1,10 +1,16 @@
-// Package data holds models.dev's catalog.json, as models-dev.json, and the
-// catalog built from it, as catalog.json. Both are committed, so that every
-// update shows as a diff what changed upstream and what the mapping made of
-// it. Regenerate both from models.dev with go generate.
+// Package data holds our catalog, catalog.json, the catalog's source of
+// truth; models.dev's catalog.json it last took changes from, as
+// models-dev.json; and the patch of those changes, as patch.json. All are
+// committed.
 //
-// Serve them with no network with go run ./cmd/catalog serve -in
-// data/models-dev.json, or the catalog alone with -catalog data/catalog.json.
+// go generate takes models.dev's changes: it downloads its catalog.json,
+// diffs it, as the mapping sees it, with models-dev.json, and applies the
+// diff to catalog.json, which keeps what it holds of its own, and keeps
+// what it changed that models.dev changed too, as a conflict in patch.json.
+// Edit catalog.json by hand for what models.dev lacks or has wrong.
+//
+// Serve the catalog with no network with go run ./cmd/catalog serve
+// -catalog data/catalog.json.
 package data
 
-//go:generate go run ../cmd/catalog build -save-upstream models-dev.json -o catalog.json
+//go:generate go run ../cmd/catalog update -base models-dev.json -catalog catalog.json -patch patch.json -save-upstream models-dev.json

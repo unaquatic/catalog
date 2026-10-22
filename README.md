@@ -25,11 +25,13 @@ go get github.com/unaquatic/catalog
 ## Usage
 
 ```sh
-go run ./cmd/catalog build -o catalog.json        # build the catalog from models.dev
-go run ./cmd/catalog serve                        # serve it, and browse it at http://localhost:4100
+go generate ./data/                               # apply models.dev's changes to our catalog, data/catalog.json
+go run ./cmd/catalog serve -catalog data/catalog.json   # serve our catalog, and browse it at http://localhost:4100
+go run ./cmd/catalog remap -in data/models-dev.json   # write remap.json: how the current mapping differs from our catalog
+go run ./cmd/catalog apply -patch remap.json      # apply a reviewed patch to our catalog
+go run ./cmd/catalog build -o catalog.json        # map models.dev alone, as a catalog of its own
+go run ./cmd/catalog serve                        # serve that, mapped live from models.dev
 go run ./cmd/catalog snapshot -providers anthropic,openai -o snapshot.json   # the catalog flow compiles in
-go generate ./data/                               # update data/ from models.dev
-go run ./cmd/catalog serve -in data/models-dev.json   # serve the committed data, with no network
 ```
 
 ## Hosted catalog
@@ -46,8 +48,8 @@ CI rebuilds the catalog from models.dev every six hours and, when it changed, co
 - `gateway` — the catalog format, the mapping from models.dev to it and its rules (`gateway/rules.json`), the HTTP handler, and the `Store` that clients such as flow read it with.
 - `gateway/gatewaytest` — catalogs for tests, built from models.dev api.json documents.
 - `modelsdev` — models.dev's catalog.json, and the cache and fetcher of downloads.
-- `cmd/catalog` — builds the catalog, serves it with a page that browses it, and writes snapshots.
-- `data` — models.dev's catalog.json (`models-dev.json`) and the catalog built from it (`catalog.json`), committed so that each update is a diff.
+- `cmd/catalog` — applies models.dev's changes to the catalog (`update`), remaps and patches it (`remap`, `apply`), builds a catalog from models.dev alone, serves a catalog with a page that browses it, and writes snapshots.
+- `data` — our catalog (`catalog.json`), models.dev's catalog.json it last took changes from (`models-dev.json`), and the patch of those changes (`patch.json`).
 
 ## License
 

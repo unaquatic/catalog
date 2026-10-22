@@ -35,7 +35,6 @@ import (
 //   - The offering's facts are the call's listing's.
 func (b *builder) Group() *Catalog {
 	c := &Catalog{Models: b.out.Models, Providers: make(map[ProviderID]Provider, len(b.out.Providers))}
-	providers := make(map[ModelID][]ProviderID)
 	for lp := range sortedValues(b.out.Providers) {
 		prov := Provider{ID: lp.ID, Name: lp.Name, Kind: lp.Kind, Endpoint: lp.Endpoint, Doc: lp.Doc,
 			Models: make(map[ModelID]Offering)}
@@ -75,18 +74,9 @@ func (b *builder) Group() *Catalog {
 				prov.Models[m] = named(b.offering(prov, m, nil, runs[m]), c.Models[m].Name)
 			}
 		}
-		for m := range prov.Models {
-			providers[m] = append(providers[m], prov.ID)
-		}
 		c.Providers[prov.ID] = prov
 	}
-	for id, m := range c.Models {
-		m.Providers = slices.Sorted(slices.Values(providers[id]))
-		if m.Providers == nil {
-			m.Providers = []ProviderID{}
-		}
-		c.Models[id] = m
-	}
+	c.Link()
 	for _, p := range c.Providers {
 		b.report.Offerings += len(p.Models) + len(p.Unlisted)
 		for _, o := range p.Models {
