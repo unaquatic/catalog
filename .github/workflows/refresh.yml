@@ -1,0 +1,109 @@
+name: Refresh
+
+run-name: Refresh models.dev data
+
+# Refresh downloads models.dev's catalog.json every six hours, rebuilds the
+# catalog from it, and, when either changed other than in its "generated"
+# time, commits data/ and releases it.
+on:
+  schedule:
+    - cron: "17 */6 * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: refresh
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  refresh:
+    name: Refresh
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    outputs:
+      sha: ${{ steps.commit.outputs.sha }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          ref: main
+
+      - name: Setup
+        uses: ./.github/actions/setup
+
+      - name: Keep Previous Catalog
+        run: cp data/catalog.json "$RUNNER_TEMP/previous.json"
+
+      - name: Fetch Data
+        run: go generate ./data/
+
+      - name: Test
+        run: go test ./...
+
+      - name: Detect Change
+        id: change
+        run: |
+          if git diff --quiet -I'^  "generated": "' -- data/; then
+            echo "models.dev changed nothing"
+            git checkout -- data/
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            git diff --stat -- data/
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      # A bad upstream push fails the run here instead of being released:
+      # the models or providers may not fall by more than a tenth at once.
+      - name: Sanity Check
+        if: steps.change.outputs.changed == 'true'
+        run: |
+          prev="$RUNNER_TEMP/previous.json"
+          for key in models providers; do
+            old=$(jq ".$key | length" "$prev")
+            new=$(jq ".$key | length" data/catalog.json)
+            echo "$key: $old -> $new"
+            [ $(( new * 10 )) -ge $(( old * 9 )) ] || { echo "$key fell from $old to $new" >&2; exit 1; }
+          done
+          [ "$(jq .version "$prev")" = "$(jq .version data/catalog.json)" ] || echo "::warning::catalog format version changed"
+
+      - name: Commit
+        id: commit
+        if: steps.change.outputs.changed == 'true'
+        run: |
+          prev="$RUNNER_TEMP/previous.json"
+          jq -r '.models | keys[]' "$prev" | sort > "$RUNNER_TEMP/old.txt"
+          jq -r '.models | keys[]' data/catalog.json | sort > "$RUNNER_TEMP/new.txt"
+          added=$(comm -13 "$RUNNER_TEMP/old.txt" "$RUNNER_TEMP/new.txt" | grep -c . || true)
+          removed=$(comm -23 "$RUNNER_TEMP/old.txt" "$RUNNER_TEMP/new.txt" | grep -c . || true)
+          upstream=$(jq '.providers | length' data/models-dev.json)
+          summary=$(jq -r '"\(.models | length) models and \(.providers | length) providers"' data/catalog.json)
+
+          git config user.name monofufu
+          git config user.email 205409074+monofufu@users.noreply.github.com
+          git add data/
+          git commit -q -F - <<EOF
+          chore(data): update models.dev's catalog.json and the catalog built from it
+
+          - Update data/models-dev.json from models.dev, of $upstream providers.
+          - Rebuild data/catalog.json, of $summary: $added models added and $removed removed.
+          EOF
+          git pull -q --rebase origin main
+          git push -q origin HEAD:main
+          echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
+  release:
+    name: Release
+    needs: refresh
+    if: needs.refresh.outputs.sha != ''
+    uses: ./.github/workflows/release.yml
+    with:
+      ref: ${{ needs.refresh.outputs.sha }}
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
+    secrets: inherit

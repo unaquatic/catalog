@@ -16,9 +16,11 @@ import (
 	"github.com/unaquatic/catalog/modelsdev"
 )
 
-// DefaultSource is the catalog server flow reads its catalog from, as
-// cmd/catalog serves it, until one is hosted.
-const DefaultSource = "http://127.0.0.1:4100"
+// DefaultSource is the catalog server flow reads its catalog from: the
+// catalog's site, which the repository's Refresh workflow rebuilds from
+// models.dev and deploys. A local cmd/catalog serve is at
+// http://127.0.0.1:4100.
+const DefaultSource = "https://aquatic.dev/catalog"
 
 // DocumentPath is where a catalog server serves the whole catalog.
 const DocumentPath = "/catalog.json"

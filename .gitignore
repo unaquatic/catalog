@@ -10,3 +10,11 @@
 
 # Logs
 logs/
+
+# The static site the Build Site action assembles, and wrangler's state
+/site/
+.wrangler/
+
+# Deploy secrets
+.env
+*.env
