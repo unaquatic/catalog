@@ -15,6 +15,8 @@ import (
 	"time"
 
 	"github.com/unaquatic/catalog/gateway"
+	"github.com/unaquatic/catalog/internal/build"
+	"github.com/unaquatic/catalog/internal/catalogdir"
 	"github.com/unaquatic/catalog/internal/cmdline"
 	"github.com/unaquatic/catalog/internal/merge"
 )
@@ -47,7 +49,7 @@ func (p Patch) Counts() (added, replaced, removed int) {
 }
 
 // unpatched reports the paths of a catalog that no patch changes: those the
-// tool sets, and models' providers, which Catalog.Link recomputes from the
+// tool sets, and models' providers, which build.LinkProviders recomputes from the
 // offerings.
 func unpatched(path []string) bool {
 	if len(path) == 1 {
@@ -253,10 +255,10 @@ func readCatalog(path string, fallback *gateway.Catalog) (*gateway.Catalog, erro
 }
 
 // LoadCatalog reads the catalog at path: one document, from a path that
-// ends in .json, or else a catalog directory, as gateway.ReadDir reads one.
+// ends in .json, or else a catalog directory, as catalogdir.ReadDir reads one.
 func LoadCatalog(path string) (*gateway.Catalog, error) {
 	if !strings.HasSuffix(path, ".json") {
-		return gateway.ReadDir(path)
+		return catalogdir.ReadDir(path)
 	}
 	data, err := os.ReadFile(path)
 	if err != nil {
@@ -273,7 +275,7 @@ func LoadCatalog(path string) (*gateway.Catalog, error) {
 // a path that ends in .json, or else as a catalog directory.
 func SaveCatalog(path string, c *gateway.Catalog) error {
 	if !strings.HasSuffix(path, ".json") {
-		return c.WriteDir(path)
+		return catalogdir.WriteDir(c, path)
 	}
 	data, err := gateway.Encode(c)
 	if err != nil {
@@ -303,7 +305,7 @@ func generic(cs ...*gateway.Catalog) (docs []doc, err error) {
 }
 
 // applyAndWrite applies p's operations to ours, sets p's conflicts, and
-// writes the result to file: from source, linked as Catalog.Link links it,
+// writes the result to file: from source, linked as build.LinkProviders links it,
 // and stamped as generated at now when it is not ours, its generated time
 // aside. An operation ours holds already changes nothing, so it stamps
 // nothing either.
@@ -327,7 +329,7 @@ func applyAndWrite(file string, ours *gateway.Catalog, p *Patch, source string, 
 		return fmt.Errorf("the patched catalog: %w", err)
 	}
 	c.Schema, c.Version, c.Source, c.Generated = gateway.SchemaURL, gateway.Version, source, ours.Generated
-	c.Link()
+	build.LinkProviders(c)
 	out, err := gateway.Encode(c)
 	if err != nil {
 		return err

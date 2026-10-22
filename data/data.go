@@ -1,9 +1,8 @@
 // Package data holds our catalog, the catalog's source of truth, as the
 // catalog directory catalog: catalog/catalog.json, a file per lab's models
-// in catalog/models, and a file per provider in catalog/providers, as
-// gateway.ReadDir reads them; models.dev's catalog.json it last took
-// changes from, as models-dev.json; and the patch of those changes, as
-// patch.json. All are committed.
+// in catalog/models, and a file per provider in catalog/providers;
+// models.dev's catalog.json it last took changes from, as models-dev.json;
+// and the patch of those changes, as patch.json. All are committed.
 //
 // A program reads the catalog of the version it builds with from Catalog,
 // with no network:
@@ -27,6 +26,7 @@ import (
 	"sync"
 
 	"github.com/unaquatic/catalog/gateway"
+	"github.com/unaquatic/catalog/internal/catalogdir"
 )
 
 //go:generate go run ../cmd/catalog update -base models-dev.json -catalog catalog -patch patch.json -save-upstream models-dev.json
@@ -35,11 +35,11 @@ import (
 var files embed.FS
 
 // Catalog returns the catalog this package embeds, read once, as
-// gateway.ReadFS reads it.
+// catalogdir.ReadFS reads it.
 var Catalog = sync.OnceValues(func() (*gateway.Catalog, error) {
 	dir, err := fs.Sub(files, "catalog")
 	if err != nil {
 		return nil, err
 	}
-	return gateway.ReadFS(dir)
+	return catalogdir.ReadFS(dir)
 })

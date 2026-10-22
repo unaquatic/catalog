@@ -1,4 +1,4 @@
-package gateway
+package build
 
 import (
 	"errors"
@@ -7,7 +7,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/unaquatic/catalog/modelsdev"
+	"github.com/unaquatic/catalog/gateway"
+	"github.com/unaquatic/catalog/internal/modelsdev"
 )
 
 // withRules returns rules.json with extra rules first, and drop's rules
@@ -39,7 +40,7 @@ func TestDefaultRules(t *testing.T) {
 	if !r.Added("voyage") || r.Added("openai") {
 		t.Error("Added: want voyage, a lab models.dev lacks, and not openai")
 	}
-	for s, want := range map[string]ProviderID{"seedance-2.0": "bytedance-seed", "seed-1-6": "bytedance-seed", "grok-3": "xai", "gpt-oss-120b": "openai"} {
+	for s, want := range map[string]gateway.ProviderID{"seedance-2.0": "bytedance-seed", "seed-1-6": "bytedance-seed", "grok-3": "xai", "gpt-oss-120b": "openai"} {
 		if lab, ok := r.BrandLab(s); !ok || lab != want {
 			t.Errorf("BrandLab(%s) = %s, %v; want %s", s, lab, ok, want)
 		}
@@ -47,10 +48,10 @@ func TestDefaultRules(t *testing.T) {
 	if _, ok := r.BrandLab("grokker"); ok {
 		t.Error("BrandLab(grokker): a brand is followed by its end, a dash, a dot or a digit")
 	}
-	if labs := slices.Collect(r.ProductLabs("inkling-256k")); !slices.Equal(labs, []ProviderID{"thinkingmachines"}) {
+	if labs := slices.Collect(r.ProductLabs("inkling-256k")); !slices.Equal(labs, []gateway.ProviderID{"thinkingmachines"}) {
 		t.Errorf("ProductLabs(inkling-256k) = %v", labs)
 	}
-	for w, want := range map[string]ProviderID{"l3.3": "meta", "mn": "mistral", "qwen2.5": "alibaba", "gemma3": "google"} {
+	for w, want := range map[string]gateway.ProviderID{"l3.3": "meta", "mn": "mistral", "qwen2.5": "alibaba", "gemma3": "google"} {
 		if lab, ok := r.OpenLab(w); !ok || lab != want {
 			t.Errorf("OpenLab(%s) = %s, %v; want %s", w, lab, ok, want)
 		}
@@ -87,7 +88,7 @@ func TestDefaultRules(t *testing.T) {
 			t.Errorf("ServiceOf(%s, %s, %s) = %q, want %q", tt.id, tt.name, tt.desc, got, tt.want)
 		}
 	}
-	if base, tier, ok := r.CutTier("gpt-6-astra-fast"); !ok || base != "gpt-6-astra" || tier != TierFast {
+	if base, tier, ok := r.CutTier("gpt-6-astra-fast"); !ok || base != "gpt-6-astra" || tier != gateway.TierFast {
 		t.Errorf("CutTier = %s, %s, %v", base, tier, ok)
 	}
 	if _, _, ok := r.CutTier("glm-5-free"); ok {
@@ -105,7 +106,7 @@ func TestDefaultRules(t *testing.T) {
 		t.Errorf("Listed = %v; want anthropic, not nano-gpt, each once", listed)
 	}
 	keep, missing := r.ListedIn(loadFixture(t))
-	if want := []ProviderID{"anthropic", "github-copilot", "openai", "opencode", "openrouter", "vercel"}; !slices.Equal(keep, want) {
+	if want := []gateway.ProviderID{"anthropic", "github-copilot", "openai", "opencode", "openrouter", "vercel"}; !slices.Equal(keep, want) {
 		t.Errorf("ListedIn kept %v, want %v", keep, want)
 	}
 	if !slices.Contains(missing, "zai") || len(keep)+len(missing) != len(listed) {
@@ -147,7 +148,7 @@ func TestDecodeRulesErrors(t *testing.T) {
 		})
 	}
 	if r, err := DecodeRules([]byte(`{"version": 1, "rules": [{"match": {"provider": ["a", "b"]}, "listed": true}, {"match": {"provider": "c"}, "listed": true}]}`)); err != nil ||
-		!slices.Equal(slices.Collect(r.Listed()), []ProviderID{"a", "b", "c"}) {
+		!slices.Equal(slices.Collect(r.Listed()), []gateway.ProviderID{"a", "b", "c"}) {
 		t.Errorf("a provider list and a provider alone: %v, %v", r, err)
 	}
 }
@@ -171,7 +172,7 @@ func TestExclude(t *testing.T) {
 	if _, ok := c.Models["opencode/big-pickle"]; ok {
 		t.Error("opencode/big-pickle, OpenCode's own model, is in a catalog that excludes OpenCode")
 	}
-	opts.Providers = []ProviderID{"opencode"}
+	opts.Providers = []gateway.ProviderID{"opencode"}
 	if _, _, err := FromModelsDev(loadFixture(t), opts); !errors.Is(err, ErrUnknownProvider) {
 		t.Errorf("keeping an excluded provider: err = %v, want ErrUnknownProvider", err)
 	}
@@ -185,7 +186,7 @@ func TestExclude(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	if m, ok := c.Models["thinkingmachines/inkling-256k"]; !ok || !slices.Equal(m.Providers, []ProviderID{"gw"}) {
+	if m, ok := c.Models["thinkingmachines/inkling-256k"]; !ok || !slices.Equal(m.Providers, []gateway.ProviderID{"gw"}) {
 		t.Errorf("thinkingmachines/inkling-256k = %+v, %v; want it kept, served by gw", m, ok)
 	}
 }
@@ -203,8 +204,8 @@ func TestOfficial(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	for id, want := range map[ProviderID]ProviderType{
-		"anthropic": ProviderOfficial, "openrouter": ProviderOfficial, "vercel": ProviderOfficial, "llmgateway": ProviderCommunity,
+	for id, want := range map[gateway.ProviderID]gateway.ProviderType{
+		"anthropic": gateway.ProviderOfficial, "openrouter": gateway.ProviderOfficial, "vercel": gateway.ProviderOfficial, "llmgateway": gateway.ProviderCommunity,
 	} {
 		if got := c.Providers[id].Type; got != want {
 			t.Errorf("%s type = %q, want %q", id, got, want)

@@ -1,4 +1,4 @@
-package gateway
+package catalogdir
 
 import (
 	"bytes"
@@ -12,6 +12,8 @@ import (
 	"slices"
 	"strings"
 	"time"
+
+	"github.com/unaquatic/catalog/gateway"
 )
 
 // A catalog directory holds a catalog split into files, so that a change of
@@ -21,7 +23,7 @@ import (
 //	models/<lab>.json     the models of a lab, by model ID
 //	providers/<id>.json   a provider, with its offerings
 //
-// ReadDir reads one, and Catalog.WriteDir writes one.
+// ReadDir reads one, and WriteDir writes one.
 const (
 	HeadFile     = "catalog.json"
 	ModelsDir    = "models"
@@ -31,19 +33,19 @@ const (
 // Head is a catalog but its models and providers, as a catalog directory's
 // HeadFile holds it.
 type Head struct {
-	Schema    string                `json:"$schema,omitempty"`
-	Version   int                   `json:"version"`
-	Source    string                `json:"source,omitempty"`
-	Generated time.Time             `json:"generated"`
-	Spellings Spellings             `json:"spellings,omitempty"`
-	Labs      map[ProviderID]Lab    `json:"labs,omitempty"`
-	Families  map[string]Family     `json:"families,omitempty"`
-	Efforts   map[Effort]EffortName `json:"efforts,omitempty"`
-	Variant   *VariantNames         `json:"variant,omitempty"`
+	Schema    string                                `json:"$schema,omitempty"`
+	Version   int                                   `json:"version"`
+	Source    string                                `json:"source,omitempty"`
+	Generated time.Time                             `json:"generated"`
+	Spellings gateway.Spellings                     `json:"spellings,omitempty"`
+	Labs      map[gateway.ProviderID]gateway.Lab    `json:"labs,omitempty"`
+	Families  map[string]gateway.Family             `json:"families,omitempty"`
+	Efforts   map[gateway.Effort]gateway.EffortName `json:"efforts,omitempty"`
+	Variant   *gateway.VariantNames                 `json:"variant,omitempty"`
 }
 
 // ReadDir reads the catalog in catalog directory dir, as ReadFS reads one.
-func ReadDir(dir string) (*Catalog, error) {
+func ReadDir(dir string) (*gateway.Catalog, error) {
 	root, err := os.OpenRoot(dir)
 	if err != nil {
 		return nil, fmt.Errorf("gateway: %w", err)
@@ -56,28 +58,28 @@ func ReadDir(dir string) (*Catalog, error) {
 // program embeds, which must be of format Version, as Decode reads one
 // document. It fails on a lab's file that holds another lab's model, and
 // on a provider's file that holds another provider.
-func ReadFS(fsys fs.FS) (*Catalog, error) {
+func ReadFS(fsys fs.FS) (*gateway.Catalog, error) {
 	var h Head
 	if err := readJSON(fsys, HeadFile, &h); err != nil {
 		return nil, err
 	}
-	if h.Version != Version {
-		return nil, fmt.Errorf("%w: %d, want %d", ErrVersion, h.Version, Version)
+	if h.Version != gateway.Version {
+		return nil, fmt.Errorf("%w: %d, want %d", gateway.ErrVersion, h.Version, gateway.Version)
 	}
-	c := &Catalog{Schema: h.Schema, Version: h.Version, Source: h.Source, Generated: h.Generated,
+	c := &gateway.Catalog{Schema: h.Schema, Version: h.Version, Source: h.Source, Generated: h.Generated,
 		Spellings: h.Spellings, Labs: h.Labs, Families: h.Families, Efforts: h.Efforts, Variant: h.Variant,
-		Models: map[ModelID]Model{}, Providers: map[ProviderID]Provider{}}
+		Models: map[gateway.ModelID]gateway.Model{}, Providers: map[gateway.ProviderID]gateway.Provider{}}
 	labs, err := jsonFiles(fsys, ModelsDir)
 	if err != nil {
 		return nil, err
 	}
 	for _, lab := range labs {
-		var models map[ModelID]Model
+		var models map[gateway.ModelID]gateway.Model
 		if err := readJSON(fsys, ModelsDir+"/"+lab+".json", &models); err != nil {
 			return nil, err
 		}
 		for id, m := range models {
-			if id.Lab() != ProviderID(lab) {
+			if id.Lab() != gateway.ProviderID(lab) {
 				return nil, fmt.Errorf("gateway: %s holds %s, a model of another lab", ModelsDir+"/"+lab+".json", id)
 			}
 			c.Models[id] = m
@@ -88,11 +90,11 @@ func ReadFS(fsys fs.FS) (*Catalog, error) {
 		return nil, err
 	}
 	for _, id := range providers {
-		var p Provider
+		var p gateway.Provider
 		if err := readJSON(fsys, ProvidersDir+"/"+id+".json", &p); err != nil {
 			return nil, err
 		}
-		if p.ID != ProviderID(id) {
+		if p.ID != gateway.ProviderID(id) {
 			return nil, fmt.Errorf("gateway: %s holds provider %s", ProvidersDir+"/"+id+".json", p.ID)
 		}
 		c.Providers[p.ID] = p
@@ -103,7 +105,7 @@ func ReadFS(fsys fs.FS) (*Catalog, error) {
 // WriteDir writes c as catalog directory dir, creating it, and removes the
 // files of labs and providers c no longer holds. Every file is indented as
 // Encode writes the whole document.
-func (c *Catalog) WriteDir(dir string) error {
+func WriteDir(c *gateway.Catalog, dir string) error {
 	for _, sub := range []string{ModelsDir, ProvidersDir} {
 		if err := os.MkdirAll(filepath.Join(dir, sub), 0o755); err != nil {
 			return fmt.Errorf("gateway: %w", err)
@@ -119,10 +121,10 @@ func (c *Catalog) WriteDir(dir string) error {
 	if err := writeJSON(root, HeadFile, h); err != nil {
 		return err
 	}
-	byLab := map[ProviderID]map[ModelID]Model{}
+	byLab := map[gateway.ProviderID]map[gateway.ModelID]gateway.Model{}
 	for id, m := range c.Models {
 		if byLab[id.Lab()] == nil {
-			byLab[id.Lab()] = map[ModelID]Model{}
+			byLab[id.Lab()] = map[gateway.ModelID]gateway.Model{}
 		}
 		byLab[id.Lab()][id] = m
 	}

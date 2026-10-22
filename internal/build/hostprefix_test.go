@@ -1,9 +1,10 @@
-package gateway
+package build
 
 import (
 	"testing"
 
-	"github.com/unaquatic/catalog/modelsdev"
+	"github.com/unaquatic/catalog/gateway"
+	"github.com/unaquatic/catalog/internal/modelsdev"
 )
 
 // TestHostPrefix checks that hostPrefix finds a word before the model only
@@ -17,9 +18,9 @@ func TestHostPrefix(t *testing.T) {
 		providers[id] = modelsdev.Provider{ID: id}
 	}
 	b := &builder{rules: DefaultRules(), bundle: modelsdev.Bundle{Providers: providers},
-		labs: map[ProviderID]bool{"mistral": true, "google": true, "nvidia": true, "openai": true, "anthropic": true, "meta": true}}
+		labs: map[gateway.ProviderID]bool{"mistral": true, "google": true, "nvidia": true, "openai": true, "anthropic": true, "meta": true}}
 	for _, tt := range []struct {
-		provider ProviderID
+		provider gateway.ProviderID
 		model    string
 		want     string
 	}{

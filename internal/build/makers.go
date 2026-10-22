@@ -1,4 +1,6 @@
-package gateway
+package build
+
+import "github.com/unaquatic/catalog/gateway"
 
 // TuneKind says how a fine-tune is made from the model it tunes.
 type TuneKind string
@@ -27,10 +29,10 @@ type FinetuneBase struct {
 // it); who tuned it (By, when the provider's ID says); and how. A
 // fine-tune's lab is the lab of the model it tunes.
 type Finetuned struct {
-	Base string   `json:"base,omitempty"`
-	Of   ModelID  `json:"of,omitempty"`
-	By   string   `json:"by,omitempty"`
-	Kind TuneKind `json:"kind"`
+	Base string          `json:"base,omitempty"`
+	Of   gateway.ModelID `json:"of,omitempty"`
+	By   string          `json:"by,omitempty"`
+	Kind TuneKind        `json:"kind"`
 }
 
 // Service says what a provider's model ID is that is not one model, but a

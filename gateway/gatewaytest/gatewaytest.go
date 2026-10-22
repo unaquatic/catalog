@@ -9,7 +9,8 @@ import (
 	"time"
 
 	"github.com/unaquatic/catalog/gateway"
-	"github.com/unaquatic/catalog/modelsdev"
+	"github.com/unaquatic/catalog/internal/build"
+	"github.com/unaquatic/catalog/internal/modelsdev"
 )
 
 // npms are the npm packages of the providers whose documents name none.
@@ -59,7 +60,7 @@ func FromAPI(t testing.TB, doc string) *gateway.Catalog {
 			b.Models[lm.ID] = lm
 		}
 	}
-	c, _, err := gateway.FromModelsDev(b, gateway.Options{Source: "gatewaytest", Infer: true})
+	c, _, err := build.FromModelsDev(b, build.Options{Source: "gatewaytest", Infer: true})
 	if err != nil {
 		t.Fatalf("gatewaytest: build the catalog: %v", err)
 	}
@@ -73,7 +74,22 @@ func WriteCache(t testing.TB, dir string, c *gateway.Catalog) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	if err := modelsdev.NewCacheFile(dir, gateway.StoreFile).Store(&modelsdev.Entry{Fetched: time.Now(), Data: data}); err != nil {
+	WriteEntry(t, dir, Entry{Data: data, Fetched: time.Now()})
+}
+
+// Entry is a Store's cached download: the catalog document as the server
+// sent it, its ETag, and when it was fetched.
+type Entry struct {
+	Data    []byte
+	ETag    string
+	Fetched time.Time
+}
+
+// WriteEntry writes e into dir as a Store's cached download, as a test of a
+// stale or a validated cache needs it.
+func WriteEntry(t testing.TB, dir string, e Entry) {
+	t.Helper()
+	if err := modelsdev.NewCacheFile(dir, gateway.StoreFile).Store(&modelsdev.Entry{Data: e.Data, ETag: e.ETag, Fetched: e.Fetched}); err != nil {
 		t.Fatal(err)
 	}
 }

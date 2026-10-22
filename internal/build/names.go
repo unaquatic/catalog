@@ -1,10 +1,12 @@
-package gateway
+package build
 
 import (
 	"iter"
 	"maps"
 	"unicode"
 	"unicode/utf8"
+
+	"github.com/unaquatic/catalog/gateway"
 )
 
 // capitalize returns id with a capital first letter, as the name of an ID
@@ -14,11 +16,11 @@ func capitalize[T ~string](id T) string {
 	return string(unicode.ToUpper(first)) + string(id[size:])
 }
 
-// offerings yields every offering of c, its providers' unlisted ones too.
-func (c *Catalog) offerings() iter.Seq[Offering] {
-	return func(yield func(Offering) bool) {
+// allOfferings yields every offering of c, its providers' unlisted ones too.
+func allOfferings(c *gateway.Catalog) iter.Seq[gateway.Offering] {
+	return func(yield func(gateway.Offering) bool) {
 		for _, p := range c.Providers {
-			for _, offs := range []iter.Seq[Offering]{maps.Values(p.Models), maps.Values(p.Unlisted)} {
+			for _, offs := range []iter.Seq[gateway.Offering]{maps.Values(p.Models), maps.Values(p.Unlisted)} {
 				for off := range offs {
 					if !yield(off) {
 						return
@@ -32,9 +34,9 @@ func (c *Catalog) offerings() iter.Seq[Offering] {
 // EffortNames returns the name of every reasoning effort c's offerings
 // take, or name as their default, by its ID: the name r gives it, or else
 // its ID with a capital first letter, as "Medium" of medium.
-func (c *Catalog) EffortNames(r *Rules) map[Effort]EffortName {
-	names := map[Effort]EffortName{}
-	add := func(e Effort) {
+func EffortNames(c *gateway.Catalog, r *Rules) map[gateway.Effort]gateway.EffortName {
+	names := map[gateway.Effort]gateway.EffortName{}
+	add := func(e gateway.Effort) {
 		if _, ok := names[e]; ok || e == "" {
 			return
 		}
@@ -42,9 +44,9 @@ func (c *Catalog) EffortNames(r *Rules) map[Effort]EffortName {
 		if !ok {
 			name = capitalize(e)
 		}
-		names[e] = EffortName{ID: e, Name: name}
+		names[e] = gateway.EffortName{ID: e, Name: name}
 	}
-	for off := range c.offerings() {
+	for off := range allOfferings(c) {
 		if off.Reasoning == nil {
 			continue
 		}
@@ -62,9 +64,9 @@ func (c *Catalog) EffortNames(r *Rules) map[Effort]EffortName {
 // NameVariants returns the name of every tier and mode c's variants run in,
 // by its ID: the name r gives it, or else its ID with a capital first
 // letter, as "Ultrafast" of ultrafast; or nil when they run in none.
-func (c *Catalog) NameVariants(r *Rules) *VariantNames {
-	n := &VariantNames{}
-	for off := range c.offerings() {
+func NameVariants(c *gateway.Catalog, r *Rules) *gateway.VariantNames {
+	n := &gateway.VariantNames{}
+	for off := range allOfferings(c) {
 		for _, v := range off.Variants {
 			if t := v.Tier; t != "" {
 				if _, ok := n.Tiers[t]; !ok {
@@ -73,9 +75,9 @@ func (c *Catalog) NameVariants(r *Rules) *VariantNames {
 						name = capitalize(t)
 					}
 					if n.Tiers == nil {
-						n.Tiers = map[Tier]TierName{}
+						n.Tiers = map[gateway.Tier]gateway.TierName{}
 					}
-					n.Tiers[t] = TierName{ID: t, Name: name}
+					n.Tiers[t] = gateway.TierName{ID: t, Name: name}
 				}
 			}
 			if m := v.Mode; m != "" {
@@ -85,9 +87,9 @@ func (c *Catalog) NameVariants(r *Rules) *VariantNames {
 						name = capitalize(m)
 					}
 					if n.Modes == nil {
-						n.Modes = map[string]ModeName{}
+						n.Modes = map[string]gateway.ModeName{}
 					}
-					n.Modes[m] = ModeName{ID: m, Name: name}
+					n.Modes[m] = gateway.ModeName{ID: m, Name: name}
 				}
 			}
 		}

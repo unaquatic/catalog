@@ -1,4 +1,4 @@
-package gateway
+package build
 
 import (
 	"cmp"
@@ -7,7 +7,8 @@ import (
 	"slices"
 	"strings"
 
-	"github.com/unaquatic/catalog/modelsdev"
+	"github.com/unaquatic/catalog/gateway"
+	"github.com/unaquatic/catalog/internal/modelsdev"
 )
 
 // Normalize reads a model ID, or a part of one, as the mapping compares
@@ -26,16 +27,16 @@ func Normalize(s string) string {
 // candidate is a reading of a provider's model ID: the lab it names, if it
 // names one, and the model ID within it, normalized.
 type candidate struct {
-	lab  ProviderID
+	lab  gateway.ProviderID
 	tail string
 }
 
 // labOf returns the lab that s, a part of a model ID, names, and reports
 // whether it names one.
-func (b *builder) labOf(s string) (ProviderID, bool) {
+func (b *builder) labOf(s string) (gateway.ProviderID, bool) {
 	s = strings.ToLower(strings.TrimPrefix(s, "~"))
-	if b.labs[ProviderID(s)] {
-		return ProviderID(s), true
+	if b.labs[gateway.ProviderID(s)] {
+		return gateway.ProviderID(s), true
 	}
 	lab, ok := b.rules.MakerLab(s)
 	return lab, ok && b.labs[lab]
@@ -47,7 +48,7 @@ func (b *builder) labOf(s string) (ProviderID, bool) {
 // auto/openai/gpt-6-astra do. An ID without slashes may start with the lab
 // and a dash, as DigitalOcean's openai-gpt-6-astra does, after a region.
 // Every ID is also read as a model ID of no particular lab.
-func (b *builder) candidates(pid ProviderID, id string) []candidate {
+func (b *builder) candidates(pid gateway.ProviderID, id string) []candidate {
 	segs := b.rules.IDParts(pid, id)
 	if len(segs) == 0 {
 		return nil
@@ -82,11 +83,11 @@ func (b *builder) candidates(pid ProviderID, id string) []candidate {
 // models up in. It holds merged models too, so that an ID naming one
 // finds it, and then its merge.
 func (b *builder) index() {
-	b.tails = make(map[string][]ModelID)
+	b.tails = make(map[string][]gateway.ModelID)
 	for id := range b.bundle.Models {
-		_, tail := SplitModelID(ModelID(id))
+		_, tail := SplitModelID(gateway.ModelID(id))
 		k := Normalize(tail)
-		b.tails[k] = append(b.tails[k], ModelID(id))
+		b.tails[k] = append(b.tails[k], gateway.ModelID(id))
 	}
 	for k := range b.tails {
 		slices.Sort(b.tails[k])
@@ -96,8 +97,8 @@ func (b *builder) index() {
 // lookup returns the model whose ID within its lab reads as tail, at lab
 // when lab is set, and reports whether one does. Of models of several labs,
 // the first lab's, in byte order, is found, with a note.
-func (b *builder) lookup(lab ProviderID, tail string) (ModelID, bool) {
-	var found []ModelID
+func (b *builder) lookup(lab gateway.ProviderID, tail string) (gateway.ModelID, bool) {
+	var found []gateway.ModelID
 	for _, id := range b.tails[tail] {
 		if lab == "" || id.Lab() == lab {
 			found = append(found, id)
@@ -116,13 +117,13 @@ func (b *builder) lookup(lab ProviderID, tail string) (ModelID, bool) {
 // language reports whether model id is a language model: of no special
 // type, and writing text, as video models such as Seedance 2.0 do not,
 // whose "-fast" variant is a model of its own.
-func (b *builder) language(id ModelID) bool {
+func (b *builder) language(id gateway.ModelID) bool {
 	m, ok := b.out.Models[id]
 	return ok && m.Type == "" && slices.Contains(m.Capabilities.Output, "text")
 }
 
 // proMode reports whether the lab of model id offers it in a pro mode.
-func (b *builder) proMode(id ModelID) bool {
+func (b *builder) proMode(id gateway.ModelID) bool {
 	lab, tail := SplitModelID(id)
 	_, ok := b.bundle.Providers[modelsdev.ProviderID(lab)].Models[modelsdev.ModelID(tail)].Mode("pro")
 	return ok
@@ -132,7 +133,7 @@ func (b *builder) proMode(id ModelID) bool {
 // to model m, names m's pro mode: it ends in "-pro" where m's ID does not,
 // and m's lab offers m in a pro mode. The lab's mode keeps "Pro" models of
 // other labs, such as Gemini 3.1 Pro, where models.dev ties them.
-func (b *builder) NamesPro(pid ProviderID, id string, m ModelID) bool {
+func (b *builder) NamesPro(pid gateway.ProviderID, id string, m gateway.ModelID) bool {
 	_, tail := SplitModelID(m)
 	return strings.HasSuffix(Normalize(b.rules.ModelPart(pid, id)), "-pro") &&
 		!strings.HasSuffix(Normalize(tail), "-pro") && b.proMode(m)
@@ -143,7 +144,7 @@ func (b *builder) NamesPro(pid ProviderID, id string, m ModelID) bool {
 // tier of a language model (BasisTier, with the tier), or as the pro mode
 // of a model whose lab offers that mode (BasisPro, the derived model). It
 // returns an empty ID when no rule applies.
-func (b *builder) InferByID(pid ProviderID, id string) (model ModelID, basis Basis, tier Tier) {
+func (b *builder) InferByID(pid gateway.ProviderID, id string) (model gateway.ModelID, basis Basis, tier gateway.Tier) {
 	for _, c := range b.candidates(pid, id) {
 		if m, ok := b.lookup(c.lab, c.tail); ok {
 			if mg, ok := b.merged[m]; ok {
@@ -174,7 +175,7 @@ func (b *builder) mergeTierModels() {
 		if !ok {
 			continue
 		}
-		into, ok := b.out.Models[ModelID(base)]
+		into, ok := b.out.Models[gateway.ModelID(base)]
 		if !ok || !b.language(into.ID) || !b.language(id) {
 			continue
 		}
@@ -207,9 +208,9 @@ func (b *builder) derivePro() {
 		m := base
 		m.ID = pro
 		m.Name = NameOf(pro, b.spell)
-		m.Derived = &Derivation{From: id, Mode: "pro"}
-		m.Merged, m.Links, m.Weights, m.Inferred, m.Finetuned = nil, nil, nil, nil, nil
+		m.Merged, m.Links, m.Weights = nil, nil, nil
 		b.out.Models[pro] = m
+		b.report.Origins[pro] = Origin{Derived: &Derivation{From: id, Mode: "pro"}}
 		b.report.Derived = append(b.report.Derived, pro)
 	}
 }
@@ -222,7 +223,7 @@ func (b *builder) derivePro() {
 // "databricks-gpt-oss-120b". A lab's or a brand's name is the model's own, as
 // in "mistral-medium-2508" and "nova-pro", and so is a provider's ID before
 // other words, as in NVIDIA's "synthetic-video-detector".
-func (b *builder) hostPrefix(pid ProviderID, model string) string {
+func (b *builder) hostPrefix(pid gateway.ProviderID, model string) string {
 	for p := range b.rules.HostPrefixes(pid) {
 		if strings.HasPrefix(model, p) {
 			return p
@@ -241,7 +242,7 @@ func (b *builder) hostPrefix(pid ProviderID, model string) string {
 
 // hostPrefixed reports whether the model part of provider pid's model ID id
 // begins with a word the rules strip at pid.
-func (b *builder) hostPrefixed(pid ProviderID, id string) bool {
+func (b *builder) hostPrefixed(pid gateway.ProviderID, id string) bool {
 	model := b.rules.ModelPart(pid, id)
 	for p := range b.rules.HostPrefixes(pid) {
 		if strings.HasPrefix(model, p) {
@@ -270,7 +271,7 @@ func (b *builder) hostWords() []string {
 	if b.hosts == nil {
 		b.hosts = []string{}
 		for id := range b.bundle.Providers {
-			pid := ProviderID(id)
+			pid := gateway.ProviderID(id)
 			if !b.labs[pid] && !b.rules.NamesBrand(string(id)) {
 				b.hosts = append(b.hosts, string(id)+"-")
 			}
@@ -310,7 +311,7 @@ const (
 // openBrandLab returns the lab of the open-weight model that a word of s,
 // part of a model ID, names, as the rules' open words and brands say, and
 // reports whether one does.
-func (b *builder) openBrandLab(s string) (ProviderID, bool) {
+func (b *builder) openBrandLab(s string) (gateway.ProviderID, bool) {
 	for _, w := range strings.FieldsFunc(strings.ToLower(s), func(r rune) bool { return strings.ContainsRune("-_/ ", r) }) {
 		if lab, ok := b.rules.OpenLab(w); ok && b.labs[lab] {
 			return lab, true
@@ -340,7 +341,7 @@ func (b *builder) openBrandLab(s string) (ProviderID, bool) {
 //     google/gemma-4-31b-it.
 //
 // By is the maker part when it names no lab of models.dev's: the tuner.
-func (b *builder) FinetuneOf(pid ProviderID, id, name, desc string) (ft Finetuned, lab ProviderID, model string, ok bool) {
+func (b *builder) FinetuneOf(pid gateway.ProviderID, id, name, desc string) (ft Finetuned, lab gateway.ProviderID, model string, ok bool) {
 	if b.rules.IsRouter(id, name) {
 		return Finetuned{}, "", "", false
 	}
@@ -398,7 +399,7 @@ func (b *builder) FinetuneOf(pid ProviderID, id, name, desc string) (ft Finetune
 // skip no segment of and that is not the provider's own ID, as "meta-llama"
 // of "accounts/fireworks/models/meta-llama/…" would be. It is empty when id
 // names no maker, as "groq/compound" does at Groq.
-func (b *builder) makerPart(pid ProviderID, id string) string {
+func (b *builder) makerPart(pid gateway.ProviderID, id string) string {
 	for _, s := range b.prefixParts(pid, id) {
 		if s = strings.TrimLeft(strings.ToLower(s), "@"); !b.rules.HostSegment(s) && !selfPart(pid, s) {
 			return s
@@ -411,7 +412,7 @@ func (b *builder) makerPart(pid ProviderID, id string) string {
 // model's, less the name of an account that "accounts/" names, which is no
 // maker's: LLM Gateway's "accounts/acme/routers/gpt-astra-latest" gives
 // "accounts" and "routers".
-func (b *builder) prefixParts(pid ProviderID, id string) []string {
+func (b *builder) prefixParts(pid gateway.ProviderID, id string) []string {
 	segs := b.rules.IDParts(pid, id)
 	var out []string
 	account := false
@@ -427,7 +428,7 @@ func (b *builder) prefixParts(pid ProviderID, id string) []string {
 // selfPart reports whether s, a part of provider pid's model ID, names the
 // provider itself: its ID, as NanoGPT writes it, "nanogpt", or its ID and
 // a family of its own, as Kilo's "kilo-auto".
-func selfPart(pid ProviderID, s string) bool {
+func selfPart(pid gateway.ProviderID, s string) bool {
 	return s == string(pid) || alnum(s) == alnum(string(pid)) || strings.HasPrefix(s, string(pid)+"-")
 }
 
@@ -447,11 +448,11 @@ func alnum(s string) string {
 // selfName returns how provider pid names itself in its model IDs, when
 // it spells its name otherwise than its ID, as NanoGPT's "nanogpt/…" does
 // of nano-gpt; or else pid.
-func (b *builder) selfName(pid ProviderID) ProviderID {
+func (b *builder) selfName(pid gateway.ProviderID) gateway.ProviderID {
 	for _, id := range slices.Sorted(maps.Keys(b.out.Providers[pid].Models)) {
 		first, _, ok := strings.Cut(strings.TrimLeft(strings.ToLower(id), "~@"), "/")
 		if ok && first != string(pid) && alnum(first) == alnum(string(pid)) {
-			return ProviderID(first)
+			return gateway.ProviderID(first)
 		}
 	}
 	return pid
@@ -461,10 +462,10 @@ func (b *builder) selfName(pid ProviderID) ProviderID {
 // selfName spells it, or, for a provider whose ID adds a plan or region to
 // another provider's or a lab's, as "opencode-go" and
 // "alibaba-token-plan-cn" do, that other's owner: opencode and alibaba.
-func (b *builder) ownerOf(pid ProviderID) ProviderID {
+func (b *builder) ownerOf(pid gateway.ProviderID) gateway.ProviderID {
 	s := string(pid)
 	for i := len(s) - 1; i > 0; i-- {
-		if p := ProviderID(s[:i]); s[i] == '-' && (b.labs[p] || b.out.Providers[p].ID != "") {
+		if p := gateway.ProviderID(s[:i]); s[i] == '-' && (b.labs[p] || b.out.Providers[p].ID != "") {
 			return b.ownerOf(p)
 		}
 	}
@@ -477,7 +478,7 @@ func (b *builder) ownerOf(pid ProviderID) ProviderID {
 // own ID, and past a host's word before the model's. A router names none,
 // nor does a community fine-tune, nor an ID whose maker part names no lab,
 // as "voyage/rerank-3".
-func (b *builder) LabOf(pid ProviderID, id, name string) (lab ProviderID, by LabBy, model string, ok bool) {
+func (b *builder) LabOf(pid gateway.ProviderID, id, name string) (lab gateway.ProviderID, by LabBy, model string, ok bool) {
 	if b.rules.IsRouter(id, name) {
 		return "", "", "", false
 	}
@@ -539,7 +540,7 @@ func (b *builder) LabOf(pid ProviderID, id, name string) (lab ProviderID, by Lab
 // its listings, the one that names the model first and then its tiers and
 // modes.
 type shared struct {
-	pid      ProviderID
+	pid      gateway.ProviderID
 	by       LabBy
 	listings []string
 	// ft is set for a fine-tune, as FinetuneOf reads it.
@@ -598,7 +599,7 @@ func (b *builder) shareUnlisted() {
 	// The labs the catalog lists models of, and those some of whose models'
 	// IDs start with the lab's own, as mistral/mistral-large does, and
 	// meta/llama-4 does not.
-	listed, selfNamed := make(map[ProviderID]bool), make(map[ProviderID]bool)
+	listed, selfNamed := make(map[gateway.ProviderID]bool), make(map[gateway.ProviderID]bool)
 	for id := range b.out.Models {
 		lab, part := SplitModelID(id)
 		listed[lab] = true
@@ -616,19 +617,19 @@ func (b *builder) shareUnlisted() {
 	// labSpelling does: DigitalOcean's "llama3.3-70b-instruct" is
 	// meta/llama-3.3-70b-instruct, and Vercel's "alibaba/qwen-3-14b"
 	// alibaba/qwen3-14b.
-	candidate := func(lab ProviderID, model string) (ModelID, bool) {
+	candidate := func(lab gateway.ProviderID, model string) (gateway.ModelID, bool) {
 		part := CatalogID(model)
 		if rest, ok := strings.CutPrefix(part, string(lab)+"-"); ok && rest != "" && listed[lab] && !selfNamed[lab] {
 			part = rest
 		}
 		part = b.labSpelling(lab, part)
-		return ModelID(string(lab) + "/" + part), part != "" && !strings.Contains(part, "/")
+		return gateway.ModelID(string(lab) + "/" + part), part != "" && !strings.Contains(part, "/")
 	}
 	// The catalog's models by their words, and by their letters and digits,
 	// to find a model an ID orders or punctuates otherwise; and the words
 	// each lab's model IDs start with, as anthropic's "claude".
-	byWords, byLetters := make(map[string][]ModelID), make(map[string][]ModelID)
-	firsts := make(map[ProviderID][]string)
+	byWords, byLetters := make(map[string][]gateway.ModelID), make(map[string][]gateway.ModelID)
+	firsts := make(map[gateway.ProviderID][]string)
 	for _, id := range slices.Sorted(maps.Keys(b.out.Models)) {
 		byWords[looseKey(id)] = append(byWords[looseKey(id)], id)
 		byLetters[letters(id)] = append(byLetters[letters(id)], id)
@@ -638,8 +639,8 @@ func (b *builder) shareUnlisted() {
 		}
 	}
 	b.byWords = byWords
-	ids := make(map[ModelID][]shared)
-	tunes := make(map[ModelID][]shared)
+	ids := make(map[gateway.ModelID][]shared)
+	tunes := make(map[gateway.ModelID][]shared)
 	for _, pid := range slices.Sorted(maps.Keys(b.out.Providers)) {
 		prov := b.out.Providers[pid]
 		var ls []Listing
@@ -672,7 +673,7 @@ func (b *builder) shareUnlisted() {
 			// made under the ID models.dev gives it, as Vercel's
 			// "mistral/codestral-embed" is mistral/codestral-embed-2505.
 			raw := b.bundle.Providers[modelsdev.ProviderID(pid)].Models[modelsdev.ModelID(r)]
-			if c := ModelID(CatalogID(raw.CanonicalModelID)); strings.Count(string(c), "/") == 1 {
+			if c := gateway.ModelID(CatalogID(raw.CanonicalModelID)); strings.Count(string(c), "/") == 1 {
 				for _, id := range members {
 					o := prov.Models[id]
 					o.Lab = c.Lab()
@@ -713,7 +714,7 @@ func (b *builder) shareUnlisted() {
 	// The models that models.dev ties the IDs of other providers' listings
 	// to, by the model IDs LabOf reads in them, so that an ID another
 	// provider lists alike ties as models.dev ties it there.
-	tiedAs := make(map[string]map[ModelID]bool)
+	tiedAs := make(map[string]map[gateway.ModelID]bool)
 	for pid, prov := range b.out.Providers {
 		for _, o := range prov.Models {
 			if o.Basis != BasisCanonical && o.Basis != BasisLab {
@@ -726,7 +727,7 @@ func (b *builder) shareUnlisted() {
 			if id, ok := candidate(lab, model); ok {
 				key := looseKey(id)
 				if tiedAs[key] == nil {
-					tiedAs[key] = make(map[ModelID]bool)
+					tiedAs[key] = make(map[gateway.ModelID]bool)
 				}
 				tiedAs[key][o.Model] = true
 			}
@@ -749,14 +750,14 @@ func (b *builder) shareUnlisted() {
 	for id := range ids {
 		root[find("words:"+looseKey(id))] = find("letters:" + letters(id))
 	}
-	alike := make(map[string][]ModelID)
+	alike := make(map[string][]gateway.ModelID)
 	for _, id := range slices.Sorted(maps.Keys(ids)) {
 		g := find("words:" + looseKey(id))
 		alike[g] = append(alike[g], id)
 	}
 	// named returns the model the catalog lists that id names, as it is or
 	// by its words, and reports whether there is one.
-	named := func(id ModelID) (ModelID, bool) {
+	named := func(id gateway.ModelID) (gateway.ModelID, bool) {
 		if _, ok := b.out.Models[id]; ok {
 			return id, true
 		}
@@ -770,10 +771,10 @@ func (b *builder) shareUnlisted() {
 	}
 	// cut returns the model that id names without one of suffixes, as
 	// zhipuai/glm-5-free names zhipuai/glm-5.
-	cut := func(id ModelID, suffixes ...string) (ModelID, bool) {
+	cut := func(id gateway.ModelID, suffixes ...string) (gateway.ModelID, bool) {
 		for _, s := range suffixes {
 			if base, ok := strings.CutSuffix(string(id), s); ok && !strings.HasSuffix(base, "/") {
-				return named(ModelID(base))
+				return named(gateway.ModelID(base))
 			}
 		}
 		return "", false
@@ -781,11 +782,11 @@ func (b *builder) shareUnlisted() {
 	// family returns the model that id names with a word its lab's IDs
 	// start with before it: GitLab's "duo-chat-opus-4-8", which LabOf reads
 	// as anthropic/opus-4-8, names anthropic/claude-opus-4-8.
-	family := func(id ModelID) (ModelID, bool) {
+	family := func(id gateway.ModelID) (gateway.ModelID, bool) {
 		lab, part := SplitModelID(id)
 		for _, w := range firsts[lab] {
 			if !strings.HasPrefix(part, w+"-") {
-				if m, ok := named(ModelID(string(lab) + "/" + w + "-" + part)); ok {
+				if m, ok := named(gateway.ModelID(string(lab) + "/" + w + "-" + part)); ok {
 					return m, true
 				}
 			}
@@ -797,9 +798,9 @@ func (b *builder) shareUnlisted() {
 	// anthropic/claude-3-5-haiku does and claude-haiku-3.5 does not; then the
 	// one that writes versions with dots, as models.dev's IDs do; then the
 	// shortest.
-	chosen := make(map[string]ModelID, len(alike))
+	chosen := make(map[string]gateway.ModelID, len(alike))
 	for key, ms := range alike {
-		chosen[key] = slices.MaxFunc(ms, func(x, y ModelID) int {
+		chosen[key] = slices.MaxFunc(ms, func(x, y gateway.ModelID) int {
 			return cmp.Or(cmpBool(b.labSpelled(x), b.labSpelled(y)),
 				cmp.Compare(strings.Count(string(x), "."), strings.Count(string(y), ".")),
 				cmp.Compare(len(y), len(x)), strings.Compare(string(y), string(x)))
@@ -819,12 +820,12 @@ func (b *builder) shareUnlisted() {
 		}
 		id := chosen[g]
 		key, lkey := looseKey(id), letters(id)
-		into, basis, tier := id, BasisID, Tier("")
+		into, basis, tier := id, BasisID, gateway.Tier("")
 		// What models.dev ties the same ID to at another provider, of the
 		// same date: a dated ID and an undated one name two models. A
 		// "-latest" ID names no date but what it serves now, as models.dev
 		// says.
-		var elsewhere ModelID
+		var elsewhere gateway.ModelID
 		if len(tiedAs[key]) == 1 {
 			for m := range tiedAs[key] {
 				if slices.Equal(dates(id), dates(m)) || strings.HasSuffix(string(id), "-latest") {
@@ -835,7 +836,7 @@ func (b *builder) shareUnlisted() {
 		base, isFree := cut(id, freeSuffixes...)
 		// Only a product's or a plan's name, as the rules strip it, hides
 		// the lab's family word, as GitLab's "duo-chat-" does "claude-".
-		var kin ModelID
+		var kin gateway.ModelID
 		inFamily := false
 		if slices.ContainsFunc(ss, func(s shared) bool { return b.hostPrefixed(s.pid, s.listings[0]) }) {
 			kin, inFamily = family(id)
@@ -850,7 +851,7 @@ func (b *builder) shareUnlisted() {
 		case elsewhere != "":
 			into = elsewhere
 		case isFree:
-			into, basis, tier = base, BasisTier, TierFree
+			into, basis, tier = base, BasisTier, gateway.TierFree
 		case inFamily:
 			into = kin
 		default:
@@ -890,8 +891,10 @@ func (b *builder) shareUnlisted() {
 			lab, part := SplitModelID(id)
 			ft.Of, _ = b.TunedModel(lab, part)
 		}
-		m.Finetuned = &ft
 		b.out.Models[id] = m
+		origin := b.report.Origins[id]
+		origin.Finetuned = &ft
+		b.report.Origins[id] = origin
 		b.report.Inferred = append(b.report.Inferred, id)
 		b.tieShared(ss, id, BasisInferred, "")
 	}
@@ -903,7 +906,7 @@ func (b *builder) shareUnlisted() {
 // one: OpenCode's "glm-5-free" is of zhipuai/glm-5, as its "glm-5" is, and
 // becomes that offering's free variant; AIHubMix's "claude-opus-4-7-think"
 // its thinking one; and 302.AI's "gemini-2.5-flash-nothink" an alias.
-func (b *builder) StepOfTied(prov ListedProvider, id string) (ModelID, Basis, bool) {
+func (b *builder) StepOfTied(prov ListedProvider, id string) (gateway.ModelID, Basis, bool) {
 	free := b.rules.FreeSuffixes()
 	for _, s := range slices.Concat(free, b.rules.ThinkingSuffixes(), b.rules.NoThinkingSuffixes()) {
 		base, ok := strings.CutSuffix(id, s)
@@ -924,11 +927,11 @@ func (b *builder) StepOfTied(prov ListedProvider, id string) (ModelID, Basis, bo
 // part of lab, adds words of its own to, the longest, and reports whether
 // there is one: google/gemma-4-31b-it of "gemma-4-31b-it-garnet", and
 // meta/llama-3.1-8b-instruct of "meta-llama-3-1-8b-instruct-gguf".
-func (b *builder) TunedModel(lab ProviderID, part string) (ModelID, bool) {
+func (b *builder) TunedModel(lab gateway.ProviderID, part string) (gateway.ModelID, bool) {
 	part = CatalogID(part)
 	for _, p := range slices.Compact([]string{part, strings.TrimPrefix(part, string(lab)+"-")}) {
 		for i := strings.LastIndexByte(p, '-'); i > 0; i = strings.LastIndexByte(p[:i], '-') {
-			id := ModelID(string(lab) + "/" + p[:i])
+			id := gateway.ModelID(string(lab) + "/" + p[:i])
 			if _, ok := b.out.Models[id]; ok {
 				return id, true
 			}
@@ -942,7 +945,7 @@ func (b *builder) TunedModel(lab ProviderID, part string) (ModelID, bool) {
 
 // tieShared ties the listings of ss to model into, on basis, the first
 // listing of each in tier.
-func (b *builder) tieShared(ss []shared, into ModelID, basis Basis, tier Tier) {
+func (b *builder) tieShared(ss []shared, into gateway.ModelID, basis Basis, tier gateway.Tier) {
 	for _, s := range ss {
 		prov := b.out.Providers[s.pid]
 		for _, lid := range s.listings {
@@ -963,7 +966,7 @@ func (b *builder) tieShared(ss []shared, into ModelID, basis Basis, tier Tier) {
 // otherwise compare alike, as anthropic/claude-4.5-haiku and
 // anthropic/claude-haiku-4-5 do. Its numbers keep their order, so that
 // gemini-2.5-pro-preview-05-06 and -06-05 do not.
-func looseKey(id ModelID) string {
+func looseKey(id gateway.ModelID) string {
 	lab, part := SplitModelID(id)
 	var words, numbers []string
 	for _, w := range strings.Split(Normalize(part), "-") {
@@ -979,8 +982,9 @@ func looseKey(id ModelID) string {
 
 // sharedModel returns the model shareUnlisted makes for model ID id, which
 // ss name: named by NameOf, with the facts of the lab's own listing, or else
-// of the first provider's, in byte order.
-func (b *builder) sharedModel(id ModelID, ss []shared) Model {
+// of the first provider's, in byte order. It records the model's Origin, as
+// inferred.
+func (b *builder) sharedModel(id gateway.ModelID, ss []shared) gateway.Model {
 	lab := id.Lab()
 	best := slices.MinFunc(ss, func(x, y shared) int {
 		return cmp.Or(cmpBool(x.pid != lab, y.pid != lab), strings.Compare(string(x.pid), string(y.pid)))
@@ -989,18 +993,18 @@ func (b *builder) sharedModel(id ModelID, ss []shared) Model {
 	// How the lab was found, the surest way any listing names it.
 	order := []LabBy{LabByCanonical, LabByBase, LabByProduct, LabByMaker, LabByPrefix, LabByProvider, LabByBrand}
 	by := slices.MinFunc(ss, func(x, y shared) int { return cmp.Compare(slices.Index(order, x.by), slices.Index(order, y.by)) }).by
-	return Model{
+	b.report.Origins[id] = Origin{Inferred: &Inference{LabBy: by, Facts: best.pid}}
+	return gateway.Model{
 		ID: id, Lab: lab, Name: NameOf(id, b.spell), Family: o.Family, Type: o.Type,
 		Released: o.Released, Updated: o.Updated, Knowledge: o.Knowledge, OpenWeights: o.OpenWeights,
 		Reasoning: o.Reasoning != nil, Capabilities: o.Capabilities, Limit: o.Limit,
-		Inferred: &Inference{LabBy: by, Facts: best.pid},
 	}
 }
 
 // letters returns model ID id's lab and the letters and digits of the rest,
 // so that IDs a dash or a dot apart compare alike: cohere/embed-v-4-0 and
 // cohere/embed-v4.0.
-func letters(id ModelID) string {
+func letters(id gateway.ModelID) string {
 	lab, part := SplitModelID(id)
 	return string(lab) + "/" + alnum(part)
 }
@@ -1021,11 +1025,11 @@ type spelling struct{ joined, dashed, dot, dash int }
 // qwen2.5 of "qwen-2.5" and "qwen2-5", Meta's llama-3.3 of "llama3.3", and
 // Anthropic's claude-3-5 of "claude-3.5". A brand the lab writes no version
 // of, or writes both ways as often, stays as it is.
-func (b *builder) labSpelling(lab ProviderID, part string) string {
+func (b *builder) labSpelling(lab gateway.ProviderID, part string) string {
 	if b.spellings == nil {
 		b.spellings = make(map[string]spelling)
 		for id := range b.bundle.Models {
-			l, p := SplitModelID(ModelID(id))
+			l, p := SplitModelID(gateway.ModelID(id))
 			m := versioned.FindStringSubmatch(p)
 			if m == nil {
 				continue
@@ -1076,7 +1080,7 @@ func (b *builder) labSpelling(lab ProviderID, part string) string {
 
 // labSpelled reports whether model ID id starts with a brand and version its
 // lab's models.dev IDs write, as labSpelling writes them.
-func (b *builder) labSpelled(id ModelID) bool {
+func (b *builder) labSpelled(id gateway.ModelID) bool {
 	lab, part := SplitModelID(id)
 	m := versioned.FindStringSubmatch(part)
 	if m == nil {
@@ -1089,7 +1093,7 @@ func (b *builder) labSpelled(id ModelID) bool {
 
 // dates returns the words of model ID id that are dates, of 4, 6 or 8
 // digits, in byte order: "0309" of xai/grok-4.20-0309-reasoning.
-func dates(id ModelID) []string {
+func dates(id gateway.ModelID) []string {
 	_, part := SplitModelID(id)
 	words := slices.DeleteFunc(strings.Split(Normalize(part), "-"), func(w string) bool {
 		return !(len(w) == 4 || len(w) == 6 || len(w) == 8) || !digits(w, len(w))

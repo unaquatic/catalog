@@ -55,11 +55,18 @@ Our catalog, `data/catalog`, is its own source of truth, a file per lab's models
 
 ## Packages
 
-- `gateway` — the catalog format, the mapping from models.dev to it and its rules (`gateway/rules.json`), the HTTP handler, and the `Store` that clients such as flow read it with.
-- `gateway/gatewaytest` — catalogs for tests, built from models.dev api.json documents.
-- `modelsdev` — models.dev's catalog.json, and the cache and fetcher of downloads.
-- `cmd/catalog` — applies models.dev's changes to the catalog (`update`), remaps and patches it (`remap`, `apply`), joins it into one document (`join`), builds a catalog from models.dev alone, serves a catalog with a page that browses it, and writes snapshots.
+The public API, which every release versions:
+
+- `gateway` — the catalog format, decoding it and resolving a call, its JSON Schema, and the `Store` that clients such as flow read it with.
+- `gateway/gatewaytest` — catalogs for tests, built from models.dev api.json documents, and `Store` caches of them.
 - `data` — our catalog (`catalog/`: `catalog.json`, `models/<lab>.json`, `providers/<id>.json`), models.dev's catalog.json it last took changes from (`models-dev.json`), and the patch of those changes (`patch.json`).
+
+Internal to the module:
+
+- `cmd/catalog` — applies models.dev's changes to the catalog (`update`), remaps and patches it (`remap`, `apply`), joins it into one document (`join`), builds a catalog from models.dev alone, serves a catalog as the site does (the page, `catalog.json` and `schema.json`), and writes snapshots.
+- `internal/build` — the mapping from models.dev to the catalog, and its rules (`internal/build/rules.json`).
+- `internal/catalogdir` — the file layout of `data/catalog`.
+- `internal/modelsdev` — models.dev's catalog.json, and the cache and fetcher of downloads.
 
 ## License
 

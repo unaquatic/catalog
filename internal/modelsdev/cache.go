@@ -31,7 +31,7 @@ type Entry struct {
 	Fetched time.Time `json:"fetched"`
 	// Checked is when the source was last asked, whether or not it
 	// answered. A refresh records it as it starts, so that no other one
-	// starts within RetryDelay.
+	// starts within the gateway Store's retry delay.
 	Checked time.Time `json:"checked,omitzero"`
 	// Data is the raw catalog document, empty when no download has
 	// succeeded yet.

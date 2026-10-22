@@ -1,4 +1,4 @@
-package gateway
+package build
 
 import (
 	"bytes"
@@ -11,13 +11,14 @@ import (
 	"testing"
 	"time"
 
-	"github.com/unaquatic/catalog/modelsdev"
+	"github.com/unaquatic/catalog/gateway"
+	"github.com/unaquatic/catalog/internal/modelsdev"
 )
 
 var update = flag.Bool("update", false, "rewrite testdata/catalog.golden.json")
 
 // fixtureProviders are the providers of testdata/catalog.json.
-var fixtureProviders = []ProviderID{"anthropic", "github-copilot", "llmgateway", "openai", "opencode", "openrouter", "vercel"}
+var fixtureProviders = []gateway.ProviderID{"anthropic", "github-copilot", "llmgateway", "openai", "opencode", "openrouter", "vercel"}
 
 // loadFixture returns the models.dev bundle of testdata/catalog.json.
 func loadFixture(t *testing.T) modelsdev.Bundle {
@@ -57,7 +58,7 @@ func buildFixture(t *testing.T) (*Listings, Report) {
 
 // groupFixture maps testdata/catalog.json to the catalog, with the
 // mapping's rules.
-func groupFixture(t *testing.T) (*Catalog, Report) {
+func groupFixture(t *testing.T) (*gateway.Catalog, Report) {
 	t.Helper()
 	c, rep, err := FromModelsDev(loadFixture(t), fixtureOptions(true))
 	if err != nil {
@@ -67,7 +68,7 @@ func groupFixture(t *testing.T) (*Catalog, Report) {
 }
 
 // mustListing returns the listing of provider p with ID id in l.
-func mustListing(t *testing.T, l *Listings, p ProviderID, id string) Listing {
+func mustListing(t *testing.T, l *Listings, p gateway.ProviderID, id string) Listing {
 	t.Helper()
 	o, ok := l.Listing(Ref{Provider: p, ID: id})
 	if !ok {
@@ -77,7 +78,7 @@ func mustListing(t *testing.T, l *Listings, p ProviderID, id string) Listing {
 }
 
 // mustModel returns model id of models.
-func mustModel(t *testing.T, models map[ModelID]Model, id ModelID) Model {
+func mustModel(t *testing.T, models map[gateway.ModelID]gateway.Model, id gateway.ModelID) gateway.Model {
 	t.Helper()
 	m, ok := models[id]
 	if !ok {
@@ -87,7 +88,7 @@ func mustModel(t *testing.T, models map[ModelID]Model, id ModelID) Model {
 }
 
 // refs returns the refs of the listings that serve model m, as strings.
-func refs(l *Listings, m ModelID) []string {
+func refs(l *Listings, m gateway.ModelID) []string {
 	var out []string
 	for r := range l.ListingsOf(m) {
 		out = append(out, r.String())
@@ -108,7 +109,7 @@ func ptr[T any](v T) *T { return &v }
 
 func TestFromModelsDevGolden(t *testing.T) {
 	c, _ := groupFixture(t)
-	got, err := Encode(c)
+	got, err := gateway.Encode(c)
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -125,11 +126,11 @@ func TestFromModelsDevGolden(t *testing.T) {
 	if !bytes.Equal(got, want) {
 		t.Errorf("catalog differs from %s; run with -update and review the diff", golden)
 	}
-	back, err := Decode(got)
+	back, err := gateway.Decode(got)
 	if err != nil {
 		t.Fatalf("Decode: %v", err)
 	}
-	if again, _ := Encode(back); !bytes.Equal(again, got) {
+	if again, _ := gateway.Encode(back); !bytes.Equal(again, got) {
 		t.Error("catalog does not survive Decode and Encode unchanged")
 	}
 }
@@ -142,8 +143,8 @@ func TestNames(t *testing.T) {
 	c, _ := groupFixture(t)
 	// Each catalog names exactly the labs and families of its own models,
 	// the copy Keep makes too.
-	for name, c := range map[string]*Catalog{"catalog": c, "kept": c.Keep("openai")} {
-		labs, families := make(map[ProviderID]bool), make(map[string]bool)
+	for name, c := range map[string]*gateway.Catalog{"catalog": c, "kept": Keep(c, "openai")} {
+		labs, families := make(map[gateway.ProviderID]bool), make(map[string]bool)
 		for _, m := range c.Models {
 			labs[m.Lab] = true
 			if m.Family != "" {
@@ -216,9 +217,9 @@ func TestModelsDevOnly(t *testing.T) {
 		t.Errorf("bases = %v, want %v", rep.Bases, want)
 	}
 	for _, tt := range []struct {
-		provider ProviderID
+		provider gateway.ProviderID
 		id       string
-		want     ModelID
+		want     gateway.ModelID
 	}{
 		{"anthropic", "claude-opus-4-8", "anthropic/claude-opus-4-8"},
 		{"vercel", "openai/gpt-6-astra-fast", "openai/gpt-6-astra-fast"},
@@ -234,7 +235,7 @@ func TestModelsDevOnly(t *testing.T) {
 			t.Errorf("%s/%s: model %q, basis %q; want %q from models.dev", tt.provider, tt.id, o.Model, o.Basis, tt.want)
 		}
 	}
-	if fast := mustModel(t, c.Models, "openai/gpt-6-astra-fast"); fast.Derived != nil {
+	if fast := mustModel(t, c.Models, "openai/gpt-6-astra-fast"); rep.Origins[fast.ID].Derived != nil {
 		t.Errorf("astra fast = %+v, want models.dev's model unchanged", fast)
 	}
 	if opt := mustListing(t, c, "openai", "gpt-6.1-sol").Modes["pro"]; opt.Model != "" || opt.Body == nil {
@@ -252,10 +253,10 @@ func TestFromModelsDevReport(t *testing.T) {
 	if !maps.Equal(rep.Bases, want) {
 		t.Errorf("bases = %v, want %v", rep.Bases, want)
 	}
-	if want := []ModelID{"openai/gpt-6-astra-fast"}; !slices.Equal(rep.Merged, want) {
+	if want := []gateway.ModelID{"openai/gpt-6-astra-fast"}; !slices.Equal(rep.Merged, want) {
 		t.Errorf("merged = %v, want %v", rep.Merged, want)
 	}
-	if want := []ModelID{"openai/gpt-6-astra-pro", "openai/gpt-6.1-sol-pro"}; !slices.Equal(rep.Derived, want) {
+	if want := []gateway.ModelID{"openai/gpt-6-astra-pro", "openai/gpt-6.1-sol-pro"}; !slices.Equal(rep.Derived, want) {
 		t.Errorf("derived = %v, want %v", rep.Derived, want)
 	}
 	wantTiers := []string{
@@ -280,18 +281,18 @@ func TestFromModelsDevReport(t *testing.T) {
 func TestTies(t *testing.T) {
 	c, _ := buildFixture(t)
 	tests := []struct {
-		provider ProviderID
+		provider gateway.ProviderID
 		id       string
-		want     ModelID // "" for provider-specific
+		want     gateway.ModelID // "" for provider-specific
 		basis    Basis
-		tier     Tier
+		tier     gateway.Tier
 	}{
 		{"anthropic", "claude-opus-5-5", "anthropic/claude-opus-5-5", BasisCanonical, ""},
 		{"anthropic", "claude-opus-4-8", "anthropic/claude-opus-4-8", BasisLab, ""},
 		{"openai", "gpt-5.6", "openai/gpt-5.6-sol", BasisCanonical, ""},
 		{"github-copilot", "claude-opus-5.5", "anthropic/claude-opus-5-5", BasisCanonical, ""},
 		// Rule 1: models.dev's openai/gpt-6-astra-fast is merged into GPT-6 Astra.
-		{"vercel", "openai/gpt-6-astra-fast", "openai/gpt-6-astra", BasisTier, TierFast},
+		{"vercel", "openai/gpt-6-astra-fast", "openai/gpt-6-astra", BasisTier, gateway.TierFast},
 		// Rule 2, by ID: bare, lab/ID, a lab alias, dots, :variant.
 		{"llmgateway", "gpt-6-astra", "openai/gpt-6-astra", BasisID, ""},
 		{"llmgateway", "x-ai/grok-9", "xai/grok-9", BasisID, ""},
@@ -344,9 +345,9 @@ func TestTies(t *testing.T) {
 }
 
 func TestModels(t *testing.T) {
-	c, _ := buildFixture(t)
+	c, rep := buildFixture(t)
 	tests := []struct {
-		id   ModelID
+		id   gateway.ModelID
 		want []string
 	}{
 		{"openai/gpt-6-astra", []string{"llmgateway/gpt-6-astra", "openai/gpt-6-astra", "vercel/openai/gpt-6-astra", "vercel/openai/gpt-6-astra-fast"}},
@@ -368,13 +369,13 @@ func TestModels(t *testing.T) {
 		t.Error("openai/gpt-6-astra-fast is still a model; want it merged")
 	}
 	astra := mustModel(t, c.Models, "openai/gpt-6-astra")
-	if !slices.Equal(astra.Merged, []ModelID{"openai/gpt-6-astra-fast"}) {
+	if !slices.Equal(astra.Merged, []gateway.ModelID{"openai/gpt-6-astra-fast"}) {
 		t.Errorf("astra merged = %v", astra.Merged)
 	}
 	// A mode with a derived model names it; tiers and other modes do not.
 	for _, tt := range []struct {
 		id, mode string
-		want     ModelID
+		want     gateway.ModelID
 	}{
 		{"gpt-6-astra", "pro", "openai/gpt-6-astra-pro"},
 		{"gpt-6.1-sol", "pro", "openai/gpt-6.1-sol-pro"},
@@ -394,7 +395,7 @@ func TestModels(t *testing.T) {
 		t.Error("anthropic/claude-opus-latest is a model; want its IDs under anthropic/claude-opus-5-5")
 	}
 	pro := mustModel(t, c.Models, "openai/gpt-6-astra-pro")
-	if pro.Name != "GPT-6 Astra Pro" || pro.Derived == nil || *pro.Derived != (Derivation{From: "openai/gpt-6-astra", Mode: "pro"}) ||
+	if pro.Name != "GPT-6 Astra Pro" || rep.Origins[pro.ID].Derived == nil || *rep.Origins[pro.ID].Derived != (Derivation{From: "openai/gpt-6-astra", Mode: "pro"}) ||
 		pro.Lab != "openai" || pro.Family != "gpt-astra" || pro.Merged != nil {
 		t.Errorf("astra pro = %+v", pro)
 	}
@@ -419,7 +420,7 @@ func TestModels(t *testing.T) {
 }
 
 func TestCandidates(t *testing.T) {
-	b := &builder{rules: DefaultRules(), labs: map[ProviderID]bool{"openai": true, "anthropic": true, "xai": true, "bytedance-seed": true}}
+	b := &builder{rules: DefaultRules(), labs: map[gateway.ProviderID]bool{"openai": true, "anthropic": true, "xai": true, "bytedance-seed": true}}
 	tests := []struct {
 		id   string
 		want []candidate
@@ -462,12 +463,12 @@ func TestTiersAndModes(t *testing.T) {
 	c, _ := buildFixture(t)
 
 	opus := mustListing(t, c, "anthropic", "claude-opus-5-5")
-	fast := opus.Tiers[TierFast]
+	fast := opus.Tiers[gateway.TierFast]
 	if fast.Body["speed"] != "fast" || fast.Headers["anthropic-beta"] != "fast-mode-2026-02-01" || fast.Price.Input != 8 {
 		t.Errorf("anthropic fast tier = %+v, want speed fast, the beta header and 8/40", fast)
 	}
 	sol := mustListing(t, c, "openai", "gpt-6.1-sol")
-	if sol.Tiers[TierFast].Body["service_tier"] != "priority" || sol.Tiers[TierUltrafast].Body["service_tier"] != "ultrafast" {
+	if sol.Tiers[gateway.TierFast].Body["service_tier"] != "priority" || sol.Tiers[gateway.TierUltrafast].Body["service_tier"] != "ultrafast" {
 		t.Errorf("gpt-6.1-sol tiers = %+v", sol.Tiers)
 	}
 	pro, ok := sol.Modes["pro"]
@@ -475,7 +476,7 @@ func TestTiersAndModes(t *testing.T) {
 		t.Errorf("pro mode = %+v, %v; want reasoning.mode pro without a price", pro, ok)
 	}
 	o3 := mustListing(t, c, "vercel", "openai/o3")
-	if o3.Tiers[TierFast].Body["service_tier"] != "priority" || o3.Tiers[TierFlex].Price.Input != 1 {
+	if o3.Tiers[gateway.TierFast].Body["service_tier"] != "priority" || o3.Tiers[gateway.TierFlex].Price.Input != 1 {
 		t.Errorf("vercel o3 tiers = %+v, want fast and flex from its modes", o3.Tiers)
 	}
 	// A mode that is neither a tier nor a reasoning mode is left out.
@@ -490,14 +491,14 @@ func TestEstimatedTierPrices(t *testing.T) {
 	sol := mustListing(t, c, "openai", "gpt-6.1-sol")
 	tests := []struct {
 		name string
-		got  *Price
-		want PriceTier
+		got  *gateway.Price
+		want gateway.PriceTier
 	}{
-		{"standard", sol.Price, PriceTier{Above: 272_000, Rates: Rates{Input: 4, Output: 15, CacheRead: ptr(0.2), CacheWrite: ptr(5.0)}}},
-		{"fast", sol.Tiers[TierFast].Price, PriceTier{Above: 272_000, Estimated: true,
-			Rates: Rates{Input: 8, Output: 30, CacheRead: ptr(0.4), CacheWrite: ptr(10.0)}}},
-		{"ultrafast", sol.Tiers[TierUltrafast].Price, PriceTier{Above: 272_000, Estimated: true,
-			Rates: Rates{Input: 24, Output: 90, CacheRead: ptr(1.2), CacheWrite: ptr(30.0)}}},
+		{"standard", sol.Price, gateway.PriceTier{Above: 272_000, Rates: gateway.Rates{Input: 4, Output: 15, CacheRead: ptr(0.2), CacheWrite: ptr(5.0)}}},
+		{"fast", sol.Tiers[gateway.TierFast].Price, gateway.PriceTier{Above: 272_000, Estimated: true,
+			Rates: gateway.Rates{Input: 8, Output: 30, CacheRead: ptr(0.4), CacheWrite: ptr(10.0)}}},
+		{"ultrafast", sol.Tiers[gateway.TierUltrafast].Price, gateway.PriceTier{Above: 272_000, Estimated: true,
+			Rates: gateway.Rates{Input: 24, Output: 90, CacheRead: ptr(1.2), CacheWrite: ptr(30.0)}}},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
@@ -520,17 +521,17 @@ func TestEstimatedTierPrices(t *testing.T) {
 func TestOfferingFields(t *testing.T) {
 	c, _ := buildFixture(t)
 	sol := mustListing(t, c, "openai", "gpt-5.6-sol")
-	if want := []Effort{"none", "low", "medium", "high", "xhigh", "max"}; sol.Reasoning == nil || !slices.Equal(sol.Reasoning.Efforts, want) {
+	if want := []gateway.Effort{"none", "low", "medium", "high", "xhigh", "max"}; sol.Reasoning == nil || !slices.Equal(sol.Reasoning.Efforts, want) {
 		t.Errorf("gpt-5.6-sol efforts = %+v, want %v without null and default", sol.Reasoning, want)
 	}
 	if sol.Reasoning == nil || sol.Reasoning.Mandatory == nil || *sol.Reasoning.Mandatory {
 		t.Errorf("gpt-5.6-sol reasoning = %+v, want it not mandatory: it takes effort none", sol.Reasoning)
 	}
-	if s := mustListing(t, c, "anthropic", "claude-sonnet-4-5"); s.Reasoning == nil || *s.Reasoning.Budget != (Budget{Min: 1024}) || s.Reasoning.Mandatory != nil {
+	if s := mustListing(t, c, "anthropic", "claude-sonnet-4-5"); s.Reasoning == nil || *s.Reasoning.Budget != (gateway.Budget{Min: 1024}) || s.Reasoning.Mandatory != nil {
 		t.Errorf("sonnet reasoning = %+v, want a budget from 1024, and mandatory unknown", s.Reasoning)
 	}
 	pickle := mustListing(t, c, "opencode", "big-pickle")
-	if r := pickle.Reasoning; r == nil || r.Mandatory == nil || *r.Mandatory || pickle.Status != StatusBeta || !pickle.OpenWeights {
+	if r := pickle.Reasoning; r == nil || r.Mandatory == nil || *r.Mandatory || pickle.Status != gateway.StatusBeta || !pickle.OpenWeights {
 		t.Errorf("big-pickle = %+v, want reasoning not mandatory for its toggle, beta and open weights", pickle)
 	}
 	if nano := mustListing(t, c, "openai", "gpt-5.4-nano"); nano.Reasoning != nil {
@@ -538,17 +539,17 @@ func TestOfferingFields(t *testing.T) {
 	}
 	// An override of the package alone keeps the provider's base URL.
 	copilot := mustListing(t, c, "github-copilot", "claude-opus-5.5")
-	if ep := copilot.Endpoint; ep == nil || ep.Format != FormatAnthropicMessages || ep.API != "https://api.githubcopilot.com" ||
-		ep.Auth != (Auth{Scheme: AuthBearer}) ||
-		copilot.Interleaved == nil || copilot.Interleaved.Field != "reasoning_text" || copilot.Limit != (Limit{Context: 200_000, Output: 64_000}) {
+	if ep := copilot.Endpoint; ep == nil || ep.Format != gateway.FormatAnthropicMessages || ep.API != "https://api.githubcopilot.com" ||
+		ep.Auth != (gateway.Auth{Scheme: gateway.AuthBearer}) ||
+		copilot.Interleaved == nil || copilot.Interleaved.Field != "reasoning_text" || copilot.Limit != (gateway.Limit{Context: 200_000, Output: 64_000}) {
 		t.Errorf("copilot offering = %+v, endpoint %+v", copilot, copilot.Endpoint)
 	}
 	zen := mustListing(t, c, "opencode", "claude-opus-4-8")
-	if ep := zen.Endpoint; ep == nil || !ep.Equal(Endpoint{Format: FormatAnthropicMessages, API: "https://opencode.ai/inference/anthropic/v1",
-		Auth: Auth{Scheme: AuthHeader, Header: "x-api-key"}, Env: []string{"OPENCODE_API_KEY"}}) {
+	if ep := zen.Endpoint; ep == nil || !ep.Equal(gateway.Endpoint{Format: gateway.FormatAnthropicMessages, API: "https://opencode.ai/inference/anthropic/v1",
+		Auth: gateway.Auth{Scheme: gateway.AuthHeader, Header: "x-api-key"}, Env: []string{"OPENCODE_API_KEY"}}) {
 		t.Errorf("opencode endpoint = %+v, want anthropic-messages at its own API, whole", zen.Endpoint)
 	}
-	if ep := mustListing(t, c, "opencode", "gpt-5.6-sol").Endpoint; ep == nil || ep.Format != FormatOpenAIResponses ||
+	if ep := mustListing(t, c, "opencode", "gpt-5.6-sol").Endpoint; ep == nil || ep.Format != gateway.FormatOpenAIResponses ||
 		ep.API != "https://opencode.ai/inference/openai/v1" || ep.APIDefault {
 		t.Errorf("opencode gpt endpoint = %+v, want openai-responses at the provider's API", ep)
 	}
@@ -562,22 +563,22 @@ func TestOfferingFields(t *testing.T) {
 
 func TestProviders(t *testing.T) {
 	c, _ := buildFixture(t)
-	bearer, apiKey := Auth{Scheme: AuthBearer}, Auth{Scheme: AuthHeader, Header: "x-api-key"}
+	bearer, apiKey := gateway.Auth{Scheme: gateway.AuthBearer}, gateway.Auth{Scheme: gateway.AuthHeader, Header: "x-api-key"}
 	tests := []struct {
-		id     ProviderID
-		kind   ProviderKind
-		format Format
+		id     gateway.ProviderID
+		kind   gateway.ProviderKind
+		format gateway.Format
 		api    string // "" for the SDK's default
-		auth   Auth
+		auth   gateway.Auth
 		models int
 	}{
-		{"anthropic", KindLab, FormatAnthropicMessages, "", apiKey, 3},
-		{"openai", KindLab, FormatOpenAIResponses, "", bearer, 6},
-		{"vercel", KindGateway, FormatOpenAIChat, "", bearer, 8},
-		{"openrouter", KindGateway, FormatOpenAIChat, "https://openrouter.ai/api/v1", bearer, 7},
-		{"opencode", KindGateway, FormatOpenAIChat, "https://opencode.ai/inference/openai/v1", bearer, 3},
-		{"github-copilot", KindGateway, FormatOpenAIChat, "https://api.githubcopilot.com", bearer, 1},
-		{"llmgateway", KindGateway, FormatOpenAIChat, "https://api.llmgateway.io/v1", bearer, 5},
+		{"anthropic", gateway.KindLab, gateway.FormatAnthropicMessages, "", apiKey, 3},
+		{"openai", gateway.KindLab, gateway.FormatOpenAIResponses, "", bearer, 6},
+		{"vercel", gateway.KindGateway, gateway.FormatOpenAIChat, "", bearer, 8},
+		{"openrouter", gateway.KindGateway, gateway.FormatOpenAIChat, "https://openrouter.ai/api/v1", bearer, 7},
+		{"opencode", gateway.KindGateway, gateway.FormatOpenAIChat, "https://opencode.ai/inference/openai/v1", bearer, 3},
+		{"github-copilot", gateway.KindGateway, gateway.FormatOpenAIChat, "https://api.githubcopilot.com", bearer, 1},
+		{"llmgateway", gateway.KindGateway, gateway.FormatOpenAIChat, "https://api.llmgateway.io/v1", bearer, 5},
 	}
 	for _, tt := range tests {
 		p, ok := c.Providers[tt.id]
@@ -597,7 +598,7 @@ func TestProviders(t *testing.T) {
 }
 
 func TestKeepProviders(t *testing.T) {
-	c, rep, err := FromModelsDev(loadFixture(t), Options{Providers: []ProviderID{"anthropic", "anthropic"}, Infer: true})
+	c, rep, err := FromModelsDev(loadFixture(t), Options{Providers: []gateway.ProviderID{"anthropic", "anthropic"}, Infer: true})
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -605,10 +606,10 @@ func TestKeepProviders(t *testing.T) {
 		t.Errorf("%d providers, %d models, %d listings, %d offerings; want 1, 12 (models.dev's, one merged, none derived), 3, 3",
 			len(c.Providers), len(c.Models), rep.Listings, rep.Offerings)
 	}
-	if opus := mustModel(t, c.Models, "anthropic/claude-opus-5-5"); !slices.Equal(opus.Providers, []ProviderID{"anthropic"}) {
+	if opus := mustModel(t, c.Models, "anthropic/claude-opus-5-5"); !slices.Equal(opus.Providers, []gateway.ProviderID{"anthropic"}) {
 		t.Errorf("opus providers = %v, want only Anthropic", opus.Providers)
 	}
-	_, _, err = FromModelsDev(loadFixture(t), Options{Providers: []ProviderID{"anthropic", "nope"}})
+	_, _, err = FromModelsDev(loadFixture(t), Options{Providers: []gateway.ProviderID{"anthropic", "nope"}})
 	if !errors.Is(err, ErrUnknownProvider) || !strings.Contains(err.Error(), `"nope"`) {
 		t.Errorf("err = %v, want ErrUnknownProvider naming nope", err)
 	}
@@ -660,24 +661,6 @@ func TestClassifyMode(t *testing.T) {
 	}
 }
 
-func TestPriceAt(t *testing.T) {
-	p := Price{Rates: Rates{Input: 2}, Tiers: []PriceTier{
-		{Above: 272_000, Rates: Rates{Input: 4}},
-		{Above: 1_000_000, Rates: Rates{Input: 8}},
-	}}
-	for prompt, want := range map[int]float64{0: 2, 272_000: 2, 272_001: 4, 1_000_001: 8} {
-		if got := p.At(prompt).Input; got != want {
-			t.Errorf("At(%d).Input = %v, want %v", prompt, got, want)
-		}
-	}
-}
-
-func TestDecodeVersion(t *testing.T) {
-	if _, err := Decode([]byte(`{"version": 1, "providers": {}, "models": {}}`)); !errors.Is(err, ErrVersion) {
-		t.Errorf("Decode(version 1) = %v, want ErrVersion", err)
-	}
-}
-
 // TestModelsDevBundle maps a full models.dev catalog.json, without and with
 // the mapping's rules. It is skipped unless CATALOG_BUNDLE points at a
 // downloaded one.
@@ -709,9 +692,9 @@ func TestModelsDevBundle(t *testing.T) {
 	t.Logf("with the rules: models %d, listings %d, bases %v, merged %v, derived %v, notes %d",
 		rep.Models, rep.Listings, rep.Bases, rep.Merged, rep.Derived, len(rep.Notes))
 	for _, tt := range []struct {
-		provider ProviderID
+		provider gateway.ProviderID
 		id       string
-		want     ModelID
+		want     gateway.ModelID
 	}{
 		{"anthropic", "claude-opus-4-8", "anthropic/claude-opus-4-8"},
 		{"vercel", "openai/gpt-6-astra-fast", "openai/gpt-6-astra"},
@@ -729,7 +712,7 @@ func TestModelsDevBundle(t *testing.T) {
 	if _, ok := c.Models["openai/gpt-6-astra-fast"]; ok {
 		t.Error("openai/gpt-6-astra-fast is still a model")
 	}
-	if m, ok := c.Models["openai/gpt-6-astra-pro"]; !ok || m.Derived == nil ||
+	if m, ok := c.Models["openai/gpt-6-astra-pro"]; !ok || rep.Origins[m.ID].Derived == nil ||
 		!slices.Contains(slices.Collect(func(yield func(Ref) bool) {
 			for r := range c.ListingsOf(m.ID) {
 				if !yield(r) {
@@ -741,7 +724,7 @@ func TestModelsDevBundle(t *testing.T) {
 	}
 	// A "-latest" ID models.dev ties nowhere is a model of its own, with no
 	// claim of what it serves; one it ties is an ID of that model.
-	if m, ok := c.Models["openai/gpt-sol-latest"]; !ok || m.Name != "GPT Sol Latest" || m.Inferred == nil {
+	if m, ok := c.Models["openai/gpt-sol-latest"]; !ok || m.Name != "GPT Sol Latest" || rep.Origins[m.ID].Inferred == nil {
 		t.Errorf("openai/gpt-sol-latest = %+v, %v; want an inferred model GPT Sol Latest", m, ok)
 	}
 	if o, ok := c.Listing(Ref{Provider: "fireworks-ai", ID: "accounts/fireworks/routers/glm-latest"}); ok && o.Basis != BasisCanonical {

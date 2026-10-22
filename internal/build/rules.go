@@ -1,4 +1,4 @@
-package gateway
+package build
 
 import (
 	"bytes"
@@ -12,7 +12,8 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/unaquatic/catalog/modelsdev"
+	"github.com/unaquatic/catalog/gateway"
+	"github.com/unaquatic/catalog/internal/modelsdev"
 )
 
 // RulesVersion is the version of the rules document format DecodeRules
@@ -43,28 +44,28 @@ type Rules struct {
 	Version int    `json:"version"`
 	Rules   []Rule `json:"rules"`
 
-	makers    map[string]ProviderID
-	added     []ProviderID
+	makers    map[string]gateway.ProviderID
+	added     []gateway.ProviderID
 	products  []Rule
 	brands    []Rule
 	words     []Rule
 	segments  map[string]bool
-	prefixes  map[ProviderID][]string
+	prefixes  map[gateway.ProviderID][]string
 	services  []Rule
 	tunes     []Rule
 	bases     map[string]FinetuneBase
 	suffixes  []Rule
 	regions   []string
-	listed    []ProviderID
-	excluded  []ProviderID
-	official  []ProviderID
-	seps      map[ProviderID][]string
+	listed    []gateway.ProviderID
+	excluded  []gateway.ProviderID
+	official  []gateway.ProviderID
+	seps      map[gateway.ProviderID][]string
 	pins      []Rule
-	provNames map[ProviderID]string
-	labNames  map[ProviderID]string
+	provNames map[gateway.ProviderID]string
+	labNames  map[gateway.ProviderID]string
 	famNames  map[string]string
-	effNames  map[Effort]string
-	tierNames map[Tier]string
+	effNames  map[gateway.Effort]string
+	tierNames map[gateway.Tier]string
 	modeNames map[string]string
 	reasons   []Rule
 }
@@ -74,12 +75,12 @@ type Rules struct {
 type Rule struct {
 	Match Match `json:"match,omitzero"`
 	// Lab is the lab that Match's maker, product, brand or word names.
-	Lab ProviderID `json:"lab,omitempty"`
+	Lab gateway.ProviderID `json:"lab,omitempty"`
 	// Open, with Lab, marks a brand or word of weights others fine-tune.
 	Open bool `json:"open,omitempty"`
 	// AddLab is a lab models.dev lists no models of, which providers'
 	// model IDs name as their maker. It matches nothing.
-	AddLab ProviderID `json:"add_lab,omitempty"`
+	AddLab gateway.ProviderID `json:"add_lab,omitempty"`
 	// Skip reads past Match's segment when looking for a model ID's maker.
 	Skip bool `json:"skip,omitempty"`
 	// Strip removes Match's prefix from the model part of the provider's
@@ -95,9 +96,9 @@ type Rule struct {
 	// Tier, Mode and Alias say what Match's suffix adds to a model ID: a
 	// service tier, a reasoning mode, or nothing that makes it another
 	// model, as "-nothink".
-	Tier  Tier   `json:"tier,omitempty"`
-	Mode  string `json:"mode,omitempty"`
-	Alias bool   `json:"alias,omitempty"`
+	Tier  gateway.Tier `json:"tier,omitempty"`
+	Mode  string       `json:"mode,omitempty"`
+	Alias bool         `json:"alias,omitempty"`
 	// Regions are the region prefixes clouds put before model IDs, which
 	// StripRegion strips; "" is no prefix.
 	// It matches nothing.
@@ -115,7 +116,7 @@ type Rule struct {
 	Separator string `json:"separator,omitempty"`
 	// Model ties Match's listing to this model, which the catalog lists,
 	// whatever the other rules say.
-	Model ModelID `json:"model,omitempty"`
+	Model gateway.ModelID `json:"model,omitempty"`
 	// Name names Match's provider, lab, family, effort, tier or mode in the
 	// catalog, where the name the mapping would give it is wrong, as
 	// TheDrummer of thedrummer and Extra High of xhigh. A provider's name
@@ -159,11 +160,11 @@ type Match struct {
 	// Lab and Family are a lab of the catalog's models and a family, by
 	// the IDs models' Lab and Family hold, Effort a reasoning effort, and
 	// Tier and Mode a variant's tier and mode; only a name matches them.
-	Lab    ProviderID `json:"lab,omitempty"`
-	Family string     `json:"family,omitempty"`
-	Effort Effort     `json:"effort,omitempty"`
-	Tier   Tier       `json:"tier,omitempty"`
-	Mode   string     `json:"mode,omitempty"`
+	Lab    gateway.ProviderID `json:"lab,omitempty"`
+	Family string             `json:"family,omitempty"`
+	Effort gateway.Effort     `json:"effort,omitempty"`
+	Tier   gateway.Tier       `json:"tier,omitempty"`
+	Mode   string             `json:"mode,omitempty"`
 	// Models are catalog model IDs, or a list of them; only reasoning
 	// facts match them.
 	Models Strings `json:"models,omitempty"`
@@ -173,9 +174,9 @@ type Match struct {
 // its offerings' Reasoning. A nil or empty fact is one the rule does not
 // set.
 type ReasoningFacts struct {
-	Mandatory      *bool  `json:"mandatory,omitempty"`
-	DefaultEnabled *bool  `json:"default_enabled,omitempty"`
-	DefaultEffort  Effort `json:"default_effort,omitempty"`
+	Mandatory      *bool          `json:"mandatory,omitempty"`
+	DefaultEnabled *bool          `json:"default_enabled,omitempty"`
+	DefaultEffort  gateway.Effort `json:"default_effort,omitempty"`
 }
 
 // Strings is a list of strings, which JSON may write as one string alone.
@@ -207,10 +208,10 @@ func DecodeRules(data []byte) (*Rules, error) {
 	if r.Version != RulesVersion {
 		return nil, fmt.Errorf("%w: version %d, want %d", ErrRules, r.Version, RulesVersion)
 	}
-	r.makers, r.segments, r.prefixes, r.bases, r.seps = make(map[string]ProviderID), make(map[string]bool),
-		make(map[ProviderID][]string), make(map[string]FinetuneBase), make(map[ProviderID][]string)
-	r.provNames, r.labNames, r.famNames, r.effNames = make(map[ProviderID]string), make(map[ProviderID]string), make(map[string]string), make(map[Effort]string)
-	r.tierNames, r.modeNames = make(map[Tier]string), make(map[string]string)
+	r.makers, r.segments, r.prefixes, r.bases, r.seps = make(map[string]gateway.ProviderID), make(map[string]bool),
+		make(map[gateway.ProviderID][]string), make(map[string]FinetuneBase), make(map[gateway.ProviderID][]string)
+	r.provNames, r.labNames, r.famNames, r.effNames = make(map[gateway.ProviderID]string), make(map[gateway.ProviderID]string), make(map[string]string), make(map[gateway.Effort]string)
+	r.tierNames, r.modeNames = make(map[gateway.Tier]string), make(map[string]string)
 	for i, rule := range r.Rules {
 		if err := r.add(rule); err != nil {
 			return nil, fmt.Errorf("%w: rule %d: %w", ErrRules, i+1, err)
@@ -274,7 +275,7 @@ func (r *Rules) add(rule Rule) error {
 			return err
 		}
 		for _, p := range m.Provider {
-			r.prefixes[ProviderID(p)] = append(r.prefixes[ProviderID(p)], m.Prefix)
+			r.prefixes[gateway.ProviderID(p)] = append(r.prefixes[gateway.ProviderID(p)], m.Prefix)
 		}
 		if len(m.Provider) == 0 {
 			r.prefixes[""] = append(r.prefixes[""], m.Prefix)
@@ -297,7 +298,7 @@ func (r *Rules) add(rule Rule) error {
 		if err := only("suffix", m.Suffix != ""); err != nil {
 			return err
 		}
-		if rule.Tier != "" && !slices.Contains(Tiers, rule.Tier) || rule.Mode != "" && !slices.Contains(Modes, rule.Mode) {
+		if rule.Tier != "" && !slices.Contains(gateway.Tiers, rule.Tier) || rule.Mode != "" && !slices.Contains(gateway.Modes, rule.Mode) {
 			return fmt.Errorf("tier %q or mode %q is none the catalog lists", rule.Tier, rule.Mode)
 		}
 		r.suffixes = append(r.suffixes, rule)
@@ -308,28 +309,28 @@ func (r *Rules) add(rule Rule) error {
 			return err
 		}
 		for _, p := range m.Provider {
-			r.listed = append(r.listed, ProviderID(p))
+			r.listed = append(r.listed, gateway.ProviderID(p))
 		}
 	case rule.Separator != "":
 		if err := only("provider", len(m.Provider) > 0); err != nil {
 			return err
 		}
 		for _, p := range m.Provider {
-			r.seps[ProviderID(p)] = append(r.seps[ProviderID(p)], rule.Separator)
+			r.seps[gateway.ProviderID(p)] = append(r.seps[gateway.ProviderID(p)], rule.Separator)
 		}
 	case rule.Exclude:
 		if err := only("provider", len(m.Provider) > 0); err != nil {
 			return err
 		}
 		for _, p := range m.Provider {
-			r.excluded = append(r.excluded, ProviderID(p))
+			r.excluded = append(r.excluded, gateway.ProviderID(p))
 		}
 	case rule.Official:
 		if err := only("provider", len(m.Provider) > 0); err != nil {
 			return err
 		}
 		for _, p := range m.Provider {
-			r.official = append(r.official, ProviderID(p))
+			r.official = append(r.official, gateway.ProviderID(p))
 		}
 	case rule.Model != "":
 		if err := only("listing", m.Listing != ""); err != nil {
@@ -356,8 +357,8 @@ func (r *Rules) add(rule Rule) error {
 		}
 		switch {
 		case len(m.Provider) == 1:
-			if _, ok := r.provNames[ProviderID(m.Provider[0])]; !ok {
-				r.provNames[ProviderID(m.Provider[0])] = rule.Name
+			if _, ok := r.provNames[gateway.ProviderID(m.Provider[0])]; !ok {
+				r.provNames[gateway.ProviderID(m.Provider[0])] = rule.Name
 			}
 		case m.Lab != "":
 			if _, ok := r.labNames[m.Lab]; !ok {
@@ -415,14 +416,14 @@ func ruleKind(rule Rule) string {
 
 // MakerLab returns the lab that maker, a model ID's maker part in lower
 // case, is another name of, and reports whether it is one.
-func (r *Rules) MakerLab(maker string) (ProviderID, bool) {
+func (r *Rules) MakerLab(maker string) (gateway.ProviderID, bool) {
 	lab, ok := r.makers[maker]
 	return lab, ok
 }
 
 // LabName returns the name the rules give lab, and reports whether they
 // give it one: a lab's name rule's, or else that of the provider of its ID.
-func (r *Rules) LabName(lab ProviderID) (string, bool) {
+func (r *Rules) LabName(lab gateway.ProviderID) (string, bool) {
 	if n, ok := r.labNames[lab]; ok {
 		return n, true
 	}
@@ -432,21 +433,21 @@ func (r *Rules) LabName(lab ProviderID) (string, bool) {
 
 // ProviderName returns the name the rules give provider pid, and reports
 // whether they give it one.
-func (r *Rules) ProviderName(pid ProviderID) (string, bool) {
+func (r *Rules) ProviderName(pid gateway.ProviderID) (string, bool) {
 	n, ok := r.provNames[pid]
 	return n, ok
 }
 
 // EffortName returns the name the rules give reasoning effort e, and reports
 // whether they give it one.
-func (r *Rules) EffortName(e Effort) (string, bool) {
+func (r *Rules) EffortName(e gateway.Effort) (string, bool) {
 	n, ok := r.effNames[e]
 	return n, ok
 }
 
 // TierName returns the name the rules give service tier t, and reports
 // whether they give it one.
-func (r *Rules) TierName(t Tier) (string, bool) {
+func (r *Rules) TierName(t gateway.Tier) (string, bool) {
 	n, ok := r.tierNames[t]
 	return n, ok
 }
@@ -466,10 +467,10 @@ func (r *Rules) FamilyName(family string) (string, bool) {
 }
 
 // AddedLabs returns the labs the rules add to models.dev's.
-func (r *Rules) AddedLabs() iter.Seq[ProviderID] { return slices.Values(r.added) }
+func (r *Rules) AddedLabs() iter.Seq[gateway.ProviderID] { return slices.Values(r.added) }
 
 // Added reports whether the rules add lab to models.dev's.
-func (r *Rules) Added(lab ProviderID) bool { return slices.Contains(r.added, lab) }
+func (r *Rules) Added(lab gateway.ProviderID) bool { return slices.Contains(r.added, lab) }
 
 // starts reports whether s starts with word, followed by its end or by one
 // of after.
@@ -480,8 +481,8 @@ func starts(s, word, after string) bool {
 
 // ProductLabs returns the labs whose products model ID part s, in lower
 // case, starts with, the first rule's first.
-func (r *Rules) ProductLabs(s string) iter.Seq[ProviderID] {
-	return func(yield func(ProviderID) bool) {
+func (r *Rules) ProductLabs(s string) iter.Seq[gateway.ProviderID] {
+	return func(yield func(gateway.ProviderID) bool) {
 		for _, rule := range r.products {
 			if starts(s, rule.Match.Product, "-_.0123456789") && !yield(rule.Lab) {
 				return
@@ -492,7 +493,7 @@ func (r *Rules) ProductLabs(s string) iter.Seq[ProviderID] {
 
 // BrandLab returns the lab of the first brand that model ID part s, in
 // lower case, starts with, and reports whether it starts with one.
-func (r *Rules) BrandLab(s string) (ProviderID, bool) {
+func (r *Rules) BrandLab(s string) (gateway.ProviderID, bool) {
 	for _, rule := range r.brands {
 		if starts(s, rule.Match.Brand, "-.0123456789") {
 			return rule.Lab, true
@@ -512,7 +513,7 @@ func (r *Rules) NamesBrand(s string) bool {
 // model's name in lower case, names, by the first rule of an open word or
 // brand that matches it, and reports whether one does: "l3.3" is meta's,
 // and "qwen2.5" alibaba's.
-func (r *Rules) OpenLab(w string) (ProviderID, bool) {
+func (r *Rules) OpenLab(w string) (gateway.ProviderID, bool) {
 	for _, rule := range r.words {
 		if rule.Open && rule.Match.Word.MatchString(w) {
 			return rule.Lab, true
@@ -532,7 +533,7 @@ func (r *Rules) HostSegment(s string) bool { return r.segments[s] }
 
 // HostPrefixes returns the words provider pid puts before the model in its
 // model IDs, which the rules strip.
-func (r *Rules) HostPrefixes(pid ProviderID) iter.Seq[string] {
+func (r *Rules) HostPrefixes(pid gateway.ProviderID) iter.Seq[string] {
 	return func(yield func(string) bool) {
 		for _, p := range slices.Concat(r.prefixes[pid], r.prefixes[""]) {
 			if !yield(p) {
@@ -607,12 +608,12 @@ func (r *Rules) Suffixes() iter.Seq2[string, Rule] {
 // FreeSuffixes, ThinkingSuffixes and NoThinkingSuffixes return the suffixes
 // of the free tier, the thinking mode, and the model with thinking off.
 func (r *Rules) FreeSuffixes() []string {
-	return r.suffixesOf(func(rule Rule) bool { return rule.Tier == TierFree })
+	return r.suffixesOf(func(rule Rule) bool { return rule.Tier == gateway.TierFree })
 }
 
 // ThinkingSuffixes returns the suffixes of the thinking mode.
 func (r *Rules) ThinkingSuffixes() []string {
-	return r.suffixesOf(func(rule Rule) bool { return rule.Mode == ModeThinking })
+	return r.suffixesOf(func(rule Rule) bool { return rule.Mode == gateway.ModeThinking })
 }
 
 // NoThinkingSuffixes returns the suffixes of a model with thinking off.
@@ -633,9 +634,9 @@ func (r *Rules) suffixesOf(keep func(Rule) bool) []string {
 
 // CutTier returns id without a tier suffix other than free, and the tier,
 // and reports whether id ends in one.
-func (r *Rules) CutTier(id string) (base string, tier Tier, ok bool) {
+func (r *Rules) CutTier(id string) (base string, tier gateway.Tier, ok bool) {
 	for s, rule := range r.Suffixes() {
-		if rule.Tier != "" && rule.Tier != TierFree {
+		if rule.Tier != "" && rule.Tier != gateway.TierFree {
 			if base, ok := strings.CutSuffix(id, s); ok && base != "" {
 				return base, rule.Tier, true
 			}
@@ -666,7 +667,7 @@ func (r *Rules) StripRegion(s string) string {
 // without a leading "~" or "@", and between the separators the rules give
 // pid: SAP AI Core's "anthropic--claude-3-haiku" is anthropic and
 // claude-3-haiku, where another provider's would be one part.
-func (r *Rules) IDParts(pid ProviderID, id string) []string {
+func (r *Rules) IDParts(pid gateway.ProviderID, id string) []string {
 	id = strings.TrimLeft(id, "~@")
 	for _, s := range r.seps[pid] {
 		id = strings.ReplaceAll(id, s, "/")
@@ -676,7 +677,7 @@ func (r *Rules) IDParts(pid ProviderID, id string) []string {
 
 // ModelPart returns the last of IDParts, which names the model, or "" for
 // an ID of none.
-func (r *Rules) ModelPart(pid ProviderID, id string) string {
+func (r *Rules) ModelPart(pid gateway.ProviderID, id string) string {
 	parts := r.IDParts(pid, id)
 	if len(parts) == 0 {
 		return ""
@@ -686,18 +687,18 @@ func (r *Rules) ModelPart(pid ProviderID, id string) string {
 
 // Excluded reports whether the rules leave provider pid out of every
 // catalog.
-func (r *Rules) Excluded(pid ProviderID) bool { return slices.Contains(r.excluded, pid) }
+func (r *Rules) Excluded(pid gateway.ProviderID) bool { return slices.Contains(r.excluded, pid) }
 
 // Official reports whether an official rule names provider pid, which the
 // catalog types official; it types every other provider community.
-func (r *Rules) Official(pid ProviderID) bool { return slices.Contains(r.official, pid) }
+func (r *Rules) Official(pid gateway.ProviderID) bool { return slices.Contains(r.official, pid) }
 
 // Listed returns the providers a catalog of the providers listed keeps.
-func (r *Rules) Listed() iter.Seq[ProviderID] { return slices.Values(r.listed) }
+func (r *Rules) Listed() iter.Seq[gateway.ProviderID] { return slices.Values(r.listed) }
 
 // ListedIn returns the providers the rules list that b lists, in order, and
 // those it does not, as models.dev drops providers now and then.
-func (r *Rules) ListedIn(b modelsdev.Bundle) (keep, missing []ProviderID) {
+func (r *Rules) ListedIn(b modelsdev.Bundle) (keep, missing []gateway.ProviderID) {
 	for _, id := range slices.Sorted(r.Listed()) {
 		if _, ok := b.Providers[modelsdev.ProviderID(id)]; ok {
 			keep = append(keep, id)
@@ -710,7 +711,7 @@ func (r *Rules) ListedIn(b modelsdev.Bundle) (keep, missing []ProviderID) {
 
 // Pin returns the model the first rule that ties provider pid's listing id
 // to one names, and reports whether a rule does.
-func (r *Rules) Pin(pid ProviderID, id string) (ModelID, bool) {
+func (r *Rules) Pin(pid gateway.ProviderID, id string) (gateway.ModelID, bool) {
 	for _, rule := range r.pins {
 		m := rule.Match
 		if strings.EqualFold(m.Listing, id) && (len(m.Provider) == 0 || slices.Contains(m.Provider, string(pid))) {

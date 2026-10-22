@@ -6,7 +6,6 @@ import (
 	"errors"
 	"flag"
 	"fmt"
-	"github.com/unaquatic/catalog/data"
 	"io"
 	"maps"
 	"net/http"
@@ -21,12 +20,15 @@ import (
 	"testing/synctest"
 	"time"
 
+	"github.com/unaquatic/catalog/data"
+
 	"github.com/unaquatic/catalog/gateway"
+	"github.com/unaquatic/catalog/internal/build"
 	"github.com/unaquatic/catalog/internal/cmdline"
 )
 
 // fixture is the models.dev catalog.json the gateway package tests map.
-const fixture = "../../gateway/testdata/catalog.json"
+const fixture = "../../internal/build/testdata/catalog.json"
 
 func TestBuildFromFile(t *testing.T) {
 	out := filepath.Join(t.ArtifactDir(), "catalog.json")
@@ -181,7 +183,7 @@ func TestBuildErrors(t *testing.T) {
 		{"source and in", []string{"-source", "https://example.com", "-in", fixture},
 			func(err error) bool { _, ok := errors.AsType[*cmdline.UsageError](err); return ok }},
 		{"provider absent from the fixture", []string{"-in", fixture, "-providers", "nope", "-o", os.DevNull},
-			func(err error) bool { return errors.Is(err, gateway.ErrUnknownProvider) }},
+			func(err error) bool { return errors.Is(err, build.ErrUnknownProvider) }},
 		{"api.json, not catalog.json", []string{"-in", apiJSON, "-o", os.DevNull},
 			func(err error) bool {
 				return err != nil && strings.Contains(err.Error(), "not models.dev's catalog.json")
@@ -190,7 +192,7 @@ func TestBuildErrors(t *testing.T) {
 			func(err error) bool { return errors.Is(err, os.ErrNotExist) }},
 		{"rules that say nothing", []string{"-in", fixture, "-rules", badRules, "-o", os.DevNull},
 			func(err error) bool {
-				return errors.Is(err, gateway.ErrRules) && strings.Contains(err.Error(), badRules)
+				return errors.Is(err, build.ErrRules) && strings.Contains(err.Error(), badRules)
 			}},
 		{"missing rules", []string{"-in", fixture, "-rules", "nope-rules.json", "-o", os.DevNull},
 			func(err error) bool { return errors.Is(err, os.ErrNotExist) }},
@@ -233,10 +235,10 @@ func TestParseIDs(t *testing.T) {
 }
 
 func TestPrintReport(t *testing.T) {
-	rep := gateway.Report{Models: 3, Providers: 2, Listings: 5, Offerings: 4, Variants: 6,
-		Bases: map[gateway.Basis]int{gateway.BasisCanonical: 2, gateway.BasisLab: 1, gateway.BasisID: 1, gateway.BasisNone: 1},
-		Tiers: []gateway.Note{{Provider: "vercel", Model: "x-fast", Text: "tier fast of x"}},
-		Notes: []gateway.Note{{Provider: "vercel", Text: "something"}}}
+	rep := build.Report{Models: 3, Providers: 2, Listings: 5, Offerings: 4, Variants: 6,
+		Bases: map[build.Basis]int{build.BasisCanonical: 2, build.BasisLab: 1, build.BasisID: 1, build.BasisNone: 1},
+		Tiers: []build.Note{{Provider: "vercel", Model: "x-fast", Text: "tier fast of x"}},
+		Notes: []build.Note{{Provider: "vercel", Text: "something"}}}
 	var short, long strings.Builder
 	PrintReport(&short, rep, false)
 	PrintReport(&long, rep, true)
@@ -273,7 +275,7 @@ func TestLoaderForCatalogFile(t *testing.T) {
 
 func TestRefresh(t *testing.T) {
 	synctest.Test(t, func(t *testing.T) {
-		h, err := gateway.NewHandler(&gateway.Catalog{Version: gateway.Version, Source: "0"})
+		s, err := NewServer(&gateway.Catalog{Version: gateway.Version, Source: "0"})
 		if err != nil {
 			t.Fatal(err)
 		}
@@ -288,14 +290,14 @@ func TestRefresh(t *testing.T) {
 		ctx, cancel := context.WithCancel(t.Context())
 		done := make(chan struct{})
 		go func() {
-			Refresh(ctx, time.Hour, load, h)
+			Refresh(ctx, time.Hour, load, s)
 			close(done)
 		}()
 
 		for _, want := range []string{"1", "1", "3"} { // the second load fails
 			time.Sleep(time.Hour)
 			synctest.Wait()
-			if got := h.Catalog().Source; got != want {
+			if got := s.Catalog().Source; got != want {
 				t.Errorf("after %d refreshes the catalog is %q, want %q", calls, got, want)
 			}
 		}
@@ -312,26 +314,26 @@ func (l lines) Write(p []byte) (int, error) {
 	return len(p), nil
 }
 
-// fixtureHandler serves the catalog built from the fixture.
-func fixtureHandler(t *testing.T) *gateway.Handler {
+// fixtureServer serves the catalog built from the fixture.
+func fixtureServer(t *testing.T) *Server {
 	t.Helper()
 	c, _, err := Load(t.Context(), SourceOptions{In: fixture, Providers: "all", Infer: true}, time.Now())
 	if err != nil {
 		t.Fatal(err)
 	}
-	h, err := gateway.NewHandler(c)
+	s, err := NewServer(c)
 	if err != nil {
 		t.Fatal(err)
 	}
-	return h
+	return s
 }
 
 func TestListenAndServe(t *testing.T) {
-	h := fixtureHandler(t)
+	s := fixtureServer(t)
 	ctx, cancel := context.WithCancel(t.Context())
 	out := make(lines, 1)
 	served := make(chan error, 1)
-	go func() { served <- ListenAndServe(ctx, "127.0.0.1:0", h, out) }()
+	go func() { served <- ListenAndServe(ctx, "127.0.0.1:0", s, out) }()
 
 	line := <-out
 	_, rest, ok := strings.Cut(line, "http://")
@@ -339,14 +341,14 @@ func TestListenAndServe(t *testing.T) {
 	if !ok || !strings.Contains(line, "with 18 models") {
 		t.Fatalf("server says %q", line)
 	}
-	resp, err := http.Get("http://" + addr + "/v1/models/openai/gpt-6.1-sol")
+	resp, err := http.Get("http://" + addr + "/catalog.json")
 	if err != nil {
 		t.Fatal(err)
 	}
 	body, _ := io.ReadAll(resp.Body)
 	resp.Body.Close()
-	if resp.StatusCode != http.StatusOK || !strings.Contains(string(body), `"ultrafast"`) {
-		t.Errorf("GET gpt-6.1-sol: status %d, body %s", resp.StatusCode, body)
+	if resp.StatusCode != http.StatusOK || !strings.Contains(string(body), `"openai/gpt-6.1-sol"`) {
+		t.Errorf("GET /catalog.json: status %d, %d bytes", resp.StatusCode, len(body))
 	}
 	cancel()
 	if err := <-served; err != nil {
@@ -354,8 +356,10 @@ func TestListenAndServe(t *testing.T) {
 	}
 }
 
-func TestSite(t *testing.T) {
-	srv := httptest.NewServer(Site(fixtureHandler(t)))
+// TestServer checks that the server serves what the site does, the page,
+// the catalog and its schema, and nothing else.
+func TestServer(t *testing.T) {
+	srv := httptest.NewServer(fixtureServer(t))
 	defer srv.Close()
 	tests := []struct {
 		path, wantType, wantBody string
@@ -364,8 +368,8 @@ func TestSite(t *testing.T) {
 		{"/", "text/html; charset=utf-8", "<title>Catalog</title>", http.StatusOK},
 		{"/catalog.json", "application/json", `"anthropic/claude-opus-5-5"`, http.StatusOK},
 		{"/schema.json", "application/schema+json", `"$id": "https://aquatic.dev/catalog/schema.json"`, http.StatusOK},
-		{"/v1/providers/opencode", "application/json", `"big-pickle"`, http.StatusOK},
-		{"/index.html", "application/json", `"not_found"`, http.StatusNotFound},
+		{"/v1/providers/opencode", "text/plain; charset=utf-8", "404 page not found", http.StatusNotFound},
+		{"/index.html", "text/plain; charset=utf-8", "404 page not found", http.StatusNotFound},
 	}
 	for _, tt := range tests {
 		resp, err := srv.Client().Get(srv.URL + tt.path)
@@ -378,6 +382,50 @@ func TestSite(t *testing.T) {
 			t.Errorf("GET %s: status %d, type %q, body has %q: %v", tt.path, resp.StatusCode,
 				resp.Header.Get("Content-Type"), tt.wantBody, strings.Contains(string(body), tt.wantBody))
 		}
+	}
+}
+
+// TestServerDocument checks that the server serves the catalog under an
+// ETag, answers a request naming it with 304 Not Modified, and serves the
+// catalog Set gives it, under a new ETag.
+func TestServerDocument(t *testing.T) {
+	s := fixtureServer(t)
+	srv := httptest.NewServer(s)
+	defer srv.Close()
+	get := func(etag string) (*http.Response, []byte) {
+		t.Helper()
+		req, err := http.NewRequestWithContext(t.Context(), http.MethodGet, srv.URL+gateway.DocumentPath, nil)
+		if err != nil {
+			t.Fatal(err)
+		}
+		if etag != "" {
+			req.Header.Set("If-None-Match", etag)
+		}
+		resp, err := srv.Client().Do(req)
+		if err != nil {
+			t.Fatal(err)
+		}
+		defer resp.Body.Close()
+		body, _ := io.ReadAll(resp.Body)
+		return resp, body
+	}
+	resp, body := get("")
+	etag := resp.Header.Get("ETag")
+	want, _ := json.Marshal(s.Catalog())
+	if resp.StatusCode != http.StatusOK || etag == "" || string(body) != string(want) {
+		t.Fatalf("status %d, etag %q, body matches %v", resp.StatusCode, etag, string(body) == string(want))
+	}
+	if resp, body := get(etag); resp.StatusCode != http.StatusNotModified || len(body) != 0 {
+		t.Errorf("conditional GET: status %d, %d bytes; want 304 and none", resp.StatusCode, len(body))
+	}
+	next := *s.Catalog()
+	next.Source = "elsewhere"
+	if err := s.Set(&next); err != nil {
+		t.Fatal(err)
+	}
+	resp, body = get(etag)
+	if c, err := gateway.Decode(body); resp.StatusCode != http.StatusOK || resp.Header.Get("ETag") == etag || err != nil || c.Source != "elsewhere" {
+		t.Errorf("after Set: status %d, etag %q, %v; want the new catalog under a new ETag", resp.StatusCode, resp.Header.Get("ETag"), err)
 	}
 }
 
@@ -417,7 +465,7 @@ func TestSnapshot(t *testing.T) {
 		t.Errorf("embedded snapshot generated %v, want the data package's catalog's", embedded.Generated)
 	}
 
-	srv := httptest.NewServer(Site(fixtureHandler(t)))
+	srv := httptest.NewServer(fixtureServer(t))
 	defer srv.Close()
 	check("served.json", SnapshotOptions{Source: srv.URL, Providers: "anthropic,openai"})
 }

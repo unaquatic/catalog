@@ -1,14 +1,20 @@
-package gateway
+package gateway_test
 
 import (
 	"bytes"
 	"encoding/json"
+	"flag"
 	"os"
 	"reflect"
 	"testing"
 
+	"github.com/unaquatic/catalog/gateway"
+	"github.com/unaquatic/catalog/internal/catalogdir"
 	"github.com/unaquatic/catalog/internal/jsonschema"
 )
+
+// update makes TestSchema rewrite catalog.schema.json.
+var update = flag.Bool("update", false, "rewrite catalog.schema.json")
 
 // dayPattern is a model's release and update date: YYYY-MM-DD. A refresh
 // that brings one of a month alone fails here, so that it reaches no
@@ -37,13 +43,13 @@ func TestSchema(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	schema, err := jsonschema.Generate(reflect.TypeFor[Catalog](), jsonschema.Options{
-		ID:           SchemaURL,
+	schema, err := jsonschema.Generate(reflect.TypeFor[gateway.Catalog](), jsonschema.Options{
+		ID:           gateway.SchemaURL,
 		Title:        "Catalog",
 		Descriptions: descs,
 		Consts:       consts,
 		Properties: map[string]map[string]any{
-			"catalog.version":    {"const": Version},
+			"catalog.version":    {"const": gateway.Version},
 			"model.released":     {"pattern": dayPattern},
 			"offering.released":  {"pattern": dayPattern},
 			"model.updated":      {"pattern": dayPattern},
@@ -59,21 +65,21 @@ func TestSchema(t *testing.T) {
 		if err := os.WriteFile("catalog.schema.json", schema, 0o644); err != nil {
 			t.Fatal(err)
 		}
-	} else if !bytes.Equal(schema, SchemaDocument) {
+	} else if !bytes.Equal(schema, gateway.SchemaDocument) {
 		t.Error("catalog.schema.json is out of date: go test ./gateway/ -run TestSchema -update")
 	}
 
-	ours, err := ReadDir("../data/catalog")
+	ours, err := catalogdir.ReadDir("../data/catalog")
 	if err != nil {
 		t.Fatal(err)
 	}
-	joined, err := Encode(ours)
+	joined, err := gateway.Encode(ours)
 	if err != nil {
 		t.Fatal(err)
 	}
 	for name, read := range map[string]func() ([]byte, error){
-		"testdata/catalog.golden.json": func() ([]byte, error) { return os.ReadFile("testdata/catalog.golden.json") },
-		"../data/catalog":              func() ([]byte, error) { return joined, nil },
+		"the golden catalog": func() ([]byte, error) { return os.ReadFile("../internal/build/testdata/catalog.golden.json") },
+		"../data/catalog":    func() ([]byte, error) { return joined, nil },
 	} {
 		doc, err := read()
 		if err != nil {

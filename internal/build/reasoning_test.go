@@ -1,4 +1,4 @@
-package gateway
+package build
 
 import (
 	"errors"
@@ -7,6 +7,8 @@ import (
 	"slices"
 	"strings"
 	"testing"
+
+	"github.com/unaquatic/catalog/gateway"
 )
 
 // TestApplyReasoning checks that a reasoning rule's facts reach its models'
@@ -22,36 +24,36 @@ func TestApplyReasoning(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	effort := func(es ...Effort) *Reasoning { return &Reasoning{Efforts: es} }
-	off := func(id string, r *Reasoning) Offering {
-		return Offering{ProviderOptions: ProviderOptions{ID: id}, Reasoning: r}
+	effort := func(es ...gateway.Effort) *gateway.Reasoning { return &gateway.Reasoning{Efforts: es} }
+	off := func(id string, r *gateway.Reasoning) gateway.Offering {
+		return gateway.Offering{ProviderOptions: gateway.ProviderOptions{ID: id}, Reasoning: r}
 	}
-	c := &Catalog{
-		Models: map[ModelID]Model{"acme/a": {}, "acme/b": {}, "acme/c": {}},
-		Providers: map[ProviderID]Provider{
-			"acme": {Models: map[ModelID]Offering{
+	c := &gateway.Catalog{
+		Models: map[gateway.ModelID]gateway.Model{"acme/a": {}, "acme/b": {}, "acme/c": {}},
+		Providers: map[gateway.ProviderID]gateway.Provider{
+			"acme": {Models: map[gateway.ModelID]gateway.Offering{
 				"acme/a": off("a", effort("low", "high")),
 				"acme/b": off("b", effort("low")),
-				"acme/c": off("c", &Reasoning{Mandatory: new(false)}),
+				"acme/c": off("c", &gateway.Reasoning{Mandatory: new(false)}),
 			}},
-			"gw": {Models: map[ModelID]Offering{
+			"gw": {Models: map[gateway.ModelID]gateway.Offering{
 				"acme/a": off("acme/a", effort("low", "medium")),
-				"acme/b": off("acme/b", &Reasoning{Mandatory: new(false), Efforts: []Effort{"none", "low"}}),
-				"acme/c": off("acme/c", &Reasoning{Mandatory: new(false)}),
+				"acme/b": off("acme/b", &gateway.Reasoning{Mandatory: new(false), Efforts: []gateway.Effort{"none", "low"}}),
+				"acme/c": off("acme/c", &gateway.Reasoning{Mandatory: new(false)}),
 			}},
 		},
 	}
-	notes := c.ApplyReasoning(rules)
+	notes := ApplyReasoning(c, rules)
 
 	for _, tt := range []struct {
-		provider ProviderID
-		model    ModelID
-		want     *Reasoning
+		provider gateway.ProviderID
+		model    gateway.ModelID
+		want     *gateway.Reasoning
 	}{
-		{"acme", "acme/a", &Reasoning{Mandatory: new(false), DefaultEnabled: new(false), Efforts: []Effort{"low", "high"}, DefaultEffort: "high"}},
-		{"gw", "acme/a", &Reasoning{Mandatory: new(false), DefaultEnabled: new(false), Efforts: []Effort{"low", "medium"}}},
-		{"acme", "acme/b", &Reasoning{Mandatory: new(true), DefaultEnabled: new(true), Efforts: []Effort{"low"}}},
-		{"gw", "acme/b", &Reasoning{Mandatory: new(true), DefaultEnabled: new(true), Efforts: []Effort{"none", "low"}}},
+		{"acme", "acme/a", &gateway.Reasoning{Mandatory: new(false), DefaultEnabled: new(false), Efforts: []gateway.Effort{"low", "high"}, DefaultEffort: "high"}},
+		{"gw", "acme/a", &gateway.Reasoning{Mandatory: new(false), DefaultEnabled: new(false), Efforts: []gateway.Effort{"low", "medium"}}},
+		{"acme", "acme/b", &gateway.Reasoning{Mandatory: new(true), DefaultEnabled: new(true), Efforts: []gateway.Effort{"low"}}},
+		{"gw", "acme/b", &gateway.Reasoning{Mandatory: new(true), DefaultEnabled: new(true), Efforts: []gateway.Effort{"none", "low"}}},
 	} {
 		if got := c.Providers[tt.provider].Models[tt.model].Reasoning; !reflect.DeepEqual(got, tt.want) {
 			t.Errorf("%s %s reasoning = %s, want %s", tt.provider, tt.model, show(got), show(tt.want))
@@ -76,10 +78,12 @@ func TestApplyReasoning(t *testing.T) {
 // reasoning that cannot, or of which no source says, or that lists no
 // efforts or none already, keeps its efforts.
 func TestListOff(t *testing.T) {
-	r := func(mandatory *bool, es ...Effort) *Reasoning { return &Reasoning{Mandatory: mandatory, Efforts: es} }
-	c := &Catalog{Providers: map[ProviderID]Provider{
+	r := func(mandatory *bool, es ...gateway.Effort) *gateway.Reasoning {
+		return &gateway.Reasoning{Mandatory: mandatory, Efforts: es}
+	}
+	c := &gateway.Catalog{Providers: map[gateway.ProviderID]gateway.Provider{
 		"acme": {
-			Models: map[ModelID]Offering{
+			Models: map[gateway.ModelID]gateway.Offering{
 				"acme/off":       {Reasoning: r(new(false), "low", "high")},
 				"acme/on":        {Reasoning: r(new(true), "low", "high")},
 				"acme/unknown":   {Reasoning: r(nil, "low", "high")},
@@ -87,21 +91,21 @@ func TestListOff(t *testing.T) {
 				"acme/own-none":  {Reasoning: r(new(false), "none", "low")},
 				"acme/no-reason": {},
 			},
-			Unlisted: map[string]Offering{"x": {Reasoning: r(new(false), "low")}},
+			Unlisted: map[string]gateway.Offering{"x": {Reasoning: r(new(false), "low")}},
 		},
 	}}
-	c.ListOff()
+	ListOff(c)
 	p := c.Providers["acme"]
 	for _, tt := range []struct {
-		got  *Reasoning
-		want []Effort
+		got  *gateway.Reasoning
+		want []gateway.Effort
 	}{
-		{p.Models["acme/off"].Reasoning, []Effort{"none", "low", "high"}},
-		{p.Models["acme/on"].Reasoning, []Effort{"low", "high"}},
-		{p.Models["acme/unknown"].Reasoning, []Effort{"low", "high"}},
+		{p.Models["acme/off"].Reasoning, []gateway.Effort{"none", "low", "high"}},
+		{p.Models["acme/on"].Reasoning, []gateway.Effort{"low", "high"}},
+		{p.Models["acme/unknown"].Reasoning, []gateway.Effort{"low", "high"}},
 		{p.Models["acme/budget"].Reasoning, nil},
-		{p.Models["acme/own-none"].Reasoning, []Effort{"none", "low"}},
-		{p.Unlisted["x"].Reasoning, []Effort{"none", "low"}},
+		{p.Models["acme/own-none"].Reasoning, []gateway.Effort{"none", "low"}},
+		{p.Unlisted["x"].Reasoning, []gateway.Effort{"none", "low"}},
 	} {
 		if !slices.Equal(tt.got.Efforts, tt.want) {
 			t.Errorf("efforts = %v, want %v", tt.got.Efforts, tt.want)
@@ -126,7 +130,7 @@ func TestDecodeReasoningRules(t *testing.T) {
 }
 
 // show writes r with the values of its pointers.
-func show(r *Reasoning) string {
+func show(r *gateway.Reasoning) string {
 	if r == nil {
 		return "nil"
 	}
@@ -149,19 +153,19 @@ func TestEffortNames(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	c := &Catalog{
-		Models: map[ModelID]Model{"acme/a": {ID: "acme/a", Lab: "acme"}, "acme/b": {ID: "acme/b", Lab: "acme"}},
-		Providers: map[ProviderID]Provider{
-			"acme": {ID: "acme", Models: map[ModelID]Offering{"acme/a": {Reasoning: &Reasoning{Efforts: []Effort{"none", "xhigh"}, DefaultEffort: "xhigh"}}}},
-			"gw":   {ID: "gw", Models: map[ModelID]Offering{"acme/b": {Reasoning: &Reasoning{Efforts: []Effort{"medium"}}}}},
+	c := &gateway.Catalog{
+		Models: map[gateway.ModelID]gateway.Model{"acme/a": {ID: "acme/a", Lab: "acme"}, "acme/b": {ID: "acme/b", Lab: "acme"}},
+		Providers: map[gateway.ProviderID]gateway.Provider{
+			"acme": {ID: "acme", Models: map[gateway.ModelID]gateway.Offering{"acme/a": {Reasoning: &gateway.Reasoning{Efforts: []gateway.Effort{"none", "xhigh"}, DefaultEffort: "xhigh"}}}},
+			"gw":   {ID: "gw", Models: map[gateway.ModelID]gateway.Offering{"acme/b": {Reasoning: &gateway.Reasoning{Efforts: []gateway.Effort{"medium"}}}}},
 		},
 	}
-	c.Efforts = c.EffortNames(rules)
-	want := map[Effort]EffortName{"none": {"none", "None"}, "xhigh": {"xhigh", "Extra High"}, "medium": {"medium", "Medium"}}
+	c.Efforts = EffortNames(c, rules)
+	want := map[gateway.Effort]gateway.EffortName{"none": {ID: "none", Name: "None"}, "xhigh": {ID: "xhigh", Name: "Extra High"}, "medium": {ID: "medium", Name: "Medium"}}
 	if !reflect.DeepEqual(c.Efforts, want) {
 		t.Errorf("EffortNames = %v, want %v", c.Efforts, want)
 	}
-	kept := c.Keep("acme")
+	kept := Keep(c, "acme")
 	if _, ok := kept.Efforts["medium"]; ok || kept.Efforts["xhigh"].Name != "Extra High" {
 		t.Errorf("Keep(acme) efforts = %v, want none and xhigh alone", kept.Efforts)
 	}
@@ -175,26 +179,26 @@ func TestNameVariants(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	c := &Catalog{
-		Models: map[ModelID]Model{"acme/a": {ID: "acme/a", Lab: "acme"}, "acme/b": {ID: "acme/b", Lab: "acme"}},
-		Providers: map[ProviderID]Provider{
-			"acme": {ID: "acme", Models: map[ModelID]Offering{"acme/a": {Variants: map[string]Variant{
+	c := &gateway.Catalog{
+		Models: map[gateway.ModelID]gateway.Model{"acme/a": {ID: "acme/a", Lab: "acme"}, "acme/b": {ID: "acme/b", Lab: "acme"}},
+		Providers: map[gateway.ProviderID]gateway.Provider{
+			"acme": {ID: "acme", Models: map[gateway.ModelID]gateway.Offering{"acme/a": {Variants: map[string]gateway.Variant{
 				"fast": {Tier: "fast"}, "thinking:ultrafast": {Tier: "ultrafast", Mode: "thinking"}}}}},
-			"gw": {ID: "gw", Models: map[ModelID]Offering{"acme/b": {Variants: map[string]Variant{"flex": {Tier: "flex"}}}}},
+			"gw": {ID: "gw", Models: map[gateway.ModelID]gateway.Offering{"acme/b": {Variants: map[string]gateway.Variant{"flex": {Tier: "flex"}}}}},
 		},
 	}
-	c.Variant = c.NameVariants(rules)
-	want := &VariantNames{
-		Tiers: map[Tier]TierName{"fast": {"fast", "Fast"}, "ultrafast": {"ultrafast", "Ultra Fast"}, "flex": {"flex", "Flex"}},
-		Modes: map[string]ModeName{"thinking": {"thinking", "Thinking"}},
+	c.Variant = NameVariants(c, rules)
+	want := &gateway.VariantNames{
+		Tiers: map[gateway.Tier]gateway.TierName{"fast": {ID: "fast", Name: "Fast"}, "ultrafast": {ID: "ultrafast", Name: "Ultra Fast"}, "flex": {ID: "flex", Name: "Flex"}},
+		Modes: map[string]gateway.ModeName{"thinking": {ID: "thinking", Name: "Thinking"}},
 	}
 	if !reflect.DeepEqual(c.Variant, want) {
 		t.Errorf("NameVariants = %+v, want %+v", c.Variant, want)
 	}
-	if kept := c.Keep("acme"); kept.Variant == nil || len(kept.Variant.Tiers) != 2 || kept.Variant.Modes["thinking"].Name != "Thinking" {
+	if kept := Keep(c, "acme"); kept.Variant == nil || len(kept.Variant.Tiers) != 2 || kept.Variant.Modes["thinking"].Name != "Thinking" {
 		t.Errorf("Keep(acme) variant = %+v, want fast, ultrafast and thinking alone", kept.Variant)
 	}
-	if n := (&Catalog{}).NameVariants(rules); n != nil {
+	if n := NameVariants(&gateway.Catalog{}, rules); n != nil {
 		t.Errorf("NameVariants of no variants = %+v, want nil", n)
 	}
 }

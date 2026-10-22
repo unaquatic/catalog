@@ -1,12 +1,13 @@
-package gateway
+package build
 
 import (
 	"cmp"
 	"fmt"
-	"iter"
 	"maps"
 	"slices"
 	"strings"
+
+	"github.com/unaquatic/catalog/gateway"
 )
 
 // Group groups each provider's listings into offerings, one per model it
@@ -30,12 +31,12 @@ import (
 //     modes, are the offering's Aliases, but for those at another endpoint
 //     than the call's, which are left out, with a note.
 //   - The offering's facts are the call's listing's.
-func (b *builder) Group() *Catalog {
-	c := &Catalog{Models: b.out.Models, Providers: make(map[ProviderID]Provider, len(b.out.Providers))}
-	for lp := range sortedValues(b.out.Providers) {
-		prov := Provider{ID: lp.ID, Name: lp.Name, Kind: lp.Kind, Type: lp.Type, Endpoint: lp.Endpoint, Doc: lp.Doc,
-			Models: make(map[ModelID]Offering)}
-		tied := make(map[ModelID][]Listing)
+func (b *builder) Group() *gateway.Catalog {
+	c := &gateway.Catalog{Models: b.out.Models, Providers: make(map[gateway.ProviderID]gateway.Provider, len(b.out.Providers))}
+	for lp := range sortedOf(b.out.Providers) {
+		prov := gateway.Provider{ID: lp.ID, Name: lp.Name, Kind: lp.Kind, Type: lp.Type, Endpoint: lp.Endpoint, Doc: lp.Doc,
+			Models: make(map[gateway.ModelID]gateway.Offering)}
+		tied := make(map[gateway.ModelID][]Listing)
 		var unlisted []Listing
 		for o := range lp.Sorted() {
 			if o.Model == "" {
@@ -46,11 +47,11 @@ func (b *builder) Group() *Catalog {
 		}
 		for key, ls := range b.unlistedGroups(prov.ID, unlisted) {
 			if prov.Unlisted == nil {
-				prov.Unlisted = make(map[string]Offering)
+				prov.Unlisted = make(map[string]gateway.Offering)
 			}
-			prov.Unlisted[key] = named(b.offering(prov, ModelID(key), ls, nil), UnlistedName(key, b.spell))
+			prov.Unlisted[key] = named(b.offering(prov, gateway.ModelID(key), ls, nil), UnlistedName(key, b.spell))
 		}
-		runs := make(map[ModelID][]run)
+		runs := make(map[gateway.ModelID][]run)
 		for _, ls := range tied {
 			for _, o := range ls {
 				for _, mode := range slices.Sorted(maps.Keys(o.Modes)) {
@@ -70,7 +71,7 @@ func (b *builder) Group() *Catalog {
 		}
 		c.Providers[prov.ID] = prov
 	}
-	c.Link()
+	LinkProviders(c)
 	for _, p := range c.Providers {
 		b.report.Offerings += len(p.Models) + len(p.Unlisted)
 		for _, o := range p.Models {
@@ -87,7 +88,7 @@ func (b *builder) Group() *Catalog {
 
 // named returns off named name, and each of its variants as VariantName
 // names it.
-func named(off Offering, name string) Offering {
+func named(off gateway.Offering, name string) gateway.Offering {
 	off.Name = name
 	for k, v := range off.Variants {
 		v.Name = VariantName(name, k)
@@ -103,7 +104,7 @@ func named(off Offering, name string) Offering {
 // It keys each group by the ID of the listing the others lead to, as
 // CatalogID writes it, numbering a key that two groups would share, with a
 // note.
-func (b *builder) unlistedGroups(pid ProviderID, ls []Listing) map[string][]Listing {
+func (b *builder) unlistedGroups(pid gateway.ProviderID, ls []Listing) map[string][]Listing {
 	root := b.rules.unlistedRoot(ls)
 	groups := make(map[string][]Listing)
 	for _, o := range ls {
@@ -167,7 +168,7 @@ type run struct {
 // its provider: the other's ID, and the tier or mode it adds.
 type step struct {
 	parent string
-	tier   Tier
+	tier   gateway.Tier
 	mode   string
 }
 
@@ -183,18 +184,18 @@ func (r *Rules) stepOf(o Listing, ls []Listing) (step, bool) {
 			return step{parent: p.ID, tier: o.Tier}, true
 		}
 		for s, rule := range r.Suffixes() {
-			if rule.Tier == TierFree && o.ID == p.ID+s {
-				return step{parent: p.ID, tier: TierFree}, true
+			if rule.Tier == gateway.TierFree && o.ID == p.ID+s {
+				return step{parent: p.ID, tier: gateway.TierFree}, true
 			}
 		}
 		for s, rule := range r.Suffixes() {
-			if rule.Tier != "" && rule.Tier != TierFree && strings.Contains(o.ID, s) && strings.Replace(o.ID, s, "", 1) == p.ID {
+			if rule.Tier != "" && rule.Tier != gateway.TierFree && strings.Contains(o.ID, s) && strings.Replace(o.ID, s, "", 1) == p.ID {
 				return step{parent: p.ID, tier: rule.Tier}, true
 			}
 		}
 		for s, rule := range r.Suffixes() {
-			if rule.Mode == ModeThinking && o.ID == p.ID+s {
-				return step{parent: p.ID, mode: ModeThinking}, true
+			if rule.Mode == gateway.ModeThinking && o.ID == p.ID+s {
+				return step{parent: p.ID, mode: gateway.ModeThinking}, true
 			}
 		}
 	}
@@ -206,7 +207,7 @@ func (r *Rules) stepOf(o Listing, ls []Listing) (step, bool) {
 // a mode twice, or loops, is not clean.
 type path struct {
 	root  string
-	tier  Tier
+	tier  gateway.Tier
 	mode  string
 	clean bool
 }
@@ -240,7 +241,7 @@ func pathOf(id string, steps map[string]step) path {
 // nameRank orders model IDs by how closely they name model m: m itself
 // first, then m's ID within its lab, as the whole ID or after its last
 // slash, then an ID that ends in it, and then any other.
-func (b *builder) nameRank(pid ProviderID, id string, m ModelID) int {
+func (b *builder) nameRank(pid gateway.ProviderID, id string, m gateway.ModelID) int {
 	_, tail := SplitModelID(m)
 	n, t := Normalize(id), Normalize(tail)
 	switch {
@@ -256,14 +257,14 @@ func (b *builder) nameRank(pid ProviderID, id string, m ModelID) int {
 
 // known reports whether a variant in tier and mode, either empty, is one
 // the catalog lists: of Tiers and Modes.
-func known(tier Tier, mode string) bool {
-	return (tier == "" || slices.Contains(Tiers, tier)) && (mode == "" || slices.Contains(Modes, mode))
+func known(tier gateway.Tier, mode string) bool {
+	return (tier == "" || slices.Contains(gateway.Tiers, tier)) && (mode == "" || slices.Contains(gateway.Modes, mode))
 }
 
 // offering returns provider prov's offering of model m from its listings ls
 // of m and the listings rs that run m in a mode. For an unlisted listing, m
 // is its own ID.
-func (b *builder) offering(prov Provider, m ModelID, ls []Listing, rs []run) Offering {
+func (b *builder) offering(prov gateway.Provider, m gateway.ModelID, ls []Listing, rs []run) gateway.Offering {
 	byID := make(map[string]Listing, len(ls))
 	steps := make(map[string]step)
 	var roots []Listing
@@ -296,21 +297,27 @@ func (b *builder) offering(prov Provider, m ModelID, ls []Listing, rs []run) Off
 			cmp.Compare(x.listing.ID, y.listing.ID), cmp.Compare(x.mode, y.mode))
 	})
 
-	var off Offering
+	var off gateway.Offering
 	var base Listing
 	switch {
 	case len(roots) > 0:
 		base = roots[0]
-		off.ProviderOptions = ProviderOptions{ID: base.ID, Name: base.Name, Endpoint: base.Endpoint}
-		off.Price, off.Status, off.Basis, off.ModelsDev = base.Price, base.Status, base.Basis, base.ModelsDev
+		off.ProviderOptions = gateway.ProviderOptions{ID: base.ID, Name: base.Name, Endpoint: base.Endpoint}
+		off.Price, off.Status = base.Price, base.Status
+		if _, listed := b.out.Models[m]; listed {
+			if b.report.Ties[prov.ID] == nil {
+				b.report.Ties[prov.ID] = make(map[gateway.ModelID]Tie)
+			}
+			b.report.Ties[prov.ID][m] = Tie{Basis: base.Basis, ModelsDev: base.ModelsDev}
+		}
 		for _, r := range rs {
 			b.note(prov.ID, r.listing.ID, "runs %s in mode %s too; the provider's own model ID %s is the call", m, r.mode, base.ID)
 		}
 	case len(rs) > 0:
 		r := rs[0]
 		base = r.listing
-		off.ProviderOptions = ProviderOptions{ID: base.ID, Name: base.Name, Endpoint: base.Endpoint,
-			Body: cloneBody(r.opt.Body), Headers: maps.Clone(r.opt.Headers)}
+		off.ProviderOptions = gateway.ProviderOptions{ID: base.ID, Name: base.Name, Endpoint: base.Endpoint,
+			Body: copyBody(r.opt.Body), Headers: maps.Clone(r.opt.Headers)}
 		off.Price, off.Status = cmp.Or(r.opt.Price, base.Price), base.Status
 		for _, o := range rs[1:] {
 			b.note(prov.ID, o.listing.ID, "runs %s in mode %s too; %s is the call", m, o.mode, base.ID)
@@ -338,14 +345,14 @@ func (b *builder) offering(prov Provider, m ModelID, ls []Listing, rs []run) Off
 		}
 		paths[o.ID] = p
 	}
-	own := func(ep *Endpoint) Endpoint {
+	own := func(ep *gateway.Endpoint) gateway.Endpoint {
 		if ep != nil {
 			return *ep
 		}
 		return prov.Endpoint
 	}
 	call := own(base.Endpoint)
-	add := func(v Variant, from string) bool {
+	add := func(v gateway.Variant, from string) bool {
 		key := v.Key()
 		if !known(v.Tier, v.Mode) {
 			b.note(prov.ID, from, "variant %s is no tier or mode the catalog lists; left out", key)
@@ -355,7 +362,7 @@ func (b *builder) offering(prov Provider, m ModelID, ls []Listing, rs []run) Off
 			return false
 		}
 		if off.Variants == nil {
-			off.Variants = make(map[string]Variant)
+			off.Variants = make(map[string]gateway.Variant)
 		}
 		off.Variants[key] = v
 		return true
@@ -373,7 +380,7 @@ func (b *builder) offering(prov Provider, m ModelID, ls []Listing, rs []run) Off
 			aliases = append(aliases, o)
 			continue
 		}
-		v := Variant{Tier: p.tier, Mode: p.mode, ProviderOptions: ProviderOptions{ID: o.ID, Name: o.Name}, Price: o.Price, Status: o.Status}
+		v := gateway.Variant{Tier: p.tier, Mode: p.mode, ProviderOptions: gateway.ProviderOptions{ID: o.ID, Name: o.Name}, Price: o.Price, Status: o.Status}
 		if ep := own(o.Endpoint); !ep.Equal(call) {
 			v.ProviderOptions.Endpoint = &ep
 		}
@@ -383,12 +390,12 @@ func (b *builder) offering(prov Provider, m ModelID, ls []Listing, rs []run) Off
 	}
 	// Tiers and modes by request fields: the call's, and those of its
 	// listings of a mode alone.
-	byFields := func(o Listing, mode string, v Variant) {
+	byFields := func(o Listing, mode string, v gateway.Variant) {
 		for _, t := range slices.Sorted(maps.Keys(o.Tiers)) {
 			opt := o.Tiers[t]
 			w := v
 			w.Tier, w.Mode = t, mode
-			w.ProviderOptions.Body, w.ProviderOptions.Headers = cloneBody(opt.Body), maps.Clone(opt.Headers)
+			w.ProviderOptions.Body, w.ProviderOptions.Headers = copyBody(opt.Body), maps.Clone(opt.Headers)
 			w.Price = cmp.Or(opt.Price, v.Price)
 			if _, taken := off.Variants[w.Key()]; taken {
 				b.note(prov.ID, o.ID, "tier %s: both request fields and a model ID of its own; the ID's variant kept", t)
@@ -397,13 +404,13 @@ func (b *builder) offering(prov Provider, m ModelID, ls []Listing, rs []run) Off
 			add(w, o.ID)
 		}
 	}
-	byFields(base, "", Variant{})
+	byFields(base, "", gateway.Variant{})
 	for _, mode := range slices.Sorted(maps.Keys(base.Modes)) {
 		opt := base.Modes[mode]
 		if opt.Model != "" {
 			continue
 		}
-		add(Variant{Mode: mode, ProviderOptions: ProviderOptions{Body: cloneBody(opt.Body), Headers: maps.Clone(opt.Headers)}, Price: opt.Price}, base.ID)
+		add(gateway.Variant{Mode: mode, ProviderOptions: gateway.ProviderOptions{Body: copyBody(opt.Body), Headers: maps.Clone(opt.Headers)}, Price: opt.Price}, base.ID)
 	}
 	for _, key := range off.VariantKeys() {
 		if v := off.Variants[key]; v.Tier == "" && v.Mode != "" && v.ProviderOptions.ID != "" {
@@ -431,176 +438,4 @@ func cmpBool(x, y bool) int {
 		return 1
 	}
 	return -1
-}
-
-// Resolved is a call as a client sends it: an offering's own, or one of its
-// variants combined with it, with its provider and model, and its endpoint
-// always set.
-type Resolved struct {
-	Provider     ProviderID `json:"provider"`
-	ProviderName string     `json:"provider_name"`
-	// Model is the model called, empty for an unlisted one.
-	Model ModelID `json:"model,omitempty"`
-	// ID is the call's variant ID, as VariantID writes it.
-	ID   string `json:"id"`
-	Name string `json:"name,omitempty"`
-	Tier Tier   `json:"tier,omitempty"`
-	Mode string `json:"mode,omitempty"`
-	// ProviderOptions are the offering's, with the variant's over them.
-	ProviderOptions ProviderOptions `json:"provider_options"`
-	Price           *Price          `json:"price,omitempty"`
-	Status          Status          `json:"status,omitempty"`
-	// Basis and ModelsDev are the offering's, which the API leaves out.
-	Basis     Basis   `json:"-"`
-	ModelsDev ModelID `json:"-"`
-}
-
-// Variants returns every call of provider p, resolved: offering by offering
-// in model ID order and then unlisted ones in ID order, each offering's own
-// call followed by its variants, in VariantKeys order.
-func (c *Catalog) Variants(p ProviderID) iter.Seq[Resolved] {
-	return func(yield func(Resolved) bool) {
-		prov, ok := c.Providers[p]
-		if !ok {
-			return
-		}
-		each := func(key string, model ModelID, off Offering) bool {
-			if !yield(resolve(prov, key, model, off, "")) {
-				return false
-			}
-			for _, k := range off.VariantKeys() {
-				if !yield(resolve(prov, key, model, off, k)) {
-					return false
-				}
-			}
-			return true
-		}
-		for _, m := range slices.Sorted(maps.Keys(prov.Models)) {
-			if !each(string(m), m, prov.Models[m]) {
-				return
-			}
-		}
-		for _, id := range slices.Sorted(maps.Keys(prov.Unlisted)) {
-			if !each(id, "", prov.Unlisted[id]) {
-				return
-			}
-		}
-	}
-}
-
-// resolve returns the call of variant k, or the offering's own for "", of
-// offering off, keyed key at provider prov, of model, empty for an unlisted
-// one.
-func resolve(prov Provider, key string, model ModelID, off Offering, k string) Resolved {
-	r := Resolved{Provider: prov.ID, ProviderName: prov.Name, Model: model, ID: VariantID(key, k), Name: off.Name,
-		ProviderOptions: off.ProviderOptions, Price: off.Price, Status: off.Status, Basis: off.Basis, ModelsDev: off.ModelsDev}
-	r.ProviderOptions.Body = MergeBody(nil, off.ProviderOptions.Body)
-	if v, ok := off.Variants[k]; ok {
-		r.Name, r.Tier, r.Mode = cmp.Or(v.Name, off.Name), v.Tier, v.Mode
-		r.ProviderOptions = ProviderOptions{
-			ID:       cmp.Or(v.ProviderOptions.ID, off.ProviderOptions.ID),
-			Name:     cmp.Or(v.ProviderOptions.Name, off.ProviderOptions.Name),
-			Endpoint: cmp.Or(v.ProviderOptions.Endpoint, off.ProviderOptions.Endpoint),
-			Body:     MergeBody(off.ProviderOptions.Body, v.ProviderOptions.Body),
-			Headers:  mergeHeaders(off.ProviderOptions.Headers, v.ProviderOptions.Headers),
-		}
-		r.Price, r.Status = cmp.Or(v.Price, off.Price), cmp.Or(v.Status, off.Status)
-	}
-	if r.ProviderOptions.Endpoint == nil {
-		ep := prov.Endpoint
-		r.ProviderOptions.Endpoint = &ep
-	}
-	return r
-}
-
-// Lookup returns the key of the offering that provider p's variant id
-// calls, in the provider's Models or, when unlisted is set, its Unlisted,
-// and the variant's key, "" for the offering's own call. It reports whether
-// the catalog lists the variant. It ignores case, as the catalog's IDs are
-// all lower case.
-func (c *Catalog) Lookup(p ProviderID, id string) (offering string, unlisted bool, variant string, ok bool) {
-	id = strings.ToLower(id)
-	prov, ok := c.Providers[p]
-	if !ok {
-		return "", false, "", false
-	}
-	find := func(key string) (Offering, bool, bool) {
-		if o, ok := prov.Models[ModelID(key)]; ok {
-			return o, false, true
-		}
-		o, ok := prov.Unlisted[key]
-		return o, true, ok
-	}
-	if _, u, ok := find(id); ok {
-		return id, u, "", true
-	}
-	// A variant's key holds a mode, a tier, or both: one or two segments.
-	for cut, segs := id, 0; segs < 2; segs++ {
-		i := strings.LastIndexByte(cut, ':')
-		if i < 0 {
-			break
-		}
-		cut = cut[:i]
-		if o, u, ok := find(cut); ok {
-			if _, has := o.Variants[id[i+1:]]; has {
-				return cut, u, id[i+1:], true
-			}
-		}
-	}
-	return "", false, "", false
-}
-
-// Resolve returns provider p's variant id, resolved, and reports whether
-// the catalog lists it.
-func (c *Catalog) Resolve(p ProviderID, id string) (Resolved, bool) {
-	key, unlisted, k, ok := c.Lookup(p, id)
-	if !ok {
-		return Resolved{}, false
-	}
-	prov := c.Providers[p]
-	if unlisted {
-		return resolve(prov, key, "", prov.Unlisted[key], k), true
-	}
-	return resolve(prov, key, ModelID(key), prov.Models[ModelID(key)], k), true
-}
-
-// MergeBody returns request fields over merged into base deeply: an object
-// in both merges key by key, and any other value of over replaces base's.
-// It returns nil when both are empty, and copies what it returns.
-func MergeBody(base, over map[string]any) map[string]any {
-	if len(base) == 0 && len(over) == 0 {
-		return nil
-	}
-	out := cloneBody(base)
-	if out == nil {
-		out = make(map[string]any, len(over))
-	}
-	for k, v := range over {
-		if bm, ok := out[k].(map[string]any); ok {
-			if om, ok := v.(map[string]any); ok {
-				out[k] = MergeBody(bm, om)
-				continue
-			}
-		}
-		out[k] = cloneValue(v)
-	}
-	return out
-}
-
-// mergeHeaders returns over's headers added to base's, or nil for none.
-func mergeHeaders(base, over map[string]string) map[string]string {
-	if len(base) == 0 && len(over) == 0 {
-		return nil
-	}
-	out := maps.Clone(base)
-	if out == nil {
-		out = make(map[string]string, len(over))
-	}
-	maps.Copy(out, over)
-	return out
-}
-
-// String returns r as "provider variant".
-func (r Resolved) String() string {
-	return fmt.Sprintf("%s %s", r.Provider, r.ID)
 }

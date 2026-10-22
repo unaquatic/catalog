@@ -1,11 +1,12 @@
 // Command catalog builds flow's model catalog from models.dev's catalog.json,
 // following models.dev's structure: its models, as the site lists them at
 // /models, and its providers with every model each lists, provider-specific
-// ones included. It serves the catalog over HTTP, with a page at / that
-// browses it as the models.dev site does. Package gateway holds the
-// catalog format and the steps that map models.dev to it, and
-// gateway/rules.json the rules those steps ask, which -rules
-// replaces with a file of their own. It keeps every provider, or those
+// ones included. It serves the catalog over HTTP as the site does: a page at
+// / that browses it, the catalog at /catalog.json and its schema at
+// /schema.json. Package gateway holds the catalog format, internal/build
+// the steps that map models.dev to it, and internal/build/rules.json the
+// rules those steps ask, which -rules replaces with a file of their own.
+// It keeps every provider, or those
 // -providers names: "listed" keeps the providers the rules list.
 //
 //	go run ./cmd/catalog build -o catalog.json
@@ -34,8 +35,9 @@ import (
 
 	"github.com/unaquatic/catalog/data"
 	"github.com/unaquatic/catalog/gateway"
+	"github.com/unaquatic/catalog/internal/build"
 	"github.com/unaquatic/catalog/internal/cmdline"
-	"github.com/unaquatic/catalog/modelsdev"
+	"github.com/unaquatic/catalog/internal/modelsdev"
 )
 
 func main() {
@@ -71,7 +73,7 @@ func BindSourceFlags(fs *flag.FlagSet, o *SourceOptions) {
 	fs.StringVar(&o.Source, "source", modelsdev.DefaultSource, "Download models.dev's catalog.json from `url`")
 	fs.StringVar(&o.In, "in", "", "Read models.dev's catalog.json from `file` instead of downloading it")
 	fs.StringVar(&o.Providers, "providers", "all", "Keep the comma-separated `providers`, those the rules list for listed, or all of them for all")
-	fs.StringVar(&o.Rules, "rules", "", "Map by the rules in `file`, in place of gateway/rules.json")
+	fs.StringVar(&o.Rules, "rules", "", "Map by the rules in `file`, in place of internal/build/rules.json")
 	fs.BoolVar(&o.Infer, "infer", true, "Tie models models.dev leaves provider-specific by their IDs, merge tier models and derive pro models; false keeps models.dev's ties alone")
 }
 
@@ -142,24 +144,24 @@ func Build(ctx context.Context, o BuildOptions, stdout, stderr io.Writer) error 
 
 // Load reads the models.dev catalog.json that o names and maps it, stamping
 // the result as generated at now.
-func Load(ctx context.Context, o SourceOptions, now time.Time) (*gateway.Catalog, gateway.Report, error) {
+func Load(ctx context.Context, o SourceOptions, now time.Time) (*gateway.Catalog, build.Report, error) {
 	data, source, err := ReadSource(ctx, o)
 	if err != nil {
-		return nil, gateway.Report{}, err
+		return nil, build.Report{}, err
 	}
 	return Map(data, source, o, now)
 }
 
 // Map maps data, the models.dev catalog.json read from source, as o says,
 // stamping the result as generated at now.
-func Map(data []byte, source string, o SourceOptions, now time.Time) (*gateway.Catalog, gateway.Report, error) {
+func Map(data []byte, source string, o SourceOptions, now time.Time) (*gateway.Catalog, build.Report, error) {
 	b, err := modelsdev.DecodeBundle(data)
 	if err != nil {
-		return nil, gateway.Report{}, fmt.Errorf("%s: %w", source, err)
+		return nil, build.Report{}, fmt.Errorf("%s: %w", source, err)
 	}
 	rules, err := ReadRules(o.Rules)
 	if err != nil {
-		return nil, gateway.Report{}, err
+		return nil, build.Report{}, err
 	}
 	var providers, missing []gateway.ProviderID
 	switch list := strings.TrimSpace(o.Providers); list {
@@ -169,7 +171,7 @@ func Map(data []byte, source string, o SourceOptions, now time.Time) (*gateway.C
 	default:
 		providers = ParseIDs(list)
 	}
-	c, rep, err := gateway.FromModelsDev(b, gateway.Options{
+	c, rep, err := build.FromModelsDev(b, build.Options{
 		Providers: providers,
 		Infer:     o.Infer,
 		Source:    source,
@@ -177,22 +179,22 @@ func Map(data []byte, source string, o SourceOptions, now time.Time) (*gateway.C
 		Rules:     rules,
 	})
 	for _, id := range missing {
-		rep.Notes = append(rep.Notes, gateway.Note{Provider: id, Text: "listed by the rules, but models.dev has no such provider"})
+		rep.Notes = append(rep.Notes, build.Note{Provider: id, Text: "listed by the rules, but models.dev has no such provider"})
 	}
 	return c, rep, err
 }
 
 // ReadRules returns the rules in file, or the rules built in when file is
 // empty.
-func ReadRules(file string) (*gateway.Rules, error) {
+func ReadRules(file string) (*build.Rules, error) {
 	if file == "" {
-		return gateway.DefaultRules(), nil
+		return build.DefaultRules(), nil
 	}
 	data, err := os.ReadFile(file)
 	if err != nil {
 		return nil, err
 	}
-	rules, err := gateway.DecodeRules(data)
+	rules, err := build.DecodeRules(data)
 	if err != nil {
 		return nil, fmt.Errorf("%s: %w", file, err)
 	}
@@ -248,15 +250,15 @@ func ParseIDs(list string) []gateway.ProviderID {
 
 // PrintReport writes a summary of rep to w, and its tier offerings and notes
 // when all is set.
-func PrintReport(w io.Writer, rep gateway.Report, all bool) {
+func PrintReport(w io.Writer, rep build.Report, all bool) {
 	n := rep.Bases
 	fmt.Fprintf(w, "catalog: %d models, %d providers, %d listings grouped into %d offerings with %d variants and %d aliases\n",
 		rep.Models, rep.Providers, rep.Listings, rep.Offerings, rep.Variants, rep.AliasIDs)
 	fmt.Fprintf(w, "catalog: models.dev ties %d by canonical_model_id and %d as a lab's own; rules tie %d by ID, %d as a tier, %d as pro, %d as inferred; %d provider-specific\n",
-		n[gateway.BasisCanonical], n[gateway.BasisLab], n[gateway.BasisID], n[gateway.BasisTier], n[gateway.BasisPro],
-		n[gateway.BasisInferred], n[gateway.BasisNone])
-	if n[gateway.BasisRule] > 0 {
-		fmt.Fprintf(w, "catalog: %d listings tied to the model a rule names\n", n[gateway.BasisRule])
+		n[build.BasisCanonical], n[build.BasisLab], n[build.BasisID], n[build.BasisTier], n[build.BasisPro],
+		n[build.BasisInferred], n[build.BasisNone])
+	if n[build.BasisRule] > 0 {
+		fmt.Fprintf(w, "catalog: %d listings tied to the model a rule names\n", n[build.BasisRule])
 	}
 	if len(rep.Merged) > 0 || len(rep.Derived) > 0 {
 		fmt.Fprintf(w, "catalog: merged %v; derived %v\n", rep.Merged, rep.Derived)
@@ -366,7 +368,7 @@ func Snapshot(ctx context.Context, o SnapshotOptions, stderr io.Writer) error {
 			return fmt.Errorf("%s: %w", o.Source, err)
 		}
 	}
-	kept := c.Keep(ParseIDs(o.Providers)...)
+	kept := build.Keep(c, ParseIDs(o.Providers)...)
 	doc, err := json.Marshal(kept)
 	if err != nil {
 		return err

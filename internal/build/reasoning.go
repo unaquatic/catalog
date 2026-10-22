@@ -1,9 +1,11 @@
-package gateway
+package build
 
 import (
 	"fmt"
 	"maps"
 	"slices"
+
+	"github.com/unaquatic/catalog/gateway"
 )
 
 // ApplyReasoning sets the facts of r's reasoning rules on the offerings of
@@ -16,13 +18,13 @@ import (
 // every provider that serves it. Of an offering that reasons, a rule sets
 // Mandatory and DefaultEnabled when it says them, and DefaultEffort when it
 // says one the offering's Efforts list.
-func (c *Catalog) ApplyReasoning(r *Rules) []Note {
+func ApplyReasoning(c *gateway.Catalog, r *Rules) []Note {
 	var notes []Note
 	providers := slices.Sorted(maps.Keys(c.Providers))
 	for _, rule := range r.reasons {
 		f := rule.Reasoning
 		for _, id := range rule.Match.Models {
-			id := ModelID(id)
+			id := gateway.ModelID(id)
 			if _, ok := c.Models[id]; !ok {
 				notes = append(notes, Note{Text: fmt.Sprintf("a reasoning rule names %s, which the catalog lacks", id)})
 				continue
@@ -70,7 +72,7 @@ func (c *Catalog) ApplyReasoning(r *Rules) []Note {
 // API turns reasoning off, by the effort none or by a switch of its own, as
 // Anthropic's thinking type "disabled". An offering that lists no efforts,
 // which a token budget alone controls, lists none still.
-func (c *Catalog) ListOff() {
+func ListOff(c *gateway.Catalog) {
 	for _, p := range c.Providers {
 		listOff(p.Models)
 		listOff(p.Unlisted)
@@ -78,14 +80,14 @@ func (c *Catalog) ListOff() {
 }
 
 // listOff does as ListOff does to the offerings offs.
-func listOff[K comparable](offs map[K]Offering) {
+func listOff[K comparable](offs map[K]gateway.Offering) {
 	for id, off := range offs {
 		r := off.Reasoning
-		if r == nil || r.Mandatory == nil || *r.Mandatory || len(r.Efforts) == 0 || slices.Contains(r.Efforts, EffortNone) {
+		if r == nil || r.Mandatory == nil || *r.Mandatory || len(r.Efforts) == 0 || slices.Contains(r.Efforts, gateway.EffortNone) {
 			continue
 		}
 		rs := *r
-		rs.Efforts = slices.Insert(slices.Clone(r.Efforts), 0, EffortNone)
+		rs.Efforts = slices.Insert(slices.Clone(r.Efforts), 0, gateway.EffortNone)
 		off.Reasoning = &rs
 		offs[id] = off
 	}

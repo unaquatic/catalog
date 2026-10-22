@@ -1,4 +1,4 @@
-package gateway
+package catalogdir
 
 import (
 	"os"
@@ -7,20 +7,22 @@ import (
 	"strings"
 	"testing"
 	"time"
+
+	"github.com/unaquatic/catalog/gateway"
 )
 
 // dirCatalog is a small catalog of two labs and two providers.
-func dirCatalog() *Catalog {
-	return &Catalog{Schema: SchemaURL, Version: Version, Source: "https://models.dev",
+func dirCatalog() *gateway.Catalog {
+	return &gateway.Catalog{Schema: gateway.SchemaURL, Version: gateway.Version, Source: "https://models.dev",
 		Generated: time.Date(2026, 10, 22, 0, 0, 0, 0, time.UTC),
-		Labs:      map[ProviderID]Lab{"acme": {ID: "acme", Name: "Acme"}},
-		Models: map[ModelID]Model{
-			"acme/a": {ID: "acme/a", Lab: "acme", Name: "A", Providers: []ProviderID{"acme", "gw"}},
-			"beta/b": {ID: "beta/b", Lab: "beta", Name: "B", Providers: []ProviderID{"gw"}},
+		Labs:      map[gateway.ProviderID]gateway.Lab{"acme": {ID: "acme", Name: "Acme"}},
+		Models: map[gateway.ModelID]gateway.Model{
+			"acme/a": {ID: "acme/a", Lab: "acme", Name: "A", Providers: []gateway.ProviderID{"acme", "gw"}},
+			"beta/b": {ID: "beta/b", Lab: "beta", Name: "B", Providers: []gateway.ProviderID{"gw"}},
 		},
-		Providers: map[ProviderID]Provider{
-			"acme": {ID: "acme", Name: "Acme", Models: map[ModelID]Offering{"acme/a": {Name: "A"}}},
-			"gw":   {ID: "gw", Name: "Gateway", Models: map[ModelID]Offering{"acme/a": {Name: "A"}, "beta/b": {Name: "B"}}},
+		Providers: map[gateway.ProviderID]gateway.Provider{
+			"acme": {ID: "acme", Name: "Acme", Models: map[gateway.ModelID]gateway.Offering{"acme/a": {Name: "A"}}},
+			"gw":   {ID: "gw", Name: "Gateway", Models: map[gateway.ModelID]gateway.Offering{"acme/a": {Name: "A"}, "beta/b": {Name: "B"}}},
 		},
 	}
 }
@@ -31,7 +33,7 @@ func dirCatalog() *Catalog {
 func TestDir(t *testing.T) {
 	dir := filepath.Join(t.ArtifactDir(), "catalog")
 	c := dirCatalog()
-	if err := c.WriteDir(dir); err != nil {
+	if err := WriteDir(c, dir); err != nil {
 		t.Fatal(err)
 	}
 	for _, name := range []string{HeadFile, "models/acme.json", "models/beta.json", "providers/acme.json", "providers/gw.json"} {
@@ -49,7 +51,7 @@ func TestDir(t *testing.T) {
 
 	delete(c.Models, "beta/b")
 	delete(c.Providers, "gw")
-	if err := c.WriteDir(dir); err != nil {
+	if err := WriteDir(c, dir); err != nil {
 		t.Fatal(err)
 	}
 	for _, name := range []string{"models/beta.json", "providers/gw.json"} {
@@ -69,7 +71,7 @@ func TestReadDirMisplaced(t *testing.T) {
 	} {
 		t.Run(name, func(t *testing.T) {
 			dir := filepath.Join(t.ArtifactDir(), "catalog")
-			if err := dirCatalog().WriteDir(dir); err != nil {
+			if err := WriteDir(dirCatalog(), dir); err != nil {
 				t.Fatal(err)
 			}
 			if err := os.WriteFile(filepath.Join(dir, tt.file), []byte(tt.content), 0o644); err != nil {
@@ -85,8 +87,8 @@ func TestReadDirMisplaced(t *testing.T) {
 // TestWriteDirName checks that WriteDir refuses an ID that is no file name.
 func TestWriteDirName(t *testing.T) {
 	c := dirCatalog()
-	c.Providers["../x"] = Provider{ID: "../x"}
-	if err := c.WriteDir(filepath.Join(t.ArtifactDir(), "catalog")); err == nil || !strings.Contains(err.Error(), "is no name for a file") {
+	c.Providers["../x"] = gateway.Provider{ID: "../x"}
+	if err := WriteDir(c, filepath.Join(t.ArtifactDir(), "catalog")); err == nil || !strings.Contains(err.Error(), "is no name for a file") {
 		t.Errorf("WriteDir = %v, want it to refuse ../x", err)
 	}
 }

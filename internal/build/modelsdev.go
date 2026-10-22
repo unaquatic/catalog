@@ -1,4 +1,4 @@
-package gateway
+package build
 
 import (
 	"cmp"
@@ -11,7 +11,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/unaquatic/catalog/modelsdev"
+	"github.com/unaquatic/catalog/gateway"
+	"github.com/unaquatic/catalog/internal/modelsdev"
 )
 
 // ErrUnknownProvider reports a provider that the models.dev catalog does not
@@ -22,7 +23,7 @@ var ErrUnknownProvider = errors.New("gateway: provider not in the models.dev cat
 type Options struct {
 	// Providers are the models.dev providers to keep. Empty keeps them all,
 	// as the models.dev site lists them.
-	Providers []ProviderID
+	Providers []gateway.ProviderID
 	// Infer applies the mapping's own rules on top of models.dev's ties, as
 	// FromModelsDev describes them. Without it, the catalog is models.dev's
 	// alone.
@@ -74,7 +75,7 @@ const (
 // Note is something FromModelsDev did with a models.dev entry that a reader
 // of the catalog may want to check.
 type Note struct {
-	Provider ProviderID
+	Provider gateway.ProviderID
 	// Model is the provider's model ID, or empty for a note about the
 	// provider.
 	Model string
@@ -104,11 +105,18 @@ type Report struct {
 	Bases map[Basis]int
 	// Merged lists the models.dev models merged into another as a tier,
 	// and Derived the models derived for a mode.
-	Merged  []ModelID
-	Derived []ModelID
+	Merged  []gateway.ModelID
+	Derived []gateway.ModelID
 	// Inferred lists the models made for providers' model IDs that name
 	// their lab, as shareUnlisted makes them.
-	Inferred []ModelID
+	Inferred []gateway.ModelID
+	// Origins say how the mapping made each model models.dev does not
+	// list, by its ID: derived for a mode, or inferred from providers'
+	// model IDs, as a fine-tune or not.
+	Origins map[gateway.ModelID]Origin
+	// Ties say how the mapping tied each provider's offering of a model to
+	// it, by provider and model ID.
+	Ties map[gateway.ProviderID]map[gateway.ModelID]Tie
 	// Services lists the providers' model IDs left out of the catalog as no
 	// model but a service, as ServiceOf reads them: a router, a preset or a
 	// tool, the Note's Text.
@@ -122,6 +130,29 @@ type Report struct {
 	// Notes lists other things to check, such as protocols the mapping
 	// does not know.
 	Notes []Note
+}
+
+// Origin says how the mapping made a model models.dev does not list.
+type Origin struct {
+	// Derived is set for a model the mapping derived from a model that one
+	// of its offerings runs in a mode, as GPT-6 Astra Pro is GPT-6 Astra
+	// in mode pro.
+	Derived *Derivation
+	// Inferred is set for a model the mapping made for providers' model
+	// IDs that name its lab, as shareUnlisted makes them.
+	Inferred *Inference
+	// Finetuned is set for an inferred model that tunes another, as
+	// NanoGPT's "huihui-ai/Llama-3.3-70B-Instruct-abliterated" tunes
+	// meta/llama-3.3-70b-instruct; its lab is the tuned model's.
+	Finetuned *Finetuned
+}
+
+// Tie says how the mapping tied a provider's offering to its model: the
+// Basis of the listing its call is, and the model models.dev ties that
+// listing to.
+type Tie struct {
+	Basis     Basis
+	ModelsDev gateway.ModelID
 }
 
 // FromModelsDev builds the catalog from b, models.dev's catalog.json.
@@ -188,7 +219,7 @@ type Report struct {
 // Group then groups each provider's listings into offerings.
 //
 // It fails with ErrUnknownProvider when b lacks a provider to keep.
-func FromModelsDev(b modelsdev.Bundle, opts Options) (*Catalog, Report, error) {
+func FromModelsDev(b modelsdev.Bundle, opts Options) (*gateway.Catalog, Report, error) {
 	bl, err := list(b, opts)
 	if err != nil {
 		return nil, Report{}, err
@@ -199,13 +230,13 @@ func FromModelsDev(b modelsdev.Bundle, opts Options) (*Catalog, Report, error) {
 		}
 	}
 	c := bl.Group()
-	c.Schema, c.Version, c.Source, c.Generated = SchemaURL, Version, opts.Source, opts.Generated
-	c.Spellings = bl.spell.For(c.NameParts())
+	c.Schema, c.Version, c.Source, c.Generated = gateway.SchemaURL, gateway.Version, opts.Source, opts.Generated
+	c.Spellings = SpellingsFor(bl.spell, NameParts(c))
 	c.Labs, c.Families = bl.names(c.Models)
-	bl.report.Notes = append(bl.report.Notes, c.ApplyReasoning(bl.rules)...)
-	c.ListOff()
-	c.Efforts = c.EffortNames(bl.rules)
-	c.Variant = c.NameVariants(bl.rules)
+	bl.report.Notes = append(bl.report.Notes, ApplyReasoning(c, bl.rules)...)
+	ListOff(c)
+	c.Efforts = EffortNames(c, bl.rules)
+	c.Variant = NameVariants(c, bl.rules)
 	return c, bl.report, nil
 }
 
@@ -216,25 +247,25 @@ func FromModelsDev(b modelsdev.Bundle, opts Options) (*Catalog, Report, error) {
 //     or else by Name from its ID, as bytedance-seed is "ByteDance Seed".
 //   - A family as the rules name it, or else by Name from its ID, as
 //     claude-opus is "Claude Opus".
-func (b *builder) names(models map[ModelID]Model) (map[ProviderID]Lab, map[string]Family) {
-	labs, families := make(map[ProviderID]Lab), make(map[string]Family)
+func (b *builder) names(models map[gateway.ModelID]gateway.Model) (map[gateway.ProviderID]gateway.Lab, map[string]gateway.Family) {
+	labs, families := make(map[gateway.ProviderID]gateway.Lab), make(map[string]gateway.Family)
 	for _, m := range models {
 		if _, ok := labs[m.Lab]; !ok {
-			labs[m.Lab] = Lab{ID: m.Lab, Name: b.labName(m.Lab)}
+			labs[m.Lab] = gateway.Lab{ID: m.Lab, Name: b.labName(m.Lab)}
 		}
 		if _, ok := families[m.Family]; m.Family != "" && !ok {
 			name, ok := b.rules.FamilyName(m.Family)
 			if !ok {
-				name = b.spell.Name(m.Family)
+				name = SpellName(b.spell, m.Family)
 			}
-			families[m.Family] = Family{ID: m.Family, Name: name}
+			families[m.Family] = gateway.Family{ID: m.Family, Name: name}
 		}
 	}
 	return labs, families
 }
 
 // labName returns the name of lab, as names names labs.
-func (b *builder) labName(lab ProviderID) string {
+func (b *builder) labName(lab gateway.ProviderID) string {
 	if name, ok := b.rules.LabName(lab); ok {
 		return name
 	}
@@ -244,7 +275,7 @@ func (b *builder) labName(lab ProviderID) string {
 		}
 		return p.Name
 	}
-	return b.spell.Name(string(lab))
+	return SpellName(b.spell, string(lab))
 }
 
 // ListModelsDev maps b, models.dev's catalog.json, to Listings, as
@@ -262,11 +293,13 @@ func list(b modelsdev.Bundle, opts Options) (*builder, error) {
 	rules := cmp.Or(opts.Rules, DefaultRules())
 	// A provider the rules exclude is none of the bundle's.
 	b.Providers = maps.Clone(b.Providers)
-	maps.DeleteFunc(b.Providers, func(id modelsdev.ProviderID, _ modelsdev.Provider) bool { return rules.Excluded(ProviderID(id)) })
+	maps.DeleteFunc(b.Providers, func(id modelsdev.ProviderID, _ modelsdev.Provider) bool {
+		return rules.Excluded(gateway.ProviderID(id))
+	})
 	providers := opts.Providers
 	if len(providers) == 0 {
 		for id := range b.Providers {
-			providers = append(providers, ProviderID(id))
+			providers = append(providers, gateway.ProviderID(id))
 		}
 	}
 	b.Models = CatalogModels(b.Models)
@@ -275,19 +308,19 @@ func list(b modelsdev.Bundle, opts Options) (*builder, error) {
 		bundle:  b,
 		spell:   SpellingsOf(BundleNames(b)),
 		infer:   opts.Infer,
-		labs:    make(map[ProviderID]bool),
-		merged:  make(map[ModelID]merge),
-		wantPro: make(map[ModelID]bool),
+		labs:    make(map[gateway.ProviderID]bool),
+		merged:  make(map[gateway.ModelID]merge),
+		wantPro: make(map[gateway.ModelID]bool),
 		noted:   make(map[string]bool),
-		report:  Report{Bases: make(map[Basis]int)},
+		report:  Report{Bases: make(map[Basis]int), Origins: make(map[gateway.ModelID]Origin), Ties: make(map[gateway.ProviderID]map[gateway.ModelID]Tie)},
 	}
 	out := &Listings{
-		Models:    make(map[ModelID]Model, len(b.Models)),
-		Providers: make(map[ProviderID]ListedProvider),
+		Models:    make(map[gateway.ModelID]gateway.Model, len(b.Models)),
+		Providers: make(map[gateway.ProviderID]ListedProvider),
 	}
 	bl.out = out
 	for id, lm := range b.Models {
-		m := labModel(ModelID(id), lm, bl.spell)
+		m := labModel(gateway.ModelID(id), lm, bl.spell)
 		out.Models[m.ID] = m
 		bl.labs[m.Lab] = true
 	}
@@ -335,15 +368,15 @@ type builder struct {
 	bundle modelsdev.Bundle
 	// spell spells the words of model IDs in names, as the names in bundle
 	// most often do.
-	spell Spellings
+	spell gateway.Spellings
 	infer bool
 	out   *Listings
-	labs  map[ProviderID]bool
+	labs  map[gateway.ProviderID]bool
 	// merged maps the models merged into another to that model and tier.
-	merged map[ModelID]merge
+	merged map[gateway.ModelID]merge
 	// byWords holds the catalog's models by their words, as looseKey reads
 	// them, as shareUnlisted finds them before it makes models of its own.
-	byWords map[string][]ModelID
+	byWords map[string][]gateway.ModelID
 	// hosts holds hostWords, once read.
 	hosts []string
 	// noted holds the ID parts lookup has noted as several labs' models.
@@ -353,20 +386,20 @@ type builder struct {
 	spellings map[string]spelling
 	// tails maps model IDs without their lab, read as Normalize reads
 	// them, to the models of that ID.
-	tails map[string][]ModelID
+	tails map[string][]gateway.ModelID
 	// wantPro holds the models whose pro mode an offering's ID names.
-	wantPro map[ModelID]bool
+	wantPro map[gateway.ModelID]bool
 	report  Report
 }
 
 // merge is where a merged model went: the model, and the tier it is of it.
 type merge struct {
-	into ModelID
-	tier Tier
+	into gateway.ModelID
+	tier gateway.Tier
 }
 
 // note records n in the report.
-func (b *builder) note(p ProviderID, model, format string, args ...any) {
+func (b *builder) note(p gateway.ProviderID, model, format string, args ...any) {
 	b.report.Notes = append(b.report.Notes, Note{Provider: p, Model: model, Text: fmt.Sprintf(format, args...)})
 }
 
@@ -390,20 +423,20 @@ func BundleNames(b modelsdev.Bundle) iter.Seq[string] {
 
 // labModel returns the catalog model of models.dev's model id, named by
 // NameOf from its ID with spellings sp.
-func labModel(id ModelID, lm modelsdev.LabModel, sp Spellings) Model {
-	m := Model{
+func labModel(id gateway.ModelID, lm modelsdev.LabModel, sp gateway.Spellings) gateway.Model {
+	m := gateway.Model{
 		ID:          id,
 		Lab:         id.Lab(),
 		Name:        NameOf(id, sp),
 		Family:      deref(lm.Family),
-		Type:        ModelType(lm.Type),
+		Type:        gateway.ModelType(lm.Type),
 		Released:    lm.ReleaseDate,
 		Updated:     lm.LastUpdated,
 		Knowledge:   deref(lm.Knowledge),
 		OpenWeights: lm.OpenWeights,
 		License:     lm.License,
 		Reasoning:   lm.Reasoning,
-		Capabilities: Capabilities{
+		Capabilities: gateway.Capabilities{
 			Tools:            lm.ToolCall,
 			Attachments:      lm.Attachment,
 			StructuredOutput: clonePtr(lm.StructuredOutput),
@@ -414,24 +447,24 @@ func labModel(id ModelID, lm modelsdev.LabModel, sp Spellings) Model {
 		Limit: limitOf(lm.Limit),
 	}
 	for _, w := range lm.Weights {
-		m.Weights = append(m.Weights, Weight(w))
+		m.Weights = append(m.Weights, gateway.Weight(w))
 	}
 	for _, l := range lm.Links {
-		m.Links = append(m.Links, Link(l))
+		m.Links = append(m.Links, gateway.Link(l))
 	}
 	return m
 }
 
 // provider returns the catalog provider of models.dev's provider p, its
 // offerings tied to models as far as one provider's models can be.
-func (b *builder) provider(pid ProviderID, p modelsdev.Provider) ListedProvider {
-	kind := KindGateway
+func (b *builder) provider(pid gateway.ProviderID, p modelsdev.Provider) ListedProvider {
+	kind := gateway.KindGateway
 	if b.labs[pid] {
-		kind = KindLab
+		kind = gateway.KindLab
 	}
-	typ := ProviderCommunity
+	typ := gateway.ProviderCommunity
 	if b.rules.Official(pid) {
-		typ = ProviderOfficial
+		typ = gateway.ProviderOfficial
 	}
 	name, ok := b.rules.ProviderName(pid)
 	if !ok {
@@ -468,12 +501,12 @@ func (b *builder) listing(prov ListedProvider, m modelsdev.Model) Listing {
 		Name:        m.Name,
 		Description: m.Description,
 		Family:      deref(m.Family),
-		Type:        ModelType(m.Type),
+		Type:        gateway.ModelType(m.Type),
 		Released:    m.ReleaseDate,
 		Updated:     m.LastUpdated,
 		Knowledge:   deref(m.Knowledge),
 		OpenWeights: m.OpenWeights,
-		Capabilities: Capabilities{
+		Capabilities: gateway.Capabilities{
 			Tools:            m.ToolCall,
 			Attachments:      m.Attachment,
 			StructuredOutput: clonePtr(m.StructuredOutput),
@@ -494,10 +527,10 @@ func (b *builder) listing(prov ListedProvider, m modelsdev.Model) Listing {
 		}
 	}
 	if s := m.Lifecycle(); s != modelsdev.StatusActive {
-		o.Status = Status(s)
+		o.Status = gateway.Status(s)
 	}
 	if m.Interleaved != nil && m.Interleaved.Enabled {
-		o.Interleaved = &Interleaved{Field: m.Interleaved.Field}
+		o.Interleaved = &gateway.Interleaved{Field: m.Interleaved.Field}
 	}
 	for _, name := range m.Modes() {
 		b.addMode(&o, prov.ID, m, name)
@@ -508,7 +541,7 @@ func (b *builder) listing(prov ListedProvider, m modelsdev.Model) Listing {
 // tie sets the model that offering o of provider pid serves: models.dev's
 // tie, moved by a merge or to a pro model, or, with inference, what rule 2
 // finds.
-func (b *builder) tie(pid ProviderID, o *Listing, m modelsdev.Model) {
+func (b *builder) tie(pid gateway.ProviderID, o *Listing, m modelsdev.Model) {
 	defer func() { b.report.Bases[cmp.Or(o.Basis, BasisNone)]++ }()
 	if model, ok := b.rules.Pin(pid, o.ID); ok && b.infer {
 		if _, listed := b.out.Models[model]; listed {
@@ -519,12 +552,12 @@ func (b *builder) tie(pid ProviderID, o *Listing, m modelsdev.Model) {
 	}
 	if c := CatalogID(m.CanonicalModelID); c != "" {
 		if _, ok := b.bundle.Models[c]; ok {
-			o.ModelsDev, o.Model, o.Basis = ModelID(c), ModelID(c), BasisCanonical
+			o.ModelsDev, o.Model, o.Basis = gateway.ModelID(c), gateway.ModelID(c), BasisCanonical
 		} else {
 			b.note(pid, o.ID, "canonical_model_id %q names no models.dev model", m.CanonicalModelID)
 		}
 	} else if b.labs[pid] {
-		if id := ModelID(CatalogID(string(pid) + "/" + o.ID)); hasModel(b.bundle, id) {
+		if id := gateway.ModelID(CatalogID(string(pid) + "/" + o.ID)); hasModel(b.bundle, id) {
 			o.ModelsDev, o.Model, o.Basis = id, id, BasisLab
 		}
 	}
@@ -580,8 +613,8 @@ func CatalogModels(models map[string]modelsdev.LabModel) map[string]modelsdev.La
 }
 
 // hasModel reports whether b lists model id.
-func hasModel(b modelsdev.Bundle, id ModelID) bool {
-	id = ModelID(CatalogID(string(id)))
+func hasModel(b modelsdev.Bundle, id gateway.ModelID) bool {
+	id = gateway.ModelID(CatalogID(string(id)))
 	_, ok := b.Models[string(id)]
 	return ok
 }
@@ -592,7 +625,7 @@ func (b *builder) linkModes() {
 	for _, prov := range b.out.Providers {
 		for _, o := range prov.Models {
 			for mode, opt := range o.Modes {
-				if m, ok := b.out.Models[o.Model+ModelID("-"+mode)]; ok && m.Derived != nil && m.Derived.Mode == mode {
+				if m, ok := b.out.Models[o.Model+gateway.ModelID("-"+mode)]; ok && b.report.Origins[m.ID].Derived != nil && b.report.Origins[m.ID].Derived.Mode == mode {
 					opt.Model = m.ID
 					o.Modes[mode] = opt
 				}
@@ -633,12 +666,12 @@ const (
 )
 
 // addMode adds mode name of model m to offering o as a tier or a mode.
-func (b *builder) addMode(o *Listing, pid ProviderID, m modelsdev.Model, name string) {
+func (b *builder) addMode(o *Listing, pid gateway.ProviderID, m modelsdev.Model, name string) {
 	md, _ := m.Mode(name)
 	opt := Option{Price: modePrice(md.Cost, m.Cost)}
 	if ov := md.Override; ov != nil {
 		if len(ov.Body) > 0 {
-			opt.Body = cloneBody(ov.Body)
+			opt.Body = copyBody(ov.Body)
 		}
 		if len(ov.Headers) > 0 {
 			opt.Headers = maps.Clone(ov.Headers)
@@ -647,10 +680,10 @@ func (b *builder) addMode(o *Listing, pid ProviderID, m modelsdev.Model, name st
 	kind, key := ClassifyMode(name, opt.Body)
 	switch kind {
 	case OptionTier:
-		if _, ok := o.Tiers[Tier(key)]; ok {
+		if _, ok := o.Tiers[gateway.Tier(key)]; ok {
 			b.note(pid, o.ID, "modes set tier %s twice; mode %q wins", key, name)
 		}
-		setOption(&o.Tiers, Tier(key), opt)
+		setOption(&o.Tiers, gateway.Tier(key), opt)
 	case OptionMode:
 		setOption(&o.Modes, key, opt)
 	default:
@@ -676,7 +709,7 @@ func ClassifyMode(name string, body map[string]any) (kind OptionKind, key string
 		return OptionTier, string(TierOfServiceTier(st))
 	}
 	if speed, ok := body["speed"].(string); ok && speed == "fast" {
-		return OptionTier, string(TierFast)
+		return OptionTier, string(gateway.TierFast)
 	}
 	if r, ok := body["reasoning"].(map[string]any); ok {
 		if mode, ok := r["mode"].(string); ok && mode != "" {
@@ -685,11 +718,11 @@ func ClassifyMode(name string, body map[string]any) (kind OptionKind, key string
 	}
 	switch name {
 	case "fast", "priority":
-		return OptionTier, string(TierFast)
+		return OptionTier, string(gateway.TierFast)
 	case "flex":
-		return OptionTier, string(TierFlex)
+		return OptionTier, string(gateway.TierFlex)
 	case "ultrafast":
-		return OptionTier, string(TierUltrafast)
+		return OptionTier, string(gateway.TierUltrafast)
 	}
 	return OptionUnknown, name
 }
@@ -697,26 +730,26 @@ func ClassifyMode(name string, body map[string]any) (kind OptionKind, key string
 // TierOfServiceTier returns the tier that an OpenAI-style service_tier
 // value selects: priority and fast are TierFast, and any other value is the
 // tier of its own name.
-func TierOfServiceTier(st string) Tier {
+func TierOfServiceTier(st string) gateway.Tier {
 	switch st {
 	case "priority", "fast":
-		return TierFast
+		return gateway.TierFast
 	}
-	return Tier(st)
+	return gateway.Tier(st)
 }
 
 // modalities converts models.dev modalities.
-func modalities(in []modelsdev.Modality) []Modality {
-	out := make([]Modality, len(in))
+func modalities(in []modelsdev.Modality) []gateway.Modality {
+	out := make([]gateway.Modality, len(in))
 	for i, m := range in {
-		out[i] = Modality(m)
+		out[i] = gateway.Modality(m)
 	}
 	return out
 }
 
 // limitOf converts models.dev token limits.
-func limitOf(l modelsdev.Limit) Limit {
-	out := Limit{Context: int(l.Context), Output: int(l.Output)}
+func limitOf(l modelsdev.Limit) gateway.Limit {
+	out := gateway.Limit{Context: int(l.Context), Output: int(l.Output)}
 	if l.Input != nil {
 		out.Input = int(*l.Input)
 	}
@@ -726,24 +759,24 @@ func limitOf(l modelsdev.Limit) Limit {
 // reasoningOf returns the reasoning controls models.dev lists for m, or nil
 // when m does not reason. A toggle, or an effort "none", says reasoning is
 // not mandatory.
-func reasoningOf(m modelsdev.Model) *Reasoning {
+func reasoningOf(m modelsdev.Model) *gateway.Reasoning {
 	if !m.Reasoning {
 		return nil
 	}
-	r := &Reasoning{}
+	r := &gateway.Reasoning{}
 	for _, o := range m.ReasoningOptions {
 		switch o.Type {
 		case modelsdev.ReasoningEffort:
 			for _, v := range o.Values {
-				if v == nil || *v == "default" || *v == "" || slices.Contains(r.Efforts, Effort(*v)) {
+				if v == nil || *v == "default" || *v == "" || slices.Contains(r.Efforts, gateway.Effort(*v)) {
 					continue
 				}
-				r.Efforts = append(r.Efforts, Effort(*v))
+				r.Efforts = append(r.Efforts, gateway.Effort(*v))
 			}
 		case modelsdev.ReasoningToggle:
 			r.Mandatory = new(false)
 		case modelsdev.ReasoningBudgetTokens:
-			bud := &Budget{}
+			bud := &gateway.Budget{}
 			if o.Min != nil {
 				bud.Min = int(*o.Min)
 			}
@@ -753,7 +786,7 @@ func reasoningOf(m modelsdev.Model) *Reasoning {
 			r.Budget = bud
 		}
 	}
-	if slices.Contains(r.Efforts, EffortNone) {
+	if slices.Contains(r.Efforts, gateway.EffortNone) {
 		r.Mandatory = new(false)
 	}
 	return r
@@ -762,34 +795,34 @@ func reasoningOf(m modelsdev.Model) *Reasoning {
 // price returns the price models.dev lists as c, or nil when it lists none.
 // A catalog without context tiers can list the price of prompts over
 // 200,000 tokens apart, which becomes a tier.
-func price(c *modelsdev.Cost) *Price {
+func price(c *modelsdev.Cost) *gateway.Price {
 	if c == nil {
 		return nil
 	}
-	p := &Price{Rates: rates(c.Price)}
+	p := &gateway.Price{Rates: rates(c.Price)}
 	for _, t := range c.Tiers {
 		if t.Tier.Type == modelsdev.TierContext {
-			p.Tiers = append(p.Tiers, PriceTier{Above: int(t.Tier.Size), Rates: rates(t.Price)})
+			p.Tiers = append(p.Tiers, gateway.PriceTier{Above: int(t.Tier.Size), Rates: rates(t.Price)})
 		}
 	}
 	if len(c.Tiers) == 0 && c.ContextOver200K != nil {
-		p.Tiers = append(p.Tiers, PriceTier{Above: 200_000, Rates: rates(*c.ContextOver200K)})
+		p.Tiers = append(p.Tiers, gateway.PriceTier{Above: 200_000, Rates: rates(*c.ContextOver200K)})
 	}
-	slices.SortFunc(p.Tiers, func(a, b PriceTier) int { return cmp.Compare(a.Above, b.Above) })
+	slices.SortFunc(p.Tiers, func(a, b gateway.PriceTier) int { return cmp.Compare(a.Above, b.Above) })
 	return p
 }
 
 // modePrice returns the price of a mode that models.dev lists as c, on a
 // model it lists as base. A mode without long-prompt prices takes base's,
 // scaled as the mode scales the short-prompt prices, marked estimated.
-func modePrice(c, base *modelsdev.Cost) *Price {
+func modePrice(c, base *modelsdev.Cost) *gateway.Price {
 	p := price(c)
 	bp := price(base)
 	if p == nil || bp == nil || len(p.Tiers) > 0 {
 		return p
 	}
 	for _, t := range bp.Tiers {
-		p.Tiers = append(p.Tiers, PriceTier{
+		p.Tiers = append(p.Tiers, gateway.PriceTier{
 			Above:     t.Above,
 			Rates:     scaleRates(t.Rates, bp.Rates, p.Rates),
 			Estimated: true,
@@ -800,8 +833,8 @@ func modePrice(c, base *modelsdev.Cost) *Price {
 
 // scaleRates returns tier scaled by the ratio of mode to base, rate by rate.
 // A rate the mode does not list is not listed.
-func scaleRates(tier, base, mode Rates) Rates {
-	return Rates{
+func scaleRates(tier, base, mode gateway.Rates) gateway.Rates {
+	return gateway.Rates{
 		Input:       scale(tier.Input, base.Input, mode.Input),
 		Output:      scale(tier.Output, base.Output, mode.Output),
 		CacheRead:   scalePtr(tier.CacheRead, base.CacheRead, mode.CacheRead),
@@ -831,8 +864,8 @@ func scalePtr(tier, base, mode *float64) *float64 {
 }
 
 // rates converts a models.dev price.
-func rates(p modelsdev.Price) Rates {
-	return Rates{
+func rates(p modelsdev.Price) gateway.Rates {
+	return gateway.Rates{
 		Input:       p.Input,
 		Output:      p.Output,
 		CacheRead:   clonePtr(p.CacheRead),
@@ -841,30 +874,6 @@ func rates(p modelsdev.Price) Rates {
 		InputAudio:  clonePtr(p.InputAudio),
 		OutputAudio: clonePtr(p.OutputAudio),
 	}
-}
-
-// cloneBody returns a deep copy of a request body.
-func cloneBody(body map[string]any) map[string]any {
-	out := make(map[string]any, len(body))
-	for k, v := range body {
-		out[k] = cloneValue(v)
-	}
-	return out
-}
-
-// cloneValue returns a deep copy of a decoded JSON value.
-func cloneValue(v any) any {
-	switch t := v.(type) {
-	case map[string]any:
-		return cloneBody(t)
-	case []any:
-		out := make([]any, len(t))
-		for i, e := range t {
-			out[i] = cloneValue(e)
-		}
-		return out
-	}
-	return v
 }
 
 // clonePtr returns a pointer to a copy of *p, or nil when p is nil.

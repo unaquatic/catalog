@@ -9,11 +9,10 @@ import (
 	"log/slog"
 	"net/http"
 	"os"
-	"slices"
 	"sync"
 	"time"
 
-	"github.com/unaquatic/catalog/modelsdev"
+	"github.com/unaquatic/catalog/internal/modelsdev"
 )
 
 // DefaultSource is the catalog server flow reads its catalog from: the
@@ -31,9 +30,9 @@ const StoreFile = "catalog.json"
 // DefaultTTL is how old the cached catalog may get before a refresh is due.
 const DefaultTTL = 24 * time.Hour
 
-// RetryDelay is how long after a refresh starts that another can, so a
+// retryDelay is how long after a refresh starts that another can, so a
 // failed refresh waits that long to try again.
-const RetryDelay = 5 * time.Minute
+const retryDelay = 5 * time.Minute
 
 // ErrSource reports that the catalog server could not be reached, or
 // answered with something other than a catalog of format Version.
@@ -134,17 +133,17 @@ func (s *Store) Get() *Catalog {
 }
 
 // Due reports whether a refresh is due: the cache holds no download, or one
-// older than the TTL, and no refresh started within RetryDelay. When it is,
-// Due records in the cache that one has started, under the cache's lock, so
-// that no other caller, in this process or another, is told one is due
-// within RetryDelay; the caller is then to call Refresh.
+// older than the TTL, and no refresh started in the last five minutes. When
+// it is, Due records in the cache that one has started, under the cache's
+// lock, so that no other caller, in this process or another, is told one is
+// due within five minutes; the caller is then to call Refresh.
 func (s *Store) Due() (bool, error) {
-	if entry, err := s.cache.Load(); err == nil && !s.DueFor(entry) {
+	if entry, err := s.cache.Load(); err == nil && !s.dueFor(entry) {
 		return false, nil
 	}
 	claimed := false
 	err := s.cache.Update(func(entry *modelsdev.Entry) (*modelsdev.Entry, error) {
-		if !s.DueFor(entry) {
+		if !s.dueFor(entry) {
 			return nil, nil
 		}
 		claimed = true
@@ -157,16 +156,16 @@ func (s *Store) Due() (bool, error) {
 	return claimed, err
 }
 
-// DueFor reports whether a refresh is due for the cached entry, nil when
+// dueFor reports whether a refresh is due for the cached entry, nil when
 // there is none, as Due reads it.
-func (s *Store) DueFor(entry *modelsdev.Entry) bool {
+func (s *Store) dueFor(entry *modelsdev.Entry) bool {
 	if entry == nil {
 		return true
 	}
 	if len(entry.Data) > 0 && !entry.Stale(s.ttl) {
 		return false
 	}
-	return time.Since(entry.Checked) >= RetryDelay
+	return time.Since(entry.Checked) >= retryDelay
 }
 
 // Refresh downloads the catalog from the server now, whatever its age,
@@ -219,78 +218,6 @@ func (s *Store) cached() *modelsdev.Entry {
 	}
 }
 
-// Link sets each model's Providers to the providers that offer it, in ID
-// order, as the offerings say: after a change of them, as a patch makes.
-func (c *Catalog) Link() {
-	providers := make(map[ModelID][]ProviderID, len(c.Models))
-	for pid, p := range c.Providers {
-		for id := range p.Models {
-			providers[id] = append(providers[id], pid)
-		}
-	}
-	for id, m := range c.Models {
-		m.Providers = slices.Sorted(slices.Values(providers[id]))
-		if m.Providers == nil {
-			m.Providers = []ProviderID{}
-		}
-		c.Models[id] = m
-	}
-}
-
-// Keep returns a copy of c with only providers ps, and only the models one
-// of them offers, and their labs and families, as the Snapshot keeps the
-// built-in providers.
-func (c *Catalog) Keep(ps ...ProviderID) *Catalog {
-	out := &Catalog{Schema: c.Schema, Version: c.Version, Source: c.Source, Generated: c.Generated,
-		Models: make(map[ModelID]Model), Providers: make(map[ProviderID]Provider)}
-	for _, id := range ps {
-		if p, ok := c.Providers[id]; ok {
-			out.Providers[id] = p
-		}
-	}
-	for id, m := range c.Models {
-		m.Providers = slices.DeleteFunc(slices.Clone(m.Providers), func(p ProviderID) bool { return !slices.Contains(ps, p) })
-		if len(m.Providers) == 0 {
-			continue
-		}
-		out.Models[id] = m
-		if l, ok := c.Labs[m.Lab]; ok {
-			if out.Labs == nil {
-				out.Labs = make(map[ProviderID]Lab)
-			}
-			out.Labs[m.Lab] = l
-		}
-		if f, ok := c.Families[m.Family]; ok {
-			if out.Families == nil {
-				out.Families = make(map[string]Family)
-			}
-			out.Families[m.Family] = f
-		}
-	}
-	out.Spellings = c.Spellings.For(out.NameParts())
-	for _, p := range out.Providers {
-		for _, off := range p.Models {
-			if c.Variant != nil {
-				for _, v := range off.Variants {
-					out.keepVariantNames(c.Variant, v)
-				}
-			}
-			if off.Reasoning == nil {
-				continue
-			}
-			for _, e := range append(slices.Clone(off.Reasoning.Efforts), off.Reasoning.DefaultEffort) {
-				if l, ok := c.Efforts[e]; ok {
-					if out.Efforts == nil {
-						out.Efforts = make(map[Effort]EffortName)
-					}
-					out.Efforts[e] = l
-				}
-			}
-		}
-	}
-	return out
-}
-
 // PromptWindow returns the most tokens a prompt takes: the input limit when
 // the model has one apart from its context window, or else the window.
 func (l Limit) PromptWindow() int {
@@ -307,23 +234,4 @@ func (r Rates) Charge(input, cacheRead, cacheWrite, output int) float64 {
 	read := cmp.Or(r.CacheRead, &r.Input)
 	write := cmp.Or(r.CacheWrite, &r.Input)
 	return (r.Input*float64(input) + *read*float64(cacheRead) + *write*float64(cacheWrite) + r.Output*float64(output)) / 1_000_000
-}
-
-// keepVariantNames copies the names of v's tier and mode from names to c.
-func (c *Catalog) keepVariantNames(names *VariantNames, v Variant) {
-	if c.Variant == nil {
-		c.Variant = &VariantNames{}
-	}
-	if t, ok := names.Tiers[v.Tier]; ok {
-		if c.Variant.Tiers == nil {
-			c.Variant.Tiers = map[Tier]TierName{}
-		}
-		c.Variant.Tiers[v.Tier] = t
-	}
-	if m, ok := names.Modes[v.Mode]; ok {
-		if c.Variant.Modes == nil {
-			c.Variant.Modes = map[string]ModeName{}
-		}
-		c.Variant.Modes[v.Mode] = m
-	}
 }

@@ -1,4 +1,4 @@
-package gateway
+package build
 
 import (
 	"maps"
@@ -8,11 +8,12 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/unaquatic/catalog/modelsdev"
+	"github.com/unaquatic/catalog/gateway"
+	"github.com/unaquatic/catalog/internal/modelsdev"
 )
 
 // groupEndpoints maps testdata/endpoints.json to the catalog.
-func groupEndpoints(t *testing.T) (*Catalog, Report) {
+func groupEndpoints(t *testing.T) (*gateway.Catalog, Report) {
 	t.Helper()
 	data, err := os.ReadFile("testdata/endpoints.json")
 	if err != nil {
@@ -30,7 +31,7 @@ func groupEndpoints(t *testing.T) (*Catalog, Report) {
 }
 
 // mustOffering returns provider p's offering of model m in c.
-func mustOffering(t *testing.T, c *Catalog, p ProviderID, m ModelID) Offering {
+func mustOffering(t *testing.T, c *gateway.Catalog, p gateway.ProviderID, m gateway.ModelID) gateway.Offering {
 	t.Helper()
 	o, ok := c.Offering(p, m)
 	if !ok {
@@ -42,8 +43,8 @@ func mustOffering(t *testing.T, c *Catalog, p ProviderID, m ModelID) Offering {
 func TestGroupCalls(t *testing.T) {
 	c, rep := groupFixture(t)
 	tests := []struct {
-		provider ProviderID
-		model    ModelID
+		provider gateway.ProviderID
+		model    gateway.ModelID
 		want     []string // as calls describes them
 	}{
 		// Tiers by request fields.
@@ -74,7 +75,7 @@ func TestGroupCalls(t *testing.T) {
 		pro.Name != "GPT-6.1 Sol Pro" || pro.Limit.Context == 0 {
 		t.Errorf("pro offering = %+v, want the pro mode's fields, the pro model's name, and the base's facts", pro)
 	}
-	if v := mustOffering(t, c, "vercel", "openai/o3").Variants["fast"]; v.Tier != TierFast || v.Price.Input != 3.5 {
+	if v := mustOffering(t, c, "vercel", "openai/o3").Variants["fast"]; v.Tier != gateway.TierFast || v.Price.Input != 3.5 {
 		t.Errorf("o3 fast = %+v, want the -fast listing's price", v)
 	}
 	// A provider's own model, which names no maker, is a model of the
@@ -96,7 +97,7 @@ func TestGroupCalls(t *testing.T) {
 		t.Errorf("openrouter unlisted without the rules = %+v", u)
 	}
 	// Every model lists the providers that offer it.
-	if got := mustModel(t, c.Models, "openai/gpt-6-astra-pro").Providers; !slices.Equal(got, []ProviderID{"openai", "openrouter"}) {
+	if got := mustModel(t, c.Models, "openai/gpt-6-astra-pro").Providers; !slices.Equal(got, []gateway.ProviderID{"openai", "openrouter"}) {
 		t.Errorf("astra pro providers = %v", got)
 	}
 	if got := mustModel(t, c.Models, "acme/open-1").Providers; got == nil || len(got) != 0 {
@@ -130,7 +131,7 @@ func TestGroupCalls(t *testing.T) {
 func TestVariantVocabulary(t *testing.T) {
 	f, _ := groupFixture(t)
 	e, _ := groupEndpoints(t)
-	for _, c := range []*Catalog{f, e} {
+	for _, c := range []*gateway.Catalog{f, e} {
 		for _, p := range c.Providers {
 			for _, off := range slices.Concat(slices.Collect(maps.Values(p.Models)), slices.Collect(maps.Values(p.Unlisted))) {
 				for k, v := range off.Variants {
@@ -176,60 +177,15 @@ func TestGroupAliases(t *testing.T) {
 	if got := calls(o); !slices.Equal(got, want) {
 		t.Errorf("calls = %q, want %q", got, want)
 	}
-	if v := o.Variants["thinking:fast"]; v.Mode != ModeThinking || v.Tier != TierFast || v.Price.Input != 2 {
+	if v := o.Variants["thinking:fast"]; v.Mode != gateway.ModeThinking || v.Tier != gateway.TierFast || v.Price.Input != 2 {
 		t.Errorf("thinking:fast = %+v", v)
 	}
 	if !slices.ContainsFunc(rep.Notes, func(n Note) bool { return strings.Contains(n.Text, "another endpoint") }) {
 		t.Errorf("no note of other/m-1, at another endpoint, in %v", rep.Notes)
 	}
 	r, ok := c.Resolve("gw", "lab/m-1:thinking:fast")
-	if !ok || r.ProviderOptions.ID != "m-1-thinking-fast" || r.Mode != ModeThinking || r.Tier != TierFast || r.ProviderOptions.Endpoint == nil {
+	if !ok || r.ProviderOptions.ID != "m-1-thinking-fast" || r.Mode != gateway.ModeThinking || r.Tier != gateway.TierFast || r.ProviderOptions.Endpoint == nil {
 		t.Errorf("Resolve(thinking:fast) = %+v, %v", r, ok)
-	}
-}
-
-func TestVariantKeys(t *testing.T) {
-	off := Offering{Variants: map[string]Variant{
-		"thinking:fast": {Mode: ModeThinking, Tier: TierFast},
-		"free":          {Tier: TierFree},
-		"thinking":      {Mode: ModeThinking},
-		"fast":          {Tier: TierFast},
-		"flex":          {Tier: TierFlex},
-	}}
-	if got, want := off.VariantKeys(), []string{"flex", "fast", "free", "thinking", "thinking:fast"}; !slices.Equal(got, want) {
-		t.Errorf("VariantKeys = %q, want %q", got, want)
-	}
-	if VariantKey(ModeThinking, TierFast) != "thinking:fast" || VariantKey("", TierFast) != "fast" || VariantID("lab/m", "") != "lab/m" {
-		t.Error("VariantKey or VariantID")
-	}
-}
-
-// TestCatalogLookup checks that a variant ID finds its offering and variant, with
-// keys of one and two segments, and an unlisted offering whose own ID holds
-// colons.
-func TestCatalogLookup(t *testing.T) {
-	c := &Catalog{Providers: map[ProviderID]Provider{"p": {
-		Models: map[ModelID]Offering{"lab/m": {Variants: map[string]Variant{
-			"fast": {Tier: TierFast}, "thinking:fast": {Mode: ModeThinking, Tier: TierFast}}}},
-		Unlisted: map[string]Offering{"ft:m:org": {Variants: map[string]Variant{"fast": {Tier: TierFast}}}},
-	}}}
-	tests := []struct {
-		id, offering, variant string
-		unlisted, ok          bool
-	}{
-		{"lab/m", "lab/m", "", false, true},
-		{"lab/m:fast", "lab/m", "fast", false, true},
-		{"lab/m:thinking:fast", "lab/m", "thinking:fast", false, true},
-		{"lab/m:turbo", "", "", false, false},
-		{"ft:m:org", "ft:m:org", "", true, true},
-		{"ft:m:org:fast", "ft:m:org", "fast", true, true},
-		{"nope", "", "", false, false},
-	}
-	for _, tt := range tests {
-		off, unlisted, v, ok := c.Lookup("p", tt.id)
-		if off != tt.offering || unlisted != tt.unlisted || v != tt.variant || ok != tt.ok {
-			t.Errorf("Lookup(%s) = %q, %v, %q, %v", tt.id, off, unlisted, v, ok)
-		}
 	}
 }
 
@@ -238,9 +194,9 @@ func TestResolve(t *testing.T) {
 	// Azure's gpt-5.1, unlisted here, in its fast tier.
 	r, ok := c.Resolve("azure", "gpt-5.1:fast")
 	want := map[string]any{"service_tier": "priority"}
-	if !ok || r.Model != "" || r.Tier != TierFast || r.ProviderOptions.ID != "gpt-5.1" ||
+	if !ok || r.Model != "" || r.Tier != gateway.TierFast || r.ProviderOptions.ID != "gpt-5.1" ||
 		!reflect.DeepEqual(r.ProviderOptions.Body, want) || r.ProviderOptions.Endpoint == nil ||
-		r.ProviderOptions.Endpoint.Format != FormatOpenAIResponses {
+		r.ProviderOptions.Endpoint.Format != gateway.FormatOpenAIResponses {
 		t.Errorf("Resolve = %+v, %v; want gpt-5.1, the tier's fields, Azure's endpoint", r, ok)
 	}
 	if _, ok := c.Resolve("azure", "gpt-5.1:ultrafast"); ok {
@@ -273,23 +229,6 @@ func TestResolve(t *testing.T) {
 	}
 }
 
-func TestMergeBody(t *testing.T) {
-	base := map[string]any{"additionalModelRequestFields": map[string]any{"reasoning": map[string]any{"effort": "high"}}, "a": 1.0}
-	over := map[string]any{"additionalModelRequestFields": map[string]any{"service_tier": "ultrafast"}, "a": 2.0}
-	got := MergeBody(base, over)
-	want := map[string]any{"additionalModelRequestFields": map[string]any{"reasoning": map[string]any{"effort": "high"},
-		"service_tier": "ultrafast"}, "a": 2.0}
-	if !reflect.DeepEqual(got, want) {
-		t.Errorf("MergeBody = %v, want %v", got, want)
-	}
-	if base["a"] != 1.0 || len(base["additionalModelRequestFields"].(map[string]any)) != 1 {
-		t.Errorf("MergeBody changed its base: %v", base)
-	}
-	if MergeBody(nil, nil) != nil {
-		t.Error("MergeBody(nil, nil) is not nil")
-	}
-}
-
 // caseDoc is a models.dev catalog whose lab writes its model IDs with
 // capitals, as MiniMax does, and whose gateway serves one tied by
 // canonical_model_id, and another provider-specific one, each with capitals.
@@ -310,18 +249,18 @@ func TestLowerCaseIDs(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	c, _, err := FromModelsDev(b, Options{})
+	c, rep, err := FromModelsDev(b, Options{})
 	if err != nil {
 		t.Fatal(err)
 	}
 	if m, ok := c.Models["minimax/minimax-m2.7"]; !ok || m.ID != "minimax/minimax-m2.7" ||
-		!slices.Equal(m.Providers, []ProviderID{"gw", "minimax"}) {
+		!slices.Equal(m.Providers, []gateway.ProviderID{"gw", "minimax"}) {
 		t.Errorf("models = %v, want minimax/minimax-m2.7 at gw and minimax", slices.Collect(maps.Keys(c.Models)))
 	}
-	if o := mustOffering(t, c, "minimax", "minimax/minimax-m2.7"); o.ProviderOptions.ID != "MiniMax-M2.7" || o.Basis != BasisLab {
+	if o := mustOffering(t, c, "minimax", "minimax/minimax-m2.7"); o.ProviderOptions.ID != "MiniMax-M2.7" || rep.Ties["minimax"]["minimax/minimax-m2.7"].Basis != BasisLab {
 		t.Errorf("lab offering = %+v, want its own ID as it is, tied as the lab's", o)
 	}
-	if o := mustOffering(t, c, "gw", "minimax/minimax-m2.7"); o.ProviderOptions.ID != "MiniMaxAI/MiniMax-M2.7" || o.ModelsDev != "minimax/minimax-m2.7" {
+	if o := mustOffering(t, c, "gw", "minimax/minimax-m2.7"); o.ProviderOptions.ID != "MiniMaxAI/MiniMax-M2.7" || rep.Ties["gw"]["minimax/minimax-m2.7"].ModelsDev != "minimax/minimax-m2.7" {
 		t.Errorf("gateway offering = %+v", o)
 	}
 	if o, ok := c.Providers["gw"].Unlisted["org/special-model"]; !ok || o.ProviderOptions.ID != "Org/Special-Model" {
@@ -361,7 +300,7 @@ func TestNameOf(t *testing.T) {
 		"Gemma-2-9B-IT", "gemma 2 it", "Qwen2.5-VL 72B", "Qwen3.5 122B-A10B", "MiniMax-M2.5", "DeepSeek V3",
 		"ALLaM-2-7b", "MiMo-V2.5-Pro-UltraSpeed", "Nemotron Nano 9B v2", "Solar Pro 3", "Solar Pro 3", "Qwen 3 14b"}))
 	for _, tt := range []struct {
-		id   ModelID
+		id   gateway.ModelID
 		want string
 	}{
 		{"openai/gpt-6.1-sol", "GPT-6.1 Sol"},
@@ -394,17 +333,17 @@ func TestNameOf(t *testing.T) {
 			t.Errorf("NameOf(%s) = %q, want %q", tt.id, got, tt.want)
 		}
 	}
-	got := sp.For(slices.Values([]string{"minimax-m2.5-highspeed", "o3-mini", "nemotron-nano-9b-v2"}))
-	if want := (Spellings{"minimax": "MiniMax"}); !maps.Equal(got, want) {
+	got := SpellingsFor(sp, slices.Values([]string{"minimax-m2.5-highspeed", "o3-mini", "nemotron-nano-9b-v2"}))
+	if want := (gateway.Spellings{"minimax": "MiniMax"}); !maps.Equal(got, want) {
 		t.Errorf("For = %v, want only the spellings Spell needs, %v", got, want)
 	}
-	c := &Catalog{Spellings: got}
-	if n := c.NameOf("MiniMax/MiniMax-M2.5"); n != "MiniMax M2.5" {
-		t.Errorf("Catalog.NameOf(MiniMax/MiniMax-M2.5) = %q, want MiniMax M2.5", n)
+	c := &gateway.Catalog{Spellings: got}
+	if n := NameIn(c, "MiniMax/MiniMax-M2.5"); n != "MiniMax M2.5" {
+		t.Errorf("NameIn(MiniMax/MiniMax-M2.5) = %q, want MiniMax M2.5", n)
 	}
 	for key, want := range map[string]string{"meta-llama/llama-4-scout": "Llama 4 Scout", "minimax-m2.5": "MiniMax M2.5",
 		"accounts/fireworks/models/qwen3-8b": "Qwen3 8B"} {
-		if n := c.UnlistedName(key); n != want {
+		if n := UnlistedNameIn(c, key); n != want {
 			t.Errorf("UnlistedName(%s) = %q, want %q", key, n, want)
 		}
 	}
@@ -422,13 +361,13 @@ func TestNameOf(t *testing.T) {
 // only what the names need.
 func TestNamesMatchIDs(t *testing.T) {
 	c, _ := groupFixture(t)
-	for name, c := range map[string]*Catalog{"catalog": c, "kept": c.Keep("openai")} {
+	for name, c := range map[string]*gateway.Catalog{"catalog": c, "kept": Keep(c, "openai")} {
 		for id, m := range c.Models {
-			if want := c.NameOf(id); m.Name != want {
+			if want := NameIn(c, id); m.Name != want {
 				t.Errorf("%s: %s is named %q, want %q", name, id, m.Name, want)
 			}
 		}
-		check := func(where, want string, o Offering) {
+		check := func(where, want string, o gateway.Offering) {
 			if o.Name != want || o.ProviderOptions.Name == "" {
 				t.Errorf("%s: %s is named %q, the provider's %q; want %q, and the provider's name", name, where, o.Name, o.ProviderOptions.Name, want)
 			}
@@ -443,11 +382,11 @@ func TestNamesMatchIDs(t *testing.T) {
 				check(string(pid)+"/"+string(id), c.Models[id].Name, o)
 			}
 			for key, o := range p.Unlisted {
-				check(string(pid)+"/"+key+" (unlisted)", c.UnlistedName(key), o)
+				check(string(pid)+"/"+key+" (unlisted)", UnlistedNameIn(c, key), o)
 			}
 		}
 		if extra := maps.Collect(func(yield func(string, string) bool) {
-			used := c.Spellings.For(c.NameParts())
+			used := SpellingsFor(c.Spellings, NameParts(c))
 			for w, s := range c.Spellings {
 				if _, ok := used[w]; !ok && !yield(w, s) {
 					return
@@ -565,30 +504,30 @@ func TestShareUnlisted(t *testing.T) {
 		t.Fatal(err)
 	}
 	m, ok := c.Models["alibaba/qwen3-14b"]
-	if !ok || m.Name != "Qwen3 14B" || m.Inferred == nil || *m.Inferred != (Inference{LabBy: LabByMaker, Facts: "alibaba"}) ||
-		m.Limit.Context != 131072 || !slices.Equal(m.Providers, []ProviderID{"alibaba", "gw", "hf"}) {
+	if !ok || m.Name != "Qwen3 14B" || rep.Origins[m.ID].Inferred == nil || *rep.Origins[m.ID].Inferred != (Inference{LabBy: LabByMaker, Facts: "alibaba"}) ||
+		m.Limit.Context != 131072 || !slices.Equal(m.Providers, []gateway.ProviderID{"alibaba", "gw", "hf"}) {
 		t.Fatalf("alibaba/qwen3-14b = %+v, %v; want a shared model at alibaba, gw and hf, with Alibaba's facts", m, ok)
 	}
-	if !slices.Equal(slices.Sorted(slices.Values(rep.Inferred)), []ModelID{"alibaba/qwen-mt-turbo", "alibaba/qwen3-14b",
+	if !slices.Equal(slices.Sorted(slices.Values(rep.Inferred)), []gateway.ModelID{"alibaba/qwen-mt-turbo", "alibaba/qwen3-14b",
 		"alibaba/qwen3-14b-uncensored", "black-forest-labs/flux-2-pro", "meta/llama-3.05-nt-storybreaker-ministral-70b",
 		"meta/llama-3.3-70b-instruct-abliterated", "meta/llama-4-scout", "mistral/mistral-medium-2508", "voyage/voyage-4-lite",
 		"xai/grok-3"}) {
 		t.Errorf("report inferred %v, want the shared Qwen3 14B, Alibaba's own Qwen MT Turbo, the Llama of a named maker, and Grok 3 by its brand", rep.Inferred)
 	}
-	if m := c.Models["meta/llama-4-scout"]; m.Inferred == nil || *m.Inferred != (Inference{LabBy: LabByMaker, Facts: "gw"}) {
+	if m := c.Models["meta/llama-4-scout"]; rep.Origins[m.ID].Inferred == nil || *rep.Origins[m.ID].Inferred != (Inference{LabBy: LabByMaker, Facts: "gw"}) {
 		t.Errorf("meta/llama-4-scout = %+v, want inferred from gw's listing", m)
 	}
-	if o := mustOffering(t, c, "gw", "meta/llama-4"); o.Basis != BasisID || o.ProviderOptions.ID != "meta-llama/Meta-Llama-4" {
+	if o := mustOffering(t, c, "gw", "meta/llama-4"); rep.Ties["gw"]["meta/llama-4"].Basis != BasisID || o.ProviderOptions.ID != "meta-llama/Meta-Llama-4" {
 		t.Errorf("gw's meta/llama-4 = %+v; want meta-llama/Meta-Llama-4 tied by ID", o)
 	}
-	if m := c.Models["xai/grok-3"]; m.Inferred == nil || *m.Inferred != (Inference{LabBy: LabByBrand, Facts: "gw"}) {
+	if m := c.Models["xai/grok-3"]; rep.Origins[m.ID].Inferred == nil || *rep.Origins[m.ID].Inferred != (Inference{LabBy: LabByBrand, Facts: "gw"}) {
 		t.Errorf("xai/grok-3 = %+v; want a model of one provider's, of lab xai by its brand", m)
 	}
-	if o := mustOffering(t, c, "gw", "xai/grok-3"); o.Basis != BasisInferred || o.ProviderOptions.ID != "grok-3" {
+	if o := mustOffering(t, c, "gw", "xai/grok-3"); rep.Ties["gw"]["xai/grok-3"].Basis != BasisInferred || o.ProviderOptions.ID != "grok-3" {
 		t.Errorf("gw's xai/grok-3 = %+v; want grok-3, inferred", o)
 	}
 	for _, tt := range []struct {
-		model ModelID
+		model gateway.ModelID
 		want  Finetuned
 	}{
 		{"alibaba/qwen3-14b-uncensored", Finetuned{Of: "alibaba/qwen3-14b", Kind: TuneFinetune}},
@@ -597,20 +536,20 @@ func TestShareUnlisted(t *testing.T) {
 		{"meta/llama-3.05-nt-storybreaker-ministral-70b", Finetuned{By: "envoid", Kind: TuneFinetune}},
 	} {
 		m, ok := c.Models[tt.model]
-		if !ok || m.Finetuned == nil || *m.Finetuned != tt.want || m.Inferred == nil || m.Inferred.LabBy != LabByBase {
+		if !ok || rep.Origins[m.ID].Finetuned == nil || *rep.Origins[m.ID].Finetuned != tt.want || rep.Origins[m.ID].Inferred == nil || rep.Origins[m.ID].Inferred.LabBy != LabByBase {
 			t.Errorf("%s = %+v, %v; want a fine-tune %+v under the tuned model's lab", tt.model, m, ok, tt.want)
 		}
 	}
 	if _, ok := c.Models["anthropic/claude-code"]; ok || !slices.ContainsFunc(rep.Unknown, func(n Note) bool { return n.Model == "poetools/claude-code" }) {
 		t.Errorf("gw's poetools/claude-code a model, or not in the report's unknown %v; want it left out: no one tunes Claude", rep.Unknown)
 	}
-	for id, want := range map[ModelID]string{"voyage/voyage-4-lite": "voyage/voyage-4-lite", "black-forest-labs/flux-2-pro": "bfl/flux-2-pro"} {
-		if o := mustOffering(t, c, "gw", id); o.Basis != BasisInferred || o.ProviderOptions.ID != want {
+	for id, want := range map[gateway.ModelID]string{"voyage/voyage-4-lite": "voyage/voyage-4-lite", "black-forest-labs/flux-2-pro": "bfl/flux-2-pro"} {
+		if o := mustOffering(t, c, "gw", id); rep.Ties["gw"][id].Basis != BasisInferred || o.ProviderOptions.ID != want {
 			t.Errorf("gw's %s = %+v; want %s, of a maker lab", id, o, want)
 		}
 	}
 	o := mustOffering(t, c, "hf", "alibaba/qwen3-14b")
-	if o.Basis != BasisInferred || o.ProviderOptions.ID != "Qwen/Qwen3-14B" || o.ProviderOptions.Name != "Qwen3-14B" ||
+	if rep.Ties["hf"]["alibaba/qwen3-14b"].Basis != BasisInferred || o.ProviderOptions.ID != "Qwen/Qwen3-14B" || o.ProviderOptions.Name != "Qwen3-14B" ||
 		o.Variants["free"].ProviderOptions.ID != "Qwen/Qwen3-14B:free" {
 		t.Errorf("hf offering = %+v; want the inferred basis, HF's ID and name, and its free tier", o)
 	}
@@ -620,7 +559,7 @@ func TestShareUnlisted(t *testing.T) {
 	if _, ok := c.Providers["hf"].Unlisted["openrouter/auto"]; ok {
 		t.Error("hf's router openrouter/auto in the catalog; want it left out")
 	}
-	if o := mustOffering(t, c, "databricks", "openai/gpt-oss-120b"); o.Basis != BasisID || o.ProviderOptions.ID != "databricks-gpt-oss-120b" {
+	if o := mustOffering(t, c, "databricks", "openai/gpt-oss-120b"); rep.Ties["databricks"]["openai/gpt-oss-120b"].Basis != BasisID || o.ProviderOptions.ID != "databricks-gpt-oss-120b" {
 		t.Errorf("databricks offering = %+v; want databricks-gpt-oss-120b tied by ID", o)
 	}
 }
@@ -668,8 +607,8 @@ func TestShareUnlistedMatches(t *testing.T) {
 		t.Fatal(err)
 	}
 	for _, tt := range []struct {
-		provider ProviderID
-		model    ModelID
+		provider gateway.ProviderID
+		model    gateway.ModelID
 		id       string
 		basis    Basis
 	}{
@@ -681,16 +620,16 @@ func TestShareUnlistedMatches(t *testing.T) {
 		{"hl", "alibaba/qwen2.5-7b", "Qwen/Qwen2.5-7B", BasisInferred},
 		{"az", "alibaba/qwen2.5-7b", "qwen/qwen2-5-7b", BasisInferred},
 	} {
-		if o := mustOffering(t, c, tt.provider, tt.model); o.Basis != tt.basis || o.ProviderOptions.ID != tt.id {
-			t.Errorf("%s/%s = %s, %s; want %s, %s", tt.provider, tt.model, o.ProviderOptions.ID, o.Basis, tt.id, tt.basis)
+		if o := mustOffering(t, c, tt.provider, tt.model); rep.Ties[tt.provider][tt.model].Basis != tt.basis || o.ProviderOptions.ID != tt.id {
+			t.Errorf("%s/%s = %s, %s; want %s, %s", tt.provider, tt.model, o.ProviderOptions.ID, rep.Ties[tt.provider][tt.model].Basis, tt.id, tt.basis)
 		}
 	}
-	if !slices.Equal(slices.Sorted(slices.Values(rep.Inferred)), []ModelID{"alibaba/qwen2.5-7b", "anthropic/claude-3-7-sonnet",
+	if !slices.Equal(slices.Sorted(slices.Values(rep.Inferred)), []gateway.ModelID{"alibaba/qwen2.5-7b", "anthropic/claude-3-7-sonnet",
 		"openai/gpt-3.5-turbo-0125", "zhipuai/glm-9-air"}) {
 		t.Errorf("inferred models %v, want the dated GPT-3.5 Turbo, the undated Claude 3.7 Sonnet, one Qwen2.5 7B and one GLM 9 Air", rep.Inferred)
 	}
 	// Of two spellings, the one in Zhipu's own style, glm-<version>-…, wins.
-	if m, ok := c.Models["zhipuai/glm-9-air"]; !ok || !slices.Equal(m.Providers, []ProviderID{"az"}) {
+	if m, ok := c.Models["zhipuai/glm-9-air"]; !ok || !slices.Equal(m.Providers, []gateway.ProviderID{"az"}) {
 		t.Errorf("zhipuai/glm-9-air = %+v, %v; want one model of az's two spellings", m, ok)
 	}
 	if _, ok := c.Models["zhipuai/glm-9.air"]; ok {
@@ -756,13 +695,13 @@ func TestCopiesAndTunes(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	c, _, err := FromModelsDev(b, Options{Infer: true})
+	c, rep, err := FromModelsDev(b, Options{Infer: true})
 	if err != nil {
 		t.Fatal(err)
 	}
 	for _, tt := range []struct {
-		provider ProviderID
-		model    ModelID
+		provider gateway.ProviderID
+		model    gateway.ModelID
 		variant  string
 		id       string
 	}{
@@ -778,8 +717,8 @@ func TestCopiesAndTunes(t *testing.T) {
 		t.Errorf("oc's gemini-2.5-flash = %+v; want gemini-2.5-flash the call, -nothink an alias", o)
 	}
 	for _, tt := range []struct {
-		provider ProviderID
-		model    ModelID
+		provider gateway.ProviderID
+		model    gateway.ModelID
 		id       string
 	}{
 		{"oc", "xiaomi/mimo-v2-flash", "mimo-v2-flash-free"},
@@ -792,7 +731,7 @@ func TestCopiesAndTunes(t *testing.T) {
 			t.Errorf("%s's %s calls %q, want %q", tt.provider, tt.model, o.ProviderOptions.ID, tt.id)
 		}
 	}
-	for _, id := range []ModelID{"zhipuai/glm-5-free", "anthropic/claude-opus-4-7-think", "google/gemini-2.5-flash-nothink",
+	for _, id := range []gateway.ModelID{"zhipuai/glm-5-free", "anthropic/claude-opus-4-7-think", "google/gemini-2.5-flash-nothink",
 		"xiaomi/mimo-v2-flash-free", "anthropic/opus-4-8"} {
 		if _, ok := c.Models[id]; ok {
 			t.Errorf("%s made a model of its own; want it a copy of the model it names", id)
@@ -803,13 +742,13 @@ func TestCopiesAndTunes(t *testing.T) {
 	if o := mustOffering(t, c, "ng", "anthropic/opus-4-7"); o.ProviderOptions.ID != "opus-4-7" {
 		t.Errorf("ng's opus-4-7 = %+v; want a model of its own, not anthropic/claude-opus-4-7", o)
 	}
-	for id, want := range map[ModelID]Finetuned{
+	for id, want := range map[gateway.ModelID]Finetuned{
 		"google/gemma-4-e4b-it-iq4-xs": {Of: "google/gemma-4-e4b-it", Kind: TuneQuantized},
 		"alibaba/qwen3-32b-fp8":        {Of: "alibaba/qwen3-32b", Kind: TuneQuantized},
 		"google/gemma-4-31b-it-garnet": {Of: "google/gemma-4-31b-it", Kind: TuneFinetune},
 	} {
-		if m, ok := c.Models[id]; !ok || m.Finetuned == nil || *m.Finetuned != want {
-			t.Errorf("%s = %+v, %v; want a fine-tune %+v", id, m.Finetuned, ok, want)
+		if m, ok := c.Models[id]; !ok || rep.Origins[m.ID].Finetuned == nil || *rep.Origins[m.ID].Finetuned != want {
+			t.Errorf("%s = %+v, %v; want a fine-tune %+v", id, rep.Origins[m.ID].Finetuned, ok, want)
 		}
 	}
 }
@@ -860,7 +799,7 @@ func TestOwnModelsAndServices(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	for id, want := range map[ModelID]Inference{
+	for id, want := range map[gateway.ModelID]Inference{
 		"bee/bee-buzz":                  {LabBy: LabByProvider, Facts: "bee"},
 		"opencode/big-pickle":           {LabBy: LabByProvider, Facts: "opencode"},
 		"opencode/space-bunny":          {LabBy: LabByProvider, Facts: "opencode-go"},
@@ -868,12 +807,12 @@ func TestOwnModelsAndServices(t *testing.T) {
 		"meta/llama-guard-4-12b":        {LabBy: LabByMaker, Facts: "gw"},
 		"nanogpt/celeris-1":             {LabBy: LabByProvider, Facts: "nano-gpt"},
 	} {
-		if m, ok := c.Models[id]; !ok || m.Inferred == nil || *m.Inferred != want {
+		if m, ok := c.Models[id]; !ok || rep.Origins[m.ID].Inferred == nil || *rep.Origins[m.ID].Inferred != want {
 			t.Errorf("%s = %+v, %v; want a model inferred %+v", id, m, ok, want)
 		}
 	}
 	// A service is left out of the catalog, and listed in the report.
-	want := map[ProviderID][]string{
+	want := map[gateway.ProviderID][]string{
 		"gw":       {"custom", "gw/zdr", "universal-summarizer", "gw-auto/balanced", "openrouter/auto"},
 		"gw-plan":  {"model-router"},
 		"nano-gpt": {"nanogpt/coding-router", "auto-model"},
@@ -911,7 +850,7 @@ func TestOwnModelsAndServices(t *testing.T) {
 func TestDoubleDashIDs(t *testing.T) {
 	r := DefaultRules()
 	for _, tt := range []struct {
-		provider ProviderID
+		provider gateway.ProviderID
 		id       string
 		want     []string
 	}{
@@ -935,13 +874,14 @@ func TestDoubleDashIDs(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	c, _, err := FromModelsDev(b, Options{Infer: true})
+	c, rep, err := FromModelsDev(b, Options{Infer: true})
 	if err != nil {
 		t.Fatal(err)
 	}
-	for model, want := range map[ModelID]Basis{"amazon/nova-lite": BasisID, "anthropic/claude-3-opus": BasisInferred} {
-		if o := mustOffering(t, c, "sap-ai-core", model); o.Basis != want {
-			t.Errorf("sap-ai-core's %s basis %q, want %q", model, o.Basis, want)
+	for model, want := range map[gateway.ModelID]Basis{"amazon/nova-lite": BasisID, "anthropic/claude-3-opus": BasisInferred} {
+		mustOffering(t, c, "sap-ai-core", model)
+		if rep.Ties["sap-ai-core"][model].Basis != want {
+			t.Errorf("sap-ai-core's %s basis %q, want %q", model, rep.Ties["sap-ai-core"][model].Basis, want)
 		}
 	}
 	for id := range c.Models {
@@ -981,22 +921,36 @@ func TestLabSpelling(t *testing.T) {
 		t.Fatal(err)
 	}
 	for _, tt := range []struct {
-		model     ModelID
-		providers []ProviderID
+		model     gateway.ModelID
+		providers []gateway.ProviderID
 	}{
-		{"alibaba/qwen2.5-14b-instruct", []ProviderID{"ali", "do"}},
-		{"meta/llama-3.3-70b-instruct", []ProviderID{"do"}},
-		{"anthropic/claude-3-5-haiku", []ProviderID{"do"}},
-		{"cohere/embed-v4.0", []ProviderID{"do", "vc"}},
+		{"alibaba/qwen2.5-14b-instruct", []gateway.ProviderID{"ali", "do"}},
+		{"meta/llama-3.3-70b-instruct", []gateway.ProviderID{"do"}},
+		{"anthropic/claude-3-5-haiku", []gateway.ProviderID{"do"}},
+		{"cohere/embed-v4.0", []gateway.ProviderID{"do", "vc"}},
 	} {
 		if m, ok := c.Models[tt.model]; !ok || !slices.Equal(m.Providers, tt.providers) {
 			t.Errorf("%s = %v, %v; want it served by %v", tt.model, m.Providers, ok, tt.providers)
 		}
 	}
-	for _, id := range []ModelID{"alibaba/qwen-2.5-14b-instruct", "alibaba/qwen2-5-14b-instruct", "meta/llama3.3-70b-instruct",
+	for _, id := range []gateway.ModelID{"alibaba/qwen-2.5-14b-instruct", "alibaba/qwen2-5-14b-instruct", "meta/llama3.3-70b-instruct",
 		"anthropic/claude-3.5-haiku", "cohere/embed-v-4-0"} {
 		if _, ok := c.Models[id]; ok {
 			t.Errorf("%s is a model; want it spelt as its lab spells it, one model with its other spelling", id)
 		}
 	}
+}
+
+// calls describes how off is called: "= ID" for its own call, "key = ID"
+// for each variant, in order, its ID empty when it sends the call's, and
+// "alias ID" for each alias.
+func calls(off gateway.Offering) []string {
+	out := []string{"= " + off.ProviderOptions.ID}
+	for _, k := range off.VariantKeys() {
+		out = append(out, k+" = "+off.Variants[k].ProviderOptions.ID)
+	}
+	for _, a := range off.Aliases {
+		out = append(out, "alias "+a)
+	}
+	return out
 }

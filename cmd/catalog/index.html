@@ -543,8 +543,6 @@ function reasoningView(r) {
   if (r.budget) out.push(h("span", { class: "badge" }, `budget ${r.budget.min ? tokens(r.budget.min) : "?"}-${r.budget.max ? tokens(r.budget.max) : "?"}`));
   return out.length ? out : h("span", { class: "sub" }, "reasons; no controls listed");
 }
-// apiPath is the catalog API's path of a row's variant, resolved.
-const apiPath = (row) => `/v1/providers/${row.provider}/${row.v.id}`;
 function variantDetail(row, span) {
   const kv = (k, v, cls) => h("div", { class: "kv" }, h("span", { class: "k" }, k), h("div", { class: "v " + (cls || "") }, v));
   const tie = (id) => h("a", { href: modelHref(id), class: "hl-text mid" }, id);
@@ -554,7 +552,7 @@ function variantDetail(row, span) {
   for (const k of ["inherited_price", "own_endpoint"]) delete resolved[k];
   for (const k of Object.keys(resolved)) if (resolved[k] == null) delete resolved[k];
   return h("tr", { class: "detail" }, h("td", { colspan: span },
-    kv("Variant", h("span", {}, h("span", { class: "mid" }, v.id), " ", copyButton(v.id), h("span", { class: "sub" }, "  GET " + apiPath(row)))),
+    kv("Variant", h("span", {}, h("span", { class: "mid" }, v.id), " ", copyButton(v.id))),
     kv("Serves", row.model ? tie(row.model)
       : h("span", {}, h("span", { class: "badge specific" }, "unlisted"), " neither models.dev nor flow's rules tie it to a model",
           row.off.lab ? h("span", { class: "sub" }, "; its ID names lab " + row.off.lab) : "")),
