@@ -1,6 +1,6 @@
 {
   "id": "commandcode",
-  "name": "CommandCode",
+  "name": "Command Code",
   "kind": "gateway",
   "type": "community",
   "endpoint": {

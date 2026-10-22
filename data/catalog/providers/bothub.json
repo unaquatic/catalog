@@ -1,6 +1,6 @@
 {
   "id": "bothub",
-  "name": "Bothub",
+  "name": "BotHub",
   "kind": "gateway",
   "type": "community",
   "endpoint": {

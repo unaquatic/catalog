@@ -1,6 +1,6 @@
 {
   "id": "deepinfra",
-  "name": "Deep Infra",
+  "name": "DeepInfra",
   "kind": "gateway",
   "type": "official",
   "endpoint": {

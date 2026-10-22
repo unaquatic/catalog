@@ -1,6 +1,6 @@
 {
   "id": "submodel",
-  "name": "submodel",
+  "name": "SubModel",
   "kind": "gateway",
   "type": "community",
   "endpoint": {

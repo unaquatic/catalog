@@ -1,6 +1,6 @@
 {
   "id": "klokintegration",
-  "name": "klokintegration.se",
+  "name": "Klok Integration",
   "kind": "gateway",
   "type": "community",
   "endpoint": {

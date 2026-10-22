@@ -2,7 +2,7 @@
   "$schema": "https://aquatic.dev/catalog/schema.json",
   "version": 8,
   "source": "https://models.dev",
-  "generated": "2026-10-22T09:45:38Z",
+  "generated": "2026-10-22T10:01:46Z",
   "spellings": {
     "128e": "128E",
     "16e": "16E",
@@ -161,11 +161,11 @@
   "labs": {
     "abacusai": {
       "id": "abacusai",
-      "name": "Abacus.AI"
+      "name": "Abacus AI"
     },
     "abliteration-ai": {
       "id": "abliteration-ai",
-      "name": "abliteration.ai"
+      "name": "Abliteration"
     },
     "agnes": {
       "id": "agnes",
@@ -197,7 +197,7 @@
     },
     "anthracite-org": {
       "id": "anthracite-org",
-      "name": "Anthracite Org"
+      "name": "Anthracite"
     },
     "anthropic": {
       "id": "anthropic",
@@ -265,7 +265,7 @@
     },
     "convaiinnovations": {
       "id": "convaiinnovations",
-      "name": "Convaiinnovations"
+      "name": "Convai Innovations"
     },
     "deepreinforce": {
       "id": "deepreinforce",
@@ -301,7 +301,7 @@
     },
     "evroc": {
       "id": "evroc",
-      "name": "evroc"
+      "name": "Evroc"
     },
     "fastino": {
       "id": "fastino",
@@ -317,7 +317,7 @@
     },
     "fireworks": {
       "id": "fireworks",
-      "name": "Fireworks"
+      "name": "Fireworks AI"
     },
     "fish-audio": {
       "id": "fish-audio",
@@ -393,7 +393,7 @@
     },
     "klokintegration": {
       "id": "klokintegration",
-      "name": "klokintegration.se"
+      "name": "Klok Integration"
     },
     "kuaishou": {
       "id": "kuaishou",
@@ -429,7 +429,7 @@
     },
     "marinaraspaghetti": {
       "id": "marinaraspaghetti",
-      "name": "Marinaraspaghetti"
+      "name": "MarinaraSpaghetti"
     },
     "meituan": {
       "id": "meituan",
@@ -461,7 +461,7 @@
     },
     "mlabonne": {
       "id": "mlabonne",
-      "name": "Mlabonne"
+      "name": "Maxime Labonne"
     },
     "moondream": {
       "id": "moondream",
@@ -617,7 +617,7 @@
     },
     "speakleash": {
       "id": "speakleash",
-      "name": "Speakleash"
+      "name": "SpeakLeash"
     },
     "stabilityai": {
       "id": "stabilityai",
@@ -649,7 +649,7 @@
     },
     "topaz": {
       "id": "topaz",
-      "name": "Topaz"
+      "name": "Topaz Labs"
     },
     "trendyol": {
       "id": "trendyol",
@@ -657,7 +657,7 @@
     },
     "typesafe": {
       "id": "typesafe",
-      "name": "Typesafe"
+      "name": "Typesafe AI"
     },
     "unbiased": {
       "id": "unbiased",

@@ -1,6 +1,6 @@
 {
   "id": "lmstudio",
-  "name": "LMStudio",
+  "name": "LM Studio",
   "kind": "gateway",
   "type": "community",
   "endpoint": {
