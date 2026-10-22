@@ -1,0 +1,60 @@
+{
+  "quiverai/arrow-2": {
+    "id": "quiverai/arrow-2",
+    "lab": "quiverai",
+    "name": "Arrow 2",
+    "released": "2026-09-16",
+    "updated": "2026-09-16",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text",
+        "image"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 65536
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "quiverai/arrow-2-telos": {
+    "id": "quiverai/arrow-2-telos",
+    "lab": "quiverai",
+    "name": "Arrow 2 Telos",
+    "released": "2026-09-16",
+    "updated": "2026-09-16",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text",
+        "image"
+      ]
+    },
+    "limit": {
+      "context": 1050000,
+      "output": 65536
+    },
+    "providers": [
+      "vercel"
+    ]
+  }
+}

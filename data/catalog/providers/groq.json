@@ -1,0 +1,541 @@
+{
+  "id": "groq",
+  "name": "Groq",
+  "kind": "gateway",
+  "type": "official",
+  "endpoint": {
+    "format": "openai-chat",
+    "api": "https://api.groq.com/openai/v1",
+    "api_default": true,
+    "auth": {
+      "scheme": "bearer"
+    },
+    "env": [
+      "GROQ_API_KEY"
+    ]
+  },
+  "doc": "https://console.groq.com/docs/models",
+  "models": {
+    "alibaba/qwen3.6-27b": {
+      "name": "Qwen3.6 27B",
+      "family": "qwen",
+      "released": "2026-04-22",
+      "updated": "2026-04-22",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 131072,
+        "output": 16384
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none"
+        ]
+      },
+      "provider_options": {
+        "id": "qwen/qwen3.6-27b",
+        "name": "Qwen3.6 27B"
+      },
+      "price": {
+        "input": 0.6,
+        "output": 3,
+        "cache_read": 0.3
+      },
+      "status": "deprecated"
+    },
+    "alibaba/qwen3.8-27b": {
+      "name": "Qwen3.8 27B",
+      "family": "qwen",
+      "released": "2026-08-14",
+      "updated": "2026-08-14",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 131072,
+        "output": 16384
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "qwen/qwen3.8-27b",
+        "name": "Qwen3.8 27B"
+      },
+      "price": {
+        "input": 0.8,
+        "output": 4
+      },
+      "status": "beta"
+    },
+    "canopylabs/orpheus-arabic-saudi": {
+      "name": "Orpheus Arabic Saudi",
+      "family": "canopylabs",
+      "type": "speech",
+      "released": "2025-12-16",
+      "updated": "2025-12-16",
+      "open_weights": false,
+      "capabilities": {
+        "tools": false,
+        "attachments": false,
+        "temperature": false,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "audio"
+        ]
+      },
+      "limit": {
+        "context": 4000,
+        "output": 50000
+      },
+      "provider_options": {
+        "id": "canopylabs/orpheus-arabic-saudi",
+        "name": "Canopy Labs Orpheus Arabic Saudi"
+      },
+      "status": "beta"
+    },
+    "canopylabs/orpheus-v1-english": {
+      "name": "Orpheus V1 English",
+      "family": "canopylabs",
+      "type": "speech",
+      "released": "2025-12-19",
+      "updated": "2025-12-19",
+      "open_weights": false,
+      "capabilities": {
+        "tools": false,
+        "attachments": false,
+        "temperature": false,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "audio"
+        ]
+      },
+      "limit": {
+        "context": 4000,
+        "output": 50000
+      },
+      "provider_options": {
+        "id": "canopylabs/orpheus-v1-english",
+        "name": "Canopy Labs Orpheus V1 English"
+      },
+      "status": "beta"
+    },
+    "groq/compound": {
+      "name": "Compound",
+      "family": "groq",
+      "released": "2025-09-04",
+      "updated": "2025-09-04",
+      "open_weights": false,
+      "capabilities": {
+        "tools": false,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 131072,
+        "output": 8192
+      },
+      "provider_options": {
+        "id": "groq/compound",
+        "name": "Compound"
+      },
+      "status": "deprecated"
+    },
+    "groq/compound-mini": {
+      "name": "Compound Mini",
+      "family": "groq",
+      "released": "2025-09-04",
+      "updated": "2025-09-04",
+      "open_weights": false,
+      "capabilities": {
+        "tools": false,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 131072,
+        "output": 8192
+      },
+      "provider_options": {
+        "id": "groq/compound-mini",
+        "name": "Compound Mini"
+      },
+      "status": "deprecated"
+    },
+    "meta/llama-3.1-8b-instruct": {
+      "name": "Llama 3.1 8B Instruct",
+      "family": "llama",
+      "released": "2024-07-23",
+      "updated": "2024-07-23",
+      "knowledge": "2023-12",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 131072,
+        "output": 131072
+      },
+      "provider_options": {
+        "id": "llama-3.1-8b-instant",
+        "name": "Llama 3.1 8B"
+      },
+      "price": {
+        "input": 0.05,
+        "output": 0.08
+      },
+      "status": "deprecated"
+    },
+    "meta/llama-3.3-70b-instruct": {
+      "name": "Llama 3.3 70B Instruct",
+      "family": "llama",
+      "released": "2024-12-06",
+      "updated": "2024-12-06",
+      "knowledge": "2023-12",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 131072,
+        "output": 32768
+      },
+      "provider_options": {
+        "id": "llama-3.3-70b-versatile",
+        "name": "Llama 3.3 70B"
+      },
+      "price": {
+        "input": 0.59,
+        "output": 0.79
+      },
+      "status": "deprecated"
+    },
+    "meta/llama-prompt-guard-2-22m": {
+      "name": "Llama Prompt Guard 2 22M",
+      "family": "llama",
+      "released": "2025-04-29",
+      "updated": "2025-04-29",
+      "open_weights": true,
+      "capabilities": {
+        "tools": false,
+        "attachments": false,
+        "temperature": false,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 512,
+        "output": 512
+      },
+      "provider_options": {
+        "id": "meta-llama/llama-prompt-guard-2-22m",
+        "name": "Llama Prompt Guard 2 22M"
+      },
+      "price": {
+        "input": 0.03,
+        "output": 0.03
+      },
+      "status": "beta"
+    },
+    "meta/llama-prompt-guard-2-86m": {
+      "name": "Llama Prompt Guard 2 86M",
+      "family": "llama",
+      "released": "2025-04-29",
+      "updated": "2025-04-29",
+      "open_weights": true,
+      "capabilities": {
+        "tools": false,
+        "attachments": false,
+        "temperature": false,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 512,
+        "output": 512
+      },
+      "provider_options": {
+        "id": "meta-llama/llama-prompt-guard-2-86m",
+        "name": "Prompt Guard 2 86M"
+      },
+      "price": {
+        "input": 0.04,
+        "output": 0.04
+      },
+      "status": "beta"
+    },
+    "openai/gpt-oss-120b": {
+      "name": "GPT OSS 120B",
+      "family": "gpt-oss",
+      "released": "2025-08-05",
+      "updated": "2025-08-05",
+      "knowledge": "2024-06",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 131072,
+        "output": 65536
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "openai/gpt-oss-120b",
+        "name": "GPT OSS 120B"
+      },
+      "price": {
+        "input": 0.15,
+        "output": 0.6,
+        "cache_read": 0.075
+      }
+    },
+    "openai/gpt-oss-20b": {
+      "name": "GPT OSS 20B",
+      "family": "gpt-oss",
+      "released": "2025-08-05",
+      "updated": "2025-08-05",
+      "knowledge": "2024-06",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 131072,
+        "output": 65536
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "openai/gpt-oss-20b",
+        "name": "GPT OSS 20B"
+      },
+      "price": {
+        "input": 0.075,
+        "output": 0.3,
+        "cache_read": 0.0375
+      }
+    },
+    "openai/gpt-oss-safeguard-20b": {
+      "name": "GPT OSS Safeguard 20B",
+      "family": "gpt-oss",
+      "released": "2025-10-29",
+      "updated": "2025-10-29",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 131072,
+        "output": 65536
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "openai/gpt-oss-safeguard-20b",
+        "name": "Safety GPT OSS 20B"
+      },
+      "price": {
+        "input": 0.075,
+        "output": 0.3,
+        "cache_read": 0.0375
+      },
+      "status": "beta"
+    },
+    "openai/whisper-large-v3": {
+      "name": "Whisper Large V3",
+      "family": "whisper",
+      "type": "transcription",
+      "released": "2023-11-06",
+      "updated": "2023-11-06",
+      "open_weights": true,
+      "capabilities": {
+        "tools": false,
+        "attachments": true,
+        "temperature": true,
+        "input": [
+          "audio"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 448,
+        "output": 448
+      },
+      "provider_options": {
+        "id": "whisper-large-v3",
+        "name": "Whisper"
+      }
+    },
+    "openai/whisper-large-v3-turbo": {
+      "name": "Whisper Large V3 Turbo",
+      "family": "whisper",
+      "type": "transcription",
+      "released": "2024-10-01",
+      "updated": "2024-10-01",
+      "open_weights": true,
+      "capabilities": {
+        "tools": false,
+        "attachments": true,
+        "temperature": true,
+        "input": [
+          "audio"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 448,
+        "output": 448
+      },
+      "provider_options": {
+        "id": "whisper-large-v3-turbo",
+        "name": "Whisper Large V3 Turbo"
+      }
+    },
+    "sdaia/allam-2-7b": {
+      "name": "ALLaM 2 7B",
+      "released": "2025-01-23",
+      "updated": "2025-01-23",
+      "open_weights": true,
+      "capabilities": {
+        "tools": false,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 4096,
+        "output": 4096
+      },
+      "provider_options": {
+        "id": "allam-2-7b",
+        "name": "ALLaM-2-7b"
+      },
+      "price": {
+        "input": 0,
+        "output": 0
+      }
+    }
+  }
+}

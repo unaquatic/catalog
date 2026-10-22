@@ -1,0 +1,87 @@
+{
+  "id": "neosmith",
+  "name": "NeoSmith",
+  "kind": "gateway",
+  "type": "community",
+  "endpoint": {
+    "format": "openai-responses",
+    "api": "https://router.neosmith.ai/v1",
+    "auth": {
+      "scheme": "bearer"
+    },
+    "env": [
+      "NEOSMITH_API_KEY"
+    ]
+  },
+  "doc": "https://neosmith.ai/docs",
+  "models": {
+    "neosmith/neosmith.intelligent-maestro": {
+      "name": "Neosmith.intelligent Maestro",
+      "released": "2026-08-03",
+      "updated": "2026-08-08",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": false,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "neosmith.intelligent-maestro",
+        "name": "NeoSmith Maestro"
+      },
+      "price": {
+        "input": 2.4,
+        "output": 12,
+        "cache_read": 0.35,
+        "cache_write": 0
+      }
+    },
+    "neosmith/neosmith.neolite": {
+      "name": "Neosmith.neolite",
+      "released": "2026-06-20",
+      "updated": "2026-08-03",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": false,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 512000,
+        "output": 64000
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "neosmith.neolite",
+        "name": "NeoSmith NeoLite"
+      },
+      "price": {
+        "input": 0.6,
+        "output": 2.4,
+        "cache_read": 0.08,
+        "cache_write": 0
+      }
+    }
+  }
+}

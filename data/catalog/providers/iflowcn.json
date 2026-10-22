@@ -1,0 +1,458 @@
+{
+  "id": "iflowcn",
+  "name": "iFlow",
+  "kind": "gateway",
+  "type": "community",
+  "endpoint": {
+    "format": "openai-chat",
+    "api": "https://apis.iflow.cn/v1",
+    "auth": {
+      "scheme": "bearer"
+    },
+    "env": [
+      "IFLOW_API_KEY"
+    ]
+  },
+  "doc": "https://platform.iflow.cn/en/docs",
+  "models": {
+    "alibaba/qwen3-235b": {
+      "name": "Qwen3 235B",
+      "family": "qwen",
+      "released": "2024-12-01",
+      "updated": "2024-12-01",
+      "knowledge": "2024-10",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 128000,
+        "output": 32000
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "qwen3-235b",
+        "name": "Qwen3-235B-A22B"
+      },
+      "price": {
+        "input": 0,
+        "output": 0
+      }
+    },
+    "alibaba/qwen3-235b-a22b-instruct": {
+      "name": "Qwen3 235B A22B Instruct",
+      "family": "qwen",
+      "released": "2025-07-01",
+      "updated": "2025-07-01",
+      "knowledge": "2025-04",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 256000,
+        "output": 64000
+      },
+      "provider_options": {
+        "id": "qwen3-235b-a22b-instruct",
+        "name": "Qwen3-235B-A22B-Instruct"
+      },
+      "price": {
+        "input": 0,
+        "output": 0
+      }
+    },
+    "alibaba/qwen3-235b-a22b-thinking-2507": {
+      "name": "Qwen3 235B A22B Thinking 2507",
+      "family": "qwen",
+      "released": "2025-07-01",
+      "updated": "2025-07-01",
+      "knowledge": "2025-04",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 256000,
+        "output": 64000
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "qwen3-235b-a22b-thinking-2507",
+        "name": "Qwen3-235B-A22B-Thinking"
+      },
+      "price": {
+        "input": 0,
+        "output": 0
+      }
+    },
+    "alibaba/qwen3-32b": {
+      "name": "Qwen3 32B",
+      "family": "qwen",
+      "released": "2024-12-01",
+      "updated": "2024-12-01",
+      "knowledge": "2024-10",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 128000,
+        "output": 32000
+      },
+      "provider_options": {
+        "id": "qwen3-32b",
+        "name": "Qwen3-32B"
+      },
+      "price": {
+        "input": 0,
+        "output": 0
+      }
+    },
+    "alibaba/qwen3-coder-plus": {
+      "name": "Qwen3 Coder Plus",
+      "family": "qwen",
+      "released": "2025-07-01",
+      "updated": "2025-07-01",
+      "knowledge": "2025-04",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 256000,
+        "output": 64000
+      },
+      "provider_options": {
+        "id": "qwen3-coder-plus",
+        "name": "Qwen3-Coder-Plus"
+      },
+      "price": {
+        "input": 0,
+        "output": 0
+      }
+    },
+    "alibaba/qwen3-max": {
+      "name": "Qwen3 Max",
+      "family": "qwen",
+      "released": "2025-01-01",
+      "updated": "2025-01-01",
+      "knowledge": "2024-12",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 256000,
+        "output": 32000
+      },
+      "provider_options": {
+        "id": "qwen3-max",
+        "name": "Qwen3-Max"
+      },
+      "price": {
+        "input": 0,
+        "output": 0
+      }
+    },
+    "alibaba/qwen3-max-preview": {
+      "name": "Qwen3 Max Preview",
+      "family": "qwen",
+      "released": "2025-01-01",
+      "updated": "2025-01-01",
+      "knowledge": "2024-12",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 256000,
+        "output": 32000
+      },
+      "provider_options": {
+        "id": "qwen3-max-preview",
+        "name": "Qwen3-Max-Preview"
+      },
+      "price": {
+        "input": 0,
+        "output": 0
+      }
+    },
+    "alibaba/qwen3-vl-plus": {
+      "name": "Qwen3 VL Plus",
+      "family": "qwen",
+      "released": "2025-01-01",
+      "updated": "2025-01-01",
+      "knowledge": "2024-12",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 256000,
+        "output": 32000
+      },
+      "provider_options": {
+        "id": "qwen3-vl-plus",
+        "name": "Qwen3-VL-Plus"
+      },
+      "price": {
+        "input": 0,
+        "output": 0
+      }
+    },
+    "deepseek/deepseek-r1": {
+      "name": "DeepSeek R1",
+      "family": "deepseek-thinking",
+      "released": "2025-01-20",
+      "updated": "2025-01-20",
+      "knowledge": "2024-12",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 128000,
+        "output": 32000
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "deepseek-r1",
+        "name": "DeepSeek-R1"
+      },
+      "price": {
+        "input": 0,
+        "output": 0
+      }
+    },
+    "deepseek/deepseek-v3": {
+      "name": "DeepSeek V3",
+      "family": "deepseek",
+      "released": "2024-12-26",
+      "updated": "2024-12-26",
+      "knowledge": "2024-10",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 128000,
+        "output": 32000
+      },
+      "provider_options": {
+        "id": "deepseek-v3",
+        "name": "DeepSeek-V3"
+      },
+      "price": {
+        "input": 0,
+        "output": 0
+      }
+    },
+    "deepseek/deepseek-v3.2": {
+      "name": "DeepSeek V3.2",
+      "family": "deepseek",
+      "released": "2025-01-01",
+      "updated": "2025-01-01",
+      "knowledge": "2024-12",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 128000,
+        "output": 64000
+      },
+      "provider_options": {
+        "id": "deepseek-v3.2",
+        "name": "DeepSeek-V3.2-Exp"
+      },
+      "price": {
+        "input": 0,
+        "output": 0
+      }
+    },
+    "moonshotai/kimi-k2": {
+      "name": "Kimi K2",
+      "family": "kimi-k2",
+      "released": "2024-12-01",
+      "updated": "2024-12-01",
+      "knowledge": "2024-10",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 128000,
+        "output": 64000
+      },
+      "provider_options": {
+        "id": "kimi-k2",
+        "name": "Kimi-K2"
+      },
+      "price": {
+        "input": 0,
+        "output": 0
+      }
+    },
+    "moonshotai/kimi-k2-0905": {
+      "name": "Kimi K2 0905",
+      "family": "kimi-k2",
+      "released": "2025-09-05",
+      "updated": "2025-09-05",
+      "knowledge": "2024-12",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 256000,
+        "output": 64000
+      },
+      "provider_options": {
+        "id": "kimi-k2-0905",
+        "name": "Kimi-K2-0905"
+      },
+      "price": {
+        "input": 0,
+        "output": 0
+      }
+    },
+    "zhipuai/glm-4.6": {
+      "name": "GLM 4.6",
+      "family": "glm",
+      "released": "2024-12-01",
+      "updated": "2025-11-13",
+      "knowledge": "2024-10",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 200000,
+        "output": 128000
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "glm-4.6",
+        "name": "GLM-4.6"
+      },
+      "price": {
+        "input": 0,
+        "output": 0
+      }
+    }
+  }
+}

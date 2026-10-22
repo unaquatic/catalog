@@ -1,0 +1,876 @@
+{
+  "moonshotai/kimi-k2": {
+    "id": "moonshotai/kimi-k2",
+    "lab": "moonshotai",
+    "name": "Kimi K2",
+    "family": "kimi-k2",
+    "released": "2025-07-11",
+    "updated": "2025-07-11",
+    "knowledge": "2024-12-31",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 98304
+    },
+    "providers": [
+      "aimlapi",
+      "fastrouter",
+      "iflowcn",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "opencode",
+      "openrouter",
+      "qiniu-ai",
+      "vercel"
+    ]
+  },
+  "moonshotai/kimi-k2-0711": {
+    "id": "moonshotai/kimi-k2-0711",
+    "lab": "moonshotai",
+    "name": "Kimi K2 0711",
+    "family": "kimi-k2",
+    "released": "2025-01-01",
+    "updated": "2025-01-01",
+    "knowledge": "2025-01",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 16384
+    },
+    "providers": [
+      "helicone"
+    ]
+  },
+  "moonshotai/kimi-k2-0905": {
+    "id": "moonshotai/kimi-k2-0905",
+    "lab": "moonshotai",
+    "name": "Kimi K2 0905",
+    "family": "kimi-k2",
+    "released": "2025-09-05",
+    "updated": "2025-09-05",
+    "open_weights": true,
+    "license": "Modified MIT",
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 98304
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/moonshotai/Kimi-K2-Instruct-0905"
+      }
+    ],
+    "providers": [
+      "aimlapi",
+      "helicone",
+      "huggingface",
+      "iflowcn",
+      "io-net",
+      "jiekou",
+      "kilo",
+      "nano-gpt",
+      "novita-ai",
+      "openrouter",
+      "prime",
+      "qiniu-ai",
+      "zenmux"
+    ]
+  },
+  "moonshotai/kimi-k2-0905-preview": {
+    "id": "moonshotai/kimi-k2-0905-preview",
+    "lab": "moonshotai",
+    "name": "Kimi K2 0905 Preview",
+    "released": "2025-09-05",
+    "updated": "2025-09-05",
+    "knowledge": "2025-06",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 262144
+    },
+    "providers": [
+      "302ai"
+    ]
+  },
+  "moonshotai/kimi-k2-instruct": {
+    "id": "moonshotai/kimi-k2-instruct",
+    "lab": "moonshotai",
+    "name": "Kimi K2 Instruct",
+    "family": "kimi-k2",
+    "released": "2025-07-11",
+    "updated": "2025-07-11",
+    "open_weights": true,
+    "license": "Modified MIT",
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 32768
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/moonshotai/Kimi-K2-Instruct"
+      }
+    ],
+    "providers": [
+      "alibaba-cn",
+      "edenai",
+      "huggingface",
+      "jiekou",
+      "nano-gpt",
+      "novita-ai"
+    ]
+  },
+  "moonshotai/kimi-k2-instruct-fp4": {
+    "id": "moonshotai/kimi-k2-instruct-fp4",
+    "lab": "moonshotai",
+    "name": "Kimi K2 Instruct FP4",
+    "family": "kimi-k2",
+    "released": "2024-01-01",
+    "updated": "2025-07-11",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "structured_output": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "input": 131072,
+      "output": 131072
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "moonshotai/kimi-k2-thinking": {
+    "id": "moonshotai/kimi-k2-thinking",
+    "lab": "moonshotai",
+    "name": "Kimi K2 Thinking",
+    "family": "kimi-thinking",
+    "released": "2025-11-06",
+    "updated": "2025-11-06",
+    "knowledge": "2024-08",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 262144
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/moonshotai/Kimi-K2-Thinking"
+      }
+    ],
+    "providers": [
+      "302ai",
+      "aimlapi",
+      "alibaba-cn",
+      "edenai",
+      "helicone",
+      "huggingface",
+      "hyper",
+      "io-net",
+      "kilo",
+      "meganova",
+      "nano-gpt",
+      "novita-ai",
+      "opencode",
+      "openrouter",
+      "poe",
+      "qiniu-ai",
+      "zenmux"
+    ]
+  },
+  "moonshotai/kimi-k2-thinking-maas": {
+    "id": "moonshotai/kimi-k2-thinking-maas",
+    "lab": "moonshotai",
+    "name": "Kimi K2 Thinking Maas",
+    "family": "kimi-thinking",
+    "released": "2025-11-13",
+    "updated": "2025-11-13",
+    "knowledge": "2024-08",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 262144
+    },
+    "providers": [
+      "google-vertex"
+    ]
+  },
+  "moonshotai/kimi-k2-thinking-turbo": {
+    "id": "moonshotai/kimi-k2-thinking-turbo",
+    "lab": "moonshotai",
+    "name": "Kimi K2 Thinking Turbo",
+    "family": "kimi-thinking",
+    "released": "2025-11-06",
+    "updated": "2025-11-06",
+    "knowledge": "2024-08",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 262144
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/moonshotai/Kimi-K2-Thinking"
+      }
+    ],
+    "providers": [
+      "zenmux"
+    ]
+  },
+  "moonshotai/kimi-k2-turbo-preview": {
+    "id": "moonshotai/kimi-k2-turbo-preview",
+    "lab": "moonshotai",
+    "name": "Kimi K2 Turbo Preview",
+    "family": "kimi-k2",
+    "released": "2025-07-08",
+    "updated": "2025-07-08",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 256000,
+      "output": 8192
+    },
+    "providers": [
+      "abacus"
+    ]
+  },
+  "moonshotai/kimi-k2.5": {
+    "id": "moonshotai/kimi-k2.5",
+    "lab": "moonshotai",
+    "name": "Kimi K2.5",
+    "family": "kimi-k2",
+    "released": "2026-01-27",
+    "updated": "2026-01-27",
+    "knowledge": "2025-01",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 262144
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/moonshotai/Kimi-K2.5"
+      }
+    ],
+    "providers": [
+      "302ai",
+      "abacus",
+      "alibaba-cn",
+      "alibaba-coding-plan",
+      "alibaba-coding-plan-cn",
+      "alibaba-token-plan",
+      "alibaba-token-plan-cn",
+      "auriko",
+      "azure",
+      "azure-cognitive-services",
+      "baseten",
+      "daoxe",
+      "deepinfra",
+      "digitalocean",
+      "edenai",
+      "frogbot",
+      "hpc-ai",
+      "huggingface",
+      "jalapeno",
+      "jiekou",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "meganova",
+      "melious",
+      "nano-gpt",
+      "novita-ai",
+      "ofox",
+      "ollama-cloud",
+      "opencode",
+      "openrouter",
+      "orcarouter",
+      "poe",
+      "qiniu-ai",
+      "requesty",
+      "scnet-token-plan",
+      "siliconflow",
+      "siliconflow-cn",
+      "tencent-coding-plan",
+      "tensorx",
+      "vercel",
+      "zenmux"
+    ]
+  },
+  "moonshotai/kimi-k2.5-fw": {
+    "id": "moonshotai/kimi-k2.5-fw",
+    "lab": "moonshotai",
+    "name": "Kimi K2.5 FW",
+    "released": "2026-01-27",
+    "updated": "2026-01-27",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "input": 245760,
+      "output": 16384
+    },
+    "providers": [
+      "poe"
+    ]
+  },
+  "moonshotai/kimi-k2.6": {
+    "id": "moonshotai/kimi-k2.6",
+    "lab": "moonshotai",
+    "name": "Kimi K2.6",
+    "family": "kimi-k2",
+    "released": "2026-04-20",
+    "updated": "2026-04-20",
+    "knowledge": "2025-01",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 262144
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/moonshotai/Kimi-K2.6"
+      }
+    ],
+    "providers": [
+      "302ai",
+      "abacus",
+      "alibaba-cn",
+      "alibaba-token-plan",
+      "alibaba-token-plan-cn",
+      "ambient",
+      "auriko",
+      "azure",
+      "azure-cognitive-services",
+      "baseten",
+      "chutes",
+      "clarifai",
+      "cline-pass",
+      "cloudflare-workers-ai",
+      "cortecs",
+      "crossmodel",
+      "crusoe",
+      "deepinfra",
+      "digitalocean",
+      "ebcloud",
+      "edenai",
+      "empiriolabs",
+      "evroc",
+      "fastrouter",
+      "frogbot",
+      "gmicloud",
+      "greenpt",
+      "huggingface",
+      "inceptron",
+      "infomaniak",
+      "kenari",
+      "kilo",
+      "lilac",
+      "llmgateway",
+      "llmgateway-providers",
+      "melious",
+      "moark",
+      "moonshotai",
+      "moonshotai-cn",
+      "nano-gpt",
+      "nearai",
+      "novita-ai",
+      "nvidia",
+      "ofox",
+      "ollama-cloud",
+      "opencode",
+      "openrouter",
+      "orcarouter",
+      "pioneer",
+      "poe",
+      "privatemode-ai",
+      "requesty",
+      "routing-run",
+      "scnet-token-plan",
+      "siliconflow",
+      "siliconflow-cn",
+      "tempr",
+      "tensorx",
+      "thinkingmachines",
+      "tokengo",
+      "unorouter",
+      "vercel",
+      "wafer.ai",
+      "wandb",
+      "zenmux"
+    ]
+  },
+  "moonshotai/kimi-k2.7-code": {
+    "id": "moonshotai/kimi-k2.7-code",
+    "lab": "moonshotai",
+    "name": "Kimi K2.7 Code",
+    "family": "kimi-k2",
+    "released": "2026-06-12",
+    "updated": "2026-06-12",
+    "knowledge": "2025-01",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 262144
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/moonshotai/Kimi-K2.7-Code"
+      }
+    ],
+    "providers": [
+      "302ai",
+      "abacus",
+      "aiand",
+      "alibaba-token-plan",
+      "alibaba-token-plan-cn",
+      "ambient",
+      "azure",
+      "azure-cognitive-services",
+      "baseten",
+      "cline-pass",
+      "cloudflare-workers-ai",
+      "commandcode",
+      "cortecs",
+      "crossmodel",
+      "databricks",
+      "deepinfra",
+      "edenai",
+      "empiriolabs",
+      "github-copilot",
+      "greenpt",
+      "hpc-ai",
+      "huggingface",
+      "hyper",
+      "inceptron",
+      "iteracompute",
+      "jalapeno",
+      "kenari",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "melious",
+      "moonshotai",
+      "moonshotai-cn",
+      "nano-gpt",
+      "nebius",
+      "neuralwatt",
+      "novita-ai",
+      "ofox",
+      "ollama-cloud",
+      "opencode",
+      "opencode-go",
+      "openreason",
+      "openrouter",
+      "orcarouter",
+      "perplexity-agent",
+      "pioneer",
+      "requesty",
+      "routing-run",
+      "scnet-token-plan",
+      "siliconflow",
+      "synthetic",
+      "tempr",
+      "tensorx",
+      "vercel",
+      "volcengine-coding-plan",
+      "wandb",
+      "zenmux"
+    ]
+  },
+  "moonshotai/kimi-k2.7-code-highspeed": {
+    "id": "moonshotai/kimi-k2.7-code-highspeed",
+    "lab": "moonshotai",
+    "name": "Kimi K2.7 Code Highspeed",
+    "family": "kimi-k2",
+    "released": "2026-06-12",
+    "updated": "2026-06-12",
+    "knowledge": "2025-01",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 262144
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/moonshotai/Kimi-K2.7-Code"
+      }
+    ],
+    "providers": [
+      "commandcode",
+      "edenai",
+      "empiriolabs",
+      "gmicloud",
+      "kimi-code-plan-cn",
+      "kimi-code-plan-global",
+      "llmgateway",
+      "llmgateway-providers",
+      "nano-gpt",
+      "ofox",
+      "tempr",
+      "vercel"
+    ]
+  },
+  "moonshotai/kimi-k2.8-preview": {
+    "id": "moonshotai/kimi-k2.8-preview",
+    "lab": "moonshotai",
+    "name": "Kimi K2.8 Preview",
+    "family": "kimi-k2",
+    "released": "2026-09-11",
+    "updated": "2026-09-11",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "output": 0
+    },
+    "providers": [
+      "kimi-code-plan-cn",
+      "kimi-code-plan-global"
+    ]
+  },
+  "moonshotai/kimi-k3": {
+    "id": "moonshotai/kimi-k3",
+    "lab": "moonshotai",
+    "name": "Kimi K3",
+    "family": "kimi-k3",
+    "released": "2026-07-16",
+    "updated": "2026-07-16",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "output": 131072
+    },
+    "providers": [
+      "302ai",
+      "abacus",
+      "aiand",
+      "aimlapi",
+      "ainetcafe",
+      "alibaba",
+      "alibaba-cn",
+      "arcee",
+      "baseten",
+      "berget",
+      "boundless",
+      "chutes",
+      "cline-pass",
+      "commandcode",
+      "cortecs",
+      "crossmodel",
+      "deepinfra",
+      "digitalocean",
+      "edenai",
+      "empiriolabs",
+      "engy",
+      "fireworks-ai",
+      "github-copilot",
+      "greenpt",
+      "huggingface",
+      "hyper",
+      "impossibl",
+      "inco",
+      "iteracompute",
+      "jalapeno",
+      "kenari",
+      "kilo",
+      "kimi-code-plan-cn",
+      "kimi-code-plan-global",
+      "llmgateway",
+      "llmgateway-providers",
+      "melious",
+      "moark",
+      "modal",
+      "moonshotai",
+      "moonshotai-cn",
+      "nano-gpt",
+      "nearai",
+      "nebius",
+      "neon",
+      "neuralwatt",
+      "novita-ai",
+      "nvidia",
+      "ofox",
+      "ollama-cloud",
+      "opencode",
+      "opencode-go",
+      "openrouter",
+      "opper",
+      "orcarouter",
+      "perplexity-agent",
+      "pioneer",
+      "prime",
+      "requesty",
+      "scnet-token-plan",
+      "sensenova",
+      "siliconflow",
+      "standardcompute",
+      "synthetic",
+      "tempr",
+      "tensorx",
+      "tinfoil",
+      "togetherai",
+      "tokengo",
+      "umans-ai",
+      "umans-ai-coding-plan",
+      "vancine",
+      "vercel",
+      "vivgrid",
+      "volcengine-coding-plan",
+      "wallaby",
+      "zenmux"
+    ]
+  },
+  "moonshotai/kimi-latest": {
+    "id": "moonshotai/kimi-latest",
+    "lab": "moonshotai",
+    "name": "Kimi Latest",
+    "family": "kimi",
+    "released": "2026-04-27",
+    "updated": "2026-04-27",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "output": 943718
+    },
+    "providers": [
+      "kilo",
+      "nano-gpt",
+      "openrouter"
+    ]
+  }
+}

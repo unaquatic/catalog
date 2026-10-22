@@ -1,0 +1,136 @@
+{
+  "id": "poolside",
+  "name": "Poolside",
+  "kind": "lab",
+  "type": "community",
+  "endpoint": {
+    "format": "openai-chat",
+    "api": "https://inference.poolside.ai/v1",
+    "auth": {
+      "scheme": "bearer"
+    },
+    "env": [
+      "POOLSIDE_API_KEY"
+    ]
+  },
+  "doc": "https://platform.poolside.ai",
+  "models": {
+    "poolside/laguna-m.1": {
+      "name": "Laguna M.1",
+      "family": "laguna",
+      "released": "2026-04-28",
+      "updated": "2026-06-13",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 32768
+      },
+      "reasoning": {
+        "mandatory": false
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "poolside/laguna-m.1",
+        "name": "Laguna M.1"
+      },
+      "price": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_write": 0
+      }
+    },
+    "poolside/laguna-s-2.1": {
+      "name": "Laguna S 2.1",
+      "family": "laguna",
+      "released": "2026-07-21",
+      "updated": "2026-07-21",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 32768
+      },
+      "reasoning": {
+        "mandatory": false
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "poolside/laguna-s-2.1",
+        "name": "Laguna S 2.1"
+      },
+      "price": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_write": 0
+      }
+    },
+    "poolside/laguna-xs-2.1": {
+      "name": "Laguna XS 2.1",
+      "family": "laguna",
+      "released": "2026-07-02",
+      "updated": "2026-07-02",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 32768
+      },
+      "reasoning": {
+        "mandatory": false
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "poolside/laguna-xs-2.1",
+        "name": "Laguna XS 2.1"
+      },
+      "price": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_write": 0
+      }
+    }
+  }
+}

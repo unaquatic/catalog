@@ -1,0 +1,36 @@
+{
+  "apodex/apodex-1.1-mini": {
+    "id": "apodex/apodex-1.1-mini",
+    "lab": "apodex",
+    "name": "Apodex 1.1 Mini",
+    "released": "2026-08-24",
+    "updated": "2026-08-24",
+    "open_weights": true,
+    "license": "Apache-2.0",
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 262144
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/apodex/Apodex-1.1-mini"
+      }
+    ],
+    "providers": [
+      "novita-ai"
+    ]
+  }
+}

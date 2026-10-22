@@ -1,0 +1,33 @@
+{
+  "heygen/heygen-video-1": {
+    "id": "heygen/heygen-video-1",
+    "lab": "heygen",
+    "name": "HeyGen Video 1",
+    "type": "video",
+    "released": "2026-10-09",
+    "updated": "2026-10-09",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image",
+        "video",
+        "audio"
+      ],
+      "output": [
+        "video"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  }
+}

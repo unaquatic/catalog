@@ -1,0 +1,1430 @@
+{
+  "nvidia/active-speaker-detection": {
+    "id": "nvidia/active-speaker-detection",
+    "lab": "nvidia",
+    "name": "Active Speaker Detection",
+    "released": "2026-04-16",
+    "updated": "2026-04-16",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 4096
+    },
+    "providers": [
+      "nvidia"
+    ]
+  },
+  "nvidia/bevformer": {
+    "id": "nvidia/bevformer",
+    "lab": "nvidia",
+    "name": "Bevformer",
+    "released": "2025-03-18",
+    "updated": "2025-07-20",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 8192
+    },
+    "providers": [
+      "nvidia"
+    ]
+  },
+  "nvidia/cosmos-predict1-5b": {
+    "id": "nvidia/cosmos-predict1-5b",
+    "lab": "nvidia",
+    "name": "Cosmos Predict1 5B",
+    "released": "2025-03-18",
+    "updated": "2025-03-18",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output": [
+        "video"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 4096
+    },
+    "providers": [
+      "nvidia"
+    ]
+  },
+  "nvidia/cosmos-reason2-8b": {
+    "id": "nvidia/cosmos-reason2-8b",
+    "lab": "nvidia",
+    "name": "Cosmos Reason2 8B",
+    "released": "2025-12-01",
+    "updated": "2025-12-01",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 16384
+    },
+    "providers": [
+      "nvidia"
+    ]
+  },
+  "nvidia/cosmos-transfer1-7b": {
+    "id": "nvidia/cosmos-transfer1-7b",
+    "lab": "nvidia",
+    "name": "Cosmos Transfer1 7B",
+    "released": "2025-06-13",
+    "updated": "2025-06-30",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output": [
+        "video"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 4096
+    },
+    "providers": [
+      "nvidia"
+    ]
+  },
+  "nvidia/cosmos-transfer2-5-2b": {
+    "id": "nvidia/cosmos-transfer2-5-2b",
+    "lab": "nvidia",
+    "name": "Cosmos Transfer2.5 2B",
+    "released": "2026-02-26",
+    "updated": "2026-02-26",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output": [
+        "video"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 4096
+    },
+    "providers": [
+      "nvidia"
+    ]
+  },
+  "nvidia/gliner-pii": {
+    "id": "nvidia/gliner-pii",
+    "lab": "nvidia",
+    "name": "GLiNER PII",
+    "released": "2026-03-03",
+    "updated": "2026-03-03",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 4096
+    },
+    "providers": [
+      "nvidia"
+    ]
+  },
+  "nvidia/llama-3.1-nemotron-70b-instruct": {
+    "id": "nvidia/llama-3.1-nemotron-70b-instruct",
+    "lab": "nvidia",
+    "name": "Llama 3.1 Nemotron 70B Instruct",
+    "family": "nemotron",
+    "released": "2025-04-15",
+    "updated": "2025-04-15",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 8192
+    },
+    "providers": [
+      "edenai",
+      "nano-gpt",
+      "nvidia"
+    ]
+  },
+  "nvidia/llama-3.1-nemotron-nano-8b-v1": {
+    "id": "nvidia/llama-3.1-nemotron-nano-8b-v1",
+    "lab": "nvidia",
+    "name": "Llama 3.1 Nemotron Nano 8B V1",
+    "family": "nemotron",
+    "released": "2025-03-18",
+    "updated": "2025-03-18",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 16384
+    },
+    "providers": [
+      "nvidia"
+    ]
+  },
+  "nvidia/llama-3.1-nemotron-nano-vl-8b-v1": {
+    "id": "nvidia/llama-3.1-nemotron-nano-vl-8b-v1",
+    "lab": "nvidia",
+    "name": "Llama 3.1 Nemotron Nano VL 8B V1",
+    "family": "nemotron",
+    "released": "2025-04-10",
+    "updated": "2025-04-10",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32768,
+      "output": 16384
+    },
+    "providers": [
+      "nvidia"
+    ]
+  },
+  "nvidia/llama-3.1-nemotron-safety-guard-8b-v3": {
+    "id": "nvidia/llama-3.1-nemotron-safety-guard-8b-v3",
+    "lab": "nvidia",
+    "name": "Llama 3.1 Nemotron Safety Guard 8B V3",
+    "family": "nemotron",
+    "released": "2025-10-28",
+    "updated": "2025-10-28",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 4096
+    },
+    "providers": [
+      "nvidia"
+    ]
+  },
+  "nvidia/llama-3.1-nemotron-ultra-253b": {
+    "id": "nvidia/llama-3.1-nemotron-ultra-253b",
+    "lab": "nvidia",
+    "name": "Llama 3.1 Nemotron Ultra 253B",
+    "family": "nemotron",
+    "released": "2025-04-07",
+    "updated": "2025-04-07",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 8192
+    },
+    "providers": [
+      "nvidia"
+    ]
+  },
+  "nvidia/llama-3.2-nemoretriever-300m-embed-v1": {
+    "id": "nvidia/llama-3.2-nemoretriever-300m-embed-v1",
+    "lab": "nvidia",
+    "name": "Llama 3.2 Nemoretriever 300M Embed V1",
+    "released": "2025-07-24",
+    "updated": "2025-07-24",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32768,
+      "output": 2048
+    },
+    "providers": [
+      "nvidia"
+    ]
+  },
+  "nvidia/llama-3.3-nemotron-super-49b-v1": {
+    "id": "nvidia/llama-3.3-nemotron-super-49b-v1",
+    "lab": "nvidia",
+    "name": "Llama 3.3 Nemotron Super 49B V1",
+    "family": "nemotron",
+    "released": "2025-03-18",
+    "updated": "2025-03-18",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 131072
+    },
+    "providers": [
+      "nano-gpt",
+      "nvidia"
+    ]
+  },
+  "nvidia/llama-3.3-nemotron-super-49b-v1.5": {
+    "id": "nvidia/llama-3.3-nemotron-super-49b-v1.5",
+    "lab": "nvidia",
+    "name": "Llama 3.3 Nemotron Super 49B V1.5",
+    "family": "nemotron",
+    "released": "2025-07-25",
+    "updated": "2025-07-25",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 131072
+    },
+    "providers": [
+      "deepinfra",
+      "nvidia"
+    ]
+  },
+  "nvidia/llama-nemotron-embed-1b-v2": {
+    "id": "nvidia/llama-nemotron-embed-1b-v2",
+    "lab": "nvidia",
+    "name": "Llama Nemotron Embed 1B V2",
+    "family": "nemotron",
+    "type": "embedding",
+    "released": "2025-10-16",
+    "updated": "2025-10-16",
+    "open_weights": true,
+    "license": "nvidia-open-model-license",
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 8192,
+      "output": 2048
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/nvidia/llama-nemotron-embed-1b-v2"
+      }
+    ],
+    "providers": []
+  },
+  "nvidia/llama-nemotron-embed-vl-1b-v2": {
+    "id": "nvidia/llama-nemotron-embed-vl-1b-v2",
+    "lab": "nvidia",
+    "name": "Llama Nemotron Embed VL 1B V2",
+    "family": "nemotron",
+    "type": "embedding",
+    "released": "2025-12-18",
+    "updated": "2025-12-18",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 10240,
+      "output": 2048
+    },
+    "providers": [
+      "nvidia"
+    ]
+  },
+  "nvidia/llama-nemotron-rerank-vl-1b-v2": {
+    "id": "nvidia/llama-nemotron-rerank-vl-1b-v2",
+    "lab": "nvidia",
+    "name": "Llama Nemotron Rerank VL 1B V2",
+    "family": "nemotron",
+    "type": "reranking",
+    "released": "2025-12-18",
+    "updated": "2025-12-18",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 10240,
+      "output": 4096
+    },
+    "providers": [
+      "nvidia"
+    ]
+  },
+  "nvidia/magpie-tts-zeroshot": {
+    "id": "nvidia/magpie-tts-zeroshot",
+    "lab": "nvidia",
+    "name": "Magpie TTS Zeroshot",
+    "released": "2025-05-22",
+    "updated": "2025-06-12",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "audio"
+      ],
+      "output": [
+        "audio"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 4096
+    },
+    "providers": [
+      "nvidia"
+    ]
+  },
+  "nvidia/mistral-nemotron": {
+    "id": "nvidia/mistral-nemotron",
+    "lab": "nvidia",
+    "name": "Mistral Nemotron",
+    "family": "nemotron",
+    "released": "2025-06-11",
+    "updated": "2025-06-12",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 8192
+    },
+    "providers": [
+      "nvidia"
+    ]
+  },
+  "nvidia/nemotron-3-content-safety": {
+    "id": "nvidia/nemotron-3-content-safety",
+    "lab": "nvidia",
+    "name": "Nemotron 3 Content Safety",
+    "family": "nemotron",
+    "released": "2026-03-16",
+    "updated": "2026-03-16",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 4096
+    },
+    "providers": [
+      "nvidia"
+    ]
+  },
+  "nvidia/nemotron-3-nano-30b-a3b": {
+    "id": "nvidia/nemotron-3-nano-30b-a3b",
+    "lab": "nvidia",
+    "name": "Nemotron 3 Nano 30B A3B",
+    "family": "nemotron",
+    "released": "2025-12-15",
+    "updated": "2025-12-15",
+    "knowledge": "2025-06-25",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 262144
+    },
+    "providers": [
+      "cortecs",
+      "crusoe",
+      "deepinfra",
+      "digitalocean",
+      "edenai",
+      "infomaniak",
+      "kenari",
+      "kilo",
+      "nano-gpt",
+      "novita-ai",
+      "nvidia",
+      "ollama-cloud",
+      "openrouter",
+      "pioneer",
+      "thinkingmachines",
+      "vercel"
+    ]
+  },
+  "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning": {
+    "id": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+    "lab": "nvidia",
+    "name": "Nemotron 3 Nano Omni 30B A3B Reasoning",
+    "family": "nemotron",
+    "released": "2026-04-28",
+    "updated": "2026-04-28",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video",
+        "audio"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 256000,
+      "output": 65536
+    },
+    "providers": [
+      "crusoe",
+      "deepinfra",
+      "digitalocean",
+      "kilo",
+      "nvidia",
+      "openrouter",
+      "requesty",
+      "vultr"
+    ]
+  },
+  "nvidia/nemotron-3-nano-omni-30b-tee": {
+    "id": "nvidia/nemotron-3-nano-omni-30b-tee",
+    "lab": "nvidia",
+    "name": "Nemotron 3 Nano Omni 30B TEE",
+    "family": "nemotron",
+    "released": "2026-07-23",
+    "updated": "2026-07-23",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 0
+    },
+    "providers": [
+      "chutes"
+    ]
+  },
+  "nvidia/nemotron-3-super-120b-a12b": {
+    "id": "nvidia/nemotron-3-super-120b-a12b",
+    "lab": "nvidia",
+    "name": "Nemotron 3 Super 120B A12B",
+    "family": "nemotron",
+    "released": "2026-03-11",
+    "updated": "2026-03-11",
+    "knowledge": "2025-06",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 262144
+    },
+    "providers": [
+      "baseten",
+      "boundless",
+      "cloudflare-workers-ai",
+      "crusoe",
+      "digitalocean",
+      "edenai",
+      "kenari",
+      "kilo",
+      "nano-gpt",
+      "nebius",
+      "ollama-cloud",
+      "opencode",
+      "openrouter",
+      "perplexity-agent",
+      "pioneer",
+      "requesty",
+      "synthetic",
+      "thinkingmachines",
+      "vercel"
+    ]
+  },
+  "nvidia/nemotron-3-ultra-550b-a55b": {
+    "id": "nvidia/nemotron-3-ultra-550b-a55b",
+    "lab": "nvidia",
+    "name": "Nemotron 3 Ultra 550B A55B",
+    "family": "nemotron",
+    "released": "2026-06-04",
+    "updated": "2026-06-04",
+    "knowledge": "2025-09",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 128000
+    },
+    "providers": [
+      "baseten",
+      "bothub",
+      "commandcode",
+      "digitalocean",
+      "edenai",
+      "fireworks-ai",
+      "kenari",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "nano-gpt",
+      "nebius",
+      "nvidia",
+      "ollama-cloud",
+      "opencode",
+      "openrouter",
+      "pioneer",
+      "requesty",
+      "routing-run",
+      "thinkingmachines",
+      "togetherai",
+      "unorouter",
+      "vercel",
+      "wandb"
+    ]
+  },
+  "nvidia/nemotron-3-ultra-nvfp4": {
+    "id": "nvidia/nemotron-3-ultra-nvfp4",
+    "lab": "nvidia",
+    "name": "Nemotron 3 Ultra NVFP4",
+    "family": "nemotron",
+    "released": "2026-06-13",
+    "updated": "2026-06-13",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "structured_output": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 262144
+    },
+    "providers": [
+      "requesty"
+    ]
+  },
+  "nvidia/nemotron-3.5-content-safety": {
+    "id": "nvidia/nemotron-3.5-content-safety",
+    "lab": "nvidia",
+    "name": "Nemotron 3.5 Content Safety",
+    "family": "nemotron",
+    "released": "2026-06-02",
+    "updated": "2026-06-02",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 8192
+    },
+    "providers": [
+      "kilo",
+      "nano-gpt",
+      "nvidia",
+      "openrouter",
+      "requesty",
+      "vultr"
+    ]
+  },
+  "nvidia/nemotron-3.5-lightning": {
+    "id": "nvidia/nemotron-3.5-lightning",
+    "lab": "nvidia",
+    "name": "Nemotron 3.5 Lightning",
+    "family": "nemotron",
+    "released": "2026-08-11",
+    "updated": "2026-08-11",
+    "knowledge": "2025-09",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 262144
+    },
+    "providers": [
+      "fireworks-ai",
+      "kilo",
+      "nano-gpt",
+      "nebius",
+      "nvidia",
+      "opencode",
+      "openrouter",
+      "pioneer",
+      "requesty",
+      "runinfra",
+      "thinkingmachines",
+      "vercel",
+      "wandb"
+    ]
+  },
+  "nvidia/nemotron-3.5-super-120b-a12b": {
+    "id": "nvidia/nemotron-3.5-super-120b-a12b",
+    "lab": "nvidia",
+    "name": "Nemotron 3.5 Super 120B A12B",
+    "family": "nemotron",
+    "released": "2026-10-15",
+    "updated": "2026-10-15",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "output": 131072
+    },
+    "providers": [
+      "perplexity-agent"
+    ]
+  },
+  "nvidia/nemotron-3.5-super-vl-120b-a12b": {
+    "id": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+    "lab": "nvidia",
+    "name": "Nemotron 3.5 Super VL 120B A12B",
+    "family": "nemotron",
+    "released": "2026-10-15",
+    "updated": "2026-10-15",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "output": 8192
+    },
+    "providers": [
+      "digitalocean",
+      "kilo",
+      "nano-gpt",
+      "nebius",
+      "nvidia",
+      "opencode",
+      "openrouter",
+      "pioneer",
+      "thinkingmachines",
+      "togetherai",
+      "vercel",
+      "wandb"
+    ]
+  },
+  "nvidia/nemotron-cascade-2-30b-a3b": {
+    "id": "nvidia/nemotron-cascade-2-30b-a3b",
+    "lab": "nvidia",
+    "name": "Nemotron Cascade 2 30B A3B",
+    "family": "nemotron",
+    "released": "2026-03-19",
+    "updated": "2026-04-09",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 256000,
+      "output": 32768
+    },
+    "providers": []
+  },
+  "nvidia/nemotron-content-safety-reasoning-4b": {
+    "id": "nvidia/nemotron-content-safety-reasoning-4b",
+    "lab": "nvidia",
+    "name": "Nemotron Content Safety Reasoning 4B",
+    "family": "nemotron",
+    "released": "2026-01-22",
+    "updated": "2026-01-22",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 4096
+    },
+    "providers": [
+      "nvidia"
+    ]
+  },
+  "nvidia/nemotron-mini-4b-instruct": {
+    "id": "nvidia/nemotron-mini-4b-instruct",
+    "lab": "nvidia",
+    "name": "Nemotron Mini 4B Instruct",
+    "family": "nemotron",
+    "released": "2024-08-21",
+    "updated": "2024-08-26",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 8192
+    },
+    "providers": [
+      "nvidia"
+    ]
+  },
+  "nvidia/nemotron-nano-12b-v2-vl": {
+    "id": "nvidia/nemotron-nano-12b-v2-vl",
+    "lab": "nvidia",
+    "name": "Nemotron Nano 12B V2 VL",
+    "family": "nemotron",
+    "released": "2025-10-28",
+    "updated": "2025-10-28",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 128000
+    },
+    "providers": [
+      "cortecs",
+      "digitalocean",
+      "nvidia",
+      "vercel"
+    ]
+  },
+  "nvidia/nemotron-nano-9b-v2": {
+    "id": "nvidia/nemotron-nano-9b-v2",
+    "lab": "nvidia",
+    "name": "Nemotron Nano 9B V2",
+    "family": "nemotron",
+    "released": "2025-08-18",
+    "updated": "2025-08-18",
+    "knowledge": "2024-09",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 131072
+    },
+    "providers": [
+      "nvidia",
+      "vercel"
+    ]
+  },
+  "nvidia/nemotron-voicechat": {
+    "id": "nvidia/nemotron-voicechat",
+    "lab": "nvidia",
+    "name": "Nemotron VoiceChat",
+    "family": "nemotron",
+    "released": "2026-03-16",
+    "updated": "2026-03-16",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "audio"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 8192
+    },
+    "providers": [
+      "nvidia"
+    ]
+  },
+  "nvidia/nv-embed-v1": {
+    "id": "nvidia/nv-embed-v1",
+    "lab": "nvidia",
+    "name": "Nv Embed V1",
+    "released": "2024-06-07",
+    "updated": "2025-07-22",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32768,
+      "output": 2048
+    },
+    "providers": [
+      "nvidia"
+    ]
+  },
+  "nvidia/nv-embedcode-7b-v1": {
+    "id": "nvidia/nv-embedcode-7b-v1",
+    "lab": "nvidia",
+    "name": "Nv Embedcode 7B V1",
+    "released": "2025-03-17",
+    "updated": "2025-05-29",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32768,
+      "output": 2048
+    },
+    "providers": [
+      "nvidia"
+    ]
+  },
+  "nvidia/rerank-qa-mistral-4b": {
+    "id": "nvidia/rerank-qa-mistral-4b",
+    "lab": "nvidia",
+    "name": "Rerank QA Mistral 4B",
+    "released": "2024-03-17",
+    "updated": "2025-01-17",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 4096
+    },
+    "providers": [
+      "nvidia"
+    ]
+  },
+  "nvidia/riva-translate-4b-instruct-v1.1": {
+    "id": "nvidia/riva-translate-4b-instruct-v1.1",
+    "lab": "nvidia",
+    "name": "Riva Translate 4B Instruct V1.1",
+    "released": "2025-12-12",
+    "updated": "2025-12-12",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 4096
+    },
+    "providers": [
+      "nvidia"
+    ]
+  },
+  "nvidia/sparsedrive": {
+    "id": "nvidia/sparsedrive",
+    "lab": "nvidia",
+    "name": "Sparsedrive",
+    "released": "2025-03-18",
+    "updated": "2025-07-20",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 8192
+    },
+    "providers": [
+      "nvidia"
+    ]
+  },
+  "nvidia/streampetr": {
+    "id": "nvidia/streampetr",
+    "lab": "nvidia",
+    "name": "Streampetr",
+    "released": "2025-11-13",
+    "updated": "2025-11-13",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 8192
+    },
+    "providers": [
+      "nvidia"
+    ]
+  },
+  "nvidia/studiovoice": {
+    "id": "nvidia/studiovoice",
+    "lab": "nvidia",
+    "name": "Studiovoice",
+    "released": "2024-10-03",
+    "updated": "2025-06-13",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 8192
+    },
+    "providers": [
+      "nvidia"
+    ]
+  },
+  "nvidia/synthetic-video-detector": {
+    "id": "nvidia/synthetic-video-detector",
+    "lab": "nvidia",
+    "name": "Synthetic Video Detector",
+    "released": "2026-04-16",
+    "updated": "2026-04-16",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 4096
+    },
+    "providers": [
+      "nvidia"
+    ]
+  },
+  "nvidia/usdcode": {
+    "id": "nvidia/usdcode",
+    "lab": "nvidia",
+    "name": "Usdcode",
+    "released": "2026-01-01",
+    "updated": "2026-01-01",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 4096
+    },
+    "providers": [
+      "nvidia"
+    ]
+  },
+  "nvidia/usdvalidate": {
+    "id": "nvidia/usdvalidate",
+    "lab": "nvidia",
+    "name": "Usdvalidate",
+    "released": "2024-07-24",
+    "updated": "2025-01-08",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 4096
+    },
+    "providers": [
+      "nvidia"
+    ]
+  }
+}

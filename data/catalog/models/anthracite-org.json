@@ -1,0 +1,62 @@
+{
+  "anthracite-org/magnum-v2-72b": {
+    "id": "anthracite-org/magnum-v2-72b",
+    "lab": "anthracite-org",
+    "name": "Magnum V2 72B",
+    "family": "llama",
+    "released": "2024-01-01",
+    "updated": "2024-07-01",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "structured_output": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 16384,
+      "input": 16384,
+      "output": 8192
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "anthracite-org/magnum-v4-72b": {
+    "id": "anthracite-org/magnum-v4-72b",
+    "lab": "anthracite-org",
+    "name": "Magnum V4 72B",
+    "released": "2024-10-22",
+    "updated": "2024-10-22",
+    "knowledge": "2024-06-30",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32768,
+      "output": 4096
+    },
+    "providers": [
+      "aimlapi",
+      "kilo",
+      "nano-gpt",
+      "openrouter"
+    ]
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "undi95/remm-slerp-l2-13b": {
+    "id": "undi95/remm-slerp-l2-13b",
+    "lab": "undi95",
+    "name": "ReMM SLERP L2 13B",
+    "released": "2023-07-22",
+    "updated": "2023-07-22",
+    "knowledge": "2023-06-30",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 6144,
+      "output": 5529
+    },
+    "providers": [
+      "aimlapi",
+      "kilo",
+      "nano-gpt",
+      "openrouter"
+    ]
+  }
+}

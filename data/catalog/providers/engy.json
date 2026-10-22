@@ -1,0 +1,415 @@
+{
+  "id": "engy",
+  "name": "Engy",
+  "kind": "gateway",
+  "type": "community",
+  "endpoint": {
+    "format": "openai-chat",
+    "api": "https://api.engy.ai/v1",
+    "auth": {
+      "scheme": "bearer"
+    },
+    "env": [
+      "ENGY_API_KEY"
+    ]
+  },
+  "doc": "https://engy.ai/pricing",
+  "models": {
+    "alibaba/qwen3.6-35b-a3b": {
+      "name": "Qwen3.6 35B A3B",
+      "family": "qwen",
+      "released": "2026-04-17",
+      "updated": "2026-04-17",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 208192,
+        "input": 200000,
+        "output": 8192
+      },
+      "reasoning": {
+        "mandatory": false
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "qwen3.6-35b-a3b",
+        "name": "Qwen3.6 35B-A3B"
+      },
+      "price": {
+        "input": 0.045,
+        "output": 0.3,
+        "cache_read": 0.015
+      }
+    },
+    "alibaba/qwen3.8-27b": {
+      "name": "Qwen3.8 27B",
+      "family": "qwen",
+      "released": "2026-08-14",
+      "updated": "2026-08-14",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1001536,
+        "input": 936000,
+        "output": 65536
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "medium",
+          "xhigh"
+        ]
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "qwen3.8-27b",
+        "name": "Qwen3.8 27B"
+      },
+      "price": {
+        "input": 0.045,
+        "output": 0.32,
+        "cache_read": 0.015
+      }
+    },
+    "deepseek/deepseek-v4-flash-0731": {
+      "name": "DeepSeek V4 Flash 0731",
+      "family": "deepseek-flash",
+      "released": "2026-07-31",
+      "updated": "2026-07-31",
+      "knowledge": "2025-05",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "input": 920576,
+        "output": 128000
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "high",
+          "max"
+        ]
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "deepseek-v4-flash-0731",
+        "name": "DeepSeek V4 Flash 0731"
+      },
+      "price": {
+        "input": 0.045,
+        "output": 0.09,
+        "cache_read": 0.009
+      }
+    },
+    "deepseek/deepseek-v4.1-flash": {
+      "name": "DeepSeek V4.1 Flash",
+      "family": "deepseek-flash",
+      "released": "2026-09-10",
+      "updated": "2026-09-10",
+      "knowledge": "2025-05",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "input": 983040,
+        "output": 65536
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "high",
+          "max"
+        ]
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "deepseek-v4.1-flash",
+        "name": "DeepSeek V4.1 Flash"
+      },
+      "price": {
+        "input": 0.04,
+        "output": 0.08,
+        "cache_read": 0.008
+      }
+    },
+    "deepseek/deepseek-v4.1-flash-1017": {
+      "name": "DeepSeek V4.1 Flash 1017",
+      "family": "deepseek-flash",
+      "released": "2026-10-17",
+      "updated": "2026-10-17",
+      "knowledge": "2025-05",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "input": 983040,
+        "output": 65536
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "high",
+          "max"
+        ]
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "deepseek-v4.1-flash-1017",
+        "name": "DeepSeek V4.1 Flash 1017"
+      },
+      "price": {
+        "input": 0.04,
+        "output": 0.08,
+        "cache_read": 0.008
+      }
+    },
+    "moonshotai/kimi-k3": {
+      "name": "Kimi K3",
+      "family": "kimi-k3",
+      "released": "2026-07-16",
+      "updated": "2026-07-16",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1113088,
+        "input": 1047552,
+        "output": 65536
+      },
+      "reasoning": {
+        "mandatory": false
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "kimi-k3",
+        "name": "Kimi K3"
+      },
+      "price": {
+        "input": 1.95,
+        "output": 9.75,
+        "cache_read": 0.195
+      }
+    },
+    "zhipuai/glm-5.2": {
+      "name": "GLM 5.2",
+      "family": "glm",
+      "released": "2026-06-13",
+      "updated": "2026-06-13",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "input": 229376,
+        "output": 32768
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "high",
+          "max"
+        ]
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "glm-5.2",
+        "name": "GLM-5.2"
+      },
+      "price": {
+        "input": 0.68,
+        "output": 1.5,
+        "cache_read": 0.18
+      }
+    },
+    "zhipuai/glm-5.3": {
+      "name": "GLM 5.3",
+      "family": "glm",
+      "released": "2026-08-14",
+      "updated": "2026-08-14",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 327680,
+        "input": 294912,
+        "output": 32768
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "high",
+          "max"
+        ]
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "glm-5.3",
+        "name": "GLM-5.3"
+      },
+      "price": {
+        "input": 0.98,
+        "output": 3.08,
+        "cache_read": 0.18
+      }
+    },
+    "zhipuai/glm-5.3-flash": {
+      "name": "GLM 5.3 Flash",
+      "family": "glm-flash",
+      "released": "2026-08-26",
+      "updated": "2026-08-26",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 327680,
+        "input": 294912,
+        "output": 32768
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "high",
+          "max"
+        ]
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "glm-5.3-flash",
+        "name": "GLM-5.3-Flash"
+      },
+      "price": {
+        "input": 0.135,
+        "output": 0.45,
+        "cache_read": 0.027
+      }
+    }
+  }
+}

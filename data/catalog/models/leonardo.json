@@ -1,0 +1,60 @@
+{
+  "leonardo/lucid-origin": {
+    "id": "leonardo/lucid-origin",
+    "lab": "leonardo",
+    "name": "Lucid Origin",
+    "family": "lucid",
+    "released": "2025-06-01",
+    "updated": "2025-06-01",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "image"
+      ]
+    },
+    "limit": {
+      "context": 4096,
+      "output": 0
+    },
+    "providers": [
+      "fastrouter"
+    ]
+  },
+  "leonardo/lucid-realism": {
+    "id": "leonardo/lucid-realism",
+    "lab": "leonardo",
+    "name": "Lucid Realism",
+    "family": "lucid",
+    "released": "2025-06-01",
+    "updated": "2025-06-01",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "image"
+      ]
+    },
+    "limit": {
+      "context": 4096,
+      "output": 0
+    },
+    "providers": [
+      "fastrouter"
+    ]
+  }
+}

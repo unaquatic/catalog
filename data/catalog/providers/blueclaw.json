@@ -1,0 +1,56 @@
+{
+  "id": "blueclaw",
+  "name": "Blue Claw",
+  "kind": "gateway",
+  "type": "community",
+  "endpoint": {
+    "format": "openai-chat",
+    "api": "https://openai.blueclaw.network/v1",
+    "auth": {
+      "scheme": "bearer"
+    },
+    "env": [
+      "BLUECLAW_API_KEY"
+    ]
+  },
+  "doc": "https://blueclaw.network",
+  "models": {
+    "alibaba/qwen3.8-27b": {
+      "name": "Qwen3.8 27B",
+      "family": "qwen",
+      "released": "2026-08-14",
+      "updated": "2026-08-14",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 131072,
+        "output": 32768
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "medium",
+          "xhigh"
+        ]
+      },
+      "provider_options": {
+        "id": "Qwen3.8-27B",
+        "name": "Qwen3.8 27B"
+      },
+      "status": "beta"
+    }
+  }
+}

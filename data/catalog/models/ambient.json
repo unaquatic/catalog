@@ -1,0 +1,30 @@
+{
+  "ambient/small": {
+    "id": "ambient/small",
+    "lab": "ambient",
+    "name": "Small",
+    "released": "2026-10-13",
+    "updated": "2026-10-13",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "structured_output": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 101072,
+      "output": 101072
+    },
+    "providers": [
+      "ambient"
+    ]
+  }
+}

@@ -1,0 +1,147 @@
+{
+  "id": "openreason",
+  "name": "OpenReason",
+  "kind": "gateway",
+  "type": "community",
+  "endpoint": {
+    "format": "openai-chat",
+    "api": "https://api.openreason.app/v1",
+    "auth": {
+      "scheme": "bearer"
+    },
+    "env": [
+      "OPENREASON_API_KEY"
+    ]
+  },
+  "doc": "https://openreason.app/docs",
+  "models": {
+    "deepseek/deepseek-v4-flash-0731": {
+      "name": "DeepSeek V4 Flash 0731",
+      "family": "deepseek-flash",
+      "released": "2026-07-31",
+      "updated": "2026-07-31",
+      "knowledge": "2025-05",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 384000
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "minimal",
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ]
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "deepseek-ai/deepseek-v4-flash-0731",
+        "name": "DeepSeek V4 Flash 0731"
+      },
+      "price": {
+        "input": 0.1371,
+        "output": 0.2743
+      }
+    },
+    "moonshotai/kimi-k2.7-code": {
+      "name": "Kimi K2.7 Code",
+      "family": "kimi-k2",
+      "released": "2026-06-12",
+      "updated": "2026-06-12",
+      "knowledge": "2025-01",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "reasoning": {
+        "mandatory": false
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "moonshotai/kimi-k2.7-code",
+        "name": "Kimi K2.7 Code"
+      },
+      "price": {
+        "input": 1.0022,
+        "output": 4.22
+      }
+    },
+    "openai/gpt-oss-120b": {
+      "name": "GPT OSS 120B",
+      "family": "gpt-oss",
+      "released": "2025-08-05",
+      "updated": "2025-08-05",
+      "knowledge": "2024-06",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 131072,
+        "output": 32768
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "openai/gpt-oss-120b",
+        "name": "GPT OSS 120B"
+      },
+      "price": {
+        "input": 0.1055,
+        "output": 0.422
+      }
+    }
+  }
+}

@@ -1,0 +1,1349 @@
+{
+  "$schema": "https://aquatic.dev/catalog/schema.json",
+  "version": 8,
+  "source": "https://models.dev",
+  "generated": "2026-10-22T10:01:46Z",
+  "spellings": {
+    "128e": "128E",
+    "16e": "16E",
+    "16k": "16K",
+    "1t": "1T",
+    "2.4t": "2.4T",
+    "256k": "256K",
+    "32k": "32K",
+    "4.1v": "4.1V",
+    "4.5v": "4.5V",
+    "4.6v": "4.6V",
+    "5v": "5V",
+    "80k": "80K",
+    "8x22b": "8x22B",
+    "8x7b": "8x7B",
+    "a10b": "A10B",
+    "a12b": "A12B",
+    "a13b": "A13B",
+    "a14b": "A14B",
+    "a17b": "A17B",
+    "a22b": "A22B",
+    "a23b": "A23B",
+    "a2b": "A2B",
+    "a35b": "A35B",
+    "a3b": "A3B",
+    "a47b": "A47B",
+    "a4b": "A4B",
+    "a55b": "A55B",
+    "a95b": "A95B",
+    "agi": "AGI",
+    "airx": "AirX",
+    "allam": "ALLaM",
+    "api": "API",
+    "asi1": "ASI1",
+    "asr": "ASR",
+    "autoglm": "AutoGLM",
+    "bf16": "BF16",
+    "bge": "BGE",
+    "bluestar": "BlueStar",
+    "bytedance": "ByteDance",
+    "chatgpt": "ChatGPT",
+    "cobuddy": "CoBuddy",
+    "cyberheabsy": "CyberHeabsy",
+    "dall": "DALL",
+    "darkidol": "DarkIdol",
+    "deepseek": "DeepSeek",
+    "diffusiongemma": "DiffusionGemma",
+    "e2b": "E2B",
+    "e4b": "E4B",
+    "el": "EL",
+    "elevenlabs": "ElevenLabs",
+    "er": "ER",
+    "ernie": "ERNIE",
+    "eva": "EVA",
+    "flashx": "FlashX",
+    "flux": "FLUX",
+    "flux.1": "FLUX.1",
+    "fp4": "FP4",
+    "fp8": "FP8",
+    "fw": "FW",
+    "gemma2": "Gemma 2",
+    "gemma3": "Gemma 3",
+    "gguf": "GGUF",
+    "gliguard": "GLiGuard",
+    "gliner": "GLiNER",
+    "gliner2": "GLiNER2",
+    "gliner2.5": "GLiNER 2.5",
+    "glm": "GLM",
+    "gpt": "GPT",
+    "gte": "GTE",
+    "happyhorse": "HappyHorse",
+    "hd": "HD",
+    "heygen": "HeyGen",
+    "it": "IT",
+    "kat": "KAT",
+    "kb": "KB",
+    "lfm2": "LFM2",
+    "lfm2.5": "LFM2.5",
+    "lightonocr": "LightOnOCR",
+    "lion": "LION",
+    "livetranslate": "LiveTranslate",
+    "ll": "LL",
+    "llama3.3": "Llama 3.3",
+    "longcat": "LongCat",
+    "loosecannon": "LooseCannon",
+    "lucidnova": "LucidNova",
+    "lucidquery": "LucidQuery",
+    "mai": "MAI",
+    "medgemma": "MedGemma",
+    "meromero": "MeroMero",
+    "mimo": "MiMo",
+    "mini4": "Mini 4",
+    "minicpm": "MiniCPM",
+    "minicpm5": "MiniCPM5",
+    "minilm": "MiniLM",
+    "minimax": "MiniMax",
+    "mlx": "MLX",
+    "mm": "MM",
+    "mn": "MN",
+    "moondream3": "Moondream 3",
+    "moondream3.1": "Moondream 3.1",
+    "ms3.2": "MS3.2",
+    "mt": "MT",
+    "mt2": "MT2",
+    "mythomax": "MythoMax",
+    "nemomix": "NemoMix",
+    "nvfp4": "NVFP4",
+    "ocr": "OCR",
+    "openreasoning": "OpenReasoning",
+    "oss": "OSS",
+    "paddleocr": "PaddleOCR",
+    "pii": "PII",
+    "pro2": "Pro 2",
+    "pro3": "Pro 3",
+    "pro4": "Pro 4",
+    "qa": "QA",
+    "qvq": "QVQ",
+    "qwen3guard": "Qwen3Guard",
+    "qwq": "QwQ",
+    "r1t2": "R1T2",
+    "r7b": "R7B",
+    "remm": "ReMM",
+    "rf1": "RF1",
+    "rp": "RP",
+    "s2.1": "S 2.1",
+    "scaledown": "ScaleDown",
+    "sdxl": "SDXL",
+    "sea": "SEA",
+    "sensenova": "SenseNova",
+    "slerp": "SLERP",
+    "smollm3": "SmolLM3",
+    "stablediffusionxl": "StableDiffusionXL",
+    "stepaudio": "StepAudio",
+    "stt": "STT",
+    "t2v": "T2V",
+    "tars": "TARS",
+    "tee": "TEE",
+    "tng": "TNG",
+    "topazlabs": "TopazLabs",
+    "tts": "TTS",
+    "turbos": "TurboS",
+    "ui": "UI",
+    "ultraspeed": "UltraSpeed",
+    "unslopnemo": "UnslopNemo",
+    "vl": "VL",
+    "voicechat": "VoiceChat",
+    "voiceclone": "VoiceClone",
+    "voicedesign": "VoiceDesign",
+    "wizardlm": "WizardLM",
+    "xhigh": "XHigh",
+    "xlam": "xLAM",
+    "xs": "XS",
+    "xs.2": "XS.2",
+    "zdev": "ZDev"
+  },
+  "labs": {
+    "abacusai": {
+      "id": "abacusai",
+      "name": "Abacus AI"
+    },
+    "abliteration-ai": {
+      "id": "abliteration-ai",
+      "name": "Abliteration"
+    },
+    "agnes": {
+      "id": "agnes",
+      "name": "Agnes AI"
+    },
+    "ai21": {
+      "id": "ai21",
+      "name": "AI21 Labs"
+    },
+    "aion-labs": {
+      "id": "aion-labs",
+      "name": "Aion Labs"
+    },
+    "aisingapore": {
+      "id": "aisingapore",
+      "name": "AI Singapore"
+    },
+    "alibaba": {
+      "id": "alibaba",
+      "name": "Alibaba"
+    },
+    "amazon": {
+      "id": "amazon",
+      "name": "Amazon"
+    },
+    "ambient": {
+      "id": "ambient",
+      "name": "Ambient"
+    },
+    "anthracite-org": {
+      "id": "anthracite-org",
+      "name": "Anthracite"
+    },
+    "anthropic": {
+      "id": "anthropic",
+      "name": "Anthropic"
+    },
+    "apodex": {
+      "id": "apodex",
+      "name": "Apodex"
+    },
+    "arcee-ai": {
+      "id": "arcee-ai",
+      "name": "Arcee AI"
+    },
+    "baai": {
+      "id": "baai",
+      "name": "BAAI"
+    },
+    "baichuan": {
+      "id": "baichuan",
+      "name": "Baichuan"
+    },
+    "baidu": {
+      "id": "baidu",
+      "name": "Baidu"
+    },
+    "bee": {
+      "id": "bee",
+      "name": "Bee by HEOSSI"
+    },
+    "black-forest-labs": {
+      "id": "black-forest-labs",
+      "name": "Black Forest Labs"
+    },
+    "bytedance-seed": {
+      "id": "bytedance-seed",
+      "name": "ByteDance Seed"
+    },
+    "callstack": {
+      "id": "callstack",
+      "name": "Callstack"
+    },
+    "canopylabs": {
+      "id": "canopylabs",
+      "name": "Canopy Labs"
+    },
+    "clarifai": {
+      "id": "clarifai",
+      "name": "Clarifai"
+    },
+    "claudinio": {
+      "id": "claudinio",
+      "name": "Claudinio"
+    },
+    "cloudflare": {
+      "id": "cloudflare",
+      "name": "Cloudflare"
+    },
+    "cognitivecomputations": {
+      "id": "cognitivecomputations",
+      "name": "Cognitive Computations"
+    },
+    "cohere": {
+      "id": "cohere",
+      "name": "Cohere"
+    },
+    "convaiinnovations": {
+      "id": "convaiinnovations",
+      "name": "Convai Innovations"
+    },
+    "deepreinforce": {
+      "id": "deepreinforce",
+      "name": "DeepReinforce"
+    },
+    "deepseek": {
+      "id": "deepseek",
+      "name": "DeepSeek"
+    },
+    "digitalocean": {
+      "id": "digitalocean",
+      "name": "DigitalOcean"
+    },
+    "dots-studio": {
+      "id": "dots-studio",
+      "name": "Dots Studio"
+    },
+    "echo": {
+      "id": "echo",
+      "name": "Echo"
+    },
+    "elevenlabs": {
+      "id": "elevenlabs",
+      "name": "ElevenLabs"
+    },
+    "elorian": {
+      "id": "elorian",
+      "name": "Elorian"
+    },
+    "essentialai": {
+      "id": "essentialai",
+      "name": "Essential AI"
+    },
+    "evroc": {
+      "id": "evroc",
+      "name": "Evroc"
+    },
+    "fastino": {
+      "id": "fastino",
+      "name": "Fastino"
+    },
+    "featherless-ai": {
+      "id": "featherless-ai",
+      "name": "Featherless AI"
+    },
+    "fetch-ai": {
+      "id": "fetch-ai",
+      "name": "Fetch AI"
+    },
+    "fireworks": {
+      "id": "fireworks",
+      "name": "Fireworks AI"
+    },
+    "fish-audio": {
+      "id": "fish-audio",
+      "name": "Fish Audio"
+    },
+    "google": {
+      "id": "google",
+      "name": "Google"
+    },
+    "greenpt": {
+      "id": "greenpt",
+      "name": "GreenPT"
+    },
+    "groq": {
+      "id": "groq",
+      "name": "Groq"
+    },
+    "gryphe": {
+      "id": "gryphe",
+      "name": "Gryphe"
+    },
+    "hcompany": {
+      "id": "hcompany",
+      "name": "H Company"
+    },
+    "heabsy": {
+      "id": "heabsy",
+      "name": "Heabsy"
+    },
+    "heygen": {
+      "id": "heygen",
+      "name": "HeyGen"
+    },
+    "huggingfacetb": {
+      "id": "huggingfacetb",
+      "name": "Hugging Face"
+    },
+    "hyper": {
+      "id": "hyper",
+      "name": "Charm Hyper"
+    },
+    "ibm": {
+      "id": "ibm",
+      "name": "IBM"
+    },
+    "ideogram": {
+      "id": "ideogram",
+      "name": "Ideogram"
+    },
+    "inception": {
+      "id": "inception",
+      "name": "Inception"
+    },
+    "inclusionai": {
+      "id": "inclusionai",
+      "name": "InclusionAI"
+    },
+    "inference-net": {
+      "id": "inference-net",
+      "name": "Inference Net"
+    },
+    "inferx": {
+      "id": "inferx",
+      "name": "InferX"
+    },
+    "interfaze": {
+      "id": "interfaze",
+      "name": "Interfaze"
+    },
+    "intfloat": {
+      "id": "intfloat",
+      "name": "Intfloat"
+    },
+    "klokintegration": {
+      "id": "klokintegration",
+      "name": "Klok Integration"
+    },
+    "kuaishou": {
+      "id": "kuaishou",
+      "name": "Kuaishou"
+    },
+    "leonardo": {
+      "id": "leonardo",
+      "name": "Leonardo"
+    },
+    "lightonai": {
+      "id": "lightonai",
+      "name": "LightOn"
+    },
+    "liquid": {
+      "id": "liquid",
+      "name": "Liquid AI"
+    },
+    "llmtr": {
+      "id": "llmtr",
+      "name": "LLMTR"
+    },
+    "lucidquery": {
+      "id": "lucidquery",
+      "name": "LucidQuery"
+    },
+    "lumalabs": {
+      "id": "lumalabs",
+      "name": "Luma AI"
+    },
+    "mancer": {
+      "id": "mancer",
+      "name": "Mancer"
+    },
+    "marinaraspaghetti": {
+      "id": "marinaraspaghetti",
+      "name": "MarinaraSpaghetti"
+    },
+    "meituan": {
+      "id": "meituan",
+      "name": "Meituan"
+    },
+    "meta": {
+      "id": "meta",
+      "name": "Meta"
+    },
+    "microsoft": {
+      "id": "microsoft",
+      "name": "Microsoft"
+    },
+    "mindlab": {
+      "id": "mindlab",
+      "name": "Mindlab"
+    },
+    "minimax": {
+      "id": "minimax",
+      "name": "MiniMax"
+    },
+    "mistral": {
+      "id": "mistral",
+      "name": "Mistral"
+    },
+    "mixedbread": {
+      "id": "mixedbread",
+      "name": "Mixedbread"
+    },
+    "mlabonne": {
+      "id": "mlabonne",
+      "name": "Maxime Labonne"
+    },
+    "moondream": {
+      "id": "moondream",
+      "name": "Moondream"
+    },
+    "moonshotai": {
+      "id": "moonshotai",
+      "name": "Moonshot AI"
+    },
+    "morph": {
+      "id": "morph",
+      "name": "Morph"
+    },
+    "motif-technologies": {
+      "id": "motif-technologies",
+      "name": "Motif Technologies"
+    },
+    "nace-ai": {
+      "id": "nace-ai",
+      "name": "Nace AI"
+    },
+    "nanogpt": {
+      "id": "nanogpt",
+      "name": "NanoGPT"
+    },
+    "neosmith": {
+      "id": "neosmith",
+      "name": "NeoSmith"
+    },
+    "neversleep": {
+      "id": "neversleep",
+      "name": "NeverSleep"
+    },
+    "nex-agi": {
+      "id": "nex-agi",
+      "name": "Nex AGI"
+    },
+    "nomic": {
+      "id": "nomic",
+      "name": "Nomic"
+    },
+    "nousresearch": {
+      "id": "nousresearch",
+      "name": "Nous Research"
+    },
+    "nvidia": {
+      "id": "nvidia",
+      "name": "Nvidia"
+    },
+    "openai": {
+      "id": "openai",
+      "name": "OpenAI"
+    },
+    "openbmb": {
+      "id": "openbmb",
+      "name": "OpenBMB"
+    },
+    "opencode": {
+      "id": "opencode",
+      "name": "OpenCode"
+    },
+    "paddlepaddle": {
+      "id": "paddlepaddle",
+      "name": "PaddlePaddle"
+    },
+    "perceptron": {
+      "id": "perceptron",
+      "name": "Perceptron"
+    },
+    "perplexity": {
+      "id": "perplexity",
+      "name": "Perplexity"
+    },
+    "phocinae": {
+      "id": "phocinae",
+      "name": "Phocinae"
+    },
+    "pokee": {
+      "id": "pokee",
+      "name": "Pokee"
+    },
+    "poolside": {
+      "id": "poolside",
+      "name": "Poolside"
+    },
+    "prism-ml": {
+      "id": "prism-ml",
+      "name": "Prism ML"
+    },
+    "prodia": {
+      "id": "prodia",
+      "name": "Prodia"
+    },
+    "quiverai": {
+      "id": "quiverai",
+      "name": "QuiverAI"
+    },
+    "recraft": {
+      "id": "recraft",
+      "name": "Recraft"
+    },
+    "reflection": {
+      "id": "reflection",
+      "name": "Reflection"
+    },
+    "rekaai": {
+      "id": "rekaai",
+      "name": "Reka AI"
+    },
+    "relace": {
+      "id": "relace",
+      "name": "Relace"
+    },
+    "respan": {
+      "id": "respan",
+      "name": "Respan"
+    },
+    "runway": {
+      "id": "runway",
+      "name": "Runway"
+    },
+    "sakana": {
+      "id": "sakana",
+      "name": "Sakana AI"
+    },
+    "salesforce": {
+      "id": "salesforce",
+      "name": "Salesforce"
+    },
+    "sao10k": {
+      "id": "sao10k",
+      "name": "Sao10K"
+    },
+    "sarvam": {
+      "id": "sarvam",
+      "name": "Sarvam AI"
+    },
+    "scaledown": {
+      "id": "scaledown",
+      "name": "ScaleDown"
+    },
+    "sdaia": {
+      "id": "sdaia",
+      "name": "SDAIA"
+    },
+    "sensenova": {
+      "id": "sensenova",
+      "name": "SenseNova"
+    },
+    "sentence-transformers": {
+      "id": "sentence-transformers",
+      "name": "Sentence Transformers"
+    },
+    "speakleash": {
+      "id": "speakleash",
+      "name": "SpeakLeash"
+    },
+    "stabilityai": {
+      "id": "stabilityai",
+      "name": "Stability AI"
+    },
+    "stealth": {
+      "id": "stealth",
+      "name": "Stealth"
+    },
+    "stepfun": {
+      "id": "stepfun",
+      "name": "StepFun"
+    },
+    "swiss-ai": {
+      "id": "swiss-ai",
+      "name": "Swiss AI"
+    },
+    "tencent": {
+      "id": "tencent",
+      "name": "Tencent"
+    },
+    "thedrummer": {
+      "id": "thedrummer",
+      "name": "TheDrummer"
+    },
+    "thinkingmachines": {
+      "id": "thinkingmachines",
+      "name": "Thinking Machines"
+    },
+    "topaz": {
+      "id": "topaz",
+      "name": "Topaz Labs"
+    },
+    "trendyol": {
+      "id": "trendyol",
+      "name": "Trendyol"
+    },
+    "typesafe": {
+      "id": "typesafe",
+      "name": "Typesafe AI"
+    },
+    "unbiased": {
+      "id": "unbiased",
+      "name": "Unbiased"
+    },
+    "undi95": {
+      "id": "undi95",
+      "name": "Undi95"
+    },
+    "upstage": {
+      "id": "upstage",
+      "name": "Upstage"
+    },
+    "venice": {
+      "id": "venice",
+      "name": "Venice"
+    },
+    "vispark": {
+      "id": "vispark",
+      "name": "Vispark"
+    },
+    "vivgrid": {
+      "id": "vivgrid",
+      "name": "Vivgrid"
+    },
+    "voyage": {
+      "id": "voyage",
+      "name": "Voyage"
+    },
+    "voyageai": {
+      "id": "voyageai",
+      "name": "Voyage AI"
+    },
+    "writer": {
+      "id": "writer",
+      "name": "Writer"
+    },
+    "xai": {
+      "id": "xai",
+      "name": "xAI"
+    },
+    "xiaomi": {
+      "id": "xiaomi",
+      "name": "Xiaomi"
+    },
+    "xingchen-agi": {
+      "id": "xingchen-agi",
+      "name": "XingChen AGI"
+    },
+    "xpersona": {
+      "id": "xpersona",
+      "name": "Xpersona"
+    },
+    "zeldoc": {
+      "id": "zeldoc",
+      "name": "Zeldoc"
+    },
+    "zhipuai": {
+      "id": "zhipuai",
+      "name": "Zhipu AI"
+    }
+  },
+  "families": {
+    "Hy": {
+      "id": "Hy",
+      "name": "Hy"
+    },
+    "agi": {
+      "id": "agi",
+      "name": "AGI"
+    },
+    "alpha": {
+      "id": "alpha",
+      "name": "Alpha"
+    },
+    "baichuan": {
+      "id": "baichuan",
+      "name": "Baichuan"
+    },
+    "beam": {
+      "id": "beam",
+      "name": "Beam"
+    },
+    "bge": {
+      "id": "bge",
+      "name": "BGE"
+    },
+    "big-pickle": {
+      "id": "big-pickle",
+      "name": "Big Pickle"
+    },
+    "canopylabs": {
+      "id": "canopylabs",
+      "name": "Canopy Labs"
+    },
+    "claude": {
+      "id": "claude",
+      "name": "Claude"
+    },
+    "claude-fable": {
+      "id": "claude-fable",
+      "name": "Claude Fable"
+    },
+    "claude-haiku": {
+      "id": "claude-haiku",
+      "name": "Claude Haiku"
+    },
+    "claude-mythos": {
+      "id": "claude-mythos",
+      "name": "Claude Mythos"
+    },
+    "claude-opus": {
+      "id": "claude-opus",
+      "name": "Claude Opus"
+    },
+    "claude-sonnet": {
+      "id": "claude-sonnet",
+      "name": "Claude Sonnet"
+    },
+    "codestral": {
+      "id": "codestral",
+      "name": "Codestral"
+    },
+    "codestral-embed": {
+      "id": "codestral-embed",
+      "name": "Codestral Embed"
+    },
+    "cohere-embed": {
+      "id": "cohere-embed",
+      "name": "Cohere Embed"
+    },
+    "command-a": {
+      "id": "command-a",
+      "name": "Command A"
+    },
+    "command-r": {
+      "id": "command-r",
+      "name": "Command R"
+    },
+    "dall-e": {
+      "id": "dall-e",
+      "name": "DALL·E"
+    },
+    "deepseek": {
+      "id": "deepseek",
+      "name": "DeepSeek"
+    },
+    "deepseek-flash": {
+      "id": "deepseek-flash",
+      "name": "DeepSeek Flash"
+    },
+    "deepseek-thinking": {
+      "id": "deepseek-thinking",
+      "name": "DeepSeek Thinking"
+    },
+    "devstral": {
+      "id": "devstral",
+      "name": "Devstral"
+    },
+    "elevenlabs": {
+      "id": "elevenlabs",
+      "name": "ElevenLabs"
+    },
+    "ernie": {
+      "id": "ernie",
+      "name": "ERNIE"
+    },
+    "flux": {
+      "id": "flux",
+      "name": "FLUX"
+    },
+    "fugu": {
+      "id": "fugu",
+      "name": "Fugu"
+    },
+    "gemini": {
+      "id": "gemini",
+      "name": "Gemini"
+    },
+    "gemini-flash": {
+      "id": "gemini-flash",
+      "name": "Gemini Flash"
+    },
+    "gemini-flash-lite": {
+      "id": "gemini-flash-lite",
+      "name": "Gemini Flash Lite"
+    },
+    "gemini-pro": {
+      "id": "gemini-pro",
+      "name": "Gemini Pro"
+    },
+    "gemma": {
+      "id": "gemma",
+      "name": "Gemma"
+    },
+    "glm": {
+      "id": "glm",
+      "name": "GLM"
+    },
+    "glm-air": {
+      "id": "glm-air",
+      "name": "GLM Air"
+    },
+    "glm-flash": {
+      "id": "glm-flash",
+      "name": "GLM Flash"
+    },
+    "glm-z": {
+      "id": "glm-z",
+      "name": "GLM Z"
+    },
+    "gpt": {
+      "id": "gpt",
+      "name": "GPT"
+    },
+    "gpt-astra": {
+      "id": "gpt-astra",
+      "name": "GPT Astra"
+    },
+    "gpt-codex": {
+      "id": "gpt-codex",
+      "name": "GPT Codex"
+    },
+    "gpt-codex-mini": {
+      "id": "gpt-codex-mini",
+      "name": "GPT Codex Mini"
+    },
+    "gpt-codex-spark": {
+      "id": "gpt-codex-spark",
+      "name": "GPT Codex Spark"
+    },
+    "gpt-image": {
+      "id": "gpt-image",
+      "name": "GPT Image"
+    },
+    "gpt-luna": {
+      "id": "gpt-luna",
+      "name": "GPT Luna"
+    },
+    "gpt-mini": {
+      "id": "gpt-mini",
+      "name": "GPT Mini"
+    },
+    "gpt-nano": {
+      "id": "gpt-nano",
+      "name": "GPT Nano"
+    },
+    "gpt-oss": {
+      "id": "gpt-oss",
+      "name": "GPT OSS"
+    },
+    "gpt-pro": {
+      "id": "gpt-pro",
+      "name": "GPT Pro"
+    },
+    "gpt-sol": {
+      "id": "gpt-sol",
+      "name": "GPT Sol"
+    },
+    "gpt-terra": {
+      "id": "gpt-terra",
+      "name": "GPT Terra"
+    },
+    "granite": {
+      "id": "granite",
+      "name": "Granite"
+    },
+    "grok": {
+      "id": "grok",
+      "name": "Grok"
+    },
+    "grok-build": {
+      "id": "grok-build",
+      "name": "Grok Build"
+    },
+    "groq": {
+      "id": "groq",
+      "name": "Groq"
+    },
+    "hermes": {
+      "id": "hermes",
+      "name": "Hermes"
+    },
+    "hunyuan": {
+      "id": "hunyuan",
+      "name": "Hunyuan"
+    },
+    "ideogram": {
+      "id": "ideogram",
+      "name": "Ideogram"
+    },
+    "imagen": {
+      "id": "imagen",
+      "name": "Imagen"
+    },
+    "jamba": {
+      "id": "jamba",
+      "name": "Jamba"
+    },
+    "kat-coder": {
+      "id": "kat-coder",
+      "name": "KAT Coder"
+    },
+    "kimi": {
+      "id": "kimi",
+      "name": "Kimi"
+    },
+    "kimi-k2": {
+      "id": "kimi-k2",
+      "name": "Kimi K2"
+    },
+    "kimi-k3": {
+      "id": "kimi-k3",
+      "name": "Kimi K3"
+    },
+    "kimi-thinking": {
+      "id": "kimi-thinking",
+      "name": "Kimi Thinking"
+    },
+    "laguna": {
+      "id": "laguna",
+      "name": "Laguna"
+    },
+    "leanstral": {
+      "id": "leanstral",
+      "name": "Leanstral"
+    },
+    "ling": {
+      "id": "ling",
+      "name": "Ling"
+    },
+    "liquid": {
+      "id": "liquid",
+      "name": "Liquid"
+    },
+    "llama": {
+      "id": "llama",
+      "name": "Llama"
+    },
+    "longcat": {
+      "id": "longcat",
+      "name": "LongCat"
+    },
+    "lucid": {
+      "id": "lucid",
+      "name": "Lucid"
+    },
+    "lyria": {
+      "id": "lyria",
+      "name": "Lyria"
+    },
+    "magistral": {
+      "id": "magistral",
+      "name": "Magistral"
+    },
+    "magistral-medium": {
+      "id": "magistral-medium",
+      "name": "Magistral Medium"
+    },
+    "mai": {
+      "id": "mai",
+      "name": "MAI"
+    },
+    "mercury": {
+      "id": "mercury",
+      "name": "Mercury"
+    },
+    "mimo": {
+      "id": "mimo",
+      "name": "MiMo"
+    },
+    "minimax": {
+      "id": "minimax",
+      "name": "MiniMax"
+    },
+    "minimax-m2.7": {
+      "id": "minimax-m2.7",
+      "name": "MiniMax M2.7"
+    },
+    "ministral": {
+      "id": "ministral",
+      "name": "Ministral"
+    },
+    "mistral": {
+      "id": "mistral",
+      "name": "Mistral"
+    },
+    "mistral-embed": {
+      "id": "mistral-embed",
+      "name": "Mistral Embed"
+    },
+    "mistral-large": {
+      "id": "mistral-large",
+      "name": "Mistral Large"
+    },
+    "mistral-medium": {
+      "id": "mistral-medium",
+      "name": "Mistral Medium"
+    },
+    "mistral-nemo": {
+      "id": "mistral-nemo",
+      "name": "Mistral Nemo"
+    },
+    "mistral-small": {
+      "id": "mistral-small",
+      "name": "Mistral Small"
+    },
+    "mm-poly": {
+      "id": "mm-poly",
+      "name": "MM Poly"
+    },
+    "morph": {
+      "id": "morph",
+      "name": "Morph"
+    },
+    "motif": {
+      "id": "motif",
+      "name": "Motif"
+    },
+    "muse": {
+      "id": "muse",
+      "name": "Muse"
+    },
+    "muse-free": {
+      "id": "muse-free",
+      "name": "Muse Free"
+    },
+    "nano-banana": {
+      "id": "nano-banana",
+      "name": "Nano Banana"
+    },
+    "nemotron": {
+      "id": "nemotron",
+      "name": "Nemotron"
+    },
+    "north": {
+      "id": "north",
+      "name": "North"
+    },
+    "nousresearch": {
+      "id": "nousresearch",
+      "name": "Nous Research"
+    },
+    "nova": {
+      "id": "nova",
+      "name": "Nova"
+    },
+    "nova-lite": {
+      "id": "nova-lite",
+      "name": "Nova Lite"
+    },
+    "nova-micro": {
+      "id": "nova-micro",
+      "name": "Nova Micro"
+    },
+    "nova-pro": {
+      "id": "nova-pro",
+      "name": "Nova Pro"
+    },
+    "o": {
+      "id": "o",
+      "name": "o"
+    },
+    "o-mini": {
+      "id": "o-mini",
+      "name": "o Mini"
+    },
+    "o-pro": {
+      "id": "o-pro",
+      "name": "o Pro"
+    },
+    "ornith": {
+      "id": "ornith",
+      "name": "Ornith"
+    },
+    "palmyra": {
+      "id": "palmyra",
+      "name": "Palmyra"
+    },
+    "phi": {
+      "id": "phi",
+      "name": "Phi"
+    },
+    "pixtral": {
+      "id": "pixtral",
+      "name": "Pixtral"
+    },
+    "qvq": {
+      "id": "qvq",
+      "name": "QVQ"
+    },
+    "qwen": {
+      "id": "qwen",
+      "name": "Qwen"
+    },
+    "qwen3.5": {
+      "id": "qwen3.5",
+      "name": "Qwen3.5"
+    },
+    "qwen3.6": {
+      "id": "qwen3.6",
+      "name": "Qwen3.6"
+    },
+    "qwen3.8-max": {
+      "id": "qwen3.8-max",
+      "name": "Qwen3.8 Max"
+    },
+    "qwerky": {
+      "id": "qwerky",
+      "name": "Qwerky"
+    },
+    "ray": {
+      "id": "ray",
+      "name": "Ray"
+    },
+    "recraft": {
+      "id": "recraft",
+      "name": "Recraft"
+    },
+    "reka": {
+      "id": "reka",
+      "name": "Reka"
+    },
+    "ring": {
+      "id": "ring",
+      "name": "Ring"
+    },
+    "rnj": {
+      "id": "rnj",
+      "name": "Rnj"
+    },
+    "runway": {
+      "id": "runway",
+      "name": "Runway"
+    },
+    "sakana-namazu": {
+      "id": "sakana-namazu",
+      "name": "Sakana Namazu"
+    },
+    "sarvam": {
+      "id": "sarvam",
+      "name": "Sarvam"
+    },
+    "seed": {
+      "id": "seed",
+      "name": "Seed"
+    },
+    "solar": {
+      "id": "solar",
+      "name": "Solar"
+    },
+    "solar-mini": {
+      "id": "solar-mini",
+      "name": "Solar Mini"
+    },
+    "solar-pro": {
+      "id": "solar-pro",
+      "name": "Solar Pro"
+    },
+    "sonar": {
+      "id": "sonar",
+      "name": "Sonar"
+    },
+    "sonar-pro": {
+      "id": "sonar-pro",
+      "name": "Sonar Pro"
+    },
+    "sonar-reasoning": {
+      "id": "sonar-reasoning",
+      "name": "Sonar Reasoning"
+    },
+    "sora": {
+      "id": "sora",
+      "name": "Sora"
+    },
+    "stable-diffusion": {
+      "id": "stable-diffusion",
+      "name": "Stable Diffusion"
+    },
+    "step": {
+      "id": "step",
+      "name": "Step"
+    },
+    "text-embedding": {
+      "id": "text-embedding",
+      "name": "Text Embedding"
+    },
+    "titan-embed": {
+      "id": "titan-embed",
+      "name": "Titan Embed"
+    },
+    "topazlabs": {
+      "id": "topazlabs",
+      "name": "TopazLabs"
+    },
+    "trinity": {
+      "id": "trinity",
+      "name": "Trinity"
+    },
+    "unsloth": {
+      "id": "unsloth",
+      "name": "Unsloth"
+    },
+    "v0": {
+      "id": "v0",
+      "name": "V0"
+    },
+    "venice": {
+      "id": "venice",
+      "name": "Venice"
+    },
+    "veo": {
+      "id": "veo",
+      "name": "Veo"
+    },
+    "voxtral": {
+      "id": "voxtral",
+      "name": "Voxtral"
+    },
+    "voyage": {
+      "id": "voyage",
+      "name": "Voyage"
+    },
+    "whisper": {
+      "id": "whisper",
+      "name": "Whisper"
+    },
+    "yi": {
+      "id": "yi",
+      "name": "Yi"
+    }
+  },
+  "efforts": {
+    "high": {
+      "id": "high",
+      "name": "High"
+    },
+    "low": {
+      "id": "low",
+      "name": "Low"
+    },
+    "max": {
+      "id": "max",
+      "name": "Max"
+    },
+    "medium": {
+      "id": "medium",
+      "name": "Medium"
+    },
+    "minimal": {
+      "id": "minimal",
+      "name": "Minimal"
+    },
+    "none": {
+      "id": "none",
+      "name": "None"
+    },
+    "xhigh": {
+      "id": "xhigh",
+      "name": "Extra High"
+    }
+  },
+  "variant": {
+    "tiers": {
+      "fast": {
+        "id": "fast",
+        "name": "Fast"
+      },
+      "flex": {
+        "id": "flex",
+        "name": "Flex"
+      },
+      "free": {
+        "id": "free",
+        "name": "Free"
+      },
+      "ultrafast": {
+        "id": "ultrafast",
+        "name": "Ultrafast"
+      }
+    },
+    "modes": {
+      "thinking": {
+        "id": "thinking",
+        "name": "Thinking"
+      }
+    }
+  }
+}

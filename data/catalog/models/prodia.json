@@ -1,0 +1,31 @@
+{
+  "prodia/flux-fast-schnell": {
+    "id": "prodia/flux-fast-schnell",
+    "lab": "prodia",
+    "name": "FLUX Fast Schnell",
+    "family": "flux",
+    "type": "image",
+    "released": "2024-08-02",
+    "updated": "2026-06-08",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "image"
+      ]
+    },
+    "limit": {
+      "context": 512,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "id": "ai21",
+  "name": "AI21 Labs",
+  "kind": "lab",
+  "type": "community",
+  "endpoint": {
+    "format": "openai-chat",
+    "api": "https://api.ai21.com/studio/v1",
+    "auth": {
+      "scheme": "bearer"
+    },
+    "env": [
+      "AI21_API_KEY"
+    ]
+  },
+  "doc": "https://docs.ai21.com/docs/jamba-foundation-models",
+  "models": {
+    "ai21/jamba-large": {
+      "name": "Jamba Large",
+      "family": "jamba",
+      "released": "2025-07-03",
+      "updated": "2025-07-03",
+      "knowledge": "2024-08-22",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 256000,
+        "output": 4096
+      },
+      "provider_options": {
+        "id": "jamba-large",
+        "name": "Jamba Large"
+      },
+      "price": {
+        "input": 2,
+        "output": 8
+      }
+    },
+    "ai21/jamba-mini": {
+      "name": "Jamba Mini",
+      "family": "jamba",
+      "released": "2026-01-08",
+      "updated": "2026-01-08",
+      "knowledge": "2024-08-22",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 256000,
+        "output": 4096
+      },
+      "provider_options": {
+        "id": "jamba-mini",
+        "name": "Jamba Mini"
+      },
+      "price": {
+        "input": 0.2,
+        "output": 0.4
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "prism-ml/ternary-bonsai-2-27b": {
+    "id": "prism-ml/ternary-bonsai-2-27b",
+    "lab": "prism-ml",
+    "name": "Ternary Bonsai 2 27B",
+    "released": "2026-09-18",
+    "updated": "2026-09-18",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 32768
+    },
+    "providers": [
+      "kilo",
+      "nano-gpt",
+      "openrouter"
+    ]
+  }
+}

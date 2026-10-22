@@ -1,0 +1,29 @@
+{
+  "convaiinnovations/laya": {
+    "id": "convaiinnovations/laya",
+    "lab": "convaiinnovations",
+    "name": "Laya",
+    "type": "decision",
+    "released": "2026-10-01",
+    "updated": "2026-10-01",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 8192,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  }
+}

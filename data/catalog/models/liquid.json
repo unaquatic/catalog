@@ -1,0 +1,165 @@
+{
+  "liquid/d1": {
+    "id": "liquid/d1",
+    "lab": "liquid",
+    "name": "D1",
+    "family": "liquid",
+    "type": "decision",
+    "released": "2026-09-29",
+    "updated": "2026-09-29",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 65536,
+      "output": 0
+    },
+    "providers": [
+      "nano-gpt",
+      "openrouter",
+      "vercel"
+    ]
+  },
+  "liquid/d1-ultra": {
+    "id": "liquid/d1-ultra",
+    "lab": "liquid",
+    "name": "D1 Ultra",
+    "family": "liquid",
+    "type": "decision",
+    "released": "2026-10-15",
+    "updated": "2026-10-15",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "structured_output": false,
+      "temperature": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32768,
+      "output": 0
+    },
+    "providers": [
+      "openrouter",
+      "vercel"
+    ]
+  },
+  "liquid/lfm2-24b-a2b": {
+    "id": "liquid/lfm2-24b-a2b",
+    "lab": "liquid",
+    "name": "LFM2 24B A2B",
+    "family": "liquid",
+    "released": "2026-02-24",
+    "updated": "2026-02-24",
+    "open_weights": true,
+    "license": "LFM Open License v1.0",
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32768,
+      "output": 32768
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/LiquidAI/LFM2-24B-A2B"
+      }
+    ],
+    "providers": [
+      "pioneer",
+      "togetherai"
+    ]
+  },
+  "liquid/lfm2.5-2.6b": {
+    "id": "liquid/lfm2.5-2.6b",
+    "lab": "liquid",
+    "name": "LFM2.5 2.6B",
+    "family": "liquid",
+    "released": "2026-08-12",
+    "updated": "2026-08-12",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "structured_output": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "input": 128000,
+      "output": 32768
+    },
+    "providers": [
+      "kilo",
+      "nano-gpt",
+      "openrouter"
+    ]
+  },
+  "liquid/lfm2.5-24b-a2b": {
+    "id": "liquid/lfm2.5-24b-a2b",
+    "lab": "liquid",
+    "name": "LFM2.5 24B A2B",
+    "family": "liquid",
+    "released": "2026-10-13",
+    "updated": "2026-10-13",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 8192
+    },
+    "providers": [
+      "kilo",
+      "nano-gpt",
+      "openrouter",
+      "vercel"
+    ]
+  }
+}

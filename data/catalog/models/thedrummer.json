@@ -1,0 +1,376 @@
+{
+  "thedrummer/anubis-70b-v1": {
+    "id": "thedrummer/anubis-70b-v1",
+    "lab": "thedrummer",
+    "name": "Anubis 70B V1",
+    "released": "2024-01-01",
+    "updated": "2024-01-01",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "structured_output": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 65536,
+      "input": 65536,
+      "output": 16384
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "thedrummer/anubis-70b-v1.1": {
+    "id": "thedrummer/anubis-70b-v1.1",
+    "lab": "thedrummer",
+    "name": "Anubis 70B V1.1",
+    "released": "2024-01-01",
+    "updated": "2024-01-01",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "structured_output": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32000,
+      "input": 32000,
+      "output": 16384
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "thedrummer/artemis-v1.1": {
+    "id": "thedrummer/artemis-v1.1",
+    "lab": "thedrummer",
+    "name": "Artemis V1.1",
+    "released": "2026-09-06",
+    "updated": "2026-09-06",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "input": 262144,
+      "output": 32768
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "thedrummer/cydonia-24b-v2": {
+    "id": "thedrummer/cydonia-24b-v2",
+    "lab": "thedrummer",
+    "name": "Cydonia 24B V2",
+    "released": "2025-02-17",
+    "updated": "2025-02-17",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "structured_output": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32768,
+      "input": 32768,
+      "output": 32768
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "thedrummer/cydonia-24b-v4": {
+    "id": "thedrummer/cydonia-24b-v4",
+    "lab": "thedrummer",
+    "name": "Cydonia 24B V4",
+    "released": "2025-07-22",
+    "updated": "2025-07-22",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "structured_output": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32768,
+      "input": 32768,
+      "output": 32768
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "thedrummer/cydonia-24b-v4.1": {
+    "id": "thedrummer/cydonia-24b-v4.1",
+    "lab": "thedrummer",
+    "name": "Cydonia 24B V4.1",
+    "released": "2025-09-27",
+    "updated": "2025-09-27",
+    "knowledge": "2024-04-30",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 117964
+    },
+    "providers": [
+      "aimlapi",
+      "kilo",
+      "nano-gpt",
+      "openrouter"
+    ]
+  },
+  "thedrummer/cydonia-24b-v4.3": {
+    "id": "thedrummer/cydonia-24b-v4.3",
+    "lab": "thedrummer",
+    "name": "Cydonia 24B V4.3",
+    "released": "2025-12-25",
+    "updated": "2025-12-25",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "structured_output": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "input": 131072,
+      "output": 32768
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "thedrummer/magidonia-24b-v4.3": {
+    "id": "thedrummer/magidonia-24b-v4.3",
+    "lab": "thedrummer",
+    "name": "Magidonia 24B V4.3",
+    "released": "2025-12-25",
+    "updated": "2025-12-25",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "structured_output": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32768,
+      "input": 32768,
+      "output": 32768
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "thedrummer/orion-26b-a4b-v1.1": {
+    "id": "thedrummer/orion-26b-a4b-v1.1",
+    "lab": "thedrummer",
+    "name": "Orion 26B A4B V1.1",
+    "released": "2026-10-16",
+    "updated": "2026-10-16",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "structured_output": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 65536,
+      "input": 65536,
+      "output": 8192
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "thedrummer/rocinante-12b-v1.1": {
+    "id": "thedrummer/rocinante-12b-v1.1",
+    "lab": "thedrummer",
+    "name": "Rocinante 12B V1.1",
+    "released": "2024-01-01",
+    "updated": "2024-01-01",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "structured_output": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 16384,
+      "input": 16384,
+      "output": 8192
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "thedrummer/skyfall-36b-v2": {
+    "id": "thedrummer/skyfall-36b-v2",
+    "lab": "thedrummer",
+    "name": "Skyfall 36B V2",
+    "released": "2025-03-10",
+    "updated": "2025-03-10",
+    "knowledge": "2024-06-30",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32768,
+      "output": 29491
+    },
+    "providers": [
+      "aimlapi",
+      "kilo",
+      "nano-gpt",
+      "openrouter"
+    ]
+  },
+  "thedrummer/unslopnemo-12b": {
+    "id": "thedrummer/unslopnemo-12b",
+    "lab": "thedrummer",
+    "name": "UnslopNemo 12B",
+    "released": "2024-11-08",
+    "updated": "2024-11-08",
+    "knowledge": "2024-04-30",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1024000,
+      "output": 819200
+    },
+    "providers": [
+      "aimlapi",
+      "kilo",
+      "openrouter"
+    ]
+  },
+  "thedrummer/unslopnemo-12b-v4.1": {
+    "id": "thedrummer/unslopnemo-12b-v4.1",
+    "lab": "thedrummer",
+    "name": "UnslopNemo 12B V4.1",
+    "released": "2024-01-01",
+    "updated": "2024-01-01",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "structured_output": false,
+      "input": [
+        "text",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 8192,
+      "input": 8192,
+      "output": 26214
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  }
+}

@@ -1,0 +1,646 @@
+{
+  "id": "meganova",
+  "name": "MegaNova",
+  "kind": "gateway",
+  "type": "community",
+  "endpoint": {
+    "format": "openai-chat",
+    "api": "https://api.meganova.ai/v1",
+    "auth": {
+      "scheme": "bearer"
+    },
+    "env": [
+      "MEGANOVA_API_KEY"
+    ]
+  },
+  "doc": "https://docs.meganova.ai",
+  "models": {
+    "alibaba/qwen2.5-vl-32b-instruct": {
+      "name": "Qwen2.5 VL 32B Instruct",
+      "family": "qwen",
+      "released": "2025-03-24",
+      "updated": "2025-03-24",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 16384,
+        "output": 16384
+      },
+      "provider_options": {
+        "id": "Qwen/Qwen2.5-VL-32B-Instruct",
+        "name": "Qwen2.5 VL 32B Instruct"
+      },
+      "price": {
+        "input": 0.2,
+        "output": 0.6
+      }
+    },
+    "alibaba/qwen3-235b-a22b-instruct-2507": {
+      "name": "Qwen3 235B A22B Instruct 2507",
+      "family": "qwen",
+      "released": "2025-07-23",
+      "updated": "2025-07-23",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262000,
+        "output": 262000
+      },
+      "provider_options": {
+        "id": "Qwen/Qwen3-235B-A22B-Instruct-2507",
+        "name": "Qwen3 235B A22B Instruct 2507"
+      },
+      "price": {
+        "input": 0.09,
+        "output": 0.6
+      }
+    },
+    "alibaba/qwen3.5-plus": {
+      "name": "Qwen3.5 Plus",
+      "family": "qwen",
+      "released": "2026-02-16",
+      "updated": "2026-02-16",
+      "knowledge": "2025-04",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 65536
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "Qwen/Qwen3.5-Plus",
+        "name": "Qwen3.5 Plus"
+      },
+      "price": {
+        "input": 0.4,
+        "output": 2.4,
+        "reasoning": 2.4
+      }
+    },
+    "deepseek/deepseek-r1-0528": {
+      "name": "DeepSeek R1 0528",
+      "family": "deepseek-thinking",
+      "released": "2025-05-28",
+      "updated": "2025-05-28",
+      "knowledge": "2024-07",
+      "open_weights": true,
+      "capabilities": {
+        "tools": false,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 163840,
+        "output": 64000
+      },
+      "reasoning": {},
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "deepseek-ai/DeepSeek-R1-0528",
+        "name": "DeepSeek R1 0528"
+      },
+      "price": {
+        "input": 0.5,
+        "output": 2.15
+      }
+    },
+    "deepseek/deepseek-v3-0324": {
+      "name": "DeepSeek V3 0324",
+      "family": "deepseek",
+      "released": "2025-03-24",
+      "updated": "2025-03-24",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 163840,
+        "output": 163840
+      },
+      "provider_options": {
+        "id": "deepseek-ai/DeepSeek-V3-0324",
+        "name": "DeepSeek V3 0324"
+      },
+      "price": {
+        "input": 0.25,
+        "output": 0.88
+      }
+    },
+    "deepseek/deepseek-v3.1": {
+      "name": "DeepSeek V3.1",
+      "family": "deepseek",
+      "released": "2025-08-25",
+      "updated": "2025-08-25",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 164000,
+        "output": 164000
+      },
+      "provider_options": {
+        "id": "deepseek-ai/DeepSeek-V3.1",
+        "name": "DeepSeek V3.1"
+      },
+      "price": {
+        "input": 0.27,
+        "output": 1
+      }
+    },
+    "deepseek/deepseek-v3.2": {
+      "name": "DeepSeek V3.2",
+      "family": "deepseek",
+      "released": "2025-12-03",
+      "updated": "2025-12-03",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 164000,
+        "output": 164000
+      },
+      "provider_options": {
+        "id": "deepseek-ai/DeepSeek-V3.2",
+        "name": "DeepSeek V3.2"
+      },
+      "price": {
+        "input": 0.26,
+        "output": 0.38
+      }
+    },
+    "deepseek/deepseek-v3.2-exp": {
+      "name": "DeepSeek V3.2 Exp",
+      "family": "deepseek",
+      "released": "2025-10-10",
+      "updated": "2025-10-10",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 164000,
+        "output": 164000
+      },
+      "provider_options": {
+        "id": "deepseek-ai/DeepSeek-V3.2-Exp",
+        "name": "DeepSeek V3.2 Exp"
+      },
+      "price": {
+        "input": 0.27,
+        "output": 0.4
+      }
+    },
+    "meta/llama-3.3-70b-instruct": {
+      "name": "Llama 3.3 70B Instruct",
+      "family": "llama",
+      "released": "2024-12-06",
+      "updated": "2024-12-06",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 131072,
+        "output": 16384
+      },
+      "provider_options": {
+        "id": "meta-llama/Llama-3.3-70B-Instruct",
+        "name": "Llama 3.3 70B Instruct"
+      },
+      "price": {
+        "input": 0.1,
+        "output": 0.3
+      }
+    },
+    "minimax/minimax-m2.1": {
+      "name": "MiniMax M2.1",
+      "family": "minimax",
+      "released": "2025-12-23",
+      "updated": "2025-12-23",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 196608,
+        "output": 131072
+      },
+      "reasoning": {},
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "MiniMaxAI/MiniMax-M2.1",
+        "name": "MiniMax M2.1"
+      },
+      "price": {
+        "input": 0.28,
+        "output": 1.2
+      }
+    },
+    "minimax/minimax-m2.5": {
+      "name": "MiniMax M2.5",
+      "family": "minimax",
+      "released": "2026-02-12",
+      "updated": "2026-02-12",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 204800,
+        "output": 131072
+      },
+      "reasoning": {},
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "MiniMaxAI/MiniMax-M2.5",
+        "name": "MiniMax M2.5"
+      },
+      "price": {
+        "input": 0.3,
+        "output": 1.2
+      }
+    },
+    "mistral/mistral-nemo-instruct-2407": {
+      "name": "Mistral Nemo Instruct 2407",
+      "family": "mistral",
+      "released": "2024-07-18",
+      "updated": "2024-07-18",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 131072,
+        "output": 65536
+      },
+      "provider_options": {
+        "id": "mistralai/Mistral-Nemo-Instruct-2407",
+        "name": "Mistral Nemo Instruct 2407"
+      },
+      "price": {
+        "input": 0.02,
+        "output": 0.04
+      }
+    },
+    "mistral/mistral-small-3.2-24b-instruct-2506": {
+      "name": "Mistral Small 3.2 24B Instruct 2506",
+      "family": "mistral-small",
+      "released": "2025-06-20",
+      "updated": "2025-06-20",
+      "knowledge": "2024-10",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 32768,
+        "output": 8192
+      },
+      "provider_options": {
+        "id": "mistralai/Mistral-Small-3.2-24B-Instruct-2506",
+        "name": "Mistral Small 3.2 24B Instruct"
+      },
+      "price": {
+        "input": 0,
+        "output": 0
+      }
+    },
+    "moonshotai/kimi-k2-thinking": {
+      "name": "Kimi K2 Thinking",
+      "family": "kimi-thinking",
+      "released": "2025-11-06",
+      "updated": "2025-11-06",
+      "knowledge": "2024-08",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "reasoning": {},
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "moonshotai/Kimi-K2-Thinking",
+        "name": "Kimi K2 Thinking"
+      },
+      "price": {
+        "input": 0.6,
+        "output": 2.6
+      }
+    },
+    "moonshotai/kimi-k2.5": {
+      "name": "Kimi K2.5",
+      "family": "kimi-k2",
+      "released": "2026-01-27",
+      "updated": "2026-01-27",
+      "knowledge": "2026-01",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "reasoning": {},
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "moonshotai/Kimi-K2.5",
+        "name": "Kimi K2.5"
+      },
+      "price": {
+        "input": 0.45,
+        "output": 2.8
+      }
+    },
+    "xiaomi/mimo-v2-flash": {
+      "name": "MiMo V2 Flash",
+      "family": "mimo",
+      "released": "2025-12-17",
+      "updated": "2025-12-17",
+      "knowledge": "2024-12-01",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 32000
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "XiaomiMiMo/MiMo-V2-Flash",
+        "name": "MiMo V2 Flash"
+      },
+      "price": {
+        "input": 0.1,
+        "output": 0.3
+      }
+    },
+    "zhipuai/glm-4.6": {
+      "name": "GLM 4.6",
+      "family": "glm",
+      "released": "2025-09-30",
+      "updated": "2025-09-30",
+      "knowledge": "2025-04",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 202752,
+        "output": 131072
+      },
+      "reasoning": {},
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "zai-org/GLM-4.6",
+        "name": "GLM-4.6"
+      },
+      "price": {
+        "input": 0.45,
+        "output": 1.9
+      }
+    },
+    "zhipuai/glm-4.7": {
+      "name": "GLM 4.7",
+      "family": "glm",
+      "released": "2025-12-22",
+      "updated": "2025-12-22",
+      "knowledge": "2025-04",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 202752,
+        "output": 131072
+      },
+      "reasoning": {},
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "zai-org/GLM-4.7",
+        "name": "GLM-4.7"
+      },
+      "price": {
+        "input": 0.2,
+        "output": 0.8
+      }
+    },
+    "zhipuai/glm-5": {
+      "name": "GLM 5",
+      "family": "glm",
+      "released": "2026-02-11",
+      "updated": "2026-02-11",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 202752,
+        "output": 131072
+      },
+      "reasoning": {
+        "mandatory": false
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "zai-org/GLM-5",
+        "name": "GLM-5"
+      },
+      "price": {
+        "input": 0.8,
+        "output": 2.56
+      }
+    }
+  }
+}

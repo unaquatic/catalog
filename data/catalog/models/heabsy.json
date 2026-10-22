@@ -1,0 +1,30 @@
+{
+  "heabsy/cyberheabsy": {
+    "id": "heabsy/cyberheabsy",
+    "lab": "heabsy",
+    "name": "CyberHeabsy",
+    "released": "2026-09-27",
+    "updated": "2026-09-27",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "structured_output": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "input": 1048576,
+      "output": 65536
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  }
+}

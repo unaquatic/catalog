@@ -1,0 +1,182 @@
+{
+  "sao10k/l3-8b-stheno-v3.2": {
+    "id": "sao10k/l3-8b-stheno-v3.2",
+    "lab": "sao10k",
+    "name": "L3 8B Stheno V3.2",
+    "family": "llama",
+    "released": "2024-01-01",
+    "updated": "2024-11-29",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "structured_output": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 16384,
+      "input": 16384,
+      "output": 8192
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "sao10k/l3-lunaris-8b": {
+    "id": "sao10k/l3-lunaris-8b",
+    "lab": "sao10k",
+    "name": "L3 Lunaris 8B",
+    "family": "llama",
+    "released": "2024-08-13",
+    "updated": "2024-08-13",
+    "knowledge": "2023-12-31",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 8192,
+      "output": 7372
+    },
+    "providers": [
+      "aimlapi",
+      "kilo",
+      "openrouter"
+    ]
+  },
+  "sao10k/l3.1-70b-hanami-x1": {
+    "id": "sao10k/l3.1-70b-hanami-x1",
+    "lab": "sao10k",
+    "name": "L3.1 70B Hanami X1",
+    "family": "llama",
+    "released": "2024-01-01",
+    "updated": "2024-07-23",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "structured_output": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32768,
+      "input": 32768,
+      "output": 16384
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "sao10k/l3.1-euryale-70b": {
+    "id": "sao10k/l3.1-euryale-70b",
+    "lab": "sao10k",
+    "name": "L3.1 Euryale 70B",
+    "family": "llama",
+    "released": "2024-08-28",
+    "updated": "2024-08-28",
+    "knowledge": "2023-12-31",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 16384
+    },
+    "providers": [
+      "aimlapi",
+      "kilo",
+      "nano-gpt",
+      "openrouter"
+    ]
+  },
+  "sao10k/l3.3-euryale-70b": {
+    "id": "sao10k/l3.3-euryale-70b",
+    "lab": "sao10k",
+    "name": "L3.3 Euryale 70B",
+    "family": "llama",
+    "released": "2024-12-18",
+    "updated": "2024-12-18",
+    "knowledge": "2023-12-31",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 16384
+    },
+    "providers": [
+      "aimlapi",
+      "nano-gpt"
+    ]
+  },
+  "sao10k/l3.3-ms-nevoria-70b": {
+    "id": "sao10k/l3.3-ms-nevoria-70b",
+    "lab": "sao10k",
+    "name": "L3.3 Ms Nevoria 70B",
+    "family": "llama",
+    "released": "2024-01-01",
+    "updated": "2024-12-06",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "structured_output": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32768,
+      "input": 32768,
+      "output": 16384
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  }
+}

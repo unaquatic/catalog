@@ -1,0 +1,120 @@
+{
+  "lucidquery/lucidnova-rf1-100b": {
+    "id": "lucidquery/lucidnova-rf1-100b",
+    "lab": "lucidquery",
+    "name": "LucidNova RF1 100B",
+    "family": "nova",
+    "released": "2024-12-28",
+    "updated": "2025-09-10",
+    "knowledge": "2025-09-16",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 120000,
+      "output": 8000
+    },
+    "providers": [
+      "lucidquery"
+    ]
+  },
+  "lucidquery/lucidquery-agi-01-frontier": {
+    "id": "lucidquery/lucidquery-agi-01-frontier",
+    "lab": "lucidquery",
+    "name": "LucidQuery AGI 01 Frontier",
+    "family": "agi",
+    "released": "2026-06-16",
+    "updated": "2026-06-16",
+    "knowledge": "2026-06-05",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 300000,
+      "output": 120000
+    },
+    "providers": [
+      "lucidquery"
+    ]
+  },
+  "lucidquery/lucidquery-agi-01-swift": {
+    "id": "lucidquery/lucidquery-agi-01-swift",
+    "lab": "lucidquery",
+    "name": "LucidQuery AGI 01 Swift",
+    "family": "agi",
+    "released": "2026-06-16",
+    "updated": "2026-06-16",
+    "knowledge": "2026-06-05",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 300000,
+      "output": 120000
+    },
+    "providers": [
+      "lucidquery"
+    ]
+  },
+  "lucidquery/lucidquery-nexus-coder": {
+    "id": "lucidquery/lucidquery-nexus-coder",
+    "lab": "lucidquery",
+    "name": "LucidQuery Nexus Coder",
+    "family": "lucid",
+    "released": "2025-09-01",
+    "updated": "2025-09-01",
+    "knowledge": "2025-08-01",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 250000,
+      "output": 60000
+    },
+    "providers": [
+      "lucidquery"
+    ]
+  }
+}

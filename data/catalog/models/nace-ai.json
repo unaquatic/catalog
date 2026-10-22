@@ -1,0 +1,96 @@
+{
+  "nace-ai/drex-v1.5": {
+    "id": "nace-ai/drex-v1.5",
+    "lab": "nace-ai",
+    "name": "Drex V1.5",
+    "type": "decision",
+    "released": "2026-09-28",
+    "updated": "2026-09-28",
+    "open_weights": true,
+    "license": "Nace.AI Open RAIL-M",
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 139264,
+      "output": 0
+    },
+    "weights": [
+      {
+        "url": "https://huggingface.co/nace-ai/drex-v1.5",
+        "format": "safetensors"
+      }
+    ],
+    "links": [
+      {
+        "label": "Documentation",
+        "url": "https://drex.nace.ai/docs",
+        "type": "docs"
+      },
+      {
+        "label": "License",
+        "url": "https://huggingface.co/nace-ai/drex-v1.5/blob/main/LICENSE",
+        "type": "license"
+      }
+    ],
+    "providers": [
+      "openrouter"
+    ]
+  },
+  "nace-ai/drex-v2.0": {
+    "id": "nace-ai/drex-v2.0",
+    "lab": "nace-ai",
+    "name": "Drex V2.0",
+    "type": "decision",
+    "released": "2026-10-06",
+    "updated": "2026-10-12",
+    "open_weights": true,
+    "license": "Nace.AI Open RAIL-M",
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 0
+    },
+    "weights": [
+      {
+        "url": "https://huggingface.co/nace-ai/drex-v2.0",
+        "format": "safetensors"
+      }
+    ],
+    "links": [
+      {
+        "label": "Documentation",
+        "url": "https://github.com/nace-ai/drex-decision-models",
+        "type": "docs"
+      },
+      {
+        "label": "License",
+        "url": "https://huggingface.co/nace-ai/drex-v2.0/blob/main/LICENSE",
+        "type": "license"
+      }
+    ],
+    "providers": [
+      "openrouter"
+    ]
+  }
+}

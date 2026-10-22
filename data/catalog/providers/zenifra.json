@@ -1,0 +1,51 @@
+{
+  "id": "zenifra",
+  "name": "Zenifra",
+  "kind": "gateway",
+  "type": "community",
+  "endpoint": {
+    "format": "openai-chat",
+    "api": "https://ai.zenifra.com/v1",
+    "auth": {
+      "scheme": "bearer"
+    },
+    "env": [
+      "ZENIFRA_AI_KEY"
+    ]
+  },
+  "doc": "https://docs.zenifra.com",
+  "models": {
+    "alibaba/qwen3.6-35b-a3b": {
+      "name": "Qwen3.6 35B A3B",
+      "family": "qwen",
+      "released": "2026-04-17",
+      "updated": "2026-04-17",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 65536
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "alibaba/qwen3.6-35b-a3b",
+        "name": "Qwen3.6 35B-A3B"
+      },
+      "price": {
+        "input": 0.19,
+        "output": 0.48
+      }
+    }
+  }
+}

@@ -1,0 +1,149 @@
+{
+  "id": "lucidquery",
+  "name": "LucidQuery",
+  "kind": "gateway",
+  "type": "community",
+  "endpoint": {
+    "format": "openai-chat",
+    "api": "https://api.lucidquery.com/v1",
+    "auth": {
+      "scheme": "bearer"
+    },
+    "env": [
+      "LUCIDQUERY_API_KEY"
+    ]
+  },
+  "doc": "https://lucidquery.com/docs",
+  "models": {
+    "lucidquery/lucidnova-rf1-100b": {
+      "name": "LucidNova RF1 100B",
+      "family": "nova",
+      "released": "2024-12-28",
+      "updated": "2025-09-10",
+      "knowledge": "2025-09-16",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "temperature": false,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 120000,
+        "output": 8000
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "lucidnova-rf1-100b",
+        "name": "LucidNova RF1 100B"
+      },
+      "price": {
+        "input": 2,
+        "output": 5
+      }
+    },
+    "lucidquery/lucidquery-agi-01-frontier": {
+      "name": "LucidQuery AGI 01 Frontier",
+      "family": "agi",
+      "released": "2026-06-16",
+      "updated": "2026-06-16",
+      "knowledge": "2026-06-05",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 300000,
+        "output": 120000
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "lucidquery-agi-01-frontier",
+        "name": "AGI-01 Frontier"
+      },
+      "price": {
+        "input": 4.5,
+        "output": 22
+      }
+    },
+    "lucidquery/lucidquery-agi-01-swift": {
+      "name": "LucidQuery AGI 01 Swift",
+      "family": "agi",
+      "released": "2026-06-16",
+      "updated": "2026-06-16",
+      "knowledge": "2026-06-05",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 300000,
+        "output": 120000
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "lucidquery-agi-01-swift",
+        "name": "AGI-01 Swift"
+      },
+      "price": {
+        "input": 2.5,
+        "output": 15
+      }
+    },
+    "lucidquery/lucidquery-nexus-coder": {
+      "name": "LucidQuery Nexus Coder",
+      "family": "lucid",
+      "released": "2025-09-01",
+      "updated": "2025-09-01",
+      "knowledge": "2025-08-01",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "temperature": false,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 250000,
+        "output": 60000
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "lucidquery-nexus-coder",
+        "name": "LucidQuery Nexus Coder"
+      },
+      "price": {
+        "input": 2,
+        "output": 5
+      }
+    }
+  }
+}

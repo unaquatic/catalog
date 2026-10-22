@@ -1,0 +1,326 @@
+{
+  "kuaishou/kat-coder-pro": {
+    "id": "kuaishou/kat-coder-pro",
+    "lab": "kuaishou",
+    "name": "KAT Coder Pro",
+    "family": "kat-coder",
+    "released": "2026-03-27",
+    "updated": "2026-03-27",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "structured_output": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 256000,
+      "output": 256000
+    },
+    "providers": [
+      "requesty"
+    ]
+  },
+  "kuaishou/kat-coder-pro-v2": {
+    "id": "kuaishou/kat-coder-pro-v2",
+    "lab": "kuaishou",
+    "name": "KAT Coder Pro V2",
+    "released": "2026-03-30",
+    "updated": "2026-03-30",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 256000,
+      "output": 80000
+    },
+    "providers": [
+      "zenmux"
+    ]
+  },
+  "kuaishou/kling-v2-6": {
+    "id": "kuaishou/kling-v2-6",
+    "lab": "kuaishou",
+    "name": "Kling V2.6",
+    "released": "2026-01-13",
+    "updated": "2026-01-13",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "structured_output": false,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output": [
+        "video"
+      ]
+    },
+    "limit": {
+      "context": 99999999,
+      "output": 99999999
+    },
+    "providers": [
+      "qiniu-ai"
+    ]
+  },
+  "kuaishou/kling-v2.5-turbo-i2v": {
+    "id": "kuaishou/kling-v2.5-turbo-i2v",
+    "lab": "kuaishou",
+    "name": "Kling V2.5 Turbo I2v",
+    "family": "ling",
+    "type": "video",
+    "released": "2025-09-23",
+    "updated": "2025-09-23",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "video"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "kuaishou/kling-v2.5-turbo-t2v": {
+    "id": "kuaishou/kling-v2.5-turbo-t2v",
+    "lab": "kuaishou",
+    "name": "Kling V2.5 Turbo T2V",
+    "family": "ling",
+    "type": "video",
+    "released": "2025-09-23",
+    "updated": "2025-09-23",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "video"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "kuaishou/kling-v2.6-i2v": {
+    "id": "kuaishou/kling-v2.6-i2v",
+    "lab": "kuaishou",
+    "name": "Kling V2.6 I2v",
+    "family": "ling",
+    "type": "video",
+    "released": "2025-12-03",
+    "updated": "2025-12-21",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "video"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "kuaishou/kling-v2.6-motion-control": {
+    "id": "kuaishou/kling-v2.6-motion-control",
+    "lab": "kuaishou",
+    "name": "Kling V2.6 Motion Control",
+    "family": "ling",
+    "type": "video",
+    "released": "2025-12-18",
+    "updated": "2025-12-21",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output": [
+        "video"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "kuaishou/kling-v2.6-t2v": {
+    "id": "kuaishou/kling-v2.6-t2v",
+    "lab": "kuaishou",
+    "name": "Kling V2.6 T2V",
+    "family": "ling",
+    "type": "video",
+    "released": "2025-12-03",
+    "updated": "2025-12-21",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "video"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "kuaishou/kling-v3.0-i2v": {
+    "id": "kuaishou/kling-v3.0-i2v",
+    "lab": "kuaishou",
+    "name": "Kling V3.0 I2v",
+    "family": "ling",
+    "type": "video",
+    "released": "2026-02-05",
+    "updated": "2026-02-05",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "video"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "kuaishou/kling-v3.0-motion-control": {
+    "id": "kuaishou/kling-v3.0-motion-control",
+    "lab": "kuaishou",
+    "name": "Kling V3.0 Motion Control",
+    "family": "ling",
+    "type": "video",
+    "released": "2026-03-04",
+    "updated": "2026-03-04",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output": [
+        "video"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "kuaishou/kling-v3.0-t2v": {
+    "id": "kuaishou/kling-v3.0-t2v",
+    "lab": "kuaishou",
+    "name": "Kling V3.0 T2V",
+    "family": "ling",
+    "type": "video",
+    "released": "2026-02-05",
+    "updated": "2026-02-05",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "video"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  }
+}

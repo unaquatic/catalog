@@ -1,0 +1,31 @@
+{
+  "zeldoc/zdev": {
+    "id": "zeldoc/zdev",
+    "lab": "zeldoc",
+    "name": "ZDev",
+    "released": "2026-08-26",
+    "updated": "2026-08-26",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 131072
+    },
+    "providers": [
+      "zeldoc"
+    ]
+  }
+}

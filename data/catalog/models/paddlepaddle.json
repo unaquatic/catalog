@@ -1,0 +1,65 @@
+{
+  "paddlepaddle/paddleocr-vl": {
+    "id": "paddlepaddle/paddleocr-vl",
+    "lab": "paddlepaddle",
+    "name": "PaddleOCR VL",
+    "released": "2025-10-16",
+    "updated": "2025-10-16",
+    "open_weights": true,
+    "license": "Apache-2.0",
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 16384
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/PaddlePaddle/PaddleOCR-VL"
+      }
+    ],
+    "providers": [
+      "novita-ai"
+    ]
+  },
+  "paddlepaddle/paddleocr-vl-1.5": {
+    "id": "paddlepaddle/paddleocr-vl-1.5",
+    "lab": "paddlepaddle",
+    "name": "PaddleOCR VL 1.5",
+    "released": "2026-01-29",
+    "updated": "2026-01-29",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 16384,
+      "output": 16384
+    },
+    "providers": [
+      "siliconflow-cn"
+    ]
+  }
+}

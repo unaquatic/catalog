@@ -1,0 +1,31 @@
+{
+  "venice/venice-uncensored": {
+    "id": "venice/venice-uncensored",
+    "lab": "venice",
+    "name": "Venice Uncensored",
+    "family": "venice",
+    "released": "2025-10-01",
+    "updated": "2025-10-01",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "structured_output": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "input": 128000,
+      "output": 8192
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  }
+}

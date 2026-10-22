@@ -1,0 +1,471 @@
+{
+  "black-forest-labs/flux-1-kontext-dev": {
+    "id": "black-forest-labs/flux-1-kontext-dev",
+    "lab": "black-forest-labs",
+    "name": "FLUX 1 Kontext Dev",
+    "released": "2025-08-12",
+    "updated": "2025-08-12",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "image"
+      ]
+    },
+    "limit": {
+      "context": 40960,
+      "output": 40960
+    },
+    "providers": [
+      "nvidia"
+    ]
+  },
+  "black-forest-labs/flux-1-schnell": {
+    "id": "black-forest-labs/flux-1-schnell",
+    "lab": "black-forest-labs",
+    "name": "FLUX 1 Schnell",
+    "released": "2024-08-01",
+    "updated": "2026-02-04",
+    "knowledge": "2024-07",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "structured_output": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "image"
+      ]
+    },
+    "limit": {
+      "context": 77,
+      "input": 77,
+      "output": 0
+    },
+    "providers": [
+      "nvidia"
+    ]
+  },
+  "black-forest-labs/flux-2-flex": {
+    "id": "black-forest-labs/flux-2-flex",
+    "lab": "black-forest-labs",
+    "name": "FLUX 2 Flex",
+    "family": "flux",
+    "type": "image",
+    "released": "2025-11-25",
+    "updated": "2026-06-08",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "image"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "black-forest-labs/flux-2-klein-4b": {
+    "id": "black-forest-labs/flux-2-klein-4b",
+    "lab": "black-forest-labs",
+    "name": "FLUX 2 Klein 4B",
+    "family": "flux",
+    "type": "image",
+    "released": "2026-01-15",
+    "updated": "2026-01-15",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "image"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "nearai",
+      "nvidia",
+      "vercel"
+    ]
+  },
+  "black-forest-labs/flux-2-klein-9b": {
+    "id": "black-forest-labs/flux-2-klein-9b",
+    "lab": "black-forest-labs",
+    "name": "FLUX 2 Klein 9B",
+    "family": "flux",
+    "type": "image",
+    "released": "2026-01-15",
+    "updated": "2026-06-08",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "image"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "black-forest-labs/flux-2-max": {
+    "id": "black-forest-labs/flux-2-max",
+    "lab": "black-forest-labs",
+    "name": "FLUX 2 Max",
+    "family": "flux",
+    "type": "image",
+    "released": "2025-12-16",
+    "updated": "2026-06-08",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "image"
+      ]
+    },
+    "limit": {
+      "context": 67300,
+      "output": 67300
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "black-forest-labs/flux-2-pro": {
+    "id": "black-forest-labs/flux-2-pro",
+    "lab": "black-forest-labs",
+    "name": "FLUX 2 Pro",
+    "family": "flux",
+    "type": "image",
+    "released": "2025-11-25",
+    "updated": "2026-06-08",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "image"
+      ]
+    },
+    "limit": {
+      "context": 67300,
+      "output": 67300
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "black-forest-labs/flux-3-image": {
+    "id": "black-forest-labs/flux-3-image",
+    "lab": "black-forest-labs",
+    "name": "FLUX 3 Image",
+    "family": "flux",
+    "type": "image",
+    "released": "2026-10-05",
+    "updated": "2026-10-05",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "image"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "black-forest-labs/flux-3-image-klein": {
+    "id": "black-forest-labs/flux-3-image-klein",
+    "lab": "black-forest-labs",
+    "name": "FLUX 3 Image Klein",
+    "family": "flux",
+    "type": "image",
+    "released": "2026-10-15",
+    "updated": "2026-10-15",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "image"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "black-forest-labs/flux-3-video": {
+    "id": "black-forest-labs/flux-3-video",
+    "lab": "black-forest-labs",
+    "name": "FLUX 3 Video",
+    "family": "flux",
+    "type": "video",
+    "released": "2026-08-04",
+    "updated": "2026-08-04",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output": [
+        "video"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "black-forest-labs/flux-kontext-max": {
+    "id": "black-forest-labs/flux-kontext-max",
+    "lab": "black-forest-labs",
+    "name": "FLUX Kontext Max",
+    "family": "flux",
+    "type": "image",
+    "released": "2025-05-29",
+    "updated": "2025-06-01",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "image"
+      ]
+    },
+    "limit": {
+      "context": 512,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "black-forest-labs/flux-kontext-pro": {
+    "id": "black-forest-labs/flux-kontext-pro",
+    "lab": "black-forest-labs",
+    "name": "FLUX Kontext Pro",
+    "family": "flux",
+    "type": "image",
+    "released": "2025-05-29",
+    "updated": "2025-06-01",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "image"
+      ]
+    },
+    "limit": {
+      "context": 512,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "black-forest-labs/flux-pro-1.0-fill": {
+    "id": "black-forest-labs/flux-pro-1.0-fill",
+    "lab": "black-forest-labs",
+    "name": "FLUX Pro 1.0 Fill",
+    "family": "flux",
+    "type": "image",
+    "released": "2024-10-01",
+    "updated": "2024-10-01",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "image"
+      ]
+    },
+    "limit": {
+      "context": 512,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "black-forest-labs/flux-pro-1.1": {
+    "id": "black-forest-labs/flux-pro-1.1",
+    "lab": "black-forest-labs",
+    "name": "FLUX Pro 1.1",
+    "family": "flux",
+    "type": "image",
+    "released": "2024-10-02",
+    "updated": "2024-10-02",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "image"
+      ]
+    },
+    "limit": {
+      "context": 512,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "black-forest-labs/flux-pro-1.1-ultra": {
+    "id": "black-forest-labs/flux-pro-1.1-ultra",
+    "lab": "black-forest-labs",
+    "name": "FLUX Pro 1.1 Ultra",
+    "family": "flux",
+    "type": "image",
+    "released": "2024-11-01",
+    "updated": "2024-11-01",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "image"
+      ]
+    },
+    "limit": {
+      "context": 512,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "black-forest-labs/flux.1-dev": {
+    "id": "black-forest-labs/flux.1-dev",
+    "lab": "black-forest-labs",
+    "name": "FLUX.1 Dev",
+    "family": "flux",
+    "released": "2024-08-01",
+    "updated": "2025-09-05",
+    "knowledge": "2024-08",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "image"
+      ]
+    },
+    "limit": {
+      "context": 4096,
+      "output": 0
+    },
+    "providers": [
+      "nvidia"
+    ]
+  }
+}

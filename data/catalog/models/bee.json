@@ -1,0 +1,179 @@
+{
+  "bee/bee-brood": {
+    "id": "bee/bee-brood",
+    "lab": "bee",
+    "name": "Bee Brood",
+    "released": "2026-07-10",
+    "updated": "2026-09-28",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": false,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 16384
+    },
+    "providers": [
+      "bee"
+    ]
+  },
+  "bee/bee-buzz": {
+    "id": "bee/bee-buzz",
+    "lab": "bee",
+    "name": "Bee Buzz",
+    "released": "2026-07-10",
+    "updated": "2026-09-28",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 24576
+    },
+    "providers": [
+      "bee"
+    ]
+  },
+  "bee/bee-cell": {
+    "id": "bee/bee-cell",
+    "lab": "bee",
+    "name": "Bee Cell",
+    "released": "2026-07-10",
+    "updated": "2026-09-28",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": false,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 8192
+    },
+    "providers": [
+      "bee"
+    ]
+  },
+  "bee/bee-comb": {
+    "id": "bee/bee-comb",
+    "lab": "bee",
+    "name": "Bee Comb",
+    "released": "2026-07-10",
+    "updated": "2026-09-28",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 16384
+    },
+    "providers": [
+      "bee"
+    ]
+  },
+  "bee/bee-hive": {
+    "id": "bee/bee-hive",
+    "lab": "bee",
+    "name": "Bee Hive",
+    "released": "2026-07-10",
+    "updated": "2026-09-28",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 32768
+    },
+    "providers": [
+      "bee"
+    ]
+  },
+  "bee/bee-swarm": {
+    "id": "bee/bee-swarm",
+    "lab": "bee",
+    "name": "Bee Swarm",
+    "released": "2026-07-10",
+    "updated": "2026-09-28",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "structured_output": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 64000
+    },
+    "providers": [
+      "bee"
+    ]
+  }
+}

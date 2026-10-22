@@ -1,0 +1,171 @@
+{
+  "id": "atomic-chat",
+  "name": "Atomic Chat",
+  "kind": "gateway",
+  "type": "community",
+  "endpoint": {
+    "format": "openai-chat",
+    "api": "http://127.0.0.1:1337/v1",
+    "auth": {
+      "scheme": "bearer"
+    },
+    "env": [
+      "ATOMIC_CHAT_API_KEY"
+    ]
+  },
+  "doc": "https://atomic.chat",
+  "models": {
+    "alibaba/qwen3.5-9b-mlx-4bit": {
+      "name": "Qwen3.5 9B MLX 4bit",
+      "family": "qwen",
+      "released": "2026-03-05",
+      "updated": "2026-04-04",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 32768,
+        "output": 8192
+      },
+      "provider_options": {
+        "id": "Qwen3_5-9B-MLX-4bit",
+        "name": "Qwen 3.5 9B (MLX 4-bit)"
+      },
+      "price": {
+        "input": 0,
+        "output": 0
+      }
+    },
+    "alibaba/qwen3.5-9b-q4-k-m": {
+      "name": "Qwen3.5 9B Q4 K M",
+      "family": "qwen",
+      "released": "2026-03-05",
+      "updated": "2026-04-04",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 32768,
+        "output": 8192
+      },
+      "provider_options": {
+        "id": "Qwen3_5-9B-Q4_K_M",
+        "name": "Qwen 3.5 9B (Q4_K_M)"
+      },
+      "price": {
+        "input": 0,
+        "output": 0
+      }
+    },
+    "google/gemma-4-e4b-it-iq4-xs": {
+      "name": "Gemma 4 E4B IT Iq4 XS",
+      "family": "gemma",
+      "released": "2026-04-02",
+      "updated": "2026-04-02",
+      "open_weights": true,
+      "capabilities": {
+        "tools": false,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 32768,
+        "output": 8192
+      },
+      "provider_options": {
+        "id": "gemma-4-E4B-it-IQ4_XS",
+        "name": "Gemma 4 E4B Instruct (IQ4_XS)"
+      },
+      "price": {
+        "input": 0,
+        "output": 0
+      }
+    },
+    "google/gemma-4-e4b-it-mlx-4bit": {
+      "name": "Gemma 4 E4B IT MLX 4bit",
+      "family": "gemma",
+      "released": "2026-04-02",
+      "updated": "2026-04-02",
+      "open_weights": true,
+      "capabilities": {
+        "tools": false,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 32768,
+        "output": 8192
+      },
+      "provider_options": {
+        "id": "gemma-4-E4B-it-MLX-4bit",
+        "name": "Gemma 4 E4B Instruct (MLX 4-bit)"
+      },
+      "price": {
+        "input": 0,
+        "output": 0
+      }
+    },
+    "meta/llama-3.1-8b-instruct-gguf": {
+      "name": "Llama 3.1 8B Instruct GGUF",
+      "family": "llama",
+      "released": "2024-07-23",
+      "updated": "2024-07-23",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 131072,
+        "output": 4096
+      },
+      "provider_options": {
+        "id": "Meta-Llama-3_1-8B-Instruct-GGUF",
+        "name": "Meta Llama 3.1 8B Instruct (GGUF)"
+      },
+      "price": {
+        "input": 0,
+        "output": 0
+      }
+    }
+  }
+}

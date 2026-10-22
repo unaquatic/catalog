@@ -1,0 +1,272 @@
+{
+  "fastino/gliguard-llmguardrails-300m": {
+    "id": "fastino/gliguard-llmguardrails-300m",
+    "lab": "fastino",
+    "name": "GLiGuard Llmguardrails 300M",
+    "released": "2026-04-30",
+    "updated": "2026-04-30",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 8192,
+      "output": 8192
+    },
+    "providers": [
+      "pioneer"
+    ]
+  },
+  "fastino/gliguard-pii-multi": {
+    "id": "fastino/gliguard-pii-multi",
+    "lab": "fastino",
+    "name": "GLiGuard PII Multi",
+    "released": "2026-07-08",
+    "updated": "2026-07-08",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 8192,
+      "output": 8192
+    },
+    "providers": [
+      "pioneer"
+    ]
+  },
+  "fastino/gliner-2.5-decide": {
+    "id": "fastino/gliner-2.5-decide",
+    "lab": "fastino",
+    "name": "GLiNER 2.5 Decide",
+    "released": "2026-09-24",
+    "updated": "2026-09-24",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 8192,
+      "output": 8192
+    },
+    "providers": [
+      "pioneer"
+    ]
+  },
+  "fastino/gliner2-base-v1": {
+    "id": "fastino/gliner2-base-v1",
+    "lab": "fastino",
+    "name": "GLiNER2 Base V1",
+    "released": "2025-06-30",
+    "updated": "2025-06-30",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 8192,
+      "output": 8192
+    },
+    "providers": [
+      "pioneer"
+    ]
+  },
+  "fastino/gliner2-large-v1": {
+    "id": "fastino/gliner2-large-v1",
+    "lab": "fastino",
+    "name": "GLiNER2 Large V1",
+    "released": "2025-06-30",
+    "updated": "2025-06-30",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 8192,
+      "output": 8192
+    },
+    "providers": [
+      "pioneer"
+    ]
+  },
+  "fastino/gliner2-multi-large-v1": {
+    "id": "fastino/gliner2-multi-large-v1",
+    "lab": "fastino",
+    "name": "GLiNER2 Multi Large V1",
+    "released": "2025-11-30",
+    "updated": "2025-11-30",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 8192,
+      "output": 8192
+    },
+    "providers": [
+      "pioneer"
+    ]
+  },
+  "fastino/gliner2-multi-v1": {
+    "id": "fastino/gliner2-multi-v1",
+    "lab": "fastino",
+    "name": "GLiNER2 Multi V1",
+    "released": "2025-11-30",
+    "updated": "2025-11-30",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 8192,
+      "output": 8192
+    },
+    "providers": [
+      "pioneer"
+    ]
+  },
+  "fastino/gliner2-privacy-filter-pii-multi": {
+    "id": "fastino/gliner2-privacy-filter-pii-multi",
+    "lab": "fastino",
+    "name": "GLiNER2 Privacy Filter PII Multi",
+    "released": "2026-04-30",
+    "updated": "2026-04-30",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 8192,
+      "output": 8192
+    },
+    "providers": [
+      "pioneer"
+    ]
+  },
+  "fastino/gliner2.5-base-v1": {
+    "id": "fastino/gliner2.5-base-v1",
+    "lab": "fastino",
+    "name": "GLiNER 2.5 Base V1",
+    "released": "2026-08-24",
+    "updated": "2026-08-24",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 4096,
+      "output": 4096
+    },
+    "providers": [
+      "pioneer"
+    ]
+  },
+  "fastino/gliner2.5-multi-v1": {
+    "id": "fastino/gliner2.5-multi-v1",
+    "lab": "fastino",
+    "name": "GLiNER 2.5 Multi V1",
+    "released": "2026-08-24",
+    "updated": "2026-08-24",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 4096,
+      "output": 4096
+    },
+    "providers": [
+      "pioneer"
+    ]
+  }
+}

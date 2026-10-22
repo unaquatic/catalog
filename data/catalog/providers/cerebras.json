@@ -1,0 +1,102 @@
+{
+  "id": "cerebras",
+  "name": "Cerebras",
+  "kind": "gateway",
+  "type": "community",
+  "endpoint": {
+    "format": "openai-chat",
+    "api": "https://api.cerebras.ai/v1",
+    "api_default": true,
+    "auth": {
+      "scheme": "bearer"
+    },
+    "env": [
+      "CEREBRAS_API_KEY"
+    ]
+  },
+  "doc": "https://inference-docs.cerebras.ai/models/overview",
+  "models": {
+    "alibaba/qwen3.8-27b": {
+      "name": "Qwen3.8 27B",
+      "family": "qwen",
+      "released": "2026-08-14",
+      "updated": "2026-08-14",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 131072,
+        "output": 40960
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "qwen-3.8-27b",
+        "name": "Qwen3.8 27B"
+      },
+      "price": {
+        "input": 0.99,
+        "output": 1.49,
+        "cache_read": 0.99
+      }
+    },
+    "openai/gpt-oss-120b": {
+      "name": "GPT OSS 120B",
+      "family": "gpt-oss",
+      "released": "2025-08-05",
+      "updated": "2025-08-05",
+      "knowledge": "2024-06",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 131072,
+        "output": 40960
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "gpt-oss-120b",
+        "name": "GPT OSS 120B"
+      },
+      "price": {
+        "input": 0.35,
+        "output": 0.75,
+        "cache_read": 0.35
+      }
+    }
+  }
+}

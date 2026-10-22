@@ -1,0 +1,280 @@
+{
+  "catalog": {
+    "description": "The model catalog: every model by its ID, and every provider with its offerings of those models, built from models.dev.",
+    "properties": {
+      "$schema": "URL of this JSON Schema.",
+      "version": "Version of the document's format. A reader accepts only the version it knows.",
+      "source": "Where the catalog was built from, such as \"https://models.dev\".",
+      "generated": "When the catalog was built. Every catalog lists it.",
+      "spellings": "How model names spell words of model IDs.",
+      "labs": "The labs that make the models, by lab ID.",
+      "families": "The model families, by family ID.",
+      "efforts": "The reasoning efforts the offerings take, and their names, by effort ID.",
+      "variant": "The tiers and the modes the variants run in, and their names.",
+      "models": "Every model, by model ID.",
+      "providers": "Every provider, by provider ID."
+    }
+  },
+  "spellings": {
+    "description": "How model names spell words of model IDs: from the word in lower case to its spelling, such as \"glm\" to \"GLM\" and \"minimax\" to \"MiniMax\". A word not listed is capitalized."
+  },
+  "lab": {
+    "description": "A lab that makes models, and its name, such as \"ByteDance Seed\" for \"bytedance-seed\".",
+    "properties": {
+      "id": "The lab's ID: the part of its models' IDs before the slash.",
+      "name": "The lab's display name."
+    }
+  },
+  "family": {
+    "description": "A family of models, and its name, such as \"Claude Opus\" for \"claude-opus\".",
+    "properties": {
+      "id": "The family's ID, as a model's \"family\" names it.",
+      "name": "The family's display name."
+    }
+  },
+  "model": {
+    "description": "A model as its lab describes it, apart from any provider, and the providers that offer it.",
+    "properties": {
+      "id": "The model's ID.",
+      "lab": "The ID of the lab that made the model: the part of the model's ID before the slash. A key of \"labs\".",
+      "name": "The model's display name.",
+      "family": "The ID of the model's family, a key of \"families\".",
+      "type": "The kind of model. Absent for a language model.",
+      "released": "When the model was released, as YYYY-MM-DD. Every model lists it.",
+      "updated": "When the model was last updated, as YYYY-MM-DD. Every model lists it.",
+      "knowledge": "The cutoff of the model's training data, as YYYY-MM or YYYY-MM-DD. Absent when not known.",
+      "open_weights": "Whether the model's weights are published.",
+      "license": "The license of the model's weights, such as \"Apache-2.0\".",
+      "reasoning": "Whether the model can reason before it answers.",
+      "capabilities": "What the model can do.",
+      "limit": "The model's token limits.",
+      "weights": "Where the model's weights can be downloaded.",
+      "links": "Pages about the model, such as its model card.",
+      "merged": "IDs of models that models.dev lists apart, but that are tiers of this model, such as \"openai/gpt-6-astra-fast\". Their offerings are this model's variants.",
+      "providers": "IDs of the providers that offer the model, in order. Each lists an offering of it under the model's ID."
+    }
+  },
+  "model_id": {
+    "description": "A model's ID: its lab's ID, a slash, and the model's ID at the lab, such as \"anthropic/claude-opus-5-5\", in lower-case letters, digits, \".\" and \"-\"."
+  },
+  "model_type": {
+    "description": "A kind of model other than a language model.",
+    "examples": ["embedding", "reranking", "image", "video", "speech", "transcription", "realtime"]
+  },
+  "capabilities": {
+    "description": "What a model can do.",
+    "properties": {
+      "tools": "Whether the model can call tools.",
+      "attachments": "Whether a request can attach files, such as images or PDFs.",
+      "structured_output": "Whether the model can answer in a JSON schema the request gives. Absent when not known.",
+      "temperature": "Whether a request can set the sampling temperature. Absent when not known.",
+      "input": "The kinds of content the model takes.",
+      "output": "The kinds of content the model makes."
+    }
+  },
+  "modality": {
+    "description": "A kind of content a model takes or makes.",
+    "examples": ["text", "image", "audio", "video", "pdf"]
+  },
+  "limit": {
+    "description": "A model's token limits.",
+    "properties": {
+      "context": "The context window, in tokens: the input and the output together.",
+      "input": "The most input tokens. Absent when the input may fill the context window.",
+      "output": "The most output tokens."
+    }
+  },
+  "weight": {
+    "description": "Where a model's weights can be downloaded.",
+    "properties": {
+      "label": "The link's text, such as \"Hugging Face\".",
+      "url": "The download page's URL.",
+      "format": "The format of the weight files, such as \"safetensors\".",
+      "quantization": "The precision the weights are stored at, such as \"fp8\"."
+    }
+  },
+  "link": {
+    "description": "A page about a model.",
+    "properties": {
+      "label": "The link's text.",
+      "url": "The page's URL.",
+      "type": "What the page is, such as \"model_card\", \"paper\", \"blog\" or \"docs\"."
+    }
+  },
+  "provider": {
+    "description": "A provider of models, and its offerings of them.",
+    "properties": {
+      "id": "The provider's ID.",
+      "name": "The provider's display name.",
+      "kind": "Whether the provider is a lab or a gateway.",
+      "type": "Whether the provider is official or a community one.",
+      "endpoint": "How to call the provider's API, unless an offering's \"provider_options\" names an endpoint of its own.",
+      "doc": "URL of the provider's documentation of its models.",
+      "models": "The provider's offerings, by model ID: the keys are keys of the catalog's \"models\".",
+      "unlisted": "The provider's models that are not in the catalog's \"models\", by the provider's model ID."
+    }
+  },
+  "provider_id": {
+    "description": "A provider's ID, such as \"openrouter\"."
+  },
+  "provider_kind": {
+    "description": "\"lab\" for a provider that serves the models it makes, \"gateway\" for one that serves models other labs make."
+  },
+  "provider_type": {
+    "description": "\"official\" for one of the few providers the catalog selects, \"community\" for any other provider models.dev lists."
+  },
+  "endpoint": {
+    "description": "How to call an API: its request format, its base URL, how it authenticates, and the environment variables it reads.",
+    "properties": {
+      "format": "The request format the API takes. Every endpoint the catalog lists has one: it leaves out the providers and offerings whose format it does not know.",
+      "api": "The API's base URL. It may hold environment variables as ${NAME}, such as ${AWS_REGION}, for a client to fill in.",
+      "api_default": "True when models.dev lists no base URL, and \"api\" is the one the provider's SDK uses by default.",
+      "auth": "How the API authenticates requests. Absent when not known.",
+      "env": "The environment variables the API reads: its keys and settings, such as \"OPENAI_API_KEY\" and \"AWS_REGION\"."
+    }
+  },
+  "format": {
+    "description": "An API's request format: how a client builds a request and reads the response. \"openai-chat\" is OpenAI's Chat Completions, \"openai-responses\" OpenAI's Responses, \"anthropic-messages\" Anthropic's Messages, \"anthropic-vertex\" Anthropic's Messages on Google Vertex AI, and \"gemini\" Google's Gemini generateContent. The catalog lists no provider or offering of another format."
+  },
+  "auth": {
+    "description": "How an API authenticates requests.",
+    "properties": {
+      "scheme": "How a request carries its credentials.",
+      "header": "The header that carries the API key, when \"scheme\" is \"header\", such as \"x-api-key\"."
+    }
+  },
+  "auth_scheme": {
+    "description": "How a request carries its credentials: \"bearer\" sends the API key as \"Authorization: Bearer <key>\", \"header\" sends it in the header \"header\" names, and \"google\" uses Google Cloud credentials."
+  },
+  "offering": {
+    "description": "A model as one provider serves it: the model's facts at that provider, and how to call it there.",
+    "properties": {
+      "name": "The offering's display name: its model's name, or, for an unlisted offering, one made from its key. The provider's own name is \"provider_options.name\".",
+      "family": "The ID of the model's family, as the provider lists it.",
+      "type": "The kind of model. Absent for a language model.",
+      "released": "When the model was released, as the provider lists it, as YYYY-MM-DD. Every offering lists it.",
+      "updated": "When the model was last updated, as the provider lists it, as YYYY-MM-DD. Every offering lists it.",
+      "knowledge": "The cutoff of the model's training data, as the provider lists it: YYYY-MM or YYYY-MM-DD. Absent when not known.",
+      "open_weights": "Whether the model's weights are published.",
+      "capabilities": "What the model can do at this provider.",
+      "limit": "The model's token limits at this provider.",
+      "reasoning": "The reasoning controls the offering takes. Absent when the model does not reason.",
+      "interleaved": "Present when the provider streams reasoning between the parts of the answer.",
+      "provider_options": "How to call the model at this provider: the model ID to send, and any endpoint, request fields and headers.",
+      "price": "What a call costs. Absent when no price is listed.",
+      "status": "The offering's lifecycle state. Absent when it is active.",
+      "variants": "Tiers and modes the provider offers on top of the offering, by key: the tier, the mode, or both as \"mode:tier\", such as \"fast\" and \"thinking:fast\".",
+      "aliases": "Other model IDs the provider takes for this model, such as a dated snapshot or another region. They have no price or variants of their own.",
+      "lab": "For an unlisted offering, the ID of the lab its model ID names, if it names one."
+    }
+  },
+  "provider_options": {
+    "description": "How to send a request to a provider: the model ID, and any endpoint, request fields and headers.",
+    "properties": {
+      "id": "The model ID to send.",
+      "name": "The provider's own name for the model.",
+      "endpoint": "The API to call, in place of the provider's \"endpoint\".",
+      "body": "Fields to merge into the request body, object by object.",
+      "headers": "Headers to send with the request."
+    }
+  },
+  "variant": {
+    "description": "A tier or a mode that an offering offers on top of its call, or both. Its \"provider_options\" change the offering's: an \"id\" or \"endpoint\" replaces the offering's, and \"body\" and \"headers\" merge into the offering's.",
+    "properties": {
+      "name": "The variant's display name: the offering's name and the variant's key, such as \"GPT-6.1 Sol Ultrafast\".",
+      "tier": "The service tier the variant runs in.",
+      "mode": "The mode the variant runs the model in, such as \"thinking\".",
+      "provider_options": "How the variant's call differs from the offering's.",
+      "price": "What a call costs. Absent when it costs what the offering costs.",
+      "status": "The variant's lifecycle state. Absent when it is active."
+    }
+  },
+  "tier": {
+    "description": "A service tier other than the standard one, which trades price for speed."
+  },
+  "status": {
+    "description": "A lifecycle state other than active."
+  },
+  "reasoning": {
+    "description": "The reasoning controls an offering takes, and how its model reasons when a request sets none. A fact that is absent is not known.",
+    "properties": {
+      "mandatory": "Whether reasoning cannot be turned off. When it can, \"efforts\" starts with \"none\".",
+      "default_enabled": "Whether the model reasons when a request says nothing of reasoning.",
+      "efforts": "The effort levels the offering takes, lowest first. \"none\" turns reasoning off, whatever field the provider's API turns it off by: a client sends it as its API does, such as Anthropic's thinking type \"disabled\".",
+      "default_effort": "The effort the model reasons at when a request names none, one of \"efforts\".",
+      "budget": "The range of reasoning token budgets the offering takes. Absent when it takes none."
+    }
+  },
+  "variant_names": {
+    "description": "The tiers and the modes the variants run in, and their names.",
+    "properties": {
+      "tiers": "The service tiers, and their names, by tier ID.",
+      "modes": "The modes, and their names, by mode ID."
+    }
+  },
+  "tier_name": {
+    "description": "A service tier, and its name, such as \"Ultrafast\" for \"ultrafast\".",
+    "properties": {
+      "id": "The tier's ID, as a variant's \"tier\" names it.",
+      "name": "The tier's display name."
+    }
+  },
+  "mode_name": {
+    "description": "A mode a variant runs its model in, and its name, such as \"Thinking\" for \"thinking\".",
+    "properties": {
+      "id": "The mode's ID, as a variant's \"mode\" names it.",
+      "name": "The mode's display name."
+    }
+  },
+  "effort_name": {
+    "description": "A reasoning effort, and its name, such as \"Extra High\" for \"xhigh\".",
+    "properties": {
+      "id": "The effort's ID, as an offering's \"efforts\" names it.",
+      "name": "The effort's display name."
+    }
+  },
+  "effort": {
+    "description": "A reasoning effort level. \"none\" turns reasoning off.",
+    "examples": ["none", "minimal", "low", "medium", "high", "xhigh", "max"]
+  },
+  "budget": {
+    "description": "A range of reasoning token budgets. A bound that is absent is not known.",
+    "properties": {
+      "min": "The smallest budget, in tokens.",
+      "max": "The largest budget, in tokens."
+    }
+  },
+  "interleaved": {
+    "description": "How a provider streams reasoning between the parts of an answer.",
+    "properties": {
+      "field": "The response field that carries the reasoning text, such as \"reasoning_content\". Absent when not known."
+    }
+  },
+  "price": {
+    "description": "What a call costs, in US dollars per million tokens.",
+    "properties": {
+      "input": "Per million input tokens.",
+      "output": "Per million output tokens.",
+      "cache_read": "Per million input tokens read from the prompt cache.",
+      "cache_write": "Per million input tokens written to the prompt cache.",
+      "reasoning": "Per million reasoning tokens, when they cost other than output tokens.",
+      "input_audio": "Per million input audio tokens.",
+      "output_audio": "Per million output audio tokens.",
+      "tiers": "The rates of long prompts, from the shortest: each applies to prompts longer than its \"above\"."
+    }
+  },
+  "price_tier": {
+    "description": "The rates of prompts longer than \"above\" tokens, in US dollars per million tokens.",
+    "properties": {
+      "above": "The prompt length, in tokens, above which these rates apply.",
+      "input": "Per million input tokens.",
+      "output": "Per million output tokens.",
+      "cache_read": "Per million input tokens read from the prompt cache.",
+      "cache_write": "Per million input tokens written to the prompt cache.",
+      "reasoning": "Per million reasoning tokens, when they cost other than output tokens.",
+      "input_audio": "Per million input audio tokens.",
+      "output_audio": "Per million output audio tokens.",
+      "estimated": "True when no source lists these rates, and the catalog estimated them from the standard tier's rates of long prompts."
+    }
+  }
+}

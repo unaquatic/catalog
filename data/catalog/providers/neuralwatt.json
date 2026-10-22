@@ -1,0 +1,781 @@
+{
+  "id": "neuralwatt",
+  "name": "Neuralwatt",
+  "kind": "gateway",
+  "type": "community",
+  "endpoint": {
+    "format": "openai-chat",
+    "api": "https://api.neuralwatt.com/v1",
+    "auth": {
+      "scheme": "bearer"
+    },
+    "env": [
+      "NEURALWATT_API_KEY"
+    ]
+  },
+  "doc": "https://portal.neuralwatt.com/docs",
+  "models": {
+    "alibaba/qwen3.6-35b-a3b": {
+      "name": "Qwen3.6 35B A3B",
+      "family": "qwen",
+      "released": "2026-04-17",
+      "updated": "2026-04-17",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 131056,
+        "output": 131056
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "high"
+        ],
+        "budget": {}
+      },
+      "interleaved": {},
+      "provider_options": {
+        "id": "qwen3.6-35b",
+        "name": "Qwen3.6 35B"
+      },
+      "price": {
+        "input": 0.29,
+        "output": 1.15,
+        "cache_read": 0.029
+      },
+      "variants": {
+        "fast": {
+          "name": "Qwen3.6 35B A3B Fast",
+          "tier": "fast",
+          "provider_options": {
+            "id": "qwen3.6-35b-fast",
+            "name": "Qwen3.6 35B Fast"
+          },
+          "price": {
+            "input": 0.29,
+            "output": 1.15,
+            "cache_read": 0.029
+          }
+        },
+        "flex": {
+          "name": "Qwen3.6 35B A3B Flex",
+          "tier": "flex",
+          "provider_options": {
+            "id": "qwen3.6-35b-flex",
+            "name": "Qwen3.6 35B Flex"
+          },
+          "price": {
+            "input": 0.1885,
+            "output": 0.7475,
+            "cache_read": 0.01885
+          }
+        }
+      }
+    },
+    "alibaba/qwen3.8-27b": {
+      "name": "Qwen3.8 27B",
+      "family": "qwen",
+      "released": "2026-08-14",
+      "updated": "2026-08-14",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262128,
+        "output": 131072
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "medium",
+          "xhigh"
+        ],
+        "budget": {}
+      },
+      "interleaved": {},
+      "provider_options": {
+        "id": "qwen-3.8-27b",
+        "name": "Qwen3.8 27B"
+      },
+      "price": {
+        "input": 0.45,
+        "output": 3.2,
+        "cache_read": 0.25
+      },
+      "variants": {
+        "flex": {
+          "name": "Qwen3.8 27B Flex",
+          "tier": "flex",
+          "provider_options": {
+            "id": "qwen-3.8-27b-flex",
+            "name": "Qwen3.8 27B Flex"
+          },
+          "price": {
+            "input": 0.2925,
+            "output": 2.08,
+            "cache_read": 0.1625
+          }
+        }
+      }
+    },
+    "deepseek/deepseek-v4-flash": {
+      "name": "DeepSeek V4 Flash",
+      "family": "deepseek-flash",
+      "released": "2026-04-24",
+      "updated": "2026-04-24",
+      "knowledge": "2025-05",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048560,
+        "output": 393216
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "high",
+          "max"
+        ]
+      },
+      "interleaved": {},
+      "provider_options": {
+        "id": "deepseek-v4-flash",
+        "name": "DeepSeek V4 Flash"
+      },
+      "price": {
+        "input": 0.14,
+        "output": 0.28,
+        "cache_read": 0.028
+      },
+      "variants": {
+        "flex": {
+          "name": "DeepSeek V4 Flash Flex",
+          "tier": "flex",
+          "provider_options": {
+            "id": "deepseek-v4-flash-flex",
+            "name": "DeepSeek V4 Flash Flex"
+          },
+          "price": {
+            "input": 0.091,
+            "output": 0.182,
+            "cache_read": 0.0182
+          }
+        }
+      }
+    },
+    "deepseek/deepseek-v4-flash-0731": {
+      "name": "DeepSeek V4 Flash 0731",
+      "family": "deepseek-flash",
+      "released": "2026-07-31",
+      "updated": "2026-07-31",
+      "knowledge": "2025-05",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048560,
+        "output": 393216
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "high",
+          "max"
+        ]
+      },
+      "interleaved": {},
+      "provider_options": {
+        "id": "deepseek-v4-flash-speed",
+        "name": "DeepSeek V4 Flash (Speed)"
+      },
+      "price": {
+        "input": 0.14,
+        "output": 0.28,
+        "cache_read": 0.028
+      }
+    },
+    "deepseek/deepseek-v4-pro": {
+      "name": "DeepSeek V4 Pro",
+      "family": "deepseek-thinking",
+      "released": "2026-04-24",
+      "updated": "2026-04-24",
+      "knowledge": "2025-05",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048560,
+        "output": 393216
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "high",
+          "max"
+        ],
+        "budget": {}
+      },
+      "interleaved": {},
+      "provider_options": {
+        "id": "deepseek-v4-pro",
+        "name": "DeepSeek V4 Pro"
+      },
+      "price": {
+        "input": 1,
+        "output": 3,
+        "cache_read": 0.1
+      },
+      "status": "deprecated"
+    },
+    "deepseek/deepseek-v4.1-flash": {
+      "name": "DeepSeek V4.1 Flash",
+      "family": "deepseek-flash",
+      "released": "2026-09-10",
+      "updated": "2026-09-10",
+      "knowledge": "2025-05",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048560,
+        "output": 393216
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "high",
+          "xhigh",
+          "max"
+        ]
+      },
+      "interleaved": {},
+      "provider_options": {
+        "id": "deepseek-v4.1-flash",
+        "name": "DeepSeek V4.1 Flash"
+      },
+      "price": {
+        "input": 0.15,
+        "output": 0.6,
+        "cache_read": 0.015
+      },
+      "variants": {
+        "flex": {
+          "name": "DeepSeek V4.1 Flash Flex",
+          "tier": "flex",
+          "provider_options": {
+            "id": "deepseek-v4.1-flash-flex",
+            "name": "DeepSeek V4.1 Flash Flex"
+          },
+          "price": {
+            "input": 0.0975,
+            "output": 0.39,
+            "cache_read": 0.00975
+          }
+        }
+      }
+    },
+    "google/gemma-4-31b-it": {
+      "name": "Gemma 4 31B IT",
+      "family": "gemma",
+      "released": "2026-04-02",
+      "updated": "2026-04-02",
+      "knowledge": "2025-01",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262128,
+        "output": 16384
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "max"
+        ]
+      },
+      "interleaved": {},
+      "provider_options": {
+        "id": "gemma-4-31b",
+        "name": "Gemma 4 31B"
+      },
+      "price": {
+        "input": 0.144,
+        "output": 0.42,
+        "cache_read": 0.0144
+      }
+    },
+    "moonshotai/kimi-k2.7-code": {
+      "name": "Kimi K2.7 Code",
+      "family": "kimi-k2",
+      "released": "2026-06-12",
+      "updated": "2026-06-12",
+      "knowledge": "2025-01",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262128,
+        "output": 262128
+      },
+      "reasoning": {
+        "budget": {}
+      },
+      "interleaved": {},
+      "provider_options": {
+        "id": "kimi-k2.7-code",
+        "name": "Kimi K2.7 Code"
+      },
+      "price": {
+        "input": 0.95,
+        "output": 4,
+        "cache_read": 0.095
+      },
+      "variants": {
+        "fast": {
+          "name": "Kimi K2.7 Code Fast",
+          "tier": "fast",
+          "provider_options": {
+            "id": "kimi-k2.7-code-fast",
+            "name": "Kimi K2.7 Code Fast"
+          },
+          "price": {
+            "input": 0.95,
+            "output": 4,
+            "cache_read": 0.095
+          }
+        },
+        "flex": {
+          "name": "Kimi K2.7 Code Flex",
+          "tier": "flex",
+          "provider_options": {
+            "id": "kimi-k2.7-code-flex",
+            "name": "Kimi K2.7 Code Flex"
+          },
+          "price": {
+            "input": 0.6175,
+            "output": 2.6,
+            "cache_read": 0.06175
+          }
+        }
+      }
+    },
+    "moonshotai/kimi-k3": {
+      "name": "Kimi K3",
+      "family": "kimi-k3",
+      "released": "2026-07-16",
+      "updated": "2026-07-16",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048560,
+        "output": 1048560
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "high",
+          "max"
+        ],
+        "budget": {}
+      },
+      "interleaved": {},
+      "provider_options": {
+        "id": "kimi-k3",
+        "name": "Kimi K3"
+      },
+      "price": {
+        "input": 3,
+        "output": 15,
+        "cache_read": 0.3
+      },
+      "variants": {
+        "fast": {
+          "name": "Kimi K3 Fast",
+          "tier": "fast",
+          "provider_options": {
+            "id": "kimi-k3-fast",
+            "name": "Kimi K3 Fast"
+          },
+          "price": {
+            "input": 3,
+            "output": 15,
+            "cache_read": 0.3
+          }
+        },
+        "flex": {
+          "name": "Kimi K3 Flex",
+          "tier": "flex",
+          "provider_options": {
+            "id": "kimi-k3-flex",
+            "name": "Kimi K3 Flex"
+          },
+          "price": {
+            "input": 1.95,
+            "output": 9.75,
+            "cache_read": 0.195
+          }
+        }
+      }
+    },
+    "xiaomi/mimo-v2.6-pro": {
+      "name": "MiMo V2.6 Pro",
+      "family": "mimo",
+      "released": "2026-09-22",
+      "updated": "2026-09-22",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "audio"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048560,
+        "output": 393216
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "high"
+        ],
+        "budget": {}
+      },
+      "interleaved": {},
+      "provider_options": {
+        "id": "mimo-v2.6-pro",
+        "name": "MiMo-V2.6-Pro"
+      },
+      "price": {
+        "input": 0.87,
+        "output": 1.74,
+        "cache_read": 0.036
+      },
+      "variants": {
+        "flex": {
+          "name": "MiMo V2.6 Pro Flex",
+          "tier": "flex",
+          "provider_options": {
+            "id": "mimo-v2.6-pro-flex",
+            "name": "MiMo-V2.6-Pro Flex"
+          },
+          "price": {
+            "input": 0.5655,
+            "output": 1.131,
+            "cache_read": 0.0234
+          }
+        }
+      }
+    },
+    "zhipuai/glm-5.2": {
+      "name": "GLM 5.2",
+      "family": "glm",
+      "released": "2026-06-17",
+      "updated": "2026-06-17",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048560,
+        "output": 1048560
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "high",
+          "max"
+        ],
+        "budget": {}
+      },
+      "interleaved": {},
+      "provider_options": {
+        "id": "glm-5.2",
+        "name": "GLM 5.2"
+      },
+      "price": {
+        "input": 1.45,
+        "output": 4.5,
+        "cache_read": 0.145
+      },
+      "status": "deprecated",
+      "variants": {
+        "fast": {
+          "name": "GLM 5.2 Fast",
+          "tier": "fast",
+          "provider_options": {
+            "id": "glm-5.2-fast",
+            "name": "GLM 5.2 Fast"
+          },
+          "price": {
+            "input": 1.45,
+            "output": 4.5,
+            "cache_read": 0.145
+          },
+          "status": "deprecated"
+        },
+        "flex": {
+          "name": "GLM 5.2 Flex",
+          "tier": "flex",
+          "provider_options": {
+            "id": "glm-5.2-flex",
+            "name": "GLM 5.2 Flex"
+          },
+          "price": {
+            "input": 0.9425,
+            "output": 2.925,
+            "cache_read": 0.09425
+          },
+          "status": "deprecated"
+        }
+      },
+      "aliases": [
+        "glm-5.2-short",
+        "glm-5.2-short-fast",
+        "glm-5.2-short-fast-flex",
+        "glm-5.2-short-flex"
+      ]
+    },
+    "zhipuai/glm-5.3": {
+      "name": "GLM 5.3",
+      "family": "glm",
+      "released": "2026-08-14",
+      "updated": "2026-08-14",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048560,
+        "output": 1048560
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "high",
+          "max"
+        ],
+        "budget": {}
+      },
+      "interleaved": {},
+      "provider_options": {
+        "id": "glm-5.3",
+        "name": "GLM 5.3"
+      },
+      "price": {
+        "input": 1.45,
+        "output": 4.5,
+        "cache_read": 0.145
+      },
+      "variants": {
+        "flex": {
+          "name": "GLM 5.3 Flex",
+          "tier": "flex",
+          "provider_options": {
+            "id": "glm-5.3-flex",
+            "name": "GLM 5.3 Flex"
+          },
+          "price": {
+            "input": 0.9425,
+            "output": 2.925,
+            "cache_read": 0.09425
+          }
+        }
+      }
+    },
+    "zhipuai/glm-5.3-flash": {
+      "name": "GLM 5.3 Flash",
+      "family": "glm-flash",
+      "released": "2026-08-26",
+      "updated": "2026-08-26",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": false,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048560,
+        "output": 1048560
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "high",
+          "max"
+        ],
+        "budget": {}
+      },
+      "interleaved": {},
+      "provider_options": {
+        "id": "glm-5.3-flash",
+        "name": "GLM-5.3 Flash"
+      },
+      "price": {
+        "input": 0.15,
+        "output": 0.5,
+        "cache_read": 0.03
+      },
+      "variants": {
+        "flex": {
+          "name": "GLM 5.3 Flash Flex",
+          "tier": "flex",
+          "provider_options": {
+            "id": "glm-5.3-flash-flex",
+            "name": "GLM-5.3 Flash Flex"
+          },
+          "price": {
+            "input": 0.0975,
+            "output": 0.325,
+            "cache_read": 0.0195
+          }
+        }
+      }
+    }
+  }
+}

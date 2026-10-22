@@ -1,0 +1,31 @@
+{
+  "lumalabs/ray2": {
+    "id": "lumalabs/ray2",
+    "lab": "lumalabs",
+    "name": "Ray2",
+    "family": "ray",
+    "released": "2025-02-20",
+    "updated": "2025-02-20",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "video"
+      ]
+    },
+    "limit": {
+      "context": 5000,
+      "output": 0
+    },
+    "providers": [
+      "poe"
+    ]
+  }
+}

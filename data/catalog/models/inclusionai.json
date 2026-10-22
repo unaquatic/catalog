@@ -1,0 +1,393 @@
+{
+  "inclusionai/ling-1t": {
+    "id": "inclusionai/ling-1t",
+    "lab": "inclusionai",
+    "name": "Ling 1T",
+    "family": "ling",
+    "released": "2025-10-09",
+    "updated": "2025-10-09",
+    "knowledge": "2024-06",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 32000
+    },
+    "providers": [
+      "bailing",
+      "zenmux"
+    ]
+  },
+  "inclusionai/ling-2.6-1t": {
+    "id": "inclusionai/ling-2.6-1t",
+    "lab": "inclusionai",
+    "name": "Ling 2.6 1T",
+    "family": "ling",
+    "released": "2026-04-23",
+    "updated": "2026-04-23",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "structured_output": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 262144
+    },
+    "providers": [
+      "requesty"
+    ]
+  },
+  "inclusionai/ling-2.6-flash": {
+    "id": "inclusionai/ling-2.6-flash",
+    "lab": "inclusionai",
+    "name": "Ling 2.6 Flash",
+    "family": "ling",
+    "released": "2026-04-21",
+    "updated": "2026-04-21",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "structured_output": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 262144
+    },
+    "providers": [
+      "opencode",
+      "requesty"
+    ]
+  },
+  "inclusionai/ling-3.0-flash": {
+    "id": "inclusionai/ling-3.0-flash",
+    "lab": "inclusionai",
+    "name": "Ling 3.0 Flash",
+    "family": "ling",
+    "released": "2026-07-23",
+    "updated": "2026-07-23",
+    "open_weights": true,
+    "license": "MIT",
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 32768
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/inclusionAI/Ling-3.0-flash"
+      }
+    ],
+    "providers": [
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "nano-gpt",
+      "novita-ai",
+      "opencode",
+      "openrouter",
+      "vercel"
+    ]
+  },
+  "inclusionai/ling-3.0-flash-fin": {
+    "id": "inclusionai/ling-3.0-flash-fin",
+    "lab": "inclusionai",
+    "name": "Ling 3.0 Flash Fin",
+    "family": "ling",
+    "released": "2026-08-27",
+    "updated": "2026-09-03",
+    "open_weights": true,
+    "license": "MIT",
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 32768
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/inclusionAI/Ling-3.0-flash-Fin"
+      }
+    ],
+    "providers": [
+      "novita-ai",
+      "opencode",
+      "vercel"
+    ]
+  },
+  "inclusionai/ling-3.0-flash-sante": {
+    "id": "inclusionai/ling-3.0-flash-sante",
+    "lab": "inclusionai",
+    "name": "Ling 3.0 Flash Sante",
+    "family": "ling",
+    "released": "2026-09-04",
+    "updated": "2026-09-04",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 32768
+    },
+    "providers": [
+      "novita-ai",
+      "vercel"
+    ]
+  },
+  "inclusionai/ling-3.0-flash-vl": {
+    "id": "inclusionai/ling-3.0-flash-vl",
+    "lab": "inclusionai",
+    "name": "Ling 3.0 Flash VL",
+    "family": "ling",
+    "released": "2026-09-10",
+    "updated": "2026-09-10",
+    "open_weights": true,
+    "license": "MIT",
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 32768
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/inclusionAI/Ling-3.0-flash-VL"
+      }
+    ],
+    "providers": [
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "nano-gpt",
+      "novita-ai",
+      "openrouter",
+      "vercel"
+    ]
+  },
+  "inclusionai/ling-3.0-tiny": {
+    "id": "inclusionai/ling-3.0-tiny",
+    "lab": "inclusionai",
+    "name": "Ling 3.0 Tiny",
+    "family": "ling",
+    "released": "2026-08-05",
+    "updated": "2026-08-05",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "structured_output": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 32768
+    },
+    "providers": [
+      "opencode",
+      "requesty"
+    ]
+  },
+  "inclusionai/ling-3.1-flash": {
+    "id": "inclusionai/ling-3.1-flash",
+    "lab": "inclusionai",
+    "name": "Ling 3.1 Flash",
+    "family": "ling",
+    "released": "2026-09-29",
+    "updated": "2026-09-29",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 32768
+    },
+    "providers": [
+      "commandcode",
+      "kilo",
+      "nano-gpt",
+      "novita-ai",
+      "opencode",
+      "openrouter",
+      "vercel"
+    ]
+  },
+  "inclusionai/ling-flash-2.0": {
+    "id": "inclusionai/ling-flash-2.0",
+    "lab": "inclusionai",
+    "name": "Ling Flash 2.0",
+    "family": "ling",
+    "released": "2025-09-18",
+    "updated": "2025-11-25",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131000,
+      "output": 131000
+    },
+    "providers": [
+      "siliconflow",
+      "siliconflow-cn"
+    ]
+  },
+  "inclusionai/ring-1t": {
+    "id": "inclusionai/ring-1t",
+    "lab": "inclusionai",
+    "name": "Ring 1T",
+    "family": "ring",
+    "released": "2025-10-12",
+    "updated": "2025-10-12",
+    "knowledge": "2024-06",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 32000
+    },
+    "providers": [
+      "bailing",
+      "zenmux"
+    ]
+  },
+  "inclusionai/ring-2.6-1t": {
+    "id": "inclusionai/ring-2.6-1t",
+    "lab": "inclusionai",
+    "name": "Ring 2.6 1T",
+    "family": "ring",
+    "released": "2026-05-08",
+    "updated": "2026-05-08",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "structured_output": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 262144
+    },
+    "providers": [
+      "opencode",
+      "requesty",
+      "zenmux"
+    ]
+  }
+}

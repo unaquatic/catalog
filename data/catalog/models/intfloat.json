@@ -1,0 +1,86 @@
+{
+  "intfloat/e5-large-v2": {
+    "id": "intfloat/e5-large-v2",
+    "lab": "intfloat",
+    "name": "E5 Large V2",
+    "type": "embedding",
+    "released": "2023-05-19",
+    "updated": "2023-05-19",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 512,
+      "output": 1024
+    },
+    "providers": [
+      "digitalocean"
+    ]
+  },
+  "intfloat/e5-mistral-7b-instruct": {
+    "id": "intfloat/e5-mistral-7b-instruct",
+    "lab": "intfloat",
+    "name": "E5 Mistral 7B Instruct",
+    "family": "mistral",
+    "released": "2023-12-11",
+    "updated": "2023-12-11",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "structured_output": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 4096,
+      "output": 4096
+    },
+    "providers": [
+      "stackit"
+    ]
+  },
+  "intfloat/multilingual-e5-large-instruct": {
+    "id": "intfloat/multilingual-e5-large-instruct",
+    "lab": "intfloat",
+    "name": "Multilingual E5 Large Instruct",
+    "family": "text-embedding",
+    "released": "2024-06-01",
+    "updated": "2024-06-01",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 512,
+      "output": 512
+    },
+    "providers": [
+      "evroc"
+    ]
+  }
+}

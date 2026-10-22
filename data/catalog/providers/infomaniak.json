@@ -1,0 +1,369 @@
+{
+  "id": "infomaniak",
+  "name": "Infomaniak",
+  "kind": "gateway",
+  "type": "community",
+  "endpoint": {
+    "format": "openai-chat",
+    "api": "https://api.infomaniak.com/2/ai/${INFOMANIAK_PRODUCT_ID}/openai/v1",
+    "auth": {
+      "scheme": "bearer"
+    },
+    "env": [
+      "INFOMANIAK_API_KEY",
+      "INFOMANIAK_PRODUCT_ID"
+    ]
+  },
+  "doc": "https://www.infomaniak.com/en/hosting/ai-services/open-source-models",
+  "models": {
+    "alibaba/qwen3.5-122b-a10b": {
+      "name": "Qwen3.5 122B A10B",
+      "family": "qwen",
+      "released": "2026-02-23",
+      "updated": "2026-08-01",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 200000,
+        "input": 200000,
+        "output": 65536
+      },
+      "reasoning": {
+        "mandatory": false
+      },
+      "interleaved": {},
+      "provider_options": {
+        "id": "Qwen/Qwen3.5-122B-A10B-FP8",
+        "name": "Qwen3.5 122B-A10B FP8"
+      },
+      "price": {
+        "input": 0.5,
+        "output": 3.97
+      }
+    },
+    "alibaba/qwen3.5-397b-a17b": {
+      "name": "Qwen3.5 397B A17B",
+      "family": "qwen",
+      "released": "2026-02-15",
+      "updated": "2026-08-01",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 200000,
+        "input": 200000,
+        "output": 65536
+      },
+      "reasoning": {
+        "mandatory": false
+      },
+      "interleaved": {},
+      "provider_options": {
+        "id": "Qwen/Qwen3.5-397B-A17B-FP8",
+        "name": "Qwen3.5 397B-A17B FP8"
+      },
+      "price": {
+        "input": 0.99,
+        "output": 4.46
+      },
+      "status": "beta"
+    },
+    "baai/bge-multilingual-gemma2": {
+      "name": "BGE Multilingual Gemma 2",
+      "family": "text-embedding",
+      "released": "2024-07-25",
+      "updated": "2026-08-01",
+      "open_weights": true,
+      "capabilities": {
+        "tools": false,
+        "attachments": false,
+        "temperature": false,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 8000,
+        "input": 8000,
+        "output": 3584
+      },
+      "provider_options": {
+        "id": "bge_multilingual_gemma2",
+        "name": "BGE Multilingual Gemma2"
+      },
+      "price": {
+        "input": 0.08,
+        "output": 0
+      }
+    },
+    "google/gemma-4-31b-it": {
+      "name": "Gemma 4 31B IT",
+      "family": "gemma",
+      "released": "2026-04-02",
+      "updated": "2026-08-01",
+      "knowledge": "2025-01",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 100000,
+        "input": 100000,
+        "output": 32768
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "google/gemma-4-31B-it",
+        "name": "Gemma 4 31B IT"
+      },
+      "price": {
+        "input": 0.25,
+        "output": 0.5
+      }
+    },
+    "mistral/ministral-3-14b-instruct-2512": {
+      "name": "Ministral 3 14B Instruct 2512",
+      "family": "ministral",
+      "released": "2025-12-02",
+      "updated": "2026-08-01",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 100000,
+        "input": 100000,
+        "output": 25600
+      },
+      "provider_options": {
+        "id": "mistralai/Ministral-3-14B-Instruct-2512",
+        "name": "Ministral 3 14B Instruct"
+      },
+      "price": {
+        "input": 0.37,
+        "output": 0.5
+      },
+      "status": "beta"
+    },
+    "mistral/mistral-small-2603": {
+      "name": "Mistral Small 2603",
+      "family": "mistral-small",
+      "released": "2026-03-16",
+      "updated": "2026-08-01",
+      "knowledge": "2025-06",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 256000,
+        "input": 256000,
+        "output": 256000
+      },
+      "reasoning": {},
+      "interleaved": {},
+      "provider_options": {
+        "id": "mistralai/Mistral-Small-4-119B-2603",
+        "name": "Mistral Small 4"
+      },
+      "price": {
+        "input": 0.25,
+        "output": 0.93
+      }
+    },
+    "moonshotai/kimi-k2.6": {
+      "name": "Kimi K2.6",
+      "family": "kimi-k2",
+      "released": "2026-04-20",
+      "updated": "2026-08-01",
+      "knowledge": "2025-01",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 256000,
+        "input": 256000,
+        "output": 256000
+      },
+      "reasoning": {
+        "mandatory": false
+      },
+      "interleaved": {},
+      "provider_options": {
+        "id": "moonshotai/Kimi-K2.6",
+        "name": "Kimi K2.6"
+      },
+      "price": {
+        "input": 0.74,
+        "output": 3.72
+      },
+      "status": "beta"
+    },
+    "nvidia/nemotron-3-nano-30b-a3b": {
+      "name": "Nemotron 3 Nano 30B A3B",
+      "family": "nemotron",
+      "released": "2025-12-15",
+      "updated": "2026-08-01",
+      "knowledge": "2025-06-25",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "input": 1000000,
+        "output": 262144
+      },
+      "reasoning": {
+        "mandatory": false
+      },
+      "interleaved": {},
+      "provider_options": {
+        "id": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-FP8",
+        "name": "Nemotron 3 Nano 30B A3B FP8"
+      },
+      "price": {
+        "input": 0.06,
+        "output": 0.25
+      },
+      "status": "beta"
+    },
+    "sentence-transformers/mini-lm-l12-v2": {
+      "name": "Mini Lm L12 V2",
+      "family": "text-embedding",
+      "released": "2021-08-30",
+      "updated": "2026-08-01",
+      "open_weights": true,
+      "capabilities": {
+        "tools": false,
+        "attachments": false,
+        "temperature": false,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 128,
+        "input": 128,
+        "output": 384
+      },
+      "provider_options": {
+        "id": "mini_lm_l12_v2",
+        "name": "All-MiniLM-L12-v2"
+      },
+      "price": {
+        "input": 0,
+        "output": 0
+      }
+    },
+    "swiss-ai/apertus-v1.5-70b": {
+      "name": "Apertus V1.5 70B",
+      "released": "2026-07-24",
+      "updated": "2026-08-01",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "audio"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 100000,
+        "input": 100000,
+        "output": 8192
+      },
+      "provider_options": {
+        "id": "swiss-ai/Apertus-v1.5-70B",
+        "name": "Apertus v1.5 70B"
+      },
+      "price": {
+        "input": 0.87,
+        "output": 3.1
+      },
+      "status": "beta"
+    }
+  }
+}

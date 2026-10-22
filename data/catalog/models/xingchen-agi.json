@@ -1,0 +1,32 @@
+{
+  "xingchen-agi/xing4.0-29b-a4b-free": {
+    "id": "xingchen-agi/xing4.0-29b-a4b-free",
+    "lab": "xingchen-agi",
+    "name": "Xing4.0 29B A4B Free",
+    "family": "agi",
+    "released": "2026-10-16",
+    "updated": "2026-10-16",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 235929
+    },
+    "providers": [
+      "kilo",
+      "openrouter"
+    ]
+  }
+}

@@ -1,0 +1,387 @@
+{
+  "perplexity/pplx-decider-flash-latest": {
+    "id": "perplexity/pplx-decider-flash-latest",
+    "lab": "perplexity",
+    "name": "Pplx Decider Flash Latest",
+    "type": "decision",
+    "released": "2026-10-16",
+    "updated": "2026-10-16",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "structured_output": false,
+      "temperature": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 0
+    },
+    "providers": [
+      "openrouter"
+    ]
+  },
+  "perplexity/pplx-decider-flash-v1.2": {
+    "id": "perplexity/pplx-decider-flash-v1.2",
+    "lab": "perplexity",
+    "name": "Pplx Decider Flash V1.2",
+    "type": "decision",
+    "released": "2026-10-16",
+    "updated": "2026-10-16",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "structured_output": false,
+      "temperature": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 0
+    },
+    "providers": [
+      "openrouter",
+      "vercel"
+    ]
+  },
+  "perplexity/pplx-decider-latest": {
+    "id": "perplexity/pplx-decider-latest",
+    "lab": "perplexity",
+    "name": "Pplx Decider Latest",
+    "type": "decision",
+    "released": "2026-10-14",
+    "updated": "2026-10-14",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "structured_output": false,
+      "temperature": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 0
+    },
+    "providers": [
+      "openrouter"
+    ]
+  },
+  "perplexity/pplx-decider-v1.2": {
+    "id": "perplexity/pplx-decider-v1.2",
+    "lab": "perplexity",
+    "name": "Pplx Decider V1.2",
+    "type": "decision",
+    "released": "2026-10-16",
+    "updated": "2026-10-16",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "structured_output": false,
+      "temperature": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 0
+    },
+    "providers": [
+      "openrouter",
+      "vercel"
+    ]
+  },
+  "perplexity/pplx-embed-v1-0.6b": {
+    "id": "perplexity/pplx-embed-v1-0.6b",
+    "lab": "perplexity",
+    "name": "Pplx Embed V1 0.6B",
+    "family": "v0",
+    "type": "embedding",
+    "released": "2026-02-26",
+    "updated": "2026-02-26",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32000,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "perplexity/pplx-embed-v1-4b": {
+    "id": "perplexity/pplx-embed-v1-4b",
+    "lab": "perplexity",
+    "name": "Pplx Embed V1 4B",
+    "type": "embedding",
+    "released": "2026-02-26",
+    "updated": "2026-02-26",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32000,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "perplexity/sonar": {
+    "id": "perplexity/sonar",
+    "lab": "perplexity",
+    "name": "Sonar",
+    "family": "sonar",
+    "released": "2024-01-01",
+    "updated": "2025-09-01",
+    "knowledge": "2025-09-01",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 4096
+    },
+    "providers": [
+      "aimlapi",
+      "edenai",
+      "helicone",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "openrouter",
+      "opper",
+      "perplexity",
+      "perplexity-agent",
+      "vercel"
+    ]
+  },
+  "perplexity/sonar-deep-research": {
+    "id": "perplexity/sonar-deep-research",
+    "lab": "perplexity",
+    "name": "Sonar Deep Research",
+    "family": "sonar",
+    "released": "2025-02-01",
+    "updated": "2025-09-01",
+    "knowledge": "2025-01",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 32768
+    },
+    "providers": [
+      "edenai",
+      "helicone",
+      "kilo",
+      "llmtr",
+      "openrouter",
+      "perplexity"
+    ]
+  },
+  "perplexity/sonar-pro": {
+    "id": "perplexity/sonar-pro",
+    "lab": "perplexity",
+    "name": "Sonar Pro",
+    "family": "sonar-pro",
+    "released": "2024-01-01",
+    "updated": "2025-09-01",
+    "knowledge": "2025-09-01",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 200000,
+      "output": 8192
+    },
+    "providers": [
+      "aimlapi",
+      "anyapi",
+      "edenai",
+      "helicone",
+      "kilo",
+      "openrouter",
+      "opper",
+      "perplexity"
+    ]
+  },
+  "perplexity/sonar-pro-search": {
+    "id": "perplexity/sonar-pro-search",
+    "lab": "perplexity",
+    "name": "Sonar Pro Search",
+    "family": "sonar-pro",
+    "released": "2025-10-30",
+    "updated": "2025-10-30",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 200000,
+      "output": 8000
+    },
+    "providers": [
+      "kilo",
+      "openrouter"
+    ]
+  },
+  "perplexity/sonar-reasoning": {
+    "id": "perplexity/sonar-reasoning",
+    "lab": "perplexity",
+    "name": "Sonar Reasoning",
+    "family": "sonar-reasoning",
+    "released": "2025-01-27",
+    "updated": "2025-01-27",
+    "knowledge": "2025-01",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 127000,
+      "output": 4096
+    },
+    "providers": [
+      "helicone"
+    ]
+  },
+  "perplexity/sonar-reasoning-pro": {
+    "id": "perplexity/sonar-reasoning-pro",
+    "lab": "perplexity",
+    "name": "Sonar Reasoning Pro",
+    "family": "sonar-reasoning",
+    "released": "2024-01-01",
+    "updated": "2025-09-01",
+    "knowledge": "2025-09-01",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 4096
+    },
+    "providers": [
+      "anyapi",
+      "edenai",
+      "helicone",
+      "kilo",
+      "openrouter",
+      "opper",
+      "perplexity"
+    ]
+  }
+}

@@ -1,0 +1,409 @@
+{
+  "id": "crusoe",
+  "name": "Crusoe",
+  "kind": "gateway",
+  "type": "community",
+  "endpoint": {
+    "format": "openai-chat",
+    "api": "https://api.inference.crusoecloud.com/v1",
+    "auth": {
+      "scheme": "bearer"
+    },
+    "env": [
+      "CRUSOE_API_KEY"
+    ]
+  },
+  "doc": "https://docs.crusoecloud.com/managed-inference/overview",
+  "models": {
+    "alibaba/qwen3-235b-a22b-instruct-2507": {
+      "name": "Qwen3 235B A22B Instruct 2507",
+      "family": "qwen",
+      "released": "2025-07-21",
+      "updated": "2025-07-21",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 16384
+      },
+      "provider_options": {
+        "id": "Qwen/Qwen3-235B-A22B-Instruct-2507",
+        "name": "Qwen3 235B-A22B Instruct 2507"
+      },
+      "price": {
+        "input": 0.22,
+        "output": 0.8,
+        "cache_read": 0.11
+      }
+    },
+    "deepseek/deepseek-v3-0324": {
+      "name": "DeepSeek V3 0324",
+      "family": "deepseek",
+      "released": "2025-03-24",
+      "updated": "2025-03-24",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 163840,
+        "output": 163840
+      },
+      "provider_options": {
+        "id": "deepseek-ai/DeepSeek-V3-0324",
+        "name": "DeepSeek V3 0324"
+      },
+      "price": {
+        "input": 0.5,
+        "output": 1.5,
+        "cache_read": 0.25
+      }
+    },
+    "google/gemma-4-31b-it": {
+      "name": "Gemma 4 31B IT",
+      "family": "gemma",
+      "released": "2026-04-02",
+      "updated": "2026-04-02",
+      "knowledge": "2025-01",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 32768
+      },
+      "reasoning": {
+        "mandatory": false
+      },
+      "provider_options": {
+        "id": "google/gemma-4-31b-it",
+        "name": "Gemma 4 31B IT"
+      },
+      "price": {
+        "input": 0.14,
+        "output": 0.4,
+        "cache_read": 0.14
+      }
+    },
+    "meta/llama-3.3-70b-instruct": {
+      "name": "Llama 3.3 70B Instruct",
+      "family": "llama",
+      "released": "2024-12-06",
+      "updated": "2024-12-06",
+      "knowledge": "2023-12",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 128000,
+        "output": 4096
+      },
+      "provider_options": {
+        "id": "meta-llama/Llama-3.3-70B-Instruct",
+        "name": "Llama-3.3-70B-Instruct"
+      },
+      "price": {
+        "input": 0.25,
+        "output": 0.75,
+        "cache_read": 0.13
+      }
+    },
+    "moonshotai/kimi-k2.6": {
+      "name": "Kimi K2.6",
+      "family": "kimi-k2",
+      "released": "2026-04-20",
+      "updated": "2026-04-20",
+      "knowledge": "2025-01",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "reasoning": {
+        "mandatory": false
+      },
+      "interleaved": {},
+      "provider_options": {
+        "id": "moonshotai/Kimi-K2.6",
+        "name": "Kimi K2.6"
+      },
+      "price": {
+        "input": 0.7,
+        "output": 3.5,
+        "cache_read": 0.35
+      }
+    },
+    "nvidia/nemotron-3-nano-30b-a3b": {
+      "name": "Nemotron 3 Nano 30B A3B",
+      "family": "nemotron",
+      "released": "2025-12-15",
+      "updated": "2025-12-15",
+      "knowledge": "2025-06-25",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "reasoning": {
+        "mandatory": false
+      },
+      "provider_options": {
+        "id": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+        "name": "Nemotron 3 Nano 30B A3B"
+      },
+      "price": {
+        "input": 0.05,
+        "output": 0.2,
+        "cache_read": 0.03
+      }
+    },
+    "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning": {
+      "name": "Nemotron 3 Nano Omni 30B A3B Reasoning",
+      "family": "nemotron",
+      "released": "2026-04-28",
+      "updated": "2026-04-28",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "video",
+          "audio"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 256000,
+        "output": 65536
+      },
+      "reasoning": {
+        "mandatory": false
+      },
+      "interleaved": {},
+      "provider_options": {
+        "id": "nvidia/Nemotron-3-Nano-Omni-Reasoning-30B-A3B",
+        "name": "Nemotron 3 Nano Omni 30B A3B Reasoning"
+      },
+      "price": {
+        "input": 0.3,
+        "output": 1.83,
+        "cache_read": 0.3,
+        "input_audio": 0.5
+      }
+    },
+    "nvidia/nemotron-3-super-120b-a12b": {
+      "name": "Nemotron 3 Super 120B A12B",
+      "family": "nemotron",
+      "released": "2026-03-11",
+      "updated": "2026-03-11",
+      "knowledge": "2025-06",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "reasoning": {
+        "mandatory": false
+      },
+      "provider_options": {
+        "id": "nvidia/NVIDIA-Nemotron-3-Super-120B-A12B",
+        "name": "Nemotron 3 Super 120B A12B"
+      },
+      "price": {
+        "input": 0.3,
+        "output": 2.4,
+        "cache_read": 0.15
+      }
+    },
+    "openai/gpt-oss-120b": {
+      "name": "GPT OSS 120B",
+      "family": "gpt-oss",
+      "released": "2025-08-05",
+      "updated": "2025-08-05",
+      "knowledge": "2024-06",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 131072,
+        "output": 32768
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "interleaved": {},
+      "provider_options": {
+        "id": "openai/gpt-oss-120b",
+        "name": "GPT OSS 120B"
+      },
+      "price": {
+        "input": 0.05,
+        "output": 0.2,
+        "cache_read": 0.05
+      }
+    },
+    "zhipuai/glm-5.1": {
+      "name": "GLM 5.1",
+      "family": "glm",
+      "released": "2026-04-07",
+      "updated": "2026-04-07",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 200000,
+        "output": 131072
+      },
+      "reasoning": {},
+      "interleaved": {},
+      "provider_options": {
+        "id": "zai/GLM-5.1",
+        "name": "GLM-5.1"
+      },
+      "price": {
+        "input": 1.2,
+        "output": 4.4,
+        "cache_read": 0.25
+      }
+    },
+    "zhipuai/glm-5.2": {
+      "name": "GLM 5.2",
+      "family": "glm",
+      "released": "2026-06-13",
+      "updated": "2026-06-13",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "reasoning": {
+        "mandatory": false
+      },
+      "interleaved": {},
+      "provider_options": {
+        "id": "zai/GLM-5.2",
+        "name": "GLM-5.2"
+      },
+      "price": {
+        "input": 1.4,
+        "output": 4.4,
+        "cache_read": 0.26
+      }
+    }
+  }
+}

@@ -1,0 +1,1802 @@
+{
+  "deepseek/deepseek-chat": {
+    "id": "deepseek/deepseek-chat",
+    "lab": "deepseek",
+    "name": "DeepSeek Chat",
+    "family": "deepseek",
+    "released": "2025-12-01",
+    "updated": "2026-02-28",
+    "knowledge": "2025-09",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 384000
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/deepseek-ai/DeepSeek-V3.2"
+      }
+    ],
+    "providers": [
+      "anyapi",
+      "edenai",
+      "kilo",
+      "nano-gpt",
+      "openrouter",
+      "orcarouter",
+      "zenmux"
+    ]
+  },
+  "deepseek/deepseek-chat-cheaper": {
+    "id": "deepseek/deepseek-chat-cheaper",
+    "lab": "deepseek",
+    "name": "DeepSeek Chat Cheaper",
+    "family": "deepseek",
+    "released": "2025-04-15",
+    "updated": "2025-04-15",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": true,
+      "input": [
+        "text",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "input": 128000,
+      "output": 8192
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "deepseek/deepseek-chat-v3-0324": {
+    "id": "deepseek/deepseek-chat-v3-0324",
+    "lab": "deepseek",
+    "name": "DeepSeek Chat V3 0324",
+    "family": "deepseek",
+    "released": "2025-03-24",
+    "updated": "2025-03-24",
+    "knowledge": "2024-07-31",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 163840,
+      "output": 147456
+    },
+    "providers": [
+      "aimlapi",
+      "kilo",
+      "openrouter"
+    ]
+  },
+  "deepseek/deepseek-chat-v3.1": {
+    "id": "deepseek/deepseek-chat-v3.1",
+    "lab": "deepseek",
+    "name": "DeepSeek Chat V3.1",
+    "family": "deepseek",
+    "released": "2025-08-21",
+    "updated": "2025-08-21",
+    "knowledge": "2025-03-31",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 163840,
+      "output": 32768
+    },
+    "providers": [
+      "kilo",
+      "openrouter"
+    ]
+  },
+  "deepseek/deepseek-latest": {
+    "id": "deepseek/deepseek-latest",
+    "lab": "deepseek",
+    "name": "DeepSeek Latest",
+    "family": "deepseek",
+    "released": "2026-05-03",
+    "updated": "2026-05-03",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "structured_output": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "input": 1048576,
+      "output": 384000
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "deepseek/deepseek-math-v2": {
+    "id": "deepseek/deepseek-math-v2",
+    "lab": "deepseek",
+    "name": "DeepSeek Math V2",
+    "released": "2025-12-04",
+    "updated": "2025-12-04",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "structured_output": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 160000,
+      "output": 160000
+    },
+    "providers": [
+      "qiniu-ai"
+    ]
+  },
+  "deepseek/deepseek-ocr": {
+    "id": "deepseek/deepseek-ocr",
+    "lab": "deepseek",
+    "name": "DeepSeek OCR",
+    "family": "deepseek",
+    "released": "2025-10-20",
+    "updated": "2026-02-25",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 8192,
+      "output": 8192
+    },
+    "providers": [
+      "clarifai",
+      "siliconflow-cn"
+    ]
+  },
+  "deepseek/deepseek-ocr-2": {
+    "id": "deepseek/deepseek-ocr-2",
+    "lab": "deepseek",
+    "name": "DeepSeek OCR 2",
+    "released": "2026-01-27",
+    "updated": "2026-01-27",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 8192,
+      "output": 8192
+    },
+    "providers": [
+      "novita-ai",
+      "privatemode-ai",
+      "regolo-ai"
+    ]
+  },
+  "deepseek/deepseek-pro-latest": {
+    "id": "deepseek/deepseek-pro-latest",
+    "lab": "deepseek",
+    "name": "DeepSeek Pro Latest",
+    "family": "deepseek",
+    "released": "2026-09-14",
+    "updated": "2026-09-14",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "output": 393216
+    },
+    "providers": [
+      "kilo",
+      "openrouter",
+      "the-grid-ai"
+    ]
+  },
+  "deepseek/deepseek-r1": {
+    "id": "deepseek/deepseek-r1",
+    "lab": "deepseek",
+    "name": "DeepSeek R1",
+    "family": "deepseek-thinking",
+    "released": "2025-01-20",
+    "updated": "2025-05-29",
+    "knowledge": "2024-07",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 32768
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/deepseek-ai/DeepSeek-R1"
+      }
+    ],
+    "providers": [
+      "abacus",
+      "alibaba-cn",
+      "azure",
+      "azure-cognitive-services",
+      "cloudflare-workers-ai",
+      "drun",
+      "edenai",
+      "huggingface",
+      "iflowcn",
+      "melious",
+      "novita-ai",
+      "qiniu-ai",
+      "siliconflow",
+      "siliconflow-cn",
+      "snowflake-cortex",
+      "tensorx",
+      "togetherai",
+      "vercel"
+    ]
+  },
+  "deepseek/deepseek-r1-0528": {
+    "id": "deepseek/deepseek-r1-0528",
+    "lab": "deepseek",
+    "name": "DeepSeek R1 0528",
+    "family": "deepseek-thinking",
+    "released": "2025-05-28",
+    "updated": "2025-05-28",
+    "open_weights": true,
+    "license": "MIT",
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 163840,
+      "output": 32768
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/deepseek-ai/DeepSeek-R1-0528"
+      }
+    ],
+    "providers": [
+      "alibaba-cn",
+      "deepinfra",
+      "edenai",
+      "huggingface",
+      "io-net",
+      "jiekou",
+      "kilo",
+      "meganova",
+      "nano-gpt",
+      "novita-ai",
+      "openrouter",
+      "qiniu-ai",
+      "submodel"
+    ]
+  },
+  "deepseek/deepseek-r1-0528-qwen3-8b": {
+    "id": "deepseek/deepseek-r1-0528-qwen3-8b",
+    "lab": "deepseek",
+    "name": "DeepSeek R1 0528 Qwen3 8B",
+    "family": "deepseek-thinking",
+    "released": "2025-05-29",
+    "updated": "2025-05-29",
+    "open_weights": true,
+    "license": "MIT",
+    "reasoning": true,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 32000
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/deepseek-ai/DeepSeek-R1-0528-Qwen3-8B"
+      }
+    ],
+    "providers": [
+      "novita-ai"
+    ]
+  },
+  "deepseek/deepseek-r1-distill-llama-70b": {
+    "id": "deepseek/deepseek-r1-distill-llama-70b",
+    "lab": "deepseek",
+    "name": "DeepSeek R1 Distill Llama 70B",
+    "family": "deepseek-thinking",
+    "released": "2025-01-01",
+    "updated": "2025-01-01",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32768,
+      "output": 16384
+    },
+    "providers": [
+      "alibaba-cn",
+      "digitalocean",
+      "fastrouter",
+      "helicone"
+    ]
+  },
+  "deepseek/deepseek-r1-distill-llama-70b-abliterated": {
+    "id": "deepseek/deepseek-r1-distill-llama-70b-abliterated",
+    "lab": "deepseek",
+    "name": "DeepSeek R1 Distill Llama 70B Abliterated",
+    "family": "deepseek",
+    "released": "2024-01-01",
+    "updated": "2025-01-20",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "structured_output": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 16384,
+      "input": 16384,
+      "output": 8192
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "deepseek/deepseek-r1-distill-llama-8b": {
+    "id": "deepseek/deepseek-r1-distill-llama-8b",
+    "lab": "deepseek",
+    "name": "DeepSeek R1 Distill Llama 8B",
+    "family": "deepseek-thinking",
+    "released": "2025-01-01",
+    "updated": "2025-01-01",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32768,
+      "output": 16384
+    },
+    "providers": [
+      "alibaba-cn"
+    ]
+  },
+  "deepseek/deepseek-r1-distill-qwen-1-5b": {
+    "id": "deepseek/deepseek-r1-distill-qwen-1-5b",
+    "lab": "deepseek",
+    "name": "DeepSeek R1 Distill Qwen 1 5B",
+    "family": "qwen",
+    "released": "2025-01-01",
+    "updated": "2025-01-01",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32768,
+      "output": 16384
+    },
+    "providers": [
+      "alibaba-cn"
+    ]
+  },
+  "deepseek/deepseek-r1-distill-qwen-14b": {
+    "id": "deepseek/deepseek-r1-distill-qwen-14b",
+    "lab": "deepseek",
+    "name": "DeepSeek R1 Distill Qwen 14B",
+    "family": "qwen",
+    "released": "2025-01-01",
+    "updated": "2025-01-01",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32768,
+      "output": 16384
+    },
+    "providers": [
+      "alibaba-cn"
+    ]
+  },
+  "deepseek/deepseek-r1-distill-qwen-32b": {
+    "id": "deepseek/deepseek-r1-distill-qwen-32b",
+    "lab": "deepseek",
+    "name": "DeepSeek R1 Distill Qwen 32B",
+    "family": "deepseek-thinking",
+    "released": "2025-01-20",
+    "updated": "2025-01-20",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 32768
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-32B"
+      }
+    ],
+    "providers": [
+      "alibaba-cn"
+    ]
+  },
+  "deepseek/deepseek-r1-distill-qwen-32b-abliterated": {
+    "id": "deepseek/deepseek-r1-distill-qwen-32b-abliterated",
+    "lab": "deepseek",
+    "name": "DeepSeek R1 Distill Qwen 32B Abliterated",
+    "family": "qwen",
+    "released": "2024-01-01",
+    "updated": "2025-01-20",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "structured_output": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 16384,
+      "input": 16384,
+      "output": 8192
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "deepseek/deepseek-r1-distill-qwen-7b": {
+    "id": "deepseek/deepseek-r1-distill-qwen-7b",
+    "lab": "deepseek",
+    "name": "DeepSeek R1 Distill Qwen 7B",
+    "family": "qwen",
+    "released": "2025-01-01",
+    "updated": "2025-01-01",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32768,
+      "output": 16384
+    },
+    "providers": [
+      "alibaba-cn"
+    ]
+  },
+  "deepseek/deepseek-reasoner": {
+    "id": "deepseek/deepseek-reasoner",
+    "lab": "deepseek",
+    "name": "DeepSeek Reasoner",
+    "family": "deepseek-thinking",
+    "released": "2025-12-01",
+    "updated": "2026-02-28",
+    "knowledge": "2025-09",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 384000
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/deepseek-ai/DeepSeek-V3.2"
+      }
+    ],
+    "providers": [
+      "anyapi",
+      "helicone",
+      "orcarouter"
+    ]
+  },
+  "deepseek/deepseek-tng-r1t2-chimera": {
+    "id": "deepseek/deepseek-tng-r1t2-chimera",
+    "lab": "deepseek",
+    "name": "DeepSeek TNG R1T2 Chimera",
+    "family": "deepseek-thinking",
+    "released": "2025-07-02",
+    "updated": "2025-07-02",
+    "knowledge": "2025-07",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 130000,
+      "output": 163840
+    },
+    "providers": [
+      "helicone"
+    ]
+  },
+  "deepseek/deepseek-v3": {
+    "id": "deepseek/deepseek-v3",
+    "lab": "deepseek",
+    "name": "DeepSeek V3",
+    "family": "deepseek",
+    "released": "2024-12-26",
+    "updated": "2024-12-26",
+    "open_weights": true,
+    "license": "DeepSeek Model License",
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 8192
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/deepseek-ai/DeepSeek-V3"
+      }
+    ],
+    "providers": [
+      "alibaba-cn",
+      "deepinfra",
+      "digitalocean",
+      "drun",
+      "edenai",
+      "helicone",
+      "huggingface",
+      "iflowcn",
+      "novita-ai",
+      "pioneer",
+      "qiniu-ai",
+      "siliconflow",
+      "siliconflow-cn",
+      "togetherai"
+    ]
+  },
+  "deepseek/deepseek-v3-0324": {
+    "id": "deepseek/deepseek-v3-0324",
+    "lab": "deepseek",
+    "name": "DeepSeek V3 0324",
+    "family": "deepseek",
+    "released": "2025-03-24",
+    "updated": "2025-03-24",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 163840,
+      "output": 163840
+    },
+    "weights": [
+      {
+        "label": "Model weights",
+        "url": "https://huggingface.co/deepseek-ai/DeepSeek-V3-0324",
+        "format": "safetensors"
+      }
+    ],
+    "providers": [
+      "alibaba-cn",
+      "crusoe",
+      "deepinfra",
+      "edenai",
+      "huggingface",
+      "jiekou",
+      "meganova",
+      "nano-gpt",
+      "qiniu-ai",
+      "submodel"
+    ]
+  },
+  "deepseek/deepseek-v3.1": {
+    "id": "deepseek/deepseek-v3.1",
+    "lab": "deepseek",
+    "name": "DeepSeek V3.1",
+    "family": "deepseek",
+    "released": "2025-08-21",
+    "updated": "2025-08-21",
+    "open_weights": true,
+    "license": "MIT License",
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 8192
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/deepseek-ai/DeepSeek-V3.1"
+      }
+    ],
+    "providers": [
+      "abacus",
+      "alibaba-cn",
+      "baseten",
+      "deepinfra",
+      "huggingface",
+      "jiekou",
+      "meganova",
+      "nano-gpt",
+      "pioneer",
+      "qiniu-ai",
+      "sambanova",
+      "siliconflow",
+      "submodel",
+      "thinkingmachines",
+      "togetherai",
+      "tokengo",
+      "vercel",
+      "wandb"
+    ]
+  },
+  "deepseek/deepseek-v3.1-maas": {
+    "id": "deepseek/deepseek-v3.1-maas",
+    "lab": "deepseek",
+    "name": "DeepSeek V3.1 Maas",
+    "family": "deepseek",
+    "released": "2025-08-28",
+    "updated": "2025-08-28",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 163840,
+      "output": 32768
+    },
+    "providers": [
+      "google-vertex"
+    ]
+  },
+  "deepseek/deepseek-v3.1-terminus": {
+    "id": "deepseek/deepseek-v3.1-terminus",
+    "lab": "deepseek",
+    "name": "DeepSeek V3.1 Terminus",
+    "family": "deepseek",
+    "released": "2025-06-01",
+    "updated": "2025-06-01",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 8192
+    },
+    "providers": [
+      "abacus",
+      "alibaba-cn",
+      "helicone",
+      "kilo",
+      "nano-gpt",
+      "openrouter",
+      "qiniu-ai",
+      "siliconflow",
+      "siliconflow-cn"
+    ]
+  },
+  "deepseek/deepseek-v3.2": {
+    "id": "deepseek/deepseek-v3.2",
+    "lab": "deepseek",
+    "name": "DeepSeek V3.2",
+    "family": "deepseek",
+    "released": "2025-12-01",
+    "updated": "2025-12-01",
+    "knowledge": "2024-07",
+    "open_weights": true,
+    "license": "MIT License",
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 64000
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/deepseek-ai/DeepSeek-V3.2"
+      }
+    ],
+    "providers": [
+      "302ai",
+      "abacus",
+      "alibaba-cn",
+      "alibaba-token-plan",
+      "alibaba-token-plan-cn",
+      "azure",
+      "azure-cognitive-services",
+      "chutes",
+      "cortecs",
+      "deepinfra",
+      "digitalocean",
+      "friendli",
+      "helicone",
+      "huggingface",
+      "iflowcn",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "meganova",
+      "melious",
+      "nano-gpt",
+      "nearai",
+      "ofox",
+      "openrouter",
+      "poe",
+      "sambanova",
+      "siliconflow",
+      "siliconflow-cn",
+      "tensorx",
+      "tokengo",
+      "vercel",
+      "vivgrid",
+      "zenmux"
+    ]
+  },
+  "deepseek/deepseek-v3.2-251201": {
+    "id": "deepseek/deepseek-v3.2-251201",
+    "lab": "deepseek",
+    "name": "DeepSeek V3.2 251201",
+    "released": "2025-12-01",
+    "updated": "2025-12-01",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "structured_output": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 32000
+    },
+    "providers": [
+      "qiniu-ai"
+    ]
+  },
+  "deepseek/deepseek-v3.2-exp": {
+    "id": "deepseek/deepseek-v3.2-exp",
+    "lab": "deepseek",
+    "name": "DeepSeek V3.2 Exp",
+    "family": "deepseek",
+    "released": "2025-01-01",
+    "updated": "2025-01-01",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 65536
+    },
+    "providers": [
+      "alibaba-cn",
+      "kilo",
+      "meganova",
+      "nano-gpt",
+      "openrouter",
+      "qiniu-ai",
+      "siliconflow",
+      "zenmux"
+    ]
+  },
+  "deepseek/deepseek-v3.2-maas": {
+    "id": "deepseek/deepseek-v3.2-maas",
+    "lab": "deepseek",
+    "name": "DeepSeek V3.2 Maas",
+    "family": "deepseek",
+    "released": "2025-12-17",
+    "updated": "2026-04-04",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 163840,
+      "output": 65536
+    },
+    "providers": [
+      "google-vertex"
+    ]
+  },
+  "deepseek/deepseek-v3.2-speciale": {
+    "id": "deepseek/deepseek-v3.2-speciale",
+    "lab": "deepseek",
+    "name": "DeepSeek V3.2 Speciale",
+    "family": "deepseek",
+    "released": "2025-12-01",
+    "updated": "2025-12-01",
+    "knowledge": "2024-07",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 128000
+    },
+    "providers": [
+      "azure",
+      "azure-cognitive-services"
+    ]
+  },
+  "deepseek/deepseek-v4-flash": {
+    "id": "deepseek/deepseek-v4-flash",
+    "lab": "deepseek",
+    "name": "DeepSeek V4 Flash",
+    "family": "deepseek-flash",
+    "released": "2026-04-24",
+    "updated": "2026-04-24",
+    "knowledge": "2025-05",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 384000
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash"
+      }
+    ],
+    "providers": [
+      "abacus",
+      "agentrouter",
+      "aiand",
+      "aimlapi",
+      "alibaba-cn",
+      "alibaba-token-plan",
+      "alibaba-token-plan-cn",
+      "ambient",
+      "anyapi",
+      "auriko",
+      "azure",
+      "azure-cognitive-services",
+      "cline-pass",
+      "commandcode",
+      "crossmodel",
+      "deepinfra",
+      "digitalocean",
+      "ebcloud",
+      "edenai",
+      "gmicloud",
+      "hpc-ai",
+      "huggingface",
+      "impossibl",
+      "inferx",
+      "jalapeno",
+      "kenari",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "moark",
+      "modelis",
+      "nano-gpt",
+      "neuralwatt",
+      "nvidia",
+      "ofox",
+      "ollama-cloud",
+      "openrouter",
+      "opper",
+      "orcarouter",
+      "pendra",
+      "pioneer",
+      "prime",
+      "requesty",
+      "routing-run",
+      "scnet-token-plan",
+      "sensenova",
+      "siliconflow",
+      "siliconflow-cn",
+      "standardcompute",
+      "tokengo",
+      "unorouter",
+      "vercel",
+      "volcengine-coding-plan",
+      "zenmux"
+    ]
+  },
+  "deepseek/deepseek-v4-flash-0423": {
+    "id": "deepseek/deepseek-v4-flash-0423",
+    "lab": "deepseek",
+    "name": "DeepSeek V4 Flash 0423",
+    "family": "deepseek-flash",
+    "released": "2026-04-23",
+    "updated": "2026-04-23",
+    "knowledge": "2025-05",
+    "open_weights": true,
+    "license": "MIT",
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 384000
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash"
+      }
+    ],
+    "providers": [
+      "nano-gpt",
+      "ofox"
+    ]
+  },
+  "deepseek/deepseek-v4-flash-0731": {
+    "id": "deepseek/deepseek-v4-flash-0731",
+    "lab": "deepseek",
+    "name": "DeepSeek V4 Flash 0731",
+    "family": "deepseek-flash",
+    "released": "2026-07-31",
+    "updated": "2026-07-31",
+    "knowledge": "2025-05",
+    "open_weights": true,
+    "license": "MIT",
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 384000
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-0731"
+      }
+    ],
+    "providers": [
+      "alibaba",
+      "alibaba-token-plan",
+      "alibaba-token-plan-cn",
+      "ambient",
+      "amd",
+      "arcee",
+      "baseten",
+      "bothub",
+      "boundless",
+      "chutes",
+      "cloudflare-workers-ai",
+      "cortecs",
+      "deepinfra",
+      "digitalocean",
+      "edenai",
+      "empiriolabs",
+      "engy",
+      "greenpt",
+      "huggingface",
+      "hyper",
+      "inceptron",
+      "kilo",
+      "melious",
+      "moark",
+      "nano-gpt",
+      "nebius",
+      "neuralwatt",
+      "novita-ai",
+      "nvidia",
+      "ofox",
+      "ollama-cloud",
+      "opencode",
+      "openreason",
+      "openrouter",
+      "orcarouter",
+      "perplexity-agent",
+      "prime",
+      "requesty",
+      "runinfra",
+      "scaleway",
+      "scnet-token-plan",
+      "siliconflow",
+      "standardcompute",
+      "tensorx",
+      "togetherai",
+      "umans-ai",
+      "umans-ai-coding-plan",
+      "vercel",
+      "vivgrid",
+      "volcengine",
+      "vultr",
+      "wandb"
+    ]
+  },
+  "deepseek/deepseek-v4-flash-el": {
+    "id": "deepseek/deepseek-v4-flash-el",
+    "lab": "deepseek",
+    "name": "DeepSeek V4 Flash EL",
+    "released": "2026-04-24",
+    "updated": "2026-05-02",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "input": 1000000,
+      "output": 384000
+    },
+    "providers": [
+      "poe"
+    ]
+  },
+  "deepseek/deepseek-v4-flash-vision-exp": {
+    "id": "deepseek/deepseek-v4-flash-vision-exp",
+    "lab": "deepseek",
+    "name": "DeepSeek V4 Flash Vision Exp",
+    "family": "deepseek-flash",
+    "released": "2026-08-21",
+    "updated": "2026-09-01",
+    "open_weights": true,
+    "license": "MIT",
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 384000
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-Vision-Exp"
+      }
+    ],
+    "providers": [
+      "aimlapi",
+      "amd",
+      "commandcode",
+      "crossmodel",
+      "deepinfra",
+      "edenai",
+      "huggingface",
+      "kilo",
+      "nano-gpt",
+      "ofox",
+      "opencode",
+      "openrouter",
+      "orcarouter",
+      "siliconflow",
+      "vercel"
+    ]
+  },
+  "deepseek/deepseek-v4-pro": {
+    "id": "deepseek/deepseek-v4-pro",
+    "lab": "deepseek",
+    "name": "DeepSeek V4 Pro",
+    "family": "deepseek-thinking",
+    "released": "2026-04-24",
+    "updated": "2026-04-24",
+    "knowledge": "2025-05",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 384000
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro"
+      }
+    ],
+    "providers": [
+      "abacus",
+      "aiand",
+      "aimlapi",
+      "alibaba-cn",
+      "alibaba-token-plan",
+      "alibaba-token-plan-cn",
+      "anyapi",
+      "arcee",
+      "auriko",
+      "azure",
+      "azure-cognitive-services",
+      "baseten",
+      "cline-pass",
+      "commandcode",
+      "cortecs",
+      "crossmodel",
+      "deepinfra",
+      "digitalocean",
+      "ebcloud",
+      "edenai",
+      "empiriolabs",
+      "fastrouter",
+      "frogbot",
+      "gmicloud",
+      "hpc-ai",
+      "huggingface",
+      "impossibl",
+      "jalapeno",
+      "kenari",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "moark",
+      "model-oracle-ai",
+      "modelis",
+      "nano-gpt",
+      "nebius",
+      "neuralwatt",
+      "novita-ai",
+      "nvidia",
+      "ofox",
+      "ollama-cloud",
+      "opencode",
+      "opencode-go",
+      "openrouter",
+      "opper",
+      "orcarouter",
+      "pioneer",
+      "prime",
+      "requesty",
+      "routing-run",
+      "scnet-token-plan",
+      "siliconflow",
+      "siliconflow-cn",
+      "standardcompute",
+      "tensorx",
+      "tokengo",
+      "unorouter",
+      "vercel",
+      "vivgrid",
+      "volcengine-coding-plan",
+      "zenmux"
+    ]
+  },
+  "deepseek/deepseek-v4-pro-0423": {
+    "id": "deepseek/deepseek-v4-pro-0423",
+    "lab": "deepseek",
+    "name": "DeepSeek V4 Pro 0423",
+    "family": "deepseek-thinking",
+    "released": "2026-04-23",
+    "updated": "2026-04-23",
+    "knowledge": "2025-05",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 384000
+    },
+    "providers": [
+      "ofox"
+    ]
+  },
+  "deepseek/deepseek-v4-pro-0813": {
+    "id": "deepseek/deepseek-v4-pro-0813",
+    "lab": "deepseek",
+    "name": "DeepSeek V4 Pro 0813",
+    "family": "deepseek-thinking",
+    "released": "2026-08-13",
+    "updated": "2026-08-22",
+    "open_weights": true,
+    "license": "MIT",
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 384000
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro-0813"
+      }
+    ],
+    "providers": [
+      "above",
+      "aimlapi",
+      "alibaba-token-plan",
+      "alibaba-token-plan-cn",
+      "arcee",
+      "baseten",
+      "bothub",
+      "boundless",
+      "cloudflare-workers-ai",
+      "cortecs",
+      "deepinfra",
+      "deepseek",
+      "digitalocean",
+      "edenai",
+      "empiriolabs",
+      "huggingface",
+      "hyper",
+      "iteracompute",
+      "kilo",
+      "nano-gpt",
+      "nebius",
+      "novita-ai",
+      "nvidia",
+      "ofox",
+      "ollama-cloud",
+      "openrouter",
+      "orcarouter",
+      "perplexity-agent",
+      "requesty",
+      "runinfra",
+      "scnet-token-plan",
+      "sensenova",
+      "siliconflow",
+      "standardcompute",
+      "tempr",
+      "tensorx",
+      "togetherai",
+      "vercel",
+      "vivgrid",
+      "volcengine",
+      "wandb"
+    ]
+  },
+  "deepseek/deepseek-v4-pro-el": {
+    "id": "deepseek/deepseek-v4-pro-el",
+    "lab": "deepseek",
+    "name": "DeepSeek V4 Pro EL",
+    "released": "2026-04-24",
+    "updated": "2026-05-02",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "input": 1000000,
+      "output": 384000
+    },
+    "providers": [
+      "poe"
+    ]
+  },
+  "deepseek/deepseek-v4.1-flash": {
+    "id": "deepseek/deepseek-v4.1-flash",
+    "lab": "deepseek",
+    "name": "DeepSeek V4.1 Flash",
+    "family": "deepseek-flash",
+    "released": "2026-09-10",
+    "updated": "2026-09-10",
+    "knowledge": "2025-05",
+    "open_weights": true,
+    "license": "MIT",
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 384000
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash"
+      }
+    ],
+    "providers": [
+      "302ai",
+      "above",
+      "aiand",
+      "aimlapi",
+      "aki-io",
+      "alibaba-cn",
+      "alibaba-token-plan",
+      "alibaba-token-plan-cn",
+      "arcee",
+      "azure",
+      "azure-cognitive-services",
+      "baseten",
+      "boundless",
+      "cline-pass",
+      "commandcode",
+      "coralbricks",
+      "cortecs",
+      "crossmodel",
+      "deepinfra",
+      "digitalocean",
+      "edenai",
+      "empiriolabs",
+      "engy",
+      "fireworks-ai",
+      "greenpt",
+      "huggingface",
+      "hyper",
+      "inco",
+      "iteracompute",
+      "kenari",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "melious",
+      "modal",
+      "nan",
+      "nano-gpt",
+      "nebius",
+      "neon",
+      "neuralwatt",
+      "novita-ai",
+      "nvidia",
+      "ofox",
+      "ollama-cloud",
+      "opencode",
+      "opencode-go",
+      "openrouter",
+      "prime",
+      "requesty",
+      "scaleway",
+      "scnet-token-plan",
+      "sensenova",
+      "standardcompute",
+      "subconscious",
+      "synthetic",
+      "tempr",
+      "tensorx",
+      "thinkingmachines",
+      "tinfoil",
+      "togetherai",
+      "umans-ai",
+      "umans-ai-coding-plan",
+      "vancine",
+      "vercel",
+      "vivgrid",
+      "vultr",
+      "wandb",
+      "zenmux"
+    ]
+  },
+  "deepseek/deepseek-v4.1-flash-1017": {
+    "id": "deepseek/deepseek-v4.1-flash-1017",
+    "lab": "deepseek",
+    "name": "DeepSeek V4.1 Flash 1017",
+    "family": "deepseek-flash",
+    "released": "2026-10-17",
+    "updated": "2026-10-17",
+    "knowledge": "2025-05",
+    "open_weights": true,
+    "license": "MIT",
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 384000
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017"
+      }
+    ],
+    "providers": [
+      "alibaba-token-plan",
+      "alibaba-token-plan-cn",
+      "amd",
+      "arcee",
+      "baseten",
+      "cloudflare-workers-ai",
+      "cortecs",
+      "deepinfra",
+      "deepseek",
+      "edenai",
+      "empiriolabs",
+      "engy",
+      "fireworks-ai",
+      "huggingface",
+      "hyper",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "melious",
+      "nano-gpt",
+      "nearai",
+      "novita-ai",
+      "ofox",
+      "ollama-cloud",
+      "openrouter",
+      "prime",
+      "requesty",
+      "synthetic",
+      "thinkingmachines",
+      "vercel"
+    ]
+  }
+}

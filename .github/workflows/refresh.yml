@@ -1,0 +1,133 @@
+name: Refresh
+
+run-name: Refresh models.dev data
+
+# Refresh downloads models.dev's catalog.json every six hours and applies
+# what changed since the version data/models-dev.json holds to our catalog,
+# data/catalog, as go generate ./data/ does: our catalog keeps what it
+# holds of its own, and what it changed that models.dev changed too, which
+# data/patch.json lists as conflicts. When anything in data/ changed, it
+# opens a pull request of it from the branch data/refresh, or updates the
+# one open, for review; squash-merging it releases the catalog, as CI
+# Develop does. When nothing changed, it closes the one open.
+#
+# A pull request GITHUB_TOKEN opens starts no workflows, so this one runs the
+# checks itself before it opens one.
+on:
+  schedule:
+    - cron: "17 */6 * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: refresh
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  pull-requests: write
+
+# The refresh commit's author: the repository variables GIT_USER_NAME and
+# GIT_USER_EMAIL, or else GitHub Actions' own bot.
+env:
+  BRANCH: data/refresh
+  GIT_USER_NAME: ${{ vars.GIT_USER_NAME || 'github-actions[bot]' }}
+  GIT_USER_EMAIL: ${{ vars.GIT_USER_EMAIL || '41898282+github-actions[bot]@users.noreply.github.com' }}
+
+jobs:
+  refresh:
+    name: Refresh
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          ref: main
+
+      - name: Setup
+        uses: ./.github/actions/setup
+
+      - name: Keep Previous Catalog
+        run: go run ./cmd/catalog join -o "$RUNNER_TEMP/previous.json"
+
+      - name: Fetch Data
+        run: go generate ./data/
+
+      - name: Test
+        run: go test ./...
+
+      - name: Join Catalog
+        run: go run ./cmd/catalog join -o "$RUNNER_TEMP/catalog.json"
+
+      - name: Detect Change
+        id: change
+        run: |
+          git add -N data/
+          if git diff --quiet -- data/; then
+            echo "models.dev changed nothing"
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            git diff --stat -- data/
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      # A bad upstream push fails the run here instead of reaching a pull
+      # request: the models or providers may not fall by more than a tenth.
+      - name: Sanity Check
+        if: steps.change.outputs.changed == 'true'
+        run: |
+          prev="$RUNNER_TEMP/previous.json"
+          for key in models providers; do
+            old=$(jq ".$key | length" "$prev")
+            new=$(jq ".$key | length" "$RUNNER_TEMP/catalog.json")
+            echo "$key: $old -> $new"
+            [ $(( new * 10 )) -ge $(( old * 9 )) ] || { echo "$key fell from $old to $new" >&2; exit 1; }
+          done
+          [ "$(jq .version "$prev")" = "$(jq .version "$RUNNER_TEMP/catalog.json")" ] || echo "::warning::catalog format version changed"
+
+      # The commit keeps the repository's commit style, and the squash merge
+      # takes its message; the pull request's title is its subject, and its
+      # body takes the shape of the repository's pull requests, as
+      # refresh-pr-body.sh writes it.
+      - name: Open Pull Request
+        if: steps.change.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          counts=$(jq -r '[(.ops | map(select(.op == "add")) | length), (.ops | map(select(.op == "replace")) | length), (.ops | map(select(.op == "remove")) | length), (.conflicts // [] | length)] | @tsv' data/patch.json)
+          read -r added replaced removed conflicts <<< "$counts"
+          upstream=$(jq '.providers | length' data/models-dev.json)
+          summary=$(jq -r '"\(.models | length) models and \(.providers | length) providers"' "$RUNNER_TEMP/catalog.json")
+          title="chore(data): apply models.dev's changes to the catalog"
+          {
+            echo "- Update data/models-dev.json from models.dev, of $upstream providers."
+            echo "- Apply its changes to data/catalog, now of $summary: $added added, $replaced replaced, $removed removed."
+            echo "- Keep our own value at $conflicts conflicts, which data/patch.json lists."
+          } > "$RUNNER_TEMP/body.md"
+
+          git config user.name "$GIT_USER_NAME"
+          git config user.email "$GIT_USER_EMAIL"
+          git switch -q -c "$BRANCH"
+          git add data/
+          git commit -q -F - <<EOF
+          $title
+
+          $(cat "$RUNNER_TEMP/body.md")
+          EOF
+          git push -q -f origin "$BRANCH"
+
+          .github/scripts/refresh-pr-body.sh "$RUNNER_TEMP/previous.json" data/patch.json "$RUNNER_TEMP/catalog.json" > "$RUNNER_TEMP/pr.md"
+          pr=$(gh pr list --head "$BRANCH" --state open --json number --jq '.[0].number')
+          if [ -n "$pr" ]; then
+            gh pr edit "$pr" --title "$title" --body-file "$RUNNER_TEMP/pr.md"
+          else
+            gh pr create --base main --head "$BRANCH" --title "$title" --body-file "$RUNNER_TEMP/pr.md"
+          fi
+
+      - name: Close Stale Pull Request
+        if: steps.change.outputs.changed == 'false'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          pr=$(gh pr list --head "$BRANCH" --state open --json number --jq '.[0].number')
+          [ -z "$pr" ] || gh pr close "$pr" --delete-branch --comment "models.dev now holds what main's data/models-dev.json holds; nothing to apply."

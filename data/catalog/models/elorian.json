@@ -1,0 +1,35 @@
+{
+  "elorian/glimpse": {
+    "id": "elorian/glimpse",
+    "lab": "elorian",
+    "name": "Glimpse",
+    "released": "2026-10-17",
+    "updated": "2026-10-17",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 256000
+    },
+    "providers": [
+      "kilo",
+      "nano-gpt",
+      "openrouter",
+      "vercel"
+    ]
+  }
+}

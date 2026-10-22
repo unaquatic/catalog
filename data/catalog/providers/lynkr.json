@@ -1,0 +1,18 @@
+{
+  "id": "lynkr",
+  "name": "Lynkr",
+  "kind": "gateway",
+  "type": "community",
+  "endpoint": {
+    "format": "openai-chat",
+    "api": "http://127.0.0.1:8081/v1",
+    "auth": {
+      "scheme": "bearer"
+    },
+    "env": [
+      "LYNKR_API_KEY"
+    ]
+  },
+  "doc": "https://github.com/Fast-Editor/Lynkr",
+  "models": {}
+}

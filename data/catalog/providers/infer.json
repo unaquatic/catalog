@@ -1,0 +1,111 @@
+{
+  "id": "infer",
+  "name": "Infer by Flow7",
+  "kind": "gateway",
+  "type": "community",
+  "endpoint": {
+    "format": "openai-responses",
+    "api": "https://infer.flow7.org/v1",
+    "auth": {
+      "scheme": "bearer"
+    },
+    "env": [
+      "INFER_API_KEY"
+    ]
+  },
+  "doc": "https://infer.flow7.org/opencode",
+  "models": {
+    "openai/gpt-5.6-sol": {
+      "name": "GPT-5.6 Sol",
+      "family": "gpt-sol",
+      "released": "2026-07-09",
+      "updated": "2026-07-09",
+      "knowledge": "2026-02-16",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 271999,
+        "output": 128000
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ]
+      },
+      "provider_options": {
+        "id": "infer/gpt-5.6-sol:official",
+        "name": "GPT-5.6 Sol (Official API)"
+      },
+      "price": {
+        "input": 2.5,
+        "output": 12.5,
+        "cache_read": 0.25,
+        "cache_write": 3.125
+      }
+    },
+    "openai/gpt-6-astra": {
+      "name": "GPT-6 Astra",
+      "family": "gpt-astra",
+      "released": "2026-09-04",
+      "updated": "2026-09-04",
+      "knowledge": "2026-04-30",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 271999,
+        "output": 128000
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ]
+      },
+      "provider_options": {
+        "id": "infer/gpt-6-astra:official",
+        "name": "GPT-6 Astra (Official API)"
+      },
+      "price": {
+        "input": 12.5,
+        "output": 62.5,
+        "cache_read": 1.25,
+        "cache_write": 15.625
+      }
+    }
+  }
+}

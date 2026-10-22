@@ -1,0 +1,529 @@
+{
+  "id": "chutes",
+  "name": "Chutes",
+  "kind": "gateway",
+  "type": "community",
+  "endpoint": {
+    "format": "openai-chat",
+    "api": "https://llm.chutes.ai/v1",
+    "auth": {
+      "scheme": "bearer"
+    },
+    "env": [
+      "CHUTES_API_KEY"
+    ]
+  },
+  "doc": "https://llm.chutes.ai/v1/models",
+  "models": {
+    "alibaba/qwen3-235b-a22b-thinking-2507": {
+      "name": "Qwen3 235B A22B Thinking 2507",
+      "family": "qwen",
+      "released": "2025-07-25",
+      "updated": "2025-07-25",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "reasoning": {},
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "Qwen/Qwen3-235B-A22B-Thinking-2507-TEE",
+        "name": "Qwen3 235B A22B Thinking 2507 TEE"
+      },
+      "price": {
+        "input": 0.2989,
+        "output": 1.1957,
+        "cache_read": 0.029889999999999993
+      }
+    },
+    "alibaba/qwen3-32b": {
+      "name": "Qwen3 32B",
+      "family": "qwen",
+      "released": "2025-04-28",
+      "updated": "2025-04-28",
+      "knowledge": "2025-04",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 40960,
+        "output": 40960
+      },
+      "reasoning": {
+        "mandatory": false
+      },
+      "provider_options": {
+        "id": "Qwen/Qwen3-32B-TEE",
+        "name": "Qwen3 32B TEE"
+      },
+      "price": {
+        "input": 0.104,
+        "output": 0.416,
+        "cache_read": 0.010399999999999998
+      }
+    },
+    "alibaba/qwen3.5-397b-a17b": {
+      "name": "Qwen3.5 397B A17B",
+      "family": "qwen",
+      "released": "2026-02-15",
+      "updated": "2026-02-15",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 65536
+      },
+      "reasoning": {
+        "mandatory": false
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "Qwen/Qwen3.5-397B-A17B-TEE",
+        "name": "Qwen3.5 397B A17B TEE"
+      },
+      "price": {
+        "input": 0.45,
+        "output": 3,
+        "cache_read": 0.04499999999999999
+      }
+    },
+    "alibaba/qwen3.6-27b": {
+      "name": "Qwen3.6 27B",
+      "family": "qwen",
+      "released": "2026-04-22",
+      "updated": "2026-04-22",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 65536
+      },
+      "reasoning": {
+        "mandatory": false
+      },
+      "provider_options": {
+        "id": "Qwen/Qwen3.6-27B-TEE",
+        "name": "Qwen3.6 27B TEE"
+      },
+      "price": {
+        "input": 0.25,
+        "output": 2,
+        "cache_read": 0.024999999999999994
+      }
+    },
+    "alibaba/qwen3.8-27b": {
+      "name": "Qwen3.8 27B",
+      "family": "qwen",
+      "released": "2026-08-14",
+      "updated": "2026-08-14",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 65536
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "Qwen/Qwen3.8-27B-TEE",
+        "name": "Qwen3.8 27B TEE"
+      },
+      "price": {
+        "input": 0.039,
+        "output": 1.25,
+        "cache_read": 0.003899999999999999
+      }
+    },
+    "deepseek/deepseek-v3.2": {
+      "name": "DeepSeek V3.2",
+      "family": "deepseek",
+      "released": "2025-12-01",
+      "updated": "2025-12-01",
+      "knowledge": "2024-07",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 131072,
+        "output": 65536
+      },
+      "reasoning": {
+        "mandatory": false
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "deepseek-ai/DeepSeek-V3.2-TEE",
+        "name": "DeepSeek V3.2 TEE"
+      },
+      "price": {
+        "input": 1,
+        "output": 1,
+        "cache_read": 0.09999999999999998
+      }
+    },
+    "deepseek/deepseek-v4-flash-0731": {
+      "name": "DeepSeek V4 Flash 0731",
+      "family": "deepseek-flash",
+      "released": "2026-07-31",
+      "updated": "2026-07-31",
+      "knowledge": "2025-05",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "reasoning": {
+        "mandatory": false
+      },
+      "provider_options": {
+        "id": "deepseek-ai/DeepSeek-V4-Flash-0731-TEE",
+        "name": "DeepSeek V4 Flash 0731 TEE"
+      },
+      "price": {
+        "input": 0.44,
+        "output": 1.32,
+        "cache_read": 0.04399999999999999
+      }
+    },
+    "google/gemma-4-31b-it": {
+      "name": "Gemma 4 31B IT",
+      "family": "gemma",
+      "released": "2026-04-02",
+      "updated": "2026-04-02",
+      "knowledge": "2025-01",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 131072,
+        "output": 65536
+      },
+      "reasoning": {
+        "mandatory": false
+      },
+      "provider_options": {
+        "id": "google/gemma-4-31B-turbo-TEE",
+        "name": "gemma 4 31B turbo TEE"
+      },
+      "price": {
+        "input": 0.12,
+        "output": 0.37,
+        "cache_read": 0.011999999999999997
+      }
+    },
+    "mistral/mistral-nemo": {
+      "name": "Mistral Nemo",
+      "family": "mistral-nemo",
+      "released": "2024-07-18",
+      "updated": "2024-07-18",
+      "knowledge": "2024-07",
+      "open_weights": true,
+      "capabilities": {
+        "tools": false,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 131072,
+        "output": 131072
+      },
+      "provider_options": {
+        "id": "unsloth/Mistral-Nemo-Instruct-2407-TEE",
+        "name": "Mistral Nemo Instruct 2407 TEE"
+      },
+      "price": {
+        "input": 0.0245,
+        "output": 0.0978,
+        "cache_read": 0.0024499999999999995
+      }
+    },
+    "moonshotai/kimi-k2.6": {
+      "name": "Kimi K2.6",
+      "family": "kimi-k2",
+      "released": "2026-04-20",
+      "updated": "2026-04-20",
+      "knowledge": "2025-01",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 65535
+      },
+      "reasoning": {
+        "mandatory": false
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "moonshotai/Kimi-K2.6-TEE",
+        "name": "Kimi K2.6 TEE"
+      },
+      "price": {
+        "input": 0.45,
+        "output": 1.95,
+        "cache_read": 0.04499999999999999
+      }
+    },
+    "moonshotai/kimi-k3": {
+      "name": "Kimi K3",
+      "family": "kimi-k3",
+      "released": "2026-07-16",
+      "updated": "2026-07-16",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 65535
+      },
+      "reasoning": {
+        "mandatory": false
+      },
+      "provider_options": {
+        "id": "moonshotai/Kimi-K3-TEE",
+        "name": "Kimi K3 TEE"
+      },
+      "price": {
+        "input": 1.85,
+        "output": 9.5,
+        "cache_read": 0.18499999999999997
+      }
+    },
+    "nvidia/nemotron-3-nano-omni-30b-tee": {
+      "name": "Nemotron 3 Nano Omni 30B TEE",
+      "family": "nemotron",
+      "released": "2026-07-23",
+      "updated": "2026-07-23",
+      "open_weights": true,
+      "capabilities": {
+        "tools": false,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 131072,
+        "output": 0
+      },
+      "provider_options": {
+        "id": "Nemotron-3-Nano-Omni-30B-TEE",
+        "name": "Nemotron 3 Nano Omni 30B TEE"
+      },
+      "price": {
+        "input": 0.0245,
+        "output": 0.0978,
+        "cache_read": 0.0024499999999999995
+      }
+    },
+    "zhipuai/glm-5.1": {
+      "name": "GLM 5.1",
+      "family": "glm",
+      "released": "2026-04-07",
+      "updated": "2026-04-07",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 202752,
+        "output": 65535
+      },
+      "reasoning": {
+        "mandatory": false
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "zai-org/GLM-5.1-TEE",
+        "name": "GLM 5.1 TEE"
+      },
+      "price": {
+        "input": 0.98,
+        "output": 3.08,
+        "cache_read": 0.09799999999999998
+      }
+    },
+    "zhipuai/glm-5.2": {
+      "name": "GLM 5.2",
+      "family": "glm",
+      "released": "2026-06-13",
+      "updated": "2026-06-13",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 65535
+      },
+      "reasoning": {
+        "mandatory": false
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "zai-org/GLM-5.2-TEE",
+        "name": "GLM 5.2 TEE"
+      },
+      "price": {
+        "input": 1.25,
+        "output": 3.95,
+        "cache_read": 0.12499999999999997
+      }
+    }
+  }
+}

@@ -1,0 +1,168 @@
+{
+  "openbmb/minicpm-v-4.5": {
+    "id": "openbmb/minicpm-v-4.5",
+    "lab": "openbmb",
+    "name": "MiniCPM V 4.5",
+    "released": "2026-06-02",
+    "updated": "2026-06-02",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "structured_output": true,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32000,
+      "output": 32000
+    },
+    "providers": [
+      "cortecs"
+    ]
+  },
+  "openbmb/minicpm-v-4.7-1b": {
+    "id": "openbmb/minicpm-v-4.7-1b",
+    "lab": "openbmb",
+    "name": "MiniCPM V 4.7 1B",
+    "released": "2026-10-06",
+    "updated": "2026-10-06",
+    "open_weights": true,
+    "license": "Apache-2.0",
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 262144
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/openbmb/MiniCPM-V-4.7-1B"
+      }
+    ],
+    "providers": [
+      "amd"
+    ]
+  },
+  "openbmb/minicpm-v-4.7-35b-a3b": {
+    "id": "openbmb/minicpm-v-4.7-35b-a3b",
+    "lab": "openbmb",
+    "name": "MiniCPM V 4.7 35B A3B",
+    "released": "2026-10-07",
+    "updated": "2026-10-07",
+    "open_weights": true,
+    "license": "Apache-2.0",
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 262144
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/openbmb/MiniCPM-V-4.7-35B-A3B"
+      }
+    ],
+    "providers": [
+      "amd"
+    ]
+  },
+  "openbmb/minicpm5-1b": {
+    "id": "openbmb/minicpm5-1b",
+    "lab": "openbmb",
+    "name": "MiniCPM5 1B",
+    "released": "2026-05-19",
+    "updated": "2026-05-19",
+    "open_weights": true,
+    "license": "apache-2.0",
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 131072
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/openbmb/MiniCPM5-1B"
+      }
+    ],
+    "providers": []
+  },
+  "openbmb/minicpm5-2b": {
+    "id": "openbmb/minicpm5-2b",
+    "lab": "openbmb",
+    "name": "MiniCPM5 2B",
+    "released": "2026-09-06",
+    "updated": "2026-09-12",
+    "open_weights": true,
+    "license": "apache-2.0",
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 131072
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/openbmb/MiniCPM5-2B"
+      }
+    ],
+    "providers": [
+      "amd"
+    ]
+  }
+}

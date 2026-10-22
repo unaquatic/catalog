@@ -1,0 +1,5183 @@
+{
+  "openai/chatgpt-4o-latest": {
+    "id": "openai/chatgpt-4o-latest",
+    "lab": "openai",
+    "name": "ChatGPT 4o Latest",
+    "family": "gpt",
+    "released": "2024-08-14",
+    "updated": "2024-08-14",
+    "knowledge": "2024-08",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 16384
+    },
+    "providers": [
+      "helicone",
+      "poe"
+    ]
+  },
+  "openai/chatgpt-image-latest": {
+    "id": "openai/chatgpt-image-latest",
+    "lab": "openai",
+    "name": "ChatGPT Image Latest",
+    "family": "gpt-image",
+    "type": "image",
+    "released": "2025-12-16",
+    "updated": "2025-12-16",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text",
+        "image"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "openai"
+    ]
+  },
+  "openai/codex-mini": {
+    "id": "openai/codex-mini",
+    "lab": "openai",
+    "name": "Codex Mini",
+    "family": "gpt-codex-mini",
+    "released": "2025-05-16",
+    "updated": "2025-05-16",
+    "knowledge": "2024-04",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 200000,
+      "output": 100000
+    },
+    "providers": [
+      "azure",
+      "azure-cognitive-services"
+    ]
+  },
+  "openai/dall-e-3": {
+    "id": "openai/dall-e-3",
+    "lab": "openai",
+    "name": "DALL E 3",
+    "family": "dall-e",
+    "released": "2023-11-06",
+    "updated": "2023-11-06",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "image"
+      ]
+    },
+    "limit": {
+      "context": 800,
+      "output": 0
+    },
+    "providers": [
+      "poe"
+    ]
+  },
+  "openai/gpt-3.5-turbo": {
+    "id": "openai/gpt-3.5-turbo",
+    "lab": "openai",
+    "name": "GPT-3.5 Turbo",
+    "family": "gpt",
+    "released": "2023-03-01",
+    "updated": "2023-11-06",
+    "knowledge": "2021-09-01",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 16385,
+      "output": 4096
+    },
+    "providers": [
+      "aimlapi",
+      "edenai",
+      "impossibl",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "nano-gpt",
+      "openai",
+      "openrouter",
+      "orcarouter",
+      "poe",
+      "vercel"
+    ]
+  },
+  "openai/gpt-3.5-turbo-0125": {
+    "id": "openai/gpt-3.5-turbo-0125",
+    "lab": "openai",
+    "name": "GPT-3.5 Turbo 0125",
+    "family": "gpt",
+    "released": "2024-01-25",
+    "updated": "2024-01-25",
+    "knowledge": "2021-08",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 16384,
+      "output": 4096
+    },
+    "providers": [
+      "azure",
+      "azure-cognitive-services"
+    ]
+  },
+  "openai/gpt-3.5-turbo-0613": {
+    "id": "openai/gpt-3.5-turbo-0613",
+    "lab": "openai",
+    "name": "GPT-3.5 Turbo 0613",
+    "family": "gpt",
+    "released": "2024-01-25",
+    "updated": "2024-01-25",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 4095,
+      "output": 3685
+    },
+    "providers": [
+      "kilo",
+      "openrouter"
+    ]
+  },
+  "openai/gpt-3.5-turbo-1106": {
+    "id": "openai/gpt-3.5-turbo-1106",
+    "lab": "openai",
+    "name": "GPT-3.5 Turbo 1106",
+    "family": "gpt",
+    "released": "2023-11-06",
+    "updated": "2023-11-06",
+    "knowledge": "2021-08",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 16384,
+      "output": 4096
+    },
+    "providers": [
+      "azure",
+      "azure-cognitive-services"
+    ]
+  },
+  "openai/gpt-3.5-turbo-16k": {
+    "id": "openai/gpt-3.5-turbo-16k",
+    "lab": "openai",
+    "name": "GPT-3.5 Turbo 16K",
+    "family": "gpt",
+    "released": "2023-08-28",
+    "updated": "2023-08-28",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 16385,
+      "output": 4096
+    },
+    "providers": [
+      "kilo",
+      "openrouter"
+    ]
+  },
+  "openai/gpt-3.5-turbo-instruct": {
+    "id": "openai/gpt-3.5-turbo-instruct",
+    "lab": "openai",
+    "name": "GPT-3.5 Turbo Instruct",
+    "family": "gpt",
+    "released": "2023-09-21",
+    "updated": "2023-09-21",
+    "knowledge": "2021-08",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 4096,
+      "output": 4096
+    },
+    "providers": [
+      "azure",
+      "azure-cognitive-services",
+      "kilo",
+      "openrouter",
+      "poe"
+    ]
+  },
+  "openai/gpt-3.5-turbo-raw": {
+    "id": "openai/gpt-3.5-turbo-raw",
+    "lab": "openai",
+    "name": "GPT-3.5 Turbo Raw",
+    "family": "gpt",
+    "released": "2023-09-27",
+    "updated": "2023-09-27",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 4524,
+      "output": 2048
+    },
+    "providers": [
+      "poe"
+    ]
+  },
+  "openai/gpt-4": {
+    "id": "openai/gpt-4",
+    "lab": "openai",
+    "name": "GPT-4",
+    "family": "gpt",
+    "released": "2023-11-06",
+    "updated": "2024-04-09",
+    "knowledge": "2023-11",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 8192,
+      "output": 8192
+    },
+    "providers": [
+      "aimlapi",
+      "edenai",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "openai",
+      "openrouter",
+      "orcarouter"
+    ]
+  },
+  "openai/gpt-4-classic": {
+    "id": "openai/gpt-4-classic",
+    "lab": "openai",
+    "name": "GPT-4 Classic",
+    "family": "gpt",
+    "released": "2024-03-25",
+    "updated": "2024-03-25",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 8192,
+      "output": 4096
+    },
+    "providers": [
+      "poe"
+    ]
+  },
+  "openai/gpt-4-classic-0314": {
+    "id": "openai/gpt-4-classic-0314",
+    "lab": "openai",
+    "name": "GPT-4 Classic 0314",
+    "family": "gpt",
+    "released": "2024-08-26",
+    "updated": "2024-08-26",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 8192,
+      "output": 4096
+    },
+    "providers": [
+      "poe"
+    ]
+  },
+  "openai/gpt-4-turbo": {
+    "id": "openai/gpt-4-turbo",
+    "lab": "openai",
+    "name": "GPT-4 Turbo",
+    "family": "gpt",
+    "released": "2023-11-06",
+    "updated": "2024-04-09",
+    "knowledge": "2023-12",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 4096
+    },
+    "providers": [
+      "aimlapi",
+      "azure",
+      "azure-cognitive-services",
+      "edenai",
+      "impossibl",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "nano-gpt",
+      "openai",
+      "openrouter",
+      "orcarouter",
+      "poe",
+      "vercel"
+    ]
+  },
+  "openai/gpt-4-turbo-vision": {
+    "id": "openai/gpt-4-turbo-vision",
+    "lab": "openai",
+    "name": "GPT-4 Turbo Vision",
+    "family": "gpt",
+    "released": "2023-11-06",
+    "updated": "2024-04-09",
+    "knowledge": "2023-11",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 4096
+    },
+    "providers": [
+      "azure",
+      "azure-cognitive-services"
+    ]
+  },
+  "openai/gpt-4.1": {
+    "id": "openai/gpt-4.1",
+    "lab": "openai",
+    "name": "GPT-4.1",
+    "family": "gpt",
+    "released": "2025-04-14",
+    "updated": "2025-04-14",
+    "knowledge": "2024-04",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1047576,
+      "output": 32768
+    },
+    "providers": [
+      "302ai",
+      "abacus",
+      "aimlapi",
+      "anyapi",
+      "azure",
+      "azure-cognitive-services",
+      "cortecs",
+      "digitalocean",
+      "edenai",
+      "fastrouter",
+      "helicone",
+      "impossibl",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "lowrouter",
+      "model-oracle-ai",
+      "nano-gpt",
+      "nearai",
+      "ofox",
+      "openai",
+      "openrouter",
+      "orcarouter",
+      "pioneer",
+      "poe",
+      "prime",
+      "requesty",
+      "snowflake-cortex",
+      "vercel"
+    ]
+  },
+  "openai/gpt-4.1-mini": {
+    "id": "openai/gpt-4.1-mini",
+    "lab": "openai",
+    "name": "GPT-4.1 Mini",
+    "family": "gpt-mini",
+    "released": "2025-04-14",
+    "updated": "2025-04-14",
+    "knowledge": "2024-04",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1047576,
+      "output": 32768
+    },
+    "providers": [
+      "302ai",
+      "abacus",
+      "aimlapi",
+      "anyapi",
+      "azure",
+      "azure-cognitive-services",
+      "cortecs",
+      "edenai",
+      "helicone",
+      "impossibl",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "lowrouter",
+      "model-oracle-ai",
+      "nano-gpt",
+      "nearai",
+      "ofox",
+      "openai",
+      "openrouter",
+      "orcarouter",
+      "pioneer",
+      "poe",
+      "prime",
+      "requesty",
+      "vercel"
+    ]
+  },
+  "openai/gpt-4.1-mini-2025-04-14": {
+    "id": "openai/gpt-4.1-mini-2025-04-14",
+    "lab": "openai",
+    "name": "GPT-4.1 Mini 20250414",
+    "family": "gpt-mini",
+    "released": "2025-04-14",
+    "updated": "2025-04-14",
+    "knowledge": "2025-04",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1047576,
+      "output": 32768
+    },
+    "providers": [
+      "helicone"
+    ]
+  },
+  "openai/gpt-4.1-nano": {
+    "id": "openai/gpt-4.1-nano",
+    "lab": "openai",
+    "name": "GPT-4.1 Nano",
+    "family": "gpt-nano",
+    "released": "2025-04-14",
+    "updated": "2025-04-14",
+    "knowledge": "2024-04",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1047576,
+      "output": 32768
+    },
+    "providers": [
+      "302ai",
+      "abacus",
+      "aimlapi",
+      "azure",
+      "azure-cognitive-services",
+      "cortecs",
+      "edenai",
+      "helicone",
+      "impossibl",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "nano-gpt",
+      "nearai",
+      "openai",
+      "openrouter",
+      "orcarouter",
+      "pioneer",
+      "poe",
+      "prime",
+      "requesty",
+      "vercel"
+    ]
+  },
+  "openai/gpt-4o": {
+    "id": "openai/gpt-4o",
+    "lab": "openai",
+    "name": "GPT-4o",
+    "family": "gpt",
+    "released": "2024-05-13",
+    "updated": "2024-08-06",
+    "knowledge": "2023-09",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 16384
+    },
+    "providers": [
+      "302ai",
+      "abacus",
+      "aimlapi",
+      "azure",
+      "azure-cognitive-services",
+      "cortecs",
+      "digitalocean",
+      "edenai",
+      "frogbot",
+      "helicone",
+      "impossibl",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "lowrouter",
+      "nano-gpt",
+      "ofox",
+      "openai",
+      "openrouter",
+      "orcarouter",
+      "pioneer",
+      "poe",
+      "prime",
+      "vercel"
+    ]
+  },
+  "openai/gpt-4o-2024-05-13": {
+    "id": "openai/gpt-4o-2024-05-13",
+    "lab": "openai",
+    "name": "GPT-4o 20240513",
+    "family": "gpt",
+    "released": "2024-05-13",
+    "updated": "2024-05-13",
+    "knowledge": "2023-09",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 4096
+    },
+    "providers": [
+      "aimlapi",
+      "kilo",
+      "openai",
+      "openrouter",
+      "orcarouter"
+    ]
+  },
+  "openai/gpt-4o-2024-08-06": {
+    "id": "openai/gpt-4o-2024-08-06",
+    "lab": "openai",
+    "name": "GPT-4o 20240806",
+    "family": "gpt",
+    "released": "2024-08-06",
+    "updated": "2024-08-06",
+    "knowledge": "2023-09",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 16384
+    },
+    "providers": [
+      "aimlapi",
+      "edenai",
+      "kilo",
+      "nano-gpt",
+      "openai",
+      "openrouter",
+      "orcarouter"
+    ]
+  },
+  "openai/gpt-4o-2024-11-20": {
+    "id": "openai/gpt-4o-2024-11-20",
+    "lab": "openai",
+    "name": "GPT-4o 20241120",
+    "family": "gpt",
+    "released": "2024-11-20",
+    "updated": "2024-11-20",
+    "knowledge": "2023-09",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 16384
+    },
+    "providers": [
+      "abacus",
+      "aimlapi",
+      "edenai",
+      "kilo",
+      "nano-gpt",
+      "openai",
+      "openrouter",
+      "orcarouter"
+    ]
+  },
+  "openai/gpt-4o-aug": {
+    "id": "openai/gpt-4o-aug",
+    "lab": "openai",
+    "name": "GPT-4o Aug",
+    "family": "gpt",
+    "released": "2024-11-21",
+    "updated": "2024-11-21",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 8192
+    },
+    "providers": [
+      "poe"
+    ]
+  },
+  "openai/gpt-4o-mini": {
+    "id": "openai/gpt-4o-mini",
+    "lab": "openai",
+    "name": "GPT-4o Mini",
+    "family": "gpt-mini",
+    "released": "2024-07-18",
+    "updated": "2024-07-18",
+    "knowledge": "2023-09",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 16384
+    },
+    "providers": [
+      "abacus",
+      "aimlapi",
+      "azure",
+      "azure-cognitive-services",
+      "cortecs",
+      "crossmodel",
+      "digitalocean",
+      "edenai",
+      "helicone",
+      "impossibl",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "lowrouter",
+      "nano-gpt",
+      "ofox",
+      "openai",
+      "openrouter",
+      "orcarouter",
+      "pioneer",
+      "poe",
+      "prime",
+      "requesty",
+      "vercel"
+    ]
+  },
+  "openai/gpt-4o-mini-search": {
+    "id": "openai/gpt-4o-mini-search",
+    "lab": "openai",
+    "name": "GPT-4o Mini Search",
+    "family": "gpt-mini",
+    "released": "2025-03-11",
+    "updated": "2025-03-11",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 8192
+    },
+    "providers": [
+      "poe"
+    ]
+  },
+  "openai/gpt-4o-mini-transcribe": {
+    "id": "openai/gpt-4o-mini-transcribe",
+    "lab": "openai",
+    "name": "GPT-4o Mini Transcribe",
+    "family": "gpt",
+    "released": "2025-03-20",
+    "updated": "2025-03-20",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": false,
+      "temperature": true,
+      "input": [
+        "text",
+        "audio"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 16000,
+      "output": 16000
+    },
+    "providers": [
+      "llmgateway",
+      "llmgateway-providers",
+      "vercel"
+    ]
+  },
+  "openai/gpt-4o-search": {
+    "id": "openai/gpt-4o-search",
+    "lab": "openai",
+    "name": "GPT-4o Search",
+    "family": "gpt",
+    "released": "2025-03-11",
+    "updated": "2025-03-11",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 8192
+    },
+    "providers": [
+      "poe"
+    ]
+  },
+  "openai/gpt-4o-transcribe": {
+    "id": "openai/gpt-4o-transcribe",
+    "lab": "openai",
+    "name": "GPT-4o Transcribe",
+    "family": "gpt",
+    "released": "2025-03-20",
+    "updated": "2025-03-20",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": false,
+      "temperature": true,
+      "input": [
+        "text",
+        "audio"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 16000,
+      "output": 16000
+    },
+    "providers": [
+      "llmgateway",
+      "llmgateway-providers",
+      "vercel"
+    ]
+  },
+  "openai/gpt-5": {
+    "id": "openai/gpt-5",
+    "lab": "openai",
+    "name": "GPT-5",
+    "family": "gpt",
+    "released": "2025-08-07",
+    "updated": "2025-08-07",
+    "knowledge": "2024-09-30",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 400000,
+      "input": 272000,
+      "output": 128000
+    },
+    "providers": [
+      "302ai",
+      "abacus",
+      "aimlapi",
+      "anyapi",
+      "azure",
+      "azure-cognitive-services",
+      "cortecs",
+      "databricks",
+      "digitalocean",
+      "edenai",
+      "fastrouter",
+      "helicone",
+      "impossibl",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "lowrouter",
+      "model-oracle-ai",
+      "nano-gpt",
+      "nearai",
+      "neon",
+      "ofox",
+      "openai",
+      "opencode",
+      "openrouter",
+      "orcarouter",
+      "poe",
+      "prime",
+      "qiniu-ai",
+      "requesty",
+      "snowflake-cortex",
+      "vercel",
+      "zenmux"
+    ]
+  },
+  "openai/gpt-5-chat": {
+    "id": "openai/gpt-5-chat",
+    "lab": "openai",
+    "name": "GPT-5 Chat",
+    "family": "gpt-codex",
+    "released": "2025-08-07",
+    "updated": "2025-08-07",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 16384
+    },
+    "providers": [
+      "poe"
+    ]
+  },
+  "openai/gpt-5-chat-latest": {
+    "id": "openai/gpt-5-chat-latest",
+    "lab": "openai",
+    "name": "GPT-5 Chat Latest",
+    "family": "gpt",
+    "released": "2025-08-07",
+    "updated": "2025-08-07",
+    "knowledge": "2024-09-30",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 400000,
+      "input": 272000,
+      "output": 128000
+    },
+    "providers": [
+      "helicone",
+      "jiekou",
+      "orcarouter"
+    ]
+  },
+  "openai/gpt-5-codex": {
+    "id": "openai/gpt-5-codex",
+    "lab": "openai",
+    "name": "GPT-5 Codex",
+    "family": "gpt-codex",
+    "released": "2025-09-15",
+    "updated": "2025-09-15",
+    "knowledge": "2024-09-30",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 400000,
+      "input": 272000,
+      "output": 128000
+    },
+    "providers": [
+      "abacus",
+      "azure",
+      "azure-cognitive-services",
+      "helicone",
+      "impossibl",
+      "jiekou",
+      "opencode",
+      "poe",
+      "vercel",
+      "zenmux"
+    ]
+  },
+  "openai/gpt-5-image": {
+    "id": "openai/gpt-5-image",
+    "lab": "openai",
+    "name": "GPT-5 Image",
+    "family": "gpt",
+    "type": "image",
+    "released": "2025-10-14",
+    "updated": "2025-10-14",
+    "knowledge": "2024-10-01",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "image",
+        "text",
+        "pdf"
+      ],
+      "output": [
+        "image",
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 400000,
+      "output": 128000
+    },
+    "providers": [
+      "kilo",
+      "openrouter"
+    ]
+  },
+  "openai/gpt-5-image-mini": {
+    "id": "openai/gpt-5-image-mini",
+    "lab": "openai",
+    "name": "GPT-5 Image Mini",
+    "family": "gpt",
+    "type": "image",
+    "released": "2025-10-16",
+    "updated": "2025-10-16",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "pdf",
+        "image",
+        "text"
+      ],
+      "output": [
+        "image",
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 400000,
+      "output": 128000
+    },
+    "providers": [
+      "kilo",
+      "openrouter"
+    ]
+  },
+  "openai/gpt-5-mini": {
+    "id": "openai/gpt-5-mini",
+    "lab": "openai",
+    "name": "GPT-5 Mini",
+    "family": "gpt-mini",
+    "released": "2025-08-07",
+    "updated": "2025-08-07",
+    "knowledge": "2024-05-30",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 400000,
+      "input": 272000,
+      "output": 128000
+    },
+    "providers": [
+      "302ai",
+      "abacus",
+      "aimlapi",
+      "anyapi",
+      "azure",
+      "azure-cognitive-services",
+      "cortecs",
+      "databricks",
+      "digitalocean",
+      "edenai",
+      "fastrouter",
+      "github-copilot",
+      "helicone",
+      "impossibl",
+      "jiekou",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "lowrouter",
+      "nano-gpt",
+      "nearai",
+      "neon",
+      "ofox",
+      "openai",
+      "openrouter",
+      "orcarouter",
+      "perplexity-agent",
+      "pioneer",
+      "poe",
+      "prime",
+      "qihang-ai",
+      "requesty",
+      "snowflake-cortex",
+      "vercel",
+      "vivgrid"
+    ]
+  },
+  "openai/gpt-5-nano": {
+    "id": "openai/gpt-5-nano",
+    "lab": "openai",
+    "name": "GPT-5 Nano",
+    "family": "gpt-nano",
+    "released": "2025-08-07",
+    "updated": "2025-08-07",
+    "knowledge": "2024-05-30",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 400000,
+      "input": 272000,
+      "output": 128000
+    },
+    "providers": [
+      "abacus",
+      "aimlapi",
+      "azure",
+      "azure-cognitive-services",
+      "cortecs",
+      "databricks",
+      "digitalocean",
+      "edenai",
+      "fastrouter",
+      "helicone",
+      "impossibl",
+      "jiekou",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "lowrouter",
+      "nano-gpt",
+      "nearai",
+      "neon",
+      "ofox",
+      "openai",
+      "opencode",
+      "openrouter",
+      "orcarouter",
+      "pioneer",
+      "poe",
+      "prime",
+      "requesty",
+      "snowflake-cortex",
+      "vercel"
+    ]
+  },
+  "openai/gpt-5-pro": {
+    "id": "openai/gpt-5-pro",
+    "lab": "openai",
+    "name": "GPT-5 Pro",
+    "family": "gpt-pro",
+    "released": "2025-10-06",
+    "updated": "2025-10-06",
+    "knowledge": "2024-09-30",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 400000,
+      "input": 272000,
+      "output": 272000
+    },
+    "providers": [
+      "302ai",
+      "aimlapi",
+      "azure",
+      "azure-cognitive-services",
+      "edenai",
+      "helicone",
+      "impossibl",
+      "jiekou",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "nano-gpt",
+      "openai",
+      "openrouter",
+      "orcarouter",
+      "poe",
+      "vercel"
+    ]
+  },
+  "openai/gpt-5-search-api": {
+    "id": "openai/gpt-5-search-api",
+    "lab": "openai",
+    "name": "GPT-5 Search API",
+    "family": "gpt",
+    "type": "chat",
+    "released": "2025-10-14",
+    "updated": "2025-10-14",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 272000,
+      "output": 100000
+    },
+    "providers": [
+      "edenai"
+    ]
+  },
+  "openai/gpt-5.1": {
+    "id": "openai/gpt-5.1",
+    "lab": "openai",
+    "name": "GPT-5.1",
+    "family": "gpt",
+    "released": "2025-11-13",
+    "updated": "2025-11-13",
+    "knowledge": "2024-09-30",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 400000,
+      "input": 272000,
+      "output": 128000
+    },
+    "providers": [
+      "302ai",
+      "abacus",
+      "aimlapi",
+      "anyapi",
+      "azure",
+      "azure-cognitive-services",
+      "cortecs",
+      "databricks",
+      "edenai",
+      "helicone",
+      "impossibl",
+      "jiekou",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "nano-gpt",
+      "nearai",
+      "neon",
+      "ofox",
+      "openai",
+      "opencode",
+      "openrouter",
+      "orcarouter",
+      "perplexity-agent",
+      "pioneer",
+      "poe",
+      "prime",
+      "requesty",
+      "snowflake-cortex",
+      "zenmux"
+    ]
+  },
+  "openai/gpt-5.1-chat": {
+    "id": "openai/gpt-5.1-chat",
+    "lab": "openai",
+    "name": "GPT-5.1 Chat",
+    "released": "2025-11-13",
+    "updated": "2025-11-13",
+    "knowledge": "2025-01-01",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "pdf",
+        "image",
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 64000
+    },
+    "providers": [
+      "zenmux"
+    ]
+  },
+  "openai/gpt-5.1-chat-latest": {
+    "id": "openai/gpt-5.1-chat-latest",
+    "lab": "openai",
+    "name": "GPT-5.1 Chat Latest",
+    "family": "gpt",
+    "released": "2025-11-13",
+    "updated": "2025-11-13",
+    "knowledge": "2024-09-30",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 16384
+    },
+    "providers": [
+      "302ai",
+      "abacus",
+      "helicone",
+      "orcarouter"
+    ]
+  },
+  "openai/gpt-5.1-codex": {
+    "id": "openai/gpt-5.1-codex",
+    "lab": "openai",
+    "name": "GPT-5.1 Codex",
+    "family": "gpt-codex",
+    "released": "2025-11-13",
+    "updated": "2025-11-13",
+    "knowledge": "2024-09-30",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 400000,
+      "input": 272000,
+      "output": 128000
+    },
+    "providers": [
+      "abacus",
+      "azure",
+      "azure-cognitive-services",
+      "edenai",
+      "helicone",
+      "impossibl",
+      "jiekou",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "nano-gpt",
+      "opencode",
+      "openrouter",
+      "orcarouter",
+      "poe",
+      "vercel",
+      "vivgrid",
+      "zenmux"
+    ]
+  },
+  "openai/gpt-5.1-codex-max": {
+    "id": "openai/gpt-5.1-codex-max",
+    "lab": "openai",
+    "name": "GPT-5.1 Codex Max",
+    "family": "gpt-codex",
+    "released": "2025-11-13",
+    "updated": "2025-11-13",
+    "knowledge": "2024-09-30",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 400000,
+      "input": 272000,
+      "output": 128000
+    },
+    "providers": [
+      "abacus",
+      "aimlapi",
+      "azure",
+      "azure-cognitive-services",
+      "digitalocean",
+      "edenai",
+      "jiekou",
+      "kilo",
+      "nano-gpt",
+      "ofox",
+      "opencode",
+      "openrouter",
+      "poe",
+      "vercel",
+      "vivgrid"
+    ]
+  },
+  "openai/gpt-5.1-codex-mini": {
+    "id": "openai/gpt-5.1-codex-mini",
+    "lab": "openai",
+    "name": "GPT-5.1 Codex Mini",
+    "family": "gpt-codex",
+    "released": "2025-11-13",
+    "updated": "2025-11-13",
+    "knowledge": "2024-09-30",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 400000,
+      "input": 272000,
+      "output": 128000
+    },
+    "providers": [
+      "azure",
+      "azure-cognitive-services",
+      "edenai",
+      "helicone",
+      "impossibl",
+      "jiekou",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "nano-gpt",
+      "ofox",
+      "opencode",
+      "openrouter",
+      "orcarouter",
+      "poe",
+      "vercel",
+      "zenmux"
+    ]
+  },
+  "openai/gpt-5.1-instant": {
+    "id": "openai/gpt-5.1-instant",
+    "lab": "openai",
+    "name": "GPT-5.1 Instant",
+    "family": "gpt",
+    "released": "2025-11-12",
+    "updated": "2025-11-12",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 16384
+    },
+    "providers": [
+      "poe"
+    ]
+  },
+  "openai/gpt-5.1-thinking": {
+    "id": "openai/gpt-5.1-thinking",
+    "lab": "openai",
+    "name": "GPT-5.1 Thinking",
+    "family": "gpt",
+    "released": "2025-11-12",
+    "updated": "2025-11-12",
+    "knowledge": "2024-10",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 400000,
+      "input": 272000,
+      "output": 128000
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "openai/gpt-5.2": {
+    "id": "openai/gpt-5.2",
+    "lab": "openai",
+    "name": "GPT-5.2",
+    "family": "gpt",
+    "released": "2025-12-11",
+    "updated": "2025-12-11",
+    "knowledge": "2025-08-31",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 400000,
+      "input": 272000,
+      "output": 128000
+    },
+    "providers": [
+      "302ai",
+      "abacus",
+      "aimlapi",
+      "anyapi",
+      "azure",
+      "azure-cognitive-services",
+      "databricks",
+      "digitalocean",
+      "edenai",
+      "impossibl",
+      "jiekou",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "lowrouter",
+      "nano-gpt",
+      "nearai",
+      "neon",
+      "ofox",
+      "openai",
+      "opencode",
+      "openrouter",
+      "orcarouter",
+      "perplexity-agent",
+      "poe",
+      "prime",
+      "qihang-ai",
+      "qiniu-ai",
+      "snowflake-cortex",
+      "unorouter",
+      "vercel",
+      "zenmux"
+    ]
+  },
+  "openai/gpt-5.2-chat-latest": {
+    "id": "openai/gpt-5.2-chat-latest",
+    "lab": "openai",
+    "name": "GPT-5.2 Chat Latest",
+    "family": "gpt",
+    "released": "2025-12-11",
+    "updated": "2025-12-11",
+    "knowledge": "2025-08-31",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 16384
+    },
+    "providers": [
+      "302ai",
+      "abacus",
+      "kilo",
+      "openrouter",
+      "orcarouter"
+    ]
+  },
+  "openai/gpt-5.2-codex": {
+    "id": "openai/gpt-5.2-codex",
+    "lab": "openai",
+    "name": "GPT-5.2 Codex",
+    "family": "gpt-codex",
+    "released": "2025-12-11",
+    "updated": "2025-12-11",
+    "knowledge": "2025-08-31",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 400000,
+      "input": 272000,
+      "output": 128000
+    },
+    "providers": [
+      "abacus",
+      "azure",
+      "azure-cognitive-services",
+      "edenai",
+      "impossibl",
+      "jiekou",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "nano-gpt",
+      "ofox",
+      "opencode",
+      "openrouter",
+      "orcarouter",
+      "poe",
+      "qihang-ai",
+      "vercel",
+      "vivgrid",
+      "zenmux"
+    ]
+  },
+  "openai/gpt-5.2-instant": {
+    "id": "openai/gpt-5.2-instant",
+    "lab": "openai",
+    "name": "GPT-5.2 Instant",
+    "released": "2025-12-11",
+    "updated": "2025-12-11",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 16384
+    },
+    "providers": [
+      "poe"
+    ]
+  },
+  "openai/gpt-5.2-pro": {
+    "id": "openai/gpt-5.2-pro",
+    "lab": "openai",
+    "name": "GPT-5.2 Pro",
+    "family": "gpt-pro",
+    "released": "2025-12-11",
+    "updated": "2025-12-11",
+    "knowledge": "2025-08-31",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 400000,
+      "input": 272000,
+      "output": 128000
+    },
+    "providers": [
+      "aimlapi",
+      "digitalocean",
+      "edenai",
+      "jiekou",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "openai",
+      "openrouter",
+      "orcarouter",
+      "poe",
+      "vercel",
+      "zenmux"
+    ]
+  },
+  "openai/gpt-5.3-chat": {
+    "id": "openai/gpt-5.3-chat",
+    "lab": "openai",
+    "name": "GPT-5.3 Chat",
+    "released": "2026-03-20",
+    "updated": "2026-03-20",
+    "knowledge": "2025-08-31",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 16380
+    },
+    "providers": [
+      "zenmux"
+    ]
+  },
+  "openai/gpt-5.3-chat-latest": {
+    "id": "openai/gpt-5.3-chat-latest",
+    "lab": "openai",
+    "name": "GPT-5.3 Chat Latest",
+    "family": "gpt",
+    "released": "2026-03-03",
+    "updated": "2026-03-03",
+    "knowledge": "2025-08-31",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 16384
+    },
+    "providers": [
+      "302ai",
+      "abacus",
+      "opper"
+    ]
+  },
+  "openai/gpt-5.3-codex": {
+    "id": "openai/gpt-5.3-codex",
+    "lab": "openai",
+    "name": "GPT-5.3 Codex",
+    "family": "gpt-codex",
+    "released": "2026-02-05",
+    "updated": "2026-02-05",
+    "knowledge": "2025-08-31",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 400000,
+      "input": 272000,
+      "output": 128000
+    },
+    "providers": [
+      "abacus",
+      "aimlapi",
+      "azure",
+      "azure-cognitive-services",
+      "commandcode",
+      "digitalocean",
+      "edenai",
+      "fastrouter",
+      "freemodel",
+      "frogbot",
+      "github-copilot",
+      "impossibl",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "nano-gpt",
+      "neon",
+      "ofox",
+      "openai",
+      "opencode",
+      "openrouter",
+      "opper",
+      "orcarouter",
+      "pioneer",
+      "poe",
+      "prime",
+      "requesty",
+      "vercel",
+      "vivgrid",
+      "zenmux"
+    ]
+  },
+  "openai/gpt-5.3-codex-spark": {
+    "id": "openai/gpt-5.3-codex-spark",
+    "lab": "openai",
+    "name": "GPT-5.3 Codex Spark",
+    "family": "gpt-codex-spark",
+    "released": "2026-02-05",
+    "updated": "2026-02-05",
+    "knowledge": "2025-08-31",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "input": 100000,
+      "output": 32000
+    },
+    "providers": [
+      "openai",
+      "opencode",
+      "poe"
+    ]
+  },
+  "openai/gpt-5.3-codex-xhigh": {
+    "id": "openai/gpt-5.3-codex-xhigh",
+    "lab": "openai",
+    "name": "GPT-5.3 Codex XHigh",
+    "family": "gpt",
+    "released": "2026-02-05",
+    "updated": "2026-02-05",
+    "knowledge": "2025-08-31",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 400000,
+      "input": 272000,
+      "output": 128000
+    },
+    "providers": [
+      "abacus"
+    ]
+  },
+  "openai/gpt-5.3-instant": {
+    "id": "openai/gpt-5.3-instant",
+    "lab": "openai",
+    "name": "GPT-5.3 Instant",
+    "released": "2026-03-03",
+    "updated": "2026-03-03",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "input": 111616,
+      "output": 16384
+    },
+    "providers": [
+      "poe"
+    ]
+  },
+  "openai/gpt-5.4": {
+    "id": "openai/gpt-5.4",
+    "lab": "openai",
+    "name": "GPT-5.4",
+    "family": "gpt",
+    "released": "2026-03-05",
+    "updated": "2026-03-05",
+    "knowledge": "2025-08-31",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1050000,
+      "input": 922000,
+      "output": 128000
+    },
+    "providers": [
+      "302ai",
+      "abacus",
+      "ai-router",
+      "aimlapi",
+      "anyapi",
+      "azure",
+      "azure-cognitive-services",
+      "commandcode",
+      "cortecs",
+      "crossmodel",
+      "daoxe",
+      "databricks",
+      "digitalocean",
+      "edenai",
+      "freemodel",
+      "github-copilot",
+      "impossibl",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "lowrouter",
+      "model-oracle-ai",
+      "nano-gpt",
+      "nearai",
+      "neon",
+      "ofox",
+      "openai",
+      "opencode",
+      "openrouter",
+      "opper",
+      "orcarouter",
+      "perplexity-agent",
+      "pioneer",
+      "poe",
+      "prime",
+      "requesty",
+      "snowflake-cortex",
+      "unorouter",
+      "vercel",
+      "vivgrid",
+      "xpersona",
+      "zenmux"
+    ]
+  },
+  "openai/gpt-5.4-image-2": {
+    "id": "openai/gpt-5.4-image-2",
+    "lab": "openai",
+    "name": "GPT-5.4 Image 2",
+    "family": "gpt",
+    "type": "image",
+    "released": "2026-04-21",
+    "updated": "2026-04-21",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "image",
+        "text",
+        "pdf"
+      ],
+      "output": [
+        "image",
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 272000,
+      "output": 128000
+    },
+    "providers": [
+      "aimlapi",
+      "kilo",
+      "openrouter"
+    ]
+  },
+  "openai/gpt-5.4-mini": {
+    "id": "openai/gpt-5.4-mini",
+    "lab": "openai",
+    "name": "GPT-5.4 Mini",
+    "family": "gpt-mini",
+    "released": "2026-03-17",
+    "updated": "2026-03-17",
+    "knowledge": "2025-08-31",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 400000,
+      "input": 272000,
+      "output": 128000
+    },
+    "providers": [
+      "302ai",
+      "abacus",
+      "aimlapi",
+      "azure",
+      "azure-cognitive-services",
+      "commandcode",
+      "crossmodel",
+      "databricks",
+      "digitalocean",
+      "edenai",
+      "fastrouter",
+      "freemodel",
+      "frogbot",
+      "github-copilot",
+      "impossibl",
+      "kenari",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "lowrouter",
+      "model-oracle-ai",
+      "nano-gpt",
+      "nearai",
+      "neon",
+      "ofox",
+      "openai",
+      "opencode",
+      "openrouter",
+      "opper",
+      "orcarouter",
+      "pioneer",
+      "poe",
+      "prime",
+      "requesty",
+      "vercel",
+      "vivgrid",
+      "xpersona",
+      "zenmux"
+    ]
+  },
+  "openai/gpt-5.4-nano": {
+    "id": "openai/gpt-5.4-nano",
+    "lab": "openai",
+    "name": "GPT-5.4 Nano",
+    "family": "gpt-nano",
+    "released": "2026-03-17",
+    "updated": "2026-03-17",
+    "knowledge": "2025-08-31",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 400000,
+      "input": 272000,
+      "output": 128000
+    },
+    "providers": [
+      "302ai",
+      "abacus",
+      "aimlapi",
+      "azure",
+      "azure-cognitive-services",
+      "crossmodel",
+      "databricks",
+      "digitalocean",
+      "edenai",
+      "fastrouter",
+      "frogbot",
+      "github-copilot",
+      "impossibl",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "model-oracle-ai",
+      "nano-gpt",
+      "nearai",
+      "neon",
+      "ofox",
+      "openai",
+      "opencode",
+      "openrouter",
+      "opper",
+      "orcarouter",
+      "pioneer",
+      "poe",
+      "prime",
+      "requesty",
+      "vercel",
+      "vivgrid",
+      "zenmux"
+    ]
+  },
+  "openai/gpt-5.4-pro": {
+    "id": "openai/gpt-5.4-pro",
+    "lab": "openai",
+    "name": "GPT-5.4 Pro",
+    "family": "gpt-pro",
+    "released": "2026-03-05",
+    "updated": "2026-03-05",
+    "knowledge": "2025-08-31",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1050000,
+      "input": 922000,
+      "output": 128000
+    },
+    "providers": [
+      "aimlapi",
+      "azure",
+      "azure-cognitive-services",
+      "digitalocean",
+      "edenai",
+      "impossibl",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "ofox",
+      "openai",
+      "opencode",
+      "openrouter",
+      "opper",
+      "orcarouter",
+      "poe",
+      "prime",
+      "requesty",
+      "vercel",
+      "zenmux"
+    ]
+  },
+  "openai/gpt-5.5": {
+    "id": "openai/gpt-5.5",
+    "lab": "openai",
+    "name": "GPT-5.5",
+    "family": "gpt",
+    "released": "2026-04-23",
+    "updated": "2026-04-23",
+    "knowledge": "2025-12-01",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1050000,
+      "input": 922000,
+      "output": 128000
+    },
+    "providers": [
+      "302ai",
+      "abacus",
+      "ai-router",
+      "aimlapi",
+      "azure",
+      "azure-cognitive-services",
+      "commandcode",
+      "crossmodel",
+      "daoxe",
+      "databricks",
+      "digitalocean",
+      "edenai",
+      "fastrouter",
+      "freemodel",
+      "frogbot",
+      "github-copilot",
+      "gmicloud",
+      "hpc-ai",
+      "impossibl",
+      "kenari",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "lowrouter",
+      "model-oracle-ai",
+      "nano-gpt",
+      "nearai",
+      "neon",
+      "ofox",
+      "openai",
+      "opencode",
+      "openrouter",
+      "opper",
+      "orcarouter",
+      "perplexity-agent",
+      "pioneer",
+      "poe",
+      "prime",
+      "requesty",
+      "snowflake-cortex",
+      "unorouter",
+      "vercel",
+      "vivgrid",
+      "xpersona",
+      "zenmux"
+    ]
+  },
+  "openai/gpt-5.5-instant": {
+    "id": "openai/gpt-5.5-instant",
+    "lab": "openai",
+    "name": "GPT-5.5 Instant",
+    "released": "2026-05-05",
+    "updated": "2026-05-28",
+    "knowledge": "2025-12-01",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 400000,
+      "input": 272000,
+      "output": 128000
+    },
+    "providers": [
+      "azure",
+      "azure-cognitive-services",
+      "kilo",
+      "nano-gpt",
+      "openrouter",
+      "zenmux"
+    ]
+  },
+  "openai/gpt-5.5-pro": {
+    "id": "openai/gpt-5.5-pro",
+    "lab": "openai",
+    "name": "GPT-5.5 Pro",
+    "family": "gpt-pro",
+    "released": "2026-04-23",
+    "updated": "2026-04-23",
+    "knowledge": "2025-12-01",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1050000,
+      "input": 922000,
+      "output": 128000
+    },
+    "providers": [
+      "aimlapi",
+      "crossmodel",
+      "edenai",
+      "fastrouter",
+      "impossibl",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "neon",
+      "openai",
+      "opencode",
+      "openrouter",
+      "opper",
+      "orcarouter",
+      "poe",
+      "requesty",
+      "vercel",
+      "zenmux"
+    ]
+  },
+  "openai/gpt-5.6-cyber": {
+    "id": "openai/gpt-5.6-cyber",
+    "lab": "openai",
+    "name": "GPT-5.6 Cyber",
+    "family": "gpt",
+    "released": "2026-08-07",
+    "updated": "2026-08-07",
+    "knowledge": "2026-02-16",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 400000,
+      "input": 272000,
+      "output": 128000
+    },
+    "providers": [
+      "openai"
+    ]
+  },
+  "openai/gpt-5.6-luna": {
+    "id": "openai/gpt-5.6-luna",
+    "lab": "openai",
+    "name": "GPT-5.6 Luna",
+    "family": "gpt-luna",
+    "released": "2026-07-09",
+    "updated": "2026-07-09",
+    "knowledge": "2026-02-16",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1050000,
+      "input": 922000,
+      "output": 128000
+    },
+    "providers": [
+      "302ai",
+      "abacus",
+      "ai-router",
+      "aimlapi",
+      "aixy",
+      "azure",
+      "azure-cognitive-services",
+      "bothub",
+      "boundless",
+      "commandcode",
+      "cortecs",
+      "crossmodel",
+      "databricks",
+      "digitalocean",
+      "edenai",
+      "github-copilot",
+      "impossibl",
+      "kenari",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "lowrouter",
+      "nano-gpt",
+      "nearai",
+      "neon",
+      "ofox",
+      "openai",
+      "opencode",
+      "opencode-go",
+      "openrouter",
+      "opper",
+      "orcarouter",
+      "perplexity-agent",
+      "pioneer",
+      "prime",
+      "requesty",
+      "routing-run",
+      "snowflake-cortex",
+      "standardcompute",
+      "vercel",
+      "vivgrid",
+      "zenmux"
+    ]
+  },
+  "openai/gpt-5.6-luna-pro": {
+    "id": "openai/gpt-5.6-luna-pro",
+    "lab": "openai",
+    "name": "GPT-5.6 Luna Pro",
+    "family": "gpt-luna",
+    "released": "2026-07-09",
+    "updated": "2026-07-09",
+    "knowledge": "2026-02-16",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1050000,
+      "input": 922000,
+      "output": 128000
+    },
+    "providers": [
+      "302ai",
+      "aimlapi",
+      "kilo",
+      "nano-gpt",
+      "openai",
+      "openrouter",
+      "prime"
+    ]
+  },
+  "openai/gpt-5.6-sol": {
+    "id": "openai/gpt-5.6-sol",
+    "lab": "openai",
+    "name": "GPT-5.6 Sol",
+    "family": "gpt-sol",
+    "released": "2026-07-09",
+    "updated": "2026-07-09",
+    "knowledge": "2026-02-16",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1050000,
+      "input": 922000,
+      "output": 128000
+    },
+    "providers": [
+      "302ai",
+      "abacus",
+      "agentrouter",
+      "ai-router",
+      "aimlapi",
+      "aixy",
+      "azure",
+      "azure-cognitive-services",
+      "boundless",
+      "commandcode",
+      "cortecs",
+      "crossmodel",
+      "databricks",
+      "digitalocean",
+      "edenai",
+      "github-copilot",
+      "impossibl",
+      "infer",
+      "kenari",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "lowrouter",
+      "nano-gpt",
+      "nearai",
+      "neon",
+      "ofox",
+      "openai",
+      "opencode",
+      "openrouter",
+      "opper",
+      "orcarouter",
+      "perplexity-agent",
+      "pioneer",
+      "prime",
+      "requesty",
+      "routing-run",
+      "snowflake-cortex",
+      "standardcompute",
+      "vercel",
+      "vivgrid",
+      "xpersona",
+      "zenmux"
+    ]
+  },
+  "openai/gpt-5.6-sol-pro": {
+    "id": "openai/gpt-5.6-sol-pro",
+    "lab": "openai",
+    "name": "GPT-5.6 Sol Pro",
+    "family": "gpt-sol",
+    "released": "2026-07-09",
+    "updated": "2026-07-09",
+    "knowledge": "2026-02-16",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1050000,
+      "input": 922000,
+      "output": 128000
+    },
+    "providers": [
+      "302ai",
+      "aimlapi",
+      "kilo",
+      "nano-gpt",
+      "openai",
+      "openrouter",
+      "prime"
+    ]
+  },
+  "openai/gpt-5.6-terra": {
+    "id": "openai/gpt-5.6-terra",
+    "lab": "openai",
+    "name": "GPT-5.6 Terra",
+    "family": "gpt-terra",
+    "released": "2026-07-09",
+    "updated": "2026-07-09",
+    "knowledge": "2026-02-16",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1050000,
+      "input": 922000,
+      "output": 128000
+    },
+    "providers": [
+      "302ai",
+      "abacus",
+      "ai-router",
+      "aimlapi",
+      "aixy",
+      "azure",
+      "azure-cognitive-services",
+      "commandcode",
+      "cortecs",
+      "crossmodel",
+      "databricks",
+      "digitalocean",
+      "edenai",
+      "github-copilot",
+      "impossibl",
+      "kenari",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "lowrouter",
+      "nano-gpt",
+      "neon",
+      "ofox",
+      "openai",
+      "opencode",
+      "openrouter",
+      "opper",
+      "orcarouter",
+      "perplexity-agent",
+      "pioneer",
+      "prime",
+      "requesty",
+      "routing-run",
+      "snowflake-cortex",
+      "standardcompute",
+      "vercel",
+      "vivgrid",
+      "xpersona",
+      "zenmux"
+    ]
+  },
+  "openai/gpt-5.6-terra-pro": {
+    "id": "openai/gpt-5.6-terra-pro",
+    "lab": "openai",
+    "name": "GPT-5.6 Terra Pro",
+    "family": "gpt-terra",
+    "released": "2026-07-09",
+    "updated": "2026-07-09",
+    "knowledge": "2026-02-16",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1050000,
+      "input": 922000,
+      "output": 128000
+    },
+    "providers": [
+      "302ai",
+      "aimlapi",
+      "kilo",
+      "nano-gpt",
+      "openai",
+      "openrouter",
+      "prime"
+    ]
+  },
+  "openai/gpt-6-astra": {
+    "id": "openai/gpt-6-astra",
+    "lab": "openai",
+    "name": "GPT-6 Astra",
+    "family": "gpt-astra",
+    "released": "2026-09-04",
+    "updated": "2026-09-04",
+    "knowledge": "2026-04-30",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1050000,
+      "input": 922000,
+      "output": 128000
+    },
+    "merged": [
+      "openai/gpt-6-astra-fast"
+    ],
+    "providers": [
+      "302ai",
+      "aimlapi",
+      "aixy",
+      "azure",
+      "azure-cognitive-services",
+      "commandcode",
+      "cortecs",
+      "crossmodel",
+      "digitalocean",
+      "edenai",
+      "github-copilot",
+      "infer",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "lowrouter",
+      "nano-gpt",
+      "nearai",
+      "neon",
+      "ofox",
+      "openai",
+      "opencode",
+      "openrouter",
+      "opper",
+      "perplexity-agent",
+      "prime",
+      "requesty",
+      "standardcompute",
+      "vercel",
+      "vivgrid",
+      "zenmux"
+    ]
+  },
+  "openai/gpt-6-astra-pro": {
+    "id": "openai/gpt-6-astra-pro",
+    "lab": "openai",
+    "name": "GPT-6 Astra Pro",
+    "family": "gpt-astra",
+    "released": "2026-09-04",
+    "updated": "2026-09-04",
+    "knowledge": "2026-04-30",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1050000,
+      "input": 922000,
+      "output": 128000
+    },
+    "providers": [
+      "kilo",
+      "nano-gpt",
+      "openai",
+      "openrouter"
+    ]
+  },
+  "openai/gpt-6-luna": {
+    "id": "openai/gpt-6-luna",
+    "lab": "openai",
+    "name": "GPT-6 Luna",
+    "family": "gpt-luna",
+    "released": "2026-09-22",
+    "updated": "2026-09-22",
+    "knowledge": "2026-05-18",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1050000,
+      "input": 922000,
+      "output": 128000
+    },
+    "providers": [
+      "302ai",
+      "aimlapi",
+      "aixy",
+      "azure",
+      "azure-cognitive-services",
+      "boundless",
+      "commandcode",
+      "cortecs",
+      "crossmodel",
+      "digitalocean",
+      "edenai",
+      "github-copilot",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "lowrouter",
+      "nano-gpt",
+      "nearai",
+      "neon",
+      "ofox",
+      "openai",
+      "opencode",
+      "opencode-go",
+      "openrouter",
+      "perplexity-agent",
+      "prime",
+      "requesty",
+      "standardcompute",
+      "vercel",
+      "vivgrid"
+    ]
+  },
+  "openai/gpt-6-luna-decisions": {
+    "id": "openai/gpt-6-luna-decisions",
+    "lab": "openai",
+    "name": "GPT-6 Luna Decisions",
+    "family": "gpt",
+    "type": "decision",
+    "released": "2026-10-06",
+    "updated": "2026-10-06",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "structured_output": false,
+      "temperature": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1050000,
+      "output": 0
+    },
+    "providers": [
+      "openrouter",
+      "vercel"
+    ]
+  },
+  "openai/gpt-6-luna-pro": {
+    "id": "openai/gpt-6-luna-pro",
+    "lab": "openai",
+    "name": "GPT-6 Luna Pro",
+    "family": "gpt-luna",
+    "released": "2026-09-22",
+    "updated": "2026-09-22",
+    "knowledge": "2026-05-18",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1050000,
+      "input": 922000,
+      "output": 128000
+    },
+    "providers": [
+      "kilo",
+      "nano-gpt",
+      "openai",
+      "openrouter"
+    ]
+  },
+  "openai/gpt-6-sol": {
+    "id": "openai/gpt-6-sol",
+    "lab": "openai",
+    "name": "GPT-6 Sol",
+    "family": "gpt-sol",
+    "released": "2026-09-22",
+    "updated": "2026-09-22",
+    "knowledge": "2026-04-20",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1050000,
+      "input": 922000,
+      "output": 128000
+    },
+    "providers": [
+      "302ai",
+      "aimlapi",
+      "aixy",
+      "azure",
+      "azure-cognitive-services",
+      "boundless",
+      "commandcode",
+      "cortecs",
+      "crossmodel",
+      "digitalocean",
+      "edenai",
+      "github-copilot",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "lowrouter",
+      "nano-gpt",
+      "nearai",
+      "neon",
+      "ofox",
+      "openai",
+      "opencode",
+      "openrouter",
+      "perplexity-agent",
+      "prime",
+      "requesty",
+      "vercel",
+      "vivgrid",
+      "zenmux"
+    ]
+  },
+  "openai/gpt-6-sol-pro": {
+    "id": "openai/gpt-6-sol-pro",
+    "lab": "openai",
+    "name": "GPT-6 Sol Pro",
+    "family": "gpt-sol",
+    "released": "2026-09-22",
+    "updated": "2026-09-22",
+    "knowledge": "2026-04-20",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1050000,
+      "input": 922000,
+      "output": 128000
+    },
+    "providers": [
+      "kilo",
+      "nano-gpt",
+      "openai",
+      "openrouter"
+    ]
+  },
+  "openai/gpt-6.1-sol": {
+    "id": "openai/gpt-6.1-sol",
+    "lab": "openai",
+    "name": "GPT-6.1 Sol",
+    "family": "gpt-sol",
+    "released": "2026-09-29",
+    "updated": "2026-09-29",
+    "knowledge": "2026-04-30",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1050000,
+      "input": 922000,
+      "output": 128000
+    },
+    "providers": [
+      "302ai",
+      "aimlapi",
+      "aixy",
+      "azure",
+      "azure-cognitive-services",
+      "commandcode",
+      "cortecs",
+      "crossmodel",
+      "digitalocean",
+      "edenai",
+      "github-copilot",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "lowrouter",
+      "nano-gpt",
+      "nearai",
+      "neon",
+      "ofox",
+      "openai",
+      "opencode",
+      "openrouter",
+      "perplexity-agent",
+      "prime",
+      "requesty",
+      "vercel",
+      "vivgrid"
+    ]
+  },
+  "openai/gpt-6.1-sol-pro": {
+    "id": "openai/gpt-6.1-sol-pro",
+    "lab": "openai",
+    "name": "GPT-6.1 Sol Pro",
+    "family": "gpt-sol",
+    "released": "2026-09-29",
+    "updated": "2026-09-29",
+    "knowledge": "2026-04-30",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1050000,
+      "input": 922000,
+      "output": 128000
+    },
+    "providers": [
+      "kilo",
+      "nano-gpt",
+      "openai",
+      "openrouter"
+    ]
+  },
+  "openai/gpt-astra-latest": {
+    "id": "openai/gpt-astra-latest",
+    "lab": "openai",
+    "name": "GPT Astra Latest",
+    "family": "gpt-astra",
+    "released": "2026-09-11",
+    "updated": "2026-09-11",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": true,
+      "temperature": false,
+      "input": [
+        "pdf",
+        "image",
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1050000,
+      "output": 128000
+    },
+    "providers": [
+      "kilo",
+      "nano-gpt",
+      "openrouter"
+    ]
+  },
+  "openai/gpt-audio": {
+    "id": "openai/gpt-audio",
+    "lab": "openai",
+    "name": "GPT Audio",
+    "family": "gpt",
+    "type": "chat",
+    "released": "2025-08-28",
+    "updated": "2025-08-28",
+    "knowledge": "2023-10-01",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "audio",
+        "pdf"
+      ],
+      "output": [
+        "text",
+        "audio"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 16384
+    },
+    "providers": [
+      "kilo",
+      "openrouter"
+    ]
+  },
+  "openai/gpt-audio-mini": {
+    "id": "openai/gpt-audio-mini",
+    "lab": "openai",
+    "name": "GPT Audio Mini",
+    "family": "gpt-mini",
+    "type": "chat",
+    "released": "2025-10-06",
+    "updated": "2025-10-06",
+    "knowledge": "2023-10-01",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "audio",
+        "pdf"
+      ],
+      "output": [
+        "text",
+        "audio"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 16384
+    },
+    "providers": [
+      "kilo",
+      "openrouter"
+    ]
+  },
+  "openai/gpt-image-1": {
+    "id": "openai/gpt-image-1",
+    "lab": "openai",
+    "name": "GPT Image 1",
+    "family": "gpt-image",
+    "type": "image",
+    "released": "2025-04-24",
+    "updated": "2025-04-24",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "image"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "azure",
+      "azure-cognitive-services",
+      "digitalocean",
+      "openai",
+      "poe",
+      "vercel"
+    ]
+  },
+  "openai/gpt-image-1-mini": {
+    "id": "openai/gpt-image-1-mini",
+    "lab": "openai",
+    "name": "GPT Image 1 Mini",
+    "family": "gpt-image",
+    "type": "image",
+    "released": "2025-09-26",
+    "updated": "2025-09-26",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text",
+        "image"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "openai",
+      "poe",
+      "vercel"
+    ]
+  },
+  "openai/gpt-image-1.5": {
+    "id": "openai/gpt-image-1.5",
+    "lab": "openai",
+    "name": "GPT Image 1.5",
+    "family": "gpt-image",
+    "type": "image",
+    "released": "2025-11-25",
+    "updated": "2025-11-25",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text",
+        "image"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "azure",
+      "azure-cognitive-services",
+      "digitalocean",
+      "openai",
+      "poe",
+      "vercel"
+    ]
+  },
+  "openai/gpt-image-2": {
+    "id": "openai/gpt-image-2",
+    "lab": "openai",
+    "name": "GPT Image 2",
+    "family": "gpt-image",
+    "type": "image",
+    "released": "2026-04-21",
+    "updated": "2026-04-21",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "image"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "azure",
+      "azure-cognitive-services",
+      "digitalocean",
+      "fastrouter",
+      "kenari",
+      "openai",
+      "poe",
+      "vercel"
+    ]
+  },
+  "openai/gpt-image-2.5-flare": {
+    "id": "openai/gpt-image-2.5-flare",
+    "lab": "openai",
+    "name": "GPT Image 2.5 Flare",
+    "family": "gpt-image",
+    "type": "image",
+    "released": "2026-09-08",
+    "updated": "2026-09-08",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "image"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "azure",
+      "azure-cognitive-services",
+      "vercel"
+    ]
+  },
+  "openai/gpt-image-2.5-sunburst": {
+    "id": "openai/gpt-image-2.5-sunburst",
+    "lab": "openai",
+    "name": "GPT Image 2.5 Sunburst",
+    "family": "gpt-image",
+    "type": "image",
+    "released": "2026-09-08",
+    "updated": "2026-09-08",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "image"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "azure",
+      "azure-cognitive-services",
+      "vercel"
+    ]
+  },
+  "openai/gpt-live-1": {
+    "id": "openai/gpt-live-1",
+    "lab": "openai",
+    "name": "GPT Live 1",
+    "family": "gpt",
+    "type": "realtime",
+    "released": "2026-09-10",
+    "updated": "2026-09-10",
+    "knowledge": "2025-07-31",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "structured_output": false,
+      "temperature": false,
+      "input": [
+        "text",
+        "audio"
+      ],
+      "output": [
+        "text",
+        "audio"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 4096
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "openai/gpt-live-transcribe": {
+    "id": "openai/gpt-live-transcribe",
+    "lab": "openai",
+    "name": "GPT Live Transcribe",
+    "family": "gpt",
+    "type": "transcription",
+    "released": "2026-07-28",
+    "updated": "2026-07-28",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "structured_output": false,
+      "temperature": false,
+      "input": [
+        "text",
+        "audio"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "llmgateway",
+      "llmgateway-providers"
+    ]
+  },
+  "openai/gpt-luna-latest": {
+    "id": "openai/gpt-luna-latest",
+    "lab": "openai",
+    "name": "GPT Luna Latest",
+    "family": "gpt-luna",
+    "released": "2026-09-11",
+    "updated": "2026-09-11",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": true,
+      "temperature": false,
+      "input": [
+        "pdf",
+        "image",
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1050000,
+      "output": 128000
+    },
+    "providers": [
+      "kilo",
+      "nano-gpt",
+      "openrouter"
+    ]
+  },
+  "openai/gpt-oss-120b": {
+    "id": "openai/gpt-oss-120b",
+    "lab": "openai",
+    "name": "GPT OSS 120B",
+    "family": "gpt-oss",
+    "released": "2025-08-05",
+    "updated": "2025-08-05",
+    "knowledge": "2024-06",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 32768
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/openai/gpt-oss-120b"
+      }
+    ],
+    "providers": [
+      "abacus",
+      "aiand",
+      "aimlapi",
+      "aki-io",
+      "baseten",
+      "cerebras",
+      "cloudferro-sherlock",
+      "cloudflare-workers-ai",
+      "cortecs",
+      "crusoe",
+      "databricks",
+      "deepinfra",
+      "digitalocean",
+      "dinference",
+      "edenai",
+      "evroc",
+      "fastrouter",
+      "fireworks-ai",
+      "frogbot",
+      "google-vertex",
+      "greenpt",
+      "groq",
+      "helicone",
+      "huggingface",
+      "hyper",
+      "impossibl",
+      "io-net",
+      "kenari",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "lowrouter",
+      "nano-gpt",
+      "nebius",
+      "neon",
+      "novita-ai",
+      "oci",
+      "ollama-cloud",
+      "openreason",
+      "openrouter",
+      "opper",
+      "orcarouter",
+      "ovhcloud",
+      "pendra",
+      "pioneer",
+      "prime",
+      "privatemode-ai",
+      "qiniu-ai",
+      "regolo-ai",
+      "sambanova",
+      "scaleway",
+      "scx-ai",
+      "siliconflow",
+      "stackit",
+      "submodel",
+      "synthetic",
+      "tempr",
+      "thinkingmachines",
+      "tinfoil",
+      "togetherai",
+      "vercel",
+      "wandb"
+    ]
+  },
+  "openai/gpt-oss-120b-cs": {
+    "id": "openai/gpt-oss-120b-cs",
+    "lab": "openai",
+    "name": "GPT OSS 120B Cs",
+    "released": "2025-08-06",
+    "updated": "2025-08-06",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 0
+    },
+    "providers": [
+      "poe"
+    ]
+  },
+  "openai/gpt-oss-120b-high-throughput": {
+    "id": "openai/gpt-oss-120b-high-throughput",
+    "lab": "openai",
+    "name": "GPT OSS 120B High Throughput",
+    "family": "gpt-oss",
+    "released": "2025-08-05",
+    "updated": "2026-02-25",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 16384
+    },
+    "providers": [
+      "clarifai"
+    ]
+  },
+  "openai/gpt-oss-20b": {
+    "id": "openai/gpt-oss-20b",
+    "lab": "openai",
+    "name": "GPT OSS 20B",
+    "family": "gpt-oss",
+    "released": "2025-08-05",
+    "updated": "2025-08-05",
+    "knowledge": "2024-06",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 32768
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/openai/gpt-oss-20b"
+      }
+    ],
+    "providers": [
+      "aimlapi",
+      "clarifai",
+      "cloudflare-workers-ai",
+      "cortecs",
+      "databricks",
+      "deepinfra",
+      "digitalocean",
+      "edenai",
+      "fastrouter",
+      "frogbot",
+      "groq",
+      "helicone",
+      "huggingface",
+      "impossibl",
+      "io-net",
+      "kenari",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "lmstudio",
+      "lowrouter",
+      "nano-gpt",
+      "neon",
+      "nvidia",
+      "oci",
+      "ollama-cloud",
+      "openrouter",
+      "opper",
+      "ovhcloud",
+      "pioneer",
+      "prime",
+      "qiniu-ai",
+      "regolo-ai",
+      "siliconflow",
+      "stackit",
+      "tempr",
+      "thinkingmachines",
+      "vercel",
+      "wandb"
+    ]
+  },
+  "openai/gpt-oss-20b-maas": {
+    "id": "openai/gpt-oss-20b-maas",
+    "lab": "openai",
+    "name": "GPT OSS 20B Maas",
+    "family": "gpt-oss",
+    "released": "2025-08-05",
+    "updated": "2025-08-05",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 32768
+    },
+    "providers": [
+      "google-vertex"
+    ]
+  },
+  "openai/gpt-oss-safeguard-120b": {
+    "id": "openai/gpt-oss-safeguard-120b",
+    "lab": "openai",
+    "name": "GPT OSS Safeguard 120B",
+    "family": "gpt-oss",
+    "released": "2025-10-29",
+    "updated": "2025-10-29",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 32768
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/openai/gpt-oss-safeguard-120b"
+      }
+    ],
+    "providers": [
+      "cortecs",
+      "lowrouter",
+      "tinfoil",
+      "vercel"
+    ]
+  },
+  "openai/gpt-oss-safeguard-20b": {
+    "id": "openai/gpt-oss-safeguard-20b",
+    "lab": "openai",
+    "name": "GPT OSS Safeguard 20B",
+    "family": "gpt-oss",
+    "released": "2025-10-29",
+    "updated": "2025-10-29",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 131072
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/openai/gpt-oss-safeguard-20b"
+      }
+    ],
+    "providers": [
+      "aimlapi",
+      "edenai",
+      "groq",
+      "kilo",
+      "lowrouter",
+      "nano-gpt",
+      "openrouter",
+      "vercel"
+    ]
+  },
+  "openai/gpt-realtime-1.5": {
+    "id": "openai/gpt-realtime-1.5",
+    "lab": "openai",
+    "name": "GPT Realtime 1.5",
+    "family": "gpt",
+    "released": "2025-06-01",
+    "updated": "2025-06-01",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "audio",
+        "image"
+      ],
+      "output": [
+        "text",
+        "audio"
+      ]
+    },
+    "limit": {
+      "context": 32000,
+      "output": 4096
+    },
+    "providers": [
+      "fastrouter",
+      "vercel"
+    ]
+  },
+  "openai/gpt-realtime-2": {
+    "id": "openai/gpt-realtime-2",
+    "lab": "openai",
+    "name": "GPT Realtime 2",
+    "family": "gpt",
+    "type": "realtime",
+    "released": "2026-05-07",
+    "updated": "2026-05-07",
+    "knowledge": "2024-09-30",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "audio"
+      ],
+      "output": [
+        "text",
+        "audio"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 32000
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "openai/gpt-realtime-2.1": {
+    "id": "openai/gpt-realtime-2.1",
+    "lab": "openai",
+    "name": "GPT Realtime 2.1",
+    "family": "gpt",
+    "type": "realtime",
+    "released": "2026-07-06",
+    "updated": "2026-07-06",
+    "knowledge": "2024-09-30",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "audio",
+        "image"
+      ],
+      "output": [
+        "text",
+        "audio"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "input": 96000,
+      "output": 32000
+    },
+    "providers": [
+      "openai",
+      "vercel"
+    ]
+  },
+  "openai/gpt-realtime-mini": {
+    "id": "openai/gpt-realtime-mini",
+    "lab": "openai",
+    "name": "GPT Realtime Mini",
+    "family": "gpt-mini",
+    "type": "realtime",
+    "released": "2025-10-06",
+    "updated": "2025-10-06",
+    "knowledge": "2023-10-01",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "audio"
+      ],
+      "output": [
+        "text",
+        "audio"
+      ]
+    },
+    "limit": {
+      "context": 32000,
+      "output": 4096
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "openai/gpt-realtime-whisper": {
+    "id": "openai/gpt-realtime-whisper",
+    "lab": "openai",
+    "name": "GPT Realtime Whisper",
+    "family": "whisper",
+    "type": "transcription",
+    "released": "2026-05-07",
+    "updated": "2026-05-07",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "audio"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 16000,
+      "output": 2000
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "openai/gpt-sol-latest": {
+    "id": "openai/gpt-sol-latest",
+    "lab": "openai",
+    "name": "GPT Sol Latest",
+    "family": "gpt-sol",
+    "released": "2026-09-11",
+    "updated": "2026-09-11",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": true,
+      "temperature": false,
+      "input": [
+        "pdf",
+        "image",
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1050000,
+      "output": 128000
+    },
+    "providers": [
+      "kilo",
+      "nano-gpt",
+      "openrouter",
+      "the-grid-ai"
+    ]
+  },
+  "openai/gpt-terra-latest": {
+    "id": "openai/gpt-terra-latest",
+    "lab": "openai",
+    "name": "GPT Terra Latest",
+    "family": "gpt-terra",
+    "released": "2026-09-11",
+    "updated": "2026-09-11",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": true,
+      "temperature": false,
+      "input": [
+        "pdf",
+        "image",
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1050000,
+      "output": 128000
+    },
+    "providers": [
+      "kilo",
+      "nano-gpt",
+      "openrouter"
+    ]
+  },
+  "openai/gpt-transcribe": {
+    "id": "openai/gpt-transcribe",
+    "lab": "openai",
+    "name": "GPT Transcribe",
+    "family": "gpt",
+    "type": "transcription",
+    "released": "2026-07-28",
+    "updated": "2026-07-28",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "structured_output": false,
+      "temperature": true,
+      "input": [
+        "text",
+        "audio"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "llmgateway",
+      "llmgateway-providers"
+    ]
+  },
+  "openai/kb-whisper-large": {
+    "id": "openai/kb-whisper-large",
+    "lab": "openai",
+    "name": "KB Whisper Large",
+    "family": "whisper",
+    "released": "2024-10-01",
+    "updated": "2024-10-01",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "input": [
+        "audio"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 448,
+      "output": 448
+    },
+    "providers": [
+      "evroc"
+    ]
+  },
+  "openai/o1": {
+    "id": "openai/o1",
+    "lab": "openai",
+    "name": "o1",
+    "family": "o",
+    "released": "2024-12-05",
+    "updated": "2024-12-05",
+    "knowledge": "2023-09",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 200000,
+      "output": 100000
+    },
+    "providers": [
+      "aimlapi",
+      "azure",
+      "azure-cognitive-services",
+      "digitalocean",
+      "edenai",
+      "helicone",
+      "impossibl",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "nano-gpt",
+      "openai",
+      "openrouter",
+      "poe",
+      "vercel"
+    ]
+  },
+  "openai/o1-mini": {
+    "id": "openai/o1-mini",
+    "lab": "openai",
+    "name": "o1 Mini",
+    "family": "o-mini",
+    "released": "2025-01-01",
+    "updated": "2025-01-01",
+    "knowledge": "2025-01",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 65536
+    },
+    "providers": [
+      "helicone"
+    ]
+  },
+  "openai/o1-pro": {
+    "id": "openai/o1-pro",
+    "lab": "openai",
+    "name": "o1 Pro",
+    "family": "o-pro",
+    "released": "2025-03-19",
+    "updated": "2025-03-19",
+    "knowledge": "2023-09",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 200000,
+      "output": 100000
+    },
+    "providers": [
+      "aimlapi",
+      "edenai",
+      "kilo",
+      "nano-gpt",
+      "openai",
+      "openrouter",
+      "poe"
+    ]
+  },
+  "openai/o3": {
+    "id": "openai/o3",
+    "lab": "openai",
+    "name": "o3",
+    "family": "o",
+    "released": "2025-04-16",
+    "updated": "2025-04-16",
+    "knowledge": "2024-05",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 200000,
+      "output": 100000
+    },
+    "providers": [
+      "302ai",
+      "abacus",
+      "anyapi",
+      "azure",
+      "azure-cognitive-services",
+      "digitalocean",
+      "edenai",
+      "helicone",
+      "impossibl",
+      "jiekou",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "lowrouter",
+      "nano-gpt",
+      "nearai",
+      "openai",
+      "openrouter",
+      "poe",
+      "vercel"
+    ]
+  },
+  "openai/o3-deep-research": {
+    "id": "openai/o3-deep-research",
+    "lab": "openai",
+    "name": "o3 Deep Research",
+    "family": "o",
+    "released": "2024-06-26",
+    "updated": "2024-06-26",
+    "knowledge": "2024-05",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 200000,
+      "output": 100000
+    },
+    "providers": [
+      "poe"
+    ]
+  },
+  "openai/o3-mini": {
+    "id": "openai/o3-mini",
+    "lab": "openai",
+    "name": "o3 Mini",
+    "family": "o-mini",
+    "released": "2024-12-20",
+    "updated": "2025-01-29",
+    "knowledge": "2024-05",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 200000,
+      "output": 100000
+    },
+    "providers": [
+      "abacus",
+      "aimlapi",
+      "anyapi",
+      "azure",
+      "azure-cognitive-services",
+      "digitalocean",
+      "edenai",
+      "helicone",
+      "impossibl",
+      "jiekou",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "nano-gpt",
+      "nearai",
+      "openai",
+      "openrouter",
+      "poe",
+      "vercel"
+    ]
+  },
+  "openai/o3-pro": {
+    "id": "openai/o3-pro",
+    "lab": "openai",
+    "name": "o3 Pro",
+    "family": "o-pro",
+    "released": "2025-06-10",
+    "updated": "2025-06-10",
+    "knowledge": "2024-05",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 200000,
+      "output": 100000
+    },
+    "providers": [
+      "abacus",
+      "aimlapi",
+      "edenai",
+      "helicone",
+      "kilo",
+      "nano-gpt",
+      "openai",
+      "openrouter",
+      "poe",
+      "vercel"
+    ]
+  },
+  "openai/o4-mini": {
+    "id": "openai/o4-mini",
+    "lab": "openai",
+    "name": "o4 Mini",
+    "family": "o-mini",
+    "released": "2025-04-16",
+    "updated": "2025-04-16",
+    "knowledge": "2024-05",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 200000,
+      "output": 100000
+    },
+    "providers": [
+      "abacus",
+      "anyapi",
+      "azure",
+      "azure-cognitive-services",
+      "edenai",
+      "helicone",
+      "impossibl",
+      "jiekou",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "model-oracle-ai",
+      "nano-gpt",
+      "nearai",
+      "openai",
+      "openrouter",
+      "poe",
+      "requesty",
+      "vercel"
+    ]
+  },
+  "openai/o4-mini-deep-research": {
+    "id": "openai/o4-mini-deep-research",
+    "lab": "openai",
+    "name": "o4 Mini Deep Research",
+    "family": "o-mini",
+    "released": "2024-06-26",
+    "updated": "2024-06-26",
+    "knowledge": "2024-05",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 200000,
+      "output": 100000
+    },
+    "providers": [
+      "poe"
+    ]
+  },
+  "openai/sora-2": {
+    "id": "openai/sora-2",
+    "lab": "openai",
+    "name": "Sora 2",
+    "family": "sora",
+    "released": "2025-10-06",
+    "updated": "2025-10-06",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "video"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "poe"
+    ]
+  },
+  "openai/sora-2-pro": {
+    "id": "openai/sora-2-pro",
+    "lab": "openai",
+    "name": "Sora 2 Pro",
+    "family": "sora",
+    "released": "2025-10-06",
+    "updated": "2025-10-06",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "video"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "poe"
+    ]
+  },
+  "openai/text-embedding-3-large": {
+    "id": "openai/text-embedding-3-large",
+    "lab": "openai",
+    "name": "Text Embedding 3 Large",
+    "family": "text-embedding",
+    "type": "embedding",
+    "released": "2024-01-25",
+    "updated": "2024-01-25",
+    "knowledge": "2024-01",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 8191,
+      "output": 3072
+    },
+    "providers": [
+      "azure",
+      "azure-cognitive-services",
+      "openai",
+      "vercel"
+    ]
+  },
+  "openai/text-embedding-3-small": {
+    "id": "openai/text-embedding-3-small",
+    "lab": "openai",
+    "name": "Text Embedding 3 Small",
+    "family": "text-embedding",
+    "type": "embedding",
+    "released": "2024-01-25",
+    "updated": "2024-01-25",
+    "knowledge": "2024-01",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 8191,
+      "output": 1536
+    },
+    "providers": [
+      "azure",
+      "azure-cognitive-services",
+      "openai",
+      "vercel"
+    ]
+  },
+  "openai/text-embedding-ada-002": {
+    "id": "openai/text-embedding-ada-002",
+    "lab": "openai",
+    "name": "Text Embedding Ada 002",
+    "family": "text-embedding",
+    "type": "embedding",
+    "released": "2022-12-15",
+    "updated": "2022-12-15",
+    "knowledge": "2022-12",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 8192,
+      "output": 1536
+    },
+    "providers": [
+      "azure",
+      "azure-cognitive-services",
+      "openai",
+      "vercel"
+    ]
+  },
+  "openai/tts-1": {
+    "id": "openai/tts-1",
+    "lab": "openai",
+    "name": "TTS 1",
+    "type": "speech",
+    "released": "2023-11-06",
+    "updated": "2023-11-06",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "audio"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "openai/tts-1-hd": {
+    "id": "openai/tts-1-hd",
+    "lab": "openai",
+    "name": "TTS 1 HD",
+    "type": "speech",
+    "released": "2023-11-06",
+    "updated": "2023-11-06",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "audio"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "openai/whisper-1": {
+    "id": "openai/whisper-1",
+    "lab": "openai",
+    "name": "Whisper 1",
+    "family": "whisper",
+    "type": "transcription",
+    "released": "2023-03-01",
+    "updated": "2023-03-01",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "structured_output": false,
+      "temperature": true,
+      "input": [
+        "audio"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 448000,
+      "output": 4096
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "openai/whisper-large-v3": {
+    "id": "openai/whisper-large-v3",
+    "lab": "openai",
+    "name": "Whisper Large V3",
+    "family": "whisper",
+    "type": "transcription",
+    "released": "2023-11-06",
+    "updated": "2023-11-06",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "audio"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 448,
+      "output": 4096
+    },
+    "providers": [
+      "evroc",
+      "groq",
+      "nearai",
+      "nvidia",
+      "privatemode-ai",
+      "regolo-ai",
+      "scaleway"
+    ]
+  },
+  "openai/whisper-large-v3-turbo": {
+    "id": "openai/whisper-large-v3-turbo",
+    "lab": "openai",
+    "name": "Whisper Large V3 Turbo",
+    "family": "whisper",
+    "type": "transcription",
+    "released": "2024-10-01",
+    "updated": "2024-10-01",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "audio"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 448,
+      "output": 448
+    },
+    "providers": [
+      "evroc",
+      "groq",
+      "kenari"
+    ]
+  }
+}

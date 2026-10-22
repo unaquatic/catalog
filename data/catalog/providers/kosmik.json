@@ -1,0 +1,64 @@
+{
+  "id": "kosmik",
+  "name": "Kosmik Compute",
+  "kind": "gateway",
+  "type": "community",
+  "endpoint": {
+    "format": "openai-chat",
+    "api": "https://api.koscompute.com/v1",
+    "auth": {
+      "scheme": "bearer"
+    },
+    "env": [
+      "KOSMIK_API_KEY"
+    ]
+  },
+  "doc": "https://api.koscompute.com/docs/",
+  "models": {
+    "alibaba/qwen3.8-27b": {
+      "name": "Qwen3.8 27B",
+      "family": "qwen",
+      "released": "2026-08-14",
+      "updated": "2026-08-14",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 32768
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "medium",
+          "xhigh"
+        ]
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "qwen/qwen3.8-27b",
+        "name": "Qwen3.8 27B"
+      },
+      "price": {
+        "input": 0.35,
+        "output": 2.2,
+        "cache_read": 0.09
+      }
+    }
+  }
+}

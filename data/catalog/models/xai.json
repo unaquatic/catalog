@@ -1,0 +1,1332 @@
+{
+  "xai/grok-3": {
+    "id": "xai/grok-3",
+    "lab": "xai",
+    "name": "Grok 3",
+    "family": "grok",
+    "released": "2024-06-01",
+    "updated": "2024-06-01",
+    "knowledge": "2024-06",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 131072
+    },
+    "providers": [
+      "helicone",
+      "poe"
+    ]
+  },
+  "xai/grok-3-mini": {
+    "id": "xai/grok-3-mini",
+    "lab": "xai",
+    "name": "Grok 3 Mini",
+    "family": "grok",
+    "released": "2024-06-01",
+    "updated": "2024-06-01",
+    "knowledge": "2024-06",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 131072
+    },
+    "providers": [
+      "helicone",
+      "poe"
+    ]
+  },
+  "xai/grok-4": {
+    "id": "xai/grok-4",
+    "lab": "xai",
+    "name": "Grok 4",
+    "family": "grok",
+    "released": "2025-07-09",
+    "updated": "2025-07-09",
+    "knowledge": "2025-07",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 256000,
+      "output": 64000
+    },
+    "providers": [
+      "fastrouter",
+      "helicone",
+      "llmgateway",
+      "llmgateway-providers",
+      "poe"
+    ]
+  },
+  "xai/grok-4-0709": {
+    "id": "xai/grok-4-0709",
+    "lab": "xai",
+    "name": "Grok 4 0709",
+    "family": "grok",
+    "released": "2025-07-09",
+    "updated": "2025-07-09",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 256000,
+      "output": 16384
+    },
+    "providers": [
+      "abacus",
+      "jiekou"
+    ]
+  },
+  "xai/grok-4-20-non-reasoning": {
+    "id": "xai/grok-4-20-non-reasoning",
+    "lab": "xai",
+    "name": "Grok 4 20 Non Reasoning",
+    "family": "grok",
+    "released": "2026-04-08",
+    "updated": "2026-04-08",
+    "knowledge": "2025-09",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262000,
+      "output": 8192
+    },
+    "providers": [
+      "azure",
+      "azure-cognitive-services",
+      "llmgateway-providers"
+    ]
+  },
+  "xai/grok-4-20-reasoning": {
+    "id": "xai/grok-4-20-reasoning",
+    "lab": "xai",
+    "name": "Grok 4 20 Reasoning",
+    "family": "grok",
+    "released": "2026-04-08",
+    "updated": "2026-04-08",
+    "knowledge": "2025-09",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262000,
+      "output": 8192
+    },
+    "providers": [
+      "azure",
+      "azure-cognitive-services",
+      "llmgateway-providers"
+    ]
+  },
+  "xai/grok-4-fast": {
+    "id": "xai/grok-4-fast",
+    "lab": "xai",
+    "name": "Grok 4 Fast",
+    "released": "2025-09-20",
+    "updated": "2025-09-20",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": false,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "audio",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 2000000,
+      "output": 2000000
+    },
+    "providers": [
+      "qiniu-ai"
+    ]
+  },
+  "xai/grok-4-fast-non-reasoning": {
+    "id": "xai/grok-4-fast-non-reasoning",
+    "lab": "xai",
+    "name": "Grok 4 Fast Non Reasoning",
+    "released": "2025-12-18",
+    "updated": "2025-12-18",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "audio",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 2000000,
+      "output": 2000000
+    },
+    "providers": [
+      "302ai",
+      "abacus",
+      "aimlapi",
+      "edenai",
+      "helicone",
+      "jiekou",
+      "poe",
+      "qiniu-ai"
+    ]
+  },
+  "xai/grok-4-fast-reasoning": {
+    "id": "xai/grok-4-fast-reasoning",
+    "lab": "xai",
+    "name": "Grok 4 Fast Reasoning",
+    "released": "2025-12-18",
+    "updated": "2025-12-18",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "audio",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 2000000,
+      "output": 2000000
+    },
+    "providers": [
+      "302ai",
+      "helicone",
+      "jiekou",
+      "poe",
+      "qiniu-ai"
+    ]
+  },
+  "xai/grok-4.1": {
+    "id": "xai/grok-4.1",
+    "lab": "xai",
+    "name": "Grok 4.1",
+    "released": "2025-11-18",
+    "updated": "2025-11-18",
+    "knowledge": "2025-06",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 200000,
+      "output": 64000
+    },
+    "providers": [
+      "302ai"
+    ]
+  },
+  "xai/grok-4.1-fast": {
+    "id": "xai/grok-4.1-fast",
+    "lab": "xai",
+    "name": "Grok 4.1 Fast",
+    "family": "grok",
+    "released": "2025-11-19",
+    "updated": "2025-11-19",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 2000000,
+      "output": 30000
+    },
+    "providers": [
+      "abacus",
+      "azure",
+      "azure-cognitive-services",
+      "frogbot",
+      "google-vertex",
+      "helicone",
+      "jiekou",
+      "llmgateway",
+      "llmgateway-providers",
+      "ofox",
+      "perplexity-agent",
+      "poe",
+      "qiniu-ai",
+      "vercel"
+    ]
+  },
+  "xai/grok-4.1-fast-reasoning": {
+    "id": "xai/grok-4.1-fast-reasoning",
+    "lab": "xai",
+    "name": "Grok 4.1 Fast Reasoning",
+    "family": "grok",
+    "released": "2025-11-19",
+    "updated": "2025-11-19",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 2000000,
+      "output": 30000
+    },
+    "providers": [
+      "302ai",
+      "azure",
+      "azure-cognitive-services",
+      "frogbot",
+      "google-vertex",
+      "helicone",
+      "jiekou",
+      "llmgateway",
+      "llmgateway-providers",
+      "poe",
+      "qiniu-ai",
+      "vercel"
+    ]
+  },
+  "xai/grok-4.20": {
+    "id": "xai/grok-4.20",
+    "lab": "xai",
+    "name": "Grok 4.20",
+    "family": "grok",
+    "released": "2026-03-31",
+    "updated": "2026-03-31",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 2000000,
+      "output": 1800000
+    },
+    "providers": [
+      "kilo",
+      "nano-gpt",
+      "openrouter"
+    ]
+  },
+  "xai/grok-4.20-0309-non-reasoning": {
+    "id": "xai/grok-4.20-0309-non-reasoning",
+    "lab": "xai",
+    "name": "Grok 4.20 0309 Non Reasoning",
+    "family": "grok",
+    "released": "2026-03-09",
+    "updated": "2026-03-09",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 30000
+    },
+    "providers": [
+      "aimlapi",
+      "edenai",
+      "google-vertex",
+      "impossibl",
+      "llmgateway",
+      "llmgateway-providers",
+      "oci",
+      "tempr",
+      "vercel",
+      "xai",
+      "zenmux"
+    ]
+  },
+  "xai/grok-4.20-0309-reasoning": {
+    "id": "xai/grok-4.20-0309-reasoning",
+    "lab": "xai",
+    "name": "Grok 4.20 0309 Reasoning",
+    "family": "grok",
+    "released": "2026-03-09",
+    "updated": "2026-03-09",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 30000
+    },
+    "providers": [
+      "302ai",
+      "edenai",
+      "google-vertex",
+      "impossibl",
+      "llmgateway",
+      "llmgateway-providers",
+      "oci",
+      "ofox",
+      "requesty",
+      "tempr",
+      "vercel",
+      "xai",
+      "zenmux"
+    ]
+  },
+  "xai/grok-4.20-multi-agent": {
+    "id": "xai/grok-4.20-multi-agent",
+    "lab": "xai",
+    "name": "Grok 4.20 Multi Agent",
+    "family": "grok",
+    "released": "2026-03-31",
+    "updated": "2026-03-31",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 2000000,
+      "output": 1800000
+    },
+    "providers": [
+      "kilo",
+      "nano-gpt",
+      "openrouter",
+      "poe",
+      "vercel"
+    ]
+  },
+  "xai/grok-4.20-multi-agent-0309": {
+    "id": "xai/grok-4.20-multi-agent-0309",
+    "lab": "xai",
+    "name": "Grok 4.20 Multi Agent 0309",
+    "family": "grok",
+    "released": "2026-03-09",
+    "updated": "2026-03-09",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 30000
+    },
+    "providers": [
+      "xai"
+    ]
+  },
+  "xai/grok-4.20-multi-agent-beta": {
+    "id": "xai/grok-4.20-multi-agent-beta",
+    "lab": "xai",
+    "name": "Grok 4.20 Multi Agent Beta",
+    "family": "grok",
+    "released": "2026-03-11",
+    "updated": "2026-03-11",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 2000000,
+      "output": 2000000
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "xai/grok-4.20-non-reasoning-beta": {
+    "id": "xai/grok-4.20-non-reasoning-beta",
+    "lab": "xai",
+    "name": "Grok 4.20 Non Reasoning Beta",
+    "family": "grok",
+    "released": "2026-03-11",
+    "updated": "2026-03-11",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 2000000,
+      "output": 2000000
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "xai/grok-4.20-reasoning-beta": {
+    "id": "xai/grok-4.20-reasoning-beta",
+    "lab": "xai",
+    "name": "Grok 4.20 Reasoning Beta",
+    "family": "grok",
+    "released": "2026-03-11",
+    "updated": "2026-03-11",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 2000000,
+      "output": 2000000
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "xai/grok-4.3": {
+    "id": "xai/grok-4.3",
+    "lab": "xai",
+    "name": "Grok 4.3",
+    "family": "grok",
+    "released": "2026-04-17",
+    "updated": "2026-04-17",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 30000
+    },
+    "providers": [
+      "302ai",
+      "abacus",
+      "anyapi",
+      "auriko",
+      "crossmodel",
+      "daoxe",
+      "edenai",
+      "fastrouter",
+      "frogbot",
+      "google-vertex",
+      "impossibl",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "nano-gpt",
+      "oci",
+      "ofox",
+      "openrouter",
+      "opper",
+      "orcarouter",
+      "requesty",
+      "standardcompute",
+      "tempr",
+      "vercel",
+      "xai",
+      "zenmux"
+    ]
+  },
+  "xai/grok-4.5": {
+    "id": "xai/grok-4.5",
+    "lab": "xai",
+    "name": "Grok 4.5",
+    "family": "grok",
+    "released": "2026-07-08",
+    "updated": "2026-07-08",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 500000,
+      "output": 500000
+    },
+    "providers": [
+      "302ai",
+      "abacus",
+      "commandcode",
+      "crossmodel",
+      "daoxe",
+      "edenai",
+      "github-copilot",
+      "impossibl",
+      "kenari",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "nano-gpt",
+      "ofox",
+      "opencode",
+      "openrouter",
+      "opper",
+      "orcarouter",
+      "perplexity-agent",
+      "pioneer",
+      "requesty",
+      "tempr",
+      "vercel",
+      "xai",
+      "zenmux"
+    ]
+  },
+  "xai/grok-4.6": {
+    "id": "xai/grok-4.6",
+    "lab": "xai",
+    "name": "Grok 4.6",
+    "family": "grok",
+    "released": "2026-08-12",
+    "updated": "2026-08-12",
+    "knowledge": "2026-02-01",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 500000,
+      "output": 500000
+    },
+    "providers": [
+      "302ai",
+      "abacus",
+      "azure",
+      "azure-cognitive-services",
+      "commandcode",
+      "crossmodel",
+      "edenai",
+      "github-copilot",
+      "google-vertex",
+      "kenari",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "nano-gpt",
+      "nearai",
+      "neon",
+      "oci",
+      "ofox",
+      "opencode",
+      "openrouter",
+      "opper",
+      "orcarouter",
+      "perplexity-agent",
+      "prime",
+      "requesty",
+      "tempr",
+      "vercel",
+      "xai",
+      "zenmux"
+    ]
+  },
+  "xai/grok-4.7": {
+    "id": "xai/grok-4.7",
+    "lab": "xai",
+    "name": "Grok 4.7",
+    "family": "grok",
+    "released": "2026-09-21",
+    "updated": "2026-09-21",
+    "knowledge": "2026-05",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 500000,
+      "output": 500000
+    },
+    "providers": [
+      "302ai",
+      "azure",
+      "azure-cognitive-services",
+      "commandcode",
+      "crossmodel",
+      "edenai",
+      "github-copilot",
+      "google-vertex",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "nano-gpt",
+      "nearai",
+      "neon",
+      "ofox",
+      "opencode",
+      "opencode-go",
+      "openrouter",
+      "perplexity-agent",
+      "prime",
+      "requesty",
+      "tempr",
+      "vercel",
+      "xai"
+    ]
+  },
+  "xai/grok-build-0.1": {
+    "id": "xai/grok-build-0.1",
+    "lab": "xai",
+    "name": "Grok Build 0.1",
+    "family": "grok-build",
+    "released": "2026-04-16",
+    "updated": "2026-04-16",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 256000,
+      "output": 256000
+    },
+    "providers": [
+      "crossmodel",
+      "edenai",
+      "fastrouter",
+      "impossibl",
+      "kenari",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "nano-gpt",
+      "opencode",
+      "openrouter",
+      "opper",
+      "requesty",
+      "tempr",
+      "vercel",
+      "xai",
+      "zenmux"
+    ]
+  },
+  "xai/grok-code": {
+    "id": "xai/grok-code",
+    "lab": "xai",
+    "name": "Grok Code",
+    "family": "grok",
+    "released": "2025-08-20",
+    "updated": "2025-08-20",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 256000,
+      "output": 256000
+    },
+    "providers": [
+      "opencode"
+    ]
+  },
+  "xai/grok-code-fast-1": {
+    "id": "xai/grok-code-fast-1",
+    "lab": "xai",
+    "name": "Grok Code Fast 1",
+    "released": "2025-09-02",
+    "updated": "2025-09-02",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 256000,
+      "output": 10000
+    },
+    "providers": [
+      "abacus",
+      "frogbot",
+      "helicone",
+      "jiekou",
+      "poe",
+      "qiniu-ai"
+    ]
+  },
+  "xai/grok-imagine-image": {
+    "id": "xai/grok-imagine-image",
+    "lab": "xai",
+    "name": "Grok Imagine Image",
+    "family": "grok",
+    "type": "image",
+    "released": "2026-01-28",
+    "updated": "2026-01-28",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "image"
+      ]
+    },
+    "limit": {
+      "context": 16000,
+      "output": 0
+    },
+    "providers": [
+      "kenari",
+      "vercel",
+      "xai"
+    ]
+  },
+  "xai/grok-imagine-image-2.0": {
+    "id": "xai/grok-imagine-image-2.0",
+    "lab": "xai",
+    "name": "Grok Imagine Image 2.0",
+    "family": "grok",
+    "type": "image",
+    "released": "2026-08-07",
+    "updated": "2026-08-07",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "image"
+      ]
+    },
+    "limit": {
+      "context": 64000,
+      "output": 0
+    },
+    "providers": [
+      "kenari",
+      "vercel",
+      "zenmux"
+    ]
+  },
+  "xai/grok-imagine-image-quality": {
+    "id": "xai/grok-imagine-image-quality",
+    "lab": "xai",
+    "name": "Grok Imagine Image Quality",
+    "family": "grok",
+    "type": "image",
+    "released": "2026-04-03",
+    "updated": "2026-04-03",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "image"
+      ]
+    },
+    "limit": {
+      "context": 16000,
+      "output": 0
+    },
+    "providers": [
+      "xai"
+    ]
+  },
+  "xai/grok-imagine-video": {
+    "id": "xai/grok-imagine-video",
+    "lab": "xai",
+    "name": "Grok Imagine Video",
+    "family": "grok",
+    "type": "video",
+    "released": "2026-01-28",
+    "updated": "2026-01-28",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output": [
+        "video"
+      ]
+    },
+    "limit": {
+      "context": 1024,
+      "output": 0
+    },
+    "providers": [
+      "vercel",
+      "xai"
+    ]
+  },
+  "xai/grok-imagine-video-1.5": {
+    "id": "xai/grok-imagine-video-1.5",
+    "lab": "xai",
+    "name": "Grok Imagine Video 1.5",
+    "family": "grok",
+    "type": "video",
+    "released": "2026-05-30",
+    "updated": "2026-05-30",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image",
+        "audio"
+      ],
+      "output": [
+        "video"
+      ]
+    },
+    "limit": {
+      "context": 1024,
+      "output": 0
+    },
+    "providers": [
+      "vercel",
+      "xai"
+    ]
+  },
+  "xai/grok-imagine-video-1.5-lite": {
+    "id": "xai/grok-imagine-video-1.5-lite",
+    "lab": "xai",
+    "name": "Grok Imagine Video 1.5 Lite",
+    "family": "grok",
+    "type": "video",
+    "released": "2026-10-01",
+    "updated": "2026-10-01",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "video"
+      ]
+    },
+    "limit": {
+      "context": 1024,
+      "output": 0
+    },
+    "providers": [
+      "vercel",
+      "xai"
+    ]
+  },
+  "xai/grok-stt": {
+    "id": "xai/grok-stt",
+    "lab": "xai",
+    "name": "Grok STT",
+    "family": "grok",
+    "type": "transcription",
+    "released": "2026-03-16",
+    "updated": "2026-03-16",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "audio"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "xai/grok-tts": {
+    "id": "xai/grok-tts",
+    "lab": "xai",
+    "name": "Grok TTS",
+    "type": "speech",
+    "released": "2026-03-16",
+    "updated": "2026-03-16",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "audio"
+      ]
+    },
+    "limit": {
+      "context": 15000,
+      "output": 15000
+    },
+    "providers": [
+      "vercel",
+      "zenmux"
+    ]
+  },
+  "xai/grok-voice-think-fast-1.0": {
+    "id": "xai/grok-voice-think-fast-1.0",
+    "lab": "xai",
+    "name": "Grok Voice Think Fast 1.0",
+    "family": "grok",
+    "type": "realtime",
+    "released": "2026-04-23",
+    "updated": "2026-04-23",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "audio"
+      ],
+      "output": [
+        "text",
+        "audio"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "xai/grok-voice-think-fast-2.0": {
+    "id": "xai/grok-voice-think-fast-2.0",
+    "lab": "xai",
+    "name": "Grok Voice Think Fast 2.0",
+    "family": "grok",
+    "type": "realtime",
+    "released": "2026-07-29",
+    "updated": "2026-07-29",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "audio"
+      ],
+      "output": [
+        "text",
+        "audio"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "xai/grok-voice-transcribe-2.0": {
+    "id": "xai/grok-voice-transcribe-2.0",
+    "lab": "xai",
+    "name": "Grok Voice Transcribe 2.0",
+    "family": "grok",
+    "type": "transcription",
+    "released": "2026-09-17",
+    "updated": "2026-09-17",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "audio"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "zenmux"
+    ]
+  }
+}

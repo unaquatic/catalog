@@ -1,0 +1,172 @@
+{
+  "id": "stepfun-step-plan",
+  "name": "StepFun Step Plan (China)",
+  "kind": "gateway",
+  "type": "community",
+  "endpoint": {
+    "format": "openai-chat",
+    "api": "https://api.stepfun.com/step_plan/v1",
+    "auth": {
+      "scheme": "bearer"
+    },
+    "env": [
+      "STEPFUN_API_KEY"
+    ]
+  },
+  "doc": "https://platform.stepfun.com/docs/zh/step-plan/integrations/reasoning-api",
+  "models": {
+    "stepfun/step-3.5-flash": {
+      "name": "Step 3.5 Flash",
+      "released": "2026-01-29",
+      "updated": "2026-02-13",
+      "knowledge": "2025-01",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 256000,
+        "input": 256000,
+        "output": 256000
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "high"
+        ]
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "step-3.5-flash",
+        "name": "Step 3.5 Flash"
+      }
+    },
+    "stepfun/step-3.5-flash-2603": {
+      "name": "Step 3.5 Flash 2603",
+      "released": "2026-04-02",
+      "updated": "2026-04-02",
+      "knowledge": "2025-01",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 256000,
+        "input": 256000,
+        "output": 256000
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "high"
+        ]
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "step-3.5-flash-2603",
+        "name": "Step 3.5 Flash 2603"
+      }
+    },
+    "stepfun/step-3.7-flash": {
+      "name": "Step 3.7 Flash",
+      "released": "2026-05-29",
+      "updated": "2026-05-29",
+      "knowledge": "2026-03-01",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 256000,
+        "input": 256000,
+        "output": 256000
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "step-3.7-flash",
+        "name": "Step 3.7 Flash"
+      }
+    },
+    "stepfun/step-5-preview": {
+      "name": "Step 5 Preview",
+      "released": "2026-09-16",
+      "updated": "2026-09-20",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "input": 1000000,
+        "output": 65536
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "step-5-preview",
+        "name": "Step 5 Preview"
+      }
+    }
+  }
+}

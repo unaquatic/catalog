@@ -1,0 +1,1343 @@
+{
+  "id": "lowrouter",
+  "name": "LowRouter",
+  "kind": "gateway",
+  "type": "community",
+  "endpoint": {
+    "format": "openai-chat",
+    "api": "https://api.lowrouter.ai/v1",
+    "auth": {
+      "scheme": "bearer"
+    },
+    "env": [
+      "LOWROUTER_API_KEY"
+    ]
+  },
+  "doc": "https://lowrouter.ai/docs/models/available",
+  "models": {
+    "mistral/codestral-2508": {
+      "name": "Codestral 2508",
+      "family": "codestral",
+      "released": "2025-07-30",
+      "updated": "2025-07-30",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 128000,
+        "output": 8192
+      },
+      "provider_options": {
+        "id": "auto/mistralai/codestral-2508",
+        "name": "Codestral 25.08"
+      },
+      "price": {
+        "input": 0.3138,
+        "output": 0.9413,
+        "cache_read": 0.0314
+      }
+    },
+    "mistral/ministral-3-14b-instruct-2512": {
+      "name": "Ministral 3 14B Instruct 2512",
+      "family": "ministral",
+      "released": "2025-12-02",
+      "updated": "2025-12-02",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "provider_options": {
+        "id": "auto/mistralai/ministral-14b-2512",
+        "name": "Ministral 3 14B"
+      },
+      "price": {
+        "input": 0.2092,
+        "output": 0.2092,
+        "cache_read": 0.0209
+      }
+    },
+    "mistral/ministral-3-3b-instruct-2512": {
+      "name": "Ministral 3 3B Instruct 2512",
+      "family": "ministral",
+      "released": "2025-12-02",
+      "updated": "2025-12-02",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "provider_options": {
+        "id": "auto/mistralai/ministral-3b-2512",
+        "name": "Ministral 3 3B"
+      },
+      "price": {
+        "input": 0.1046,
+        "output": 0.1046,
+        "cache_read": 0.0105
+      }
+    },
+    "mistral/ministral-3-8b-instruct-2512": {
+      "name": "Ministral 3 8B Instruct 2512",
+      "family": "ministral",
+      "released": "2025-12-02",
+      "updated": "2025-12-02",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "provider_options": {
+        "id": "auto/mistralai/ministral-8b-2512",
+        "name": "Ministral 3 8B"
+      },
+      "price": {
+        "input": 0.1569,
+        "output": 0.1569,
+        "cache_read": 0.0157
+      }
+    },
+    "mistral/mistral-large-2512": {
+      "name": "Mistral Large 2512",
+      "family": "mistral-large",
+      "released": "2025-12-02",
+      "updated": "2025-12-02",
+      "knowledge": "2024-11",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "provider_options": {
+        "id": "auto/mistralai/mistral-large-2512",
+        "name": "Mistral Large 3"
+      },
+      "price": {
+        "input": 0.5229,
+        "output": 1.5688,
+        "cache_read": 0.0523
+      }
+    },
+    "mistral/mistral-large-4": {
+      "name": "Mistral Large 4",
+      "family": "mistral-large",
+      "released": "2026-10-06",
+      "updated": "2026-10-06",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 524288,
+        "output": 262144
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "auto/mistralai/mistral-large-4",
+        "name": "Mistral Large 4"
+      },
+      "price": {
+        "input": 0.7112,
+        "output": 2.1859,
+        "cache_read": 0.0732
+      },
+      "status": "beta"
+    },
+    "mistral/mistral-medium-2604": {
+      "name": "Mistral Medium 2604",
+      "family": "mistral-medium",
+      "released": "2026-04-29",
+      "updated": "2026-04-29",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "auto/mistralai/mistral-medium-3.5",
+        "name": "Mistral Medium 3.5"
+      },
+      "price": {
+        "input": 1.5688,
+        "output": 7.8442,
+        "cache_read": 0.1569
+      }
+    },
+    "mistral/mistral-small-2603": {
+      "name": "Mistral Small 2603",
+      "family": "mistral-small",
+      "released": "2026-03-16",
+      "updated": "2026-03-16",
+      "knowledge": "2025-06",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 256000,
+        "output": 256000
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "auto/mistralai/mistral-small-2603",
+        "name": "Mistral Small 4"
+      },
+      "price": {
+        "input": 0.1569,
+        "output": 0.6275,
+        "cache_read": 0.0157
+      }
+    },
+    "openai/gpt-4.1": {
+      "name": "GPT-4.1",
+      "family": "gpt",
+      "released": "2025-04-14",
+      "updated": "2025-04-14",
+      "knowledge": "2024-04",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1047576,
+        "output": 32768
+      },
+      "provider_options": {
+        "id": "auto/openai/gpt-4.1",
+        "name": "GPT-4.1"
+      },
+      "price": {
+        "input": 2,
+        "output": 8,
+        "cache_read": 0.5
+      }
+    },
+    "openai/gpt-4.1-mini": {
+      "name": "GPT-4.1 Mini",
+      "family": "gpt-mini",
+      "released": "2025-04-14",
+      "updated": "2025-04-14",
+      "knowledge": "2024-04",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1047576,
+        "output": 32768
+      },
+      "provider_options": {
+        "id": "auto/openai/gpt-4.1-mini",
+        "name": "GPT-4.1 mini"
+      },
+      "price": {
+        "input": 0.4,
+        "output": 1.6,
+        "cache_read": 0.1
+      }
+    },
+    "openai/gpt-4o": {
+      "name": "GPT-4o",
+      "family": "gpt",
+      "released": "2024-05-13",
+      "updated": "2024-08-06",
+      "knowledge": "2023-09",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 128000,
+        "output": 16384
+      },
+      "provider_options": {
+        "id": "auto/openai/gpt-4o",
+        "name": "GPT-4o"
+      },
+      "price": {
+        "input": 2.5,
+        "output": 10,
+        "cache_read": 1.25
+      }
+    },
+    "openai/gpt-4o-mini": {
+      "name": "GPT-4o Mini",
+      "family": "gpt-mini",
+      "released": "2024-07-18",
+      "updated": "2024-07-18",
+      "knowledge": "2023-09",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 128000,
+        "output": 16384
+      },
+      "provider_options": {
+        "id": "auto/openai/gpt-4o-mini",
+        "name": "GPT-4o mini"
+      },
+      "price": {
+        "input": 0.15,
+        "output": 0.6,
+        "cache_read": 0.075
+      }
+    },
+    "openai/gpt-5": {
+      "name": "GPT-5",
+      "family": "gpt",
+      "released": "2025-08-07",
+      "updated": "2025-08-07",
+      "knowledge": "2024-09-30",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 400000,
+        "input": 272000,
+        "output": 128000
+      },
+      "reasoning": {
+        "efforts": [
+          "minimal",
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "auto/openai/gpt-5",
+        "name": "GPT-5"
+      },
+      "price": {
+        "input": 1.25,
+        "output": 10,
+        "cache_read": 0.125
+      }
+    },
+    "openai/gpt-5-mini": {
+      "name": "GPT-5 Mini",
+      "family": "gpt-mini",
+      "released": "2025-08-07",
+      "updated": "2025-08-07",
+      "knowledge": "2024-05-30",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 400000,
+        "input": 272000,
+        "output": 128000
+      },
+      "reasoning": {
+        "efforts": [
+          "minimal",
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "auto/openai/gpt-5-mini",
+        "name": "GPT-5 Mini"
+      },
+      "price": {
+        "input": 0.25,
+        "output": 2,
+        "cache_read": 0.025
+      }
+    },
+    "openai/gpt-5-nano": {
+      "name": "GPT-5 Nano",
+      "family": "gpt-nano",
+      "released": "2025-08-07",
+      "updated": "2025-08-07",
+      "knowledge": "2024-05-30",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 400000,
+        "input": 272000,
+        "output": 128000
+      },
+      "reasoning": {
+        "efforts": [
+          "minimal",
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "auto/openai/gpt-5-nano",
+        "name": "GPT-5 Nano"
+      },
+      "price": {
+        "input": 0.05,
+        "output": 0.4,
+        "cache_read": 0.005
+      }
+    },
+    "openai/gpt-5.2": {
+      "name": "GPT-5.2",
+      "family": "gpt",
+      "released": "2025-12-11",
+      "updated": "2025-12-11",
+      "knowledge": "2025-08-31",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 400000,
+        "input": 272000,
+        "output": 128000
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "medium",
+          "high",
+          "xhigh"
+        ]
+      },
+      "provider_options": {
+        "id": "auto/openai/gpt-5.2",
+        "name": "GPT-5.2"
+      },
+      "price": {
+        "input": 1.75,
+        "output": 14,
+        "cache_read": 0.175
+      }
+    },
+    "openai/gpt-5.4": {
+      "name": "GPT-5.4",
+      "family": "gpt",
+      "released": "2026-03-05",
+      "updated": "2026-03-05",
+      "knowledge": "2025-08-31",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1050000,
+        "input": 922000,
+        "output": 128000
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "medium",
+          "high",
+          "xhigh"
+        ]
+      },
+      "provider_options": {
+        "id": "auto/openai/gpt-5.4",
+        "name": "GPT-5.4"
+      },
+      "price": {
+        "input": 2.5,
+        "output": 15,
+        "cache_read": 0.25,
+        "tiers": [
+          {
+            "above": 272000,
+            "input": 5,
+            "output": 22.5,
+            "cache_read": 0.5
+          }
+        ]
+      }
+    },
+    "openai/gpt-5.4-mini": {
+      "name": "GPT-5.4 Mini",
+      "family": "gpt-mini",
+      "released": "2026-03-17",
+      "updated": "2026-03-17",
+      "knowledge": "2025-08-31",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 400000,
+        "input": 272000,
+        "output": 128000
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "medium",
+          "high",
+          "xhigh"
+        ]
+      },
+      "provider_options": {
+        "id": "auto/openai/gpt-5.4-mini",
+        "name": "GPT-5.4 mini"
+      },
+      "price": {
+        "input": 0.75,
+        "output": 4.5,
+        "cache_read": 0.075
+      }
+    },
+    "openai/gpt-5.5": {
+      "name": "GPT-5.5",
+      "family": "gpt",
+      "released": "2026-04-23",
+      "updated": "2026-04-23",
+      "knowledge": "2025-12-01",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1050000,
+        "input": 922000,
+        "output": 128000
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "medium",
+          "high",
+          "xhigh"
+        ]
+      },
+      "provider_options": {
+        "id": "auto/openai/gpt-5.5",
+        "name": "GPT-5.5"
+      },
+      "price": {
+        "input": 5,
+        "output": 30,
+        "cache_read": 0.5,
+        "tiers": [
+          {
+            "above": 272000,
+            "input": 10,
+            "output": 45,
+            "cache_read": 1
+          }
+        ]
+      }
+    },
+    "openai/gpt-5.6-luna": {
+      "name": "GPT-5.6 Luna",
+      "family": "gpt-luna",
+      "released": "2026-07-09",
+      "updated": "2026-07-09",
+      "knowledge": "2026-02-16",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1050000,
+        "input": 922000,
+        "output": 128000
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "medium",
+          "high",
+          "xhigh"
+        ]
+      },
+      "provider_options": {
+        "id": "auto/openai/gpt-5.6-luna",
+        "name": "GPT-5.6 Luna"
+      },
+      "price": {
+        "input": 0.2,
+        "output": 1.2,
+        "cache_read": 0.02,
+        "cache_write": 0.25,
+        "tiers": [
+          {
+            "above": 272000,
+            "input": 0.4,
+            "output": 1.8,
+            "cache_read": 0.04,
+            "cache_write": 0.5
+          }
+        ]
+      }
+    },
+    "openai/gpt-5.6-sol": {
+      "name": "GPT-5.6 Sol",
+      "family": "gpt-sol",
+      "released": "2026-07-09",
+      "updated": "2026-07-09",
+      "knowledge": "2026-02-16",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1050000,
+        "input": 922000,
+        "output": 128000
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "medium",
+          "high",
+          "xhigh"
+        ]
+      },
+      "provider_options": {
+        "id": "auto/openai/gpt-5.6-sol",
+        "name": "GPT-5.6 Sol"
+      },
+      "price": {
+        "input": 4,
+        "output": 20,
+        "cache_read": 0.4,
+        "cache_write": 5,
+        "tiers": [
+          {
+            "above": 272000,
+            "input": 8,
+            "output": 30,
+            "cache_read": 0.8,
+            "cache_write": 10
+          }
+        ]
+      }
+    },
+    "openai/gpt-5.6-terra": {
+      "name": "GPT-5.6 Terra",
+      "family": "gpt-terra",
+      "released": "2026-07-09",
+      "updated": "2026-07-09",
+      "knowledge": "2026-02-16",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1050000,
+        "input": 922000,
+        "output": 128000
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "medium",
+          "high",
+          "xhigh"
+        ]
+      },
+      "provider_options": {
+        "id": "auto/openai/gpt-5.6-terra",
+        "name": "GPT-5.6 Terra"
+      },
+      "price": {
+        "input": 2,
+        "output": 12,
+        "cache_read": 0.2,
+        "cache_write": 2.5,
+        "tiers": [
+          {
+            "above": 272000,
+            "input": 4,
+            "output": 18,
+            "cache_read": 0.4,
+            "cache_write": 5
+          }
+        ]
+      }
+    },
+    "openai/gpt-6-astra": {
+      "name": "GPT-6 Astra",
+      "family": "gpt-astra",
+      "released": "2026-09-04",
+      "updated": "2026-09-04",
+      "knowledge": "2026-04-30",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1050000,
+        "input": 922000,
+        "output": 128000
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "medium",
+          "high",
+          "xhigh"
+        ]
+      },
+      "provider_options": {
+        "id": "auto/openai/gpt-6-astra",
+        "name": "GPT-6 Astra"
+      },
+      "price": {
+        "input": 10,
+        "output": 50,
+        "cache_read": 1,
+        "cache_write": 12.5,
+        "tiers": [
+          {
+            "above": 272000,
+            "input": 20,
+            "output": 75,
+            "cache_read": 2,
+            "cache_write": 25
+          }
+        ]
+      }
+    },
+    "openai/gpt-6-luna": {
+      "name": "GPT-6 Luna",
+      "family": "gpt-luna",
+      "released": "2026-09-22",
+      "updated": "2026-09-22",
+      "knowledge": "2026-05-18",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1050000,
+        "input": 922000,
+        "output": 128000
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "medium",
+          "high",
+          "xhigh"
+        ]
+      },
+      "provider_options": {
+        "id": "auto/openai/gpt-6-luna",
+        "name": "GPT-6 Luna"
+      },
+      "price": {
+        "input": 0.1,
+        "output": 0.5,
+        "cache_read": 0.01,
+        "cache_write": 0.125,
+        "tiers": [
+          {
+            "above": 272000,
+            "input": 0.2,
+            "output": 0.75,
+            "cache_read": 0.02,
+            "cache_write": 0.25
+          }
+        ]
+      }
+    },
+    "openai/gpt-6-sol": {
+      "name": "GPT-6 Sol",
+      "family": "gpt-sol",
+      "released": "2026-09-22",
+      "updated": "2026-09-22",
+      "knowledge": "2026-04-20",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1050000,
+        "input": 922000,
+        "output": 128000
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "medium",
+          "high",
+          "xhigh"
+        ]
+      },
+      "provider_options": {
+        "id": "auto/openai/gpt-6-sol",
+        "name": "GPT-6 Sol"
+      },
+      "price": {
+        "input": 2,
+        "output": 10,
+        "cache_read": 0.2,
+        "cache_write": 2.5,
+        "tiers": [
+          {
+            "above": 272000,
+            "input": 4,
+            "output": 15,
+            "cache_read": 0.4,
+            "cache_write": 5
+          }
+        ]
+      }
+    },
+    "openai/gpt-6.1-sol": {
+      "name": "GPT-6.1 Sol",
+      "family": "gpt-sol",
+      "released": "2026-09-29",
+      "updated": "2026-09-29",
+      "knowledge": "2026-04-30",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1050000,
+        "input": 922000,
+        "output": 128000
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "medium",
+          "high",
+          "xhigh"
+        ]
+      },
+      "provider_options": {
+        "id": "auto/openai/gpt-6.1-sol",
+        "name": "GPT-6.1 Sol"
+      },
+      "price": {
+        "input": 2,
+        "output": 10,
+        "cache_read": 0.1,
+        "cache_write": 2.5,
+        "tiers": [
+          {
+            "above": 272000,
+            "input": 4,
+            "output": 15,
+            "cache_read": 0.2,
+            "cache_write": 5
+          }
+        ]
+      }
+    },
+    "openai/gpt-oss-120b": {
+      "name": "GPT OSS 120B",
+      "family": "gpt-oss",
+      "released": "2025-08-05",
+      "updated": "2025-08-05",
+      "knowledge": "2024-06",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 131072,
+        "output": 32768
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "auto/openai/gpt-oss-120b",
+        "name": "GPT OSS 120B"
+      },
+      "price": {
+        "input": 0.1695,
+        "output": 0.6779
+      }
+    },
+    "openai/gpt-oss-20b": {
+      "name": "GPT OSS 20B",
+      "family": "gpt-oss",
+      "released": "2025-08-05",
+      "updated": "2025-08-05",
+      "knowledge": "2024-06",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 131072,
+        "output": 32768
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "auto/openai/gpt-oss-20b",
+        "name": "GPT OSS 20B"
+      },
+      "price": {
+        "input": 0.113,
+        "output": 0.4745
+      }
+    },
+    "openai/gpt-oss-safeguard-120b": {
+      "name": "GPT OSS Safeguard 120B",
+      "family": "gpt-oss",
+      "released": "2025-10-29",
+      "updated": "2025-10-29",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 131072,
+        "output": 32768
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "auto/openai/gpt-oss-safeguard-120b",
+        "name": "GPT OSS Safeguard 120B"
+      },
+      "price": {
+        "input": 0.18,
+        "output": 0.73
+      }
+    },
+    "openai/gpt-oss-safeguard-20b": {
+      "name": "GPT OSS Safeguard 20B",
+      "family": "gpt-oss",
+      "released": "2025-10-29",
+      "updated": "2025-10-29",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 131072,
+        "output": 131072
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "auto/openai/gpt-oss-safeguard-20b",
+        "name": "GPT OSS Safeguard 20B"
+      },
+      "price": {
+        "input": 0.08,
+        "output": 0.24
+      }
+    },
+    "openai/o3": {
+      "name": "o3",
+      "family": "o",
+      "released": "2025-04-16",
+      "updated": "2025-04-16",
+      "knowledge": "2024-05",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 200000,
+        "output": 100000
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "auto/openai/o3",
+        "name": "o3"
+      },
+      "price": {
+        "input": 2,
+        "output": 8,
+        "cache_read": 0.5
+      }
+    }
+  }
+}

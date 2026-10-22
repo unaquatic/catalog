@@ -1,0 +1,308 @@
+{
+  "id": "friendli",
+  "name": "Friendli",
+  "kind": "gateway",
+  "type": "community",
+  "endpoint": {
+    "format": "openai-chat",
+    "api": "https://api.friendli.ai/serverless/v1",
+    "auth": {
+      "scheme": "bearer"
+    },
+    "env": [
+      "FRIENDLI_TOKEN"
+    ]
+  },
+  "doc": "https://friendli.ai/docs/guides/serverless_endpoints/introduction",
+  "models": {
+    "deepseek/deepseek-v3.2": {
+      "name": "DeepSeek V3.2",
+      "family": "deepseek",
+      "released": "2025-12-01",
+      "updated": "2025-12-01",
+      "knowledge": "2024-07",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 163840,
+        "output": 64000
+      },
+      "reasoning": {
+        "mandatory": false,
+        "budget": {}
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "deepseek-ai/DeepSeek-V3.2",
+        "name": "DeepSeek V3.2"
+      },
+      "price": {
+        "input": 0.5,
+        "output": 1.5,
+        "cache_read": 0.25
+      }
+    },
+    "google/gemma-4-31b-it": {
+      "name": "Gemma 4 31B IT",
+      "family": "gemma",
+      "released": "2026-04-02",
+      "updated": "2026-04-02",
+      "knowledge": "2025-01",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 32768
+      },
+      "reasoning": {
+        "mandatory": false,
+        "budget": {}
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "google/gemma-4-31B-it",
+        "name": "Gemma 4 31B IT"
+      },
+      "price": {
+        "input": 0.14,
+        "output": 0.4
+      }
+    },
+    "minimax/minimax-m2.5": {
+      "name": "MiniMax M2.5",
+      "family": "minimax",
+      "released": "2026-02-12",
+      "updated": "2026-02-12",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 196608,
+        "output": 131072
+      },
+      "reasoning": {
+        "budget": {}
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "MiniMaxAI/MiniMax-M2.5",
+        "name": "MiniMax-M2.5"
+      },
+      "price": {
+        "input": 0.3,
+        "output": 1.2,
+        "cache_read": 0.06
+      }
+    },
+    "zhipuai/glm-5.1": {
+      "name": "GLM 5.1",
+      "family": "glm",
+      "released": "2026-04-07",
+      "updated": "2026-04-07",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 202752,
+        "output": 131072
+      },
+      "reasoning": {
+        "mandatory": false,
+        "budget": {}
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "zai-org/GLM-5.1",
+        "name": "GLM-5.1"
+      },
+      "price": {
+        "input": 1.4,
+        "output": 4.4,
+        "cache_read": 0.26
+      }
+    },
+    "zhipuai/glm-5.2": {
+      "name": "GLM 5.2",
+      "family": "glm",
+      "released": "2026-06-13",
+      "updated": "2026-06-13",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "high",
+          "max"
+        ],
+        "budget": {}
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "zai-org/GLM-5.2",
+        "name": "GLM-5.2"
+      },
+      "price": {
+        "input": 1.4,
+        "output": 4.4,
+        "cache_read": 0.26
+      }
+    },
+    "zhipuai/glm-5.3": {
+      "name": "GLM 5.3",
+      "family": "glm",
+      "released": "2026-08-14",
+      "updated": "2026-08-14",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "high",
+          "max"
+        ],
+        "budget": {}
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "zai-org/GLM-5.3",
+        "name": "GLM-5.3"
+      },
+      "price": {
+        "input": 1.26,
+        "output": 3.96,
+        "cache_read": 0.234
+      }
+    },
+    "zhipuai/glm-5.3-flash": {
+      "name": "GLM 5.3 Flash",
+      "family": "glm-flash",
+      "released": "2026-08-26",
+      "updated": "2026-08-26",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "high",
+          "max"
+        ],
+        "budget": {}
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "zai-org/GLM-5.3-Flash",
+        "name": "GLM-5.3-Flash"
+      },
+      "price": {
+        "input": 0.15,
+        "output": 0.5,
+        "cache_read": 0.03
+      }
+    }
+  }
+}

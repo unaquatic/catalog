@@ -1,0 +1,97 @@
+{
+  "id": "tencent-token-plan",
+  "name": "Tencent Token Plan",
+  "kind": "gateway",
+  "type": "community",
+  "endpoint": {
+    "format": "openai-chat",
+    "api": "https://api.lkeap.cloud.tencent.com/plan/v3",
+    "auth": {
+      "scheme": "bearer"
+    },
+    "env": [
+      "TENCENT_TOKEN_PLAN_API_KEY"
+    ]
+  },
+  "doc": "https://cloud.tencent.com/document/product/1823/130060",
+  "models": {
+    "tencent/hy3": {
+      "name": "Hy3",
+      "family": "Hy",
+      "released": "2026-07-06",
+      "updated": "2026-07-06",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 256000,
+        "input": 192000,
+        "output": 128000
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "hy3",
+        "name": "Hy3"
+      },
+      "price": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_write": 0
+      }
+    },
+    "tencent/hy4-preview": {
+      "name": "Hy4 Preview",
+      "family": "Hy",
+      "released": "2026-08-28",
+      "updated": "2026-08-28",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1024000,
+        "output": 64000
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "hy4-preview",
+        "name": "Hy4 preview"
+      },
+      "price": {
+        "input": 0.834,
+        "output": 2.501,
+        "cache_read": 0.042
+      }
+    }
+  }
+}

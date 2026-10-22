@@ -1,0 +1,168 @@
+{
+  "cloudflare/clairic": {
+    "id": "cloudflare/clairic",
+    "lab": "cloudflare",
+    "name": "Clairic",
+    "type": "decision",
+    "released": "2026-10-14",
+    "updated": "2026-10-14",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 65536,
+      "output": 65536
+    },
+    "providers": [
+      "cloudflare-workers-ai"
+    ]
+  },
+  "cloudflare/clef": {
+    "id": "cloudflare/clef",
+    "lab": "cloudflare",
+    "name": "Clef",
+    "type": "decision",
+    "released": "2026-10-01",
+    "updated": "2026-10-01",
+    "open_weights": true,
+    "license": "Apache-2.0",
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 65536,
+      "output": 0
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/Cloudflare/clef"
+      }
+    ],
+    "links": [
+      {
+        "label": "Announcement",
+        "url": "https://blog.cloudflare.com/clef-decision-models/",
+        "type": "announcement"
+      },
+      {
+        "label": "Model card",
+        "url": "https://huggingface.co/Cloudflare/clef",
+        "type": "model_card"
+      }
+    ],
+    "providers": [
+      "cloudflare-workers-ai",
+      "melious",
+      "nano-gpt",
+      "ollama-cloud",
+      "openrouter"
+    ]
+  },
+  "cloudflare/clef-flash": {
+    "id": "cloudflare/clef-flash",
+    "lab": "cloudflare",
+    "name": "Clef Flash",
+    "type": "decision",
+    "released": "2026-10-01",
+    "updated": "2026-10-01",
+    "open_weights": true,
+    "license": "Apache-2.0",
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 0
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/Cloudflare/clef-flash"
+      }
+    ],
+    "links": [
+      {
+        "label": "Announcement",
+        "url": "https://blog.cloudflare.com/clef-decision-models/",
+        "type": "announcement"
+      },
+      {
+        "label": "Model card",
+        "url": "https://huggingface.co/Cloudflare/clef-flash",
+        "type": "model_card"
+      }
+    ],
+    "providers": [
+      "cloudflare-workers-ai",
+      "melious",
+      "nano-gpt",
+      "openrouter"
+    ]
+  },
+  "cloudflare/clef-omni": {
+    "id": "cloudflare/clef-omni",
+    "lab": "cloudflare",
+    "name": "Clef Omni",
+    "type": "decision",
+    "released": "2026-10-09",
+    "updated": "2026-10-09",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 65536,
+      "output": 65536
+    },
+    "providers": [
+      "cloudflare-workers-ai",
+      "openrouter"
+    ]
+  }
+}

@@ -1,0 +1,270 @@
+{
+  "id": "tencent-coding-plan",
+  "name": "Tencent Coding Plan (China)",
+  "kind": "gateway",
+  "type": "community",
+  "endpoint": {
+    "format": "openai-chat",
+    "api": "https://api.lkeap.cloud.tencent.com/coding/v3",
+    "auth": {
+      "scheme": "bearer"
+    },
+    "env": [
+      "TENCENT_CODING_PLAN_API_KEY"
+    ]
+  },
+  "doc": "https://cloud.tencent.com/document/product/1772/128947",
+  "models": {
+    "minimax/minimax-m2.5": {
+      "name": "MiniMax M2.5",
+      "family": "minimax",
+      "released": "2026-02-12",
+      "updated": "2026-02-12",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 204800,
+        "output": 32768
+      },
+      "reasoning": {},
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "minimax-m2.5",
+        "name": "MiniMax-M2.5"
+      },
+      "price": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_write": 0
+      }
+    },
+    "moonshotai/kimi-k2.5": {
+      "name": "Kimi K2.5",
+      "family": "kimi-k2",
+      "released": "2026-01-27",
+      "updated": "2026-01-27",
+      "knowledge": "2025-01",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 32768
+      },
+      "reasoning": {
+        "mandatory": false
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "kimi-k2.5",
+        "name": "Kimi-K2.5"
+      },
+      "price": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_write": 0
+      }
+    },
+    "tencent/hunyuan-2.0-instruct": {
+      "name": "Hunyuan 2.0 Instruct",
+      "family": "hunyuan",
+      "released": "2026-03-08",
+      "updated": "2026-03-08",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 131072,
+        "output": 16384
+      },
+      "provider_options": {
+        "id": "hunyuan-2.0-instruct",
+        "name": "Tencent HY 2.0 Instruct"
+      },
+      "price": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_write": 0
+      }
+    },
+    "tencent/hunyuan-2.0-thinking": {
+      "name": "Hunyuan 2.0 Thinking",
+      "family": "hunyuan",
+      "released": "2026-03-08",
+      "updated": "2026-03-08",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 131072,
+        "output": 16384
+      },
+      "reasoning": {},
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "hunyuan-2.0-thinking",
+        "name": "Tencent HY 2.0 Think"
+      },
+      "price": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_write": 0
+      }
+    },
+    "tencent/hunyuan-t1": {
+      "name": "Hunyuan T1",
+      "family": "hunyuan",
+      "released": "2026-03-08",
+      "updated": "2026-03-08",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 131072,
+        "output": 16384
+      },
+      "reasoning": {},
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "hunyuan-t1",
+        "name": "Hunyuan-T1"
+      },
+      "price": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_write": 0
+      }
+    },
+    "tencent/hunyuan-turbos": {
+      "name": "Hunyuan TurboS",
+      "family": "hunyuan",
+      "released": "2026-03-08",
+      "updated": "2026-03-08",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 131072,
+        "output": 16384
+      },
+      "provider_options": {
+        "id": "hunyuan-turbos",
+        "name": "Hunyuan-TurboS"
+      },
+      "price": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_write": 0
+      }
+    },
+    "zhipuai/glm-5": {
+      "name": "GLM 5",
+      "family": "glm",
+      "released": "2026-02-11",
+      "updated": "2026-02-11",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 202752,
+        "output": 16384
+      },
+      "reasoning": {
+        "mandatory": false
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "glm-5",
+        "name": "GLM-5"
+      },
+      "price": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_write": 0
+      }
+    }
+  }
+}

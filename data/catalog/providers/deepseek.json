@@ -1,0 +1,115 @@
+{
+  "id": "deepseek",
+  "name": "DeepSeek",
+  "kind": "lab",
+  "type": "community",
+  "endpoint": {
+    "format": "openai-chat",
+    "api": "https://api.deepseek.com",
+    "auth": {
+      "scheme": "bearer"
+    },
+    "env": [
+      "DEEPSEEK_API_KEY"
+    ]
+  },
+  "doc": "https://api-docs.deepseek.com/quick_start/pricing",
+  "models": {
+    "deepseek/deepseek-v4-pro-0813": {
+      "name": "DeepSeek V4 Pro 0813",
+      "family": "deepseek-thinking",
+      "released": "2026-08-13",
+      "updated": "2026-08-22",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 393216
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "high",
+          "max"
+        ]
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "deepseek-v4-pro",
+        "name": "DeepSeek V4 Pro"
+      },
+      "price": {
+        "input": 0.66,
+        "output": 1.98,
+        "cache_read": 0.022,
+        "reasoning": 1.98
+      }
+    },
+    "deepseek/deepseek-v4.1-flash-1017": {
+      "name": "DeepSeek V4.1 Flash 1017",
+      "family": "deepseek-flash",
+      "released": "2026-10-17",
+      "updated": "2026-10-17",
+      "knowledge": "2025-05",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 393216
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "high",
+          "max"
+        ]
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "deepseek-flash",
+        "name": "DeepSeek V4.1 Flash 1017"
+      },
+      "price": {
+        "input": 0.15,
+        "output": 0.6,
+        "cache_read": 0.003,
+        "reasoning": 0.6
+      },
+      "aliases": [
+        "deepseek-v4-flash",
+        "deepseek-v4-flash-vision-exp"
+      ]
+    }
+  }
+}

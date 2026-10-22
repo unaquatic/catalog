@@ -1,0 +1,182 @@
+{
+  "id": "inceptron",
+  "name": "Inceptron",
+  "kind": "gateway",
+  "type": "community",
+  "endpoint": {
+    "format": "openai-chat",
+    "api": "https://api.inceptron.io/v1",
+    "auth": {
+      "scheme": "bearer"
+    },
+    "env": [
+      "INCEPTRON_API_KEY"
+    ]
+  },
+  "doc": "https://docs.inceptron.io",
+  "models": {
+    "deepseek/deepseek-v4-flash-0731": {
+      "name": "DeepSeek V4 Flash 0731",
+      "family": "deepseek-flash",
+      "released": "2026-07-31",
+      "updated": "2026-07-31",
+      "knowledge": "2025-05",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 1048576
+      },
+      "reasoning": {
+        "efforts": [
+          "high",
+          "max"
+        ]
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "deepseek-ai/DeepSeek-V4-Flash-0731",
+        "name": "DeepSeek V4 Flash 0731"
+      },
+      "price": {
+        "input": 0.13,
+        "output": 0.28,
+        "cache_read": 0.03,
+        "cache_write": 0
+      }
+    },
+    "moonshotai/kimi-k2.6": {
+      "name": "Kimi K2.6",
+      "family": "kimi-k2",
+      "released": "2026-04-20",
+      "updated": "2026-04-20",
+      "knowledge": "2025-01",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "reasoning": {},
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "moonshotai/Kimi-K2.6",
+        "name": "Kimi K2.6"
+      },
+      "price": {
+        "input": 0.53,
+        "output": 3.39,
+        "cache_read": 0.17,
+        "cache_write": 0
+      }
+    },
+    "moonshotai/kimi-k2.7-code": {
+      "name": "Kimi K2.7 Code",
+      "family": "kimi-k2",
+      "released": "2026-06-12",
+      "updated": "2026-06-12",
+      "knowledge": "2025-01",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "reasoning": {},
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "moonshotai/Kimi-K2.7-Code",
+        "name": "Kimi K2.7 Code"
+      },
+      "price": {
+        "input": 0.66,
+        "output": 3.4,
+        "cache_read": 0.18,
+        "cache_write": 0
+      }
+    },
+    "zhipuai/glm-5.2": {
+      "name": "GLM 5.2",
+      "family": "glm",
+      "released": "2026-06-13",
+      "updated": "2026-06-13",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 1048576
+      },
+      "reasoning": {
+        "efforts": [
+          "high",
+          "max"
+        ]
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "zai-org/GLM-5.2",
+        "name": "GLM 5.2"
+      },
+      "price": {
+        "input": 0.71,
+        "output": 2.35,
+        "cache_read": 0.12,
+        "cache_write": 0
+      }
+    }
+  }
+}

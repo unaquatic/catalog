@@ -1,0 +1,399 @@
+{
+  "id": "modelis",
+  "name": "Modelis",
+  "kind": "gateway",
+  "type": "community",
+  "endpoint": {
+    "format": "openai-chat",
+    "api": "https://modelishub.com/v1",
+    "auth": {
+      "scheme": "bearer"
+    },
+    "env": [
+      "MODELIS_API_KEY"
+    ]
+  },
+  "doc": "https://modelishub.com/pricing",
+  "models": {
+    "alibaba/qwen3.7-max": {
+      "name": "Qwen3.7 Max",
+      "family": "qwen",
+      "released": "2026-05-21",
+      "updated": "2026-05-21",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "reasoning": {
+        "mandatory": false,
+        "budget": {}
+      },
+      "provider_options": {
+        "id": "qwen/qwen3.7-max",
+        "name": "Qwen3.7 Max"
+      },
+      "price": {
+        "input": 3,
+        "output": 9
+      }
+    },
+    "alibaba/qwen3.7-plus": {
+      "name": "Qwen3.7 Plus",
+      "family": "qwen",
+      "released": "2026-06-02",
+      "updated": "2026-06-02",
+      "knowledge": "2025-04",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 64000
+      },
+      "reasoning": {
+        "mandatory": false,
+        "budget": {}
+      },
+      "provider_options": {
+        "id": "qwen/qwen3.7-plus",
+        "name": "Qwen3.7 Plus"
+      },
+      "price": {
+        "input": 0.768,
+        "output": 3.072
+      }
+    },
+    "anthropic/claude-fable-5": {
+      "name": "Claude Fable 5",
+      "family": "claude-fable",
+      "released": "2026-06-09",
+      "updated": "2026-06-09",
+      "knowledge": "2026-01-31",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "reasoning": {
+        "mandatory": true,
+        "default_enabled": true,
+        "efforts": [
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ],
+        "default_effort": "high"
+      },
+      "provider_options": {
+        "id": "claude-fable-5",
+        "name": "Claude Fable 5"
+      },
+      "price": {
+        "input": 10,
+        "output": 50
+      }
+    },
+    "anthropic/claude-opus-4-8": {
+      "name": "Claude Opus 4.8",
+      "family": "claude-opus",
+      "released": "2026-05-28",
+      "updated": "2026-05-28",
+      "knowledge": "2026-01",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "reasoning": {
+        "mandatory": false,
+        "default_enabled": false,
+        "efforts": [
+          "none",
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ],
+        "default_effort": "high"
+      },
+      "provider_options": {
+        "id": "claude-opus-4-8",
+        "name": "Claude Opus 4.8"
+      },
+      "price": {
+        "input": 5,
+        "output": 25
+      }
+    },
+    "anthropic/claude-sonnet-4-6": {
+      "name": "Claude Sonnet 4.6",
+      "family": "claude-sonnet",
+      "released": "2026-02-17",
+      "updated": "2026-03-13",
+      "knowledge": "2025-08-31",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 64000
+      },
+      "reasoning": {
+        "mandatory": false,
+        "default_enabled": false,
+        "efforts": [
+          "none",
+          "low",
+          "medium",
+          "high",
+          "max"
+        ],
+        "default_effort": "high"
+      },
+      "provider_options": {
+        "id": "claude-sonnet-4-6",
+        "name": "Claude Sonnet 4.6"
+      },
+      "price": {
+        "input": 3,
+        "output": 15
+      }
+    },
+    "deepseek/deepseek-v4-flash": {
+      "name": "DeepSeek V4 Flash",
+      "family": "deepseek-flash",
+      "released": "2026-04-24",
+      "updated": "2026-04-24",
+      "knowledge": "2025-05",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 384000
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "high",
+          "max"
+        ]
+      },
+      "provider_options": {
+        "id": "deepseek-v4-flash",
+        "name": "DeepSeek V4 Flash"
+      },
+      "price": {
+        "input": 0.0983,
+        "output": 0.1966
+      }
+    },
+    "deepseek/deepseek-v4-pro": {
+      "name": "DeepSeek V4 Pro",
+      "family": "deepseek-thinking",
+      "released": "2026-04-24",
+      "updated": "2026-04-24",
+      "knowledge": "2025-05",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 384000
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "high",
+          "max"
+        ]
+      },
+      "provider_options": {
+        "id": "deepseek-v4-pro",
+        "name": "DeepSeek V4 Pro"
+      },
+      "price": {
+        "input": 0.435,
+        "output": 0.87
+      }
+    },
+    "google/gemini-2.5-flash": {
+      "name": "Gemini 2.5 Flash",
+      "family": "gemini-flash",
+      "released": "2025-06-17",
+      "updated": "2025-06-17",
+      "knowledge": "2025-01",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "audio",
+          "video",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "minimal",
+          "low",
+          "medium",
+          "high",
+          "max"
+        ],
+        "budget": {}
+      },
+      "provider_options": {
+        "id": "gemini-2.5-flash",
+        "name": "Gemini 2.5 Flash"
+      },
+      "price": {
+        "input": 0.3,
+        "output": 2.5
+      }
+    },
+    "google/gemini-2.5-pro": {
+      "name": "Gemini 2.5 Pro",
+      "family": "gemini-pro",
+      "released": "2025-06-17",
+      "updated": "2025-06-17",
+      "knowledge": "2025-01",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "audio",
+          "video",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "medium",
+          "high",
+          "max"
+        ],
+        "budget": {}
+      },
+      "provider_options": {
+        "id": "gemini-2.5-pro",
+        "name": "Gemini 2.5 Pro"
+      },
+      "price": {
+        "input": 1.25,
+        "output": 10
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "gryphe/mythomax-l2-13b": {
+    "id": "gryphe/mythomax-l2-13b",
+    "lab": "gryphe",
+    "name": "MythoMax L2 13B",
+    "released": "2023-08-10",
+    "updated": "2023-08-10",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 4096,
+      "output": 3200
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/Gryphe/MythoMax-L2-13b"
+      }
+    ],
+    "providers": [
+      "aimlapi",
+      "edenai",
+      "kilo",
+      "nano-gpt",
+      "novita-ai",
+      "openrouter"
+    ]
+  }
+}

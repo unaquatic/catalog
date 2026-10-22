@@ -1,0 +1,550 @@
+{
+  "id": "model-oracle-ai",
+  "name": "Model Oracle AI",
+  "kind": "gateway",
+  "type": "community",
+  "endpoint": {
+    "format": "openai-chat",
+    "api": "https://api.modeloracle.com/api/v1",
+    "auth": {
+      "scheme": "bearer"
+    },
+    "env": [
+      "MODEL_ORACLE_API_KEY"
+    ]
+  },
+  "doc": "https://modeloracle.com/setup/",
+  "models": {
+    "anthropic/claude-fable-5": {
+      "name": "Claude Fable 5",
+      "family": "claude-fable",
+      "released": "2026-06-09",
+      "updated": "2026-06-09",
+      "knowledge": "2026-01-31",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "reasoning": {
+        "mandatory": true,
+        "default_enabled": true,
+        "efforts": [
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ],
+        "default_effort": "high"
+      },
+      "provider_options": {
+        "id": "claude-fable-5",
+        "name": "Claude Fable 5"
+      }
+    },
+    "anthropic/claude-haiku-4-5": {
+      "name": "Claude Haiku 4.5",
+      "family": "claude-haiku",
+      "released": "2025-10-15",
+      "updated": "2025-10-15",
+      "knowledge": "2025-02-28",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 200000,
+        "output": 64000
+      },
+      "reasoning": {
+        "mandatory": false,
+        "default_enabled": false,
+        "efforts": [
+          "none",
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ]
+      },
+      "provider_options": {
+        "id": "claude-haiku-4.5",
+        "name": "Claude Haiku 4.5 (latest)"
+      }
+    },
+    "anthropic/claude-opus-4-8": {
+      "name": "Claude Opus 4.8",
+      "family": "claude-opus",
+      "released": "2026-05-28",
+      "updated": "2026-05-28",
+      "knowledge": "2026-01",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "reasoning": {
+        "mandatory": false,
+        "default_enabled": false,
+        "efforts": [
+          "none",
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ],
+        "default_effort": "high"
+      },
+      "provider_options": {
+        "id": "claude-opus-4.8",
+        "name": "Claude Opus 4.8"
+      }
+    },
+    "anthropic/claude-sonnet-5": {
+      "name": "Claude Sonnet 5",
+      "family": "claude-sonnet",
+      "released": "2026-06-30",
+      "updated": "2026-06-30",
+      "knowledge": "2026-01-31",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "reasoning": {
+        "mandatory": false,
+        "default_enabled": true,
+        "efforts": [
+          "none",
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ],
+        "default_effort": "high"
+      },
+      "provider_options": {
+        "id": "claude-sonnet-5",
+        "name": "Claude Sonnet 5"
+      }
+    },
+    "deepseek/deepseek-v4-pro": {
+      "name": "DeepSeek V4 Pro",
+      "family": "deepseek-thinking",
+      "released": "2026-04-24",
+      "updated": "2026-04-24",
+      "knowledge": "2025-05",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 384000
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "high",
+          "max"
+        ]
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "deepseek-v4-pro",
+        "name": "DeepSeek V4 Pro"
+      }
+    },
+    "openai/gpt-4.1": {
+      "name": "GPT-4.1",
+      "family": "gpt",
+      "released": "2025-04-14",
+      "updated": "2025-04-14",
+      "knowledge": "2024-04",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1047576,
+        "output": 32768
+      },
+      "provider_options": {
+        "id": "gpt-4.1",
+        "name": "GPT-4.1"
+      }
+    },
+    "openai/gpt-4.1-mini": {
+      "name": "GPT-4.1 Mini",
+      "family": "gpt-mini",
+      "released": "2025-04-14",
+      "updated": "2025-04-14",
+      "knowledge": "2024-04",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1047576,
+        "output": 32768
+      },
+      "provider_options": {
+        "id": "gpt-4.1-mini",
+        "name": "GPT-4.1 mini"
+      }
+    },
+    "openai/gpt-5": {
+      "name": "GPT-5",
+      "family": "gpt",
+      "released": "2025-08-07",
+      "updated": "2025-08-07",
+      "knowledge": "2024-09-30",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 400000,
+        "input": 272000,
+        "output": 128000
+      },
+      "reasoning": {
+        "efforts": [
+          "minimal",
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "gpt-5",
+        "name": "GPT-5"
+      }
+    },
+    "openai/gpt-5.4": {
+      "name": "GPT-5.4",
+      "family": "gpt",
+      "released": "2026-03-05",
+      "updated": "2026-03-05",
+      "knowledge": "2025-08-31",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1050000,
+        "input": 922000,
+        "output": 128000
+      },
+      "reasoning": {
+        "efforts": [
+          "minimal",
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "gpt-5.4",
+        "name": "GPT-5.4"
+      }
+    },
+    "openai/gpt-5.4-mini": {
+      "name": "GPT-5.4 Mini",
+      "family": "gpt-mini",
+      "released": "2026-03-17",
+      "updated": "2026-03-17",
+      "knowledge": "2025-08-31",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 400000,
+        "input": 272000,
+        "output": 128000
+      },
+      "reasoning": {
+        "efforts": [
+          "minimal",
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "gpt-5.4-mini",
+        "name": "GPT-5.4 mini"
+      }
+    },
+    "openai/gpt-5.4-nano": {
+      "name": "GPT-5.4 Nano",
+      "family": "gpt-nano",
+      "released": "2026-03-17",
+      "updated": "2026-03-17",
+      "knowledge": "2025-08-31",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 400000,
+        "input": 272000,
+        "output": 128000
+      },
+      "reasoning": {
+        "efforts": [
+          "minimal",
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "gpt-5.4-nano",
+        "name": "GPT-5.4 nano"
+      }
+    },
+    "openai/gpt-5.5": {
+      "name": "GPT-5.5",
+      "family": "gpt",
+      "released": "2026-04-23",
+      "updated": "2026-04-23",
+      "knowledge": "2025-12-01",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1050000,
+        "input": 922000,
+        "output": 128000
+      },
+      "reasoning": {
+        "efforts": [
+          "minimal",
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "gpt-5.5",
+        "name": "GPT-5.5"
+      }
+    },
+    "openai/o4-mini": {
+      "name": "o4 Mini",
+      "family": "o-mini",
+      "released": "2025-04-16",
+      "updated": "2025-04-16",
+      "knowledge": "2024-05",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 200000,
+        "output": 100000
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "o4-mini",
+        "name": "o4-mini"
+      }
+    },
+    "zhipuai/glm-5.2": {
+      "name": "GLM 5.2",
+      "family": "glm",
+      "released": "2026-06-13",
+      "updated": "2026-06-13",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "high",
+          "xhigh"
+        ]
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "glm-5.2",
+        "name": "GLM-5.2"
+      }
+    }
+  }
+}

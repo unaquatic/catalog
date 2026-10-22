@@ -1,0 +1,215 @@
+{
+  "id": "upstage",
+  "name": "Upstage",
+  "kind": "lab",
+  "type": "community",
+  "endpoint": {
+    "format": "openai-chat",
+    "api": "https://api.upstage.ai/v1/solar",
+    "auth": {
+      "scheme": "bearer"
+    },
+    "env": [
+      "UPSTAGE_API_KEY"
+    ]
+  },
+  "doc": "https://developers.upstage.ai/docs/apis/chat",
+  "models": {
+    "upstage/solar-mini": {
+      "name": "Solar Mini",
+      "family": "solar-mini",
+      "released": "2024-06-12",
+      "updated": "2025-04-22",
+      "knowledge": "2024-09",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 32768,
+        "output": 4096
+      },
+      "provider_options": {
+        "id": "solar-mini",
+        "name": "solar-mini"
+      },
+      "price": {
+        "input": 0.15,
+        "output": 0.15
+      }
+    },
+    "upstage/solar-mini4": {
+      "name": "Solar Mini 4",
+      "family": "solar-mini",
+      "released": "2026-09-22",
+      "updated": "2026-09-22",
+      "knowledge": "2026-02",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 524288,
+        "output": 131072
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "minimal",
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ]
+      },
+      "provider_options": {
+        "id": "solar-mini4",
+        "name": "Solar Mini 4"
+      },
+      "price": {
+        "input": 0.1,
+        "output": 0.4,
+        "cache_read": 0.01
+      }
+    },
+    "upstage/solar-pro2": {
+      "name": "Solar Pro 2",
+      "family": "solar-pro",
+      "released": "2025-05-20",
+      "updated": "2025-05-20",
+      "knowledge": "2025-03",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 65536,
+        "output": 8192
+      },
+      "reasoning": {
+        "efforts": [
+          "minimal",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "solar-pro2",
+        "name": "solar-pro2"
+      },
+      "price": {
+        "input": 0.25,
+        "output": 0.25
+      }
+    },
+    "upstage/solar-pro3": {
+      "name": "Solar Pro 3",
+      "family": "solar-pro",
+      "released": "2026-01-26",
+      "updated": "2026-01-26",
+      "knowledge": "2025-03",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 131072,
+        "output": 8192
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "solar-pro3",
+        "name": "solar-pro3"
+      },
+      "price": {
+        "input": 0.25,
+        "output": 0.25
+      }
+    },
+    "upstage/solar-pro4": {
+      "name": "Solar Pro 4",
+      "family": "solar-pro",
+      "released": "2026-08-06",
+      "updated": "2026-08-06",
+      "knowledge": "2026-02",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 524288,
+        "output": 131072
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "minimal",
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ]
+      },
+      "provider_options": {
+        "id": "solar-pro4",
+        "name": "Solar Pro 4"
+      },
+      "price": {
+        "input": 0.3,
+        "output": 1.2,
+        "cache_read": 0.06
+      }
+    }
+  }
+}

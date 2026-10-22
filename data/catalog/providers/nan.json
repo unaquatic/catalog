@@ -1,0 +1,313 @@
+{
+  "id": "nan",
+  "name": "NaN",
+  "kind": "gateway",
+  "type": "community",
+  "endpoint": {
+    "format": "openai-chat",
+    "api": "https://api.nan.builders/v1",
+    "auth": {
+      "scheme": "bearer"
+    },
+    "env": [
+      "NAN_API_KEY"
+    ]
+  },
+  "doc": "https://nan.builders/docs/models",
+  "models": {
+    "alibaba/qwen-image-2.1": {
+      "name": "Qwen Image 2.1",
+      "family": "qwen",
+      "type": "image",
+      "released": "2026-09-14",
+      "updated": "2026-09-21",
+      "open_weights": true,
+      "capabilities": {
+        "tools": false,
+        "attachments": false,
+        "temperature": false,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "image"
+        ]
+      },
+      "limit": {
+        "context": 8192,
+        "output": 0
+      },
+      "provider_options": {
+        "id": "qwen-image-2.1",
+        "name": "Qwen-Image-2.1"
+      },
+      "price": {
+        "input": 0,
+        "output": 0
+      }
+    },
+    "alibaba/qwen3.6-35b-a3b": {
+      "name": "Qwen3.6 35B A3B",
+      "family": "qwen",
+      "released": "2026-04-17",
+      "updated": "2026-04-17",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 65536
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "medium",
+          "high",
+          "max"
+        ]
+      },
+      "provider_options": {
+        "id": "qwen3.6",
+        "name": "Qwen3.6 35B-A3B"
+      },
+      "price": {
+        "input": 0,
+        "output": 0
+      }
+    },
+    "alibaba/qwen3.8-flash": {
+      "name": "Qwen3.8 Flash",
+      "family": "qwen",
+      "released": "2026-08-26",
+      "updated": "2026-08-26",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 131072
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "qwen3.8-flash",
+        "name": "Qwen3.8 Flash"
+      },
+      "price": {
+        "input": 0,
+        "output": 0
+      }
+    },
+    "deepseek/deepseek-v4.1-flash": {
+      "name": "DeepSeek V4.1 Flash",
+      "family": "deepseek-flash",
+      "released": "2026-09-10",
+      "updated": "2026-09-10",
+      "knowledge": "2025-05",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 384000
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "deepseek-v4-flash",
+        "name": "DeepSeek V4.1 Flash"
+      },
+      "price": {
+        "input": 0,
+        "output": 0
+      }
+    },
+    "google/gemma-4-26b-a4b-it": {
+      "name": "Gemma 4 26B A4B IT",
+      "family": "gemma",
+      "released": "2026-04-02",
+      "updated": "2026-04-02",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 32768
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "medium",
+          "high",
+          "max"
+        ]
+      },
+      "provider_options": {
+        "id": "gemma4",
+        "name": "Gemma 4 26B A4B IT"
+      },
+      "price": {
+        "input": 0,
+        "output": 0
+      }
+    },
+    "xiaomi/mimo-v2.6-flash": {
+      "name": "MiMo V2.6 Flash",
+      "family": "mimo",
+      "released": "2026-09-22",
+      "updated": "2026-09-22",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "audio"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "mimo-v2.6-flash",
+        "name": "MiMo-V2.6-Flash"
+      },
+      "price": {
+        "input": 0,
+        "output": 0
+      }
+    },
+    "zhipuai/glm-5.3": {
+      "name": "GLM 5.3",
+      "family": "glm",
+      "released": "2026-08-14",
+      "updated": "2026-08-14",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "medium",
+          "high",
+          "max"
+        ]
+      },
+      "provider_options": {
+        "id": "glm5.3",
+        "name": "GLM-5.3"
+      },
+      "price": {
+        "input": 0,
+        "output": 0
+      }
+    },
+    "zhipuai/glm-5.3-flash": {
+      "name": "GLM 5.3 Flash",
+      "family": "glm-flash",
+      "released": "2026-08-26",
+      "updated": "2026-08-26",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "medium",
+          "high",
+          "max"
+        ]
+      },
+      "provider_options": {
+        "id": "glm5.3-flash",
+        "name": "GLM-5.3-Flash"
+      },
+      "price": {
+        "input": 0,
+        "output": 0
+      }
+    }
+  }
+}

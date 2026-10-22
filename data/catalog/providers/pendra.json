@@ -1,0 +1,224 @@
+{
+  "id": "pendra",
+  "name": "Pendra",
+  "kind": "gateway",
+  "type": "community",
+  "endpoint": {
+    "format": "openai-chat",
+    "api": "https://api.pendra.ai/api/v1",
+    "auth": {
+      "scheme": "bearer"
+    },
+    "env": [
+      "PENDRA_API_KEY"
+    ]
+  },
+  "doc": "https://pendra.ai/docs/integrations/opencode",
+  "models": {
+    "alibaba/qwen3-coder-30b-a3b-instruct": {
+      "name": "Qwen3 Coder 30B A3B Instruct",
+      "family": "qwen",
+      "released": "2025-07-31",
+      "updated": "2025-07-31",
+      "knowledge": "2025-04",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 65536
+      },
+      "provider_options": {
+        "id": "qwen3-coder:30b",
+        "name": "Qwen3-Coder 30B-A3B Instruct"
+      },
+      "price": {
+        "input": 0,
+        "output": 0
+      }
+    },
+    "alibaba/qwen3.6-27b": {
+      "name": "Qwen3.6 27B",
+      "family": "qwen",
+      "released": "2026-04-22",
+      "updated": "2026-04-22",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 65536
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "qwen3.6:27b",
+        "name": "Qwen3.6 27B"
+      },
+      "price": {
+        "input": 0,
+        "output": 0
+      }
+    },
+    "deepseek/deepseek-v4-flash": {
+      "name": "DeepSeek V4 Flash",
+      "family": "deepseek-flash",
+      "released": "2026-04-24",
+      "updated": "2026-04-24",
+      "knowledge": "2025-05",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 384000
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "high",
+          "max"
+        ]
+      },
+      "provider_options": {
+        "id": "deepseek-v4-flash",
+        "name": "DeepSeek V4 Flash"
+      },
+      "price": {
+        "input": 0,
+        "output": 0
+      }
+    },
+    "meta/llama-3.3-70b-instruct": {
+      "name": "Llama 3.3 70B Instruct",
+      "family": "llama",
+      "released": "2024-12-06",
+      "updated": "2024-12-06",
+      "knowledge": "2023-12",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 128000,
+        "output": 4096
+      },
+      "provider_options": {
+        "id": "llama3.3:70b",
+        "name": "Llama-3.3-70B-Instruct"
+      },
+      "price": {
+        "input": 0,
+        "output": 0
+      }
+    },
+    "openai/gpt-oss-120b": {
+      "name": "GPT OSS 120B",
+      "family": "gpt-oss",
+      "released": "2025-08-05",
+      "updated": "2025-08-05",
+      "knowledge": "2024-06",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 131072,
+        "output": 32768
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "gpt-oss:120b",
+        "name": "GPT OSS 120B"
+      },
+      "price": {
+        "input": 0,
+        "output": 0
+      }
+    },
+    "zhipuai/glm-4.7-flash": {
+      "name": "GLM 4.7 Flash",
+      "family": "glm-flash",
+      "released": "2026-01-19",
+      "updated": "2026-01-19",
+      "knowledge": "2025-04",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 200000,
+        "output": 131072
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "glm-4.7-flash",
+        "name": "GLM-4.7-Flash"
+      },
+      "price": {
+        "input": 0,
+        "output": 0
+      }
+    }
+  }
+}

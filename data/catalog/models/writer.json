@@ -1,0 +1,58 @@
+{
+  "writer/palmyra-x4": {
+    "id": "writer/palmyra-x4",
+    "lab": "writer",
+    "name": "Palmyra X4",
+    "family": "palmyra",
+    "released": "2024-10-09",
+    "updated": "2025-04-28",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 4096
+    },
+    "providers": []
+  },
+  "writer/palmyra-x5": {
+    "id": "writer/palmyra-x5",
+    "lab": "writer",
+    "name": "Palmyra X5",
+    "family": "palmyra",
+    "released": "2025-04-28",
+    "updated": "2025-04-28",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 8192
+    },
+    "providers": [
+      "kilo",
+      "openrouter"
+    ]
+  }
+}

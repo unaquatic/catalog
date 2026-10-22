@@ -1,0 +1,105 @@
+{
+  "ibm/granite-4-h-micro": {
+    "id": "ibm/granite-4-h-micro",
+    "lab": "ibm",
+    "name": "Granite 4 H Micro",
+    "family": "granite",
+    "released": "2025-10-02",
+    "updated": "2025-10-02",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 131072
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/ibm-granite/granite-4.0-h-micro"
+      }
+    ],
+    "providers": [
+      "aimlapi",
+      "cloudflare-workers-ai",
+      "kilo",
+      "openrouter"
+    ]
+  },
+  "ibm/granite-4-h-small": {
+    "id": "ibm/granite-4-h-small",
+    "lab": "ibm",
+    "name": "Granite 4 H Small",
+    "family": "granite",
+    "released": "2025-10-02",
+    "updated": "2025-10-02",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 131072
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/ibm-granite/granite-4.0-h-small"
+      }
+    ],
+    "providers": []
+  },
+  "ibm/granite-4.2-8b": {
+    "id": "ibm/granite-4.2-8b",
+    "lab": "ibm",
+    "name": "Granite 4.2 8B",
+    "family": "granite",
+    "released": "2026-08-25",
+    "updated": "2026-08-25",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 117964
+    },
+    "providers": [
+      "edenai",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "nano-gpt",
+      "openrouter",
+      "wandb"
+    ]
+  }
+}

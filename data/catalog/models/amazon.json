@@ -1,0 +1,359 @@
+{
+  "amazon/nova-2-lite": {
+    "id": "amazon/nova-2-lite",
+    "lab": "amazon",
+    "name": "Nova 2 Lite",
+    "family": "nova",
+    "released": "2025-12-02",
+    "updated": "2025-12-02",
+    "knowledge": "2025-10",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 65536
+    },
+    "providers": [
+      "cortecs",
+      "vercel"
+    ]
+  },
+  "amazon/nova-2-lite-v1": {
+    "id": "amazon/nova-2-lite-v1",
+    "lab": "amazon",
+    "name": "Nova 2 Lite V1",
+    "family": "nova",
+    "released": "2025-12-02",
+    "updated": "2025-12-02",
+    "knowledge": "2025-10",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 65535
+    },
+    "providers": [
+      "kilo",
+      "nano-gpt",
+      "nova",
+      "openrouter"
+    ]
+  },
+  "amazon/nova-2-pro-v1": {
+    "id": "amazon/nova-2-pro-v1",
+    "lab": "amazon",
+    "name": "Nova 2 Pro V1",
+    "family": "nova-pro",
+    "released": "2025-12-03",
+    "updated": "2026-01-03",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 64000
+    },
+    "providers": [
+      "nova"
+    ]
+  },
+  "amazon/nova-lite": {
+    "id": "amazon/nova-lite",
+    "lab": "amazon",
+    "name": "Nova Lite",
+    "family": "nova-lite",
+    "released": "2024-12-03",
+    "updated": "2024-12-03",
+    "knowledge": "2024-10",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 300000,
+      "output": 10000
+    },
+    "providers": [
+      "edenai",
+      "vercel"
+    ]
+  },
+  "amazon/nova-lite-v1": {
+    "id": "amazon/nova-lite-v1",
+    "lab": "amazon",
+    "name": "Nova Lite V1",
+    "family": "nova-lite",
+    "released": "2024-12-05",
+    "updated": "2024-12-05",
+    "knowledge": "2024-10-31",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 300000,
+      "output": 5120
+    },
+    "providers": [
+      "aimlapi",
+      "cortecs",
+      "kilo",
+      "nano-gpt",
+      "openrouter"
+    ]
+  },
+  "amazon/nova-micro": {
+    "id": "amazon/nova-micro",
+    "lab": "amazon",
+    "name": "Nova Micro",
+    "family": "nova-micro",
+    "released": "2024-12-03",
+    "updated": "2024-12-03",
+    "knowledge": "2024-10",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 10000
+    },
+    "providers": [
+      "edenai",
+      "vercel"
+    ]
+  },
+  "amazon/nova-micro-v1": {
+    "id": "amazon/nova-micro-v1",
+    "lab": "amazon",
+    "name": "Nova Micro V1",
+    "family": "nova-micro",
+    "released": "2024-12-05",
+    "updated": "2024-12-05",
+    "knowledge": "2024-10-31",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 5120
+    },
+    "providers": [
+      "aimlapi",
+      "cortecs",
+      "kilo",
+      "openrouter"
+    ]
+  },
+  "amazon/nova-premier": {
+    "id": "amazon/nova-premier",
+    "lab": "amazon",
+    "name": "Nova Premier",
+    "family": "nova",
+    "released": "2025-04-30",
+    "updated": "2025-04-30",
+    "knowledge": "2024-10",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 10000
+    },
+    "providers": [
+      "kilo",
+      "openrouter"
+    ]
+  },
+  "amazon/nova-pro": {
+    "id": "amazon/nova-pro",
+    "lab": "amazon",
+    "name": "Nova Pro",
+    "family": "nova-pro",
+    "released": "2024-12-03",
+    "updated": "2024-12-03",
+    "knowledge": "2024-10",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 300000,
+      "output": 10000
+    },
+    "providers": [
+      "edenai",
+      "vercel"
+    ]
+  },
+  "amazon/nova-pro-v1": {
+    "id": "amazon/nova-pro-v1",
+    "lab": "amazon",
+    "name": "Nova Pro V1",
+    "family": "nova-pro",
+    "released": "2024-12-05",
+    "updated": "2024-12-05",
+    "knowledge": "2024-10-31",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 300000,
+      "output": 5120
+    },
+    "providers": [
+      "aimlapi",
+      "cortecs",
+      "kilo",
+      "nano-gpt",
+      "openrouter"
+    ]
+  },
+  "amazon/titan-embed-text-v2": {
+    "id": "amazon/titan-embed-text-v2",
+    "lab": "amazon",
+    "name": "Titan Embed Text V2",
+    "family": "titan-embed",
+    "type": "embedding",
+    "released": "2024-04-30",
+    "updated": "2024-04-30",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 8192,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  }
+}

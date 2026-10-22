@@ -1,0 +1,87 @@
+{
+  "id": "claudinio",
+  "name": "Claudinio",
+  "kind": "gateway",
+  "type": "community",
+  "endpoint": {
+    "format": "openai-chat",
+    "api": "https://api.claudin.io/v1",
+    "auth": {
+      "scheme": "bearer"
+    },
+    "env": [
+      "CLAUDINIO_API_KEY"
+    ]
+  },
+  "doc": "https://claudin.io",
+  "models": {
+    "claudinio/claudinio": {
+      "name": "Claudinio",
+      "released": "2026-05-12",
+      "updated": "2026-06-02",
+      "knowledge": "2026-05",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "input": [
+          "text",
+          "image",
+          "audio",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 256000,
+        "output": 64000
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "claudinio",
+        "name": "Claudinio"
+      },
+      "price": {
+        "input": 0.5,
+        "output": 2,
+        "cache_read": 0.15
+      }
+    },
+    "claudinio/claudius": {
+      "name": "Claudius",
+      "released": "2026-05-12",
+      "updated": "2026-05-12",
+      "knowledge": "2026-05",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "input": [
+          "text",
+          "image",
+          "audio",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 256000,
+        "output": 64000
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "claudius",
+        "name": "Claudius"
+      },
+      "price": {
+        "input": 3,
+        "output": 8,
+        "cache_read": 0.9
+      }
+    }
+  }
+}

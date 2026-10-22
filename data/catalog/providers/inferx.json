@@ -1,0 +1,385 @@
+{
+  "id": "inferx",
+  "name": "InferX",
+  "kind": "gateway",
+  "type": "community",
+  "endpoint": {
+    "format": "openai-chat",
+    "api": "https://model.inferx.net/endpoints/v1",
+    "auth": {
+      "scheme": "bearer"
+    },
+    "env": [
+      "INFERX_API_KEY"
+    ]
+  },
+  "doc": "https://model.inferx.net/endpoints",
+  "models": {
+    "alibaba/qwen3-coder-next-fp8": {
+      "name": "Qwen3 Coder Next FP8",
+      "family": "qwen",
+      "released": "2026-02-03",
+      "updated": "2026-02-03",
+      "knowledge": "2025-04",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 256144,
+        "output": 65536
+      },
+      "provider_options": {
+        "id": "Qwen3-Coder-Next-FP8",
+        "name": "Qwen3 Coder Next FP8"
+      },
+      "price": {
+        "input": 0,
+        "output": 0
+      }
+    },
+    "alibaba/qwen3-coder-next-fp8-no-thinking": {
+      "name": "Qwen3 Coder Next FP8 No Thinking",
+      "family": "qwen",
+      "released": "2026-02-03",
+      "updated": "2026-02-03",
+      "knowledge": "2025-04",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 260000,
+        "output": 65536
+      },
+      "provider_options": {
+        "id": "Qwen3-Coder-Next-FP8-no-thinking",
+        "name": "Qwen3-Coder-Next-FP8-no-thinking"
+      },
+      "price": {
+        "input": 0,
+        "output": 0
+      }
+    },
+    "alibaba/qwen3-embedding-8b": {
+      "name": "Qwen3 Embedding 8B",
+      "family": "text-embedding",
+      "released": "2025-06-05",
+      "updated": "2025-06-05",
+      "open_weights": true,
+      "capabilities": {
+        "tools": false,
+        "attachments": false,
+        "temperature": false,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 32768,
+        "output": 0
+      },
+      "provider_options": {
+        "id": "Qwen3-Embedding-8B",
+        "name": "Qwen3-Embedding-8B"
+      },
+      "price": {
+        "input": 0,
+        "output": 0
+      }
+    },
+    "alibaba/qwen3.6-27b": {
+      "name": "Qwen3.6 27B",
+      "family": "qwen",
+      "released": "2026-04-22",
+      "updated": "2026-04-22",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 65536
+      },
+      "reasoning": {
+        "mandatory": false
+      },
+      "provider_options": {
+        "id": "Qwen3.6-27B-FP8",
+        "name": "Qwen3.6 27B FP8"
+      },
+      "price": {
+        "input": 0,
+        "output": 0
+      }
+    },
+    "alibaba/qwen3.6-35b-a3b": {
+      "name": "Qwen3.6 35B A3B",
+      "family": "qwen",
+      "released": "2026-04-17",
+      "updated": "2026-04-17",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262000,
+        "output": 65536
+      },
+      "reasoning": {
+        "mandatory": false
+      },
+      "provider_options": {
+        "id": "Qwen3.6-35B-A3B-FP8",
+        "name": "Qwen3.6 35B A3B FP8"
+      },
+      "price": {
+        "input": 0,
+        "output": 0
+      },
+      "aliases": [
+        "Qwen3.6-35B-A3B-fp8-no-thinking"
+      ]
+    },
+    "deepreinforce/ornith-1.0-35b": {
+      "name": "Ornith 1.0 35B",
+      "family": "ornith",
+      "released": "2026-06-25",
+      "updated": "2026-06-25",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262000,
+        "output": 100000
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "Ornith-1.0-35B-FP8",
+        "name": "Ornith-1.0-35B-FP8"
+      },
+      "price": {
+        "input": 0,
+        "output": 0
+      }
+    },
+    "deepseek/deepseek-v4-flash": {
+      "name": "DeepSeek V4 Flash",
+      "family": "deepseek-flash",
+      "released": "2026-04-24",
+      "updated": "2026-04-24",
+      "knowledge": "2025-05",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 100000
+      },
+      "reasoning": {
+        "mandatory": false
+      },
+      "provider_options": {
+        "id": "deepseek-v4-flash",
+        "name": "deepseek-v4-flash"
+      },
+      "price": {
+        "input": 0,
+        "output": 0
+      }
+    },
+    "google/gemma-4-31b-it": {
+      "name": "Gemma 4 31B IT",
+      "family": "gemma",
+      "released": "2026-04-02",
+      "updated": "2026-04-02",
+      "knowledge": "2025-01",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 32768
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "gemma-4-31B-it-fp8",
+        "name": "Gemma 4 31B IT FP8"
+      },
+      "price": {
+        "input": 0,
+        "output": 0
+      }
+    },
+    "inferx/agents-a1": {
+      "name": "Agents A1",
+      "released": "2026-06-26",
+      "updated": "2026-06-26",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262000,
+        "output": 100000
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "Agents-A1",
+        "name": "Agents-A1"
+      },
+      "price": {
+        "input": 0,
+        "output": 0
+      }
+    },
+    "mistral/devstral-2512": {
+      "name": "Devstral 2512",
+      "family": "devstral",
+      "released": "2025-12-09",
+      "updated": "2025-12-09",
+      "knowledge": "2025-12",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 128000,
+        "output": 128000
+      },
+      "provider_options": {
+        "id": "Devstral-2-123B-Instruct-2512-int4-AutoRound",
+        "name": "Devstral-2-123B-Instruct-2512-int4-AutoRound"
+      },
+      "price": {
+        "input": 0,
+        "output": 0
+      }
+    },
+    "xiaomi/mimo-v2.5": {
+      "name": "MiMo V2.5",
+      "family": "mimo",
+      "released": "2026-04-22",
+      "updated": "2026-04-22",
+      "knowledge": "2024-12",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "audio",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 100000
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "mimo-v25",
+        "name": "mimo-v25"
+      },
+      "price": {
+        "input": 0,
+        "output": 0
+      }
+    }
+  }
+}

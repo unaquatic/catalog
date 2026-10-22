@@ -1,0 +1,60 @@
+{
+  "hcompany/holo2-30b-a3b": {
+    "id": "hcompany/holo2-30b-a3b",
+    "lab": "hcompany",
+    "name": "Holo2 30B A3B",
+    "released": "2025-11-10",
+    "updated": "2025-11-10",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": false,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 22016,
+      "output": 16384
+    },
+    "providers": [
+      "greenpt"
+    ]
+  },
+  "hcompany/holo3-35b-a3b": {
+    "id": "hcompany/holo3-35b-a3b",
+    "lab": "hcompany",
+    "name": "Holo3 35B A3B",
+    "released": "2024-01-01",
+    "updated": "2024-01-01",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 65536,
+      "input": 65536,
+      "output": 8192
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  }
+}

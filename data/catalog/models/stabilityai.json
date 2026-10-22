@@ -1,0 +1,60 @@
+{
+  "stabilityai/stable-diffusion-3.5-large": {
+    "id": "stabilityai/stable-diffusion-3.5-large",
+    "lab": "stabilityai",
+    "name": "Stable Diffusion 3.5 Large",
+    "family": "stable-diffusion",
+    "type": "image",
+    "released": "2024-10-22",
+    "updated": "2026-04-30",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "image"
+      ]
+    },
+    "limit": {
+      "context": 256,
+      "output": 1
+    },
+    "providers": [
+      "digitalocean"
+    ]
+  },
+  "stabilityai/stablediffusionxl": {
+    "id": "stabilityai/stablediffusionxl",
+    "lab": "stabilityai",
+    "name": "StableDiffusionXL",
+    "family": "stable-diffusion",
+    "released": "2023-07-09",
+    "updated": "2023-07-09",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "image"
+      ]
+    },
+    "limit": {
+      "context": 200,
+      "output": 0
+    },
+    "providers": [
+      "poe"
+    ]
+  }
+}

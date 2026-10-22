@@ -1,0 +1,18 @@
+{
+  "id": "trustedrouter",
+  "name": "TrustedRouter",
+  "kind": "gateway",
+  "type": "community",
+  "endpoint": {
+    "format": "openai-chat",
+    "api": "https://api.trustedrouter.com/v1",
+    "auth": {
+      "scheme": "bearer"
+    },
+    "env": [
+      "TRUSTEDROUTER_API_KEY"
+    ]
+  },
+  "doc": "https://trustedrouter.com/docs",
+  "models": {}
+}

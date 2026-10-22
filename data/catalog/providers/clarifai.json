@@ -1,0 +1,415 @@
+{
+  "id": "clarifai",
+  "name": "Clarifai",
+  "kind": "gateway",
+  "type": "community",
+  "endpoint": {
+    "format": "openai-chat",
+    "api": "https://api.clarifai.com/v2/ext/openai/v1",
+    "auth": {
+      "scheme": "bearer"
+    },
+    "env": [
+      "CLARIFAI_PAT"
+    ]
+  },
+  "doc": "https://docs.clarifai.com/compute/inference/",
+  "models": {
+    "alibaba/qwen3-30b-a3b-instruct-2507": {
+      "name": "Qwen3 30B A3B Instruct 2507",
+      "family": "qwen",
+      "released": "2025-07-30",
+      "updated": "2026-02-25",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "provider_options": {
+        "id": "qwen/qwenLM/models/Qwen3-30B-A3B-Instruct-2507",
+        "name": "Qwen3 30B A3B Instruct 2507"
+      },
+      "price": {
+        "input": 0.3,
+        "output": 0.5
+      }
+    },
+    "alibaba/qwen3-30b-a3b-thinking-2507": {
+      "name": "Qwen3 30B A3B Thinking 2507",
+      "family": "qwen",
+      "released": "2025-07-31",
+      "updated": "2026-02-25",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 131072
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "qwen/qwenLM/models/Qwen3-30B-A3B-Thinking-2507",
+        "name": "Qwen3 30B A3B Thinking 2507"
+      },
+      "price": {
+        "input": 0.36,
+        "output": 1.3
+      }
+    },
+    "alibaba/qwen3-coder-30b-a3b-instruct": {
+      "name": "Qwen3 Coder 30B A3B Instruct",
+      "family": "qwen",
+      "released": "2025-07-31",
+      "updated": "2026-02-12",
+      "knowledge": "2025-04",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 65536
+      },
+      "provider_options": {
+        "id": "qwen/qwenCoder/models/Qwen3-Coder-30B-A3B-Instruct",
+        "name": "Qwen3 Coder 30B A3B Instruct"
+      },
+      "price": {
+        "input": 0.11458,
+        "output": 0.74812
+      }
+    },
+    "arcee-ai/trinity-mini": {
+      "name": "Trinity Mini",
+      "family": "trinity",
+      "released": "2025-12-01",
+      "updated": "2026-02-25",
+      "knowledge": "2024-10",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 131072,
+        "output": 131072
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "arcee_ai/AFM/models/trinity-mini",
+        "name": "Trinity Mini"
+      },
+      "price": {
+        "input": 0.045,
+        "output": 0.15
+      }
+    },
+    "clarifai/mm-poly-8b": {
+      "name": "MM Poly 8B",
+      "family": "mm-poly",
+      "released": "2025-06-01",
+      "updated": "2026-02-25",
+      "open_weights": false,
+      "capabilities": {
+        "tools": false,
+        "attachments": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 32768,
+        "output": 4096
+      },
+      "provider_options": {
+        "id": "clarifai/main/models/mm-poly-8b",
+        "name": "MM Poly 8B"
+      },
+      "price": {
+        "input": 0.658,
+        "output": 1.11
+      }
+    },
+    "deepseek/deepseek-ocr": {
+      "name": "DeepSeek OCR",
+      "family": "deepseek",
+      "released": "2025-10-20",
+      "updated": "2026-02-25",
+      "open_weights": true,
+      "capabilities": {
+        "tools": false,
+        "attachments": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 8192,
+        "output": 8192
+      },
+      "provider_options": {
+        "id": "deepseek-ai/deepseek-ocr/models/DeepSeek-OCR",
+        "name": "DeepSeek OCR"
+      },
+      "price": {
+        "input": 0.2,
+        "output": 0.7
+      }
+    },
+    "minimax/minimax-m2-5-high-throughput": {
+      "name": "MiniMax M2.5 High Throughput",
+      "family": "minimax",
+      "released": "2026-02-12",
+      "updated": "2026-02-25",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 204800,
+        "output": 131072
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "minimaxai/chat-completion/models/MiniMax-M2_5-high-throughput",
+        "name": "MiniMax-M2.5 High Throughput"
+      },
+      "price": {
+        "input": 0.3,
+        "output": 1.2
+      }
+    },
+    "mistral/ministral-3-14b-reasoning-2512": {
+      "name": "Ministral 3 14B Reasoning 2512",
+      "family": "ministral",
+      "released": "2025-12-01",
+      "updated": "2025-12-12",
+      "knowledge": "2025-12",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "mistralai/completion/models/Ministral-3-14B-Reasoning-2512",
+        "name": "Ministral 3 14B Reasoning 2512"
+      },
+      "price": {
+        "input": 2.5,
+        "output": 1.7
+      }
+    },
+    "mistral/ministral-3-3b-reasoning-2512": {
+      "name": "Ministral 3 3B Reasoning 2512",
+      "family": "ministral",
+      "released": "2025-12-02",
+      "updated": "2026-02-25",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "mistralai/completion/models/Ministral-3-3B-Reasoning-2512",
+        "name": "Ministral 3 3B Reasoning 2512"
+      },
+      "price": {
+        "input": 1.039,
+        "output": 0.54825
+      }
+    },
+    "moonshotai/kimi-k2.6": {
+      "name": "Kimi K2.6",
+      "family": "kimi-k2",
+      "released": "2026-04-20",
+      "updated": "2026-04-20",
+      "knowledge": "2025-01",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "reasoning": {},
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "moonshotai/chat-completion/models/Kimi-K2_6",
+        "name": "Kimi K2.6"
+      },
+      "price": {
+        "input": 0.95,
+        "output": 4
+      }
+    },
+    "openai/gpt-oss-120b-high-throughput": {
+      "name": "GPT OSS 120B High Throughput",
+      "family": "gpt-oss",
+      "released": "2025-08-05",
+      "updated": "2026-02-25",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 131072,
+        "output": 16384
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "openai/chat-completion/models/gpt-oss-120b-high-throughput",
+        "name": "GPT OSS 120B High Throughput"
+      },
+      "price": {
+        "input": 0.09,
+        "output": 0.36
+      }
+    },
+    "openai/gpt-oss-20b": {
+      "name": "GPT OSS 20B",
+      "family": "gpt-oss",
+      "released": "2025-08-05",
+      "updated": "2025-12-12",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 131072,
+        "output": 16384
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "openai/chat-completion/models/gpt-oss-20b",
+        "name": "GPT OSS 20B"
+      },
+      "price": {
+        "input": 0.045,
+        "output": 0.18
+      }
+    }
+  }
+}

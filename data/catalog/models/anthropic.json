@@ -1,0 +1,1681 @@
+{
+  "anthropic/claude-3-5-haiku": {
+    "id": "anthropic/claude-3-5-haiku",
+    "lab": "anthropic",
+    "name": "Claude 3.5 Haiku",
+    "family": "claude-haiku",
+    "released": "2024-10-22",
+    "updated": "2024-10-22",
+    "knowledge": "2024-10",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 200000,
+      "output": 8192
+    },
+    "providers": [
+      "helicone",
+      "opencode",
+      "poe",
+      "qiniu-ai",
+      "zenmux"
+    ]
+  },
+  "anthropic/claude-3-5-haiku-20241022": {
+    "id": "anthropic/claude-3-5-haiku-20241022",
+    "lab": "anthropic",
+    "name": "Claude 3.5 Haiku 20241022",
+    "family": "claude-haiku",
+    "released": "2024-10-22",
+    "updated": "2024-10-22",
+    "knowledge": "2024-07-31",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 200000,
+      "output": 8192
+    },
+    "providers": [
+      "digitalocean"
+    ]
+  },
+  "anthropic/claude-3-5-sonnet": {
+    "id": "anthropic/claude-3-5-sonnet",
+    "lab": "anthropic",
+    "name": "Claude 3.5 Sonnet",
+    "family": "claude-sonnet",
+    "released": "2024-06-20",
+    "updated": "2024-10-22",
+    "knowledge": "2024-04",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 200000,
+      "output": 8192
+    },
+    "providers": [
+      "digitalocean",
+      "poe",
+      "qiniu-ai"
+    ]
+  },
+  "anthropic/claude-3-5-sonnet-20241022": {
+    "id": "anthropic/claude-3-5-sonnet-20241022",
+    "lab": "anthropic",
+    "name": "Claude 3.5 Sonnet 20241022",
+    "family": "claude-sonnet",
+    "released": "2024-10-22",
+    "updated": "2024-10-22",
+    "knowledge": "2024-04-30",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 200000,
+      "output": 8192
+    },
+    "providers": []
+  },
+  "anthropic/claude-3-5-sonnet-v2": {
+    "id": "anthropic/claude-3-5-sonnet-v2",
+    "lab": "anthropic",
+    "name": "Claude 3.5 Sonnet V2",
+    "family": "claude-sonnet",
+    "released": "2024-10-22",
+    "updated": "2024-10-22",
+    "knowledge": "2024-10",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 200000,
+      "output": 8192
+    },
+    "providers": [
+      "helicone"
+    ]
+  },
+  "anthropic/claude-3-7-sonnet": {
+    "id": "anthropic/claude-3-7-sonnet",
+    "lab": "anthropic",
+    "name": "Claude 3.7 Sonnet",
+    "family": "claude-sonnet",
+    "released": "2025-02-19",
+    "updated": "2025-02-19",
+    "knowledge": "2025-02",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 200000,
+      "output": 64000
+    },
+    "providers": [
+      "helicone",
+      "poe",
+      "qiniu-ai",
+      "zenmux"
+    ]
+  },
+  "anthropic/claude-3-7-sonnet-20250219": {
+    "id": "anthropic/claude-3-7-sonnet-20250219",
+    "lab": "anthropic",
+    "name": "Claude 3.7 Sonnet 20250219",
+    "family": "claude-sonnet",
+    "released": "2025-02-19",
+    "updated": "2025-02-19",
+    "knowledge": "2024-10-31",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 200000,
+      "output": 64000
+    },
+    "providers": [
+      "abacus",
+      "digitalocean",
+      "pioneer"
+    ]
+  },
+  "anthropic/claude-3-haiku-20240307": {
+    "id": "anthropic/claude-3-haiku-20240307",
+    "lab": "anthropic",
+    "name": "Claude 3 Haiku 20240307",
+    "family": "claude-haiku",
+    "released": "2024-03-13",
+    "updated": "2024-03-13",
+    "knowledge": "2023-08-31",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 200000,
+      "output": 4096
+    },
+    "providers": [
+      "helicone"
+    ]
+  },
+  "anthropic/claude-3-opus": {
+    "id": "anthropic/claude-3-opus",
+    "lab": "anthropic",
+    "name": "Claude 3 Opus",
+    "family": "claude-opus",
+    "released": "2024-02-29",
+    "updated": "2024-02-29",
+    "knowledge": "2023-08",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 200000,
+      "output": 4096
+    },
+    "providers": [
+      "digitalocean"
+    ]
+  },
+  "anthropic/claude-fable-5": {
+    "id": "anthropic/claude-fable-5",
+    "lab": "anthropic",
+    "name": "Claude Fable 5",
+    "family": "claude-fable",
+    "released": "2026-06-09",
+    "updated": "2026-06-09",
+    "knowledge": "2026-01-31",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 128000
+    },
+    "providers": [
+      "302ai",
+      "abacus",
+      "aimlapi",
+      "anthropic",
+      "azure",
+      "azure-cognitive-services",
+      "commandcode",
+      "crossmodel",
+      "deepinfra",
+      "digitalocean",
+      "edenai",
+      "freemodel",
+      "github-copilot",
+      "google-vertex",
+      "google-vertex-anthropic",
+      "impossibl",
+      "kenari",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "model-oracle-ai",
+      "modelis",
+      "nano-gpt",
+      "nearai",
+      "neon",
+      "ofox",
+      "opencode",
+      "openrouter",
+      "opper",
+      "orcarouter",
+      "perplexity-agent",
+      "pioneer",
+      "prime",
+      "requesty",
+      "snowflake-cortex",
+      "standardcompute",
+      "tempr",
+      "vercel",
+      "vivgrid",
+      "xpersona",
+      "zenmux"
+    ]
+  },
+  "anthropic/claude-fable-5-1": {
+    "id": "anthropic/claude-fable-5-1",
+    "lab": "anthropic",
+    "name": "Claude Fable 5.1",
+    "family": "claude-fable",
+    "released": "2026-09-01",
+    "updated": "2026-09-01",
+    "knowledge": "2026-06",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 128000
+    },
+    "providers": [
+      "302ai",
+      "aimlapi",
+      "aixy",
+      "anthropic",
+      "azure",
+      "azure-cognitive-services",
+      "boundless",
+      "commandcode",
+      "crossmodel",
+      "digitalocean",
+      "edenai",
+      "github-copilot",
+      "google-vertex",
+      "google-vertex-anthropic",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "nano-gpt",
+      "nearai",
+      "neon",
+      "ofox",
+      "opencode",
+      "openrouter",
+      "opper",
+      "perplexity-agent",
+      "prime",
+      "requesty",
+      "standardcompute",
+      "tempr",
+      "vercel",
+      "vivgrid",
+      "zenmux"
+    ]
+  },
+  "anthropic/claude-haiku-3": {
+    "id": "anthropic/claude-haiku-3",
+    "lab": "anthropic",
+    "name": "Claude Haiku 3",
+    "family": "claude-haiku",
+    "released": "2024-03-09",
+    "updated": "2024-03-09",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 189096,
+      "output": 8192
+    },
+    "providers": [
+      "poe"
+    ]
+  },
+  "anthropic/claude-haiku-4-5": {
+    "id": "anthropic/claude-haiku-4-5",
+    "lab": "anthropic",
+    "name": "Claude Haiku 4.5",
+    "family": "claude-haiku",
+    "released": "2025-10-15",
+    "updated": "2025-10-15",
+    "knowledge": "2025-02-28",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 200000,
+      "output": 64000
+    },
+    "providers": [
+      "302ai",
+      "aimlapi",
+      "anthropic",
+      "anyapi",
+      "azure",
+      "azure-cognitive-services",
+      "cortecs",
+      "crossmodel",
+      "databricks",
+      "digitalocean",
+      "frogbot",
+      "github-copilot",
+      "helicone",
+      "impossibl",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "model-oracle-ai",
+      "nano-gpt",
+      "nearai",
+      "neon",
+      "ofox",
+      "opencode",
+      "openrouter",
+      "opper",
+      "orcarouter",
+      "perplexity-agent",
+      "pioneer",
+      "poe",
+      "qiniu-ai",
+      "requesty",
+      "snowflake-cortex",
+      "tempr",
+      "vercel",
+      "xpersona",
+      "zenmux"
+    ]
+  },
+  "anthropic/claude-haiku-4-5-20251001": {
+    "id": "anthropic/claude-haiku-4-5-20251001",
+    "lab": "anthropic",
+    "name": "Claude Haiku 4.5 20251001",
+    "family": "claude-haiku",
+    "released": "2025-10-15",
+    "updated": "2025-10-15",
+    "knowledge": "2025-02-28",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 200000,
+      "output": 64000
+    },
+    "providers": [
+      "302ai",
+      "abacus",
+      "anthropic",
+      "commandcode",
+      "daoxe",
+      "freemodel",
+      "google-vertex",
+      "google-vertex-anthropic",
+      "helicone",
+      "jiekou",
+      "llmgateway",
+      "llmgateway-providers",
+      "qihang-ai",
+      "tempr",
+      "unorouter"
+    ]
+  },
+  "anthropic/claude-haiku-5-5": {
+    "id": "anthropic/claude-haiku-5-5",
+    "lab": "anthropic",
+    "name": "Claude Haiku 5.5",
+    "family": "claude-haiku",
+    "released": "2026-10-07",
+    "updated": "2026-10-07",
+    "knowledge": "2026-06",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 128000
+    },
+    "providers": [
+      "302ai",
+      "aimlapi",
+      "aixy",
+      "anthropic",
+      "azure",
+      "azure-cognitive-services",
+      "commandcode",
+      "cortecs",
+      "crossmodel",
+      "digitalocean",
+      "edenai",
+      "github-copilot",
+      "google-vertex",
+      "google-vertex-anthropic",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "nano-gpt",
+      "nearai",
+      "neon",
+      "ofox",
+      "opencode",
+      "opencode-go",
+      "openrouter",
+      "perplexity-agent",
+      "requesty",
+      "standardcompute",
+      "vercel",
+      "vivgrid"
+    ]
+  },
+  "anthropic/claude-mythos-5": {
+    "id": "anthropic/claude-mythos-5",
+    "lab": "anthropic",
+    "name": "Claude Mythos 5",
+    "family": "claude-mythos",
+    "released": "2026-06-09",
+    "updated": "2026-06-09",
+    "knowledge": "2026-01-31",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 128000
+    },
+    "providers": [
+      "azure",
+      "azure-cognitive-services"
+    ]
+  },
+  "anthropic/claude-opus-4-0": {
+    "id": "anthropic/claude-opus-4-0",
+    "lab": "anthropic",
+    "name": "Claude Opus 4.0",
+    "family": "claude-opus",
+    "released": "2025-05-22",
+    "updated": "2025-05-22",
+    "knowledge": "2025-03-31",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 200000,
+      "output": 32000
+    },
+    "providers": [
+      "digitalocean",
+      "helicone",
+      "poe",
+      "qiniu-ai",
+      "zenmux"
+    ]
+  },
+  "anthropic/claude-opus-4-1": {
+    "id": "anthropic/claude-opus-4-1",
+    "lab": "anthropic",
+    "name": "Claude Opus 4.1",
+    "family": "claude-opus",
+    "released": "2025-08-05",
+    "updated": "2025-08-05",
+    "knowledge": "2025-03-31",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 200000,
+      "output": 32000
+    },
+    "providers": [
+      "azure",
+      "azure-cognitive-services",
+      "databricks",
+      "digitalocean",
+      "helicone",
+      "kilo",
+      "nano-gpt",
+      "neon",
+      "opencode",
+      "openrouter",
+      "pioneer",
+      "poe",
+      "qiniu-ai",
+      "requesty",
+      "zenmux"
+    ]
+  },
+  "anthropic/claude-opus-4-1-20250805": {
+    "id": "anthropic/claude-opus-4-1-20250805",
+    "lab": "anthropic",
+    "name": "Claude Opus 4.1 20250805",
+    "family": "claude-opus",
+    "released": "2025-08-05",
+    "updated": "2025-08-05",
+    "knowledge": "2025-03-31",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 200000,
+      "output": 32000
+    },
+    "providers": [
+      "302ai",
+      "abacus",
+      "fastrouter",
+      "google-vertex",
+      "google-vertex-anthropic",
+      "helicone",
+      "jiekou"
+    ]
+  },
+  "anthropic/claude-opus-4-20250514": {
+    "id": "anthropic/claude-opus-4-20250514",
+    "lab": "anthropic",
+    "name": "Claude Opus 4 20250514",
+    "family": "claude-opus",
+    "released": "2025-05-22",
+    "updated": "2025-05-22",
+    "knowledge": "2025-03-31",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 200000,
+      "output": 32000
+    },
+    "providers": [
+      "abacus",
+      "google-vertex",
+      "google-vertex-anthropic",
+      "jiekou"
+    ]
+  },
+  "anthropic/claude-opus-4-5": {
+    "id": "anthropic/claude-opus-4-5",
+    "lab": "anthropic",
+    "name": "Claude Opus 4.5",
+    "family": "claude-opus",
+    "released": "2025-11-24",
+    "updated": "2025-11-24",
+    "knowledge": "2025-05",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 200000,
+      "output": 64000
+    },
+    "providers": [
+      "aimlapi",
+      "anthropic",
+      "azure",
+      "azure-cognitive-services",
+      "cortecs",
+      "databricks",
+      "digitalocean",
+      "edenai",
+      "helicone",
+      "impossibl",
+      "kilo",
+      "nano-gpt",
+      "neon",
+      "ofox",
+      "opencode",
+      "openrouter",
+      "opper",
+      "orcarouter",
+      "perplexity-agent",
+      "pioneer",
+      "poe",
+      "qiniu-ai",
+      "requesty",
+      "snowflake-cortex",
+      "tempr",
+      "vercel",
+      "zenmux"
+    ]
+  },
+  "anthropic/claude-opus-4-5-20251101": {
+    "id": "anthropic/claude-opus-4-5-20251101",
+    "lab": "anthropic",
+    "name": "Claude Opus 4.5 20251101",
+    "family": "claude-opus",
+    "released": "2025-11-24",
+    "updated": "2025-11-24",
+    "knowledge": "2025-05",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 200000,
+      "output": 64000
+    },
+    "providers": [
+      "302ai",
+      "abacus",
+      "anthropic",
+      "edenai",
+      "google-vertex",
+      "google-vertex-anthropic",
+      "jiekou",
+      "llmgateway",
+      "llmgateway-providers",
+      "qihang-ai",
+      "tempr"
+    ]
+  },
+  "anthropic/claude-opus-4-6": {
+    "id": "anthropic/claude-opus-4-6",
+    "lab": "anthropic",
+    "name": "Claude Opus 4.6",
+    "family": "claude-opus",
+    "released": "2026-02-05",
+    "updated": "2026-03-13",
+    "knowledge": "2025-05-31",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 128000
+    },
+    "providers": [
+      "abacus",
+      "anthropic",
+      "anyapi",
+      "auriko",
+      "azure",
+      "azure-cognitive-services",
+      "cortecs",
+      "databricks",
+      "digitalocean",
+      "edenai",
+      "freemodel",
+      "frogbot",
+      "gmicloud",
+      "google-vertex",
+      "google-vertex-anthropic",
+      "impossibl",
+      "jiekou",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "nano-gpt",
+      "nearai",
+      "neon",
+      "ofox",
+      "opencode",
+      "openrouter",
+      "opper",
+      "orcarouter",
+      "perplexity-agent",
+      "pioneer",
+      "poe",
+      "prime",
+      "requesty",
+      "snowflake-cortex",
+      "tempr",
+      "vercel",
+      "zenmux"
+    ]
+  },
+  "anthropic/claude-opus-4-7": {
+    "id": "anthropic/claude-opus-4-7",
+    "lab": "anthropic",
+    "name": "Claude Opus 4.7",
+    "family": "claude-opus",
+    "released": "2026-04-16",
+    "updated": "2026-04-16",
+    "knowledge": "2026-01-31",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 128000
+    },
+    "providers": [
+      "302ai",
+      "abacus",
+      "aimlapi",
+      "anthropic",
+      "anyapi",
+      "auriko",
+      "azure",
+      "azure-cognitive-services",
+      "commandcode",
+      "cortecs",
+      "crossmodel",
+      "databricks",
+      "digitalocean",
+      "edenai",
+      "freemodel",
+      "frogbot",
+      "github-copilot",
+      "gmicloud",
+      "google-vertex",
+      "google-vertex-anthropic",
+      "hpc-ai",
+      "impossibl",
+      "kenari",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "nano-gpt",
+      "nearai",
+      "neon",
+      "ofox",
+      "opencode",
+      "openrouter",
+      "opper",
+      "orcarouter",
+      "perplexity-agent",
+      "pioneer",
+      "poe",
+      "prime",
+      "requesty",
+      "snowflake-cortex",
+      "tempr",
+      "vercel",
+      "zenmux"
+    ]
+  },
+  "anthropic/claude-opus-4-8": {
+    "id": "anthropic/claude-opus-4-8",
+    "lab": "anthropic",
+    "name": "Claude Opus 4.8",
+    "family": "claude-opus",
+    "released": "2026-05-28",
+    "updated": "2026-05-28",
+    "knowledge": "2026-01",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 128000
+    },
+    "providers": [
+      "302ai",
+      "abacus",
+      "agentrouter",
+      "aimlapi",
+      "anthropic",
+      "azure",
+      "azure-cognitive-services",
+      "commandcode",
+      "cortecs",
+      "crossmodel",
+      "daoxe",
+      "digitalocean",
+      "edenai",
+      "fastrouter",
+      "freemodel",
+      "github-copilot",
+      "gmicloud",
+      "google-vertex",
+      "google-vertex-anthropic",
+      "impossibl",
+      "kenari",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "model-oracle-ai",
+      "modelis",
+      "nano-gpt",
+      "nearai",
+      "neon",
+      "ofox",
+      "opencode",
+      "openrouter",
+      "opper",
+      "orcarouter",
+      "pioneer",
+      "poe",
+      "prime",
+      "requesty",
+      "routing-run",
+      "snowflake-cortex",
+      "tempr",
+      "unorouter",
+      "vercel",
+      "xpersona",
+      "zenmux"
+    ]
+  },
+  "anthropic/claude-opus-5": {
+    "id": "anthropic/claude-opus-5",
+    "lab": "anthropic",
+    "name": "Claude Opus 5",
+    "family": "claude-opus",
+    "released": "2026-07-24",
+    "updated": "2026-07-24",
+    "knowledge": "2026-05",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 128000
+    },
+    "providers": [
+      "302ai",
+      "abacus",
+      "agentrouter",
+      "aimlapi",
+      "anthropic",
+      "azure",
+      "azure-cognitive-services",
+      "boundless",
+      "commandcode",
+      "cortecs",
+      "crossmodel",
+      "digitalocean",
+      "edenai",
+      "github-copilot",
+      "google-vertex",
+      "google-vertex-anthropic",
+      "kenari",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "nano-gpt",
+      "nearai",
+      "neon",
+      "ofox",
+      "opencode",
+      "openrouter",
+      "opper",
+      "orcarouter",
+      "perplexity-agent",
+      "pioneer",
+      "prime",
+      "requesty",
+      "snowflake-cortex",
+      "standardcompute",
+      "tempr",
+      "vercel",
+      "vivgrid"
+    ]
+  },
+  "anthropic/claude-opus-5-5": {
+    "id": "anthropic/claude-opus-5-5",
+    "lab": "anthropic",
+    "name": "Claude Opus 5.5",
+    "family": "claude-opus",
+    "released": "2026-09-22",
+    "updated": "2026-09-22",
+    "knowledge": "2026-06",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 128000
+    },
+    "providers": [
+      "302ai",
+      "aimlapi",
+      "aixy",
+      "anthropic",
+      "azure",
+      "azure-cognitive-services",
+      "boundless",
+      "commandcode",
+      "cortecs",
+      "crossmodel",
+      "digitalocean",
+      "edenai",
+      "github-copilot",
+      "google-vertex",
+      "google-vertex-anthropic",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "nano-gpt",
+      "nearai",
+      "neon",
+      "ofox",
+      "opencode",
+      "openrouter",
+      "perplexity-agent",
+      "prime",
+      "requesty",
+      "standardcompute",
+      "the-grid-ai",
+      "vercel",
+      "vivgrid",
+      "zenmux"
+    ]
+  },
+  "anthropic/claude-sonnet-3.5-june": {
+    "id": "anthropic/claude-sonnet-3.5-june",
+    "lab": "anthropic",
+    "name": "Claude Sonnet 3.5 June",
+    "family": "claude-sonnet",
+    "released": "2024-11-18",
+    "updated": "2024-11-18",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 189096,
+      "output": 8192
+    },
+    "providers": [
+      "poe"
+    ]
+  },
+  "anthropic/claude-sonnet-4": {
+    "id": "anthropic/claude-sonnet-4",
+    "lab": "anthropic",
+    "name": "Claude Sonnet 4",
+    "family": "claude-sonnet",
+    "released": "2025-05-14",
+    "updated": "2025-05-14",
+    "knowledge": "2025-05",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 200000,
+      "output": 64000
+    },
+    "providers": [
+      "helicone",
+      "opencode",
+      "poe",
+      "zenmux"
+    ]
+  },
+  "anthropic/claude-sonnet-4-0": {
+    "id": "anthropic/claude-sonnet-4-0",
+    "lab": "anthropic",
+    "name": "Claude Sonnet 4.0",
+    "family": "claude-sonnet",
+    "released": "2025-05-22",
+    "updated": "2025-05-22",
+    "knowledge": "2025-03-31",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 200000,
+      "output": 64000
+    },
+    "providers": [
+      "digitalocean",
+      "qiniu-ai",
+      "requesty"
+    ]
+  },
+  "anthropic/claude-sonnet-4-20250514": {
+    "id": "anthropic/claude-sonnet-4-20250514",
+    "lab": "anthropic",
+    "name": "Claude Sonnet 4 20250514",
+    "family": "claude-sonnet",
+    "released": "2025-05-22",
+    "updated": "2025-05-22",
+    "knowledge": "2025-03-31",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 200000,
+      "output": 64000
+    },
+    "providers": [
+      "abacus",
+      "databricks",
+      "fastrouter",
+      "google-vertex",
+      "google-vertex-anthropic",
+      "jiekou"
+    ]
+  },
+  "anthropic/claude-sonnet-4-5": {
+    "id": "anthropic/claude-sonnet-4-5",
+    "lab": "anthropic",
+    "name": "Claude Sonnet 4.5",
+    "family": "claude-sonnet",
+    "released": "2025-09-29",
+    "updated": "2025-09-29",
+    "knowledge": "2025-07-31",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 200000,
+      "output": 64000
+    },
+    "providers": [
+      "aimlapi",
+      "anthropic",
+      "anyapi",
+      "azure",
+      "azure-cognitive-services",
+      "cortecs",
+      "databricks",
+      "digitalocean",
+      "helicone",
+      "impossibl",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "nano-gpt",
+      "nearai",
+      "neon",
+      "ofox",
+      "opencode",
+      "openrouter",
+      "opper",
+      "orcarouter",
+      "perplexity-agent",
+      "pioneer",
+      "poe",
+      "qiniu-ai",
+      "requesty",
+      "snowflake-cortex",
+      "tempr",
+      "vercel",
+      "zenmux"
+    ]
+  },
+  "anthropic/claude-sonnet-4-5-20250929": {
+    "id": "anthropic/claude-sonnet-4-5-20250929",
+    "lab": "anthropic",
+    "name": "Claude Sonnet 4.5 20250929",
+    "family": "claude-sonnet",
+    "released": "2025-09-29",
+    "updated": "2025-09-29",
+    "knowledge": "2025-07-31",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 200000,
+      "output": 64000
+    },
+    "providers": [
+      "302ai",
+      "abacus",
+      "anthropic",
+      "google-vertex",
+      "google-vertex-anthropic",
+      "helicone",
+      "jiekou",
+      "llmgateway",
+      "llmgateway-providers",
+      "qihang-ai",
+      "tempr"
+    ]
+  },
+  "anthropic/claude-sonnet-4-6": {
+    "id": "anthropic/claude-sonnet-4-6",
+    "lab": "anthropic",
+    "name": "Claude Sonnet 4.6",
+    "family": "claude-sonnet",
+    "released": "2026-02-17",
+    "updated": "2026-03-13",
+    "knowledge": "2025-08-31",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 64000
+    },
+    "providers": [
+      "302ai",
+      "abacus",
+      "aimlapi",
+      "anthropic",
+      "anyapi",
+      "auriko",
+      "azure",
+      "azure-cognitive-services",
+      "commandcode",
+      "cortecs",
+      "crossmodel",
+      "daoxe",
+      "databricks",
+      "digitalocean",
+      "edenai",
+      "fastrouter",
+      "freemodel",
+      "frogbot",
+      "github-copilot",
+      "gmicloud",
+      "google-vertex",
+      "google-vertex-anthropic",
+      "impossibl",
+      "kenari",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "modelis",
+      "nano-gpt",
+      "nearai",
+      "neon",
+      "ofox",
+      "opencode",
+      "openrouter",
+      "opper",
+      "orcarouter",
+      "perplexity-agent",
+      "pioneer",
+      "poe",
+      "prime",
+      "requesty",
+      "routing-run",
+      "snowflake-cortex",
+      "tempr",
+      "vercel",
+      "xpersona",
+      "zenmux"
+    ]
+  },
+  "anthropic/claude-sonnet-5": {
+    "id": "anthropic/claude-sonnet-5",
+    "lab": "anthropic",
+    "name": "Claude Sonnet 5",
+    "family": "claude-sonnet",
+    "released": "2026-06-30",
+    "updated": "2026-06-30",
+    "knowledge": "2026-01-31",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 128000
+    },
+    "providers": [
+      "302ai",
+      "abacus",
+      "aimlapi",
+      "anthropic",
+      "azure",
+      "azure-cognitive-services",
+      "commandcode",
+      "cortecs",
+      "crossmodel",
+      "digitalocean",
+      "edenai",
+      "github-copilot",
+      "google-vertex",
+      "google-vertex-anthropic",
+      "impossibl",
+      "kenari",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "model-oracle-ai",
+      "nano-gpt",
+      "nearai",
+      "neon",
+      "ofox",
+      "opencode",
+      "openrouter",
+      "opper",
+      "orcarouter",
+      "perplexity-agent",
+      "pioneer",
+      "prime",
+      "requesty",
+      "snowflake-cortex",
+      "standardcompute",
+      "tempr",
+      "unorouter",
+      "vercel",
+      "vivgrid",
+      "zenmux"
+    ]
+  },
+  "anthropic/claude-sonnet-5-5": {
+    "id": "anthropic/claude-sonnet-5-5",
+    "lab": "anthropic",
+    "name": "Claude Sonnet 5.5",
+    "family": "claude-sonnet",
+    "released": "2026-09-28",
+    "updated": "2026-09-28",
+    "knowledge": "2026-06",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 128000
+    },
+    "providers": [
+      "302ai",
+      "aimlapi",
+      "aixy",
+      "anthropic",
+      "azure",
+      "azure-cognitive-services",
+      "commandcode",
+      "cortecs",
+      "crossmodel",
+      "digitalocean",
+      "edenai",
+      "github-copilot",
+      "google-vertex",
+      "google-vertex-anthropic",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "nano-gpt",
+      "nearai",
+      "neon",
+      "ofox",
+      "opencode",
+      "openrouter",
+      "perplexity-agent",
+      "prime",
+      "requesty",
+      "standardcompute",
+      "vercel",
+      "vivgrid"
+    ]
+  }
+}

@@ -1,0 +1,263 @@
+{
+  "recraft/recraft-v2": {
+    "id": "recraft/recraft-v2",
+    "lab": "recraft",
+    "name": "Recraft V2",
+    "family": "recraft",
+    "type": "image",
+    "released": "2024-03-13",
+    "updated": "2024-03-13",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "image"
+      ]
+    },
+    "limit": {
+      "context": 512,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "recraft/recraft-v3": {
+    "id": "recraft/recraft-v3",
+    "lab": "recraft",
+    "name": "Recraft V3",
+    "family": "recraft",
+    "type": "image",
+    "released": "2024-10-30",
+    "updated": "2024-10-30",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "image"
+      ]
+    },
+    "limit": {
+      "context": 512,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "recraft/recraft-v4": {
+    "id": "recraft/recraft-v4",
+    "lab": "recraft",
+    "name": "Recraft V4",
+    "family": "recraft",
+    "type": "image",
+    "released": "2026-02-17",
+    "updated": "2026-02-17",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "image"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "recraft/recraft-v4-pro": {
+    "id": "recraft/recraft-v4-pro",
+    "lab": "recraft",
+    "name": "Recraft V4 Pro",
+    "family": "recraft",
+    "type": "image",
+    "released": "2026-02-17",
+    "updated": "2026-02-17",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "image"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "recraft/recraft-v4.1": {
+    "id": "recraft/recraft-v4.1",
+    "lab": "recraft",
+    "name": "Recraft V4.1",
+    "family": "recraft",
+    "type": "image",
+    "released": "2026-05-14",
+    "updated": "2026-05-14",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "image"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "recraft/recraft-v4.1-flash": {
+    "id": "recraft/recraft-v4.1-flash",
+    "lab": "recraft",
+    "name": "Recraft V4.1 Flash",
+    "family": "recraft",
+    "type": "image",
+    "released": "2026-09-23",
+    "updated": "2026-09-23",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "image"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "recraft/recraft-v4.1-pro": {
+    "id": "recraft/recraft-v4.1-pro",
+    "lab": "recraft",
+    "name": "Recraft V4.1 Pro",
+    "family": "recraft",
+    "type": "image",
+    "released": "2026-05-14",
+    "updated": "2026-05-14",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "image"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "recraft/recraft-v4.1-utility": {
+    "id": "recraft/recraft-v4.1-utility",
+    "lab": "recraft",
+    "name": "Recraft V4.1 Utility",
+    "family": "recraft",
+    "type": "image",
+    "released": "2026-05-14",
+    "updated": "2026-05-14",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "image"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "recraft/recraft-v4.1-utility-pro": {
+    "id": "recraft/recraft-v4.1-utility-pro",
+    "lab": "recraft",
+    "name": "Recraft V4.1 Utility Pro",
+    "family": "recraft",
+    "type": "image",
+    "released": "2026-05-14",
+    "updated": "2026-05-14",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "image"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  }
+}

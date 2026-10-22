@@ -1,0 +1,1184 @@
+{
+  "providers": {
+    "amazon-bedrock": {
+      "id": "amazon-bedrock",
+      "env": [
+        "AWS_ACCESS_KEY_ID",
+        "AWS_SECRET_ACCESS_KEY",
+        "AWS_REGION",
+        "AWS_BEARER_TOKEN_BEDROCK"
+      ],
+      "npm": "@ai-sdk/amazon-bedrock",
+      "name": "Amazon Bedrock",
+      "doc": "https://docs.aws.amazon.com/bedrock/latest/userguide/models-supported.html",
+      "models": {
+        "global.openai.gpt-6.1-sol": {
+          "id": "global.openai.gpt-6.1-sol",
+          "name": "GPT-6.1 Sol (Global)",
+          "description": "Near-Astra performance for complex coding, computer use, and professional work at a lower cost.",
+          "family": "gpt-sol",
+          "attachment": true,
+          "reasoning": true,
+          "reasoning_options": [
+            {
+              "type": "effort",
+              "values": [
+                "low",
+                "medium",
+                "high",
+                "xhigh",
+                "max"
+              ]
+            }
+          ],
+          "tool_call": true,
+          "structured_output": true,
+          "temperature": false,
+          "knowledge": "2026-04-30",
+          "release_date": "2026-09-29",
+          "last_updated": "2026-09-29",
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "open_weights": false,
+          "limit": {
+            "context": 1050000,
+            "input": 922000,
+            "output": 128000
+          },
+          "experimental": {
+            "modes": {
+              "ultrafast": {
+                "cost": {
+                  "input": 12,
+                  "output": 60,
+                  "cache_read": 0.6,
+                  "cache_write": 15
+                },
+                "provider": {
+                  "body": {
+                    "additionalModelRequestFields": {
+                      "service_tier": "ultrafast"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "cost": {
+            "input": 2,
+            "output": 10,
+            "cache_read": 0.1,
+            "cache_write": 2.5,
+            "tiers": [
+              {
+                "input": 4,
+                "output": 15,
+                "cache_read": 0.2,
+                "cache_write": 5,
+                "tier": {
+                  "type": "context",
+                  "size": 272000
+                }
+              }
+            ],
+            "context_over_200k": {
+              "input": 4,
+              "output": 15,
+              "cache_read": 0.2,
+              "cache_write": 5
+            }
+          },
+          "canonical_model_id": "openai/gpt-6.1-sol"
+        },
+        "us.openai.gpt-6.1-sol": {
+          "id": "us.openai.gpt-6.1-sol",
+          "name": "GPT-6.1 Sol (US)",
+          "description": "Near-Astra performance for complex coding, computer use, and professional work at a lower cost.",
+          "family": "gpt-sol",
+          "attachment": true,
+          "reasoning": true,
+          "reasoning_options": [
+            {
+              "type": "effort",
+              "values": [
+                "low",
+                "medium",
+                "high",
+                "xhigh",
+                "max"
+              ]
+            }
+          ],
+          "tool_call": true,
+          "structured_output": true,
+          "temperature": false,
+          "knowledge": "2026-04-30",
+          "release_date": "2026-09-29",
+          "last_updated": "2026-09-29",
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "open_weights": false,
+          "limit": {
+            "context": 1050000,
+            "input": 922000,
+            "output": 128000
+          },
+          "experimental": {
+            "modes": {
+              "ultrafast": {
+                "cost": {
+                  "input": 13.2,
+                  "output": 66,
+                  "cache_read": 0.66,
+                  "cache_write": 16.5
+                },
+                "provider": {
+                  "body": {
+                    "additionalModelRequestFields": {
+                      "service_tier": "ultrafast"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "cost": {
+            "input": 2.2,
+            "output": 11,
+            "cache_read": 0.11,
+            "cache_write": 2.75,
+            "tiers": [
+              {
+                "input": 4.4,
+                "output": 16.5,
+                "cache_read": 0.22,
+                "cache_write": 5.5,
+                "tier": {
+                  "type": "context",
+                  "size": 272000
+                }
+              }
+            ],
+            "context_over_200k": {
+              "input": 4.4,
+              "output": 16.5,
+              "cache_read": 0.22,
+              "cache_write": 5.5
+            }
+          },
+          "canonical_model_id": "openai/gpt-6.1-sol"
+        },
+        "openai.gpt-6.1-sol": {
+          "id": "openai.gpt-6.1-sol",
+          "name": "GPT-6.1 Sol",
+          "description": "Near-Astra performance for complex coding, computer use, and professional work at a lower cost.",
+          "family": "gpt-sol",
+          "attachment": true,
+          "reasoning": true,
+          "reasoning_options": [
+            {
+              "type": "effort",
+              "values": [
+                "low",
+                "medium",
+                "high",
+                "xhigh",
+                "max"
+              ]
+            }
+          ],
+          "tool_call": true,
+          "structured_output": true,
+          "temperature": false,
+          "knowledge": "2026-04-30",
+          "release_date": "2026-09-29",
+          "last_updated": "2026-09-29",
+          "modalities": {
+            "input": [
+              "text",
+              "image",
+              "pdf"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "open_weights": false,
+          "limit": {
+            "context": 1050000,
+            "input": 922000,
+            "output": 128000
+          },
+          "experimental": {
+            "modes": {
+              "ultrafast": {
+                "cost": {
+                  "input": 13.2,
+                  "output": 66,
+                  "cache_read": 0.66,
+                  "cache_write": 16.5
+                },
+                "provider": {
+                  "body": {
+                    "service_tier": "ultrafast"
+                  }
+                }
+              }
+            }
+          },
+          "provider": {
+            "npm": "@ai-sdk/amazon-bedrock/mantle",
+            "api": "https://bedrock-mantle.${AWS_REGION}.api.aws/openai/v1",
+            "shape": "responses"
+          },
+          "cost": {
+            "input": 2.2,
+            "output": 11,
+            "cache_read": 0.11,
+            "cache_write": 2.75,
+            "tiers": [
+              {
+                "input": 4.4,
+                "output": 16.5,
+                "cache_read": 0.22,
+                "cache_write": 5.5,
+                "tier": {
+                  "type": "context",
+                  "size": 272000
+                }
+              }
+            ],
+            "context_over_200k": {
+              "input": 4.4,
+              "output": 16.5,
+              "cache_read": 0.22,
+              "cache_write": 5.5
+            }
+          },
+          "canonical_model_id": "openai/gpt-6.1-sol"
+        }
+      }
+    },
+    "llmgateway-providers": {
+      "id": "llmgateway-providers",
+      "env": [
+        "LLMGATEWAY_API_KEY"
+      ],
+      "npm": "@ai-sdk/openai-compatible",
+      "api": "https://api.llmgateway.io/v1",
+      "name": "LLM Gateway",
+      "doc": "https://llmgateway.io/docs",
+      "models": {
+        "azure/gpt-6.1-sol": {
+          "id": "azure/gpt-6.1-sol",
+          "name": "GPT-6.1 Sol (Azure)",
+          "description": "Near-Astra performance for complex coding, computer use, and professional work at a lower cost.",
+          "family": "gpt-sol",
+          "attachment": true,
+          "reasoning": true,
+          "reasoning_options": [
+            {
+              "type": "effort",
+              "values": [
+                "low",
+                "medium",
+                "high",
+                "xhigh",
+                "max"
+              ]
+            }
+          ],
+          "tool_call": true,
+          "structured_output": true,
+          "temperature": false,
+          "knowledge": "2026-04-30",
+          "release_date": "2026-09-29",
+          "last_updated": "2026-09-29",
+          "modalities": {
+            "input": [
+              "text",
+              "image",
+              "pdf"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "open_weights": false,
+          "limit": {
+            "context": 1050000,
+            "input": 922000,
+            "output": 128000
+          },
+          "cost": {
+            "input": 2,
+            "output": 10,
+            "cache_read": 0.1,
+            "cache_write": 2.5
+          },
+          "canonical_model_id": "openai/gpt-6.1-sol"
+        }
+      }
+    },
+    "google-vertex": {
+      "id": "google-vertex",
+      "env": [
+        "GOOGLE_VERTEX_PROJECT",
+        "GOOGLE_VERTEX_LOCATION",
+        "GOOGLE_APPLICATION_CREDENTIALS"
+      ],
+      "npm": "@ai-sdk/google-vertex",
+      "name": "Vertex",
+      "doc": "https://cloud.google.com/vertex-ai/generative-ai/docs/models",
+      "models": {
+        "gemini-3.7-flash": {
+          "id": "gemini-3.7-flash",
+          "name": "Gemini 3.7 Flash",
+          "description": "High-efficiency Gemini model for agentic workflows, coding, and multimodal reasoning",
+          "family": "gemini-flash",
+          "attachment": true,
+          "reasoning": true,
+          "reasoning_options": [
+            {
+              "type": "effort",
+              "values": [
+                "low",
+                "medium",
+                "high"
+              ]
+            }
+          ],
+          "tool_call": true,
+          "structured_output": true,
+          "temperature": true,
+          "knowledge": "2026-03",
+          "release_date": "2026-08-13",
+          "last_updated": "2026-08-13",
+          "modalities": {
+            "input": [
+              "text",
+              "image",
+              "video",
+              "audio",
+              "pdf"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "open_weights": false,
+          "limit": {
+            "context": 1048576,
+            "output": 65536
+          },
+          "cost": {
+            "input": 0.75,
+            "output": 3.75,
+            "cache_read": 0.075,
+            "input_audio": 0.75
+          },
+          "canonical_model_id": "google/gemini-3.7-flash"
+        },
+        "claude-opus-4-1@20250805": {
+          "id": "claude-opus-4-1@20250805",
+          "name": "Claude Opus 4.1",
+          "description": "Flagship Claude model for deep reasoning, coding, and long-horizon agents",
+          "family": "claude-opus",
+          "attachment": true,
+          "reasoning": true,
+          "reasoning_options": [
+            {
+              "type": "budget_tokens",
+              "min": 1024
+            }
+          ],
+          "tool_call": true,
+          "temperature": true,
+          "knowledge": "2025-03-31",
+          "release_date": "2025-08-05",
+          "last_updated": "2025-08-05",
+          "modalities": {
+            "input": [
+              "text",
+              "image",
+              "pdf"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "open_weights": false,
+          "limit": {
+            "context": 200000,
+            "output": 32000
+          },
+          "status": "deprecated",
+          "provider": {
+            "npm": "@ai-sdk/google-vertex/anthropic"
+          },
+          "cost": {
+            "input": 15,
+            "output": 75,
+            "cache_read": 1.5,
+            "cache_write": 18.75
+          },
+          "canonical_model_id": "anthropic/claude-opus-4-1-20250805"
+        },
+        "codestral-2": {
+          "id": "codestral-2",
+          "name": "Codestral 2",
+          "description": "Mistral code model for low-latency completion, fill-in-the-middle, and code generation",
+          "family": "codestral",
+          "attachment": false,
+          "reasoning": false,
+          "tool_call": true,
+          "structured_output": true,
+          "temperature": true,
+          "release_date": "2025-07-30",
+          "last_updated": "2025-07-30",
+          "modalities": {
+            "input": [
+              "text"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "open_weights": false,
+          "limit": {
+            "context": 128000,
+            "output": 8192
+          },
+          "provider": {
+            "npm": "@ai-sdk/mistral",
+            "api": "https://${GOOGLE_VERTEX_ENDPOINT}/v1/projects/${GOOGLE_VERTEX_PROJECT}/locations/${GOOGLE_VERTEX_LOCATION}/publishers/mistralai/models"
+          },
+          "cost": {
+            "input": 0.3,
+            "output": 0.9
+          },
+          "canonical_model_id": "mistral/codestral-2508"
+        },
+        "zai-org/glm-5.2-maas": {
+          "id": "zai-org/glm-5.2-maas",
+          "name": "GLM-5.2",
+          "description": "Open flagship GLM for long-horizon coding agents and million-token context work",
+          "family": "glm",
+          "attachment": false,
+          "reasoning": true,
+          "reasoning_options": [
+            {
+              "type": "toggle"
+            }
+          ],
+          "tool_call": true,
+          "interleaved": {
+            "field": "reasoning_content"
+          },
+          "structured_output": true,
+          "temperature": true,
+          "release_date": "2026-06-13",
+          "last_updated": "2026-06-13",
+          "modalities": {
+            "input": [
+              "text"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "open_weights": true,
+          "limit": {
+            "context": 1000000,
+            "output": 64000
+          },
+          "status": "beta",
+          "provider": {
+            "npm": "@ai-sdk/openai-compatible",
+            "api": "https://${GOOGLE_VERTEX_ENDPOINT}/v1/projects/${GOOGLE_VERTEX_PROJECT}/locations/${GOOGLE_VERTEX_LOCATION}/endpoints/openapi"
+          },
+          "cost": {
+            "input": 1.4,
+            "output": 4.4,
+            "cache_read": 0.14
+          },
+          "canonical_model_id": "zhipuai/glm-5.2"
+        }
+      }
+    },
+    "azure": {
+      "id": "azure",
+      "env": [
+        "AZURE_RESOURCE_NAME",
+        "AZURE_API_KEY"
+      ],
+      "npm": "@ai-sdk/azure",
+      "name": "Azure",
+      "doc": "https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models",
+      "models": {
+        "gpt-5.1": {
+          "id": "gpt-5.1",
+          "name": "GPT-5.1",
+          "description": "Speech generation model for controllable voice, narration, and audio delivery",
+          "family": "gpt",
+          "attachment": true,
+          "reasoning": true,
+          "reasoning_options": [
+            {
+              "type": "effort",
+              "values": [
+                "none",
+                "low",
+                "medium",
+                "high"
+              ]
+            }
+          ],
+          "tool_call": true,
+          "structured_output": true,
+          "temperature": false,
+          "knowledge": "2024-09-30",
+          "release_date": "2025-11-14",
+          "last_updated": "2025-11-14",
+          "modalities": {
+            "input": [
+              "text",
+              "image",
+              "audio"
+            ],
+            "output": [
+              "text",
+              "image",
+              "audio"
+            ]
+          },
+          "open_weights": false,
+          "limit": {
+            "context": 400000,
+            "input": 272000,
+            "output": 128000
+          },
+          "experimental": {
+            "modes": {
+              "fast": {
+                "cost": {
+                  "input": 2.5,
+                  "output": 20,
+                  "cache_read": 0.25
+                },
+                "provider": {
+                  "body": {
+                    "service_tier": "priority"
+                  }
+                }
+              }
+            }
+          },
+          "cost": {
+            "input": 1.25,
+            "output": 10,
+            "cache_read": 0.125
+          }
+        },
+        "claude-fable-5": {
+          "id": "claude-fable-5",
+          "name": "Claude Fable 5",
+          "description": "Claude model for creative writing, analysis, and controlled agent workflows",
+          "family": "claude-fable",
+          "attachment": true,
+          "reasoning": true,
+          "reasoning_options": [
+            {
+              "type": "effort",
+              "values": [
+                "low",
+                "medium",
+                "high",
+                "xhigh",
+                "max"
+              ]
+            }
+          ],
+          "tool_call": true,
+          "temperature": false,
+          "knowledge": "2026-01-31",
+          "release_date": "2026-06-09",
+          "last_updated": "2026-06-09",
+          "modalities": {
+            "input": [
+              "text",
+              "image",
+              "pdf"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "open_weights": false,
+          "limit": {
+            "context": 1000000,
+            "output": 128000
+          },
+          "status": "beta",
+          "provider": {
+            "npm": "@ai-sdk/anthropic",
+            "api": "https://${AZURE_RESOURCE_NAME}.services.ai.azure.com/anthropic/v1"
+          },
+          "cost": {
+            "input": 10,
+            "output": 50,
+            "cache_read": 1,
+            "cache_write": 12.5
+          },
+          "canonical_model_id": "anthropic/claude-fable-5"
+        },
+        "model-router": {
+          "id": "model-router",
+          "name": "Model Router",
+          "description": "Automatic model router for matching prompts to suitable backends and budgets",
+          "family": "model-router",
+          "attachment": true,
+          "reasoning": false,
+          "tool_call": true,
+          "release_date": "2025-05-19",
+          "last_updated": "2025-11-18",
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "open_weights": false,
+          "limit": {
+            "context": 200000,
+            "output": 16384
+          },
+          "provider": {
+            "shape": "completions"
+          },
+          "cost": {
+            "input": 0.14,
+            "output": 0
+          }
+        }
+      }
+    },
+    "gitlab": {
+      "id": "gitlab",
+      "env": [
+        "GITLAB_TOKEN"
+      ],
+      "npm": "gitlab-ai-provider",
+      "name": "GitLab Duo",
+      "doc": "https://docs.gitlab.com/user/duo_agent_platform/",
+      "models": {
+        "duo-chat-fable-5": {
+          "id": "duo-chat-fable-5",
+          "name": "Agentic Chat (Claude Fable 5)",
+          "description": "Claude model for creative writing, analysis, and controlled agent workflows",
+          "family": "claude-fable",
+          "attachment": true,
+          "reasoning": true,
+          "reasoning_options": [
+            {
+              "type": "effort",
+              "values": [
+                "low",
+                "medium",
+                "high",
+                "xhigh",
+                "max"
+              ]
+            }
+          ],
+          "tool_call": true,
+          "temperature": false,
+          "knowledge": "2026-01-31",
+          "release_date": "2026-06-09",
+          "last_updated": "2026-06-09",
+          "modalities": {
+            "input": [
+              "text",
+              "image",
+              "pdf"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "open_weights": false,
+          "limit": {
+            "context": 1000000,
+            "output": 128000
+          },
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cache_read": 0,
+            "cache_write": 0
+          },
+          "canonical_model_id": "anthropic/claude-fable-5"
+        }
+      }
+    }
+  },
+  "models": {
+    "anthropic/claude-fable-5": {
+      "id": "anthropic/claude-fable-5",
+      "name": "Claude Fable 5",
+      "description": "Claude model for creative writing, analysis, and controlled agent workflows",
+      "family": "claude-fable",
+      "attachment": true,
+      "reasoning": true,
+      "tool_call": true,
+      "temperature": false,
+      "knowledge": "2026-01-31",
+      "release_date": "2026-06-09",
+      "last_updated": "2026-06-09",
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "open_weights": false,
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "benchmarks": [
+        {
+          "name": "SWE-Bench Pro",
+          "score": 80.3,
+          "metric": "resolve rate",
+          "source": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+          "date": "2026-06-09"
+        },
+        {
+          "name": "SWE-Bench Verified",
+          "score": 95,
+          "metric": "resolved",
+          "source": "https://benchlm.ai/benchmarks/sweVerified"
+        },
+        {
+          "name": "Terminal-Bench",
+          "score": 88,
+          "metric": "success rate",
+          "version": "2.1",
+          "source": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+          "date": "2026-06-09"
+        },
+        {
+          "name": "Humanity's Last Exam",
+          "score": 59,
+          "metric": "accuracy",
+          "variant": "no tools",
+          "source": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+          "date": "2026-06-09"
+        },
+        {
+          "name": "Humanity's Last Exam",
+          "score": 64.5,
+          "metric": "accuracy",
+          "variant": "with tools",
+          "source": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+          "date": "2026-06-09"
+        },
+        {
+          "name": "OSWorld-Verified",
+          "score": 85,
+          "metric": "success rate",
+          "source": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+          "date": "2026-06-09"
+        },
+        {
+          "name": "FrontierCode",
+          "score": 29.3,
+          "metric": "pass rate",
+          "variant": "high effort",
+          "dataset": "Diamond",
+          "source": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+          "date": "2026-06-09"
+        },
+        {
+          "name": "GDPval-AA",
+          "score": 1932,
+          "metric": "Elo",
+          "source": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+          "date": "2026-06-09"
+        },
+        {
+          "name": "AutomationBench",
+          "score": 17.4,
+          "metric": "success rate",
+          "source": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+          "date": "2026-06-09"
+        }
+      ]
+    },
+    "anthropic/claude-opus-4-1-20250805": {
+      "id": "anthropic/claude-opus-4-1-20250805",
+      "name": "Claude Opus 4.1",
+      "description": "Flagship Claude model for deep reasoning, coding, and long-horizon agents",
+      "family": "claude-opus",
+      "attachment": true,
+      "reasoning": true,
+      "tool_call": true,
+      "temperature": true,
+      "knowledge": "2025-03-31",
+      "release_date": "2025-08-05",
+      "last_updated": "2025-08-05",
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "open_weights": false,
+      "limit": {
+        "context": 200000,
+        "output": 32000
+      }
+    },
+    "google/gemini-3.7-flash": {
+      "id": "google/gemini-3.7-flash",
+      "name": "Gemini 3.7 Flash",
+      "description": "High-efficiency Gemini model for agentic workflows, coding, and multimodal reasoning",
+      "family": "gemini-flash",
+      "attachment": true,
+      "reasoning": true,
+      "tool_call": true,
+      "structured_output": true,
+      "temperature": true,
+      "knowledge": "2026-03",
+      "release_date": "2026-08-13",
+      "last_updated": "2026-08-13",
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "audio",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "open_weights": false,
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "benchmarks": [
+        {
+          "name": "FrontierCode",
+          "score": 43.6,
+          "metric": "score",
+          "version": "1.1 Main",
+          "source": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+          "date": "2026-08-13"
+        },
+        {
+          "name": "DeepSWE",
+          "score": 65.3,
+          "metric": "resolve rate",
+          "version": "1.1",
+          "source": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+          "date": "2026-08-13"
+        },
+        {
+          "name": "Terminal-Bench",
+          "score": 85.8,
+          "metric": "accuracy",
+          "version": "2.1",
+          "source": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+          "date": "2026-08-13"
+        },
+        {
+          "name": "AutomationBench",
+          "score": 30.4,
+          "metric": "accuracy",
+          "dataset": "private set",
+          "source": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+          "date": "2026-08-13"
+        },
+        {
+          "name": "GDP.pdf",
+          "score": 34,
+          "metric": "accuracy",
+          "source": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+          "date": "2026-08-13"
+        },
+        {
+          "name": "GDM-MRCR",
+          "score": 97,
+          "metric": "accuracy",
+          "variant": "128k average, 8-needle",
+          "version": "v2",
+          "source": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+          "date": "2026-08-13"
+        }
+      ]
+    },
+    "mistral/codestral-2508": {
+      "id": "mistral/codestral-2508",
+      "name": "Codestral 25.08",
+      "description": "Mistral code model for low-latency completion, fill-in-the-middle, and code generation",
+      "family": "codestral",
+      "attachment": false,
+      "reasoning": false,
+      "tool_call": true,
+      "structured_output": true,
+      "temperature": true,
+      "release_date": "2025-07-30",
+      "last_updated": "2025-07-30",
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "open_weights": false,
+      "limit": {
+        "context": 128000,
+        "output": 8192
+      }
+    },
+    "openai/gpt-6.1-sol": {
+      "id": "openai/gpt-6.1-sol",
+      "name": "GPT-6.1 Sol",
+      "description": "Near-Astra performance for complex coding, computer use, and professional work at a lower cost.",
+      "family": "gpt-sol",
+      "attachment": true,
+      "reasoning": true,
+      "tool_call": true,
+      "structured_output": true,
+      "temperature": false,
+      "knowledge": "2026-04-30",
+      "release_date": "2026-09-29",
+      "last_updated": "2026-09-29",
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "open_weights": false,
+      "limit": {
+        "context": 1050000,
+        "input": 922000,
+        "output": 128000
+      }
+    },
+    "zhipuai/glm-5.2": {
+      "id": "zhipuai/glm-5.2",
+      "name": "GLM-5.2",
+      "description": "Open flagship GLM for long-horizon coding agents and million-token context work",
+      "family": "glm",
+      "attachment": false,
+      "reasoning": true,
+      "tool_call": true,
+      "structured_output": true,
+      "temperature": true,
+      "release_date": "2026-06-13",
+      "last_updated": "2026-06-13",
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "open_weights": true,
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "weights": [
+        {
+          "label": "Hugging Face",
+          "url": "https://huggingface.co/zai-org/GLM-5.2"
+        }
+      ],
+      "benchmarks": [
+        {
+          "name": "SWE-Bench Pro",
+          "score": 62.1,
+          "metric": "resolve rate",
+          "source": "https://z.ai/blog/glm-5.2",
+          "date": "2026-06-16"
+        },
+        {
+          "name": "Terminal-Bench",
+          "score": 82.7,
+          "metric": "success rate",
+          "harness": "Claude Code",
+          "version": "2.1",
+          "source": "https://z.ai/blog/glm-5.2",
+          "date": "2026-06-16"
+        },
+        {
+          "name": "FrontierSWE",
+          "score": 74.4,
+          "metric": "dominance",
+          "source": "https://z.ai/blog/glm-5.2",
+          "date": "2026-06-16"
+        },
+        {
+          "name": "Humanity's Last Exam",
+          "score": 40.5,
+          "metric": "accuracy",
+          "dataset": "text-only subset",
+          "source": "https://z.ai/blog/glm-5.2",
+          "date": "2026-06-16"
+        },
+        {
+          "name": "Humanity's Last Exam",
+          "score": 54.7,
+          "metric": "accuracy",
+          "variant": "with tools",
+          "dataset": "text-only subset",
+          "source": "https://z.ai/blog/glm-5.2",
+          "date": "2026-06-16"
+        },
+        {
+          "name": "CritPt",
+          "score": 20.9,
+          "metric": "accuracy",
+          "source": "https://z.ai/blog/glm-5.2",
+          "date": "2026-06-16"
+        },
+        {
+          "name": "AIME",
+          "score": 99.2,
+          "metric": "accuracy",
+          "version": "2026",
+          "source": "https://z.ai/blog/glm-5.2",
+          "date": "2026-06-16"
+        },
+        {
+          "name": "HMMT",
+          "score": 94.4,
+          "metric": "accuracy",
+          "version": "November 2025",
+          "source": "https://z.ai/blog/glm-5.2",
+          "date": "2026-06-16"
+        },
+        {
+          "name": "HMMT",
+          "score": 92.5,
+          "metric": "accuracy",
+          "version": "February 2026",
+          "source": "https://z.ai/blog/glm-5.2",
+          "date": "2026-06-16"
+        },
+        {
+          "name": "IMOAnswerBench",
+          "score": 91,
+          "metric": "accuracy",
+          "source": "https://z.ai/blog/glm-5.2",
+          "date": "2026-06-16"
+        },
+        {
+          "name": "GPQA Diamond",
+          "score": 91.2,
+          "metric": "accuracy",
+          "source": "https://z.ai/blog/glm-5.2",
+          "date": "2026-06-16"
+        },
+        {
+          "name": "NL2Repo",
+          "score": 48.9,
+          "metric": "resolve rate",
+          "source": "https://z.ai/blog/glm-5.2",
+          "date": "2026-06-16"
+        },
+        {
+          "name": "DeepSWE",
+          "score": 46.2,
+          "metric": "resolve rate",
+          "source": "https://z.ai/blog/glm-5.2",
+          "date": "2026-06-16"
+        },
+        {
+          "name": "Program Bench",
+          "score": 63.7,
+          "metric": "score",
+          "source": "https://z.ai/blog/glm-5.2",
+          "date": "2026-06-16"
+        },
+        {
+          "name": "Terminal-Bench",
+          "score": 81,
+          "metric": "success rate",
+          "harness": "Terminus 2",
+          "version": "2.1",
+          "source": "https://z.ai/blog/glm-5.2",
+          "date": "2026-06-16"
+        },
+        {
+          "name": "PostTrainBench",
+          "score": 34.3,
+          "metric": "score",
+          "source": "https://z.ai/blog/glm-5.2",
+          "date": "2026-06-16"
+        },
+        {
+          "name": "SWE Marathon",
+          "score": 13,
+          "metric": "resolve rate",
+          "source": "https://z.ai/blog/glm-5.2",
+          "date": "2026-06-16"
+        },
+        {
+          "name": "MCP Atlas",
+          "score": 76.8,
+          "metric": "score",
+          "dataset": "public subset",
+          "source": "https://z.ai/blog/glm-5.2",
+          "date": "2026-06-16"
+        },
+        {
+          "name": "Tool-Decathlon",
+          "score": 48.2,
+          "metric": "score",
+          "source": "https://z.ai/blog/glm-5.2",
+          "date": "2026-06-16"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "fish-audio/drama-3": {
+    "id": "fish-audio/drama-3",
+    "lab": "fish-audio",
+    "name": "Drama 3",
+    "type": "speech",
+    "released": "2026-10-13",
+    "updated": "2026-10-13",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "audio"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "fish-audio/s1": {
+    "id": "fish-audio/s1",
+    "lab": "fish-audio",
+    "name": "S1",
+    "type": "speech",
+    "released": "2025-10-20",
+    "updated": "2025-10-20",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "audio"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "fish-audio/s2-pro": {
+    "id": "fish-audio/s2-pro",
+    "lab": "fish-audio",
+    "name": "S2 Pro",
+    "type": "speech",
+    "released": "2026-03-09",
+    "updated": "2026-03-09",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "audio"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "fish-audio/s2.1-pro": {
+    "id": "fish-audio/s2.1-pro",
+    "lab": "fish-audio",
+    "name": "S 2.1 Pro",
+    "type": "speech",
+    "released": "2026-07-28",
+    "updated": "2026-07-28",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "audio"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "fish-audio/transcribe-1": {
+    "id": "fish-audio/transcribe-1",
+    "lab": "fish-audio",
+    "name": "Transcribe 1",
+    "type": "transcription",
+    "released": "2026-03-01",
+    "updated": "2026-03-01",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "audio"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  }
+}

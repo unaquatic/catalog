@@ -1,0 +1,31 @@
+{
+  "fetch-ai/asi1-mini": {
+    "id": "fetch-ai/asi1-mini",
+    "lab": "fetch-ai",
+    "name": "ASI1 Mini",
+    "released": "2025-03-25",
+    "updated": "2025-03-25",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "structured_output": false,
+      "input": [
+        "text",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "input": 128000,
+      "output": 16384
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  }
+}

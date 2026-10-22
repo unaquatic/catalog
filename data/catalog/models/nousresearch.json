@@ -1,0 +1,222 @@
+{
+  "nousresearch/hermes-2-pro-llama-3-8b": {
+    "id": "nousresearch/hermes-2-pro-llama-3-8b",
+    "lab": "nousresearch",
+    "name": "Hermes 2 Pro Llama 3 8B",
+    "released": "2024-04-30",
+    "updated": "2024-04-30",
+    "open_weights": true,
+    "license": "Llama 3 Community License",
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 8192,
+      "output": 8192
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/NousResearch/Hermes-2-Pro-Llama-3-8B"
+      }
+    ],
+    "providers": [
+      "helicone",
+      "novita-ai"
+    ]
+  },
+  "nousresearch/hermes-3-llama-3.1-405b": {
+    "id": "nousresearch/hermes-3-llama-3.1-405b",
+    "lab": "nousresearch",
+    "name": "Hermes 3 Llama 3.1 405B",
+    "family": "nousresearch",
+    "released": "2024-08-16",
+    "updated": "2024-08-16",
+    "knowledge": "2023-12-31",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 16384
+    },
+    "providers": [
+      "aimlapi",
+      "edenai",
+      "kilo",
+      "openrouter"
+    ]
+  },
+  "nousresearch/hermes-3-llama-3.1-70b": {
+    "id": "nousresearch/hermes-3-llama-3.1-70b",
+    "lab": "nousresearch",
+    "name": "Hermes 3 Llama 3.1 70B",
+    "family": "nousresearch",
+    "released": "2024-08-18",
+    "updated": "2024-08-18",
+    "knowledge": "2023-12-31",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 16384
+    },
+    "providers": [
+      "aimlapi",
+      "edenai",
+      "kilo",
+      "nano-gpt",
+      "openrouter"
+    ]
+  },
+  "nousresearch/hermes-4-405b": {
+    "id": "nousresearch/hermes-4-405b",
+    "lab": "nousresearch",
+    "name": "Hermes 4 405B",
+    "family": "hermes",
+    "released": "2025-08-26",
+    "updated": "2025-08-26",
+    "knowledge": "2024-08-31",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 117964
+    },
+    "providers": [
+      "cortecs",
+      "kilo",
+      "nano-gpt",
+      "nebius",
+      "openrouter"
+    ]
+  },
+  "nousresearch/hermes-high": {
+    "id": "nousresearch/hermes-high",
+    "lab": "nousresearch",
+    "name": "Hermes High",
+    "family": "hermes",
+    "released": "2026-05-11",
+    "updated": "2026-05-11",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "structured_output": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "input": 1048576,
+      "output": 131072
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "nousresearch/hermes-low": {
+    "id": "nousresearch/hermes-low",
+    "lab": "nousresearch",
+    "name": "Hermes Low",
+    "family": "hermes",
+    "released": "2026-05-11",
+    "updated": "2026-05-11",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "structured_output": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "input": 1048576,
+      "output": 131072
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "nousresearch/hermes-medium": {
+    "id": "nousresearch/hermes-medium",
+    "lab": "nousresearch",
+    "name": "Hermes Medium",
+    "family": "hermes",
+    "released": "2026-05-11",
+    "updated": "2026-05-11",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "structured_output": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "input": 1048576,
+      "output": 131072
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  }
+}

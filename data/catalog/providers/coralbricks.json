@@ -1,0 +1,64 @@
+{
+  "id": "coralbricks",
+  "name": "CoralBricks",
+  "kind": "gateway",
+  "type": "community",
+  "endpoint": {
+    "format": "openai-chat",
+    "api": "https://inference.coralbricks.ai/v1",
+    "auth": {
+      "scheme": "bearer"
+    },
+    "env": [
+      "CORAL_API_KEY"
+    ]
+  },
+  "doc": "https://www.coralbricks.ai/docs",
+  "models": {
+    "deepseek/deepseek-v4.1-flash": {
+      "name": "DeepSeek V4.1 Flash",
+      "family": "deepseek-flash",
+      "released": "2026-09-10",
+      "updated": "2026-09-10",
+      "knowledge": "2025-05",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "high",
+          "max"
+        ]
+      },
+      "interleaved": {},
+      "provider_options": {
+        "id": "deepseek-v4.1-flash-fast",
+        "name": "DeepSeek V4.1 Flash"
+      },
+      "price": {
+        "input": 0.01,
+        "output": 1.2,
+        "cache_read": 0,
+        "cache_write": 0.09
+      }
+    }
+  }
+}

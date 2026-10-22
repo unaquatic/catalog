@@ -1,0 +1,60 @@
+{
+  "runway/runway": {
+    "id": "runway/runway",
+    "lab": "runway",
+    "name": "Runway",
+    "family": "runway",
+    "released": "2024-10-11",
+    "updated": "2024-10-11",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "video"
+      ]
+    },
+    "limit": {
+      "context": 256,
+      "output": 0
+    },
+    "providers": [
+      "poe"
+    ]
+  },
+  "runway/runway-gen-4-turbo": {
+    "id": "runway/runway-gen-4-turbo",
+    "lab": "runway",
+    "name": "Runway Gen 4 Turbo",
+    "family": "runway",
+    "released": "2025-05-09",
+    "updated": "2025-05-09",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "video"
+      ]
+    },
+    "limit": {
+      "context": 256,
+      "output": 0
+    },
+    "providers": [
+      "poe"
+    ]
+  }
+}

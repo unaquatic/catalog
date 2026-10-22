@@ -1,0 +1,388 @@
+{
+  "id": "alibaba-coding-plan-cn",
+  "name": "Alibaba Coding Plan (China)",
+  "kind": "gateway",
+  "type": "community",
+  "endpoint": {
+    "format": "openai-chat",
+    "api": "https://coding.dashscope.aliyuncs.com/v1",
+    "auth": {
+      "scheme": "bearer"
+    },
+    "env": [
+      "ALIBABA_CODING_PLAN_API_KEY"
+    ]
+  },
+  "doc": "https://help.aliyun.com/zh/model-studio/coding-plan",
+  "models": {
+    "alibaba/qwen3-coder-next": {
+      "name": "Qwen3 Coder Next",
+      "family": "qwen",
+      "released": "2026-02-03",
+      "updated": "2026-02-03",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 65536
+      },
+      "provider_options": {
+        "id": "qwen3-coder-next",
+        "name": "Qwen3 Coder Next"
+      },
+      "price": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_write": 0
+      },
+      "status": "deprecated"
+    },
+    "alibaba/qwen3-coder-plus": {
+      "name": "Qwen3 Coder Plus",
+      "family": "qwen",
+      "released": "2025-07-23",
+      "updated": "2025-07-23",
+      "knowledge": "2025-04",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 65536
+      },
+      "provider_options": {
+        "id": "qwen3-coder-plus",
+        "name": "Qwen3 Coder Plus"
+      },
+      "price": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_write": 0
+      },
+      "status": "deprecated"
+    },
+    "alibaba/qwen3-max-2026-01-23": {
+      "name": "Qwen3 Max 20260123",
+      "family": "qwen",
+      "released": "2026-01-23",
+      "updated": "2026-01-23",
+      "knowledge": "2025-04",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 32768
+      },
+      "provider_options": {
+        "id": "qwen3-max-2026-01-23",
+        "name": "Qwen3 Max"
+      },
+      "price": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_write": 0
+      },
+      "status": "deprecated"
+    },
+    "alibaba/qwen3.5-plus": {
+      "name": "Qwen3.5 Plus",
+      "family": "qwen",
+      "released": "2026-02-16",
+      "updated": "2026-02-16",
+      "knowledge": "2025-04",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 65536
+      },
+      "reasoning": {
+        "mandatory": false
+      },
+      "provider_options": {
+        "id": "qwen3.5-plus",
+        "name": "Qwen3.5 Plus"
+      },
+      "price": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_write": 0
+      }
+    },
+    "alibaba/qwen3.6-plus": {
+      "name": "Qwen3.6 Plus",
+      "family": "qwen",
+      "released": "2026-04-02",
+      "updated": "2026-04-02",
+      "knowledge": "2025-04",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 65536
+      },
+      "reasoning": {
+        "mandatory": false
+      },
+      "provider_options": {
+        "id": "qwen3.6-plus",
+        "name": "Qwen3.6 Plus"
+      },
+      "price": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_write": 0
+      }
+    },
+    "alibaba/qwen3.7-plus": {
+      "name": "Qwen3.7 Plus",
+      "family": "qwen",
+      "released": "2026-06-02",
+      "updated": "2026-06-02",
+      "knowledge": "2025-04",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 64000
+      },
+      "reasoning": {
+        "mandatory": false
+      },
+      "provider_options": {
+        "id": "qwen3.7-plus",
+        "name": "Qwen3.7 Plus"
+      },
+      "price": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_write": 0
+      }
+    },
+    "minimax/minimax-m2.5": {
+      "name": "MiniMax M2.5",
+      "family": "minimax",
+      "released": "2026-02-12",
+      "updated": "2026-02-12",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 196608,
+        "output": 24576
+      },
+      "reasoning": {},
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "MiniMax-M2.5",
+        "name": "MiniMax-M2.5"
+      },
+      "price": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_write": 0
+      }
+    },
+    "moonshotai/kimi-k2.5": {
+      "name": "Kimi K2.5",
+      "family": "kimi-k2",
+      "released": "2026-01-27",
+      "updated": "2026-01-27",
+      "knowledge": "2025-01",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 32768
+      },
+      "reasoning": {
+        "mandatory": false
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "kimi-k2.5",
+        "name": "Kimi K2.5"
+      },
+      "price": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_write": 0
+      }
+    },
+    "zhipuai/glm-4.7": {
+      "name": "GLM 4.7",
+      "family": "glm",
+      "released": "2025-12-22",
+      "updated": "2025-12-22",
+      "knowledge": "2025-04",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 202752,
+        "output": 16384
+      },
+      "reasoning": {
+        "mandatory": false
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "glm-4.7",
+        "name": "GLM-4.7"
+      },
+      "price": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_write": 0
+      },
+      "status": "deprecated"
+    },
+    "zhipuai/glm-5": {
+      "name": "GLM 5",
+      "family": "glm",
+      "released": "2026-02-11",
+      "updated": "2026-02-11",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 202752,
+        "output": 16384
+      },
+      "reasoning": {
+        "mandatory": false
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "glm-5",
+        "name": "GLM-5"
+      },
+      "price": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_write": 0
+      }
+    }
+  }
+}

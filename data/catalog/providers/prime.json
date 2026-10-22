@@ -1,0 +1,2812 @@
+{
+  "id": "prime",
+  "name": "Prime Inference",
+  "kind": "gateway",
+  "type": "community",
+  "endpoint": {
+    "format": "openai-chat",
+    "api": "https://api.pinference.ai/api/v1",
+    "auth": {
+      "scheme": "bearer"
+    },
+    "env": [
+      "PRIME_API_KEY"
+    ]
+  },
+  "doc": "https://docs.primeintellect.ai/inference/overview",
+  "models": {
+    "alibaba/qwen3-30b-a3b-instruct-2507": {
+      "name": "Qwen3 30B A3B Instruct 2507",
+      "family": "qwen",
+      "released": "2025-07-28",
+      "updated": "2025-07-28",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 235929
+      },
+      "provider_options": {
+        "id": "qwen/qwen3-30b-a3b-instruct-2507",
+        "name": "Qwen3 30B A3B Instruct 2507"
+      },
+      "price": {
+        "input": 0.13,
+        "output": 0.52
+      }
+    },
+    "alibaba/qwen3-coder-next": {
+      "name": "Qwen3 Coder Next",
+      "family": "qwen",
+      "released": "2026-02-03",
+      "updated": "2026-02-03",
+      "knowledge": "2025-09",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 235929
+      },
+      "provider_options": {
+        "id": "qwen/qwen3-coder-next",
+        "name": "Qwen3 Coder Next"
+      },
+      "price": {
+        "input": 0.3,
+        "output": 1.5
+      }
+    },
+    "alibaba/qwen3-vl-235b-a22b-instruct": {
+      "name": "Qwen3 VL 235B A22B Instruct",
+      "family": "qwen",
+      "released": "2025-09-23",
+      "updated": "2025-09-23",
+      "knowledge": "2025-03-31",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 32768
+      },
+      "provider_options": {
+        "id": "qwen/qwen3-vl-235b-a22b-instruct",
+        "name": "Qwen3 VL 235B A22B Instruct"
+      },
+      "price": {
+        "input": 0.3,
+        "output": 1.5
+      }
+    },
+    "alibaba/qwen3-vl-30b-a3b-instruct": {
+      "name": "Qwen3 VL 30B A3B Instruct",
+      "family": "qwen",
+      "released": "2025-10-04",
+      "updated": "2025-10-04",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 16384
+      },
+      "provider_options": {
+        "id": "qwen/qwen3-vl-30b-a3b-instruct",
+        "name": "Qwen3 VL 30B A3B Instruct"
+      },
+      "price": {
+        "input": 0.2,
+        "output": 0.7
+      }
+    },
+    "alibaba/qwen3.8-27b": {
+      "name": "Qwen3.8 27B",
+      "family": "qwen",
+      "released": "2026-08-14",
+      "updated": "2026-08-14",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 65536
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "medium",
+          "xhigh"
+        ]
+      },
+      "provider_options": {
+        "id": "qwen/qwen3.8-27b",
+        "name": "Qwen3.8 27B"
+      },
+      "price": {
+        "input": 0.99,
+        "output": 3.2
+      }
+    },
+    "anthropic/claude-fable-5": {
+      "name": "Claude Fable 5",
+      "family": "claude-fable",
+      "released": "2026-06-09",
+      "updated": "2026-06-09",
+      "knowledge": "2026-01-31",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "reasoning": {
+        "mandatory": true,
+        "default_enabled": true,
+        "efforts": [
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ],
+        "default_effort": "high"
+      },
+      "provider_options": {
+        "id": "anthropic/claude-fable-5",
+        "name": "Claude Fable 5"
+      },
+      "price": {
+        "input": 10,
+        "output": 50
+      }
+    },
+    "anthropic/claude-fable-5-1": {
+      "name": "Claude Fable 5.1",
+      "family": "claude-fable",
+      "released": "2026-09-01",
+      "updated": "2026-09-01",
+      "knowledge": "2026-06",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "reasoning": {
+        "mandatory": true,
+        "default_enabled": true,
+        "efforts": [
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ],
+        "default_effort": "high"
+      },
+      "provider_options": {
+        "id": "anthropic/claude-fable-5.1",
+        "name": "Claude Fable 5.1"
+      },
+      "price": {
+        "input": 10,
+        "output": 50
+      }
+    },
+    "anthropic/claude-opus-4-6": {
+      "name": "Claude Opus 4.6",
+      "family": "claude-opus",
+      "released": "2026-02-05",
+      "updated": "2026-03-13",
+      "knowledge": "2025-05-31",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "reasoning": {
+        "mandatory": false,
+        "default_enabled": false,
+        "efforts": [
+          "none",
+          "low",
+          "medium",
+          "high",
+          "max"
+        ],
+        "default_effort": "high"
+      },
+      "provider_options": {
+        "id": "anthropic/claude-opus-4.6",
+        "name": "Claude Opus 4.6"
+      },
+      "price": {
+        "input": 5,
+        "output": 25
+      }
+    },
+    "anthropic/claude-opus-4-7": {
+      "name": "Claude Opus 4.7",
+      "family": "claude-opus",
+      "released": "2026-04-16",
+      "updated": "2026-04-16",
+      "knowledge": "2026-01-31",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "reasoning": {
+        "mandatory": false,
+        "default_enabled": false,
+        "efforts": [
+          "none",
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ],
+        "default_effort": "high"
+      },
+      "provider_options": {
+        "id": "anthropic/claude-opus-4.7",
+        "name": "Claude Opus 4.7"
+      },
+      "price": {
+        "input": 5,
+        "output": 25
+      }
+    },
+    "anthropic/claude-opus-4-8": {
+      "name": "Claude Opus 4.8",
+      "family": "claude-opus",
+      "released": "2026-05-28",
+      "updated": "2026-05-28",
+      "knowledge": "2026-01",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "reasoning": {
+        "mandatory": false,
+        "default_enabled": false,
+        "efforts": [
+          "none",
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ],
+        "default_effort": "high"
+      },
+      "provider_options": {
+        "id": "anthropic/claude-opus-4.8",
+        "name": "Claude Opus 4.8"
+      },
+      "price": {
+        "input": 5,
+        "output": 25
+      }
+    },
+    "anthropic/claude-opus-5": {
+      "name": "Claude Opus 5",
+      "family": "claude-opus",
+      "released": "2026-07-24",
+      "updated": "2026-07-24",
+      "knowledge": "2026-05",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "reasoning": {
+        "mandatory": false,
+        "default_enabled": true,
+        "efforts": [
+          "none",
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ],
+        "default_effort": "high"
+      },
+      "provider_options": {
+        "id": "anthropic/claude-opus-5",
+        "name": "Claude Opus 5"
+      },
+      "price": {
+        "input": 5,
+        "output": 25
+      }
+    },
+    "anthropic/claude-opus-5-5": {
+      "name": "Claude Opus 5.5",
+      "family": "claude-opus",
+      "released": "2026-09-22",
+      "updated": "2026-09-22",
+      "knowledge": "2026-06",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "reasoning": {
+        "mandatory": true,
+        "default_enabled": true,
+        "efforts": [
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ]
+      },
+      "provider_options": {
+        "id": "anthropic/claude-opus-5.5",
+        "name": "Claude Opus 5.5"
+      },
+      "price": {
+        "input": 4,
+        "output": 20
+      }
+    },
+    "anthropic/claude-sonnet-4-6": {
+      "name": "Claude Sonnet 4.6",
+      "family": "claude-sonnet",
+      "released": "2026-02-17",
+      "updated": "2026-03-13",
+      "knowledge": "2025-08-31",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "reasoning": {
+        "mandatory": false,
+        "default_enabled": false,
+        "efforts": [
+          "none",
+          "low",
+          "medium",
+          "high",
+          "max"
+        ],
+        "default_effort": "high"
+      },
+      "provider_options": {
+        "id": "anthropic/claude-sonnet-4.6",
+        "name": "Claude Sonnet 4.6"
+      },
+      "price": {
+        "input": 3,
+        "output": 15
+      }
+    },
+    "anthropic/claude-sonnet-5": {
+      "name": "Claude Sonnet 5",
+      "family": "claude-sonnet",
+      "released": "2026-06-30",
+      "updated": "2026-06-30",
+      "knowledge": "2026-01-31",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "reasoning": {
+        "mandatory": false,
+        "default_enabled": true,
+        "efforts": [
+          "none",
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ],
+        "default_effort": "high"
+      },
+      "provider_options": {
+        "id": "anthropic/claude-sonnet-5",
+        "name": "Claude Sonnet 5"
+      },
+      "price": {
+        "input": 2,
+        "output": 10
+      }
+    },
+    "anthropic/claude-sonnet-5-5": {
+      "name": "Claude Sonnet 5.5",
+      "family": "claude-sonnet",
+      "released": "2026-09-28",
+      "updated": "2026-09-28",
+      "knowledge": "2026-06",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "reasoning": {
+        "mandatory": true,
+        "default_enabled": true,
+        "efforts": [
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ],
+        "default_effort": "high"
+      },
+      "provider_options": {
+        "id": "anthropic/claude-sonnet-5.5",
+        "name": "Claude Sonnet 5.5"
+      },
+      "price": {
+        "input": 2,
+        "output": 10
+      }
+    },
+    "deepseek/deepseek-v4-flash": {
+      "name": "DeepSeek V4 Flash",
+      "family": "deepseek-flash",
+      "released": "2026-04-24",
+      "updated": "2026-04-24",
+      "knowledge": "2025-05",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 943717
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "high",
+          "xhigh"
+        ]
+      },
+      "provider_options": {
+        "id": "deepseek/deepseek-v4-flash",
+        "name": "DeepSeek V4 Flash 0423"
+      },
+      "price": {
+        "input": 0.44,
+        "output": 1.32
+      }
+    },
+    "deepseek/deepseek-v4-flash-0731": {
+      "name": "DeepSeek V4 Flash 0731",
+      "family": "deepseek-flash",
+      "released": "2026-07-31",
+      "updated": "2026-07-31",
+      "knowledge": "2025-05",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "high",
+          "max"
+        ]
+      },
+      "provider_options": {
+        "id": "deepseek/deepseek-v4-flash-0731",
+        "name": "DeepSeek V4 Flash 0731"
+      },
+      "price": {
+        "input": 0.44,
+        "output": 1.32
+      }
+    },
+    "deepseek/deepseek-v4-pro": {
+      "name": "DeepSeek V4 Pro",
+      "family": "deepseek-thinking",
+      "released": "2026-04-24",
+      "updated": "2026-04-24",
+      "knowledge": "2025-05",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 384000
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "high",
+          "xhigh"
+        ]
+      },
+      "provider_options": {
+        "id": "deepseek/deepseek-v4-pro",
+        "name": "DeepSeek V4 Pro 0423"
+      },
+      "price": {
+        "input": 1.91,
+        "output": 3.83
+      }
+    },
+    "deepseek/deepseek-v4.1-flash": {
+      "name": "DeepSeek V4.1 Flash",
+      "family": "deepseek-flash",
+      "released": "2026-09-10",
+      "updated": "2026-09-10",
+      "knowledge": "2025-05",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "high",
+          "max"
+        ]
+      },
+      "provider_options": {
+        "id": "deepseek/deepseek-v4.1-flash",
+        "name": "DeepSeek V4.1 Flash"
+      },
+      "price": {
+        "input": 0.3,
+        "output": 1.2,
+        "cache_read": 0.03,
+        "cache_write": 0.3
+      }
+    },
+    "deepseek/deepseek-v4.1-flash-1017": {
+      "name": "DeepSeek V4.1 Flash 1017",
+      "family": "deepseek-flash",
+      "released": "2026-10-17",
+      "updated": "2026-10-17",
+      "knowledge": "2025-05",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "high",
+          "max"
+        ]
+      },
+      "provider_options": {
+        "id": "deepseek/deepseek-v4.1-flash-1017",
+        "name": "DeepSeek V4.1 Flash 1017"
+      },
+      "price": {
+        "input": 0.3,
+        "output": 1.2,
+        "cache_read": 0.006,
+        "cache_write": 0.3
+      }
+    },
+    "google/gemini-3-flash-preview": {
+      "name": "Gemini 3 Flash Preview",
+      "family": "gemini-flash",
+      "released": "2025-12-17",
+      "updated": "2025-12-17",
+      "knowledge": "2025-01",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "audio",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "minimal",
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "google/gemini-3-flash-preview",
+        "name": "Gemini 3 Flash Preview"
+      },
+      "price": {
+        "input": 0.5,
+        "output": 3
+      }
+    },
+    "google/gemini-3.1-pro-preview": {
+      "name": "Gemini 3.1 Pro Preview",
+      "family": "gemini-pro",
+      "released": "2026-02-19",
+      "updated": "2026-02-19",
+      "knowledge": "2025-01",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "audio",
+          "image",
+          "text",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "google/gemini-3.1-pro-preview",
+        "name": "Gemini 3.1 Pro Preview"
+      },
+      "price": {
+        "input": 2,
+        "output": 12
+      }
+    },
+    "google/gemini-3.5-flash": {
+      "name": "Gemini 3.5 Flash",
+      "family": "gemini-flash",
+      "released": "2026-05-19",
+      "updated": "2026-05-19",
+      "knowledge": "2025-01",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "video",
+          "audio"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "reasoning": {
+        "efforts": [
+          "minimal",
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "google/gemini-3.5-flash",
+        "name": "Gemini 3.5 Flash"
+      },
+      "price": {
+        "input": 1.5,
+        "output": 9
+      }
+    },
+    "google/gemini-3.6-flash": {
+      "name": "Gemini 3.6 Flash",
+      "family": "gemini-flash",
+      "released": "2026-07-21",
+      "updated": "2026-07-21",
+      "knowledge": "2026-03",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "video",
+          "audio"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "reasoning": {
+        "efforts": [
+          "minimal",
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "google/gemini-3.6-flash",
+        "name": "Gemini 3.6 Flash"
+      },
+      "price": {
+        "input": 1.5,
+        "output": 7.5
+      }
+    },
+    "google/gemini-3.7-flash": {
+      "name": "Gemini 3.7 Flash",
+      "family": "gemini-flash",
+      "released": "2026-08-13",
+      "updated": "2026-08-13",
+      "knowledge": "2026-03",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "video",
+          "audio"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "google/gemini-3.7-flash",
+        "name": "Gemini 3.7 Flash"
+      },
+      "price": {
+        "input": 1.35,
+        "output": 6.75
+      }
+    },
+    "google/gemini-3.8-flash": {
+      "name": "Gemini 3.8 Flash",
+      "family": "gemini-flash",
+      "released": "2026-09-02",
+      "updated": "2026-09-02",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "video",
+          "audio"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "google/gemini-3.8-flash",
+        "name": "Gemini 3.8 Flash"
+      },
+      "price": {
+        "input": 0.75,
+        "output": 3.75
+      }
+    },
+    "google/gemini-4-argon": {
+      "name": "Gemini 4 Argon",
+      "family": "gemini",
+      "released": "2026-10-13",
+      "updated": "2026-10-13",
+      "knowledge": "2026-03",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "audio",
+          "image",
+          "text",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 943718
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "google/gemini-4-argon",
+        "name": "Gemini 4 Argon"
+      },
+      "price": {
+        "input": 2,
+        "output": 10
+      }
+    },
+    "google/gemma-3-27b-it": {
+      "name": "Gemma 3 27B IT",
+      "family": "gemma",
+      "released": "2025-03-12",
+      "updated": "2025-03-12",
+      "knowledge": "2024-08",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 131072,
+        "output": 117964
+      },
+      "provider_options": {
+        "id": "google/gemma-3-27b-it",
+        "name": "Gemma 3 27B"
+      },
+      "price": {
+        "input": 0.119,
+        "output": 0.3
+      }
+    },
+    "meta/llama-3.3-70b-instruct": {
+      "name": "Llama 3.3 70B Instruct",
+      "family": "llama",
+      "released": "2024-12-06",
+      "updated": "2024-12-06",
+      "knowledge": "2023-12",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 131072,
+        "output": 16384
+      },
+      "provider_options": {
+        "id": "meta-llama/llama-3.3-70b-instruct",
+        "name": "Llama 3.3 70B Instruct"
+      },
+      "price": {
+        "input": 1.04,
+        "output": 2.253
+      }
+    },
+    "meta/muse-spark-open": {
+      "name": "Muse Spark Open",
+      "family": "muse",
+      "released": "2026-10-15",
+      "updated": "2026-10-15",
+      "knowledge": "2026-01-04",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "video",
+          "audio"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 943718
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "medium",
+          "high",
+          "xhigh"
+        ]
+      },
+      "provider_options": {
+        "id": "meta/muse-spark-open",
+        "name": "Muse Spark Open"
+      },
+      "price": {
+        "input": 1.25,
+        "output": 4.25
+      }
+    },
+    "mistral/mistral-large-2512": {
+      "name": "Mistral Large 2512",
+      "family": "mistral-large",
+      "released": "2025-12-02",
+      "updated": "2025-12-02",
+      "knowledge": "2024-11",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 209715
+      },
+      "provider_options": {
+        "id": "mistralai/mistral-large-2512",
+        "name": "Mistral Large 3 2512"
+      },
+      "price": {
+        "input": 0.5,
+        "output": 1.5
+      }
+    },
+    "mistral/mistral-nemo": {
+      "name": "Mistral Nemo",
+      "family": "mistral-nemo",
+      "released": "2024-07-18",
+      "updated": "2024-07-18",
+      "knowledge": "2024-07",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 131072,
+        "output": 16384
+      },
+      "provider_options": {
+        "id": "mistralai/mistral-nemo",
+        "name": "Mistral Nemo"
+      },
+      "price": {
+        "input": 0.165,
+        "output": 0.17
+      }
+    },
+    "mistral/mistral-small-2603": {
+      "name": "Mistral Small 2603",
+      "family": "mistral-small",
+      "released": "2026-03-16",
+      "updated": "2026-03-16",
+      "knowledge": "2025-06",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 209715
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "mistralai/mistral-small-2603",
+        "name": "Mistral Small 4"
+      },
+      "price": {
+        "input": 0.165,
+        "output": 0.66
+      }
+    },
+    "mistral/mixtral-8x22b-instruct": {
+      "name": "Mixtral 8x22B Instruct",
+      "family": "mistral",
+      "released": "2024-04-17",
+      "updated": "2024-04-17",
+      "knowledge": "2024-01-31",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 65536,
+        "output": 52428
+      },
+      "provider_options": {
+        "id": "mistralai/mixtral-8x22b-instruct",
+        "name": "Mixtral 8x22B Instruct"
+      },
+      "price": {
+        "input": 2.2,
+        "output": 6.6
+      }
+    },
+    "moonshotai/kimi-k2-0905": {
+      "name": "Kimi K2 0905",
+      "family": "kimi-k2",
+      "released": "2025-09-05",
+      "updated": "2025-09-05",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 98304
+      },
+      "provider_options": {
+        "id": "moonshotai/kimi-k2-0905",
+        "name": "Kimi K2 0905"
+      },
+      "price": {
+        "input": 0.6,
+        "output": 2.5
+      }
+    },
+    "moonshotai/kimi-k3": {
+      "name": "Kimi K3",
+      "family": "kimi-k3",
+      "released": "2026-07-16",
+      "updated": "2026-07-16",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 943718
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "high",
+          "max"
+        ]
+      },
+      "provider_options": {
+        "id": "moonshotai/kimi-k3",
+        "name": "Kimi K3"
+      },
+      "price": {
+        "input": 3.45,
+        "output": 17.25
+      }
+    },
+    "openai/gpt-4.1": {
+      "name": "GPT-4.1",
+      "family": "gpt",
+      "released": "2025-04-14",
+      "updated": "2025-04-14",
+      "knowledge": "2024-04",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "image",
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1047576,
+        "output": 32768
+      },
+      "provider_options": {
+        "id": "openai/gpt-4.1",
+        "name": "GPT-4.1"
+      },
+      "price": {
+        "input": 2,
+        "output": 8
+      }
+    },
+    "openai/gpt-4.1-mini": {
+      "name": "GPT-4.1 Mini",
+      "family": "gpt-mini",
+      "released": "2025-04-14",
+      "updated": "2025-04-14",
+      "knowledge": "2024-04",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "image",
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1047576,
+        "output": 32768
+      },
+      "provider_options": {
+        "id": "openai/gpt-4.1-mini",
+        "name": "GPT-4.1 Mini"
+      },
+      "price": {
+        "input": 0.4,
+        "output": 1.6
+      }
+    },
+    "openai/gpt-4.1-nano": {
+      "name": "GPT-4.1 Nano",
+      "family": "gpt-nano",
+      "released": "2025-04-14",
+      "updated": "2025-04-14",
+      "knowledge": "2024-04",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1047576,
+        "output": 32768
+      },
+      "provider_options": {
+        "id": "openai/gpt-4.1-nano",
+        "name": "GPT-4.1 Nano"
+      },
+      "price": {
+        "input": 0.1,
+        "output": 0.4
+      }
+    },
+    "openai/gpt-4o": {
+      "name": "GPT-4o",
+      "family": "gpt",
+      "released": "2024-05-13",
+      "updated": "2024-08-06",
+      "knowledge": "2023-09",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 128000,
+        "output": 16384
+      },
+      "provider_options": {
+        "id": "openai/gpt-4o",
+        "name": "GPT-4o"
+      },
+      "price": {
+        "input": 2.5,
+        "output": 10
+      }
+    },
+    "openai/gpt-4o-mini": {
+      "name": "GPT-4o Mini",
+      "family": "gpt-mini",
+      "released": "2024-07-18",
+      "updated": "2024-07-18",
+      "knowledge": "2023-09",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 128000,
+        "output": 16384
+      },
+      "provider_options": {
+        "id": "openai/gpt-4o-mini",
+        "name": "GPT-4o-mini"
+      },
+      "price": {
+        "input": 0.15,
+        "output": 0.6
+      }
+    },
+    "openai/gpt-5": {
+      "name": "GPT-5",
+      "family": "gpt",
+      "released": "2025-08-07",
+      "updated": "2025-08-07",
+      "knowledge": "2024-09-30",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 400000,
+        "output": 128000
+      },
+      "reasoning": {
+        "efforts": [
+          "minimal",
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "openai/gpt-5",
+        "name": "GPT-5"
+      },
+      "price": {
+        "input": 1.25,
+        "output": 10
+      }
+    },
+    "openai/gpt-5-mini": {
+      "name": "GPT-5 Mini",
+      "family": "gpt-mini",
+      "released": "2025-08-07",
+      "updated": "2025-08-07",
+      "knowledge": "2024-05-30",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 400000,
+        "output": 128000
+      },
+      "reasoning": {
+        "efforts": [
+          "minimal",
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "openai/gpt-5-mini",
+        "name": "GPT-5 Mini"
+      },
+      "price": {
+        "input": 0.25,
+        "output": 2
+      }
+    },
+    "openai/gpt-5-nano": {
+      "name": "GPT-5 Nano",
+      "family": "gpt-nano",
+      "released": "2025-08-07",
+      "updated": "2025-08-07",
+      "knowledge": "2024-05-30",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 400000,
+        "output": 128000
+      },
+      "reasoning": {
+        "efforts": [
+          "minimal",
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "openai/gpt-5-nano",
+        "name": "GPT-5 Nano"
+      },
+      "price": {
+        "input": 0.05,
+        "output": 0.4
+      }
+    },
+    "openai/gpt-5.1": {
+      "name": "GPT-5.1",
+      "family": "gpt",
+      "released": "2025-11-13",
+      "updated": "2025-11-13",
+      "knowledge": "2024-09-30",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 400000,
+        "output": 128000
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "openai/gpt-5.1",
+        "name": "GPT-5.1"
+      },
+      "price": {
+        "input": 1.25,
+        "output": 10
+      }
+    },
+    "openai/gpt-5.2": {
+      "name": "GPT-5.2",
+      "family": "gpt",
+      "released": "2025-12-11",
+      "updated": "2025-12-11",
+      "knowledge": "2025-08-31",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 400000,
+        "output": 128000
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "medium",
+          "high",
+          "xhigh"
+        ]
+      },
+      "provider_options": {
+        "id": "openai/gpt-5.2",
+        "name": "GPT-5.2"
+      },
+      "price": {
+        "input": 1.75,
+        "output": 14
+      }
+    },
+    "openai/gpt-5.3-codex": {
+      "name": "GPT-5.3 Codex",
+      "family": "gpt-codex",
+      "released": "2026-02-05",
+      "updated": "2026-02-05",
+      "knowledge": "2025-08-31",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 400000,
+        "output": 128000
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "medium",
+          "high",
+          "xhigh"
+        ]
+      },
+      "provider_options": {
+        "id": "openai/gpt-5.3-codex",
+        "name": "GPT-5.3-Codex"
+      },
+      "price": {
+        "input": 1.75,
+        "output": 14
+      }
+    },
+    "openai/gpt-5.4": {
+      "name": "GPT-5.4",
+      "family": "gpt",
+      "released": "2026-03-05",
+      "updated": "2026-03-05",
+      "knowledge": "2025-08-31",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1050000,
+        "output": 128000
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "medium",
+          "high",
+          "xhigh"
+        ]
+      },
+      "provider_options": {
+        "id": "openai/gpt-5.4",
+        "name": "GPT-5.4"
+      },
+      "price": {
+        "input": 2.5,
+        "output": 15
+      }
+    },
+    "openai/gpt-5.4-mini": {
+      "name": "GPT-5.4 Mini",
+      "family": "gpt-mini",
+      "released": "2026-03-17",
+      "updated": "2026-03-17",
+      "knowledge": "2025-08-31",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 400000,
+        "output": 128000
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "medium",
+          "high",
+          "xhigh"
+        ]
+      },
+      "provider_options": {
+        "id": "openai/gpt-5.4-mini",
+        "name": "GPT-5.4 Mini"
+      },
+      "price": {
+        "input": 0.75,
+        "output": 4.5
+      }
+    },
+    "openai/gpt-5.4-nano": {
+      "name": "GPT-5.4 Nano",
+      "family": "gpt-nano",
+      "released": "2026-03-17",
+      "updated": "2026-03-17",
+      "knowledge": "2025-08-31",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 400000,
+        "output": 128000
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "medium",
+          "high",
+          "xhigh"
+        ]
+      },
+      "provider_options": {
+        "id": "openai/gpt-5.4-nano",
+        "name": "GPT-5.4 Nano"
+      },
+      "price": {
+        "input": 0.2,
+        "output": 1.25
+      }
+    },
+    "openai/gpt-5.4-pro": {
+      "name": "GPT-5.4 Pro",
+      "family": "gpt-pro",
+      "released": "2026-03-05",
+      "updated": "2026-03-05",
+      "knowledge": "2025-08-31",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1050000,
+        "output": 128000
+      },
+      "reasoning": {
+        "efforts": [
+          "medium",
+          "high",
+          "xhigh"
+        ]
+      },
+      "provider_options": {
+        "id": "openai/gpt-5.4-pro",
+        "name": "GPT-5.4 Pro"
+      },
+      "price": {
+        "input": 30,
+        "output": 180
+      }
+    },
+    "openai/gpt-5.5": {
+      "name": "GPT-5.5",
+      "family": "gpt",
+      "released": "2026-04-23",
+      "updated": "2026-04-23",
+      "knowledge": "2025-12-01",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "image",
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1050000,
+        "output": 128000
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "medium",
+          "high",
+          "xhigh"
+        ]
+      },
+      "provider_options": {
+        "id": "openai/gpt-5.5",
+        "name": "GPT-5.5"
+      },
+      "price": {
+        "input": 5,
+        "output": 30
+      }
+    },
+    "openai/gpt-5.6-luna": {
+      "name": "GPT-5.6 Luna",
+      "family": "gpt-luna",
+      "released": "2026-07-09",
+      "updated": "2026-07-09",
+      "knowledge": "2026-02-16",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "image",
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1050000,
+        "output": 128000
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ]
+      },
+      "provider_options": {
+        "id": "openai/gpt-5.6-luna",
+        "name": "GPT-5.6 Luna"
+      },
+      "price": {
+        "input": 0.2,
+        "output": 1.2
+      }
+    },
+    "openai/gpt-5.6-luna-pro": {
+      "name": "GPT-5.6 Luna Pro",
+      "family": "gpt-luna",
+      "released": "2026-07-09",
+      "updated": "2026-07-09",
+      "knowledge": "2026-02-16",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "image",
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1050000,
+        "output": 128000
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ]
+      },
+      "provider_options": {
+        "id": "openai/gpt-5.6-luna-pro",
+        "name": "GPT-5.6 Luna Pro"
+      },
+      "price": {
+        "input": 1,
+        "output": 6
+      }
+    },
+    "openai/gpt-5.6-sol": {
+      "name": "GPT-5.6 Sol",
+      "family": "gpt-sol",
+      "released": "2026-07-09",
+      "updated": "2026-07-09",
+      "knowledge": "2026-02-16",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "image",
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1050000,
+        "output": 128000
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ]
+      },
+      "provider_options": {
+        "id": "openai/gpt-5.6-sol",
+        "name": "GPT-5.6 Sol"
+      },
+      "price": {
+        "input": 5,
+        "output": 30
+      }
+    },
+    "openai/gpt-5.6-sol-pro": {
+      "name": "GPT-5.6 Sol Pro",
+      "family": "gpt-sol",
+      "released": "2026-07-09",
+      "updated": "2026-07-09",
+      "knowledge": "2026-02-16",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "image",
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1050000,
+        "output": 128000
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ]
+      },
+      "provider_options": {
+        "id": "openai/gpt-5.6-sol-pro",
+        "name": "GPT-5.6 Sol Pro"
+      },
+      "price": {
+        "input": 5,
+        "output": 30
+      }
+    },
+    "openai/gpt-5.6-terra": {
+      "name": "GPT-5.6 Terra",
+      "family": "gpt-terra",
+      "released": "2026-07-09",
+      "updated": "2026-07-09",
+      "knowledge": "2026-02-16",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "image",
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1050000,
+        "output": 128000
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ]
+      },
+      "provider_options": {
+        "id": "openai/gpt-5.6-terra",
+        "name": "GPT-5.6 Terra"
+      },
+      "price": {
+        "input": 2.5,
+        "output": 15
+      }
+    },
+    "openai/gpt-5.6-terra-pro": {
+      "name": "GPT-5.6 Terra Pro",
+      "family": "gpt-terra",
+      "released": "2026-07-09",
+      "updated": "2026-07-09",
+      "knowledge": "2026-02-16",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "image",
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1050000,
+        "output": 128000
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ]
+      },
+      "provider_options": {
+        "id": "openai/gpt-5.6-terra-pro",
+        "name": "GPT-5.6 Terra Pro"
+      },
+      "price": {
+        "input": 2.5,
+        "output": 15
+      }
+    },
+    "openai/gpt-6-astra": {
+      "name": "GPT-6 Astra",
+      "family": "gpt-astra",
+      "released": "2026-09-04",
+      "updated": "2026-09-04",
+      "knowledge": "2026-04-30",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "image",
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1050000,
+        "output": 128000
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ]
+      },
+      "provider_options": {
+        "id": "openai/gpt-6-astra",
+        "name": "GPT-6 Astra"
+      },
+      "price": {
+        "input": 10,
+        "output": 50
+      }
+    },
+    "openai/gpt-6-luna": {
+      "name": "GPT-6 Luna",
+      "family": "gpt-luna",
+      "released": "2026-09-22",
+      "updated": "2026-09-22",
+      "knowledge": "2026-05-18",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "image",
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1050000,
+        "output": 128000
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ]
+      },
+      "provider_options": {
+        "id": "openai/gpt-6-luna",
+        "name": "GPT-6 Luna"
+      },
+      "price": {
+        "input": 0.1,
+        "output": 0.5
+      }
+    },
+    "openai/gpt-6-sol": {
+      "name": "GPT-6 Sol",
+      "family": "gpt-sol",
+      "released": "2026-09-22",
+      "updated": "2026-09-22",
+      "knowledge": "2026-04-20",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "image",
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1050000,
+        "output": 128000
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ]
+      },
+      "provider_options": {
+        "id": "openai/gpt-6-sol",
+        "name": "GPT-6 Sol"
+      },
+      "price": {
+        "input": 2,
+        "output": 10
+      }
+    },
+    "openai/gpt-6.1-sol": {
+      "name": "GPT-6.1 Sol",
+      "family": "gpt-sol",
+      "released": "2026-09-29",
+      "updated": "2026-09-29",
+      "knowledge": "2026-04-30",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "image",
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1050000,
+        "output": 128000
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ]
+      },
+      "provider_options": {
+        "id": "openai/gpt-6.1-sol",
+        "name": "GPT-6.1 Sol"
+      },
+      "price": {
+        "input": 2,
+        "output": 10
+      }
+    },
+    "openai/gpt-oss-120b": {
+      "name": "GPT OSS 120B",
+      "family": "gpt-oss",
+      "released": "2025-08-05",
+      "updated": "2025-08-05",
+      "knowledge": "2024-06",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 131072,
+        "output": 65536
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "openai/gpt-oss-120b",
+        "name": "gpt-oss-120b"
+      },
+      "price": {
+        "input": 0.35,
+        "output": 0.75
+      }
+    },
+    "openai/gpt-oss-20b": {
+      "name": "GPT OSS 20B",
+      "family": "gpt-oss",
+      "released": "2025-08-05",
+      "updated": "2025-08-05",
+      "knowledge": "2024-06",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 131072,
+        "output": 32768
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "openai/gpt-oss-20b",
+        "name": "gpt-oss-20b"
+      },
+      "price": {
+        "input": 0.07,
+        "output": 0.3
+      }
+    },
+    "xai/grok-4.6": {
+      "name": "Grok 4.6",
+      "family": "grok",
+      "released": "2026-08-12",
+      "updated": "2026-08-12",
+      "knowledge": "2026-02-01",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 500000,
+        "output": 450000
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "medium",
+          "high",
+          "xhigh"
+        ]
+      },
+      "provider_options": {
+        "id": "x-ai/grok-4.6",
+        "name": "Grok 4.6"
+      },
+      "price": {
+        "input": 2,
+        "output": 6
+      }
+    },
+    "xai/grok-4.7": {
+      "name": "Grok 4.7",
+      "family": "grok",
+      "released": "2026-09-21",
+      "updated": "2026-09-21",
+      "knowledge": "2026-05",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 500000,
+        "output": 450000
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "medium",
+          "high",
+          "xhigh"
+        ]
+      },
+      "provider_options": {
+        "id": "x-ai/grok-4.7",
+        "name": "Grok 4.7"
+      },
+      "price": {
+        "input": 1.6,
+        "output": 4.8
+      }
+    },
+    "zhipuai/glm-5.2": {
+      "name": "GLM 5.2",
+      "family": "glm",
+      "released": "2026-06-13",
+      "updated": "2026-06-13",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 943718
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "high",
+          "xhigh"
+        ]
+      },
+      "provider_options": {
+        "id": "z-ai/glm-5.2",
+        "name": "GLM 5.2"
+      },
+      "price": {
+        "input": 1.54,
+        "output": 4.84
+      }
+    },
+    "zhipuai/glm-5.3": {
+      "name": "GLM 5.3",
+      "family": "glm",
+      "released": "2026-08-14",
+      "updated": "2026-08-14",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "high",
+          "max"
+        ]
+      },
+      "provider_options": {
+        "id": "z-ai/glm-5.3",
+        "name": "GLM 5.3"
+      },
+      "price": {
+        "input": 1.4,
+        "output": 4.4,
+        "cache_read": 0.26,
+        "cache_write": 1.4
+      }
+    },
+    "zhipuai/glm-5.3-flash": {
+      "name": "GLM 5.3 Flash",
+      "family": "glm-flash",
+      "released": "2026-08-26",
+      "updated": "2026-08-26",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": false,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "high",
+          "max"
+        ]
+      },
+      "provider_options": {
+        "id": "z-ai/glm-5.3-flash",
+        "name": "GLM 5.3 Flash"
+      },
+      "price": {
+        "input": 0.15,
+        "output": 0.5,
+        "cache_read": 0.03,
+        "cache_write": 0.15
+      }
+    }
+  }
+}

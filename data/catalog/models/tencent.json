@@ -1,0 +1,459 @@
+{
+  "tencent/hunyuan-2.0-instruct": {
+    "id": "tencent/hunyuan-2.0-instruct",
+    "lab": "tencent",
+    "name": "Hunyuan 2.0 Instruct",
+    "family": "hunyuan",
+    "released": "2026-03-08",
+    "updated": "2026-03-08",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 16384
+    },
+    "providers": [
+      "tencent-coding-plan"
+    ]
+  },
+  "tencent/hunyuan-2.0-thinking": {
+    "id": "tencent/hunyuan-2.0-thinking",
+    "lab": "tencent",
+    "name": "Hunyuan 2.0 Thinking",
+    "family": "hunyuan",
+    "released": "2026-03-08",
+    "updated": "2026-03-08",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 16384
+    },
+    "providers": [
+      "tencent-coding-plan"
+    ]
+  },
+  "tencent/hunyuan-a13b-instruct": {
+    "id": "tencent/hunyuan-a13b-instruct",
+    "lab": "tencent",
+    "name": "Hunyuan A13B Instruct",
+    "family": "hunyuan",
+    "released": "2025-07-08",
+    "updated": "2025-07-08",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 117964
+    },
+    "providers": [
+      "kilo",
+      "openrouter",
+      "siliconflow",
+      "siliconflow-cn"
+    ]
+  },
+  "tencent/hunyuan-t1": {
+    "id": "tencent/hunyuan-t1",
+    "lab": "tencent",
+    "name": "Hunyuan T1",
+    "family": "hunyuan",
+    "released": "2026-03-08",
+    "updated": "2026-03-08",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 16384
+    },
+    "providers": [
+      "tencent-coding-plan"
+    ]
+  },
+  "tencent/hunyuan-turbos": {
+    "id": "tencent/hunyuan-turbos",
+    "lab": "tencent",
+    "name": "Hunyuan TurboS",
+    "family": "hunyuan",
+    "released": "2026-03-08",
+    "updated": "2026-03-08",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 16384
+    },
+    "providers": [
+      "tencent-coding-plan"
+    ]
+  },
+  "tencent/hy-mt2-1.8b": {
+    "id": "tencent/hy-mt2-1.8b",
+    "lab": "tencent",
+    "name": "Hy MT2 1.8B",
+    "family": "Hy",
+    "released": "2026-05-21",
+    "updated": "2026-05-21",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 8192,
+      "output": 4096
+    },
+    "providers": [
+      "aimlapi",
+      "kilo",
+      "openrouter"
+    ]
+  },
+  "tencent/hy-mt2-30b-a3b": {
+    "id": "tencent/hy-mt2-30b-a3b",
+    "lab": "tencent",
+    "name": "Hy MT2 30B A3B",
+    "family": "Hy",
+    "released": "2026-05-21",
+    "updated": "2026-05-21",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 8192,
+      "output": 4096
+    },
+    "providers": [
+      "aimlapi",
+      "kilo",
+      "openrouter"
+    ]
+  },
+  "tencent/hy-mt2-7b": {
+    "id": "tencent/hy-mt2-7b",
+    "lab": "tencent",
+    "name": "Hy MT2 7B",
+    "family": "Hy",
+    "released": "2026-05-21",
+    "updated": "2026-05-21",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 8192,
+      "output": 4096
+    },
+    "providers": [
+      "aimlapi",
+      "kilo",
+      "openrouter"
+    ]
+  },
+  "tencent/hy-mt2-lite": {
+    "id": "tencent/hy-mt2-lite",
+    "lab": "tencent",
+    "name": "Hy MT2 Lite",
+    "family": "Hy",
+    "released": "2026-06-12",
+    "updated": "2026-06-12",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 8000,
+      "output": 4000
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "tencent/hy-mt2-plus": {
+    "id": "tencent/hy-mt2-plus",
+    "lab": "tencent",
+    "name": "Hy MT2 Plus",
+    "family": "Hy",
+    "released": "2026-05-21",
+    "updated": "2026-05-21",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "structured_output": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 8192,
+      "output": 8192
+    },
+    "providers": [
+      "llmgateway",
+      "llmgateway-providers",
+      "vercel"
+    ]
+  },
+  "tencent/hy-mt2-pro": {
+    "id": "tencent/hy-mt2-pro",
+    "lab": "tencent",
+    "name": "Hy MT2 Pro",
+    "family": "Hy",
+    "released": "2026-05-21",
+    "updated": "2026-05-21",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 8000,
+      "output": 4000
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "tencent/hy3": {
+    "id": "tencent/hy3",
+    "lab": "tencent",
+    "name": "Hy3",
+    "family": "Hy",
+    "released": "2026-07-06",
+    "updated": "2026-07-06",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 256000,
+      "input": 192000,
+      "output": 128000
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/tencent/Hy3"
+      }
+    ],
+    "providers": [
+      "aimlapi",
+      "commandcode",
+      "crossmodel",
+      "deepinfra",
+      "edenai",
+      "huggingface",
+      "jalapeno",
+      "kenari",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "nano-gpt",
+      "novita-ai",
+      "opencode",
+      "opencode-go",
+      "openrouter",
+      "orcarouter",
+      "requesty",
+      "siliconflow",
+      "tencent-token-plan",
+      "tencent-tokenhub",
+      "vercel"
+    ]
+  },
+  "tencent/hy3-preview": {
+    "id": "tencent/hy3-preview",
+    "lab": "tencent",
+    "name": "Hy3 Preview",
+    "family": "Hy",
+    "released": "2026-04-20",
+    "updated": "2026-04-20",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 256000,
+      "output": 64000
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/tencent/Hy3-preview"
+      }
+    ],
+    "providers": [
+      "kilo",
+      "opencode",
+      "openrouter",
+      "tencent-tokenhub",
+      "zenmux"
+    ]
+  },
+  "tencent/hy4-preview": {
+    "id": "tencent/hy4-preview",
+    "lab": "tencent",
+    "name": "Hy4 Preview",
+    "family": "Hy",
+    "released": "2026-08-28",
+    "updated": "2026-08-28",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1024000,
+      "output": 64000
+    },
+    "providers": [
+      "aimlapi",
+      "commandcode",
+      "crossmodel",
+      "deepinfra",
+      "edenai",
+      "huggingface",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "nano-gpt",
+      "novita-ai",
+      "opencode-go",
+      "openrouter",
+      "tencent-token-plan",
+      "tencent-tokenhub",
+      "vancine",
+      "vercel"
+    ]
+  }
+}

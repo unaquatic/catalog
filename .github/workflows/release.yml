@@ -1,0 +1,134 @@
+name: Release
+
+run-name: Release ${{ inputs.ref || github.sha }}
+
+# Release tags a commit as the next semantic version, vX.Y.Z, so that Go
+# repositories take it as a module version, and the data package's
+# catalog with it; next-version.sh picks the version from the commit's
+# Conventional Commits type. It attaches the catalog, joined into one
+# catalog.json, its schema.json, data/models-dev.json and data/patch.json to
+# a GitHub release of the version, and deploys both sites. A commit
+# released before is deployed again, not tagged again.
+on:
+  workflow_dispatch:
+
+  workflow_call:
+    inputs:
+      ref:
+        description: "Commit to release, or empty for the triggering commit"
+        type: string
+        default: ""
+
+concurrency:
+  group: release
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    outputs:
+      sha: ${{ steps.tag.outputs.sha }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ inputs.ref }}
+          fetch-depth: 0
+
+      - name: Setup
+        uses: ./.github/actions/setup
+
+      - name: Tag And Release
+        id: tag
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+        run: |
+          sha=$(git rev-parse HEAD)
+          echo "sha=$sha" >> "$GITHUB_OUTPUT"
+          if tag=$(git tag --points-at HEAD --list 'v[0-9]*' | head -1) && [ -n "$tag" ]; then
+            echo "$sha is released already as $tag"
+            exit 0
+          fi
+          prev=$(git tag --merged HEAD --list 'v[0-9]*' --sort=-v:refname | head -1)
+          tag=$(git log -1 --format=%B HEAD | .github/scripts/next-version.sh "$prev")
+          echo "releasing $sha as $tag, after ${prev:-no version}"
+
+          catalog="$RUNNER_TEMP/catalog.json" schema="$RUNNER_TEMP/schema.json"
+          go run ./cmd/catalog join -catalog data/catalog -o "$catalog"
+          cp gateway/catalog.schema.json "$schema"
+
+          # model_ids prints the model IDs of the catalog at commit $1, split
+          # into data/catalog or, before it was, one data/catalog.json.
+          model_ids() {
+            if git cat-file -e "$1:data/catalog/catalog.json" 2>/dev/null; then
+              git archive "$1" data/catalog/models | tar -xO | jq -r 'keys[]'
+            else
+              git show "$1:data/catalog.json" | jq -r '.models | keys[]'
+            fi
+          }
+
+          {
+            echo "## Changes"
+            echo
+            git log -1 --format=%B HEAD
+            echo "## Catalog"
+            echo
+            jq -r '"- \(.models | length) models, \(.providers | length) providers, \([.providers[].models | length] | add) offerings, from \(.source) at \(.generated)"' "$catalog"
+            if [ -n "$prev" ] && ! git diff --quiet "$prev" HEAD -- data/patch.json; then
+              jq -r '"- models.dev changed: \([.ops[] | select(.op == "add")] | length) added, \([.ops[] | select(.op == "replace")] | length) replaced, \([.ops[] | select(.op == "remove")] | length) removed; \(.conflicts // [] | length) conflicts kept ours"' data/patch.json
+            fi
+            if [ -n "$prev" ]; then
+              jq -r '.models | keys[]' "$catalog" | sort > new.txt
+              model_ids "$prev" | sort > old.txt
+              added=$(comm -13 old.txt new.txt)
+              removed=$(comm -23 old.txt new.txt)
+              if [ -n "$added$removed" ]; then
+                echo "- $(grep -c . <<< "$added") models added and $(grep -c . <<< "$removed") removed since $prev"
+                [ -z "$added" ] || { echo; echo "Added:"; echo; sed 's/^/- `/; s/$/`/' <<< "$added" | head -100; }
+                [ -z "$removed" ] || { echo; echo "Removed:"; echo; sed 's/^/- `/; s/$/`/' <<< "$removed" | head -100; }
+              fi
+            fi
+            echo
+            echo "## Use"
+            echo
+            echo '```sh'
+            echo "go get github.com/$REPO@$tag   # data.Catalog(): this catalog, embedded"
+            echo "curl -LO https://github.com/$REPO/releases/download/$tag/catalog.json"
+            echo '```'
+          } > notes.md
+
+          assets=("$catalog" "$schema" data/models-dev.json)
+          [ ! -f data/patch.json ] || assets+=(data/patch.json)
+          gh release create "$tag" "${assets[@]}" \
+            --target "$sha" --title "$tag" --notes-file notes.md --latest
+
+  # GitHub Pages needs a public repository on the free plan; set the
+  # repository variable PAGES to true once it is public.
+  deploy-pages:
+    name: Deploy Pages
+    needs: release
+    if: vars.PAGES == 'true'
+    uses: ./.github/workflows/pages-deploy.yml
+    with:
+      ref: ${{ needs.release.outputs.sha }}
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    secrets: inherit
+
+  deploy-workers:
+    name: Deploy Workers
+    needs: release
+    uses: ./.github/workflows/workers-build.yml
+    with:
+      ref: ${{ needs.release.outputs.sha }}
+    secrets: inherit

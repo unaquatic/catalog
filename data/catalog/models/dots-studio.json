@@ -1,0 +1,32 @@
+{
+  "dots-studio/dots-3-note-preview-free": {
+    "id": "dots-studio/dots-3-note-preview-free",
+    "lab": "dots-studio",
+    "name": "Dots 3 Note Preview Free",
+    "released": "2026-08-14",
+    "updated": "2026-08-14",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 512000,
+      "output": 460800
+    },
+    "providers": [
+      "kilo",
+      "openrouter"
+    ]
+  }
+}

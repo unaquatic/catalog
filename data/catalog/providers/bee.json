@@ -1,0 +1,265 @@
+{
+  "id": "bee",
+  "name": "Bee by HEOSSI",
+  "kind": "gateway",
+  "type": "community",
+  "endpoint": {
+    "format": "openai-chat",
+    "api": "https://api.bee.heossi.com/bee",
+    "auth": {
+      "scheme": "bearer"
+    },
+    "env": [
+      "BEE_API_KEY"
+    ]
+  },
+  "doc": "https://bee.heossi.com/docs/sdks",
+  "models": {
+    "bee/bee-brood": {
+      "name": "Bee Brood",
+      "released": "2026-07-10",
+      "updated": "2026-09-28",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": false,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 16384
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ]
+      },
+      "provider_options": {
+        "id": "bee-brood",
+        "name": "Bee Brood 1.0"
+      },
+      "price": {
+        "input": 0.6,
+        "output": 2.4,
+        "cache_read": 0.06,
+        "cache_write": 0.72
+      }
+    },
+    "bee/bee-buzz": {
+      "name": "Bee Buzz",
+      "released": "2026-07-10",
+      "updated": "2026-09-28",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 24576
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ]
+      },
+      "provider_options": {
+        "id": "bee-buzz",
+        "name": "Bee Buzz 1.0"
+      },
+      "price": {
+        "input": 2.5,
+        "output": 10,
+        "cache_read": 0.25,
+        "cache_write": 3
+      }
+    },
+    "bee/bee-cell": {
+      "name": "Bee Cell",
+      "released": "2026-07-10",
+      "updated": "2026-09-28",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": false,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 131072,
+        "output": 8192
+      },
+      "provider_options": {
+        "id": "bee-cell",
+        "name": "Bee Cell 1.0"
+      },
+      "price": {
+        "input": 0.3,
+        "output": 1.2,
+        "cache_read": 0.03,
+        "cache_write": 0.36
+      }
+    },
+    "bee/bee-comb": {
+      "name": "Bee Comb",
+      "released": "2026-07-10",
+      "updated": "2026-09-28",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 16384
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ]
+      },
+      "provider_options": {
+        "id": "bee-comb",
+        "name": "Bee Comb 2.0"
+      },
+      "price": {
+        "input": 1.25,
+        "output": 5,
+        "cache_read": 0.125,
+        "cache_write": 1.5
+      }
+    },
+    "bee/bee-hive": {
+      "name": "Bee Hive",
+      "released": "2026-07-10",
+      "updated": "2026-09-28",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 32768
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ]
+      },
+      "provider_options": {
+        "id": "bee-hive",
+        "name": "Bee Hive 1.0"
+      },
+      "price": {
+        "input": 5,
+        "output": 20,
+        "cache_read": 0.5,
+        "cache_write": 6
+      }
+    },
+    "bee/bee-swarm": {
+      "name": "Bee Swarm",
+      "released": "2026-07-10",
+      "updated": "2026-09-28",
+      "open_weights": false,
+      "capabilities": {
+        "tools": false,
+        "attachments": true,
+        "structured_output": false,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 64000
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ]
+      },
+      "provider_options": {
+        "id": "bee-swarm",
+        "name": "Bee Swarm 1.0"
+      },
+      "price": {
+        "input": 25,
+        "output": 150,
+        "cache_read": 2.5,
+        "cache_write": 30
+      }
+    }
+  }
+}

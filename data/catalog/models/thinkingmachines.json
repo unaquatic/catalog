@@ -1,0 +1,111 @@
+{
+  "thinkingmachines/inkling": {
+    "id": "thinkingmachines/inkling",
+    "lab": "thinkingmachines",
+    "name": "Inkling",
+    "family": "ling",
+    "released": "2026-07-15",
+    "updated": "2026-07-15",
+    "open_weights": true,
+    "license": "Apache-2.0",
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "audio"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "output": 1048576
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/thinkingmachines/Inkling"
+      }
+    ],
+    "providers": [
+      "abacus",
+      "aimlapi",
+      "baseten",
+      "commandcode",
+      "deepinfra",
+      "edenai",
+      "fireworks-ai",
+      "huggingface",
+      "hyper",
+      "impossibl",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "llmtr",
+      "modal",
+      "nano-gpt",
+      "neon",
+      "nvidia",
+      "openrouter",
+      "requesty",
+      "thinkingmachines",
+      "togetherai",
+      "vercel"
+    ]
+  },
+  "thinkingmachines/inkling-small": {
+    "id": "thinkingmachines/inkling-small",
+    "lab": "thinkingmachines",
+    "name": "Inkling Small",
+    "family": "ling",
+    "released": "2026-07-30",
+    "updated": "2026-07-30",
+    "open_weights": true,
+    "license": "Apache-2.0",
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "audio"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "output": 1048576
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/thinkingmachines/Inkling-Small"
+      }
+    ],
+    "providers": [
+      "aimlapi",
+      "arcee",
+      "baseten",
+      "commandcode",
+      "deepinfra",
+      "edenai",
+      "huggingface",
+      "kilo",
+      "llmtr",
+      "nano-gpt",
+      "openrouter",
+      "pioneer",
+      "thinkingmachines",
+      "vercel"
+    ]
+  }
+}

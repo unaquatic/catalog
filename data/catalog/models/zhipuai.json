@@ -1,0 +1,1918 @@
+{
+  "zhipuai/autoglm-phone-9b": {
+    "id": "zhipuai/autoglm-phone-9b",
+    "lab": "zhipuai",
+    "name": "AutoGLM Phone 9B",
+    "released": "2025-12-23",
+    "updated": "2025-12-23",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": false,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 12800,
+      "output": 4096
+    },
+    "providers": [
+      "qiniu-ai"
+    ]
+  },
+  "zhipuai/autoglm-phone-9b-multilingual": {
+    "id": "zhipuai/autoglm-phone-9b-multilingual",
+    "lab": "zhipuai",
+    "name": "AutoGLM Phone 9B Multilingual",
+    "family": "glm",
+    "released": "2025-12-10",
+    "updated": "2025-12-10",
+    "open_weights": true,
+    "license": "MIT",
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 65536,
+      "output": 65536
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/zai-org/AutoGLM-Phone-9B-Multilingual"
+      }
+    ],
+    "providers": [
+      "huggingface",
+      "novita-ai"
+    ]
+  },
+  "zhipuai/glm-4-32b-0414": {
+    "id": "zhipuai/glm-4-32b-0414",
+    "lab": "zhipuai",
+    "name": "GLM 4 32B 0414",
+    "family": "glm",
+    "released": "2024-01-01",
+    "updated": "2025-04-14",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "structured_output": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "input": 128000,
+      "output": 65536
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "zhipuai/glm-4-32b-0414-128k": {
+    "id": "zhipuai/glm-4-32b-0414-128k",
+    "lab": "zhipuai",
+    "name": "GLM 4 32B 0414 128k",
+    "family": "glm",
+    "released": "2025-04-14",
+    "updated": "2025-04-14",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 16384
+    },
+    "providers": [
+      "llmgateway",
+      "llmgateway-providers"
+    ]
+  },
+  "zhipuai/glm-4-9b-0414": {
+    "id": "zhipuai/glm-4-9b-0414",
+    "lab": "zhipuai",
+    "name": "GLM 4 9B 0414",
+    "family": "glm",
+    "released": "2024-01-01",
+    "updated": "2025-04-14",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "structured_output": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32000,
+      "input": 32000,
+      "output": 8000
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "zhipuai/glm-4-air-0111": {
+    "id": "zhipuai/glm-4-air-0111",
+    "lab": "zhipuai",
+    "name": "GLM 4 Air 0111",
+    "family": "glm",
+    "released": "2025-01-11",
+    "updated": "2025-01-11",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "structured_output": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "input": 128000,
+      "output": 4096
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "zhipuai/glm-4-long": {
+    "id": "zhipuai/glm-4-long",
+    "lab": "zhipuai",
+    "name": "GLM 4 Long",
+    "family": "glm",
+    "released": "2024-01-01",
+    "updated": "2024-08-01",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "structured_output": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "input": 1000000,
+      "output": 4095
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "zhipuai/glm-4-plus-0111": {
+    "id": "zhipuai/glm-4-plus-0111",
+    "lab": "zhipuai",
+    "name": "GLM 4 Plus 0111",
+    "family": "glm",
+    "released": "2025-02-19",
+    "updated": "2025-02-19",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "structured_output": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "input": 128000,
+      "output": 4096
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "zhipuai/glm-4.1v-thinking-flash": {
+    "id": "zhipuai/glm-4.1v-thinking-flash",
+    "lab": "zhipuai",
+    "name": "GLM 4.1V Thinking Flash",
+    "family": "glm-flash",
+    "released": "2025-07-09",
+    "updated": "2025-07-09",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "structured_output": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 64000,
+      "input": 64000,
+      "output": 8192
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "zhipuai/glm-4.1v-thinking-flashx": {
+    "id": "zhipuai/glm-4.1v-thinking-flashx",
+    "lab": "zhipuai",
+    "name": "GLM 4.1V Thinking FlashX",
+    "family": "glm-flash",
+    "released": "2025-07-09",
+    "updated": "2025-07-09",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "structured_output": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 64000,
+      "input": 64000,
+      "output": 8192
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "zhipuai/glm-4.5": {
+    "id": "zhipuai/glm-4.5",
+    "lab": "zhipuai",
+    "name": "GLM 4.5",
+    "family": "glm",
+    "released": "2025-07-28",
+    "updated": "2025-07-28",
+    "knowledge": "2025-04",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 98304
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/zai-org/GLM-4.5"
+      }
+    ],
+    "providers": [
+      "302ai",
+      "abacus",
+      "huggingface",
+      "impossibl",
+      "jiekou",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "modelscope",
+      "nano-gpt",
+      "openrouter",
+      "orcarouter",
+      "qiniu-ai",
+      "tempr",
+      "vercel",
+      "zai",
+      "zenmux",
+      "zhipuai"
+    ]
+  },
+  "zhipuai/glm-4.5-air": {
+    "id": "zhipuai/glm-4.5-air",
+    "lab": "zhipuai",
+    "name": "GLM 4.5 Air",
+    "family": "glm-air",
+    "released": "2025-07-28",
+    "updated": "2025-07-28",
+    "knowledge": "2025-04",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 98304
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/zai-org/GLM-4.5-Air"
+      }
+    ],
+    "providers": [
+      "huggingface",
+      "impossibl",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "nano-gpt",
+      "novita-ai",
+      "openrouter",
+      "orcarouter",
+      "qiniu-ai",
+      "siliconflow",
+      "siliconflow-cn",
+      "submodel",
+      "tempr",
+      "vercel",
+      "zai",
+      "zenmux",
+      "zhipuai"
+    ]
+  },
+  "zhipuai/glm-4.5-airx": {
+    "id": "zhipuai/glm-4.5-airx",
+    "lab": "zhipuai",
+    "name": "GLM 4.5 AirX",
+    "family": "glm",
+    "released": "2025-07-28",
+    "updated": "2025-07-28",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 16384
+    },
+    "providers": [
+      "llmgateway",
+      "llmgateway-providers"
+    ]
+  },
+  "zhipuai/glm-4.5-flash": {
+    "id": "zhipuai/glm-4.5-flash",
+    "lab": "zhipuai",
+    "name": "GLM 4.5 Flash",
+    "family": "glm-flash",
+    "released": "2025-07-28",
+    "updated": "2025-07-28",
+    "knowledge": "2025-04",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 98304
+    },
+    "providers": [
+      "empiriolabs",
+      "tempr",
+      "unorouter",
+      "zai",
+      "zhipuai"
+    ]
+  },
+  "zhipuai/glm-4.5-fp8": {
+    "id": "zhipuai/glm-4.5-fp8",
+    "lab": "zhipuai",
+    "name": "GLM 4.5 FP8",
+    "family": "glm",
+    "released": "2025-07-28",
+    "updated": "2025-07-28",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 131072
+    },
+    "providers": [
+      "submodel"
+    ]
+  },
+  "zhipuai/glm-4.5-x": {
+    "id": "zhipuai/glm-4.5-x",
+    "lab": "zhipuai",
+    "name": "GLM 4.5 X",
+    "family": "glm",
+    "released": "2025-07-28",
+    "updated": "2025-07-28",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 16384
+    },
+    "providers": [
+      "llmgateway",
+      "llmgateway-providers"
+    ]
+  },
+  "zhipuai/glm-4.5v": {
+    "id": "zhipuai/glm-4.5v",
+    "lab": "zhipuai",
+    "name": "GLM 4.5V",
+    "family": "glm",
+    "released": "2025-08-11",
+    "updated": "2025-08-11",
+    "knowledge": "2025-04",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 64000,
+      "output": 16384
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/zai-org/GLM-4.5V"
+      }
+    ],
+    "providers": [
+      "302ai",
+      "aimlapi",
+      "huggingface",
+      "jiekou",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "nano-gpt",
+      "novita-ai",
+      "openrouter",
+      "tempr",
+      "vercel",
+      "zai",
+      "zhipuai"
+    ]
+  },
+  "zhipuai/glm-4.6": {
+    "id": "zhipuai/glm-4.6",
+    "lab": "zhipuai",
+    "name": "GLM 4.6",
+    "family": "glm",
+    "released": "2025-09-30",
+    "updated": "2025-09-30",
+    "knowledge": "2025-04",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 204800,
+      "output": 131072
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/zai-org/GLM-4.6"
+      }
+    ],
+    "providers": [
+      "302ai",
+      "abacus",
+      "deepinfra",
+      "edenai",
+      "helicone",
+      "huggingface",
+      "iflowcn",
+      "impossibl",
+      "io-net",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "meganova",
+      "modelscope",
+      "nano-gpt",
+      "novita-ai",
+      "ofox",
+      "opencode",
+      "openrouter",
+      "orcarouter",
+      "poe",
+      "qiniu-ai",
+      "tempr",
+      "vercel",
+      "zai",
+      "zenmux",
+      "zhipuai"
+    ]
+  },
+  "zhipuai/glm-4.6-derestricted-v5": {
+    "id": "zhipuai/glm-4.6-derestricted-v5",
+    "lab": "zhipuai",
+    "name": "GLM 4.6 Derestricted V5",
+    "family": "glm",
+    "released": "2025-12-23",
+    "updated": "2025-12-23",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "structured_output": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "input": 131072,
+      "output": 8192
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "zhipuai/glm-4.6-turbo": {
+    "id": "zhipuai/glm-4.6-turbo",
+    "lab": "zhipuai",
+    "name": "GLM 4.6 Turbo",
+    "family": "glm",
+    "released": "2025-10-02",
+    "updated": "2025-10-02",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "structured_output": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 204800,
+      "input": 204800,
+      "output": 131072
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "zhipuai/glm-4.6v": {
+    "id": "zhipuai/glm-4.6v",
+    "lab": "zhipuai",
+    "name": "GLM 4.6V",
+    "family": "glm",
+    "released": "2025-12-08",
+    "updated": "2025-12-08",
+    "knowledge": "2025-04",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 32768
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/zai-org/GLM-4.6V"
+      }
+    ],
+    "providers": [
+      "302ai",
+      "aimlapi",
+      "edenai",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "nano-gpt",
+      "novita-ai",
+      "openrouter",
+      "poe",
+      "tempr",
+      "zai",
+      "zenmux",
+      "zhipuai",
+      "zhipuai-coding-plan"
+    ]
+  },
+  "zhipuai/glm-4.6v-flash": {
+    "id": "zhipuai/glm-4.6v-flash",
+    "lab": "zhipuai",
+    "name": "GLM 4.6V Flash",
+    "family": "glm-flash",
+    "released": "2025-12-08",
+    "updated": "2025-12-08",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 32768
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/zai-org/GLM-4.6V-Flash"
+      }
+    ],
+    "providers": [
+      "empiriolabs",
+      "huggingface",
+      "tempr",
+      "zai",
+      "zenmux",
+      "zhipuai"
+    ]
+  },
+  "zhipuai/glm-4.6v-flashx": {
+    "id": "zhipuai/glm-4.6v-flashx",
+    "lab": "zhipuai",
+    "name": "GLM 4.6V FlashX",
+    "family": "glm-flash",
+    "released": "2025-12-08",
+    "updated": "2025-12-08",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 16000
+    },
+    "providers": [
+      "llmgateway",
+      "llmgateway-providers"
+    ]
+  },
+  "zhipuai/glm-4.7": {
+    "id": "zhipuai/glm-4.7",
+    "lab": "zhipuai",
+    "name": "GLM 4.7",
+    "family": "glm",
+    "released": "2025-12-22",
+    "updated": "2025-12-22",
+    "knowledge": "2025-04",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 204800,
+      "output": 131072
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/zai-org/GLM-4.7"
+      }
+    ],
+    "providers": [
+      "302ai",
+      "abacus",
+      "alibaba-coding-plan",
+      "alibaba-coding-plan-cn",
+      "baseten",
+      "crossmodel",
+      "deepinfra",
+      "dinference",
+      "edenai",
+      "huggingface",
+      "impossibl",
+      "jiekou",
+      "kilo",
+      "kuae-cloud-coding-plan",
+      "llmgateway",
+      "llmgateway-providers",
+      "meganova",
+      "moark",
+      "nano-gpt",
+      "novita-ai",
+      "ofox",
+      "opencode",
+      "openrouter",
+      "orcarouter",
+      "poe",
+      "qiniu-ai",
+      "tempr",
+      "vercel",
+      "zai",
+      "zai-coding-plan",
+      "zenmux",
+      "zhipuai"
+    ]
+  },
+  "zhipuai/glm-4.7-flash": {
+    "id": "zhipuai/glm-4.7-flash",
+    "lab": "zhipuai",
+    "name": "GLM 4.7 Flash",
+    "family": "glm-flash",
+    "released": "2026-01-19",
+    "updated": "2026-01-19",
+    "knowledge": "2025-04",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 200000,
+      "output": 131072
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/zai-org/GLM-4.7-Flash"
+      }
+    ],
+    "providers": [
+      "aimlapi",
+      "cloudflare-workers-ai",
+      "cortecs",
+      "deepinfra",
+      "edenai",
+      "empiriolabs",
+      "huggingface",
+      "jiekou",
+      "kenari",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "nano-gpt",
+      "novita-ai",
+      "openrouter",
+      "pendra",
+      "poe",
+      "synthetic",
+      "tempr",
+      "vercel",
+      "zai",
+      "zenmux",
+      "zhipuai"
+    ]
+  },
+  "zhipuai/glm-4.7-flashx": {
+    "id": "zhipuai/glm-4.7-flashx",
+    "lab": "zhipuai",
+    "name": "GLM 4.7 FlashX",
+    "family": "glm-flash",
+    "released": "2026-01-19",
+    "updated": "2026-01-19",
+    "knowledge": "2025-04",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 200000,
+      "output": 131072
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/zai-org/GLM-4.7-Flash"
+      }
+    ],
+    "providers": [
+      "llmgateway",
+      "llmgateway-providers",
+      "ofox",
+      "tempr",
+      "vercel",
+      "zai",
+      "zenmux",
+      "zhipuai"
+    ]
+  },
+  "zhipuai/glm-4.7-maas": {
+    "id": "zhipuai/glm-4.7-maas",
+    "lab": "zhipuai",
+    "name": "GLM 4.7 Maas",
+    "family": "glm",
+    "released": "2026-01-06",
+    "updated": "2026-01-06",
+    "knowledge": "2025-04",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 200000,
+      "output": 128000
+    },
+    "providers": [
+      "google-vertex"
+    ]
+  },
+  "zhipuai/glm-4.7-n": {
+    "id": "zhipuai/glm-4.7-n",
+    "lab": "zhipuai",
+    "name": "GLM 4.7 N",
+    "released": "2025-12-22",
+    "updated": "2025-12-22",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 205000,
+      "output": 131072
+    },
+    "providers": [
+      "poe"
+    ]
+  },
+  "zhipuai/glm-5": {
+    "id": "zhipuai/glm-5",
+    "lab": "zhipuai",
+    "name": "GLM 5",
+    "family": "glm",
+    "released": "2026-02-12",
+    "updated": "2026-02-12",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 204800,
+      "output": 131072
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/zai-org/GLM-5"
+      }
+    ],
+    "providers": [
+      "302ai",
+      "abacus",
+      "alibaba-cn",
+      "alibaba-coding-plan",
+      "alibaba-coding-plan-cn",
+      "alibaba-token-plan",
+      "alibaba-token-plan-cn",
+      "baseten",
+      "crossmodel",
+      "deepinfra",
+      "digitalocean",
+      "dinference",
+      "edenai",
+      "fastrouter",
+      "gmicloud",
+      "google-vertex",
+      "huggingface",
+      "impossibl",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "meganova",
+      "melious",
+      "nano-gpt",
+      "novita-ai",
+      "ofox",
+      "opencode",
+      "openrouter",
+      "orcarouter",
+      "poe",
+      "qiniu-ai",
+      "scnet-token-plan",
+      "siliconflow",
+      "siliconflow-cn",
+      "tempr",
+      "tencent-coding-plan",
+      "tensorx",
+      "togetherai",
+      "tokengo",
+      "vercel",
+      "vultr",
+      "zai",
+      "zenmux",
+      "zhipuai"
+    ]
+  },
+  "zhipuai/glm-5-turbo": {
+    "id": "zhipuai/glm-5-turbo",
+    "lab": "zhipuai",
+    "name": "GLM 5 Turbo",
+    "family": "glm",
+    "released": "2026-03-16",
+    "updated": "2026-03-16",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 200000,
+      "output": 131072
+    },
+    "providers": [
+      "302ai",
+      "aimlapi",
+      "crossmodel",
+      "edenai",
+      "impossibl",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "nano-gpt",
+      "ofox",
+      "openrouter",
+      "tempr",
+      "tensorx",
+      "vercel",
+      "zai",
+      "zai-coding-plan",
+      "zenmux"
+    ]
+  },
+  "zhipuai/glm-5.1": {
+    "id": "zhipuai/glm-5.1",
+    "lab": "zhipuai",
+    "name": "GLM 5.1",
+    "family": "glm",
+    "released": "2026-04-07",
+    "updated": "2026-04-07",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 200000,
+      "output": 131072
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/zai-org/GLM-5.1"
+      }
+    ],
+    "providers": [
+      "302ai",
+      "abacus",
+      "alibaba-cn",
+      "alibaba-token-plan",
+      "alibaba-token-plan-cn",
+      "ambient",
+      "auriko",
+      "baseten",
+      "chutes",
+      "cortecs",
+      "crossmodel",
+      "crusoe",
+      "deepinfra",
+      "digitalocean",
+      "dinference",
+      "ebcloud",
+      "edenai",
+      "empiriolabs",
+      "fastrouter",
+      "friendli",
+      "frogbot",
+      "gmicloud",
+      "greenpt",
+      "hpc-ai",
+      "huggingface",
+      "impossibl",
+      "jalapeno",
+      "kenari",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "melious",
+      "nano-gpt",
+      "novita-ai",
+      "ofox",
+      "ollama-cloud",
+      "opencode",
+      "openrouter",
+      "orcarouter",
+      "pioneer",
+      "requesty",
+      "scnet-token-plan",
+      "siliconflow",
+      "siliconflow-cn",
+      "tempr",
+      "tensorx",
+      "togetherai",
+      "tokengo",
+      "vercel",
+      "wafer.ai",
+      "zai",
+      "zenmux",
+      "zhipuai"
+    ]
+  },
+  "zhipuai/glm-5.2": {
+    "id": "zhipuai/glm-5.2",
+    "lab": "zhipuai",
+    "name": "GLM 5.2",
+    "family": "glm",
+    "released": "2026-06-13",
+    "updated": "2026-06-13",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 131072
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/zai-org/GLM-5.2"
+      }
+    ],
+    "providers": [
+      "302ai",
+      "abacus",
+      "above",
+      "aiand",
+      "aimlapi",
+      "alibaba",
+      "alibaba-cn",
+      "alibaba-token-plan",
+      "alibaba-token-plan-cn",
+      "ambient",
+      "arcee",
+      "baseten",
+      "berget",
+      "boundless",
+      "chutes",
+      "cline-pass",
+      "cloudflare-workers-ai",
+      "commandcode",
+      "cortecs",
+      "crossmodel",
+      "crusoe",
+      "databricks",
+      "deepinfra",
+      "digitalocean",
+      "dinference",
+      "edenai",
+      "empiriolabs",
+      "engy",
+      "evroc",
+      "friendli",
+      "gmicloud",
+      "google-vertex",
+      "greenpt",
+      "hpc-ai",
+      "huggingface",
+      "hyper",
+      "impossibl",
+      "inceptron",
+      "jalapeno",
+      "kenari",
+      "kilo",
+      "lilac",
+      "llmgateway",
+      "llmgateway-providers",
+      "mistral",
+      "model-oracle-ai",
+      "nano-gpt",
+      "nebius",
+      "neon",
+      "neuralwatt",
+      "novita-ai",
+      "nvidia",
+      "ofox",
+      "ollama-cloud",
+      "opencode",
+      "opencode-go",
+      "openrouter",
+      "opper",
+      "orcarouter",
+      "pioneer",
+      "prime",
+      "regolo-ai",
+      "requesty",
+      "routing-run",
+      "scaleway",
+      "scnet-token-plan",
+      "scx-ai",
+      "sensenova",
+      "siliconflow",
+      "siliconflow-cn",
+      "standardcompute",
+      "synthetic",
+      "tempr",
+      "tensorx",
+      "togetherai",
+      "tokengo",
+      "unorouter",
+      "vercel",
+      "vivgrid",
+      "volcengine",
+      "vultr",
+      "wafer.ai",
+      "wandb",
+      "zai",
+      "zai-coding-plan",
+      "zenmux",
+      "zhipuai"
+    ]
+  },
+  "zhipuai/glm-5.3": {
+    "id": "zhipuai/glm-5.3",
+    "lab": "zhipuai",
+    "name": "GLM 5.3",
+    "family": "glm",
+    "released": "2026-08-14",
+    "updated": "2026-08-14",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 131072
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/zai-org/GLM-5.3"
+      }
+    ],
+    "providers": [
+      "302ai",
+      "agentrouter",
+      "aiand",
+      "aimlapi",
+      "aki-io",
+      "alibaba-cn",
+      "alibaba-token-plan",
+      "alibaba-token-plan-cn",
+      "arcee",
+      "baseten",
+      "bothub",
+      "boundless",
+      "cline-pass",
+      "cloudferro-sherlock",
+      "cloudflare-workers-ai",
+      "commandcode",
+      "cortecs",
+      "crossmodel",
+      "deepinfra",
+      "digitalocean",
+      "edenai",
+      "empiriolabs",
+      "engy",
+      "fireworks-ai",
+      "friendli",
+      "greenpt",
+      "huggingface",
+      "hyper",
+      "inco",
+      "iteracompute",
+      "kenari",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "melious",
+      "mistral",
+      "moark",
+      "modal",
+      "nan",
+      "nano-gpt",
+      "nebius",
+      "neon",
+      "neuralwatt",
+      "novita-ai",
+      "nvidia",
+      "ofox",
+      "ollama-cloud",
+      "opencode",
+      "opencode-go",
+      "openrouter",
+      "opper",
+      "orcarouter",
+      "perplexity-agent",
+      "prime",
+      "privatemode-ai",
+      "requesty",
+      "runinfra",
+      "scaleway",
+      "scnet-token-plan",
+      "siliconflow",
+      "standardcompute",
+      "subconscious",
+      "synthetic",
+      "tempr",
+      "tensorx",
+      "the-grid-ai",
+      "thinkingmachines",
+      "tinfoil",
+      "togetherai",
+      "tokengo",
+      "tokenrouter",
+      "umans-ai",
+      "umans-ai-coding-plan",
+      "vancine",
+      "vercel",
+      "vivgrid",
+      "volcengine-coding-plan",
+      "vultr",
+      "wandb",
+      "zai",
+      "zai-coding-plan",
+      "zenmux",
+      "zhipuai",
+      "zhipuai-coding-plan"
+    ]
+  },
+  "zhipuai/glm-5.3-flash": {
+    "id": "zhipuai/glm-5.3-flash",
+    "lab": "zhipuai",
+    "name": "GLM 5.3 Flash",
+    "family": "glm-flash",
+    "released": "2026-08-26",
+    "updated": "2026-08-26",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 131072
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/zai-org/GLM-5.3-Flash"
+      }
+    ],
+    "providers": [
+      "302ai",
+      "above",
+      "aiand",
+      "aimlapi",
+      "amd",
+      "arcee",
+      "baseten",
+      "berget",
+      "bothub",
+      "boundless",
+      "cline-pass",
+      "cloudflare-workers-ai",
+      "commandcode",
+      "cortecs",
+      "crossmodel",
+      "deepinfra",
+      "digitalocean",
+      "edenai",
+      "empiriolabs",
+      "engy",
+      "fireworks-ai",
+      "friendli",
+      "greenpt",
+      "huggingface",
+      "hyper",
+      "inco",
+      "iteracompute",
+      "kenari",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "melious",
+      "modal",
+      "nan",
+      "nano-gpt",
+      "nearai",
+      "nebius",
+      "neon",
+      "neuralwatt",
+      "novita-ai",
+      "nvidia",
+      "ofox",
+      "ollama-cloud",
+      "opencode",
+      "opencode-go",
+      "openrouter",
+      "opper",
+      "orcarouter",
+      "pareto",
+      "perplexity-agent",
+      "prime",
+      "privatemode-ai",
+      "requesty",
+      "runinfra",
+      "scnet-token-plan",
+      "siliconflow",
+      "standardcompute",
+      "synthetic",
+      "tempr",
+      "tensorx",
+      "thinkingmachines",
+      "togetherai",
+      "tokengo",
+      "umans-ai",
+      "umans-ai-coding-plan",
+      "vancine",
+      "vercel",
+      "vivgrid",
+      "volcengine",
+      "volcengine-coding-plan",
+      "vultr",
+      "wandb",
+      "zai",
+      "zai-coding-plan",
+      "zenmux",
+      "zhipuai",
+      "zhipuai-coding-plan"
+    ]
+  },
+  "zhipuai/glm-5.3-flash-apex": {
+    "id": "zhipuai/glm-5.3-flash-apex",
+    "lab": "zhipuai",
+    "name": "GLM 5.3 Flash Apex",
+    "family": "glm",
+    "released": "2026-10-05",
+    "updated": "2026-10-05",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "input": 1048576,
+      "output": 32768
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "zhipuai/glm-5.3-flash-apex-abliterated": {
+    "id": "zhipuai/glm-5.3-flash-apex-abliterated",
+    "lab": "zhipuai",
+    "name": "GLM 5.3 Flash Apex Abliterated",
+    "family": "glm",
+    "released": "2026-10-05",
+    "updated": "2026-10-05",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "input": 1048576,
+      "output": 32768
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "zhipuai/glm-5.3-flash-cybersecurity": {
+    "id": "zhipuai/glm-5.3-flash-cybersecurity",
+    "lab": "zhipuai",
+    "name": "GLM 5.3 Flash Cybersecurity",
+    "family": "glm",
+    "released": "2026-09-19",
+    "updated": "2026-09-19",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "input": 1048576,
+      "output": 32768
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "zhipuai/glm-5.3-flash-uncensored": {
+    "id": "zhipuai/glm-5.3-flash-uncensored",
+    "lab": "zhipuai",
+    "name": "GLM 5.3 Flash Uncensored",
+    "family": "glm-flash",
+    "released": "2026-07-29",
+    "updated": "2026-08-27",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "input": 1048576,
+      "output": 32768
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "zhipuai/glm-5.3-prime": {
+    "id": "zhipuai/glm-5.3-prime",
+    "lab": "zhipuai",
+    "name": "GLM 5.3 Prime",
+    "family": "glm",
+    "released": "2026-09-23",
+    "updated": "2026-09-23",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "structured_output": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 131072
+    },
+    "providers": [
+      "kilo",
+      "openrouter"
+    ]
+  },
+  "zhipuai/glm-5.3-uncensored": {
+    "id": "zhipuai/glm-5.3-uncensored",
+    "lab": "zhipuai",
+    "name": "GLM 5.3 Uncensored",
+    "family": "glm",
+    "released": "2026-09-26",
+    "updated": "2026-09-26",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "structured_output": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "input": 1048576,
+      "output": 131072
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "zhipuai/glm-5v-turbo": {
+    "id": "zhipuai/glm-5v-turbo",
+    "lab": "zhipuai",
+    "name": "GLM 5V Turbo",
+    "family": "glm",
+    "released": "2026-04-01",
+    "updated": "2026-04-01",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 200000,
+      "output": 131072
+    },
+    "providers": [
+      "302ai",
+      "aimlapi",
+      "edenai",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "nano-gpt",
+      "ofox",
+      "openrouter",
+      "siliconflow",
+      "tempr",
+      "tensorx",
+      "vercel",
+      "zai",
+      "zenmux",
+      "zhipuai"
+    ]
+  },
+  "zhipuai/glm-image": {
+    "id": "zhipuai/glm-image",
+    "lab": "zhipuai",
+    "name": "GLM Image",
+    "type": "image",
+    "released": "2026-01-14",
+    "updated": "2026-01-14",
+    "open_weights": true,
+    "license": "MIT",
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "image"
+      ]
+    },
+    "limit": {
+      "context": 10240,
+      "output": 0
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/zai-org/GLM-Image"
+      }
+    ],
+    "providers": [
+      "zenmux"
+    ]
+  },
+  "zhipuai/glm-z1-9b-0414": {
+    "id": "zhipuai/glm-z1-9b-0414",
+    "lab": "zhipuai",
+    "name": "GLM Z1 9B 0414",
+    "family": "glm-z",
+    "released": "2024-01-01",
+    "updated": "2025-04-14",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "structured_output": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32000,
+      "input": 32000,
+      "output": 8000
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "zhipuai/glm-z1-airx": {
+    "id": "zhipuai/glm-z1-airx",
+    "lab": "zhipuai",
+    "name": "GLM Z1 AirX",
+    "family": "glm",
+    "released": "2025-04-15",
+    "updated": "2025-04-15",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "structured_output": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32000,
+      "input": 32000,
+      "output": 16384
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  }
+}

@@ -1,0 +1,174 @@
+{
+  "scaledown/classify-1": {
+    "id": "scaledown/classify-1",
+    "lab": "scaledown",
+    "name": "Classify 1",
+    "type": "decision",
+    "released": "2026-10-13",
+    "updated": "2026-10-13",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "structured_output": false,
+      "temperature": false,
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 0
+    },
+    "providers": [
+      "openrouter"
+    ]
+  },
+  "scaledown/extract": {
+    "id": "scaledown/extract",
+    "lab": "scaledown",
+    "name": "Extract",
+    "released": "2026-10-13",
+    "updated": "2026-10-13",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "structured_output": false,
+      "temperature": false,
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 900000
+    },
+    "providers": [
+      "kilo",
+      "openrouter"
+    ]
+  },
+  "scaledown/scaledown-classify-1": {
+    "id": "scaledown/scaledown-classify-1",
+    "lab": "scaledown",
+    "name": "ScaleDown Classify 1",
+    "type": "decision",
+    "released": "2026-10-13",
+    "updated": "2026-10-13",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "scaledown/scaledown-extract-1": {
+    "id": "scaledown/scaledown-extract-1",
+    "lab": "scaledown",
+    "name": "ScaleDown Extract 1",
+    "released": "2026-10-20",
+    "updated": "2026-10-20",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 1000000
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "scaledown/scaledown-summarize-1": {
+    "id": "scaledown/scaledown-summarize-1",
+    "lab": "scaledown",
+    "name": "ScaleDown Summarize 1",
+    "released": "2026-10-20",
+    "updated": "2026-10-20",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 1000
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "scaledown/summarize": {
+    "id": "scaledown/summarize",
+    "lab": "scaledown",
+    "name": "Summarize",
+    "released": "2026-10-13",
+    "updated": "2026-10-13",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "structured_output": false,
+      "temperature": false,
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 4000
+    },
+    "providers": [
+      "kilo",
+      "openrouter"
+    ]
+  }
+}

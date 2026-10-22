@@ -1,0 +1,355 @@
+{
+  "id": "qihang-ai",
+  "name": "QiHang",
+  "kind": "gateway",
+  "type": "community",
+  "endpoint": {
+    "format": "openai-chat",
+    "api": "https://api.qhaigc.net/v1",
+    "auth": {
+      "scheme": "bearer"
+    },
+    "env": [
+      "QIHANG_API_KEY"
+    ]
+  },
+  "doc": "https://www.qhaigc.net/docs",
+  "models": {
+    "anthropic/claude-haiku-4-5-20251001": {
+      "name": "Claude Haiku 4.5 20251001",
+      "family": "claude-haiku",
+      "released": "2025-10-01",
+      "updated": "2025-10-01",
+      "knowledge": "2025-07-31",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 200000,
+        "output": 64000
+      },
+      "reasoning": {
+        "mandatory": false,
+        "default_enabled": false
+      },
+      "provider_options": {
+        "id": "claude-haiku-4-5-20251001",
+        "name": "Claude Haiku 4.5"
+      },
+      "price": {
+        "input": 0.14,
+        "output": 0.71
+      }
+    },
+    "anthropic/claude-opus-4-5-20251101": {
+      "name": "Claude Opus 4.5 20251101",
+      "family": "claude-opus",
+      "released": "2025-11-01",
+      "updated": "2025-11-01",
+      "knowledge": "2025-03",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 200000,
+        "output": 32000
+      },
+      "reasoning": {
+        "mandatory": false,
+        "default_enabled": false
+      },
+      "provider_options": {
+        "id": "claude-opus-4-5-20251101",
+        "name": "Claude Opus 4.5"
+      },
+      "price": {
+        "input": 0.71,
+        "output": 3.57
+      }
+    },
+    "anthropic/claude-sonnet-4-5-20250929": {
+      "name": "Claude Sonnet 4.5 20250929",
+      "family": "claude-sonnet",
+      "released": "2025-09-29",
+      "updated": "2025-09-29",
+      "knowledge": "2025-07-31",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 200000,
+        "output": 64000
+      },
+      "reasoning": {
+        "mandatory": false,
+        "default_enabled": false
+      },
+      "provider_options": {
+        "id": "claude-sonnet-4-5-20250929",
+        "name": "Claude Sonnet 4.5"
+      },
+      "price": {
+        "input": 0.43,
+        "output": 2.14
+      }
+    },
+    "google/gemini-2.5-flash": {
+      "name": "Gemini 2.5 Flash",
+      "family": "gemini-flash",
+      "released": "2025-12-17",
+      "updated": "2025-12-17",
+      "knowledge": "2025-01",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "video",
+          "audio",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "gemini-2.5-flash",
+        "name": "Gemini 2.5 Flash"
+      },
+      "price": {
+        "input": 0.09,
+        "output": 0.71,
+        "tiers": [
+          {
+            "above": 200000,
+            "input": 0.09,
+            "output": 0.71
+          }
+        ]
+      }
+    },
+    "google/gemini-3-flash-preview": {
+      "name": "Gemini 3 Flash Preview",
+      "family": "gemini-flash",
+      "released": "2025-12-17",
+      "updated": "2025-12-17",
+      "knowledge": "2025-01",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "video",
+          "audio",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "gemini-3-flash-preview",
+        "name": "Gemini 3 Flash Preview"
+      },
+      "price": {
+        "input": 0.07,
+        "output": 0.43,
+        "tiers": [
+          {
+            "above": 200000,
+            "input": 0.07,
+            "output": 0.43
+          }
+        ]
+      }
+    },
+    "google/gemini-3-pro-preview": {
+      "name": "Gemini 3 Pro Preview",
+      "family": "gemini-pro",
+      "released": "2025-11-19",
+      "updated": "2025-11-19",
+      "knowledge": "2025-11",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "audio",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 65000
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "gemini-3-pro-preview",
+        "name": "Gemini 3 Pro Preview"
+      },
+      "price": {
+        "input": 0.57,
+        "output": 3.43
+      }
+    },
+    "openai/gpt-5-mini": {
+      "name": "GPT-5 Mini",
+      "family": "gpt-mini",
+      "released": "2025-09-15",
+      "updated": "2025-09-15",
+      "knowledge": "2024-09-30",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 200000,
+        "output": 64000
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "gpt-5-mini",
+        "name": "GPT-5-Mini"
+      },
+      "price": {
+        "input": 0.04,
+        "output": 0.29
+      }
+    },
+    "openai/gpt-5.2": {
+      "name": "GPT-5.2",
+      "family": "gpt",
+      "released": "2025-12-11",
+      "updated": "2025-12-11",
+      "knowledge": "2025-08-31",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 400000,
+        "input": 272000,
+        "output": 128000
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "gpt-5.2",
+        "name": "GPT-5.2"
+      },
+      "price": {
+        "input": 0.25,
+        "output": 2
+      }
+    },
+    "openai/gpt-5.2-codex": {
+      "name": "GPT-5.2 Codex",
+      "family": "gpt-codex",
+      "released": "2025-12-11",
+      "updated": "2025-12-11",
+      "knowledge": "2025-08-31",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 400000,
+        "input": 272000,
+        "output": 128000
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "gpt-5.2-codex",
+        "name": "GPT-5.2 Codex"
+      },
+      "price": {
+        "input": 0.14,
+        "output": 1.14
+      }
+    }
+  }
+}

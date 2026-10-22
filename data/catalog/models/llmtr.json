@@ -1,0 +1,29 @@
+{
+  "llmtr/magibu-11b-v8": {
+    "id": "llmtr/magibu-11b-v8",
+    "lab": "llmtr",
+    "name": "Magibu 11B V8",
+    "released": "2026-06-05",
+    "updated": "2026-08-16",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 8192,
+      "output": 8192
+    },
+    "providers": [
+      "llmtr"
+    ]
+  }
+}

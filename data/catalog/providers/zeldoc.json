@@ -1,0 +1,60 @@
+{
+  "id": "zeldoc",
+  "name": "Zeldoc",
+  "kind": "gateway",
+  "type": "community",
+  "endpoint": {
+    "format": "openai-chat",
+    "api": "https://api.zeldoc.ai/v1",
+    "auth": {
+      "scheme": "bearer"
+    },
+    "env": [
+      "ZELDOC_API_KEY"
+    ]
+  },
+  "doc": "https://docs.zeldoc.ai",
+  "models": {
+    "zeldoc/zdev": {
+      "name": "ZDev",
+      "released": "2026-08-26",
+      "updated": "2026-08-26",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "high",
+          "max"
+        ]
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "zdev",
+        "name": "ZDev"
+      },
+      "price": {
+        "input": 0,
+        "output": 0
+      }
+    }
+  }
+}

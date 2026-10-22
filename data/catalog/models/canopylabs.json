@@ -1,0 +1,60 @@
+{
+  "canopylabs/orpheus-arabic-saudi": {
+    "id": "canopylabs/orpheus-arabic-saudi",
+    "lab": "canopylabs",
+    "name": "Orpheus Arabic Saudi",
+    "family": "canopylabs",
+    "type": "speech",
+    "released": "2025-12-16",
+    "updated": "2025-12-16",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "audio"
+      ]
+    },
+    "limit": {
+      "context": 4000,
+      "output": 50000
+    },
+    "providers": [
+      "groq"
+    ]
+  },
+  "canopylabs/orpheus-v1-english": {
+    "id": "canopylabs/orpheus-v1-english",
+    "lab": "canopylabs",
+    "name": "Orpheus V1 English",
+    "family": "canopylabs",
+    "type": "speech",
+    "released": "2025-12-19",
+    "updated": "2025-12-19",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "audio"
+      ]
+    },
+    "limit": {
+      "context": 4000,
+      "output": 50000
+    },
+    "providers": [
+      "groq"
+    ]
+  }
+}

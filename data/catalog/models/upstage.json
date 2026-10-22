@@ -1,0 +1,248 @@
+{
+  "upstage/solar-10.7b-instruct": {
+    "id": "upstage/solar-10.7b-instruct",
+    "lab": "upstage",
+    "name": "Solar 10.7B Instruct",
+    "released": "2024-06-05",
+    "updated": "2025-04-10",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 8192
+    },
+    "providers": [
+      "nvidia"
+    ]
+  },
+  "upstage/solar-decide": {
+    "id": "upstage/solar-decide",
+    "lab": "upstage",
+    "name": "Solar Decide",
+    "family": "solar",
+    "type": "decision",
+    "released": "2026-09-28",
+    "updated": "2026-09-28",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "structured_output": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 524288,
+      "output": 0
+    },
+    "providers": [
+      "openrouter"
+    ]
+  },
+  "upstage/solar-decide-flash": {
+    "id": "upstage/solar-decide-flash",
+    "lab": "upstage",
+    "name": "Solar Decide Flash",
+    "family": "solar",
+    "type": "decision",
+    "released": "2026-10-08",
+    "updated": "2026-10-08",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "structured_output": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 524288,
+      "output": 0
+    },
+    "providers": [
+      "openrouter"
+    ]
+  },
+  "upstage/solar-mini": {
+    "id": "upstage/solar-mini",
+    "lab": "upstage",
+    "name": "Solar Mini",
+    "family": "solar-mini",
+    "released": "2024-06-12",
+    "updated": "2025-04-22",
+    "knowledge": "2024-09",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32768,
+      "output": 4096
+    },
+    "providers": [
+      "upstage"
+    ]
+  },
+  "upstage/solar-mini4": {
+    "id": "upstage/solar-mini4",
+    "lab": "upstage",
+    "name": "Solar Mini 4",
+    "family": "solar-mini",
+    "released": "2026-09-22",
+    "updated": "2026-09-22",
+    "knowledge": "2026-02",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 524288,
+      "output": 131072
+    },
+    "providers": [
+      "kilo",
+      "nano-gpt",
+      "openrouter",
+      "upstage"
+    ]
+  },
+  "upstage/solar-pro2": {
+    "id": "upstage/solar-pro2",
+    "lab": "upstage",
+    "name": "Solar Pro 2",
+    "family": "solar-pro",
+    "released": "2025-05-20",
+    "updated": "2025-05-20",
+    "knowledge": "2025-03",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 65536,
+      "output": 8192
+    },
+    "providers": [
+      "llmtr",
+      "upstage"
+    ]
+  },
+  "upstage/solar-pro3": {
+    "id": "upstage/solar-pro3",
+    "lab": "upstage",
+    "name": "Solar Pro 3",
+    "family": "solar-pro",
+    "released": "2026-01-26",
+    "updated": "2026-03-23",
+    "knowledge": "2025-07",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 8192
+    },
+    "providers": [
+      "aimlapi",
+      "kilo",
+      "llmtr",
+      "nano-gpt",
+      "openrouter",
+      "upstage"
+    ]
+  },
+  "upstage/solar-pro4": {
+    "id": "upstage/solar-pro4",
+    "lab": "upstage",
+    "name": "Solar Pro 4",
+    "family": "solar-pro",
+    "released": "2026-08-06",
+    "updated": "2026-08-06",
+    "knowledge": "2026-02",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 524288,
+      "output": 131072
+    },
+    "providers": [
+      "aimlapi",
+      "kilo",
+      "llmtr",
+      "nano-gpt",
+      "openrouter",
+      "upstage"
+    ]
+  }
+}

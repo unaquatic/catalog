@@ -1,0 +1,35 @@
+{
+  "fireworks/ember-1": {
+    "id": "fireworks/ember-1",
+    "lab": "fireworks",
+    "name": "Ember 1",
+    "released": "2026-09-22",
+    "updated": "2026-09-22",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "output": 131072
+    },
+    "providers": [
+      "edenai",
+      "fireworks-ai",
+      "kilo",
+      "nano-gpt",
+      "openrouter",
+      "vercel"
+    ]
+  }
+}
