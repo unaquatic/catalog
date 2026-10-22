@@ -404,11 +404,9 @@
       }
     ],
     "providers": [
-      "amazon-bedrock",
       "kilo",
       "llmgateway",
       "llmgateway-providers",
-      "merge-gateway",
       "nvidia",
       "openrouter",
       "vercel"
@@ -474,7 +472,6 @@
     ],
     "providers": [
       "abacus",
-      "amazon-bedrock",
       "cloudflare-workers-ai",
       "digitalocean",
       "groq",
@@ -482,7 +479,6 @@
       "huggingface",
       "inference",
       "kilo",
-      "merge-gateway",
       "nano-gpt",
       "neon",
       "novita-ai",
@@ -863,7 +859,6 @@
     "providers": [
       "abacus",
       "aimlapi",
-      "amazon-bedrock",
       "azure",
       "azure-cognitive-services",
       "cloudferro-sherlock",
@@ -884,7 +879,6 @@
       "llmgateway",
       "llmgateway-providers",
       "meganova",
-      "merge-gateway",
       "nano-gpt",
       "neon",
       "novita-ai",
@@ -902,8 +896,7 @@
       "tinfoil",
       "togetherai",
       "vercel",
-      "wandb",
-      "watsonx"
+      "wandb"
     ]
   },
   "meta/llama-3.3-70b-instruct-abliterated": {
@@ -1151,7 +1144,6 @@
     ],
     "providers": [
       "abacus",
-      "amazon-bedrock",
       "deepinfra",
       "digitalocean",
       "helicone",
@@ -1163,8 +1155,7 @@
       "novita-ai",
       "oci",
       "openrouter",
-      "vercel",
-      "watsonx"
+      "vercel"
     ]
   },
   "meta/llama-4-scout-17b-16e-instruct-fp8": {
@@ -1230,7 +1221,6 @@
       }
     ],
     "providers": [
-      "amazon-bedrock",
       "azure",
       "azure-cognitive-services",
       "cloudflare-workers-ai",
@@ -1545,16 +1535,13 @@
     },
     "providers": [
       "abacus",
-      "aihubmix",
       "aimlapi",
-      "cloudflare-ai-gateway",
       "commandcode",
       "edenai",
       "empiriolabs",
       "kilo",
       "llmgateway",
       "llmgateway-providers",
-      "merge-gateway",
       "meta",
       "nano-gpt",
       "openrouter",
@@ -1593,9 +1580,7 @@
     },
     "providers": [
       "abacus",
-      "aihubmix",
       "aimlapi",
-      "cloudflare-ai-gateway",
       "commandcode",
       "edenai",
       "empiriolabs",
@@ -1603,7 +1588,6 @@
       "llmgateway",
       "llmgateway-providers",
       "llmtr",
-      "merge-gateway",
       "meta",
       "nano-gpt",
       "opencode",
@@ -1643,11 +1627,9 @@
       "output": 131072
     },
     "providers": [
-      "aihubmix",
       "aimlapi",
       "bothub",
       "cline-pass",
-      "cloudflare-ai-gateway",
       "commandcode",
       "edenai",
       "empiriolabs",
@@ -1759,11 +1741,9 @@
       }
     ],
     "providers": [
-      "cloudflare-ai-gateway",
       "edenai",
       "fireworks-ai",
       "kilo",
-      "merge-gateway",
       "modal",
       "nano-gpt",
       "nebius",
@@ -1850,7 +1830,6 @@
       }
     ],
     "providers": [
-      "cloudflare-ai-gateway",
       "commandcode",
       "edenai",
       "llmgateway",

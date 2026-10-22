@@ -52,7 +52,6 @@
       "output": 0
     },
     "providers": [
-      "cloudflare-ai-gateway",
       "openrouter",
       "vercel"
     ]
@@ -82,7 +81,6 @@
       "output": 0
     },
     "providers": [
-      "cloudflare-ai-gateway",
       "nano-gpt",
       "opencode",
       "openrouter",

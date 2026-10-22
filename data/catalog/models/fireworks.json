@@ -24,7 +24,6 @@
       "output": 131072
     },
     "providers": [
-      "cloudflare-ai-gateway",
       "edenai",
       "fireworks-ai",
       "kilo",

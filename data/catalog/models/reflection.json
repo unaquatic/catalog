@@ -64,7 +64,6 @@
       }
     ],
     "providers": [
-      "cloudflare-ai-gateway",
       "edenai",
       "kilo",
       "nano-gpt",

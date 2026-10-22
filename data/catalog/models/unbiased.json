@@ -24,8 +24,7 @@
       "output": 131072
     },
     "providers": [
-      "aimlapi",
-      "cloudflare-ai-gateway"
+      "aimlapi"
     ]
   },
   "unbiased/pareto-26.10": {

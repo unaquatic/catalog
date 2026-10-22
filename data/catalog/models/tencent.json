@@ -350,7 +350,6 @@
       }
     ],
     "providers": [
-      "aihubmix",
       "aimlapi",
       "commandcode",
       "crossmodel",
@@ -406,7 +405,6 @@
       }
     ],
     "providers": [
-      "aihubmix",
       "kilo",
       "opencode",
       "openrouter",
@@ -439,7 +437,6 @@
       "output": 64000
     },
     "providers": [
-      "aihubmix",
       "aimlapi",
       "commandcode",
       "crossmodel",

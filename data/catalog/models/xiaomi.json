@@ -176,7 +176,6 @@
       }
     ],
     "providers": [
-      "aihubmix",
       "aimlapi",
       "ambient",
       "cline-pass",
@@ -237,7 +236,6 @@
       }
     ],
     "providers": [
-      "aihubmix",
       "aimlapi",
       "cline-pass",
       "deepinfra",
@@ -426,7 +424,6 @@
     ],
     "providers": [
       "above",
-      "aihubmix",
       "amd",
       "boundless",
       "cline-pass",
@@ -548,7 +545,6 @@
     ],
     "providers": [
       "above",
-      "aihubmix",
       "boundless",
       "cline-pass",
       "crossmodel",
@@ -609,7 +605,6 @@
     ],
     "providers": [
       "above",
-      "aihubmix",
       "empiriolabs",
       "kilo",
       "nano-gpt",

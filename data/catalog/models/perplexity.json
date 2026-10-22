@@ -214,7 +214,6 @@
       "opper",
       "perplexity",
       "perplexity-agent",
-      "sap-ai-core",
       "vercel"
     ]
   },
@@ -249,8 +248,7 @@
       "kilo",
       "llmtr",
       "openrouter",
-      "perplexity",
-      "sap-ai-core"
+      "perplexity"
     ]
   },
   "perplexity/sonar-pro": {
@@ -287,8 +285,7 @@
       "kilo",
       "openrouter",
       "opper",
-      "perplexity",
-      "sap-ai-core"
+      "perplexity"
     ]
   },
   "perplexity/sonar-pro-search": {

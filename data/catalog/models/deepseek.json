@@ -313,7 +313,6 @@
     "providers": [
       "abacus",
       "alibaba-cn",
-      "amazon-bedrock",
       "azure",
       "azure-cognitive-services",
       "cloudflare-workers-ai",
@@ -322,7 +321,6 @@
       "huggingface",
       "iflowcn",
       "melious",
-      "merge-gateway",
       "novita-ai",
       "qiniu-ai",
       "siliconflow",
@@ -373,7 +371,6 @@
       "jiekou",
       "kilo",
       "meganova",
-      "merge-gateway",
       "nano-gpt",
       "novita-ai",
       "openrouter",
@@ -757,7 +754,6 @@
       "helicone",
       "huggingface",
       "iflowcn",
-      "merge-gateway",
       "novita-ai",
       "pioneer",
       "qiniu-ai",
@@ -844,13 +840,11 @@
     "providers": [
       "abacus",
       "alibaba-cn",
-      "amazon-bedrock",
       "baseten",
       "deepinfra",
       "huggingface",
       "jiekou",
       "meganova",
-      "merge-gateway",
       "nano-gpt",
       "pioneer",
       "qiniu-ai",
@@ -967,7 +961,6 @@
       "alibaba-cn",
       "alibaba-token-plan",
       "alibaba-token-plan-cn",
-      "amazon-bedrock",
       "azure",
       "azure-cognitive-services",
       "chutes",
@@ -983,7 +976,6 @@
       "llmgateway-providers",
       "meganova",
       "melious",
-      "merge-gateway",
       "nano-gpt",
       "nearai",
       "ofox",
@@ -1156,7 +1148,6 @@
       "abacus",
       "agentrouter",
       "aiand",
-      "aihubmix",
       "aimlapi",
       "alibaba-cn",
       "alibaba-token-plan",
@@ -1183,7 +1174,6 @@
       "kilo",
       "llmgateway",
       "llmgateway-providers",
-      "merge-gateway",
       "moark",
       "modelis",
       "nano-gpt",
@@ -1244,7 +1234,6 @@
       }
     ],
     "providers": [
-      "merge-gateway",
       "nano-gpt",
       "ofox"
     ]
@@ -1282,7 +1271,6 @@
       }
     ],
     "providers": [
-      "aihubmix",
       "alibaba",
       "alibaba-token-plan",
       "alibaba-token-plan-cn",
@@ -1306,7 +1294,6 @@
       "inceptron",
       "kilo",
       "melious",
-      "merge-gateway",
       "moark",
       "nano-gpt",
       "nebius",
@@ -1398,7 +1385,6 @@
       }
     ],
     "providers": [
-      "aihubmix",
       "aimlapi",
       "amd",
       "commandcode",
@@ -1450,7 +1436,6 @@
     "providers": [
       "abacus",
       "aiand",
-      "aihubmix",
       "aimlapi",
       "alibaba-cn",
       "alibaba-token-plan",
@@ -1462,7 +1447,6 @@
       "azure-cognitive-services",
       "baseten",
       "cline-pass",
-      "cloudflare-ai-gateway",
       "commandcode",
       "cortecs",
       "crossmodel",
@@ -1482,7 +1466,6 @@
       "kilo",
       "llmgateway",
       "llmgateway-providers",
-      "merge-gateway",
       "moark",
       "model-oracle-ai",
       "modelis",
@@ -1541,7 +1524,6 @@
       "output": 384000
     },
     "providers": [
-      "merge-gateway",
       "ofox"
     ]
   },
@@ -1578,7 +1560,6 @@
     ],
     "providers": [
       "above",
-      "aihubmix",
       "aimlapi",
       "alibaba-token-plan",
       "alibaba-token-plan-cn",
@@ -1597,7 +1578,6 @@
       "hyper",
       "iteracompute",
       "kilo",
-      "merge-gateway",
       "nano-gpt",
       "nebius",
       "novita-ai",
@@ -1686,7 +1666,6 @@
       "302ai",
       "above",
       "aiand",
-      "aihubmix",
       "aimlapi",
       "aki-io",
       "alibaba-cn",
@@ -1718,7 +1697,6 @@
       "llmgateway",
       "llmgateway-providers",
       "melious",
-      "merge-gateway",
       "modal",
       "nan",
       "nano-gpt",
@@ -1808,7 +1786,6 @@
       "llmgateway",
       "llmgateway-providers",
       "melious",
-      "merge-gateway",
       "nano-gpt",
       "nearai",
       "novita-ai",

@@ -28,35 +28,6 @@
       "the-grid-ai"
     ]
   },
-  "bytedance-seed/dola-seed-2.0-code-preview": {
-    "id": "bytedance-seed/dola-seed-2.0-code-preview",
-    "lab": "bytedance-seed",
-    "name": "Dola Seed 2.0 Code Preview",
-    "family": "seed",
-    "released": "2026-03-28",
-    "updated": "2026-03-28",
-    "open_weights": false,
-    "reasoning": false,
-    "capabilities": {
-      "tools": false,
-      "attachments": false,
-      "structured_output": false,
-      "temperature": true,
-      "input": [
-        "text"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 131072,
-      "output": 32768
-    },
-    "providers": [
-      "merge-gateway"
-    ]
-  },
   "bytedance-seed/doubao-1.5-pro-256k": {
     "id": "bytedance-seed/doubao-1.5-pro-256k",
     "lab": "bytedance-seed",
@@ -283,99 +254,6 @@
     },
     "providers": [
       "302ai"
-    ]
-  },
-  "bytedance-seed/doubao-seed-2-0-code-preview": {
-    "id": "bytedance-seed/doubao-seed-2-0-code-preview",
-    "lab": "bytedance-seed",
-    "name": "Doubao Seed 2.0 Code Preview",
-    "family": "seed",
-    "released": "2026-02-14",
-    "updated": "2026-02-14",
-    "open_weights": false,
-    "reasoning": true,
-    "capabilities": {
-      "tools": true,
-      "attachments": true,
-      "structured_output": true,
-      "temperature": true,
-      "input": [
-        "text",
-        "image",
-        "video"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 256000,
-      "output": 128000
-    },
-    "providers": [
-      "aihubmix"
-    ]
-  },
-  "bytedance-seed/doubao-seed-2-0-lite-260428": {
-    "id": "bytedance-seed/doubao-seed-2-0-lite-260428",
-    "lab": "bytedance-seed",
-    "name": "Doubao Seed 2.0 Lite 260428",
-    "family": "seed",
-    "released": "2026-04-28",
-    "updated": "2026-04-28",
-    "open_weights": false,
-    "reasoning": true,
-    "capabilities": {
-      "tools": true,
-      "attachments": true,
-      "structured_output": true,
-      "temperature": true,
-      "input": [
-        "text",
-        "image",
-        "video"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 256000,
-      "output": 128000
-    },
-    "providers": [
-      "aihubmix"
-    ]
-  },
-  "bytedance-seed/doubao-seed-2-0-mini-260428": {
-    "id": "bytedance-seed/doubao-seed-2-0-mini-260428",
-    "lab": "bytedance-seed",
-    "name": "Doubao Seed 2.0 Mini 260428",
-    "family": "seed",
-    "released": "2026-04-28",
-    "updated": "2026-04-28",
-    "open_weights": false,
-    "reasoning": true,
-    "capabilities": {
-      "tools": true,
-      "attachments": true,
-      "structured_output": true,
-      "temperature": true,
-      "input": [
-        "text",
-        "image",
-        "video"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 256000,
-      "output": 128000
-    },
-    "providers": [
-      "aihubmix"
     ]
   },
   "bytedance-seed/doubao-seed-code": {
@@ -693,7 +571,6 @@
       "edenai",
       "empiriolabs",
       "kilo",
-      "merge-gateway",
       "nano-gpt",
       "ofox",
       "openrouter",
@@ -764,7 +641,6 @@
       "aimlapi",
       "empiriolabs",
       "kilo",
-      "merge-gateway",
       "nano-gpt",
       "ofox",
       "openrouter",
@@ -837,7 +713,6 @@
       "edenai",
       "empiriolabs",
       "kilo",
-      "merge-gateway",
       "nano-gpt",
       "ofox",
       "openrouter",
@@ -905,10 +780,8 @@
       "output": 128000
     },
     "providers": [
-      "aihubmix",
       "deepinfra",
       "empiriolabs",
-      "merge-gateway",
       "nano-gpt",
       "ofox",
       "qiniu-ai",

@@ -66,9 +66,7 @@
         "url": "https://huggingface.co/ibm-granite/granite-4.0-h-small"
       }
     ],
-    "providers": [
-      "watsonx"
-    ]
+    "providers": []
   },
   "ibm/granite-4.2-8b": {
     "id": "ibm/granite-4.2-8b",

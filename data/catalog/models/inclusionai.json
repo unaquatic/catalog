@@ -118,7 +118,6 @@
       }
     ],
     "providers": [
-      "aihubmix",
       "kilo",
       "llmgateway",
       "llmgateway-providers",

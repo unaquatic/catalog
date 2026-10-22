@@ -241,7 +241,6 @@
       }
     ],
     "providers": [
-      "aihubmix",
       "ambient",
       "commandcode",
       "deepinfra",
@@ -299,7 +298,6 @@
       }
     ],
     "providers": [
-      "aihubmix",
       "aimlapi",
       "commandcode",
       "deepinfra",

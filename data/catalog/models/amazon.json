@@ -28,7 +28,6 @@
       "output": 65536
     },
     "providers": [
-      "amazon-bedrock",
       "cortecs",
       "vercel"
     ]
@@ -128,9 +127,7 @@
       "output": 10000
     },
     "providers": [
-      "amazon-bedrock",
       "edenai",
-      "sap-ai-core",
       "vercel"
     ]
   },
@@ -194,9 +191,7 @@
       "output": 10000
     },
     "providers": [
-      "amazon-bedrock",
       "edenai",
-      "sap-ai-core",
       "vercel"
     ]
   },
@@ -261,7 +256,6 @@
       "output": 10000
     },
     "providers": [
-      "amazon-bedrock",
       "kilo",
       "openrouter"
     ]
@@ -295,9 +289,7 @@
       "output": 10000
     },
     "providers": [
-      "amazon-bedrock",
       "edenai",
-      "sap-ai-core",
       "vercel"
     ]
   },
@@ -333,33 +325,6 @@
       "kilo",
       "nano-gpt",
       "openrouter"
-    ]
-  },
-  "amazon/titan-embed-text": {
-    "id": "amazon/titan-embed-text",
-    "lab": "amazon",
-    "name": "Titan Embed Text",
-    "released": "2024-04-30",
-    "updated": "2024-04-30",
-    "open_weights": false,
-    "reasoning": false,
-    "capabilities": {
-      "tools": false,
-      "attachments": false,
-      "temperature": false,
-      "input": [
-        "text"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 8192,
-      "output": 1536
-    },
-    "providers": [
-      "sap-ai-core"
     ]
   },
   "amazon/titan-embed-text-v2": {

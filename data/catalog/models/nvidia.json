@@ -366,33 +366,6 @@
       "nvidia"
     ]
   },
-  "nvidia/llama-3.2-nv-embedqa-1b": {
-    "id": "nvidia/llama-3.2-nv-embedqa-1b",
-    "lab": "nvidia",
-    "name": "Llama 3.2 Nv Embedqa 1B",
-    "released": "2024-09-25",
-    "updated": "2024-09-25",
-    "open_weights": false,
-    "reasoning": false,
-    "capabilities": {
-      "tools": false,
-      "attachments": false,
-      "temperature": false,
-      "input": [
-        "text"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 8192,
-      "output": 4096
-    },
-    "providers": [
-      "sap-ai-core"
-    ]
-  },
   "nvidia/llama-3.3-nemotron-super-49b-v1": {
     "id": "nvidia/llama-3.3-nemotron-super-49b-v1",
     "lab": "nvidia",
@@ -483,9 +456,7 @@
         "url": "https://huggingface.co/nvidia/llama-nemotron-embed-1b-v2"
       }
     ],
-    "providers": [
-      "sap-ai-core"
-    ]
+    "providers": []
   },
   "nvidia/llama-nemotron-embed-vl-1b-v2": {
     "id": "nvidia/llama-nemotron-embed-vl-1b-v2",
@@ -657,7 +628,6 @@
       "output": 262144
     },
     "providers": [
-      "amazon-bedrock",
       "cortecs",
       "crusoe",
       "deepinfra",
@@ -666,7 +636,6 @@
       "infomaniak",
       "kenari",
       "kilo",
-      "merge-gateway",
       "nano-gpt",
       "novita-ai",
       "nvidia",
@@ -705,7 +674,6 @@
       "output": 65536
     },
     "providers": [
-      "aihubmix",
       "crusoe",
       "deepinfra",
       "digitalocean",
@@ -770,8 +738,6 @@
       "output": 262144
     },
     "providers": [
-      "aihubmix",
-      "amazon-bedrock",
       "baseten",
       "boundless",
       "cloudflare-workers-ai",
@@ -819,7 +785,6 @@
       "output": 128000
     },
     "providers": [
-      "aihubmix",
       "baseten",
       "bothub",
       "commandcode",
@@ -900,7 +865,6 @@
       "output": 8192
     },
     "providers": [
-      "aihubmix",
       "kilo",
       "nano-gpt",
       "nvidia",
@@ -935,10 +899,8 @@
       "output": 262144
     },
     "providers": [
-      "aihubmix",
       "fireworks-ai",
       "kilo",
-      "merge-gateway",
       "nano-gpt",
       "nebius",
       "nvidia",
@@ -1130,7 +1092,6 @@
       "output": 128000
     },
     "providers": [
-      "amazon-bedrock",
       "cortecs",
       "digitalocean",
       "nvidia",
@@ -1163,8 +1124,6 @@
       "output": 131072
     },
     "providers": [
-      "amazon-bedrock",
-      "merge-gateway",
       "nvidia",
       "vercel"
     ]

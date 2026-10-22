@@ -478,8 +478,8 @@
         "cache_write": 1.25
       }
     },
-    "anthropic/claude-opus-4": {
-      "name": "Claude Opus 4",
+    "anthropic/claude-opus-4-0": {
+      "name": "Claude Opus 4.0",
       "family": "claude-opus",
       "released": "2025-05-14",
       "updated": "2025-05-14",

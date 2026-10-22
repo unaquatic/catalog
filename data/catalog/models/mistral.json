@@ -92,7 +92,6 @@
       "aimlapi",
       "cortecs",
       "edenai",
-      "google-vertex",
       "kilo",
       "llmgateway",
       "llmgateway-providers",
@@ -164,7 +163,6 @@
     ],
     "providers": [
       "edenai",
-      "merge-gateway",
       "mistral",
       "vercel"
     ]
@@ -202,7 +200,6 @@
     ],
     "providers": [
       "aimlapi",
-      "amazon-bedrock",
       "anyapi",
       "cortecs",
       "edenai",
@@ -211,7 +208,6 @@
       "kilo",
       "llmgateway",
       "llmgateway-providers",
-      "merge-gateway",
       "mistral",
       "nano-gpt",
       "openrouter",
@@ -275,7 +271,6 @@
       "output": 128000
     },
     "providers": [
-      "merge-gateway",
       "mistral"
     ]
   },
@@ -312,7 +307,6 @@
     ],
     "providers": [
       "edenai",
-      "merge-gateway",
       "mistral"
     ]
   },
@@ -416,7 +410,6 @@
       }
     ],
     "providers": [
-      "merge-gateway",
       "mistral"
     ]
   },
@@ -535,7 +528,6 @@
     },
     "providers": [
       "edenai",
-      "merge-gateway",
       "mistral",
       "pioneer"
     ]
@@ -609,9 +601,7 @@
         "url": "https://huggingface.co/mistralai/Magistral-Small-2509"
       }
     ],
-    "providers": [
-      "amazon-bedrock"
-    ]
+    "providers": []
   },
   "mistral/ministral-14b": {
     "id": "mistral/ministral-14b",
@@ -720,7 +710,6 @@
       }
     ],
     "providers": [
-      "amazon-bedrock",
       "digitalocean",
       "edenai",
       "infomaniak",
@@ -793,7 +782,6 @@
       }
     ],
     "providers": [
-      "amazon-bedrock",
       "lowrouter",
       "mistral"
     ]
@@ -860,7 +848,6 @@
       }
     ],
     "providers": [
-      "amazon-bedrock",
       "digitalocean",
       "lowrouter",
       "mistral"
@@ -1382,7 +1369,6 @@
     ],
     "providers": [
       "helicone",
-      "merge-gateway",
       "mistral"
     ]
   },
@@ -1420,7 +1406,6 @@
     ],
     "providers": [
       "302ai",
-      "amazon-bedrock",
       "anyapi",
       "cortecs",
       "edenai",
@@ -1428,7 +1413,6 @@
       "llmgateway",
       "llmgateway-providers",
       "lowrouter",
-      "merge-gateway",
       "mistral",
       "ollama-cloud",
       "openrouter",
@@ -1579,7 +1563,6 @@
       "kenari",
       "llmgateway",
       "llmgateway-providers",
-      "merge-gateway",
       "mistral",
       "tempr"
     ]
@@ -1614,11 +1597,8 @@
       "azure",
       "azure-cognitive-services",
       "edenai",
-      "google-vertex",
-      "merge-gateway",
       "mistral",
-      "pioneer",
-      "sap-ai-core"
+      "pioneer"
     ]
   },
   "mistral/mistral-medium-2508": {
@@ -1691,7 +1671,6 @@
       "mistral",
       "nvidia",
       "pioneer",
-      "sap-ai-core",
       "scaleway",
       "tempr"
     ]
@@ -1867,7 +1846,6 @@
     ],
     "providers": [
       "edenai",
-      "merge-gateway",
       "mistral",
       "requesty",
       "tempr"
@@ -2138,7 +2116,6 @@
       "pioneer",
       "prime",
       "requesty",
-      "sap-ai-core",
       "tempr"
     ]
   },
@@ -2178,9 +2155,7 @@
       "azure",
       "azure-cognitive-services",
       "cloudflare-workers-ai",
-      "cortecs",
-      "google-vertex",
-      "watsonx"
+      "cortecs"
     ]
   },
   "mistral/mistral-small-3.1-24b-instruct": {
@@ -2346,7 +2321,6 @@
     ],
     "providers": [
       "edenai",
-      "merge-gateway",
       "mistral",
       "tempr",
       "vercel"
@@ -2653,7 +2627,6 @@
       "output": 8192
     },
     "providers": [
-      "amazon-bedrock",
       "cortecs",
       "edenai"
     ]
@@ -2691,7 +2664,6 @@
       }
     ],
     "providers": [
-      "merge-gateway",
       "mistral"
     ]
   },
@@ -2786,7 +2758,6 @@
       }
     ],
     "providers": [
-      "amazon-bedrock",
       "edenai"
     ]
   },
@@ -2940,7 +2911,6 @@
     ],
     "providers": [
       "aimlapi",
-      "amazon-bedrock",
       "cortecs",
       "edenai",
       "evroc",

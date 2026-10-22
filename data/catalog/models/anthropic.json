@@ -123,9 +123,7 @@
       "context": 200000,
       "output": 8192
     },
-    "providers": [
-      "sap-ai-core"
-    ]
+    "providers": []
   },
   "anthropic/claude-3-5-sonnet-v2": {
     "id": "anthropic/claude-3-5-sonnet-v2",
@@ -220,9 +218,7 @@
     "providers": [
       "abacus",
       "digitalocean",
-      "merge-gateway",
-      "pioneer",
-      "sap-ai-core"
+      "pioneer"
     ]
   },
   "anthropic/claude-3-haiku-20240307": {
@@ -253,8 +249,7 @@
       "output": 4096
     },
     "providers": [
-      "helicone",
-      "sap-ai-core"
+      "helicone"
     ]
   },
   "anthropic/claude-3-opus": {
@@ -284,39 +279,7 @@
       "output": 4096
     },
     "providers": [
-      "digitalocean",
-      "sap-ai-core"
-    ]
-  },
-  "anthropic/claude-3-sonnet": {
-    "id": "anthropic/claude-3-sonnet",
-    "lab": "anthropic",
-    "name": "Claude 3 Sonnet",
-    "family": "claude-sonnet",
-    "released": "2024-03-04",
-    "updated": "2024-03-04",
-    "knowledge": "2023-08-31",
-    "open_weights": false,
-    "reasoning": false,
-    "capabilities": {
-      "tools": true,
-      "attachments": true,
-      "temperature": true,
-      "input": [
-        "text",
-        "image",
-        "pdf"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 200000,
-      "output": 4096
-    },
-    "providers": [
-      "sap-ai-core"
+      "digitalocean"
     ]
   },
   "anthropic/claude-fable-5": {
@@ -349,13 +312,10 @@
     "providers": [
       "302ai",
       "abacus",
-      "aihubmix",
       "aimlapi",
-      "amazon-bedrock",
       "anthropic",
       "azure",
       "azure-cognitive-services",
-      "cloudflare-ai-gateway",
       "commandcode",
       "crossmodel",
       "deepinfra",
@@ -363,7 +323,6 @@
       "edenai",
       "freemodel",
       "github-copilot",
-      "gitlab",
       "google-vertex",
       "google-vertex-anthropic",
       "impossibl",
@@ -371,7 +330,6 @@
       "kilo",
       "llmgateway",
       "llmgateway-providers",
-      "merge-gateway",
       "model-oracle-ai",
       "modelis",
       "nano-gpt",
@@ -424,27 +382,22 @@
     },
     "providers": [
       "302ai",
-      "aihubmix",
       "aimlapi",
       "aixy",
-      "amazon-bedrock",
       "anthropic",
       "azure",
       "azure-cognitive-services",
       "boundless",
-      "cloudflare-ai-gateway",
       "commandcode",
       "crossmodel",
       "digitalocean",
       "edenai",
       "github-copilot",
-      "gitlab",
       "google-vertex",
       "google-vertex-anthropic",
       "kilo",
       "llmgateway",
       "llmgateway-providers",
-      "merge-gateway",
       "nano-gpt",
       "nearai",
       "neon",
@@ -521,13 +474,11 @@
     },
     "providers": [
       "302ai",
-      "aihubmix",
       "aimlapi",
       "anthropic",
       "anyapi",
       "azure",
       "azure-cognitive-services",
-      "cloudflare-ai-gateway",
       "cortecs",
       "crossmodel",
       "databricks",
@@ -553,7 +504,6 @@
       "poe",
       "qiniu-ai",
       "requesty",
-      "sap-ai-core",
       "snowflake-cortex",
       "tempr",
       "vercel",
@@ -591,19 +541,16 @@
     "providers": [
       "302ai",
       "abacus",
-      "amazon-bedrock",
       "anthropic",
       "commandcode",
       "daoxe",
       "freemodel",
-      "gitlab",
       "google-vertex",
       "google-vertex-anthropic",
       "helicone",
       "jiekou",
       "llmgateway",
       "llmgateway-providers",
-      "merge-gateway",
       "qihang-ai",
       "tempr",
       "unorouter"
@@ -638,14 +585,11 @@
     },
     "providers": [
       "302ai",
-      "aihubmix",
       "aimlapi",
       "aixy",
-      "amazon-bedrock",
       "anthropic",
       "azure",
       "azure-cognitive-services",
-      "cloudflare-ai-gateway",
       "commandcode",
       "cortecs",
       "crossmodel",
@@ -657,7 +601,6 @@
       "kilo",
       "llmgateway",
       "llmgateway-providers",
-      "merge-gateway",
       "nano-gpt",
       "nearai",
       "neon",
@@ -704,38 +647,6 @@
       "azure-cognitive-services"
     ]
   },
-  "anthropic/claude-opus-4": {
-    "id": "anthropic/claude-opus-4",
-    "lab": "anthropic",
-    "name": "Claude Opus 4",
-    "family": "claude-opus",
-    "released": "2025-05-14",
-    "updated": "2025-05-14",
-    "knowledge": "2025-05",
-    "open_weights": false,
-    "reasoning": true,
-    "capabilities": {
-      "tools": true,
-      "attachments": false,
-      "temperature": true,
-      "input": [
-        "text",
-        "image"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 200000,
-      "output": 32000
-    },
-    "providers": [
-      "helicone",
-      "poe",
-      "zenmux"
-    ]
-  },
   "anthropic/claude-opus-4-0": {
     "id": "anthropic/claude-opus-4-0",
     "lab": "anthropic",
@@ -765,7 +676,10 @@
     },
     "providers": [
       "digitalocean",
-      "qiniu-ai"
+      "helicone",
+      "poe",
+      "qiniu-ai",
+      "zenmux"
     ]
   },
   "anthropic/claude-opus-4-1": {
@@ -843,13 +757,11 @@
     "providers": [
       "302ai",
       "abacus",
-      "amazon-bedrock",
       "fastrouter",
       "google-vertex",
       "google-vertex-anthropic",
       "helicone",
-      "jiekou",
-      "merge-gateway"
+      "jiekou"
     ]
   },
   "anthropic/claude-opus-4-20250514": {
@@ -883,9 +795,7 @@
       "abacus",
       "google-vertex",
       "google-vertex-anthropic",
-      "jiekou",
-      "merge-gateway",
-      "sap-ai-core"
+      "jiekou"
     ]
   },
   "anthropic/claude-opus-4-5": {
@@ -916,12 +826,10 @@
       "output": 64000
     },
     "providers": [
-      "aihubmix",
       "aimlapi",
       "anthropic",
       "azure",
       "azure-cognitive-services",
-      "cloudflare-ai-gateway",
       "cortecs",
       "databricks",
       "digitalocean",
@@ -941,7 +849,6 @@
       "poe",
       "qiniu-ai",
       "requesty",
-      "sap-ai-core",
       "snowflake-cortex",
       "tempr",
       "vercel",
@@ -978,16 +885,13 @@
     "providers": [
       "302ai",
       "abacus",
-      "amazon-bedrock",
       "anthropic",
       "edenai",
-      "gitlab",
       "google-vertex",
       "google-vertex-anthropic",
       "jiekou",
       "llmgateway",
       "llmgateway-providers",
-      "merge-gateway",
       "qihang-ai",
       "tempr"
     ]
@@ -1021,21 +925,17 @@
     },
     "providers": [
       "abacus",
-      "aihubmix",
-      "amazon-bedrock",
       "anthropic",
       "anyapi",
       "auriko",
       "azure",
       "azure-cognitive-services",
-      "cloudflare-ai-gateway",
       "cortecs",
       "databricks",
       "digitalocean",
       "edenai",
       "freemodel",
       "frogbot",
-      "gitlab",
       "gmicloud",
       "google-vertex",
       "google-vertex-anthropic",
@@ -1044,7 +944,6 @@
       "kilo",
       "llmgateway",
       "llmgateway-providers",
-      "merge-gateway",
       "nano-gpt",
       "nearai",
       "neon",
@@ -1058,7 +957,6 @@
       "poe",
       "prime",
       "requesty",
-      "sap-ai-core",
       "snowflake-cortex",
       "tempr",
       "vercel",
@@ -1095,15 +993,12 @@
     "providers": [
       "302ai",
       "abacus",
-      "aihubmix",
       "aimlapi",
-      "amazon-bedrock",
       "anthropic",
       "anyapi",
       "auriko",
       "azure",
       "azure-cognitive-services",
-      "cloudflare-ai-gateway",
       "commandcode",
       "cortecs",
       "crossmodel",
@@ -1113,7 +1008,6 @@
       "freemodel",
       "frogbot",
       "github-copilot",
-      "gitlab",
       "gmicloud",
       "google-vertex",
       "google-vertex-anthropic",
@@ -1123,7 +1017,6 @@
       "kilo",
       "llmgateway",
       "llmgateway-providers",
-      "merge-gateway",
       "nano-gpt",
       "nearai",
       "neon",
@@ -1137,7 +1030,6 @@
       "poe",
       "prime",
       "requesty",
-      "sap-ai-core",
       "snowflake-cortex",
       "tempr",
       "vercel",
@@ -1175,13 +1067,10 @@
       "302ai",
       "abacus",
       "agentrouter",
-      "aihubmix",
       "aimlapi",
-      "amazon-bedrock",
       "anthropic",
       "azure",
       "azure-cognitive-services",
-      "cloudflare-ai-gateway",
       "commandcode",
       "cortecs",
       "crossmodel",
@@ -1191,7 +1080,6 @@
       "fastrouter",
       "freemodel",
       "github-copilot",
-      "gitlab",
       "gmicloud",
       "google-vertex",
       "google-vertex-anthropic",
@@ -1200,7 +1088,6 @@
       "kilo",
       "llmgateway",
       "llmgateway-providers",
-      "merge-gateway",
       "model-oracle-ai",
       "modelis",
       "nano-gpt",
@@ -1216,7 +1103,6 @@
       "prime",
       "requesty",
       "routing-run",
-      "sap-ai-core",
       "snowflake-cortex",
       "tempr",
       "unorouter",
@@ -1256,28 +1142,23 @@
       "302ai",
       "abacus",
       "agentrouter",
-      "aihubmix",
       "aimlapi",
-      "amazon-bedrock",
       "anthropic",
       "azure",
       "azure-cognitive-services",
       "boundless",
-      "cloudflare-ai-gateway",
       "commandcode",
       "cortecs",
       "crossmodel",
       "digitalocean",
       "edenai",
       "github-copilot",
-      "gitlab",
       "google-vertex",
       "google-vertex-anthropic",
       "kenari",
       "kilo",
       "llmgateway",
       "llmgateway-providers",
-      "merge-gateway",
       "nano-gpt",
       "nearai",
       "neon",
@@ -1326,28 +1207,23 @@
     },
     "providers": [
       "302ai",
-      "aihubmix",
       "aimlapi",
       "aixy",
-      "amazon-bedrock",
       "anthropic",
       "azure",
       "azure-cognitive-services",
       "boundless",
-      "cloudflare-ai-gateway",
       "commandcode",
       "cortecs",
       "crossmodel",
       "digitalocean",
       "edenai",
       "github-copilot",
-      "gitlab",
       "google-vertex",
       "google-vertex-anthropic",
       "kilo",
       "llmgateway",
       "llmgateway-providers",
-      "merge-gateway",
       "nano-gpt",
       "nearai",
       "neon",
@@ -1489,14 +1365,11 @@
     },
     "providers": [
       "abacus",
-      "amazon-bedrock",
       "databricks",
       "fastrouter",
       "google-vertex",
       "google-vertex-anthropic",
-      "jiekou",
-      "merge-gateway",
-      "sap-ai-core"
+      "jiekou"
     ]
   },
   "anthropic/claude-sonnet-4-5": {
@@ -1527,13 +1400,11 @@
       "output": 64000
     },
     "providers": [
-      "aihubmix",
       "aimlapi",
       "anthropic",
       "anyapi",
       "azure",
       "azure-cognitive-services",
-      "cloudflare-ai-gateway",
       "cortecs",
       "databricks",
       "digitalocean",
@@ -1555,7 +1426,6 @@
       "poe",
       "qiniu-ai",
       "requesty",
-      "sap-ai-core",
       "snowflake-cortex",
       "tempr",
       "vercel",
@@ -1592,16 +1462,13 @@
     "providers": [
       "302ai",
       "abacus",
-      "amazon-bedrock",
       "anthropic",
-      "gitlab",
       "google-vertex",
       "google-vertex-anthropic",
       "helicone",
       "jiekou",
       "llmgateway",
       "llmgateway-providers",
-      "merge-gateway",
       "qihang-ai",
       "tempr"
     ]
@@ -1636,15 +1503,12 @@
     "providers": [
       "302ai",
       "abacus",
-      "aihubmix",
       "aimlapi",
-      "amazon-bedrock",
       "anthropic",
       "anyapi",
       "auriko",
       "azure",
       "azure-cognitive-services",
-      "cloudflare-ai-gateway",
       "commandcode",
       "cortecs",
       "crossmodel",
@@ -1656,7 +1520,6 @@
       "freemodel",
       "frogbot",
       "github-copilot",
-      "gitlab",
       "gmicloud",
       "google-vertex",
       "google-vertex-anthropic",
@@ -1665,7 +1528,6 @@
       "kilo",
       "llmgateway",
       "llmgateway-providers",
-      "merge-gateway",
       "modelis",
       "nano-gpt",
       "nearai",
@@ -1681,7 +1543,6 @@
       "prime",
       "requesty",
       "routing-run",
-      "sap-ai-core",
       "snowflake-cortex",
       "tempr",
       "vercel",
@@ -1719,20 +1580,16 @@
     "providers": [
       "302ai",
       "abacus",
-      "aihubmix",
       "aimlapi",
-      "amazon-bedrock",
       "anthropic",
       "azure",
       "azure-cognitive-services",
-      "cloudflare-ai-gateway",
       "commandcode",
       "cortecs",
       "crossmodel",
       "digitalocean",
       "edenai",
       "github-copilot",
-      "gitlab",
       "google-vertex",
       "google-vertex-anthropic",
       "impossibl",
@@ -1740,7 +1597,6 @@
       "kilo",
       "llmgateway",
       "llmgateway-providers",
-      "merge-gateway",
       "model-oracle-ai",
       "nano-gpt",
       "nearai",
@@ -1792,27 +1648,22 @@
     },
     "providers": [
       "302ai",
-      "aihubmix",
       "aimlapi",
       "aixy",
-      "amazon-bedrock",
       "anthropic",
       "azure",
       "azure-cognitive-services",
-      "cloudflare-ai-gateway",
       "commandcode",
       "cortecs",
       "crossmodel",
       "digitalocean",
       "edenai",
       "github-copilot",
-      "gitlab",
       "google-vertex",
       "google-vertex-anthropic",
       "kilo",
       "llmgateway",
       "llmgateway-providers",
-      "merge-gateway",
       "nano-gpt",
       "nearai",
       "neon",

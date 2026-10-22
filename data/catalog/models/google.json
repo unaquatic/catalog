@@ -294,8 +294,7 @@
       "output": 64000
     },
     "providers": [
-      "google",
-      "merge-gateway"
+      "google"
     ]
   },
   "google/gemini-2.5-flash": {
@@ -330,10 +329,8 @@
     "providers": [
       "302ai",
       "abacus",
-      "aihubmix",
       "anyapi",
       "auriko",
-      "cloudflare-ai-gateway",
       "cortecs",
       "crossmodel",
       "databricks",
@@ -346,7 +343,6 @@
       "jiekou",
       "kenari",
       "kilo",
-      "merge-gateway",
       "modelis",
       "nano-gpt",
       "nearai",
@@ -358,7 +354,6 @@
       "qihang-ai",
       "qiniu-ai",
       "requesty",
-      "sap-ai-core",
       "standardcompute",
       "vercel",
       "zenmux"
@@ -395,12 +390,10 @@
     "providers": [
       "302ai",
       "abacus",
-      "aihubmix",
       "edenai",
       "google",
       "google-vertex",
       "kilo",
-      "merge-gateway",
       "openrouter",
       "qiniu-ai",
       "vercel"
@@ -436,9 +429,7 @@
       "output": 65536
     },
     "providers": [
-      "aihubmix",
       "anyapi",
-      "cloudflare-ai-gateway",
       "crossmodel",
       "google",
       "google-vertex",
@@ -448,7 +439,6 @@
       "kenari",
       "kilo",
       "llmtr",
-      "merge-gateway",
       "nano-gpt",
       "nearai",
       "ofox",
@@ -457,7 +447,6 @@
       "poe",
       "qiniu-ai",
       "requesty",
-      "sap-ai-core",
       "vercel",
       "zenmux"
     ]
@@ -712,10 +701,8 @@
     "providers": [
       "302ai",
       "abacus",
-      "aihubmix",
       "anyapi",
       "auriko",
-      "cloudflare-ai-gateway",
       "cortecs",
       "crossmodel",
       "databricks",
@@ -727,7 +714,6 @@
       "impossibl",
       "jiekou",
       "kilo",
-      "merge-gateway",
       "modelis",
       "nano-gpt",
       "nearai",
@@ -738,7 +724,6 @@
       "poe",
       "qiniu-ai",
       "requesty",
-      "sap-ai-core",
       "standardcompute",
       "vercel",
       "zenmux"
@@ -964,9 +949,7 @@
     "providers": [
       "302ai",
       "abacus",
-      "aihubmix",
       "anyapi",
-      "cloudflare-ai-gateway",
       "crossmodel",
       "databricks",
       "edenai",
@@ -977,7 +960,6 @@
       "kilo",
       "llmgateway",
       "llmgateway-providers",
-      "merge-gateway",
       "nano-gpt",
       "neon",
       "ofox",
@@ -1025,13 +1007,11 @@
     },
     "providers": [
       "abacus",
-      "aihubmix",
       "edenai",
       "google",
       "google-vertex",
       "kenari",
       "kilo",
-      "merge-gateway",
       "openrouter",
       "requesty",
       "vercel"
@@ -1111,7 +1091,6 @@
       "databricks",
       "helicone",
       "jiekou",
-      "merge-gateway",
       "opencode",
       "poe",
       "qihang-ai"
@@ -1243,13 +1222,11 @@
     },
     "providers": [
       "abacus",
-      "aihubmix",
       "edenai",
       "google",
       "google-vertex",
       "kenari",
       "kilo",
-      "merge-gateway",
       "openrouter",
       "requesty",
       "vercel"
@@ -1327,8 +1304,6 @@
     "providers": [
       "302ai",
       "abacus",
-      "aihubmix",
-      "cloudflare-ai-gateway",
       "commandcode",
       "cortecs",
       "edenai",
@@ -1339,7 +1314,6 @@
       "kilo",
       "llmgateway",
       "llmgateway-providers",
-      "merge-gateway",
       "nano-gpt",
       "nearai",
       "ofox",
@@ -1348,7 +1322,6 @@
       "pioneer",
       "poe",
       "requesty",
-      "sap-ai-core",
       "tempr",
       "vercel",
       "zenmux"
@@ -1383,7 +1356,6 @@
       "output": 4096
     },
     "providers": [
-      "aihubmix",
       "edenai",
       "google",
       "google-vertex",
@@ -1430,7 +1402,6 @@
       "edenai",
       "google",
       "kilo",
-      "merge-gateway",
       "neon",
       "openrouter",
       "orcarouter",
@@ -1569,10 +1540,8 @@
     "providers": [
       "302ai",
       "abacus",
-      "aihubmix",
       "aimlapi",
       "auriko",
-      "cloudflare-ai-gateway",
       "crossmodel",
       "daoxe",
       "databricks",
@@ -1586,7 +1555,6 @@
       "kilo",
       "llmgateway",
       "llmgateway-providers",
-      "merge-gateway",
       "nano-gpt",
       "ofox",
       "openrouter",
@@ -1635,13 +1603,11 @@
       "output": 65536
     },
     "providers": [
-      "aihubmix",
       "aimlapi",
       "edenai",
       "google",
       "google-vertex",
       "kilo",
-      "merge-gateway",
       "nano-gpt",
       "neon",
       "openrouter",
@@ -1681,8 +1647,6 @@
     "providers": [
       "302ai",
       "abacus",
-      "aihubmix",
-      "cloudflare-ai-gateway",
       "commandcode",
       "cortecs",
       "crossmodel",
@@ -1697,7 +1661,6 @@
       "kilo",
       "llmgateway",
       "llmgateway-providers",
-      "merge-gateway",
       "nano-gpt",
       "nearai",
       "neon",
@@ -1710,7 +1673,6 @@
       "poe",
       "prime",
       "requesty",
-      "sap-ai-core",
       "tempr",
       "unorouter",
       "vercel",
@@ -1750,8 +1712,6 @@
     "providers": [
       "302ai",
       "abacus",
-      "aihubmix",
-      "cloudflare-ai-gateway",
       "commandcode",
       "cortecs",
       "crossmodel",
@@ -1762,7 +1722,6 @@
       "kilo",
       "llmgateway",
       "llmgateway-providers",
-      "merge-gateway",
       "nano-gpt",
       "neon",
       "ofox",
@@ -1773,7 +1732,6 @@
       "pioneer",
       "poe",
       "requesty",
-      "sap-ai-core",
       "standardcompute",
       "tempr",
       "vercel"
@@ -1899,9 +1857,7 @@
     "providers": [
       "302ai",
       "abacus",
-      "aihubmix",
       "aimlapi",
-      "cloudflare-ai-gateway",
       "commandcode",
       "cortecs",
       "crossmodel",
@@ -1914,7 +1870,6 @@
       "kilo",
       "llmgateway",
       "llmgateway-providers",
-      "merge-gateway",
       "nano-gpt",
       "neon",
       "ofox",
@@ -1926,7 +1881,6 @@
       "poe",
       "prime",
       "requesty",
-      "sap-ai-core",
       "tempr",
       "vercel"
     ]
@@ -1963,9 +1917,7 @@
     "providers": [
       "302ai",
       "abacus",
-      "aihubmix",
       "aimlapi",
-      "cloudflare-ai-gateway",
       "commandcode",
       "cortecs",
       "crossmodel",
@@ -1977,7 +1929,6 @@
       "kilo",
       "llmgateway",
       "llmgateway-providers",
-      "merge-gateway",
       "nano-gpt",
       "neon",
       "ofox",
@@ -2023,10 +1974,8 @@
     },
     "providers": [
       "302ai",
-      "aihubmix",
       "aimlapi",
       "aixy",
-      "cloudflare-ai-gateway",
       "commandcode",
       "cortecs",
       "crossmodel",
@@ -2037,7 +1986,6 @@
       "kilo",
       "llmgateway",
       "llmgateway-providers",
-      "merge-gateway",
       "nano-gpt",
       "nearai",
       "neon",
@@ -2049,7 +1997,6 @@
       "poe",
       "prime",
       "requesty",
-      "sap-ai-core",
       "standardcompute",
       "tempr",
       "vercel",
@@ -2207,9 +2154,7 @@
     },
     "providers": [
       "302ai",
-      "aihubmix",
       "aixy",
-      "cloudflare-ai-gateway",
       "commandcode",
       "cortecs",
       "crossmodel",
@@ -2220,7 +2165,6 @@
       "kilo",
       "llmgateway",
       "llmgateway-providers",
-      "merge-gateway",
       "nano-gpt",
       "ofox",
       "opencode",
@@ -2290,8 +2234,6 @@
     "providers": [
       "google",
       "google-vertex",
-      "merge-gateway",
-      "sap-ai-core",
       "tempr",
       "vercel"
     ]
@@ -2328,8 +2270,6 @@
     },
     "providers": [
       "google",
-      "merge-gateway",
-      "sap-ai-core",
       "tempr",
       "vercel"
     ]
@@ -2398,7 +2338,6 @@
       "aimlapi",
       "google",
       "kilo",
-      "merge-gateway",
       "nano-gpt",
       "openrouter",
       "orcarouter",
@@ -2436,7 +2375,6 @@
     },
     "providers": [
       "google",
-      "merge-gateway",
       "nano-gpt",
       "orcarouter",
       "tempr"
@@ -2796,13 +2734,11 @@
     ],
     "providers": [
       "aimlapi",
-      "amazon-bedrock",
       "deepinfra",
       "edenai",
       "helicone",
       "huggingface",
       "kilo",
-      "merge-gateway",
       "nano-gpt",
       "neon",
       "novita-ai",
@@ -2844,7 +2780,6 @@
     ],
     "providers": [
       "aimlapi",
-      "amazon-bedrock",
       "cortecs",
       "deepinfra",
       "edenai",
@@ -2852,7 +2787,6 @@
       "greenpt",
       "huggingface",
       "kilo",
-      "merge-gateway",
       "nano-gpt",
       "nebius",
       "novita-ai",
@@ -2895,12 +2829,10 @@
     ],
     "providers": [
       "aimlapi",
-      "amazon-bedrock",
       "deepinfra",
       "edenai",
       "huggingface",
       "kilo",
-      "merge-gateway",
       "nano-gpt",
       "nvidia",
       "openrouter"
@@ -3124,7 +3056,6 @@
     "providers": [
       "aimlapi",
       "aki-io",
-      "amazon-bedrock",
       "cloudflare-workers-ai",
       "cortecs",
       "deepinfra",
@@ -3138,7 +3069,6 @@
       "kilo",
       "llmgateway",
       "llmgateway-providers",
-      "merge-gateway",
       "nan",
       "nano-gpt",
       "novita-ai",
@@ -3637,7 +3567,6 @@
       "abacus",
       "aiand",
       "aimlapi",
-      "amazon-bedrock",
       "amd",
       "berget",
       "bothub",
@@ -3658,7 +3587,6 @@
       "llmgateway",
       "llmgateway-providers",
       "llmtr",
-      "merge-gateway",
       "nano-gpt",
       "neuralwatt",
       "novita-ai",
@@ -3669,7 +3597,6 @@
       "orcarouter",
       "pioneer",
       "poe",
-      "qvac",
       "regolo-ai",
       "requesty",
       "sambanova",
@@ -4043,7 +3970,6 @@
       }
     ],
     "providers": [
-      "amazon-bedrock",
       "pioneer"
     ]
   },

@@ -201,8 +201,7 @@
     ],
     "providers": [
       "cohere",
-      "edenai",
-      "merge-gateway"
+      "edenai"
     ]
   },
   "cohere/command-a-plus-05-2026": {
@@ -270,8 +269,7 @@
     ],
     "providers": [
       "cohere",
-      "nano-gpt",
-      "sap-ai-core"
+      "nano-gpt"
     ]
   },
   "cohere/command-a-translate-08-2025": {
@@ -381,7 +379,6 @@
       "cohere",
       "edenai",
       "kilo",
-      "merge-gateway",
       "openrouter"
     ]
   },
@@ -422,7 +419,6 @@
       "cohere",
       "edenai",
       "kilo",
-      "merge-gateway",
       "nano-gpt",
       "openrouter"
     ]
@@ -463,7 +459,6 @@
       "cohere",
       "edenai",
       "kilo",
-      "merge-gateway",
       "openrouter"
     ]
   },
