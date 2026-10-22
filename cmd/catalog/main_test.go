@@ -6,6 +6,7 @@ import (
 	"errors"
 	"flag"
 	"fmt"
+	"github.com/unaquatic/catalog/data"
 	"io"
 	"maps"
 	"net/http"
@@ -387,4 +388,36 @@ func TestPageIsSelfContained(t *testing.T) {
 	if !strings.Contains(string(page), `font-family: "type16"`) || !strings.Contains(string(page), "url(data:font/ttf;base64,") {
 		t.Error("the page does not embed the type16 font")
 	}
+}
+
+// TestSnapshot checks that snapshot keeps the providers it names, and the
+// models they offer alone: of the catalog it embeds, the data package's,
+// and of a catalog server's.
+func TestSnapshot(t *testing.T) {
+	dir := t.ArtifactDir()
+	check := func(name string, o SnapshotOptions) *gateway.Catalog {
+		t.Helper()
+		o.Out = filepath.Join(dir, name)
+		if err := Snapshot(t.Context(), o, io.Discard); err != nil {
+			t.Fatal(err)
+		}
+		c := readTestCatalog(t, o.Out)
+		if len(c.Providers) != 2 || c.Providers["anthropic"].ID == "" || c.Providers["openai"].ID == "" {
+			t.Errorf("%s providers = %v, want anthropic and openai", name, slices.Sorted(maps.Keys(c.Providers)))
+		}
+		for id, m := range c.Models {
+			if !slices.ContainsFunc(m.Providers, func(p gateway.ProviderID) bool { return p == "anthropic" || p == "openai" }) {
+				t.Errorf("%s keeps %s, which neither offers", name, id)
+			}
+		}
+		return c
+	}
+	embedded := check("embedded.json", SnapshotOptions{Providers: "anthropic,openai"})
+	if want, err := data.Catalog(); err != nil || !embedded.Generated.Equal(want.Generated) {
+		t.Errorf("embedded snapshot generated %v, want the data package's catalog's", embedded.Generated)
+	}
+
+	srv := httptest.NewServer(Site(fixtureHandler(t)))
+	defer srv.Close()
+	check("served.json", SnapshotOptions{Source: srv.URL, Providers: "anthropic,openai"})
 }

@@ -15,7 +15,7 @@
 //	go run ./cmd/catalog build -in catalog-models-dev.json -providers anthropic,openai,vercel -notes
 //	go run ./cmd/catalog serve                      # browse http://localhost:4100
 //	go run ./cmd/catalog serve -catalog catalog.json -refresh 1h
-//	go run ./cmd/catalog snapshot -providers anthropic,openai -o snapshot.json   # the catalog flow compiles in
+//	go run ./cmd/catalog snapshot -providers anthropic,openai -o snapshot.json   # the catalog flow compiles in, of this version
 package main
 
 import (
@@ -32,6 +32,7 @@ import (
 	"syscall"
 	"time"
 
+	"github.com/unaquatic/catalog/data"
 	"github.com/unaquatic/catalog/gateway"
 	"github.com/unaquatic/catalog/internal/cmdline"
 	"github.com/unaquatic/catalog/modelsdev"
@@ -319,7 +320,8 @@ var serveCmd = &cmdline.Command[ServeOptions]{
 
 // SnapshotOptions are the flags of the snapshot command.
 type SnapshotOptions struct {
-	// Source is the catalog server to download the catalog from.
+	// Source is the catalog server to download the catalog from, or "" for
+	// the catalog this command embeds, data.Catalog.
 	Source string
 	// Providers is the comma-separated list of providers to keep.
 	Providers string
@@ -329,9 +331,9 @@ type SnapshotOptions struct {
 
 var snapshotCmd = &cmdline.Command[SnapshotOptions]{
 	Name:  "snapshot",
-	Short: "Write the catalog of a few providers, from a catalog server, for flow to embed",
+	Short: "Write the catalog of a few providers, of this version or from a catalog server, for flow to embed",
 	Flags: func(fs *flag.FlagSet, o *SnapshotOptions) {
-		fs.StringVar(&o.Source, "source", gateway.DefaultSource, "Download the catalog from the catalog server at `url`")
+		fs.StringVar(&o.Source, "source", "", "Download the catalog from the catalog server at `url`, instead of taking the one this version embeds")
 		fs.StringVar(&o.Providers, "providers", "anthropic,openai", "Keep the comma-separated `providers`")
 		const out = "Write the snapshot to `file`"
 		fs.StringVar(&o.Out, "out", "snapshot.json", out)
@@ -342,17 +344,27 @@ var snapshotCmd = &cmdline.Command[SnapshotOptions]{
 	},
 }
 
-// Snapshot downloads the catalog from the catalog server o.Source names,
-// keeps o.Providers and the models they offer, and writes it, compact, to
-// o.Out.
+// Snapshot takes the catalog this command embeds, data.Catalog, which is the
+// catalog of the module version it is built at, or else downloads the one
+// the catalog server o.Source names; keeps o.Providers and the models they
+// offer; and writes it, compact, to o.Out. go run builds the command at the
+// version the running module requires, so a snapshot that program
+// generates holds the catalog of the version it builds with.
 func Snapshot(ctx context.Context, o SnapshotOptions, stderr io.Writer) error {
-	resp, err := modelsdev.NewFetcher(o.Source, nil).FetchPath(ctx, gateway.DocumentPath, "")
-	if err != nil {
-		return err
-	}
-	c, err := gateway.Decode(resp.Data)
-	if err != nil {
-		return fmt.Errorf("%s: %w", o.Source, err)
+	var c *gateway.Catalog
+	if o.Source == "" {
+		var err error
+		if c, err = data.Catalog(); err != nil {
+			return fmt.Errorf("the embedded catalog: %w", err)
+		}
+	} else {
+		resp, err := modelsdev.NewFetcher(o.Source, nil).FetchPath(ctx, gateway.DocumentPath, "")
+		if err != nil {
+			return err
+		}
+		if c, err = gateway.Decode(resp.Data); err != nil {
+			return fmt.Errorf("%s: %w", o.Source, err)
+		}
 	}
 	kept := c.Keep(ParseIDs(o.Providers)...)
 	doc, err := json.Marshal(kept)
