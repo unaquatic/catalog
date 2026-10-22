@@ -19,7 +19,7 @@
       "name": "Qwen3.8 27B",
       "family": "qwen",
       "released": "2026-08-14",
-      "updated": "2026-09-01",
+      "updated": "2026-08-14",
       "open_weights": true,
       "capabilities": {
         "tools": true,
@@ -91,15 +91,15 @@
         "name": "Gemma 4 31B Instruct"
       },
       "price": {
-        "input": 0.275,
-        "output": 0.55
+        "input": 0.280375,
+        "output": 0.56075
       }
     },
-    "mistral/mistral-small-3.2-24b-instruct-2506": {
-      "name": "Mistral Small 3.2 24B Instruct 2506",
+    "mistral/mistral-small-3.2-24b-instruct": {
+      "name": "Mistral Small 3.2 24B Instruct",
       "family": "mistral-small",
-      "released": "2025-10-01",
-      "updated": "2025-10-01",
+      "released": "2025-06-20",
+      "updated": "2025-06-20",
       "knowledge": "2025-09",
       "open_weights": true,
       "capabilities": {
@@ -124,15 +124,15 @@
         "name": "Mistral Small 3.2 24B Instruct 2506"
       },
       "price": {
-        "input": 0.33,
-        "output": 0.33
+        "input": 0.33645,
+        "output": 0.33645
       }
     },
     "moonshotai/kimi-k3": {
       "name": "Kimi K3",
       "family": "kimi-k3",
-      "released": "2026-07-27",
-      "updated": "2026-07-28",
+      "released": "2026-07-16",
+      "updated": "2026-07-16",
       "open_weights": true,
       "capabilities": {
         "tools": true,
@@ -166,8 +166,9 @@
         "name": "Kimi K3"
       },
       "price": {
-        "input": 3,
-        "output": 15
+        "input": 3.3645,
+        "output": 16.8225,
+        "cache_read": 1.00935
       }
     },
     "zhipuai/glm-5.2": {
@@ -206,13 +207,14 @@
       "price": {
         "input": 1.54,
         "output": 4.84
-      }
+      },
+      "status": "deprecated"
     },
     "zhipuai/glm-5.3-flash": {
       "name": "GLM 5.3 Flash",
       "family": "glm-flash",
       "released": "2026-08-26",
-      "updated": "2026-09-30",
+      "updated": "2026-08-26",
       "open_weights": true,
       "capabilities": {
         "tools": true,

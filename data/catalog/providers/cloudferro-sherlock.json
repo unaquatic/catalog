@@ -49,8 +49,8 @@
     "minimax/minimax-m2.5": {
       "name": "MiniMax M2.5",
       "family": "minimax",
-      "released": "2026-03-05",
-      "updated": "2026-03-05",
+      "released": "2026-02-12",
+      "updated": "2026-02-12",
       "knowledge": "2026-01",
       "open_weights": true,
       "capabilities": {
@@ -83,8 +83,8 @@
     "openai/gpt-oss-120b": {
       "name": "GPT OSS 120B",
       "family": "gpt-oss",
-      "released": "2025-08-28",
-      "updated": "2025-08-28",
+      "released": "2025-08-05",
+      "updated": "2025-08-05",
       "knowledge": "2024-06",
       "open_weights": true,
       "capabilities": {

@@ -27,43 +27,14 @@
     "providers": [
       "aimlapi",
       "fastrouter",
+      "helicone",
       "iflowcn",
       "kilo",
       "llmgateway",
       "llmgateway-providers",
-      "opencode",
       "openrouter",
       "qiniu-ai",
       "vercel"
-    ]
-  },
-  "moonshotai/kimi-k2-0711": {
-    "id": "moonshotai/kimi-k2-0711",
-    "lab": "moonshotai",
-    "name": "Kimi K2 0711",
-    "family": "kimi-k2",
-    "released": "2025-01-01",
-    "updated": "2025-01-01",
-    "knowledge": "2025-01",
-    "open_weights": false,
-    "reasoning": false,
-    "capabilities": {
-      "tools": true,
-      "attachments": false,
-      "temperature": true,
-      "input": [
-        "text"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 131072,
-      "output": 16384
-    },
-    "providers": [
-      "helicone"
     ]
   },
   "moonshotai/kimi-k2-0905": {
@@ -98,6 +69,7 @@
       }
     ],
     "providers": [
+      "302ai",
       "aimlapi",
       "helicone",
       "huggingface",
@@ -107,38 +79,11 @@
       "kilo",
       "nano-gpt",
       "novita-ai",
+      "opencode",
       "openrouter",
       "prime",
       "qiniu-ai",
       "zenmux"
-    ]
-  },
-  "moonshotai/kimi-k2-0905-preview": {
-    "id": "moonshotai/kimi-k2-0905-preview",
-    "lab": "moonshotai",
-    "name": "Kimi K2 0905 Preview",
-    "released": "2025-09-05",
-    "updated": "2025-09-05",
-    "knowledge": "2025-06",
-    "open_weights": false,
-    "reasoning": false,
-    "capabilities": {
-      "tools": true,
-      "attachments": false,
-      "temperature": true,
-      "input": [
-        "text"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 262144,
-      "output": 262144
-    },
-    "providers": [
-      "302ai"
     ]
   },
   "moonshotai/kimi-k2-instruct": {
@@ -430,35 +375,6 @@
       "tensorx",
       "vercel",
       "zenmux"
-    ]
-  },
-  "moonshotai/kimi-k2.5-fw": {
-    "id": "moonshotai/kimi-k2.5-fw",
-    "lab": "moonshotai",
-    "name": "Kimi K2.5 FW",
-    "released": "2026-01-27",
-    "updated": "2026-01-27",
-    "open_weights": false,
-    "reasoning": false,
-    "capabilities": {
-      "tools": true,
-      "attachments": true,
-      "temperature": false,
-      "input": [
-        "text",
-        "image"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 262144,
-      "input": 245760,
-      "output": 16384
-    },
-    "providers": [
-      "poe"
     ]
   },
   "moonshotai/kimi-k2.6": {
@@ -870,7 +786,8 @@
     "providers": [
       "kilo",
       "nano-gpt",
-      "openrouter"
+      "openrouter",
+      "the-grid-ai"
     ]
   }
 }

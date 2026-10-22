@@ -3,13 +3,14 @@
     "id": "greenpt/green-s",
     "lab": "greenpt",
     "name": "Green S",
+    "type": "transcription",
     "released": "2025-06-09",
     "updated": "2025-06-09",
     "open_weights": false,
     "reasoning": false,
     "capabilities": {
       "tools": false,
-      "attachments": false,
+      "attachments": true,
       "temperature": false,
       "input": [
         "audio"
@@ -30,13 +31,14 @@
     "id": "greenpt/green-s-pro",
     "lab": "greenpt",
     "name": "Green S Pro",
+    "type": "transcription",
     "released": "2025-09-10",
     "updated": "2025-09-10",
     "open_weights": false,
     "reasoning": false,
     "capabilities": {
       "tools": false,
-      "attachments": false,
+      "attachments": true,
       "temperature": false,
       "input": [
         "audio"
@@ -48,35 +50,6 @@
     "limit": {
       "context": 0,
       "output": 8192
-    },
-    "providers": [
-      "greenpt"
-    ]
-  },
-  "greenpt/metis": {
-    "id": "greenpt/metis",
-    "lab": "greenpt",
-    "name": "Metis",
-    "type": "decision",
-    "released": "2026-10-06",
-    "updated": "2026-10-06",
-    "open_weights": false,
-    "reasoning": false,
-    "capabilities": {
-      "tools": false,
-      "attachments": false,
-      "structured_output": false,
-      "temperature": false,
-      "input": [
-        "text"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 32768,
-      "output": 0
     },
     "providers": [
       "greenpt"

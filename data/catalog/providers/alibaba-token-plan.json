@@ -15,98 +15,6 @@
   },
   "doc": "https://www.alibabacloud.com/help/en/model-studio/token-plan-overview",
   "models": {
-    "alibaba/happyhorse-1.1-i2v": {
-      "name": "HappyHorse 1.1 I2v",
-      "type": "video",
-      "released": "2026-07-17",
-      "updated": "2026-07-17",
-      "open_weights": false,
-      "capabilities": {
-        "tools": false,
-        "attachments": true,
-        "temperature": true,
-        "input": [
-          "image",
-          "text"
-        ],
-        "output": [
-          "video"
-        ]
-      },
-      "limit": {
-        "context": 0,
-        "output": 0
-      },
-      "provider_options": {
-        "id": "happyhorse-1.1-i2v",
-        "name": "HappyHorse 1.1 Image-to-Video"
-      },
-      "price": {
-        "input": 0,
-        "output": 0
-      }
-    },
-    "alibaba/happyhorse-1.1-r2v": {
-      "name": "HappyHorse 1.1 R2v",
-      "type": "video",
-      "released": "2026-07-17",
-      "updated": "2026-07-17",
-      "open_weights": false,
-      "capabilities": {
-        "tools": false,
-        "attachments": true,
-        "temperature": true,
-        "input": [
-          "image",
-          "text"
-        ],
-        "output": [
-          "video"
-        ]
-      },
-      "limit": {
-        "context": 0,
-        "output": 0
-      },
-      "provider_options": {
-        "id": "happyhorse-1.1-r2v",
-        "name": "HappyHorse 1.1 Reference-to-Video"
-      },
-      "price": {
-        "input": 0,
-        "output": 0
-      }
-    },
-    "alibaba/happyhorse-1.1-t2v": {
-      "name": "HappyHorse 1.1 T2V",
-      "type": "video",
-      "released": "2026-07-17",
-      "updated": "2026-07-17",
-      "open_weights": false,
-      "capabilities": {
-        "tools": false,
-        "attachments": false,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "video"
-        ]
-      },
-      "limit": {
-        "context": 0,
-        "output": 0
-      },
-      "provider_options": {
-        "id": "happyhorse-1.1-t2v",
-        "name": "HappyHorse 1.1 Text-to-Video"
-      },
-      "price": {
-        "input": 0,
-        "output": 0
-      }
-    },
     "alibaba/qwen-image-2.0": {
       "name": "Qwen Image 2.0",
       "family": "qwen",
@@ -131,7 +39,17 @@
       },
       "provider_options": {
         "id": "qwen-image-2.0",
-        "name": "Qwen Image 2.0"
+        "name": "Qwen Image 2.0",
+        "endpoint": {
+          "format": "openai-chat",
+          "api": "https://token-plan.ap-southeast-1.maas.aliyuncs.com/api/v1",
+          "auth": {
+            "scheme": "bearer"
+          },
+          "env": [
+            "ALIBABA_TOKEN_PLAN_API_KEY"
+          ]
+        }
       },
       "price": {
         "input": 0,
@@ -162,7 +80,17 @@
       },
       "provider_options": {
         "id": "qwen-image-2.0-pro",
-        "name": "Qwen Image 2.0 Pro"
+        "name": "Qwen Image 2.0 Pro",
+        "endpoint": {
+          "format": "openai-chat",
+          "api": "https://token-plan.ap-southeast-1.maas.aliyuncs.com/api/v1",
+          "auth": {
+            "scheme": "bearer"
+          },
+          "env": [
+            "ALIBABA_TOKEN_PLAN_API_KEY"
+          ]
+        }
       },
       "price": {
         "input": 0,
@@ -518,7 +446,17 @@
       },
       "provider_options": {
         "id": "wan2.7-image",
-        "name": "Wan2.7 Image"
+        "name": "Wan2.7 Image",
+        "endpoint": {
+          "format": "openai-chat",
+          "api": "https://token-plan.ap-southeast-1.maas.aliyuncs.com/api/v1",
+          "auth": {
+            "scheme": "bearer"
+          },
+          "env": [
+            "ALIBABA_TOKEN_PLAN_API_KEY"
+          ]
+        }
       },
       "price": {
         "input": 0,
@@ -548,7 +486,17 @@
       },
       "provider_options": {
         "id": "wan2.7-image-pro",
-        "name": "Wan2.7 Image Pro"
+        "name": "Wan2.7 Image Pro",
+        "endpoint": {
+          "format": "openai-chat",
+          "api": "https://token-plan.ap-southeast-1.maas.aliyuncs.com/api/v1",
+          "auth": {
+            "scheme": "bearer"
+          },
+          "env": [
+            "ALIBABA_TOKEN_PLAN_API_KEY"
+          ]
+        }
       },
       "price": {
         "input": 0,

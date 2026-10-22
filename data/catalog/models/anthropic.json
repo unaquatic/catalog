@@ -1,38 +1,4 @@
 {
-  "anthropic/claude-3-5-haiku": {
-    "id": "anthropic/claude-3-5-haiku",
-    "lab": "anthropic",
-    "name": "Claude 3.5 Haiku",
-    "family": "claude-haiku",
-    "released": "2024-10-22",
-    "updated": "2024-10-22",
-    "knowledge": "2024-10",
-    "open_weights": false,
-    "reasoning": false,
-    "capabilities": {
-      "tools": true,
-      "attachments": false,
-      "temperature": true,
-      "input": [
-        "text",
-        "image"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 200000,
-      "output": 8192
-    },
-    "providers": [
-      "helicone",
-      "opencode",
-      "poe",
-      "qiniu-ai",
-      "zenmux"
-    ]
-  },
   "anthropic/claude-3-5-haiku-20241022": {
     "id": "anthropic/claude-3-5-haiku-20241022",
     "lab": "anthropic",
@@ -61,7 +27,12 @@
       "output": 8192
     },
     "providers": [
-      "digitalocean"
+      "digitalocean",
+      "helicone",
+      "opencode",
+      "poe",
+      "qiniu-ai",
+      "zenmux"
     ]
   },
   "anthropic/claude-3-5-sonnet": {
@@ -91,9 +62,7 @@
       "output": 8192
     },
     "providers": [
-      "digitalocean",
-      "poe",
-      "qiniu-ai"
+      "digitalocean"
     ]
   },
   "anthropic/claude-3-5-sonnet-20241022": {
@@ -123,69 +92,10 @@
       "context": 200000,
       "output": 8192
     },
-    "providers": []
-  },
-  "anthropic/claude-3-5-sonnet-v2": {
-    "id": "anthropic/claude-3-5-sonnet-v2",
-    "lab": "anthropic",
-    "name": "Claude 3.5 Sonnet V2",
-    "family": "claude-sonnet",
-    "released": "2024-10-22",
-    "updated": "2024-10-22",
-    "knowledge": "2024-10",
-    "open_weights": false,
-    "reasoning": false,
-    "capabilities": {
-      "tools": true,
-      "attachments": false,
-      "temperature": true,
-      "input": [
-        "text",
-        "image"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 200000,
-      "output": 8192
-    },
-    "providers": [
-      "helicone"
-    ]
-  },
-  "anthropic/claude-3-7-sonnet": {
-    "id": "anthropic/claude-3-7-sonnet",
-    "lab": "anthropic",
-    "name": "Claude 3.7 Sonnet",
-    "family": "claude-sonnet",
-    "released": "2025-02-19",
-    "updated": "2025-02-19",
-    "knowledge": "2025-02",
-    "open_weights": false,
-    "reasoning": false,
-    "capabilities": {
-      "tools": true,
-      "attachments": false,
-      "temperature": true,
-      "input": [
-        "text",
-        "image"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 200000,
-      "output": 64000
-    },
     "providers": [
       "helicone",
       "poe",
-      "qiniu-ai",
-      "zenmux"
+      "qiniu-ai"
     ]
   },
   "anthropic/claude-3-7-sonnet-20250219": {
@@ -218,7 +128,11 @@
     "providers": [
       "abacus",
       "digitalocean",
-      "pioneer"
+      "helicone",
+      "pioneer",
+      "poe",
+      "qiniu-ai",
+      "zenmux"
     ]
   },
   "anthropic/claude-3-haiku-20240307": {
@@ -249,7 +163,8 @@
       "output": 4096
     },
     "providers": [
-      "helicone"
+      "helicone",
+      "poe"
     ]
   },
   "anthropic/claude-3-opus": {
@@ -413,36 +328,6 @@
       "vercel",
       "vivgrid",
       "zenmux"
-    ]
-  },
-  "anthropic/claude-haiku-3": {
-    "id": "anthropic/claude-haiku-3",
-    "lab": "anthropic",
-    "name": "Claude Haiku 3",
-    "family": "claude-haiku",
-    "released": "2024-03-09",
-    "updated": "2024-03-09",
-    "open_weights": false,
-    "reasoning": false,
-    "capabilities": {
-      "tools": true,
-      "attachments": true,
-      "temperature": false,
-      "input": [
-        "text",
-        "image",
-        "pdf"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 189096,
-      "output": 8192
-    },
-    "providers": [
-      "poe"
     ]
   },
   "anthropic/claude-haiku-4-5": {
@@ -1270,39 +1155,6 @@
       "poe"
     ]
   },
-  "anthropic/claude-sonnet-4": {
-    "id": "anthropic/claude-sonnet-4",
-    "lab": "anthropic",
-    "name": "Claude Sonnet 4",
-    "family": "claude-sonnet",
-    "released": "2025-05-14",
-    "updated": "2025-05-14",
-    "knowledge": "2025-05",
-    "open_weights": false,
-    "reasoning": true,
-    "capabilities": {
-      "tools": true,
-      "attachments": false,
-      "temperature": true,
-      "input": [
-        "text",
-        "image"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 200000,
-      "output": 64000
-    },
-    "providers": [
-      "helicone",
-      "opencode",
-      "poe",
-      "zenmux"
-    ]
-  },
   "anthropic/claude-sonnet-4-0": {
     "id": "anthropic/claude-sonnet-4-0",
     "lab": "anthropic",
@@ -1332,8 +1184,12 @@
     },
     "providers": [
       "digitalocean",
+      "helicone",
+      "opencode",
+      "poe",
       "qiniu-ai",
-      "requesty"
+      "requesty",
+      "zenmux"
     ]
   },
   "anthropic/claude-sonnet-4-20250514": {

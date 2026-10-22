@@ -27,5 +27,40 @@
     "providers": [
       "nano-gpt"
     ]
+  },
+  "lightonai/lightonocr-3-0.8b": {
+    "id": "lightonai/lightonocr-3-0.8b",
+    "lab": "lightonai",
+    "name": "LightOnOCR 3 0.8B",
+    "released": "2026-10-08",
+    "updated": "2026-10-14",
+    "open_weights": true,
+    "license": "apache-2.0",
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 16384
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/lightonai/LightOnOCR-3-0.8B"
+      }
+    ],
+    "providers": [
+      "scaleway"
+    ]
   }
 }

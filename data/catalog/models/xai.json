@@ -149,8 +149,7 @@
     },
     "providers": [
       "azure",
-      "azure-cognitive-services",
-      "llmgateway-providers"
+      "azure-cognitive-services"
     ]
   },
   "xai/grok-4-20-reasoning": {
@@ -180,8 +179,7 @@
     },
     "providers": [
       "azure",
-      "azure-cognitive-services",
-      "llmgateway-providers"
+      "azure-cognitive-services"
     ]
   },
   "xai/grok-4-fast": {
@@ -219,6 +217,7 @@
     "id": "xai/grok-4-fast-non-reasoning",
     "lab": "xai",
     "name": "Grok 4 Fast Non Reasoning",
+    "family": "grok",
     "released": "2025-12-18",
     "updated": "2025-12-18",
     "open_weights": false,
@@ -256,6 +255,7 @@
     "id": "xai/grok-4-fast-reasoning",
     "lab": "xai",
     "name": "Grok 4 Fast Reasoning",
+    "family": "grok",
     "released": "2025-12-18",
     "updated": "2025-12-18",
     "open_weights": false,
@@ -931,38 +931,11 @@
       "zenmux"
     ]
   },
-  "xai/grok-code": {
-    "id": "xai/grok-code",
-    "lab": "xai",
-    "name": "Grok Code",
-    "family": "grok",
-    "released": "2025-08-20",
-    "updated": "2025-08-20",
-    "open_weights": false,
-    "reasoning": true,
-    "capabilities": {
-      "tools": true,
-      "attachments": false,
-      "temperature": true,
-      "input": [
-        "text"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 256000,
-      "output": 256000
-    },
-    "providers": [
-      "opencode"
-    ]
-  },
   "xai/grok-code-fast-1": {
     "id": "xai/grok-code-fast-1",
     "lab": "xai",
     "name": "Grok Code Fast 1",
+    "family": "grok",
     "released": "2025-09-02",
     "updated": "2025-09-02",
     "open_weights": false,
@@ -987,6 +960,7 @@
       "frogbot",
       "helicone",
       "jiekou",
+      "opencode",
       "poe",
       "qiniu-ai"
     ]
@@ -1236,37 +1210,6 @@
     "providers": [
       "vercel",
       "zenmux"
-    ]
-  },
-  "xai/grok-voice-think-fast-1.0": {
-    "id": "xai/grok-voice-think-fast-1.0",
-    "lab": "xai",
-    "name": "Grok Voice Think Fast 1.0",
-    "family": "grok",
-    "type": "realtime",
-    "released": "2026-04-23",
-    "updated": "2026-04-23",
-    "open_weights": false,
-    "reasoning": false,
-    "capabilities": {
-      "tools": true,
-      "attachments": true,
-      "temperature": true,
-      "input": [
-        "text",
-        "audio"
-      ],
-      "output": [
-        "text",
-        "audio"
-      ]
-    },
-    "limit": {
-      "context": 0,
-      "output": 0
-    },
-    "providers": [
-      "vercel"
     ]
   },
   "xai/grok-voice-think-fast-2.0": {

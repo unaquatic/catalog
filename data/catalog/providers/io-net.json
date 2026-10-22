@@ -24,7 +24,7 @@
       "open_weights": true,
       "capabilities": {
         "tools": true,
-        "attachments": false,
+        "attachments": true,
         "temperature": true,
         "input": [
           "text",
@@ -47,13 +47,14 @@
         "output": 0.22,
         "cache_read": 0.025,
         "cache_write": 0.1
-      }
+      },
+      "status": "deprecated"
     },
     "alibaba/qwen3-235b-a22b-thinking-2507": {
       "name": "Qwen3 235B A22B Thinking 2507",
       "family": "qwen",
-      "released": "2025-07-01",
-      "updated": "2025-07-01",
+      "released": "2025-07-25",
+      "updated": "2025-07-25",
       "knowledge": "2024-12",
       "open_weights": true,
       "capabilities": {
@@ -81,13 +82,14 @@
         "output": 0.6,
         "cache_read": 0.055,
         "cache_write": 0.22
-      }
+      },
+      "status": "deprecated"
     },
-    "alibaba/qwen3-coder-480b-a35b-instruct-int4-mixed-ar": {
-      "name": "Qwen3 Coder 480B A35B Instruct Int4 Mixed Ar",
+    "alibaba/qwen3-coder-480b-a35b-instruct": {
+      "name": "Qwen3 Coder 480B A35B Instruct",
       "family": "qwen",
-      "released": "2025-01-15",
-      "updated": "2025-01-15",
+      "released": "2025-07-22",
+      "updated": "2025-07-22",
       "knowledge": "2024-12",
       "open_weights": true,
       "capabilities": {
@@ -110,17 +112,16 @@
         "name": "Qwen 3 Coder 480B"
       },
       "price": {
-        "input": 0.22,
-        "output": 0.95,
-        "cache_read": 0.11,
-        "cache_write": 0.44
+        "input": 0.46125,
+        "output": 2.29375,
+        "cache_read": 0.230625
       }
     },
     "alibaba/qwen3-next-80b-a3b-instruct": {
       "name": "Qwen3 Next 80B A3B Instruct",
       "family": "qwen",
-      "released": "2025-01-10",
-      "updated": "2025-01-10",
+      "released": "2025-09-12",
+      "updated": "2025-09-12",
       "knowledge": "2024-12",
       "open_weights": true,
       "capabilities": {
@@ -143,16 +144,15 @@
         "name": "Qwen 3 Next 80B Instruct"
       },
       "price": {
-        "input": 0.1,
-        "output": 0.8,
-        "cache_read": 0.05,
-        "cache_write": 0.2
+        "input": 0.11875,
+        "output": 1.2625,
+        "cache_read": 0.059375
       }
     },
     "deepseek/deepseek-r1-0528": {
       "name": "DeepSeek R1 0528",
       "family": "deepseek-thinking",
-      "released": "2025-01-20",
+      "released": "2025-05-28",
       "updated": "2025-05-28",
       "knowledge": "2024-07",
       "open_weights": true,
@@ -177,10 +177,9 @@
         "name": "DeepSeek R1"
       },
       "price": {
-        "input": 2,
-        "output": 8.75,
-        "cache_read": 1,
-        "cache_write": 4
+        "input": 0.523667,
+        "output": 2.205333,
+        "cache_read": 0.261834
       }
     },
     "meta/llama-3.2-90b-vision-instruct": {
@@ -192,7 +191,7 @@
       "open_weights": true,
       "capabilities": {
         "tools": true,
-        "attachments": false,
+        "attachments": true,
         "temperature": true,
         "input": [
           "text",
@@ -215,7 +214,8 @@
         "output": 0.4,
         "cache_read": 0.175,
         "cache_write": 0.7
-      }
+      },
+      "status": "deprecated"
     },
     "meta/llama-3.3-70b-instruct": {
       "name": "Llama 3.3 70B Instruct",
@@ -244,22 +244,21 @@
         "name": "Llama 3.3 70B Instruct"
       },
       "price": {
-        "input": 0.13,
-        "output": 0.38,
-        "cache_read": 0.065,
-        "cache_write": 0.26
+        "input": 0.5466,
+        "output": 1.0226,
+        "cache_read": 0.2733
       }
     },
-    "meta/llama-4-maverick-17b-128e-instruct-fp8": {
-      "name": "Llama 4 Maverick 17B 128E Instruct FP8",
+    "meta/llama-4-maverick-17b-instruct": {
+      "name": "Llama 4 Maverick 17B Instruct",
       "family": "llama",
-      "released": "2025-01-15",
-      "updated": "2025-01-15",
+      "released": "2025-04-05",
+      "updated": "2025-04-05",
       "knowledge": "2024-12",
       "open_weights": true,
       "capabilities": {
         "tools": true,
-        "attachments": false,
+        "attachments": true,
         "temperature": true,
         "input": [
           "text",
@@ -278,10 +277,9 @@
         "name": "Llama 4 Maverick 17B 128E Instruct"
       },
       "price": {
-        "input": 0.15,
-        "output": 0.6,
-        "cache_read": 0.075,
-        "cache_write": 0.3
+        "input": 0.26875,
+        "output": 0.82625,
+        "cache_read": 0.134375
       }
     },
     "mistral/devstral-small-2505": {
@@ -315,15 +313,16 @@
         "output": 0.22,
         "cache_read": 0.025,
         "cache_write": 0.1
-      }
+      },
+      "status": "deprecated"
     },
     "mistral/magistral-small-2506": {
       "name": "Magistral Small 2506",
-      "family": "magistral-small",
-      "released": "2025-06-01",
-      "updated": "2025-06-01",
+      "family": "magistral",
+      "released": "2025-06-10",
+      "updated": "2025-06-10",
       "knowledge": "2025-01",
-      "open_weights": false,
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": false,
@@ -348,22 +347,22 @@
         "output": 1.5,
         "cache_read": 0.25,
         "cache_write": 1
-      }
+      },
+      "status": "deprecated"
     },
-    "mistral/mistral-large-instruct-2411": {
-      "name": "Mistral Large Instruct 2411",
+    "mistral/mistral-large-2411": {
+      "name": "Mistral Large 2411",
       "family": "mistral-large",
-      "released": "2024-11-01",
-      "updated": "2024-11-01",
+      "released": "2024-11-18",
+      "updated": "2024-11-18",
       "knowledge": "2024-10",
-      "open_weights": false,
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": false,
         "temperature": true,
         "input": [
-          "text",
-          "image"
+          "text"
         ],
         "output": [
           "text"
@@ -382,13 +381,14 @@
         "output": 6,
         "cache_read": 1,
         "cache_write": 4
-      }
+      },
+      "status": "deprecated"
     },
-    "mistral/mistral-nemo-instruct-2407": {
-      "name": "Mistral Nemo Instruct 2407",
+    "mistral/mistral-nemo": {
+      "name": "Mistral Nemo",
       "family": "mistral-nemo",
-      "released": "2024-07-01",
-      "updated": "2024-07-01",
+      "released": "2024-07-18",
+      "updated": "2024-07-18",
       "knowledge": "2024-05",
       "open_weights": true,
       "capabilities": {
@@ -411,19 +411,18 @@
         "name": "Mistral Nemo Instruct 2407"
       },
       "price": {
-        "input": 0.02,
-        "output": 0.04,
-        "cache_read": 0.01,
-        "cache_write": 0.04
+        "input": 0.0514,
+        "output": 0.082,
+        "cache_read": 0.0257
       }
     },
     "moonshotai/kimi-k2-0905": {
       "name": "Kimi K2 0905",
       "family": "kimi-k2",
-      "released": "2024-09-05",
-      "updated": "2024-09-05",
+      "released": "2025-09-05",
+      "updated": "2025-09-05",
       "knowledge": "2024-08",
-      "open_weights": false,
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": false,
@@ -444,19 +443,18 @@
         "name": "Kimi K2 Instruct"
       },
       "price": {
-        "input": 0.39,
-        "output": 1.9,
-        "cache_read": 0.195,
-        "cache_write": 0.78
+        "input": 0.57,
+        "output": 2.3,
+        "cache_read": 0.285
       }
     },
     "moonshotai/kimi-k2-thinking": {
       "name": "Kimi K2 Thinking",
       "family": "kimi-thinking",
-      "released": "2024-11-01",
-      "updated": "2024-11-01",
+      "released": "2025-11-06",
+      "updated": "2025-11-06",
       "knowledge": "2024-08",
-      "open_weights": false,
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": false,
@@ -478,17 +476,16 @@
         "name": "Kimi K2 Thinking"
       },
       "price": {
-        "input": 0.55,
-        "output": 2.25,
-        "cache_read": 0.275,
-        "cache_write": 1.1
+        "input": 0.6,
+        "output": 2.5,
+        "cache_read": 0.3
       }
     },
     "openai/gpt-oss-120b": {
       "name": "GPT OSS 120B",
       "family": "gpt-oss",
-      "released": "2024-12-01",
-      "updated": "2024-12-01",
+      "released": "2025-08-05",
+      "updated": "2025-08-05",
       "knowledge": "2024-10",
       "open_weights": true,
       "capabilities": {
@@ -506,22 +503,28 @@
         "context": 131072,
         "output": 4096
       },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "medium",
+          "high"
+        ]
+      },
       "provider_options": {
         "id": "openai/gpt-oss-120b",
         "name": "GPT-OSS 120B"
       },
       "price": {
-        "input": 0.04,
-        "output": 0.4,
-        "cache_read": 0.02,
-        "cache_write": 0.08
+        "input": 0.188,
+        "output": 0.7,
+        "cache_read": 0.094
       }
     },
     "openai/gpt-oss-20b": {
       "name": "GPT OSS 20B",
       "family": "gpt-oss",
-      "released": "2024-12-01",
-      "updated": "2024-12-01",
+      "released": "2025-08-05",
+      "updated": "2025-08-05",
       "knowledge": "2024-10",
       "open_weights": true,
       "capabilities": {
@@ -539,24 +542,30 @@
         "context": 64000,
         "output": 4096
       },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "medium",
+          "high"
+        ]
+      },
       "provider_options": {
         "id": "openai/gpt-oss-20b",
         "name": "GPT-OSS 20B"
       },
       "price": {
-        "input": 0.03,
-        "output": 0.14,
-        "cache_read": 0.015,
-        "cache_write": 0.06
+        "input": 0.055,
+        "output": 0.194,
+        "cache_read": 0.0275
       }
     },
     "zhipuai/glm-4.6": {
       "name": "GLM 4.6",
       "family": "glm",
-      "released": "2024-11-15",
-      "updated": "2024-11-15",
+      "released": "2025-09-30",
+      "updated": "2025-09-30",
       "knowledge": "2024-10",
-      "open_weights": false,
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": false,
@@ -572,15 +581,23 @@
         "context": 200000,
         "output": 4096
       },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "medium",
+          "high"
+        ]
+      },
       "provider_options": {
         "id": "zai-org/GLM-4.6",
         "name": "GLM 4.6"
       },
       "price": {
-        "input": 0.4,
-        "output": 1.75,
-        "cache_read": 0.2,
-        "cache_write": 0.8
+        "input": 0.52,
+        "output": 2.0375,
+        "cache_read": 0.26
       }
     }
   }

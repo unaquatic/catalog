@@ -500,9 +500,9 @@
         "name": "GLM-5.3-Flash"
       },
       "price": {
-        "input": 0.075,
-        "output": 0.025,
-        "cache_read": 0.015
+        "input": 0.15,
+        "output": 0.5,
+        "cache_read": 0.03
       }
     }
   }

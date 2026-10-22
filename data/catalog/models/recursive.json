@@ -1,0 +1,85 @@
+{
+  "recursive/flint": {
+    "id": "recursive/flint",
+    "lab": "recursive",
+    "name": "Flint",
+    "family": "flint",
+    "released": "2026-10-21",
+    "updated": "2026-10-21",
+    "knowledge": "2026-06",
+    "open_weights": true,
+    "license": "Apache-2.0",
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 262144
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/RecursiveSI/flint"
+      },
+      {
+        "label": "Hugging Face (INT4)",
+        "url": "https://huggingface.co/RecursiveSI/flint-int4",
+        "quantization": "int4"
+      }
+    ],
+    "links": [
+      {
+        "label": "Model card",
+        "url": "https://huggingface.co/RecursiveSI/flint",
+        "type": "model_card"
+      },
+      {
+        "label": "Introducing Recursive Flint",
+        "url": "https://www.recursive.com/updates/introducing-recursive-flint",
+        "type": "announcement"
+      }
+    ],
+    "providers": [
+      "opencode"
+    ]
+  },
+  "recursive/flint-v1.0-free": {
+    "id": "recursive/flint-v1.0-free",
+    "lab": "recursive",
+    "name": "Flint V1.0 Free",
+    "family": "flint",
+    "released": "2026-10-21",
+    "updated": "2026-10-21",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "structured_output": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 235929
+    },
+    "providers": [
+      "kilo",
+      "openrouter"
+    ]
+  }
+}

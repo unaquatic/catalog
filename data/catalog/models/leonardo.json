@@ -10,11 +10,10 @@
     "reasoning": false,
     "capabilities": {
       "tools": false,
-      "attachments": true,
+      "attachments": false,
       "temperature": false,
       "input": [
-        "text",
-        "image"
+        "text"
       ],
       "output": [
         "image"
@@ -39,11 +38,10 @@
     "reasoning": false,
     "capabilities": {
       "tools": false,
-      "attachments": true,
+      "attachments": false,
       "temperature": false,
       "input": [
-        "text",
-        "image"
+        "text"
       ],
       "output": [
         "image"

@@ -283,6 +283,34 @@
       "nano-gpt"
     ]
   },
+  "thedrummer/skyfall-31b-v4.2": {
+    "id": "thedrummer/skyfall-31b-v4.2",
+    "lab": "thedrummer",
+    "name": "Skyfall 31B V4.2",
+    "released": "2026-10-12",
+    "updated": "2026-10-12",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "structured_output": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 16384,
+      "input": 16384,
+      "output": 4096
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
   "thedrummer/skyfall-36b-v2": {
     "id": "thedrummer/skyfall-36b-v2",
     "lab": "thedrummer",

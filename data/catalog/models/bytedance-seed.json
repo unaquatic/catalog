@@ -96,7 +96,7 @@
     "capabilities": {
       "tools": true,
       "attachments": false,
-      "structured_output": false,
+      "structured_output": true,
       "temperature": true,
       "input": [
         "text"
@@ -124,7 +124,7 @@
     "capabilities": {
       "tools": false,
       "attachments": true,
-      "structured_output": false,
+      "structured_output": true,
       "temperature": true,
       "input": [
         "text",
@@ -200,14 +200,14 @@
       "302ai"
     ]
   },
-  "bytedance-seed/doubao-seed-1-6-vision-250815": {
-    "id": "bytedance-seed/doubao-seed-1-6-vision-250815",
+  "bytedance-seed/doubao-seed-code": {
+    "id": "bytedance-seed/doubao-seed-code",
     "lab": "bytedance-seed",
-    "name": "Doubao Seed 1.6 Vision 250815",
-    "released": "2025-09-30",
-    "updated": "2025-09-30",
+    "name": "Doubao Seed Code",
+    "released": "2025-11-11",
+    "updated": "2025-11-11",
     "open_weights": false,
-    "reasoning": false,
+    "reasoning": true,
     "capabilities": {
       "tools": true,
       "attachments": true,
@@ -225,63 +225,6 @@
       "output": 32000
     },
     "providers": [
-      "302ai"
-    ]
-  },
-  "bytedance-seed/doubao-seed-1-8-251215": {
-    "id": "bytedance-seed/doubao-seed-1-8-251215",
-    "lab": "bytedance-seed",
-    "name": "Doubao Seed 1.8 251215",
-    "released": "2025-12-18",
-    "updated": "2025-12-18",
-    "open_weights": false,
-    "reasoning": false,
-    "capabilities": {
-      "tools": true,
-      "attachments": true,
-      "temperature": true,
-      "input": [
-        "text",
-        "image"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 224000,
-      "output": 64000
-    },
-    "providers": [
-      "302ai"
-    ]
-  },
-  "bytedance-seed/doubao-seed-code": {
-    "id": "bytedance-seed/doubao-seed-code",
-    "lab": "bytedance-seed",
-    "name": "Doubao Seed Code",
-    "released": "2025-11-11",
-    "updated": "2025-11-11",
-    "knowledge": "2025-01-01",
-    "open_weights": false,
-    "reasoning": true,
-    "capabilities": {
-      "tools": true,
-      "attachments": true,
-      "temperature": true,
-      "input": [
-        "text",
-        "image"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 256000,
-      "output": 64000
-    },
-    "providers": [
       "zenmux"
     ]
   },
@@ -296,10 +239,12 @@
     "reasoning": true,
     "capabilities": {
       "tools": true,
-      "attachments": false,
+      "attachments": true,
       "temperature": true,
       "input": [
-        "text"
+        "text",
+        "image",
+        "video"
       ],
       "output": [
         "text"
@@ -333,7 +278,8 @@
       "temperature": true,
       "input": [
         "text",
-        "image"
+        "image",
+        "video"
       ],
       "output": [
         "text"
@@ -378,6 +324,7 @@
       "output": 32000
     },
     "providers": [
+      "302ai",
       "ofox",
       "volcengine"
     ]
@@ -408,6 +355,7 @@
       "output": 64000
     },
     "providers": [
+      "302ai",
       "ofox",
       "requesty",
       "vercel",
@@ -959,14 +907,15 @@
     "lab": "bytedance-seed",
     "name": "Seed OSS 36B Instruct",
     "family": "seed",
-    "released": "2025-09-04",
-    "updated": "2025-11-25",
-    "open_weights": false,
-    "reasoning": false,
+    "released": "2025-08-20",
+    "updated": "2025-08-20",
+    "knowledge": "2024-07",
+    "open_weights": true,
+    "license": "Apache 2.0",
+    "reasoning": true,
     "capabilities": {
       "tools": true,
       "attachments": false,
-      "structured_output": true,
       "temperature": true,
       "input": [
         "text"
@@ -976,42 +925,18 @@
       ]
     },
     "limit": {
-      "context": 262000,
-      "output": 262000
+      "context": 524288,
+      "output": 524288
     },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/ByteDance-Seed/Seed-OSS-36B-Instruct"
+      }
+    ],
     "providers": [
-      "nvidia",
       "siliconflow",
       "siliconflow-cn"
-    ]
-  },
-  "bytedance-seed/seedance-2": {
-    "id": "bytedance-seed/seedance-2",
-    "lab": "bytedance-seed",
-    "name": "Seedance 2",
-    "family": "seed",
-    "released": "2026-04-01",
-    "updated": "2026-04-01",
-    "open_weights": false,
-    "reasoning": false,
-    "capabilities": {
-      "tools": false,
-      "attachments": true,
-      "temperature": false,
-      "input": [
-        "text",
-        "image"
-      ],
-      "output": [
-        "video"
-      ]
-    },
-    "limit": {
-      "context": 4096,
-      "output": 0
-    },
-    "providers": [
-      "fastrouter"
     ]
   },
   "bytedance-seed/seedance-2.0": {
@@ -1050,6 +975,7 @@
       }
     ],
     "providers": [
+      "fastrouter",
       "vercel"
     ]
   },

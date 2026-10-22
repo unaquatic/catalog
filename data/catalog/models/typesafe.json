@@ -52,7 +52,6 @@
       "output": 0
     },
     "providers": [
-      "openrouter",
       "vercel"
     ]
   },
@@ -81,11 +80,7 @@
       "output": 0
     },
     "providers": [
-      "nano-gpt",
-      "opencode",
-      "openrouter",
-      "vercel",
-      "vivgrid"
+      "vercel"
     ]
   }
 }

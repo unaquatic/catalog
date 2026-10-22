@@ -15,42 +15,11 @@
   },
   "doc": "https://atomic.chat",
   "models": {
-    "alibaba/qwen3.5-9b-mlx-4bit": {
-      "name": "Qwen3.5 9B MLX 4bit",
+    "alibaba/qwen3.5-9b": {
+      "name": "Qwen3.5 9B",
       "family": "qwen",
-      "released": "2026-03-05",
-      "updated": "2026-04-04",
-      "open_weights": true,
-      "capabilities": {
-        "tools": true,
-        "attachments": true,
-        "temperature": true,
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 32768,
-        "output": 8192
-      },
-      "provider_options": {
-        "id": "Qwen3_5-9B-MLX-4bit",
-        "name": "Qwen 3.5 9B (MLX 4-bit)"
-      },
-      "price": {
-        "input": 0,
-        "output": 0
-      }
-    },
-    "alibaba/qwen3.5-9b-q4-k-m": {
-      "name": "Qwen3.5 9B Q4 K M",
-      "family": "qwen",
-      "released": "2026-03-05",
-      "updated": "2026-04-04",
+      "released": "2026-02-23",
+      "updated": "2026-02-23",
       "open_weights": true,
       "capabilities": {
         "tools": true,
@@ -75,10 +44,13 @@
       "price": {
         "input": 0,
         "output": 0
-      }
+      },
+      "aliases": [
+        "Qwen3_5-9B-MLX-4bit"
+      ]
     },
-    "google/gemma-4-e4b-it-iq4-xs": {
-      "name": "Gemma 4 E4B IT Iq4 XS",
+    "google/gemma-4-e4b-it": {
+      "name": "Gemma 4 E4B IT",
       "family": "gemma",
       "released": "2026-04-02",
       "updated": "2026-04-02",
@@ -105,43 +77,17 @@
       "price": {
         "input": 0,
         "output": 0
-      }
+      },
+      "aliases": [
+        "gemma-4-E4B-it-MLX-4bit"
+      ]
     },
-    "google/gemma-4-e4b-it-mlx-4bit": {
-      "name": "Gemma 4 E4B IT MLX 4bit",
-      "family": "gemma",
-      "released": "2026-04-02",
-      "updated": "2026-04-02",
-      "open_weights": true,
-      "capabilities": {
-        "tools": false,
-        "attachments": false,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 32768,
-        "output": 8192
-      },
-      "provider_options": {
-        "id": "gemma-4-E4B-it-MLX-4bit",
-        "name": "Gemma 4 E4B Instruct (MLX 4-bit)"
-      },
-      "price": {
-        "input": 0,
-        "output": 0
-      }
-    },
-    "meta/llama-3.1-8b-instruct-gguf": {
-      "name": "Llama 3.1 8B Instruct GGUF",
+    "meta/llama-3.1-8b-instruct": {
+      "name": "Llama 3.1 8B Instruct",
       "family": "llama",
       "released": "2024-07-23",
       "updated": "2024-07-23",
+      "knowledge": "2023-12",
       "open_weights": true,
       "capabilities": {
         "tools": true,

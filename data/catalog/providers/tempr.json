@@ -53,7 +53,8 @@
       },
       "price": {
         "input": 0.8,
-        "output": 4
+        "output": 4,
+        "cache_read": 0.4
       },
       "aliases": [
         "cerebras/qwen-3.8-27b"
@@ -1481,7 +1482,8 @@
         "output": 1.2,
         "cache_read": 0.06,
         "cache_write": 0.375
-      }
+      },
+      "status": "deprecated"
     },
     "minimax/minimax-m2.7-highspeed": {
       "name": "MiniMax M2.7 Highspeed",
@@ -1514,7 +1516,8 @@
         "output": 2.4,
         "cache_read": 0.06,
         "cache_write": 0.375
-      }
+      },
+      "status": "deprecated"
     },
     "minimax/minimax-m3": {
       "name": "MiniMax M3",
@@ -1601,6 +1604,7 @@
       "capabilities": {
         "tools": true,
         "attachments": true,
+        "structured_output": true,
         "temperature": true,
         "input": [
           "text",
@@ -1620,7 +1624,8 @@
       },
       "price": {
         "input": 0.5,
-        "output": 1.5
+        "output": 1.5,
+        "cache_read": 0.05
       }
     },
     "mistral/mistral-large-latest": {
@@ -1633,6 +1638,7 @@
       "capabilities": {
         "tools": true,
         "attachments": true,
+        "structured_output": true,
         "temperature": true,
         "input": [
           "text",
@@ -1652,7 +1658,8 @@
       },
       "price": {
         "input": 0.5,
-        "output": 1.5
+        "output": 1.5,
+        "cache_read": 0.05
       }
     },
     "mistral/mistral-medium-2604": {
@@ -1691,7 +1698,8 @@
       },
       "price": {
         "input": 1.5,
-        "output": 7.5
+        "output": 7.5,
+        "cache_read": 0.15
       }
     },
     "mistral/mistral-medium-latest": {
@@ -1730,7 +1738,8 @@
       },
       "price": {
         "input": 1.5,
-        "output": 7.5
+        "output": 7.5,
+        "cache_read": 0.15
       }
     },
     "mistral/mistral-small-2603": {
@@ -1743,6 +1752,7 @@
       "capabilities": {
         "tools": true,
         "attachments": true,
+        "structured_output": true,
         "temperature": true,
         "input": [
           "text",
@@ -1769,7 +1779,8 @@
       },
       "price": {
         "input": 0.15,
-        "output": 0.6
+        "output": 0.6,
+        "cache_read": 0.015
       }
     },
     "mistral/mistral-small-latest": {
@@ -1782,6 +1793,7 @@
       "capabilities": {
         "tools": true,
         "attachments": true,
+        "structured_output": true,
         "temperature": true,
         "input": [
           "text",
@@ -1808,7 +1820,8 @@
       },
       "price": {
         "input": 0.15,
-        "output": 0.6
+        "output": 0.6,
+        "cache_read": 0.015
       }
     },
     "mistral/voxtral-small-latest": {
@@ -1820,6 +1833,7 @@
       "capabilities": {
         "tools": true,
         "attachments": true,
+        "structured_output": true,
         "temperature": true,
         "input": [
           "text",
@@ -1839,7 +1853,7 @@
       },
       "price": {
         "input": 0.1,
-        "output": 0.3
+        "output": 0.4
       }
     },
     "moonshotai/kimi-k2.6": {
@@ -1853,7 +1867,7 @@
         "tools": true,
         "attachments": true,
         "structured_output": true,
-        "temperature": true,
+        "temperature": false,
         "input": [
           "text",
           "image",
@@ -1992,14 +2006,15 @@
       "price": {
         "input": 3,
         "output": 15,
-        "cache_read": 0.3
+        "cache_read": 0.3,
+        "cache_write": 3
       }
     },
     "openai/gpt-oss-120b": {
       "name": "GPT OSS 120B",
       "family": "gpt-oss",
       "released": "2025-08-05",
-      "updated": "2026-06-10",
+      "updated": "2025-08-05",
       "knowledge": "2024-06",
       "open_weights": true,
       "capabilities": {
@@ -2041,7 +2056,7 @@
       "name": "GPT OSS 20B",
       "family": "gpt-oss",
       "released": "2025-08-05",
-      "updated": "2025-09-25",
+      "updated": "2025-08-05",
       "knowledge": "2024-06",
       "open_weights": true,
       "capabilities": {
@@ -2221,7 +2236,8 @@
           "none",
           "low",
           "medium",
-          "high"
+          "high",
+          "xhigh"
         ]
       },
       "provider_options": {
@@ -2270,7 +2286,8 @@
         "efforts": [
           "low",
           "medium",
-          "high"
+          "high",
+          "xhigh"
         ]
       },
       "provider_options": {
@@ -2688,7 +2705,8 @@
       },
       "price": {
         "input": 0.6,
-        "output": 1.8
+        "output": 1.8,
+        "cache_read": 0.11
       }
     },
     "zhipuai/glm-4.6": {
@@ -2760,7 +2778,8 @@
       },
       "price": {
         "input": 0.3,
-        "output": 0.9
+        "output": 0.9,
+        "cache_read": 0.05
       }
     },
     "zhipuai/glm-4.6v-flash": {
@@ -3038,7 +3057,9 @@
         "output": 131072
       },
       "reasoning": {
+        "mandatory": false,
         "efforts": [
+          "none",
           "high",
           "max"
         ]

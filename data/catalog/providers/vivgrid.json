@@ -485,7 +485,8 @@
       },
       "price": {
         "input": 0.28,
-        "output": 0.42
+        "output": 0.42,
+        "cache_read": 0.03
       }
     },
     "deepseek/deepseek-v4-flash-0731": {
@@ -525,13 +526,23 @@
       },
       "provider_options": {
         "id": "deepseek-v4-flash",
-        "name": "DeepSeek V4 Flash"
+        "name": "DeepSeek V4 Flash",
+        "endpoint": {
+          "format": "openai-chat",
+          "api": "https://api.vivgrid.com/v1",
+          "auth": {
+            "scheme": "bearer"
+          },
+          "env": [
+            "VIVGRID_API_KEY"
+          ]
+        }
       },
       "price": {
-        "input": 0.15,
-        "output": 0.3,
-        "cache_read": 0.03,
-        "reasoning": 0.3
+        "input": 0.44,
+        "output": 1.32,
+        "cache_read": 0.044,
+        "reasoning": 1.32
       }
     },
     "deepseek/deepseek-v4-pro": {
@@ -584,9 +595,9 @@
         }
       },
       "price": {
-        "input": 0.435,
-        "output": 0.87,
-        "cache_read": 0.003625
+        "input": 1.74,
+        "output": 3.48,
+        "cache_read": 0.14
       }
     },
     "deepseek/deepseek-v4-pro-0813": {
@@ -624,7 +635,17 @@
       },
       "provider_options": {
         "id": "deepseek-v4-pro-0813",
-        "name": "DeepSeek V4 Pro 0813"
+        "name": "DeepSeek V4 Pro 0813",
+        "endpoint": {
+          "format": "openai-chat",
+          "api": "https://api.vivgrid.com/v1",
+          "auth": {
+            "scheme": "bearer"
+          },
+          "env": [
+            "VIVGRID_API_KEY"
+          ]
+        }
       },
       "price": {
         "input": 1.35,
@@ -671,7 +692,17 @@
       },
       "provider_options": {
         "id": "deepseek-v4.1-flash",
-        "name": "DeepSeek V4.1 Flash"
+        "name": "DeepSeek V4.1 Flash",
+        "endpoint": {
+          "format": "openai-chat",
+          "api": "https://api.vivgrid.com/v1",
+          "auth": {
+            "scheme": "bearer"
+          },
+          "env": [
+            "VIVGRID_API_KEY"
+          ]
+        }
       },
       "price": {
         "input": 0.31,
@@ -787,9 +818,9 @@
         }
       },
       "price": {
-        "input": 2,
+        "input": 3,
         "output": 12,
-        "cache_read": 0.2,
+        "cache_read": 0.3,
         "tiers": [
           {
             "above": 200000,
@@ -1003,7 +1034,7 @@
       "open_weights": false,
       "capabilities": {
         "tools": true,
-        "attachments": false,
+        "attachments": true,
         "structured_output": true,
         "temperature": false,
         "input": [
@@ -1016,6 +1047,7 @@
       },
       "limit": {
         "context": 400000,
+        "input": 272000,
         "output": 128000
       },
       "reasoning": {},
@@ -1038,7 +1070,7 @@
       "open_weights": false,
       "capabilities": {
         "tools": true,
-        "attachments": false,
+        "attachments": true,
         "structured_output": true,
         "temperature": false,
         "input": [
@@ -1051,6 +1083,7 @@
       },
       "limit": {
         "context": 400000,
+        "input": 272000,
         "output": 128000
       },
       "reasoning": {},
@@ -1067,13 +1100,13 @@
     "openai/gpt-5.2-codex": {
       "name": "GPT-5.2 Codex",
       "family": "gpt-codex",
-      "released": "2026-01-14",
-      "updated": "2026-01-14",
+      "released": "2025-12-11",
+      "updated": "2025-12-11",
       "knowledge": "2025-08-31",
       "open_weights": false,
       "capabilities": {
         "tools": true,
-        "attachments": false,
+        "attachments": true,
         "temperature": false,
         "input": [
           "text",
@@ -1085,6 +1118,7 @@
       },
       "limit": {
         "context": 400000,
+        "input": 272000,
         "output": 128000
       },
       "reasoning": {},
@@ -1101,13 +1135,13 @@
     "openai/gpt-5.3-codex": {
       "name": "GPT-5.3 Codex",
       "family": "gpt-codex",
-      "released": "2026-02-24",
-      "updated": "2026-02-24",
+      "released": "2026-02-05",
+      "updated": "2026-02-05",
       "knowledge": "2025-08-31",
       "open_weights": false,
       "capabilities": {
         "tools": true,
-        "attachments": false,
+        "attachments": true,
         "structured_output": true,
         "temperature": false,
         "input": [
@@ -1120,6 +1154,7 @@
       },
       "limit": {
         "context": 400000,
+        "input": 272000,
         "output": 128000
       },
       "reasoning": {},
@@ -1729,37 +1764,6 @@
         ]
       }
     },
-    "typesafe/jev-latest": {
-      "name": "Jev Latest",
-      "type": "decision",
-      "released": "2026-09-15",
-      "updated": "2026-09-15",
-      "open_weights": false,
-      "capabilities": {
-        "tools": false,
-        "attachments": false,
-        "structured_output": true,
-        "temperature": false,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 64000,
-        "output": 0
-      },
-      "provider_options": {
-        "id": "jev",
-        "name": "Jev"
-      },
-      "price": {
-        "input": 0.042,
-        "output": 0
-      }
-    },
     "vivgrid/viv-fast": {
       "name": "Viv Fast",
       "released": "2026-09-21",
@@ -1833,7 +1837,17 @@
       },
       "provider_options": {
         "id": "glm-5.2",
-        "name": "GLM-5.2"
+        "name": "GLM-5.2",
+        "endpoint": {
+          "format": "openai-chat",
+          "api": "https://api.vivgrid.com/v1",
+          "auth": {
+            "scheme": "bearer"
+          },
+          "env": [
+            "VIVGRID_API_KEY"
+          ]
+        }
       },
       "price": {
         "input": 1.2,
@@ -1875,12 +1889,22 @@
       },
       "provider_options": {
         "id": "glm-5.3",
-        "name": "GLM-5.3"
+        "name": "GLM-5.3",
+        "endpoint": {
+          "format": "openai-chat",
+          "api": "https://api.vivgrid.com/v1",
+          "auth": {
+            "scheme": "bearer"
+          },
+          "env": [
+            "VIVGRID_API_KEY"
+          ]
+        }
       },
       "price": {
         "input": 1.2,
         "output": 4.2,
-        "cache_read": 0.26
+        "cache_read": 0.3
       }
     },
     "zhipuai/glm-5.3-flash": {
@@ -1920,7 +1944,17 @@
       },
       "provider_options": {
         "id": "glm-5.3-flash",
-        "name": "GLM-5.3-Flash"
+        "name": "GLM-5.3-Flash",
+        "endpoint": {
+          "format": "openai-chat",
+          "api": "https://api.vivgrid.com/v1",
+          "auth": {
+            "scheme": "bearer"
+          },
+          "env": [
+            "VIVGRID_API_KEY"
+          ]
+        }
       },
       "price": {
         "input": 0.15,

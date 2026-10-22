@@ -418,7 +418,17 @@
       },
       "provider_options": {
         "id": "qwen-omni-turbo-realtime",
-        "name": "Qwen-Omni Turbo Realtime"
+        "name": "Qwen-Omni Turbo Realtime",
+        "endpoint": {
+          "format": "openai-chat",
+          "api": "wss://dashscope.aliyuncs.com/api-ws/v1/realtime",
+          "auth": {
+            "scheme": "bearer"
+          },
+          "env": [
+            "DASHSCOPE_API_KEY"
+          ]
+        }
       },
       "price": {
         "input": 0.23,
@@ -1176,7 +1186,7 @@
       "open_weights": false,
       "capabilities": {
         "tools": false,
-        "attachments": false,
+        "attachments": true,
         "temperature": false,
         "input": [
           "audio"
@@ -1192,10 +1202,6 @@
       "provider_options": {
         "id": "qwen3-asr-flash",
         "name": "Qwen3-ASR Flash"
-      },
-      "price": {
-        "input": 0.032,
-        "output": 0.032
       }
     },
     "alibaba/qwen3-coder-30b-a3b-instruct": {
@@ -1576,7 +1582,17 @@
       },
       "provider_options": {
         "id": "qwen3-omni-flash-realtime",
-        "name": "Qwen3-Omni Flash Realtime"
+        "name": "Qwen3-Omni Flash Realtime",
+        "endpoint": {
+          "format": "openai-chat",
+          "api": "wss://dashscope.aliyuncs.com/api-ws/v1/realtime",
+          "auth": {
+            "scheme": "bearer"
+          },
+          "env": [
+            "DASHSCOPE_API_KEY"
+          ]
+        }
       },
       "price": {
         "input": 0.23,

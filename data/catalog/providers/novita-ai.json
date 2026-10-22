@@ -2303,6 +2303,7 @@
     },
     "nousresearch/hermes-2-pro-llama-3-8b": {
       "name": "Hermes 2 Pro Llama 3 8B",
+      "family": "hermes",
       "released": "2024-04-30",
       "updated": "2024-04-30",
       "open_weights": true,

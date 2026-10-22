@@ -19,7 +19,7 @@
       "name": "DeepSeek R1",
       "family": "deepseek-thinking",
       "released": "2025-01-20",
-      "updated": "2025-01-20",
+      "updated": "2025-05-29",
       "knowledge": "2024-12",
       "open_weights": true,
       "capabilities": {
@@ -84,9 +84,9 @@
     "minimax/minimax-m2.5": {
       "name": "MiniMax M2.5",
       "family": "minimax",
-      "released": "2025-03-01",
-      "updated": "2025-03-01",
-      "open_weights": false,
+      "released": "2026-02-12",
+      "updated": "2026-02-12",
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": false,

@@ -60,6 +60,7 @@
     "lab": "topaz",
     "name": "TopazLabs",
     "family": "topazlabs",
+    "type": "image",
     "released": "2024-12-03",
     "updated": "2024-12-03",
     "open_weights": false,
@@ -69,7 +70,8 @@
       "attachments": true,
       "temperature": false,
       "input": [
-        "text"
+        "text",
+        "image"
       ],
       "output": [
         "image"

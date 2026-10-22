@@ -220,7 +220,6 @@
         "context": 32768,
         "output": 32768
       },
-      "reasoning": {},
       "provider_options": {
         "id": "gemini-2.5-flash-image",
         "name": "Nano Banana"
@@ -1017,7 +1016,7 @@
       "open_weights": false,
       "capabilities": {
         "tools": false,
-        "attachments": false,
+        "attachments": true,
         "temperature": true,
         "input": [
           "audio"

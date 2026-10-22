@@ -795,6 +795,62 @@
       "vercel"
     ]
   },
+  "cohere/rerank-v5-fast": {
+    "id": "cohere/rerank-v5-fast",
+    "lab": "cohere",
+    "name": "Rerank V5 Fast",
+    "type": "reranking",
+    "released": "2026-10-21",
+    "updated": "2026-10-21",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32768,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "cohere/rerank-v5-pro": {
+    "id": "cohere/rerank-v5-pro",
+    "lab": "cohere",
+    "name": "Rerank V5 Pro",
+    "type": "reranking",
+    "released": "2026-10-21",
+    "updated": "2026-10-21",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32768,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
   "cohere/tiny-aya-earth": {
     "id": "cohere/tiny-aya-earth",
     "lab": "cohere",

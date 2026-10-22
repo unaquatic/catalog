@@ -42,7 +42,6 @@
     "capabilities": {
       "tools": false,
       "attachments": true,
-      "structured_output": true,
       "temperature": true,
       "input": [
         "text",
@@ -75,11 +74,7 @@
       }
     ],
     "providers": [
-      "cloudflare-workers-ai",
-      "melious",
-      "nano-gpt",
-      "ollama-cloud",
-      "openrouter"
+      "cloudflare-workers-ai"
     ]
   },
   "cloudflare/clef-flash": {
@@ -95,7 +90,6 @@
     "capabilities": {
       "tools": false,
       "attachments": true,
-      "structured_output": true,
       "temperature": true,
       "input": [
         "text",
@@ -128,10 +122,7 @@
       }
     ],
     "providers": [
-      "cloudflare-workers-ai",
-      "melious",
-      "nano-gpt",
-      "openrouter"
+      "cloudflare-workers-ai"
     ]
   },
   "cloudflare/clef-omni": {
@@ -161,8 +152,7 @@
       "output": 65536
     },
     "providers": [
-      "cloudflare-workers-ai",
-      "openrouter"
+      "cloudflare-workers-ai"
     ]
   }
 }

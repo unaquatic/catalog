@@ -323,10 +323,7 @@
       "melious",
       "novita-ai",
       "qiniu-ai",
-      "siliconflow",
-      "siliconflow-cn",
       "snowflake-cortex",
-      "tensorx",
       "togetherai",
       "vercel"
     ]
@@ -375,7 +372,10 @@
       "novita-ai",
       "openrouter",
       "qiniu-ai",
-      "submodel"
+      "siliconflow",
+      "siliconflow-cn",
+      "submodel",
+      "tensorx"
     ]
   },
   "deepseek/deepseek-r1-0528-qwen3-8b": {
@@ -757,8 +757,6 @@
       "novita-ai",
       "pioneer",
       "qiniu-ai",
-      "siliconflow",
-      "siliconflow-cn",
       "togetherai"
     ]
   },
@@ -803,6 +801,8 @@
       "meganova",
       "nano-gpt",
       "qiniu-ai",
+      "siliconflow",
+      "siliconflow-cn",
       "submodel"
     ]
   },
@@ -981,6 +981,7 @@
       "ofox",
       "openrouter",
       "poe",
+      "qiniu-ai",
       "sambanova",
       "siliconflow",
       "siliconflow-cn",
@@ -989,34 +990,6 @@
       "vercel",
       "vivgrid",
       "zenmux"
-    ]
-  },
-  "deepseek/deepseek-v3.2-251201": {
-    "id": "deepseek/deepseek-v3.2-251201",
-    "lab": "deepseek",
-    "name": "DeepSeek V3.2 251201",
-    "released": "2025-12-01",
-    "updated": "2025-12-01",
-    "open_weights": false,
-    "reasoning": true,
-    "capabilities": {
-      "tools": true,
-      "attachments": false,
-      "structured_output": false,
-      "temperature": true,
-      "input": [
-        "text"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 128000,
-      "output": 32000
-    },
-    "providers": [
-      "qiniu-ai"
     ]
   },
   "deepseek/deepseek-v3.2-exp": {
@@ -1178,7 +1151,6 @@
       "modelis",
       "nano-gpt",
       "neuralwatt",
-      "nvidia",
       "ofox",
       "ollama-cloud",
       "openrouter",
@@ -1186,6 +1158,7 @@
       "orcarouter",
       "pendra",
       "pioneer",
+      "poe",
       "prime",
       "requesty",
       "routing-run",
@@ -1299,7 +1272,6 @@
       "nebius",
       "neuralwatt",
       "novita-ai",
-      "nvidia",
       "ofox",
       "ollama-cloud",
       "opencode",
@@ -1323,33 +1295,6 @@
       "volcengine",
       "vultr",
       "wandb"
-    ]
-  },
-  "deepseek/deepseek-v4-flash-el": {
-    "id": "deepseek/deepseek-v4-flash-el",
-    "lab": "deepseek",
-    "name": "DeepSeek V4 Flash EL",
-    "released": "2026-04-24",
-    "updated": "2026-05-02",
-    "open_weights": true,
-    "reasoning": true,
-    "capabilities": {
-      "tools": true,
-      "attachments": true,
-      "input": [
-        "text"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 1000000,
-      "input": 1000000,
-      "output": 384000
-    },
-    "providers": [
-      "poe"
     ]
   },
   "deepseek/deepseek-v4-flash-vision-exp": {
@@ -1473,7 +1418,6 @@
       "nebius",
       "neuralwatt",
       "novita-ai",
-      "nvidia",
       "ofox",
       "ollama-cloud",
       "opencode",
@@ -1482,6 +1426,7 @@
       "opper",
       "orcarouter",
       "pioneer",
+      "poe",
       "prime",
       "requesty",
       "routing-run",
@@ -1581,7 +1526,6 @@
       "nano-gpt",
       "nebius",
       "novita-ai",
-      "nvidia",
       "ofox",
       "ollama-cloud",
       "openrouter",
@@ -1600,33 +1544,6 @@
       "vivgrid",
       "volcengine",
       "wandb"
-    ]
-  },
-  "deepseek/deepseek-v4-pro-el": {
-    "id": "deepseek/deepseek-v4-pro-el",
-    "lab": "deepseek",
-    "name": "DeepSeek V4 Pro EL",
-    "released": "2026-04-24",
-    "updated": "2026-05-02",
-    "open_weights": true,
-    "reasoning": true,
-    "capabilities": {
-      "tools": true,
-      "attachments": true,
-      "input": [
-        "text"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 1000000,
-      "input": 1000000,
-      "output": 384000
-    },
-    "providers": [
-      "poe"
     ]
   },
   "deepseek/deepseek-v4.1-flash": {
@@ -1702,7 +1619,6 @@
       "nano-gpt",
       "nebius",
       "neon",
-      "neuralwatt",
       "novita-ai",
       "nvidia",
       "ofox",
@@ -1723,8 +1639,6 @@
       "thinkingmachines",
       "tinfoil",
       "togetherai",
-      "umans-ai",
-      "umans-ai-coding-plan",
       "vancine",
       "vercel",
       "vivgrid",
@@ -1788,6 +1702,7 @@
       "melious",
       "nano-gpt",
       "nearai",
+      "neuralwatt",
       "novita-ai",
       "ofox",
       "ollama-cloud",
@@ -1796,6 +1711,8 @@
       "requesty",
       "synthetic",
       "thinkingmachines",
+      "umans-ai",
+      "umans-ai-coding-plan",
       "vercel"
     ]
   }

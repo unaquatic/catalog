@@ -20,7 +20,7 @@
       "family": "qwen",
       "released": "2024-09-18",
       "updated": "2025-11-25",
-      "open_weights": false,
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": false,
@@ -42,16 +42,16 @@
         "name": "Qwen/Qwen2.5-72B-Instruct"
       },
       "price": {
-        "input": 0.59,
-        "output": 0.59
+        "input": 0.61721808,
+        "output": 0.61721808
       }
     },
     "alibaba/qwen2.5-7b-instruct": {
       "name": "Qwen2.5 7B Instruct",
       "family": "qwen",
-      "released": "2024-09-18",
-      "updated": "2025-11-25",
-      "open_weights": false,
+      "released": "2024-09-19",
+      "updated": "2024-09-19",
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": false,
@@ -73,8 +73,8 @@
         "name": "Qwen/Qwen2.5-7B-Instruct"
       },
       "price": {
-        "input": 0.05,
-        "output": 0.05
+        "input": 0,
+        "output": 0
       }
     },
     "alibaba/qwen3-14b": {
@@ -82,7 +82,7 @@
       "family": "qwen",
       "released": "2025-04-30",
       "updated": "2025-11-25",
-      "open_weights": false,
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": false,
@@ -111,16 +111,16 @@
         "name": "Qwen/Qwen3-14B"
       },
       "price": {
-        "input": 0.07,
-        "output": 0.28
+        "input": 0.07472374,
+        "output": 0.29889496
       }
     },
     "alibaba/qwen3-235b-a22b-thinking-2507": {
       "name": "Qwen3 235B A22B Thinking 2507",
       "family": "qwen",
-      "released": "2025-07-28",
-      "updated": "2025-11-25",
-      "open_weights": false,
+      "released": "2025-07-25",
+      "updated": "2025-07-25",
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": false,
@@ -150,14 +150,15 @@
       "price": {
         "input": 0.13,
         "output": 0.6
-      }
+      },
+      "status": "deprecated"
     },
     "alibaba/qwen3-30b-a3b-instruct-2507": {
       "name": "Qwen3 30B A3B Instruct 2507",
       "family": "qwen",
-      "released": "2025-07-30",
-      "updated": "2025-11-25",
-      "open_weights": false,
+      "released": "2025-07-28",
+      "updated": "2025-07-28",
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": false,
@@ -179,16 +180,17 @@
         "name": "Qwen/Qwen3-30B-A3B-Instruct-2507"
       },
       "price": {
-        "input": 0.09,
-        "output": 0.3
+        "input": 0.10461323,
+        "output": 0.41845294
       }
     },
     "alibaba/qwen3-32b": {
       "name": "Qwen3 32B",
       "family": "qwen",
-      "released": "2025-04-30",
-      "updated": "2025-11-25",
-      "open_weights": false,
+      "released": "2025-04-28",
+      "updated": "2025-04-28",
+      "knowledge": "2025-04",
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": false,
@@ -217,16 +219,16 @@
         "name": "Qwen/Qwen3-32B"
       },
       "price": {
-        "input": 0.14,
-        "output": 0.57
+        "input": 0.14944748,
+        "output": 0.59778991
       }
     },
     "alibaba/qwen3-8b": {
       "name": "Qwen3 8B",
       "family": "qwen",
-      "released": "2025-04-30",
-      "updated": "2025-11-25",
-      "open_weights": false,
+      "released": "2025-04-29",
+      "updated": "2025-04-29",
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": false,
@@ -255,16 +257,17 @@
         "name": "Qwen/Qwen3-8B"
       },
       "price": {
-        "input": 0.06,
-        "output": 0.06
+        "input": 0,
+        "output": 0
       }
     },
     "alibaba/qwen3-coder-30b-a3b-instruct": {
       "name": "Qwen3 Coder 30B A3B Instruct",
       "family": "qwen",
-      "released": "2025-08-01",
-      "updated": "2025-11-25",
-      "open_weights": false,
+      "released": "2025-07-31",
+      "updated": "2025-07-31",
+      "knowledge": "2025-04",
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": false,
@@ -286,16 +289,17 @@
         "name": "Qwen/Qwen3-Coder-30B-A3B-Instruct"
       },
       "price": {
-        "input": 0.07,
-        "output": 0.28
+        "input": 0.10461323,
+        "output": 0.41845294
       }
     },
     "alibaba/qwen3-coder-480b-a35b-instruct": {
       "name": "Qwen3 Coder 480B A35B Instruct",
       "family": "qwen",
-      "released": "2025-07-31",
-      "updated": "2025-11-25",
-      "open_weights": false,
+      "released": "2025-07-22",
+      "updated": "2025-07-22",
+      "knowledge": "2025-04",
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": false,
@@ -319,14 +323,15 @@
       "price": {
         "input": 0.25,
         "output": 1
-      }
+      },
+      "status": "deprecated"
     },
     "alibaba/qwen3-vl-30b-a3b-instruct": {
       "name": "Qwen3 VL 30B A3B Instruct",
       "family": "qwen",
-      "released": "2025-10-05",
-      "updated": "2025-11-25",
-      "open_weights": false,
+      "released": "2025-10-04",
+      "updated": "2025-10-04",
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": true,
@@ -334,7 +339,8 @@
         "temperature": true,
         "input": [
           "text",
-          "image"
+          "image",
+          "video"
         ],
         "output": [
           "text"
@@ -349,8 +355,8 @@
         "name": "Qwen/Qwen3-VL-30B-A3B-Instruct"
       },
       "price": {
-        "input": 0.29,
-        "output": 1
+        "input": 0.10461323,
+        "output": 0.41845294
       }
     },
     "alibaba/qwen3-vl-30b-a3b-thinking": {
@@ -358,7 +364,7 @@
       "family": "qwen",
       "released": "2025-10-11",
       "updated": "2025-11-25",
-      "open_weights": false,
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": true,
@@ -366,7 +372,8 @@
         "temperature": true,
         "input": [
           "text",
-          "image"
+          "image",
+          "video"
         ],
         "output": [
           "text"
@@ -376,14 +383,19 @@
         "context": 262000,
         "output": 262000
       },
-      "reasoning": {},
+      "reasoning": {
+        "budget": {
+          "min": 128,
+          "max": 32768
+        }
+      },
       "provider_options": {
         "id": "Qwen/Qwen3-VL-30B-A3B-Thinking",
         "name": "Qwen/Qwen3-VL-30B-A3B-Thinking"
       },
       "price": {
-        "input": 0.29,
-        "output": 1
+        "input": 0.10461323,
+        "output": 0.41845294
       }
     },
     "alibaba/qwen3-vl-32b-instruct": {
@@ -391,7 +403,7 @@
       "family": "qwen",
       "released": "2025-10-21",
       "updated": "2025-11-25",
-      "open_weights": false,
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": true,
@@ -399,7 +411,8 @@
         "temperature": true,
         "input": [
           "text",
-          "image"
+          "image",
+          "video"
         ],
         "output": [
           "text"
@@ -414,8 +427,8 @@
         "name": "Qwen/Qwen3-VL-32B-Instruct"
       },
       "price": {
-        "input": 0.2,
-        "output": 0.6
+        "input": 0.14944748,
+        "output": 0.59778991
       }
     },
     "alibaba/qwen3-vl-32b-thinking": {
@@ -423,7 +436,7 @@
       "family": "qwen",
       "released": "2025-10-21",
       "updated": "2025-11-25",
-      "open_weights": false,
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": true,
@@ -431,7 +444,8 @@
         "temperature": true,
         "input": [
           "text",
-          "image"
+          "image",
+          "video"
         ],
         "output": [
           "text"
@@ -441,14 +455,19 @@
         "context": 262000,
         "output": 262000
       },
-      "reasoning": {},
+      "reasoning": {
+        "budget": {
+          "min": 128,
+          "max": 32768
+        }
+      },
       "provider_options": {
         "id": "Qwen/Qwen3-VL-32B-Thinking",
         "name": "Qwen/Qwen3-VL-32B-Thinking"
       },
       "price": {
-        "input": 0.2,
-        "output": 1.5
+        "input": 0.14944748,
+        "output": 1.49447478
       }
     },
     "alibaba/qwen3-vl-8b-instruct": {
@@ -456,7 +475,7 @@
       "family": "qwen",
       "released": "2025-10-15",
       "updated": "2025-11-25",
-      "open_weights": false,
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": true,
@@ -464,7 +483,8 @@
         "temperature": true,
         "input": [
           "text",
-          "image"
+          "image",
+          "video"
         ],
         "output": [
           "text"
@@ -479,20 +499,20 @@
         "name": "Qwen/Qwen3-VL-8B-Instruct"
       },
       "price": {
-        "input": 0.18,
-        "output": 0.68
+        "input": 0.07472374,
+        "output": 0.29889496
       }
     },
     "alibaba/qwen3.5-122b-a10b": {
       "name": "Qwen3.5 122B A10B",
       "family": "qwen",
-      "released": "2026-02-26",
-      "updated": "2026-02-26",
+      "released": "2026-02-23",
+      "updated": "2026-02-23",
       "knowledge": "2025-04",
       "open_weights": true,
       "capabilities": {
         "tools": true,
-        "attachments": false,
+        "attachments": true,
         "temperature": true,
         "input": [
           "text",
@@ -508,27 +528,38 @@
         "output": 65536
       },
       "reasoning": {
-        "mandatory": false
+        "mandatory": false,
+        "budget": {
+          "min": 128,
+          "max": 32768
+        }
       },
       "provider_options": {
         "id": "Qwen/Qwen3.5-122B-A10B",
         "name": "Qwen/Qwen3.5-122B-A10B"
       },
       "price": {
-        "input": 0.29,
-        "output": 2.32
+        "input": 0.11955798,
+        "output": 0.95646386,
+        "tiers": [
+          {
+            "above": 128000,
+            "input": 0.29889496,
+            "output": 2.39115964
+          }
+        ]
       }
     },
     "alibaba/qwen3.5-27b": {
       "name": "Qwen3.5 27B",
       "family": "qwen",
-      "released": "2026-02-25",
-      "updated": "2026-02-25",
+      "released": "2026-02-23",
+      "updated": "2026-02-23",
       "knowledge": "2025-04",
       "open_weights": true,
       "capabilities": {
         "tools": true,
-        "attachments": false,
+        "attachments": true,
         "temperature": true,
         "input": [
           "text",
@@ -544,27 +575,38 @@
         "output": 65536
       },
       "reasoning": {
-        "mandatory": false
+        "mandatory": false,
+        "budget": {
+          "min": 128,
+          "max": 32768
+        }
       },
       "provider_options": {
         "id": "Qwen/Qwen3.5-27B",
         "name": "Qwen/Qwen3.5-27B"
       },
       "price": {
-        "input": 0.26,
-        "output": 2.09
+        "input": 0.08966849,
+        "output": 0.71734789,
+        "tiers": [
+          {
+            "above": 128000,
+            "input": 0.26900546,
+            "output": 2.15204368
+          }
+        ]
       }
     },
     "alibaba/qwen3.5-35b-a3b": {
       "name": "Qwen3.5 35B A3B",
       "family": "qwen",
-      "released": "2026-02-25",
-      "updated": "2026-02-25",
+      "released": "2026-02-23",
+      "updated": "2026-02-23",
       "knowledge": "2025-04",
       "open_weights": true,
       "capabilities": {
         "tools": true,
-        "attachments": false,
+        "attachments": true,
         "temperature": true,
         "input": [
           "text",
@@ -580,27 +622,38 @@
         "output": 65536
       },
       "reasoning": {
-        "mandatory": false
+        "mandatory": false,
+        "budget": {
+          "min": 128,
+          "max": 32768
+        }
       },
       "provider_options": {
         "id": "Qwen/Qwen3.5-35B-A3B",
         "name": "Qwen/Qwen3.5-35B-A3B"
       },
       "price": {
-        "input": 0.23,
-        "output": 1.86
+        "input": 0.05977899,
+        "output": 0.47823193,
+        "tiers": [
+          {
+            "above": 128000,
+            "input": 0.23911596,
+            "output": 1.91292771
+          }
+        ]
       }
     },
     "alibaba/qwen3.5-397b-a17b": {
       "name": "Qwen3.5 397B A17B",
       "family": "qwen",
-      "released": "2026-02-16",
-      "updated": "2026-02-16",
+      "released": "2026-02-15",
+      "updated": "2026-02-15",
       "knowledge": "2025-04",
       "open_weights": true,
       "capabilities": {
         "tools": true,
-        "attachments": false,
+        "attachments": true,
         "temperature": true,
         "input": [
           "text",
@@ -616,7 +669,11 @@
         "output": 65536
       },
       "reasoning": {
-        "mandatory": false
+        "mandatory": false,
+        "budget": {
+          "min": 128,
+          "max": 32768
+        }
       },
       "provider_options": {
         "id": "Qwen/Qwen3.5-397B-A17B",
@@ -625,18 +682,19 @@
       "price": {
         "input": 0.29,
         "output": 1.74
-      }
+      },
+      "status": "deprecated"
     },
     "alibaba/qwen3.5-4b": {
       "name": "Qwen3.5 4B",
       "family": "qwen",
-      "released": "2026-03-03",
-      "updated": "2026-03-03",
+      "released": "2026-03-02",
+      "updated": "2026-03-02",
       "knowledge": "2025-04",
       "open_weights": true,
       "capabilities": {
         "tools": true,
-        "attachments": false,
+        "attachments": true,
         "temperature": true,
         "input": [
           "text",
@@ -652,7 +710,11 @@
         "output": 65536
       },
       "reasoning": {
-        "mandatory": false
+        "mandatory": false,
+        "budget": {
+          "min": 128,
+          "max": 32768
+        }
       },
       "provider_options": {
         "id": "Qwen/Qwen3.5-4B",
@@ -666,13 +728,13 @@
     "alibaba/qwen3.5-9b": {
       "name": "Qwen3.5 9B",
       "family": "qwen",
-      "released": "2026-03-03",
-      "updated": "2026-03-03",
+      "released": "2026-02-23",
+      "updated": "2026-02-23",
       "knowledge": "2025-04",
       "open_weights": true,
       "capabilities": {
         "tools": true,
-        "attachments": false,
+        "attachments": true,
         "temperature": true,
         "input": [
           "text",
@@ -688,15 +750,26 @@
         "output": 65536
       },
       "reasoning": {
-        "mandatory": false
+        "mandatory": false,
+        "budget": {
+          "min": 128,
+          "max": 32768
+        }
       },
       "provider_options": {
         "id": "Qwen/Qwen3.5-9B",
         "name": "Qwen/Qwen3.5-9B"
       },
       "price": {
-        "input": 0.22,
-        "output": 1.74
+        "input": 0.07472374,
+        "output": 0.59778991,
+        "tiers": [
+          {
+            "above": 128000,
+            "input": 0.22417122,
+            "output": 1.79336973
+          }
+        ]
       }
     },
     "alibaba/qwen3.6-35b-a3b": {
@@ -708,7 +781,7 @@
       "open_weights": true,
       "capabilities": {
         "tools": true,
-        "attachments": false,
+        "attachments": true,
         "temperature": true,
         "input": [
           "text",
@@ -728,8 +801,8 @@
         "name": "Qwen/Qwen3.6-35B-A3B"
       },
       "price": {
-        "input": 0.23,
-        "output": 1.86
+        "input": 0.26900546,
+        "output": 1.61403276
       }
     },
     "bytedance-seed/seed-oss-36b-instruct": {
@@ -737,7 +810,7 @@
       "family": "seed",
       "released": "2025-09-04",
       "updated": "2025-11-25",
-      "open_weights": false,
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": false,
@@ -759,8 +832,8 @@
         "name": "ByteDance-Seed/Seed-OSS-36B-Instruct"
       },
       "price": {
-        "input": 0.21,
-        "output": 0.57
+        "input": 0.22417122,
+        "output": 0.59778991
       }
     },
     "deepseek/deepseek-ocr": {
@@ -774,7 +847,8 @@
         "temperature": true,
         "input": [
           "text",
-          "image"
+          "image",
+          "pdf"
         ],
         "output": [
           "text"
@@ -793,12 +867,12 @@
         "output": 0
       }
     },
-    "deepseek/deepseek-r1": {
-      "name": "DeepSeek R1",
+    "deepseek/deepseek-r1-0528": {
+      "name": "DeepSeek R1 0528",
       "family": "deepseek-thinking",
       "released": "2025-05-28",
-      "updated": "2025-11-25",
-      "open_weights": false,
+      "updated": "2025-05-28",
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": false,
@@ -826,19 +900,20 @@
         "name": "deepseek-ai/DeepSeek-R1"
       },
       "price": {
-        "input": 0.5,
-        "output": 2.18
+        "input": 0.59778991,
+        "output": 2.39115964,
+        "cache_read": 0.05977899
       },
       "aliases": [
         "Pro/deepseek-ai/DeepSeek-R1"
       ]
     },
-    "deepseek/deepseek-v3": {
-      "name": "DeepSeek V3",
+    "deepseek/deepseek-v3-0324": {
+      "name": "DeepSeek V3 0324",
       "family": "deepseek",
-      "released": "2024-12-26",
-      "updated": "2025-11-25",
-      "open_weights": false,
+      "released": "2025-03-24",
+      "updated": "2025-03-24",
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": false,
@@ -860,8 +935,9 @@
         "name": "deepseek-ai/DeepSeek-V3"
       },
       "price": {
-        "input": 0.25,
-        "output": 1
+        "input": 0.29889496,
+        "output": 1.19557982,
+        "cache_read": 0.0298895
       },
       "aliases": [
         "Pro/deepseek-ai/DeepSeek-V3"
@@ -872,7 +948,7 @@
       "family": "deepseek",
       "released": "2025-09-29",
       "updated": "2025-11-25",
-      "open_weights": false,
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": false,
@@ -897,8 +973,9 @@
         "name": "deepseek-ai/DeepSeek-V3.1-Terminus"
       },
       "price": {
-        "input": 0.27,
-        "output": 1
+        "input": 0.59778991,
+        "output": 1.79336973,
+        "cache_read": 0.05977899
       },
       "aliases": [
         "Pro/deepseek-ai/DeepSeek-V3.1-Terminus"
@@ -907,9 +984,10 @@
     "deepseek/deepseek-v3.2": {
       "name": "DeepSeek V3.2",
       "family": "deepseek",
-      "released": "2025-12-03",
-      "updated": "2025-12-03",
-      "open_weights": false,
+      "released": "2025-12-01",
+      "updated": "2025-12-01",
+      "knowledge": "2024-07",
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": false,
@@ -934,8 +1012,9 @@
         "name": "deepseek-ai/DeepSeek-V3.2"
       },
       "price": {
-        "input": 0.27,
-        "output": 0.42
+        "input": 0.59778991,
+        "output": 0.89668487,
+        "cache_read": 0.05977899
       },
       "aliases": [
         "Pro/deepseek-ai/DeepSeek-V3.2"
@@ -965,10 +1044,10 @@
         "output": 384000
       },
       "reasoning": {
-        "budget": {
-          "min": 128,
-          "max": 32768
-        }
+        "efforts": [
+          "high",
+          "max"
+        ]
       },
       "interleaved": {
         "field": "reasoning_content"
@@ -978,9 +1057,9 @@
         "name": "DeepSeek V4 Flash"
       },
       "price": {
-        "input": 0.14,
-        "output": 0.28,
-        "cache_read": 0.003
+        "input": 0.44834243,
+        "output": 1.3450273,
+        "cache_read": 0.04483424
       }
     },
     "deepseek/deepseek-v4-pro": {
@@ -988,6 +1067,7 @@
       "family": "deepseek-thinking",
       "released": "2026-04-24",
       "updated": "2026-04-24",
+      "knowledge": "2025-05",
       "open_weights": true,
       "capabilities": {
         "tools": true,
@@ -1005,15 +1085,20 @@
         "context": 1049000,
         "output": 393000
       },
-      "reasoning": {},
+      "reasoning": {
+        "efforts": [
+          "high",
+          "max"
+        ]
+      },
       "provider_options": {
         "id": "deepseek-ai/DeepSeek-V4-Pro",
         "name": "deepseek-ai/DeepSeek-V4-Pro"
       },
       "price": {
-        "input": 1.74,
-        "output": 3.48,
-        "cache_read": 0.145
+        "input": 1.79336973,
+        "output": 3.58673947,
+        "cache_read": 0.14944748
       }
     },
     "inclusionai/ling-flash-2.0": {
@@ -1021,7 +1106,7 @@
       "family": "ling",
       "released": "2025-09-18",
       "updated": "2025-11-25",
-      "open_weights": false,
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": false,
@@ -1043,16 +1128,16 @@
         "name": "inclusionAI/Ling-flash-2.0"
       },
       "price": {
-        "input": 0.14,
-        "output": 0.57
+        "input": 0.14944748,
+        "output": 0.59778991
       }
     },
     "minimax/minimax-m2.5": {
       "name": "MiniMax M2.5",
       "family": "minimax",
-      "released": "2026-02-13",
-      "updated": "2026-02-13",
-      "open_weights": false,
+      "released": "2026-02-12",
+      "updated": "2026-02-12",
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": false,
@@ -1079,17 +1164,19 @@
       "price": {
         "input": 0.3,
         "output": 1.22
-      }
+      },
+      "status": "deprecated"
     },
     "moonshotai/kimi-k2.5": {
       "name": "Kimi K2.5",
-      "family": "kimi",
+      "family": "kimi-k2",
       "released": "2026-01-27",
       "updated": "2026-01-27",
+      "knowledge": "2025-01",
       "open_weights": true,
       "capabilities": {
         "tools": true,
-        "attachments": false,
+        "attachments": true,
         "structured_output": true,
         "temperature": true,
         "input": [
@@ -1116,17 +1203,19 @@
         "input": 0.45,
         "output": 2.25,
         "cache_read": 0.07
-      }
+      },
+      "status": "deprecated"
     },
     "moonshotai/kimi-k2.6": {
       "name": "Kimi K2.6",
-      "family": "kimi",
-      "released": "2026-04-21",
-      "updated": "2026-04-21",
+      "family": "kimi-k2",
+      "released": "2026-04-20",
+      "updated": "2026-04-20",
+      "knowledge": "2025-01",
       "open_weights": true,
       "capabilities": {
         "tools": true,
-        "attachments": false,
+        "attachments": true,
         "structured_output": true,
         "temperature": true,
         "input": [
@@ -1150,9 +1239,9 @@
         "name": "Pro/moonshotai/Kimi-K2.6"
       },
       "price": {
-        "input": 0.95,
-        "output": 4,
-        "cache_read": 0.16
+        "input": 0.97140861,
+        "output": 4.0350819,
+        "cache_read": 0.16439223
       }
     },
     "paddlepaddle/paddleocr-vl-1.5": {
@@ -1188,9 +1277,10 @@
     "stepfun/step-3.5-flash": {
       "name": "Step 3.5 Flash",
       "family": "step",
-      "released": "2026-02-11",
-      "updated": "2026-02-11",
-      "open_weights": false,
+      "released": "2026-01-29",
+      "updated": "2026-02-13",
+      "knowledge": "2025-01",
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": false,
@@ -1213,8 +1303,8 @@
         "name": "stepfun-ai/Step-3.5-Flash"
       },
       "price": {
-        "input": 0.1,
-        "output": 0.3
+        "input": 0.10461323,
+        "output": 0.3138397
       }
     },
     "tencent/hunyuan-a13b-instruct": {
@@ -1222,9 +1312,9 @@
       "family": "hunyuan",
       "released": "2025-06-30",
       "updated": "2025-11-25",
-      "open_weights": false,
+      "open_weights": true,
       "capabilities": {
-        "tools": true,
+        "tools": false,
         "attachments": false,
         "structured_output": true,
         "temperature": true,
@@ -1247,16 +1337,17 @@
         "name": "tencent/Hunyuan-A13B-Instruct"
       },
       "price": {
-        "input": 0.14,
-        "output": 0.57
+        "input": 0.14944748,
+        "output": 0.59778991
       }
     },
     "zhipuai/glm-4.5-air": {
       "name": "GLM 4.5 Air",
       "family": "glm-air",
       "released": "2025-07-28",
-      "updated": "2025-11-25",
-      "open_weights": false,
+      "updated": "2025-07-28",
+      "knowledge": "2025-04",
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": false,
@@ -1278,8 +1369,8 @@
         "name": "zai-org/GLM-4.5-Air"
       },
       "price": {
-        "input": 0.14,
-        "output": 0.86
+        "input": 0.14944748,
+        "output": 0.89668487
       }
     },
     "zhipuai/glm-5": {
@@ -1317,13 +1408,14 @@
       "price": {
         "input": 1,
         "output": 3.2
-      }
+      },
+      "status": "deprecated"
     },
     "zhipuai/glm-5.1": {
       "name": "GLM 5.1",
       "family": "glm",
-      "released": "2026-04-08",
-      "updated": "2026-04-08",
+      "released": "2026-04-07",
+      "updated": "2026-04-07",
       "open_weights": true,
       "capabilities": {
         "tools": true,
@@ -1350,10 +1442,19 @@
         "name": "Pro/zai-org/GLM-5.1"
       },
       "price": {
-        "input": 1.4,
-        "output": 4.4,
-        "cache_read": 0.26,
-        "cache_write": 0
+        "input": 0.89668487,
+        "output": 3.58673947,
+        "cache_read": 0.19428172,
+        "cache_write": 0,
+        "tiers": [
+          {
+            "above": 32000,
+            "input": 1.19557982,
+            "output": 4.18452938,
+            "cache_read": 0.29889496,
+            "cache_write": 0
+          }
+        ]
       }
     },
     "zhipuai/glm-5.2": {
@@ -1392,9 +1493,9 @@
         "name": "GLM-5.2"
       },
       "price": {
-        "input": 1.4,
-        "output": 4.4,
-        "cache_read": 0.26,
+        "input": 1.19557982,
+        "output": 4.18452938,
+        "cache_read": 0.29889496,
         "cache_write": 0
       }
     }

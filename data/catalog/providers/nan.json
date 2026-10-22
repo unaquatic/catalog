@@ -108,10 +108,21 @@
         ]
       },
       "limit": {
-        "context": 262144,
+        "context": 1048576,
         "output": 131072
       },
-      "reasoning": {},
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "minimal",
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ]
+      },
       "provider_options": {
         "id": "qwen3.8-flash",
         "name": "Qwen3.8 Flash"
@@ -145,7 +156,18 @@
         "context": 1000000,
         "output": 384000
       },
-      "reasoning": {},
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "minimal",
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ]
+      },
       "provider_options": {
         "id": "deepseek-v4-flash",
         "name": "DeepSeek V4.1 Flash"
@@ -220,7 +242,16 @@
         "context": 1048576,
         "output": 131072
       },
-      "reasoning": {},
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "medium",
+          "high",
+          "max"
+        ]
+      },
       "provider_options": {
         "id": "mimo-v2.6-flash",
         "name": "MiMo-V2.6-Flash"
@@ -254,9 +285,11 @@
       },
       "reasoning": {
         "efforts": [
+          "minimal",
           "low",
           "medium",
           "high",
+          "xhigh",
           "max"
         ]
       },
@@ -294,9 +327,11 @@
       },
       "reasoning": {
         "efforts": [
+          "minimal",
           "low",
           "medium",
           "high",
+          "xhigh",
           "max"
         ]
       },

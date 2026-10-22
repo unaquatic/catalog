@@ -24,7 +24,7 @@
       "open_weights": false,
       "capabilities": {
         "tools": true,
-        "attachments": true,
+        "attachments": false,
         "temperature": false,
         "input": [
           "text"
@@ -76,8 +76,8 @@
         "name": "AGI-01 Frontier"
       },
       "price": {
-        "input": 4.5,
-        "output": 22
+        "input": 5.04675,
+        "output": 24.673
       }
     },
     "lucidquery/lucidquery-agi-01-swift": {
@@ -109,8 +109,8 @@
         "name": "AGI-01 Swift"
       },
       "price": {
-        "input": 2.5,
-        "output": 15
+        "input": 2.80375,
+        "output": 16.8225
       }
     },
     "lucidquery/lucidquery-nexus-coder": {
@@ -122,7 +122,7 @@
       "open_weights": false,
       "capabilities": {
         "tools": true,
-        "attachments": true,
+        "attachments": false,
         "temperature": false,
         "input": [
           "text"

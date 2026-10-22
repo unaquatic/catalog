@@ -369,7 +369,7 @@
     "updated": "2025-08-26",
     "knowledge": "2024-06",
     "open_weights": false,
-    "reasoning": true,
+    "reasoning": false,
     "capabilities": {
       "tools": false,
       "attachments": true,
@@ -395,6 +395,7 @@
       "google-vertex",
       "kilo",
       "openrouter",
+      "poe",
       "qiniu-ai",
       "vercel"
     ]
@@ -458,18 +459,19 @@
     "family": "gemini-flash-lite",
     "released": "2025-06-17",
     "updated": "2026-01-01",
+    "knowledge": "2025-01",
     "open_weights": false,
     "reasoning": true,
     "capabilities": {
       "tools": true,
       "attachments": true,
-      "structured_output": true,
       "temperature": true,
       "input": [
         "text",
-        "video",
         "image",
-        "audio"
+        "audio",
+        "video",
+        "pdf"
       ],
       "output": [
         "text"
@@ -477,7 +479,7 @@
     },
     "limit": {
       "context": 1048576,
-      "output": 65535
+      "output": 65536
     },
     "providers": [
       "jiekou",
@@ -488,25 +490,29 @@
     "id": "google/gemini-2.5-flash-lite-preview-09-2025",
     "lab": "google",
     "name": "Gemini 2.5 Flash Lite Preview 09 2025",
-    "released": "2025-09-26",
-    "updated": "2025-09-26",
+    "family": "gemini-flash-lite",
+    "released": "2025-09-25",
+    "updated": "2025-09-25",
     "knowledge": "2025-01",
     "open_weights": false,
-    "reasoning": false,
+    "reasoning": true,
     "capabilities": {
       "tools": true,
       "attachments": true,
       "temperature": true,
       "input": [
         "text",
-        "image"
+        "image",
+        "audio",
+        "video",
+        "pdf"
       ],
       "output": [
         "text"
       ]
     },
     "limit": {
-      "context": 1000000,
+      "context": 1048576,
       "output": 65536
     },
     "providers": [
@@ -553,18 +559,19 @@
     "family": "gemini-flash",
     "released": "2025-05-20",
     "updated": "2026-01-01",
+    "knowledge": "2025-01",
     "open_weights": false,
     "reasoning": true,
     "capabilities": {
       "tools": true,
       "attachments": true,
-      "structured_output": true,
       "temperature": true,
       "input": [
         "text",
         "image",
+        "audio",
         "video",
-        "audio"
+        "pdf"
       ],
       "output": [
         "text"
@@ -572,7 +579,7 @@
     },
     "limit": {
       "context": 1048576,
-      "output": 200000
+      "output": 65536
     },
     "providers": [
       "jiekou",
@@ -972,6 +979,7 @@
       "poe",
       "prime",
       "qihang-ai",
+      "qiniu-ai",
       "tempr",
       "vercel",
       "zenmux"
@@ -1053,7 +1061,9 @@
       "google",
       "kilo",
       "nano-gpt",
-      "openrouter"
+      "openrouter",
+      "poe",
+      "qiniu-ai"
     ]
   },
   "google/gemini-3-pro-preview": {
@@ -1093,100 +1103,7 @@
       "jiekou",
       "opencode",
       "poe",
-      "qihang-ai"
-    ]
-  },
-  "google/gemini-3.0-flash-preview": {
-    "id": "google/gemini-3.0-flash-preview",
-    "lab": "google",
-    "name": "Gemini 3.0 Flash Preview",
-    "released": "2025-12-18",
-    "updated": "2025-12-18",
-    "open_weights": false,
-    "reasoning": true,
-    "capabilities": {
-      "tools": true,
-      "attachments": true,
-      "structured_output": false,
-      "temperature": true,
-      "input": [
-        "text",
-        "image",
-        "audio",
-        "video",
-        "pdf"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 1000000,
-      "output": 64000
-    },
-    "providers": [
-      "qiniu-ai"
-    ]
-  },
-  "google/gemini-3.0-pro-image-preview": {
-    "id": "google/gemini-3.0-pro-image-preview",
-    "lab": "google",
-    "name": "Gemini 3.0 Pro Image Preview",
-    "released": "2025-11-20",
-    "updated": "2025-11-20",
-    "open_weights": false,
-    "reasoning": false,
-    "capabilities": {
-      "tools": false,
-      "attachments": true,
-      "structured_output": false,
-      "temperature": true,
-      "input": [
-        "text",
-        "image"
-      ],
-      "output": [
-        "text",
-        "image"
-      ]
-    },
-    "limit": {
-      "context": 32768,
-      "output": 8192
-    },
-    "providers": [
-      "qiniu-ai"
-    ]
-  },
-  "google/gemini-3.0-pro-preview": {
-    "id": "google/gemini-3.0-pro-preview",
-    "lab": "google",
-    "name": "Gemini 3.0 Pro Preview",
-    "released": "2025-11-19",
-    "updated": "2025-11-19",
-    "open_weights": false,
-    "reasoning": true,
-    "capabilities": {
-      "tools": true,
-      "attachments": true,
-      "structured_output": false,
-      "temperature": true,
-      "input": [
-        "text",
-        "image",
-        "video",
-        "pdf",
-        "audio"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 1000000,
-      "output": 64000
-    },
-    "providers": [
+      "qihang-ai",
       "qiniu-ai"
     ]
   },
@@ -1474,40 +1391,6 @@
       "kenari"
     ]
   },
-  "google/gemini-3.1-pro": {
-    "id": "google/gemini-3.1-pro",
-    "lab": "google",
-    "name": "Gemini 3.1 Pro",
-    "family": "gemini-pro",
-    "released": "2026-02-19",
-    "updated": "2026-02-19",
-    "knowledge": "2025-01",
-    "open_weights": false,
-    "reasoning": true,
-    "capabilities": {
-      "tools": true,
-      "attachments": true,
-      "structured_output": true,
-      "temperature": true,
-      "input": [
-        "text",
-        "image",
-        "video",
-        "audio",
-        "pdf"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 1048576,
-      "output": 65536
-    },
-    "providers": [
-      "opencode"
-    ]
-  },
   "google/gemini-3.1-pro-preview": {
     "id": "google/gemini-3.1-pro-preview",
     "lab": "google",
@@ -1557,6 +1440,7 @@
       "llmgateway-providers",
       "nano-gpt",
       "ofox",
+      "opencode",
       "openrouter",
       "opper",
       "orcarouter",
@@ -1750,7 +1634,7 @@
     "reasoning": false,
     "capabilities": {
       "tools": false,
-      "attachments": false,
+      "attachments": true,
       "temperature": false,
       "input": [
         "audio"
@@ -1809,7 +1693,8 @@
     "reasoning": false,
     "capabilities": {
       "tools": false,
-      "attachments": false,
+      "attachments": true,
+      "temperature": true,
       "input": [
         "audio"
       ],
@@ -2617,14 +2502,15 @@
     "id": "google/gemma-2-2b-it",
     "lab": "google",
     "name": "Gemma 2 2B IT",
-    "released": "2024-07-16",
-    "updated": "2024-07-16",
+    "family": "gemma",
+    "released": "2024-07-31",
+    "updated": "2024-07-31",
     "open_weights": true,
+    "license": "Gemma Terms of Use",
     "reasoning": false,
     "capabilities": {
-      "tools": true,
+      "tools": false,
       "attachments": false,
-      "structured_output": true,
       "temperature": true,
       "input": [
         "text"
@@ -2634,12 +2520,16 @@
       ]
     },
     "limit": {
-      "context": 128000,
-      "output": 4096
+      "context": 8192,
+      "output": 8192
     },
-    "providers": [
-      "nvidia"
-    ]
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/google/gemma-2-2b-it"
+      }
+    ],
+    "providers": []
   },
   "google/gemma-2-9b-it": {
     "id": "google/gemma-2-9b-it",
@@ -2869,61 +2759,73 @@
     "id": "google/gemma-3n-e2b-it",
     "lab": "google",
     "name": "Gemma 3n E2B IT",
-    "released": "2025-06-12",
-    "updated": "2025-06-12",
+    "family": "gemma",
+    "released": "2025-06-26",
+    "updated": "2025-06-26",
     "knowledge": "2024-06",
     "open_weights": true,
+    "license": "Gemma Terms of Use",
     "reasoning": false,
     "capabilities": {
-      "tools": true,
+      "tools": false,
       "attachments": true,
-      "structured_output": true,
       "temperature": true,
       "input": [
         "text",
-        "image"
+        "image",
+        "audio"
       ],
       "output": [
         "text"
       ]
     },
     "limit": {
-      "context": 128000,
-      "output": 4096
+      "context": 32768,
+      "output": 32768
     },
-    "providers": [
-      "nvidia"
-    ]
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/google/gemma-3n-E2B-it"
+      }
+    ],
+    "providers": []
   },
   "google/gemma-3n-e4b-it": {
     "id": "google/gemma-3n-e4b-it",
     "lab": "google",
     "name": "Gemma 3n E4B IT",
-    "released": "2025-06-03",
-    "updated": "2025-06-03",
+    "family": "gemma",
+    "released": "2025-06-26",
+    "updated": "2025-06-26",
     "knowledge": "2024-06",
     "open_weights": true,
+    "license": "Gemma Terms of Use",
     "reasoning": false,
     "capabilities": {
-      "tools": true,
+      "tools": false,
       "attachments": true,
-      "structured_output": true,
       "temperature": true,
       "input": [
         "text",
-        "image"
+        "image",
+        "audio"
       ],
       "output": [
         "text"
       ]
     },
     "limit": {
-      "context": 128000,
-      "output": 4096
+      "context": 32768,
+      "output": 32768
     },
-    "providers": [
-      "nvidia"
-    ]
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/google/gemma-3n-E4B-it"
+      }
+    ],
+    "providers": []
   },
   "google/gemma-4-12b-it": {
     "id": "google/gemma-4-12b-it",
@@ -3937,6 +3839,35 @@
       "nano-gpt"
     ]
   },
+  "google/gemma-4-dark-thoughts-v2-31b": {
+    "id": "google/gemma-4-dark-thoughts-v2-31b",
+    "lab": "google",
+    "name": "Gemma 4 Dark Thoughts V2 31B",
+    "family": "gemma",
+    "released": "2026-10-13",
+    "updated": "2026-10-13",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "structured_output": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 65536,
+      "input": 65536,
+      "output": 8192
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
   "google/gemma-4-e2b-it": {
     "id": "google/gemma-4-e2b-it",
     "lab": "google",
@@ -4006,23 +3937,24 @@
       }
     ],
     "providers": [
+      "atomic-chat",
       "deepinfra",
       "pioneer"
     ]
   },
-  "google/gemma-4-e4b-it-iq4-xs": {
-    "id": "google/gemma-4-e4b-it-iq4-xs",
+  "google/gemma-4-giftige-blume-31b-v2": {
+    "id": "google/gemma-4-giftige-blume-31b-v2",
     "lab": "google",
-    "name": "Gemma 4 E4B IT Iq4 XS",
+    "name": "Gemma 4 Giftige Blume 31B V2",
     "family": "gemma",
-    "released": "2026-04-02",
-    "updated": "2026-04-02",
+    "released": "2026-10-13",
+    "updated": "2026-10-13",
     "open_weights": true,
-    "reasoning": false,
+    "reasoning": true,
     "capabilities": {
       "tools": false,
       "attachments": false,
-      "temperature": true,
+      "structured_output": false,
       "input": [
         "text"
       ],
@@ -4031,26 +3963,27 @@
       ]
     },
     "limit": {
-      "context": 32768,
+      "context": 65536,
+      "input": 65536,
       "output": 8192
     },
     "providers": [
-      "atomic-chat"
+      "nano-gpt"
     ]
   },
-  "google/gemma-4-e4b-it-mlx-4bit": {
-    "id": "google/gemma-4-e4b-it-mlx-4bit",
+  "google/gemma-4-gutenberg-31b": {
+    "id": "google/gemma-4-gutenberg-31b",
     "lab": "google",
-    "name": "Gemma 4 E4B IT MLX 4bit",
+    "name": "Gemma 4 Gutenberg 31B",
     "family": "gemma",
-    "released": "2026-04-02",
-    "updated": "2026-04-02",
+    "released": "2026-10-13",
+    "updated": "2026-10-13",
     "open_weights": true,
     "reasoning": false,
     "capabilities": {
       "tools": false,
       "attachments": false,
-      "temperature": true,
+      "structured_output": false,
       "input": [
         "text"
       ],
@@ -4059,11 +3992,12 @@
       ]
     },
     "limit": {
-      "context": 32768,
+      "context": 65536,
+      "input": 65536,
       "output": 8192
     },
     "providers": [
-      "atomic-chat"
+      "nano-gpt"
     ]
   },
   "google/imagen-3": {
@@ -4071,13 +4005,14 @@
     "lab": "google",
     "name": "Imagen 3",
     "family": "imagen",
+    "type": "image",
     "released": "2024-10-15",
     "updated": "2024-10-15",
     "open_weights": false,
     "reasoning": false,
     "capabilities": {
       "tools": true,
-      "attachments": true,
+      "attachments": false,
       "temperature": false,
       "input": [
         "text"
@@ -4099,13 +4034,14 @@
     "lab": "google",
     "name": "Imagen 4",
     "family": "imagen",
+    "type": "image",
     "released": "2025-05-22",
     "updated": "2025-05-22",
     "open_weights": false,
     "reasoning": false,
     "capabilities": {
       "tools": true,
-      "attachments": true,
+      "attachments": false,
       "temperature": false,
       "input": [
         "text"
@@ -4127,13 +4063,14 @@
     "lab": "google",
     "name": "Imagen 4 Ultra",
     "family": "imagen",
+    "type": "image",
     "released": "2025-05-24",
     "updated": "2025-05-24",
     "open_weights": false,
     "reasoning": false,
     "capabilities": {
       "tools": true,
-      "attachments": true,
+      "attachments": false,
       "temperature": false,
       "input": [
         "text"
@@ -4150,62 +4087,6 @@
       "poe"
     ]
   },
-  "google/imagen-4.0-fast": {
-    "id": "google/imagen-4.0-fast",
-    "lab": "google",
-    "name": "Imagen 4.0 Fast",
-    "family": "imagen",
-    "released": "2025-05-20",
-    "updated": "2025-05-20",
-    "open_weights": false,
-    "reasoning": false,
-    "capabilities": {
-      "tools": false,
-      "attachments": false,
-      "temperature": false,
-      "input": [
-        "text"
-      ],
-      "output": [
-        "image"
-      ]
-    },
-    "limit": {
-      "context": 480,
-      "output": 0
-    },
-    "providers": [
-      "fastrouter"
-    ]
-  },
-  "google/imagen-4.0-ultra": {
-    "id": "google/imagen-4.0-ultra",
-    "lab": "google",
-    "name": "Imagen 4.0 Ultra",
-    "family": "imagen",
-    "released": "2025-05-20",
-    "updated": "2025-05-20",
-    "open_weights": false,
-    "reasoning": false,
-    "capabilities": {
-      "tools": false,
-      "attachments": false,
-      "temperature": false,
-      "input": [
-        "text"
-      ],
-      "output": [
-        "image"
-      ]
-    },
-    "limit": {
-      "context": 480,
-      "output": 0
-    },
-    "providers": [
-      "fastrouter"
-    ]
-  },
   "google/lyria": {
     "id": "google/lyria",
     "lab": "google",
@@ -4217,7 +4098,7 @@
     "reasoning": false,
     "capabilities": {
       "tools": true,
-      "attachments": true,
+      "attachments": false,
       "temperature": false,
       "input": [
         "text"
@@ -4324,65 +4205,6 @@
     },
     "providers": [
       "llmtr"
-    ]
-  },
-  "google/nano-banana": {
-    "id": "google/nano-banana",
-    "lab": "google",
-    "name": "Nano Banana",
-    "family": "nano-banana",
-    "released": "2025-08-21",
-    "updated": "2025-08-21",
-    "open_weights": false,
-    "reasoning": false,
-    "capabilities": {
-      "tools": true,
-      "attachments": true,
-      "temperature": false,
-      "input": [
-        "text",
-        "image"
-      ],
-      "output": [
-        "text",
-        "image"
-      ]
-    },
-    "limit": {
-      "context": 65536,
-      "output": 0
-    },
-    "providers": [
-      "poe"
-    ]
-  },
-  "google/nano-banana-pro": {
-    "id": "google/nano-banana-pro",
-    "lab": "google",
-    "name": "Nano Banana Pro",
-    "family": "nano-banana",
-    "released": "2025-11-19",
-    "updated": "2025-11-19",
-    "open_weights": false,
-    "reasoning": false,
-    "capabilities": {
-      "tools": true,
-      "attachments": true,
-      "temperature": false,
-      "input": [
-        "text",
-        "image"
-      ],
-      "output": [
-        "image"
-      ]
-    },
-    "limit": {
-      "context": 65536,
-      "output": 0
-    },
-    "providers": [
-      "poe"
     ]
   },
   "google/paligemma": {
@@ -4505,13 +4327,14 @@
     "lab": "google",
     "name": "Veo 2",
     "family": "veo",
+    "type": "video",
     "released": "2024-12-02",
     "updated": "2024-12-02",
     "open_weights": false,
     "reasoning": false,
     "capabilities": {
       "tools": true,
-      "attachments": true,
+      "attachments": false,
       "temperature": false,
       "input": [
         "text"
@@ -4533,13 +4356,14 @@
     "lab": "google",
     "name": "Veo 3",
     "family": "veo",
+    "type": "video",
     "released": "2025-05-21",
     "updated": "2025-05-21",
     "open_weights": false,
     "reasoning": false,
     "capabilities": {
       "tools": true,
-      "attachments": true,
+      "attachments": false,
       "temperature": false,
       "input": [
         "text"
@@ -4586,36 +4410,6 @@
       "vercel"
     ]
   },
-  "google/veo-3.1": {
-    "id": "google/veo-3.1",
-    "lab": "google",
-    "name": "Veo 3.1",
-    "family": "veo",
-    "released": "2026-05-01",
-    "updated": "2026-05-01",
-    "open_weights": false,
-    "reasoning": false,
-    "capabilities": {
-      "tools": false,
-      "attachments": true,
-      "temperature": false,
-      "input": [
-        "text",
-        "image"
-      ],
-      "output": [
-        "video"
-      ]
-    },
-    "limit": {
-      "context": 400000,
-      "output": 0
-    },
-    "providers": [
-      "fastrouter",
-      "poe"
-    ]
-  },
   "google/veo-3.1-fast-generate-preview": {
     "id": "google/veo-3.1-fast-generate-preview",
     "lab": "google",
@@ -4644,6 +4438,7 @@
       "output": 0
     },
     "providers": [
+      "fastrouter",
       "google"
     ]
   },
@@ -4705,36 +4500,9 @@
       "output": 1
     },
     "providers": [
-      "google"
-    ]
-  },
-  "google/veo-3.1-lite": {
-    "id": "google/veo-3.1-lite",
-    "lab": "google",
-    "name": "Veo 3.1 Lite",
-    "family": "veo",
-    "released": "2026-05-01",
-    "updated": "2026-05-01",
-    "open_weights": false,
-    "reasoning": false,
-    "capabilities": {
-      "tools": false,
-      "attachments": true,
-      "temperature": false,
-      "input": [
-        "text",
-        "image"
-      ],
-      "output": [
-        "video"
-      ]
-    },
-    "limit": {
-      "context": 400000,
-      "output": 0
-    },
-    "providers": [
-      "fastrouter"
+      "fastrouter",
+      "google",
+      "poe"
     ]
   },
   "google/veo-3.1-lite-generate-001": {
@@ -4795,6 +4563,7 @@
       "output": 0
     },
     "providers": [
+      "fastrouter",
       "google"
     ]
   }

@@ -177,7 +177,8 @@
       "price": {
         "input": 0.29,
         "output": 1.2
-      }
+      },
+      "status": "deprecated"
     },
     "minimax/minimax-m2.7": {
       "name": "MiniMax M2.7",
@@ -312,7 +313,8 @@
       "price": {
         "input": 0.42,
         "output": 2.2
-      }
+      },
+      "status": "deprecated"
     },
     "zhipuai/glm-5.3": {
       "name": "GLM 5.3",

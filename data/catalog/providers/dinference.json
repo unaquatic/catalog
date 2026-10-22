@@ -44,12 +44,15 @@
       "price": {
         "input": 0.22,
         "output": 0.88
-      }
+      },
+      "status": "deprecated"
     },
     "openai/gpt-oss-120b": {
       "name": "GPT OSS 120B",
+      "family": "gpt-oss",
       "released": "2025-08-05",
       "updated": "2025-08-05",
+      "knowledge": "2024-06",
       "open_weights": true,
       "capabilities": {
         "tools": true,
@@ -177,7 +180,8 @@
       "price": {
         "input": 1.25,
         "output": 3.89
-      }
+      },
+      "status": "deprecated"
     },
     "zhipuai/glm-5.2": {
       "name": "GLM 5.2",
@@ -212,7 +216,8 @@
       "price": {
         "input": 1.25,
         "output": 3.89
-      }
+      },
+      "status": "deprecated"
     }
   }
 }

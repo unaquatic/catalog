@@ -15,8 +15,8 @@
   },
   "doc": "https://model.inferx.net/endpoints",
   "models": {
-    "alibaba/qwen3-coder-next-fp8": {
-      "name": "Qwen3 Coder Next FP8",
+    "alibaba/qwen3-coder-next": {
+      "name": "Qwen3 Coder Next",
       "family": "qwen",
       "released": "2026-02-03",
       "updated": "2026-02-03",
@@ -45,43 +45,15 @@
       "price": {
         "input": 0,
         "output": 0
-      }
-    },
-    "alibaba/qwen3-coder-next-fp8-no-thinking": {
-      "name": "Qwen3 Coder Next FP8 No Thinking",
-      "family": "qwen",
-      "released": "2026-02-03",
-      "updated": "2026-02-03",
-      "knowledge": "2025-04",
-      "open_weights": true,
-      "capabilities": {
-        "tools": true,
-        "attachments": false,
-        "structured_output": true,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
       },
-      "limit": {
-        "context": 260000,
-        "output": 65536
-      },
-      "provider_options": {
-        "id": "Qwen3-Coder-Next-FP8-no-thinking",
-        "name": "Qwen3-Coder-Next-FP8-no-thinking"
-      },
-      "price": {
-        "input": 0,
-        "output": 0
-      }
+      "aliases": [
+        "Qwen3-Coder-Next-FP8-no-thinking"
+      ]
     },
     "alibaba/qwen3-embedding-8b": {
       "name": "Qwen3 Embedding 8B",
-      "family": "text-embedding",
+      "family": "qwen",
+      "type": "embedding",
       "released": "2025-06-05",
       "updated": "2025-06-05",
       "open_weights": true,

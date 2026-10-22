@@ -310,9 +310,9 @@
         "name": "DeepSeek V4 Pro"
       },
       "price": {
-        "input": 0.435,
-        "output": 0.87,
-        "cache_read": 0.003625
+        "input": 1.32,
+        "output": 3.96,
+        "cache_read": 0.044
       }
     },
     "google/gemini-2.5-flash": {
@@ -498,6 +498,7 @@
       "price": {
         "input": 0.3,
         "output": 1.2,
+        "cache_read": 0.06,
         "cache_write": 0.375
       }
     },
@@ -530,6 +531,7 @@
       "price": {
         "input": 0.6,
         "output": 2.4,
+        "cache_read": 0.06,
         "cache_write": 0.375
       }
     },
@@ -577,8 +579,9 @@
         "name": "Kimi K2.5"
       },
       "price": {
-        "input": 0.5,
-        "output": 2.8
+        "input": 0.45,
+        "output": 2.25,
+        "cache_read": 0.07
       }
     },
     "moonshotai/kimi-k2.6": {

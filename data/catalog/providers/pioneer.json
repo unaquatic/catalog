@@ -2451,10 +2451,41 @@
         "cache_read": 0.1,
         "cache_write": 0.1
       },
-      "status": "deprecated",
-      "aliases": [
-        "meta-llama/Llama-3.2-3B-Instruct"
-      ]
+      "status": "deprecated"
+    },
+    "meta/llama-3.2-3b-instruct": {
+      "name": "Llama 3.2 3B Instruct",
+      "family": "llama",
+      "released": "2024-08-31",
+      "updated": "2024-09-25",
+      "knowledge": "2023-12-31",
+      "open_weights": true,
+      "capabilities": {
+        "tools": false,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 131072,
+        "output": 80000
+      },
+      "provider_options": {
+        "id": "meta-llama/Llama-3.2-3B-Instruct",
+        "name": "Llama 3.2 3B Instruct"
+      },
+      "price": {
+        "input": 0.1,
+        "output": 0.335,
+        "cache_read": 0.1,
+        "cache_write": 0.1
+      },
+      "status": "deprecated"
     },
     "meta/llama-3.3-70b-instruct": {
       "name": "Llama 3.3 70B Instruct",
@@ -3453,7 +3484,7 @@
         ]
       },
       "limit": {
-        "context": 8192,
+        "context": 65536,
         "output": 4096
       },
       "reasoning": {

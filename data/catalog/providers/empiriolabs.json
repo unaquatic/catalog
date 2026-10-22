@@ -1455,7 +1455,8 @@
         "input": 0.3,
         "output": 1.2,
         "cache_read": 0.3
-      }
+      },
+      "status": "deprecated"
     },
     "deepseek/deepseek-v4.1-flash-1017": {
       "name": "DeepSeek V4.1 Flash 1017",
@@ -2255,6 +2256,7 @@
     },
     "stepfun/step-3.5-flash": {
       "name": "Step 3.5 Flash",
+      "family": "step",
       "released": "2026-01-29",
       "updated": "2026-02-13",
       "knowledge": "2025-01",
@@ -2289,6 +2291,7 @@
     },
     "stepfun/step-3.5-flash-2603": {
       "name": "Step 3.5 Flash 2603",
+      "family": "step",
       "released": "2026-04-02",
       "updated": "2026-04-02",
       "knowledge": "2025-01",

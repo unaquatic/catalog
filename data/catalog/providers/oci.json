@@ -44,7 +44,8 @@
       "price": {
         "input": 0.72,
         "output": 0.72
-      }
+      },
+      "status": "deprecated"
     },
     "meta/llama-4-maverick-17b-instruct": {
       "name": "Llama 4 Maverick 17B Instruct",

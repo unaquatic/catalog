@@ -45,7 +45,8 @@
       "price": {
         "input": 0.5811,
         "output": 2.3244
-      }
+      },
+      "status": "deprecated"
     },
     "alibaba/qwen3.6-35b-a3b": {
       "name": "Qwen3.6 35B A3B",
@@ -961,7 +962,8 @@
         "input": 0.75,
         "output": 3.75,
         "cache_read": 0.075
-      }
+      },
+      "status": "deprecated"
     },
     "google/gemini-3.8-flash": {
       "name": "Gemini 3.8 Flash",
@@ -1247,7 +1249,8 @@
       "price": {
         "input": 0.4,
         "output": 2
-      }
+      },
+      "status": "deprecated"
     },
     "mistral/mistral-large-2512": {
       "name": "Mistral Large 2512",

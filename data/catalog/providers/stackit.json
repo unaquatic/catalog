@@ -15,11 +15,12 @@
   },
   "doc": "https://docs.stackit.cloud/products/data-and-ai/ai-model-serving/basics/available-shared-models",
   "models": {
-    "alibaba/qwen3-vl-235b-a22b-instruct-fp8": {
-      "name": "Qwen3 VL 235B A22B Instruct FP8",
+    "alibaba/qwen3-vl-235b-a22b-instruct": {
+      "name": "Qwen3 VL 235B A22B Instruct",
       "family": "qwen",
-      "released": "2024-11-01",
-      "updated": "2024-11-01",
+      "released": "2025-09-23",
+      "updated": "2025-09-23",
+      "knowledge": "2025-03-31",
       "open_weights": true,
       "capabilities": {
         "tools": true,
@@ -50,6 +51,7 @@
     "alibaba/qwen3-vl-embedding-8b": {
       "name": "Qwen3 VL Embedding 8B",
       "family": "qwen",
+      "type": "embedding",
       "released": "2026-02-05",
       "updated": "2026-02-05",
       "open_weights": true,
@@ -76,7 +78,7 @@
       },
       "price": {
         "input": 0.09,
-        "output": 0.09
+        "output": 0
       }
     },
     "alibaba/qwen3.6-27b": {
@@ -108,13 +110,15 @@
       "price": {
         "input": 0.53,
         "output": 0.76
-      }
+      },
+      "status": "deprecated"
     },
     "google/gemma-3-27b-it": {
       "name": "Gemma 3 27B IT",
       "family": "gemma",
-      "released": "2025-05-17",
-      "updated": "2025-05-17",
+      "released": "2025-03-12",
+      "updated": "2025-03-12",
+      "knowledge": "2024-08",
       "open_weights": true,
       "capabilities": {
         "tools": false,
@@ -140,11 +144,13 @@
       "price": {
         "input": 0.53,
         "output": 0.76
-      }
+      },
+      "status": "deprecated"
     },
     "intfloat/e5-mistral-7b-instruct": {
       "name": "E5 Mistral 7B Instruct",
       "family": "mistral",
+      "type": "embedding",
       "released": "2023-12-11",
       "updated": "2023-12-11",
       "open_weights": true,
@@ -169,15 +175,16 @@
         "name": "E5 Mistral 7B"
       },
       "price": {
-        "input": 0.02,
-        "output": 0.02
+        "input": 0.02243,
+        "output": 0
       }
     },
-    "meta/llama-3.3-70b-instruct-fp8-dynamic": {
-      "name": "Llama 3.3 70B Instruct FP8 Dynamic",
+    "meta/llama-3.3-70b-instruct": {
+      "name": "Llama 3.3 70B Instruct",
       "family": "llama",
-      "released": "2024-12-05",
-      "updated": "2024-12-05",
+      "released": "2024-12-06",
+      "updated": "2024-12-06",
+      "knowledge": "2023-12",
       "open_weights": true,
       "capabilities": {
         "tools": true,

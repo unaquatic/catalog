@@ -11,7 +11,7 @@
     "reasoning": false,
     "capabilities": {
       "tools": true,
-      "attachments": false,
+      "attachments": true,
       "temperature": true,
       "input": [
         "text",
@@ -98,13 +98,14 @@
     "lab": "openai",
     "name": "DALL E 3",
     "family": "dall-e",
+    "type": "image",
     "released": "2023-11-06",
     "updated": "2023-11-06",
     "open_weights": false,
     "reasoning": false,
     "capabilities": {
       "tools": true,
-      "attachments": true,
+      "attachments": false,
       "temperature": false,
       "input": [
         "text"
@@ -316,35 +317,6 @@
       "poe"
     ]
   },
-  "openai/gpt-3.5-turbo-raw": {
-    "id": "openai/gpt-3.5-turbo-raw",
-    "lab": "openai",
-    "name": "GPT-3.5 Turbo Raw",
-    "family": "gpt",
-    "released": "2023-09-27",
-    "updated": "2023-09-27",
-    "open_weights": false,
-    "reasoning": false,
-    "capabilities": {
-      "tools": true,
-      "attachments": true,
-      "temperature": false,
-      "input": [
-        "text",
-        "image"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 4524,
-      "output": 2048
-    },
-    "providers": [
-      "poe"
-    ]
-  },
   "openai/gpt-4": {
     "id": "openai/gpt-4",
     "lab": "openai",
@@ -378,35 +350,7 @@
       "llmgateway-providers",
       "openai",
       "openrouter",
-      "orcarouter"
-    ]
-  },
-  "openai/gpt-4-classic": {
-    "id": "openai/gpt-4-classic",
-    "lab": "openai",
-    "name": "GPT-4 Classic",
-    "family": "gpt",
-    "released": "2024-03-25",
-    "updated": "2024-03-25",
-    "open_weights": false,
-    "reasoning": false,
-    "capabilities": {
-      "tools": true,
-      "attachments": true,
-      "temperature": false,
-      "input": [
-        "text",
-        "image"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 8192,
-      "output": 4096
-    },
-    "providers": [
+      "orcarouter",
       "poe"
     ]
   },
@@ -628,36 +572,6 @@
       "vercel"
     ]
   },
-  "openai/gpt-4.1-mini-2025-04-14": {
-    "id": "openai/gpt-4.1-mini-2025-04-14",
-    "lab": "openai",
-    "name": "GPT-4.1 Mini 20250414",
-    "family": "gpt-mini",
-    "released": "2025-04-14",
-    "updated": "2025-04-14",
-    "knowledge": "2025-04",
-    "open_weights": false,
-    "reasoning": false,
-    "capabilities": {
-      "tools": true,
-      "attachments": false,
-      "temperature": true,
-      "input": [
-        "text",
-        "image"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 1047576,
-      "output": 32768
-    },
-    "providers": [
-      "helicone"
-    ]
-  },
   "openai/gpt-4.1-nano": {
     "id": "openai/gpt-4.1-nano",
     "lab": "openai",
@@ -830,7 +744,8 @@
       "nano-gpt",
       "openai",
       "openrouter",
-      "orcarouter"
+      "orcarouter",
+      "poe"
     ]
   },
   "openai/gpt-4o-2024-11-20": {
@@ -868,35 +783,6 @@
       "openai",
       "openrouter",
       "orcarouter"
-    ]
-  },
-  "openai/gpt-4o-aug": {
-    "id": "openai/gpt-4o-aug",
-    "lab": "openai",
-    "name": "GPT-4o Aug",
-    "family": "gpt",
-    "released": "2024-11-21",
-    "updated": "2024-11-21",
-    "open_weights": false,
-    "reasoning": false,
-    "capabilities": {
-      "tools": true,
-      "attachments": true,
-      "temperature": false,
-      "input": [
-        "text",
-        "image"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 128000,
-      "output": 8192
-    },
-    "providers": [
-      "poe"
     ]
   },
   "openai/gpt-4o-mini": {
@@ -964,7 +850,7 @@
     "reasoning": false,
     "capabilities": {
       "tools": true,
-      "attachments": true,
+      "attachments": false,
       "temperature": false,
       "input": [
         "text"
@@ -1024,7 +910,7 @@
     "reasoning": false,
     "capabilities": {
       "tools": true,
-      "attachments": true,
+      "attachments": false,
       "temperature": false,
       "input": [
         "text"
@@ -1136,35 +1022,6 @@
       "zenmux"
     ]
   },
-  "openai/gpt-5-chat": {
-    "id": "openai/gpt-5-chat",
-    "lab": "openai",
-    "name": "GPT-5 Chat",
-    "family": "gpt-codex",
-    "released": "2025-08-07",
-    "updated": "2025-08-07",
-    "open_weights": false,
-    "reasoning": false,
-    "capabilities": {
-      "tools": true,
-      "attachments": true,
-      "temperature": false,
-      "input": [
-        "text",
-        "image"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 128000,
-      "output": 16384
-    },
-    "providers": [
-      "poe"
-    ]
-  },
   "openai/gpt-5-chat-latest": {
     "id": "openai/gpt-5-chat-latest",
     "lab": "openai",
@@ -1195,7 +1052,8 @@
     "providers": [
       "helicone",
       "jiekou",
-      "orcarouter"
+      "orcarouter",
+      "poe"
     ]
   },
   "openai/gpt-5-codex": {
@@ -1569,36 +1427,6 @@
       "zenmux"
     ]
   },
-  "openai/gpt-5.1-chat": {
-    "id": "openai/gpt-5.1-chat",
-    "lab": "openai",
-    "name": "GPT-5.1 Chat",
-    "released": "2025-11-13",
-    "updated": "2025-11-13",
-    "knowledge": "2025-01-01",
-    "open_weights": false,
-    "reasoning": false,
-    "capabilities": {
-      "tools": true,
-      "attachments": true,
-      "temperature": true,
-      "input": [
-        "pdf",
-        "image",
-        "text"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 128000,
-      "output": 64000
-    },
-    "providers": [
-      "zenmux"
-    ]
-  },
   "openai/gpt-5.1-chat-latest": {
     "id": "openai/gpt-5.1-chat-latest",
     "lab": "openai",
@@ -1629,7 +1457,9 @@
       "302ai",
       "abacus",
       "helicone",
-      "orcarouter"
+      "orcarouter",
+      "poe",
+      "zenmux"
     ]
   },
   "openai/gpt-5.1-codex": {
@@ -1772,35 +1602,6 @@
       "zenmux"
     ]
   },
-  "openai/gpt-5.1-instant": {
-    "id": "openai/gpt-5.1-instant",
-    "lab": "openai",
-    "name": "GPT-5.1 Instant",
-    "family": "gpt",
-    "released": "2025-11-12",
-    "updated": "2025-11-12",
-    "open_weights": false,
-    "reasoning": true,
-    "capabilities": {
-      "tools": true,
-      "attachments": true,
-      "temperature": false,
-      "input": [
-        "text",
-        "image"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 128000,
-      "output": 16384
-    },
-    "providers": [
-      "poe"
-    ]
-  },
   "openai/gpt-5.1-thinking": {
     "id": "openai/gpt-5.1-thinking",
     "lab": "openai",
@@ -1926,7 +1727,8 @@
       "abacus",
       "kilo",
       "openrouter",
-      "orcarouter"
+      "orcarouter",
+      "poe"
     ]
   },
   "openai/gpt-5.2-codex": {
@@ -1979,34 +1781,6 @@
       "zenmux"
     ]
   },
-  "openai/gpt-5.2-instant": {
-    "id": "openai/gpt-5.2-instant",
-    "lab": "openai",
-    "name": "GPT-5.2 Instant",
-    "released": "2025-12-11",
-    "updated": "2025-12-11",
-    "open_weights": false,
-    "reasoning": false,
-    "capabilities": {
-      "tools": true,
-      "attachments": true,
-      "temperature": false,
-      "input": [
-        "text",
-        "image"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 128000,
-      "output": 16384
-    },
-    "providers": [
-      "poe"
-    ]
-  },
   "openai/gpt-5.2-pro": {
     "id": "openai/gpt-5.2-pro",
     "lab": "openai",
@@ -2050,34 +1824,6 @@
       "zenmux"
     ]
   },
-  "openai/gpt-5.3-chat": {
-    "id": "openai/gpt-5.3-chat",
-    "lab": "openai",
-    "name": "GPT-5.3 Chat",
-    "released": "2026-03-20",
-    "updated": "2026-03-20",
-    "knowledge": "2025-08-31",
-    "open_weights": false,
-    "reasoning": false,
-    "capabilities": {
-      "tools": true,
-      "attachments": true,
-      "temperature": true,
-      "input": [
-        "text"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 128000,
-      "output": 16380
-    },
-    "providers": [
-      "zenmux"
-    ]
-  },
   "openai/gpt-5.3-chat-latest": {
     "id": "openai/gpt-5.3-chat-latest",
     "lab": "openai",
@@ -2107,7 +1853,9 @@
     "providers": [
       "302ai",
       "abacus",
-      "opper"
+      "opper",
+      "poe",
+      "zenmux"
     ]
   },
   "openai/gpt-5.3-codex": {
@@ -2202,68 +1950,6 @@
     "providers": [
       "openai",
       "opencode",
-      "poe"
-    ]
-  },
-  "openai/gpt-5.3-codex-xhigh": {
-    "id": "openai/gpt-5.3-codex-xhigh",
-    "lab": "openai",
-    "name": "GPT-5.3 Codex XHigh",
-    "family": "gpt",
-    "released": "2026-02-05",
-    "updated": "2026-02-05",
-    "knowledge": "2025-08-31",
-    "open_weights": false,
-    "reasoning": true,
-    "capabilities": {
-      "tools": true,
-      "attachments": true,
-      "structured_output": true,
-      "temperature": false,
-      "input": [
-        "text",
-        "image",
-        "pdf"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 400000,
-      "input": 272000,
-      "output": 128000
-    },
-    "providers": [
-      "abacus"
-    ]
-  },
-  "openai/gpt-5.3-instant": {
-    "id": "openai/gpt-5.3-instant",
-    "lab": "openai",
-    "name": "GPT-5.3 Instant",
-    "released": "2026-03-03",
-    "updated": "2026-03-03",
-    "open_weights": false,
-    "reasoning": false,
-    "capabilities": {
-      "tools": true,
-      "attachments": true,
-      "temperature": false,
-      "input": [
-        "text",
-        "image"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 128000,
-      "input": 111616,
-      "output": 16384
-    },
-    "providers": [
       "poe"
     ]
   },
@@ -3251,12 +2937,9 @@
     "reasoning": false,
     "capabilities": {
       "tools": false,
-      "attachments": true,
-      "structured_output": false,
-      "temperature": false,
+      "attachments": false,
       "input": [
-        "text",
-        "image"
+        "text"
       ],
       "output": [
         "text"
@@ -3264,10 +2947,10 @@
     },
     "limit": {
       "context": 1050000,
+      "input": 1050000,
       "output": 0
     },
     "providers": [
-      "openrouter",
       "vercel"
     ]
   },
@@ -3938,6 +3621,7 @@
       "aki-io",
       "baseten",
       "cerebras",
+      "clarifai",
       "cloudferro-sherlock",
       "cloudflare-workers-ai",
       "cortecs",
@@ -3977,6 +3661,7 @@
       "ovhcloud",
       "pendra",
       "pioneer",
+      "poe",
       "prime",
       "privatemode-ai",
       "qiniu-ai",
@@ -3994,61 +3679,6 @@
       "togetherai",
       "vercel",
       "wandb"
-    ]
-  },
-  "openai/gpt-oss-120b-cs": {
-    "id": "openai/gpt-oss-120b-cs",
-    "lab": "openai",
-    "name": "GPT OSS 120B Cs",
-    "released": "2025-08-06",
-    "updated": "2025-08-06",
-    "open_weights": false,
-    "reasoning": true,
-    "capabilities": {
-      "tools": true,
-      "attachments": true,
-      "temperature": false,
-      "input": [
-        "text"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 128000,
-      "output": 0
-    },
-    "providers": [
-      "poe"
-    ]
-  },
-  "openai/gpt-oss-120b-high-throughput": {
-    "id": "openai/gpt-oss-120b-high-throughput",
-    "lab": "openai",
-    "name": "GPT OSS 120B High Throughput",
-    "family": "gpt-oss",
-    "released": "2025-08-05",
-    "updated": "2026-02-25",
-    "open_weights": true,
-    "reasoning": true,
-    "capabilities": {
-      "tools": true,
-      "attachments": false,
-      "temperature": true,
-      "input": [
-        "text"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 131072,
-      "output": 16384
-    },
-    "providers": [
-      "clarifai"
     ]
   },
   "openai/gpt-oss-20b": {
@@ -4236,8 +3866,10 @@
     "lab": "openai",
     "name": "GPT Realtime 1.5",
     "family": "gpt",
-    "released": "2025-06-01",
-    "updated": "2025-06-01",
+    "type": "realtime",
+    "released": "2026-02-23",
+    "updated": "2026-02-23",
+    "knowledge": "2024-09-30",
     "open_weights": false,
     "reasoning": false,
     "capabilities": {
@@ -4246,8 +3878,7 @@
       "temperature": true,
       "input": [
         "text",
-        "audio",
-        "image"
+        "audio"
       ],
       "output": [
         "text",
@@ -4259,7 +3890,6 @@
       "output": 4096
     },
     "providers": [
-      "fastrouter",
       "vercel"
     ]
   },
@@ -4495,13 +4125,14 @@
     "lab": "openai",
     "name": "KB Whisper Large",
     "family": "whisper",
+    "type": "transcription",
     "released": "2024-10-01",
     "updated": "2024-10-01",
     "open_weights": true,
     "reasoning": false,
     "capabilities": {
       "tools": false,
-      "attachments": false,
+      "attachments": true,
       "input": [
         "audio"
       ],
@@ -4571,7 +4202,7 @@
     "updated": "2025-01-01",
     "knowledge": "2025-01",
     "open_weights": false,
-    "reasoning": false,
+    "reasoning": true,
     "capabilities": {
       "tools": false,
       "attachments": false,
@@ -4682,8 +4313,8 @@
     "lab": "openai",
     "name": "o3 Deep Research",
     "family": "o",
-    "released": "2024-06-26",
-    "updated": "2024-06-26",
+    "released": "2025-06-26",
+    "updated": "2025-06-26",
     "knowledge": "2024-05",
     "open_weights": false,
     "reasoning": true,
@@ -4846,8 +4477,8 @@
     "lab": "openai",
     "name": "o4 Mini Deep Research",
     "family": "o-mini",
-    "released": "2024-06-26",
-    "updated": "2024-06-26",
+    "released": "2025-06-26",
+    "updated": "2025-06-26",
     "knowledge": "2024-05",
     "open_weights": false,
     "reasoning": true,
@@ -4876,6 +4507,7 @@
     "lab": "openai",
     "name": "Sora 2",
     "family": "sora",
+    "type": "video",
     "released": "2025-10-06",
     "updated": "2025-10-06",
     "open_weights": false,
@@ -4905,6 +4537,7 @@
     "lab": "openai",
     "name": "Sora 2 Pro",
     "family": "sora",
+    "type": "video",
     "released": "2025-10-06",
     "updated": "2025-10-06",
     "open_weights": false,

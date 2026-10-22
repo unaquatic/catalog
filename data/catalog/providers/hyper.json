@@ -411,7 +411,7 @@
         ]
       },
       "limit": {
-        "context": 1000000,
+        "context": 1048576,
         "output": 262144
       },
       "reasoning": {

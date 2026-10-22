@@ -33,18 +33,19 @@
     ],
     "providers": [
       "digitalocean",
-      "novita-ai",
-      "nvidia"
+      "novita-ai"
     ]
   },
   "baai/bge-multilingual-gemma2": {
     "id": "baai/bge-multilingual-gemma2",
     "lab": "baai",
     "name": "BGE Multilingual Gemma 2",
-    "family": "text-embedding",
+    "family": "bge",
+    "type": "embedding",
     "released": "2024-07-25",
-    "updated": "2026-08-01",
+    "updated": "2024-07-25",
     "open_weights": true,
+    "license": "Gemma",
     "reasoning": false,
     "capabilities": {
       "tools": false,
@@ -58,10 +59,15 @@
       ]
     },
     "limit": {
-      "context": 8000,
-      "input": 8000,
-      "output": 3584
+      "context": 8192,
+      "output": 0
     },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/BAAI/bge-multilingual-gemma2"
+      }
+    ],
     "providers": [
       "infomaniak",
       "scaleway"

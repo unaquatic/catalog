@@ -17,13 +17,15 @@
   "models": {
     "alibaba/qwen3-embedding-8b": {
       "name": "Qwen3 Embedding 8B",
-      "family": "text-embedding",
-      "released": "2025-07-30",
-      "updated": "2025-07-30",
+      "family": "qwen",
+      "type": "embedding",
+      "released": "2025-06-05",
+      "updated": "2025-06-05",
       "open_weights": true,
       "capabilities": {
         "tools": false,
         "attachments": false,
+        "temperature": false,
         "input": [
           "text"
         ],
@@ -47,6 +49,7 @@
     "alibaba/qwen3-reranker-4b": {
       "name": "Qwen3 Reranker 4B",
       "family": "qwen",
+      "type": "reranking",
       "released": "2025-07-30",
       "updated": "2025-07-30",
       "open_weights": true,
@@ -122,7 +125,8 @@
         "temperature": true,
         "input": [
           "text",
-          "image"
+          "image",
+          "video"
         ],
         "output": [
           "text"
@@ -227,6 +231,7 @@
     "intfloat/multilingual-e5-large-instruct": {
       "name": "Multilingual E5 Large Instruct",
       "family": "text-embedding",
+      "type": "embedding",
       "released": "2024-06-01",
       "updated": "2024-06-01",
       "open_weights": true,
@@ -326,12 +331,13 @@
     "mistral/voxtral-small-24b-2507": {
       "name": "Voxtral Small 24B 2507",
       "family": "voxtral",
+      "type": "transcription",
       "released": "2025-03-01",
       "updated": "2025-03-01",
       "open_weights": true,
       "capabilities": {
         "tools": false,
-        "attachments": false,
+        "attachments": true,
         "input": [
           "audio",
           "text"
@@ -346,12 +352,17 @@
       },
       "provider_options": {
         "id": "mistralai/Voxtral-Small-24B-2507",
-        "name": "Voxtral Small 24B"
-      },
-      "price": {
-        "input": 0.0023,
-        "output": 0.0023,
-        "output_audio": 2.3
+        "name": "Voxtral Small 24B",
+        "endpoint": {
+          "format": "openai-responses",
+          "api": "https://models.think.evroc.com/v1",
+          "auth": {
+            "scheme": "bearer"
+          },
+          "env": [
+            "EVROC_API_KEY"
+          ]
+        }
       }
     },
     "moonshotai/kimi-k2.6": {
@@ -396,10 +407,12 @@
       "family": "gpt-oss",
       "released": "2025-08-05",
       "updated": "2025-08-05",
+      "knowledge": "2024-06",
       "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": false,
+        "temperature": true,
         "input": [
           "text"
         ],
@@ -430,12 +443,13 @@
     "openai/kb-whisper-large": {
       "name": "KB Whisper Large",
       "family": "whisper",
+      "type": "transcription",
       "released": "2024-10-01",
       "updated": "2024-10-01",
       "open_weights": true,
       "capabilities": {
         "tools": false,
-        "attachments": false,
+        "attachments": true,
         "input": [
           "audio"
         ],
@@ -449,12 +463,17 @@
       },
       "provider_options": {
         "id": "KBLab/kb-whisper-large",
-        "name": "KB Whisper"
-      },
-      "price": {
-        "input": 0.0023,
-        "output": 0.0023,
-        "output_audio": 2.3
+        "name": "KB Whisper",
+        "endpoint": {
+          "format": "openai-responses",
+          "api": "https://models.think.evroc.com/v1",
+          "auth": {
+            "scheme": "bearer"
+          },
+          "env": [
+            "EVROC_API_KEY"
+          ]
+        }
       }
     },
     "openai/whisper-large-v3": {
@@ -481,7 +500,17 @@
       },
       "provider_options": {
         "id": "openai/whisper-large-v3",
-        "name": "Whisper 3 Large"
+        "name": "Whisper 3 Large",
+        "endpoint": {
+          "format": "openai-responses",
+          "api": "https://models.think.evroc.com/v1",
+          "auth": {
+            "scheme": "bearer"
+          },
+          "env": [
+            "EVROC_API_KEY"
+          ]
+        }
       },
       "price": {
         "input": 0.0023,
@@ -513,7 +542,17 @@
       },
       "provider_options": {
         "id": "openai/whisper-large-v3-turbo",
-        "name": "Whisper Large v3 Turbo"
+        "name": "Whisper Large v3 Turbo",
+        "endpoint": {
+          "format": "openai-responses",
+          "api": "https://models.think.evroc.com/v1",
+          "auth": {
+            "scheme": "bearer"
+          },
+          "env": [
+            "EVROC_API_KEY"
+          ]
+        }
       },
       "price": {
         "input": 0.0023,

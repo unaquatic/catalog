@@ -148,38 +148,6 @@
       "vercel"
     ]
   },
-  "minimax/minimax-m1": {
-    "id": "minimax/minimax-m1",
-    "lab": "minimax",
-    "name": "MiniMax M1",
-    "family": "minimax",
-    "released": "2025-06-16",
-    "updated": "2025-06-16",
-    "open_weights": false,
-    "reasoning": false,
-    "capabilities": {
-      "tools": true,
-      "attachments": false,
-      "temperature": true,
-      "input": [
-        "text"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 1000000,
-      "output": 128000
-    },
-    "providers": [
-      "302ai",
-      "kilo",
-      "nano-gpt",
-      "openrouter",
-      "qiniu-ai"
-    ]
-  },
   "minimax/minimax-m1-80k": {
     "id": "minimax/minimax-m1-80k",
     "lab": "minimax",
@@ -212,10 +180,14 @@
       }
     ],
     "providers": [
+      "302ai",
       "huggingface",
       "jiekou",
+      "kilo",
       "nano-gpt",
-      "novita-ai"
+      "novita-ai",
+      "openrouter",
+      "qiniu-ai"
     ]
   },
   "minimax/minimax-m2": {
@@ -266,34 +238,6 @@
       "qiniu-ai",
       "vercel",
       "zenmux"
-    ]
-  },
-  "minimax/minimax-m2-5-high-throughput": {
-    "id": "minimax/minimax-m2-5-high-throughput",
-    "lab": "minimax",
-    "name": "MiniMax M2.5 High Throughput",
-    "family": "minimax",
-    "released": "2026-02-12",
-    "updated": "2026-02-25",
-    "open_weights": true,
-    "reasoning": true,
-    "capabilities": {
-      "tools": true,
-      "attachments": false,
-      "temperature": true,
-      "input": [
-        "text"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 204800,
-      "output": 131072
-    },
-    "providers": [
-      "clarifai"
     ]
   },
   "minimax/minimax-m2-her": {
@@ -420,6 +364,7 @@
       "alibaba-token-plan",
       "alibaba-token-plan-cn",
       "baseten",
+      "clarifai",
       "cloudferro-sherlock",
       "commandcode",
       "cortecs",
@@ -428,7 +373,6 @@
       "dinference",
       "drun",
       "edenai",
-      "friendli",
       "frogbot",
       "greenpt",
       "hpc-ai",
@@ -560,7 +504,6 @@
       "moark",
       "nano-gpt",
       "novita-ai",
-      "nvidia",
       "ofox",
       "ollama-cloud",
       "opencode",
@@ -721,7 +664,6 @@
       "nano-gpt",
       "nebius",
       "novita-ai",
-      "nvidia",
       "ofox",
       "ollama-cloud",
       "opencode",

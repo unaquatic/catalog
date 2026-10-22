@@ -45,8 +45,10 @@
         "name": "Qwen3.7 Plus"
       },
       "price": {
-        "input": 0,
-        "output": 0
+        "input": 0.38285714,
+        "output": 1.48571429,
+        "cache_read": 0.07428571,
+        "cache_write": 0.48
       }
     },
     "alibaba/qwen3.8-max": {
@@ -75,10 +77,8 @@
       },
       "reasoning": {
         "efforts": [
-          "minimal",
           "low",
           "medium",
-          "high",
           "xhigh"
         ]
       },
@@ -87,8 +87,10 @@
         "name": "Qwen3.8 Max"
       },
       "price": {
-        "input": 0,
-        "output": 0
+        "input": 2.4,
+        "output": 6.85714286,
+        "cache_read": 0.29714286,
+        "cache_write": 2.97142857
       }
     },
     "anthropic/claude-fable-5": {
@@ -132,8 +134,10 @@
         "name": "Claude Fable 5"
       },
       "price": {
-        "input": 0,
-        "output": 0
+        "input": 12,
+        "output": 57.14285714,
+        "cache_read": 1.2,
+        "cache_write": 14.85714286
       }
     },
     "anthropic/claude-opus-4-7": {
@@ -178,8 +182,10 @@
         "name": "Claude Opus 4.7"
       },
       "price": {
-        "input": 0,
-        "output": 0
+        "input": 5.71428571,
+        "output": 29.71428571,
+        "cache_read": 0.57142857,
+        "cache_write": 7.42857143
       }
     },
     "anthropic/claude-opus-4-8": {
@@ -224,8 +230,10 @@
         "name": "Claude Opus 4.8"
       },
       "price": {
-        "input": 0,
-        "output": 0
+        "input": 5.71428571,
+        "output": 29.71428571,
+        "cache_read": 0.57142857,
+        "cache_write": 7.42857143
       }
     },
     "anthropic/claude-opus-5": {
@@ -270,8 +278,10 @@
         "name": "Claude Opus 5"
       },
       "price": {
-        "input": 0,
-        "output": 0
+        "input": 5.71428571,
+        "output": 28.57142857,
+        "cache_read": 2.28571429,
+        "cache_write": 5.71428571
       }
     },
     "anthropic/claude-sonnet-4-6": {
@@ -315,8 +325,10 @@
         "name": "Claude Sonnet 4.6"
       },
       "price": {
-        "input": 0,
-        "output": 0
+        "input": 3.6,
+        "output": 17.71428571,
+        "cache_read": 0.36,
+        "cache_write": 4.45714286
       }
     },
     "anthropic/claude-sonnet-5": {
@@ -361,8 +373,10 @@
         "name": "Claude Sonnet 5"
       },
       "price": {
-        "input": 0,
-        "output": 0
+        "input": 1.42857143,
+        "output": 7.14285714,
+        "cache_read": 0.57142857,
+        "cache_write": 1.71428571
       }
     },
     "deepseek/deepseek-v4-flash": {
@@ -390,8 +404,9 @@
       },
       "reasoning": {
         "efforts": [
+          "low",
           "high",
-          "xhigh"
+          "max"
         ]
       },
       "provider_options": {
@@ -399,8 +414,9 @@
         "name": "DeepSeek V4 Flash"
       },
       "price": {
-        "input": 0,
-        "output": 0
+        "input": 0.15714286,
+        "output": 0.31428571,
+        "cache_read": 0.00371429
       },
       "variants": {
         "free": {
@@ -413,7 +429,8 @@
           "price": {
             "input": 0,
             "output": 0
-          }
+          },
+          "status": "deprecated"
         }
       }
     },
@@ -442,8 +459,9 @@
       },
       "reasoning": {
         "efforts": [
+          "low",
           "high",
-          "xhigh"
+          "max"
         ]
       },
       "provider_options": {
@@ -451,8 +469,9 @@
         "name": "DeepSeek V4 Pro"
       },
       "price": {
-        "input": 0,
-        "output": 0
+        "input": 0.57142857,
+        "output": 1.14285714,
+        "cache_read": 0.00571429
       }
     },
     "deepseek/deepseek-v4.1-flash": {
@@ -480,7 +499,9 @@
         "output": 384000
       },
       "reasoning": {
+        "mandatory": false,
         "efforts": [
+          "none",
           "low",
           "high",
           "max"
@@ -491,8 +512,9 @@
         "name": "DeepSeek V4.1 Flash"
       },
       "price": {
-        "input": 0,
-        "output": 0
+        "input": 0.15714286,
+        "output": 0.31428571,
+        "cache_read": 0.00371429
       }
     },
     "google/gemini-2.5-flash": {
@@ -527,10 +549,7 @@
         "id": "gemini-2-5-flash",
         "name": "Gemini 2.5 Flash"
       },
-      "price": {
-        "input": 0,
-        "output": 0
-      }
+      "status": "deprecated"
     },
     "google/gemini-2.5-flash-lite": {
       "name": "Gemini 2.5 Flash Lite",
@@ -564,10 +583,7 @@
         "id": "gemini-2-5-flash-lite",
         "name": "Gemini 2.5 Flash-Lite"
       },
-      "price": {
-        "input": 0,
-        "output": 0
-      }
+      "status": "deprecated"
     },
     "google/gemini-3-pro-image": {
       "name": "Gemini 3 Pro Image",
@@ -603,10 +619,6 @@
       "provider_options": {
         "id": "nano-banana-pro",
         "name": "Nano Banana Pro"
-      },
-      "price": {
-        "input": 0,
-        "output": 0
       }
     },
     "google/gemini-3.1-flash-image": {
@@ -645,10 +657,6 @@
       "provider_options": {
         "id": "nano-banana-2",
         "name": "Nano Banana 2"
-      },
-      "price": {
-        "input": 0,
-        "output": 0
       }
     },
     "google/gemini-3.1-flash-lite": {
@@ -691,8 +699,10 @@
         "name": "Gemini 3.1 Flash Lite"
       },
       "price": {
-        "input": 0,
-        "output": 0
+        "input": 0.28571429,
+        "output": 1.71428571,
+        "cache_read": 0.02857143,
+        "cache_write": 0.08571429
       }
     },
     "google/gemini-3.1-flash-lite-image": {
@@ -730,10 +740,6 @@
       "provider_options": {
         "id": "nano-banana-2-lite",
         "name": "Nano Banana 2 Lite"
-      },
-      "price": {
-        "input": 0,
-        "output": 0
       }
     },
     "google/gemini-3.1-flash-tts-preview": {
@@ -761,11 +767,17 @@
       },
       "provider_options": {
         "id": "gemini-3-1-flash-tts",
-        "name": "Gemini 3.1 Flash TTS Preview"
-      },
-      "price": {
-        "input": 0,
-        "output": 0
+        "name": "Gemini 3.1 Flash TTS Preview",
+        "endpoint": {
+          "format": "openai-responses",
+          "api": "https://kenari.id/v1",
+          "auth": {
+            "scheme": "bearer"
+          },
+          "env": [
+            "KENARI_API_KEY"
+          ]
+        }
       }
     },
     "google/gemini-3.1-pro-preview": {
@@ -807,8 +819,10 @@
         "name": "Gemini 3.1 Pro Preview"
       },
       "price": {
-        "input": 0,
-        "output": 0
+        "input": 1.2,
+        "output": 7.14285714,
+        "cache_read": 0.12,
+        "cache_write": 0.22285714
       }
     },
     "google/gemini-3.5-flash": {
@@ -850,10 +864,7 @@
         "id": "gemini-3-5-flash",
         "name": "Gemini 3.5 Flash"
       },
-      "price": {
-        "input": 0,
-        "output": 0
-      }
+      "status": "deprecated"
     },
     "google/gemini-3.6-flash": {
       "name": "Gemini 3.6 Flash",
@@ -895,9 +906,12 @@
         "name": "Gemini 3.6 Flash"
       },
       "price": {
-        "input": 0,
-        "output": 0
-      }
+        "input": 0.34285714,
+        "output": 1.71428571,
+        "cache_read": 0.03428571,
+        "cache_write": 0.01714286
+      },
+      "status": "deprecated"
     },
     "google/gemini-3.7-flash": {
       "name": "Gemini 3.7 Flash",
@@ -938,9 +952,12 @@
         "name": "Gemini 3.7 Flash"
       },
       "price": {
-        "input": 0,
-        "output": 0
-      }
+        "input": 0.34285714,
+        "output": 1.71428571,
+        "cache_read": 0.03428571,
+        "cache_write": 0.01714286
+      },
+      "status": "deprecated"
     },
     "google/gemma-4-31b-it": {
       "name": "Gemma 4 31B IT",
@@ -966,14 +983,17 @@
         "context": 262144,
         "output": 32768
       },
-      "reasoning": {},
+      "reasoning": {
+        "mandatory": false
+      },
       "provider_options": {
         "id": "gemma-4-31b-it",
         "name": "Gemma 4 31B IT"
       },
       "price": {
-        "input": 0,
-        "output": 0
+        "input": 0.10285714,
+        "output": 0.40571429,
+        "cache_read": 0.04114286
       }
     },
     "minimax/minimax-m2.7": {
@@ -1003,8 +1023,9 @@
         "name": "MiniMax-M2.7"
       },
       "price": {
-        "input": 0,
-        "output": 0
+        "input": 0.36,
+        "output": 1.42857143,
+        "cache_read": 0.06857143
       }
     },
     "minimax/minimax-m2.7-highspeed": {
@@ -1034,8 +1055,9 @@
         "name": "MiniMax-M2.7-highspeed"
       },
       "price": {
-        "input": 0,
-        "output": 0
+        "input": 0.59428571,
+        "output": 2.4,
+        "cache_read": 0.11428571
       }
     },
     "minimax/minimax-m3": {
@@ -1067,8 +1089,9 @@
         "name": "MiniMax-M3"
       },
       "price": {
-        "input": 0,
-        "output": 0
+        "input": 0.36,
+        "output": 1.42857143,
+        "cache_read": 0.06857143
       }
     },
     "mistral/mistral-large-latest": {
@@ -1101,7 +1124,8 @@
       "price": {
         "input": 0,
         "output": 0
-      }
+      },
+      "status": "deprecated"
     },
     "mistral/mistral-medium-2604": {
       "name": "Mistral Medium 2604",
@@ -1140,7 +1164,8 @@
       "price": {
         "input": 0,
         "output": 0
-      }
+      },
+      "status": "deprecated"
     },
     "moonshotai/kimi-k2.6": {
       "name": "Kimi K2.6",
@@ -1173,8 +1198,9 @@
         "name": "Kimi K2.6"
       },
       "price": {
-        "input": 0,
-        "output": 0
+        "input": 0.57142857,
+        "output": 2.85714286,
+        "cache_read": 0.28571429
       },
       "variants": {
         "free": {
@@ -1187,7 +1213,8 @@
           "price": {
             "input": 0,
             "output": 0
-          }
+          },
+          "status": "deprecated"
         }
       }
     },
@@ -1222,8 +1249,9 @@
         "name": "Kimi K2.7 Code"
       },
       "price": {
-        "input": 0,
-        "output": 0
+        "input": 0.57142857,
+        "output": 2.85714286,
+        "cache_read": 0.11428571
       },
       "variants": {
         "free": {
@@ -1236,7 +1264,8 @@
           "price": {
             "input": 0,
             "output": 0
-          }
+          },
+          "status": "deprecated"
         }
       }
     },
@@ -1276,8 +1305,9 @@
         "name": "Kimi K3"
       },
       "price": {
-        "input": 0,
-        "output": 0
+        "input": 0.85714286,
+        "output": 8.57142857,
+        "cache_read": 0.11428571
       }
     },
     "nvidia/nemotron-3-nano-30b-a3b": {
@@ -1307,10 +1337,7 @@
         "id": "nemotron-3-nano-30b-a3b",
         "name": "Nemotron 3 Nano 30B A3B"
       },
-      "price": {
-        "input": 0,
-        "output": 0
-      }
+      "status": "deprecated"
     },
     "nvidia/nemotron-3-super-120b-a12b": {
       "name": "Nemotron 3 Super 120B A12B",
@@ -1335,7 +1362,9 @@
         "output": 262144
       },
       "reasoning": {
+        "mandatory": false,
         "efforts": [
+          "none",
           "low",
           "medium"
         ]
@@ -1345,8 +1374,9 @@
         "name": "Nemotron 3 Super 120B A12B"
       },
       "price": {
-        "input": 0,
-        "output": 0
+        "input": 0.09714286,
+        "output": 0.48,
+        "cache_read": 0.00971429
       },
       "variants": {
         "free": {
@@ -1386,18 +1416,16 @@
         "output": 128000
       },
       "reasoning": {
-        "efforts": [
-          "medium",
-          "high"
-        ]
+        "mandatory": false
       },
       "provider_options": {
         "id": "nemotron-3-ultra-550b-a55b",
         "name": "Nemotron 3 Ultra 550B A55B"
       },
       "price": {
-        "input": 0,
-        "output": 0
+        "input": 0.68571429,
+        "output": 4.28571429,
+        "cache_read": 0.06857143
       }
     },
     "openai/gpt-5.4-mini": {
@@ -1440,9 +1468,10 @@
         "name": "GPT-5.4 mini"
       },
       "price": {
-        "input": 0,
-        "output": 0
-      }
+        "input": 0.85714286,
+        "output": 5.37142857
+      },
+      "status": "deprecated"
     },
     "openai/gpt-5.5": {
       "name": "GPT-5.5",
@@ -1485,8 +1514,9 @@
         "name": "GPT-5.5"
       },
       "price": {
-        "input": 0,
-        "output": 0
+        "input": 5.71428571,
+        "output": 36,
+        "cache_read": 0.57142857
       }
     },
     "openai/gpt-5.6-luna": {
@@ -1530,8 +1560,10 @@
         "name": "GPT-5.6 Luna"
       },
       "price": {
-        "input": 0,
-        "output": 0
+        "input": 0.2,
+        "output": 1.14285714,
+        "cache_read": 0.02,
+        "cache_write": 0.25714286
       }
     },
     "openai/gpt-5.6-sol": {
@@ -1575,8 +1607,10 @@
         "name": "GPT-5.6 Sol"
       },
       "price": {
-        "input": 0,
-        "output": 0
+        "input": 2.97142857,
+        "output": 17.71428571,
+        "cache_read": 1.18857143,
+        "cache_write": 3.71428571
       }
     },
     "openai/gpt-5.6-terra": {
@@ -1620,9 +1654,10 @@
         "name": "GPT-5.6 Terra"
       },
       "price": {
-        "input": 0,
-        "output": 0
-      }
+        "input": 2.4,
+        "output": 14.28571429
+      },
+      "status": "deprecated"
     },
     "openai/gpt-image-2": {
       "name": "GPT Image 2",
@@ -1650,10 +1685,6 @@
       "provider_options": {
         "id": "gpt-image-2",
         "name": "GPT-Image-2"
-      },
-      "price": {
-        "input": 0,
-        "output": 0
       }
     },
     "openai/gpt-oss-120b": {
@@ -1680,7 +1711,9 @@
         "output": 32768
       },
       "reasoning": {
+        "mandatory": false,
         "efforts": [
+          "none",
           "low",
           "medium",
           "high"
@@ -1691,8 +1724,9 @@
         "name": "GPT OSS 120B"
       },
       "price": {
-        "input": 0,
-        "output": 0
+        "input": 0.036,
+        "output": 0.2,
+        "cache_read": 0.0036
       }
     },
     "openai/gpt-oss-20b": {
@@ -1700,10 +1734,12 @@
       "family": "gpt-oss",
       "released": "2025-08-05",
       "updated": "2025-08-05",
+      "knowledge": "2024-06",
       "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": false,
+        "temperature": true,
         "input": [
           "text"
         ],
@@ -1716,7 +1752,9 @@
         "output": 32768
       },
       "reasoning": {
+        "mandatory": false,
         "efforts": [
+          "none",
           "low",
           "medium",
           "high"
@@ -1727,8 +1765,9 @@
         "name": "GPT OSS 20B"
       },
       "price": {
-        "input": 0,
-        "output": 0
+        "input": 0.036,
+        "output": 0.15428571,
+        "cache_read": 0.00371429
       }
     },
     "openai/whisper-large-v3-turbo": {
@@ -1755,11 +1794,17 @@
       },
       "provider_options": {
         "id": "whisper-large-v3-turbo",
-        "name": "Whisper Large v3 Turbo"
-      },
-      "price": {
-        "input": 0,
-        "output": 0
+        "name": "Whisper Large v3 Turbo",
+        "endpoint": {
+          "format": "openai-responses",
+          "api": "https://kenari.id/v1",
+          "auth": {
+            "scheme": "bearer"
+          },
+          "env": [
+            "KENARI_API_KEY"
+          ]
+        }
       }
     },
     "stepfun/step-3.7-flash": {
@@ -1798,8 +1843,9 @@
         "name": "Step 3.7 Flash"
       },
       "price": {
-        "input": 0,
-        "output": 0
+        "input": 0.24,
+        "output": 1.37142857,
+        "cache_read": 0.048
       },
       "variants": {
         "free": {
@@ -1812,7 +1858,8 @@
           "price": {
             "input": 0,
             "output": 0
-          }
+          },
+          "status": "deprecated"
         }
       }
     },
@@ -1851,8 +1898,9 @@
         "name": "Hy3"
       },
       "price": {
-        "input": 0,
-        "output": 0
+        "input": 0.15428571,
+        "output": 0.62857143,
+        "cache_read": 0.01542857
       },
       "variants": {
         "free": {
@@ -1904,8 +1952,9 @@
         "name": "Grok 4.5"
       },
       "price": {
-        "input": 0,
-        "output": 0
+        "input": 2.28571429,
+        "output": 6.85714286,
+        "cache_read": 0.34285714
       }
     },
     "xai/grok-4.6": {
@@ -1945,8 +1994,9 @@
         "name": "Grok 4.6"
       },
       "price": {
-        "input": 0,
-        "output": 0
+        "input": 2.28571429,
+        "output": 6.85714286,
+        "cache_read": 0.34285714
       }
     },
     "xai/grok-build-0.1": {
@@ -1978,10 +2028,7 @@
         "id": "grok-build-0-1",
         "name": "Grok Build 0.1"
       },
-      "price": {
-        "input": 0,
-        "output": 0
-      }
+      "status": "deprecated"
     },
     "xai/grok-imagine-image": {
       "name": "Grok Imagine Image",
@@ -2009,10 +2056,6 @@
       "provider_options": {
         "id": "grok-imagine-image",
         "name": "Grok Imagine Image"
-      },
-      "price": {
-        "input": 0,
-        "output": 0
       }
     },
     "xai/grok-imagine-image-2.0": {
@@ -2041,10 +2084,6 @@
       "provider_options": {
         "id": "grok-imagine-image-2-0",
         "name": "Grok Imagine Image 2.0"
-      },
-      "price": {
-        "input": 0,
-        "output": 0
       }
     },
     "xiaomi/mimo-v2.5": {
@@ -2078,9 +2117,10 @@
         "name": "MiMo-V2.5"
       },
       "price": {
-        "input": 0,
-        "output": 0
+        "input": 0.16571429,
+        "output": 0.33142857
       },
+      "status": "deprecated",
       "variants": {
         "free": {
           "name": "MiMo V2.5 Free",
@@ -2092,7 +2132,8 @@
           "price": {
             "input": 0,
             "output": 0
-          }
+          },
+          "status": "deprecated"
         }
       }
     },
@@ -2124,9 +2165,10 @@
         "name": "MiMo-V2.5-Pro"
       },
       "price": {
-        "input": 0,
-        "output": 0
-      }
+        "input": 0.52,
+        "output": 1.02857143
+      },
+      "status": "deprecated"
     },
     "zhipuai/glm-4.7-flash": {
       "name": "GLM 4.7 Flash",
@@ -2150,7 +2192,9 @@
         "context": 200000,
         "output": 131072
       },
-      "reasoning": {},
+      "reasoning": {
+        "mandatory": false
+      },
       "provider_options": {
         "id": "glm-4-7-flash:free",
         "name": "GLM-4.7-Flash (Free)"
@@ -2187,10 +2231,7 @@
         "id": "glm-5-1",
         "name": "GLM-5.1"
       },
-      "price": {
-        "input": 0,
-        "output": 0
-      }
+      "status": "deprecated"
     },
     "zhipuai/glm-5.2": {
       "name": "GLM 5.2",
@@ -2215,7 +2256,9 @@
         "output": 131072
       },
       "reasoning": {
+        "mandatory": false,
         "efforts": [
+          "none",
           "high",
           "xhigh"
         ]
@@ -2225,8 +2268,9 @@
         "name": "GLM-5.2"
       },
       "price": {
-        "input": 0,
-        "output": 0
+        "input": 0.28571429,
+        "output": 3.42857143,
+        "cache_read": 0.05314286
       }
     },
     "zhipuai/glm-5.3": {
@@ -2263,8 +2307,9 @@
         "name": "GLM-5.3"
       },
       "price": {
-        "input": 0,
-        "output": 0
+        "input": 0.28571429,
+        "output": 3.42857143,
+        "cache_read": 0.05314286
       }
     },
     "zhipuai/glm-5.3-flash": {
@@ -2304,8 +2349,9 @@
         "name": "GLM-5.3-Flash"
       },
       "price": {
-        "input": 0,
-        "output": 0
+        "input": 0.11428571,
+        "output": 0.34285714,
+        "cache_read": 0.02285714
       }
     }
   }

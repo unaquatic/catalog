@@ -1,0 +1,57 @@
+{
+  "vercel/elephant-1": {
+    "id": "vercel/elephant-1",
+    "lab": "vercel",
+    "name": "Elephant 1",
+    "family": "elephant",
+    "type": "decision",
+    "released": "2026-10-21",
+    "updated": "2026-10-21",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 16384,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "vercel/mammoth-1": {
+    "id": "vercel/mammoth-1",
+    "lab": "vercel",
+    "name": "Mammoth 1",
+    "type": "decision",
+    "released": "2026-10-21",
+    "updated": "2026-10-21",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 16384,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  }
+}

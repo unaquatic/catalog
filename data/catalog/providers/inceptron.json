@@ -52,9 +52,9 @@
         "name": "DeepSeek V4 Flash 0731"
       },
       "price": {
-        "input": 0.13,
-        "output": 0.28,
-        "cache_read": 0.03,
+        "input": 0.11,
+        "output": 0.4125,
+        "cache_read": 0.027,
         "cache_write": 0
       }
     },
@@ -91,9 +91,9 @@
         "name": "Kimi K2.6"
       },
       "price": {
-        "input": 0.53,
-        "output": 3.39,
-        "cache_read": 0.17,
+        "input": 0.5625,
+        "output": 3.2,
+        "cache_read": 0.135,
         "cache_write": 0
       }
     },
@@ -130,8 +130,8 @@
         "name": "Kimi K2.7 Code"
       },
       "price": {
-        "input": 0.66,
-        "output": 3.4,
+        "input": 0.6712,
+        "output": 3.35,
         "cache_read": 0.18,
         "cache_write": 0
       }
@@ -172,9 +172,95 @@
         "name": "GLM 5.2"
       },
       "price": {
-        "input": 0.71,
-        "output": 2.35,
-        "cache_read": 0.12,
+        "input": 0.62,
+        "output": 2.52,
+        "cache_read": 0.14,
+        "cache_write": 0
+      }
+    },
+    "zhipuai/glm-5.3": {
+      "name": "GLM 5.3",
+      "family": "glm",
+      "released": "2026-08-14",
+      "updated": "2026-08-14",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 1048576
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "high",
+          "max"
+        ]
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "zai-org/GLM-5.3",
+        "name": "GLM 5.3"
+      },
+      "price": {
+        "input": 0.5,
+        "output": 1.96,
+        "cache_read": 0.145,
+        "cache_write": 0
+      }
+    },
+    "zhipuai/glm-5.3-flash": {
+      "name": "GLM 5.3 Flash",
+      "family": "glm-flash",
+      "released": "2026-08-26",
+      "updated": "2026-08-26",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 1048576
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "high",
+          "max"
+        ]
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "zai-org/GLM-5.3-Flash",
+        "name": "GLM 5.3 Flash"
+      },
+      "price": {
+        "input": 0.18,
+        "output": 0.69,
+        "cache_read": 0.075,
         "cache_write": 0
       }
     }

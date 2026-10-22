@@ -11,7 +11,7 @@
     "reasoning": true,
     "capabilities": {
       "tools": true,
-      "attachments": true,
+      "attachments": false,
       "temperature": false,
       "input": [
         "text"
@@ -100,7 +100,7 @@
     "reasoning": true,
     "capabilities": {
       "tools": true,
-      "attachments": true,
+      "attachments": false,
       "temperature": false,
       "input": [
         "text"

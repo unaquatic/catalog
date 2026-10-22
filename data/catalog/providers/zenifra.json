@@ -23,7 +23,7 @@
       "open_weights": true,
       "capabilities": {
         "tools": true,
-        "attachments": true,
+        "attachments": false,
         "structured_output": true,
         "temperature": true,
         "input": [

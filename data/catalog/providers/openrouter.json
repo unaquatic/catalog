@@ -219,37 +219,6 @@
         "output": 1.6
       }
     },
-    "alibaba/kev-4b": {
-      "name": "Kev 4B",
-      "type": "decision",
-      "released": "2026-09-25",
-      "updated": "2026-09-25",
-      "open_weights": true,
-      "capabilities": {
-        "tools": false,
-        "attachments": false,
-        "structured_output": false,
-        "temperature": false,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 8192,
-        "output": 0
-      },
-      "provider_options": {
-        "id": "jaredpalmer/kev-4b",
-        "name": "Kev 4B"
-      },
-      "price": {
-        "input": 0.042,
-        "output": 0
-      }
-    },
     "alibaba/qwen-plus": {
       "name": "Qwen Plus",
       "family": "qwen",
@@ -998,8 +967,8 @@
         "name": "Qwen3.5 122B-A10B"
       },
       "price": {
-        "input": 0.26,
-        "output": 2.08
+        "input": 0.4,
+        "output": 3.2
       }
     },
     "alibaba/qwen3.5-27b": {
@@ -1098,7 +1067,7 @@
       },
       "limit": {
         "context": 262144,
-        "output": 65536
+        "output": 235929
       },
       "reasoning": {
         "mandatory": false
@@ -1108,8 +1077,9 @@
         "name": "Qwen3.5 397B-A17B"
       },
       "price": {
-        "input": 0.39,
-        "output": 2.34
+        "input": 0.5,
+        "output": 3.6,
+        "cache_read": 0.3
       }
     },
     "alibaba/qwen3.5-9b": {
@@ -1822,37 +1792,6 @@
         "input": 0.15,
         "output": 0.47,
         "cache_read": 0.016
-      }
-    },
-    "alibaba/tev1-4b-experimental": {
-      "name": "Tev1 4B Experimental",
-      "type": "decision",
-      "released": "2026-09-30",
-      "updated": "2026-09-30",
-      "open_weights": true,
-      "capabilities": {
-        "tools": false,
-        "attachments": false,
-        "structured_output": false,
-        "temperature": false,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 32768,
-        "output": 0
-      },
-      "provider_options": {
-        "id": "togethercomputer/tev1-4b-experimental",
-        "name": "Tev1 4B Experimental"
-      },
-      "price": {
-        "input": 0.042,
-        "output": 0
       }
     },
     "amazon/nova-2-lite-v1": {
@@ -2851,8 +2790,8 @@
         "structured_output": true,
         "temperature": true,
         "input": [
-          "image",
           "text",
+          "image",
           "video"
         ],
         "output": [
@@ -2895,8 +2834,8 @@
         "structured_output": true,
         "temperature": true,
         "input": [
-          "image",
           "text",
+          "image",
           "video"
         ],
         "output": [
@@ -3144,104 +3083,6 @@
         "input": 0.1,
         "output": 0.2,
         "cache_read": 0.1
-      }
-    },
-    "cloudflare/clef": {
-      "name": "Clef",
-      "type": "decision",
-      "released": "2026-10-01",
-      "updated": "2026-10-01",
-      "open_weights": true,
-      "capabilities": {
-        "tools": false,
-        "attachments": true,
-        "structured_output": false,
-        "temperature": false,
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 65537,
-        "output": 0
-      },
-      "provider_options": {
-        "id": "cloudflare/clef",
-        "name": "Clef"
-      },
-      "price": {
-        "input": 0.24,
-        "output": 0
-      }
-    },
-    "cloudflare/clef-flash": {
-      "name": "Clef Flash",
-      "type": "decision",
-      "released": "2026-10-01",
-      "updated": "2026-10-01",
-      "open_weights": true,
-      "capabilities": {
-        "tools": false,
-        "attachments": true,
-        "structured_output": false,
-        "temperature": false,
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 24576,
-        "output": 0
-      },
-      "provider_options": {
-        "id": "cloudflare/clef-flash",
-        "name": "Clef Flash"
-      },
-      "price": {
-        "input": 0.038,
-        "output": 0
-      }
-    },
-    "cloudflare/clef-omni": {
-      "name": "Clef Omni",
-      "type": "decision",
-      "released": "2026-10-09",
-      "updated": "2026-10-09",
-      "open_weights": true,
-      "capabilities": {
-        "tools": false,
-        "attachments": true,
-        "structured_output": false,
-        "temperature": false,
-        "input": [
-          "text",
-          "image",
-          "audio",
-          "video"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 65536,
-        "output": 0
-      },
-      "provider_options": {
-        "id": "cloudflare/clef-omni",
-        "name": "Clef Omni"
-      },
-      "price": {
-        "input": 0.15,
-        "output": 0
       }
     },
     "cognitivecomputations/dolphin-mistral-24b-venice-edition": {
@@ -3613,9 +3454,9 @@
         "name": "DeepSeek Pro Latest"
       },
       "price": {
-        "input": 0.1461,
+        "input": 0.225,
         "output": 8,
-        "cache_read": 0.15
+        "cache_read": 0.23
       }
     },
     "deepseek/deepseek-r1-0528": {
@@ -3838,9 +3679,9 @@
         "name": "DeepSeek V4 Flash 0731"
       },
       "price": {
-        "input": 0.04444,
-        "output": 0.13332,
-        "cache_read": 0.001414
+        "input": 0.44,
+        "output": 1.32,
+        "cache_read": 0.014
       },
       "aliases": [
         "~deepseek/deepseek-v4-flash-latest"
@@ -3927,9 +3768,9 @@
         "name": "DeepSeek V4 Pro"
       },
       "price": {
-        "input": 0.436044,
-        "output": 0.872088,
-        "cache_read": 0.036337
+        "input": 0.897318,
+        "output": 1.794636,
+        "cache_read": 0.074777
       }
     },
     "deepseek/deepseek-v4-pro-0813": {
@@ -4011,9 +3852,9 @@
         "name": "DeepSeek V4.1 Flash"
       },
       "price": {
-        "input": 0.02394,
-        "output": 0.375,
-        "cache_read": 0.000342
+        "input": 0.3,
+        "output": 1.2,
+        "cache_read": 0.006
       }
     },
     "deepseek/deepseek-v4.1-flash-1017": {
@@ -5819,54 +5660,6 @@
         "cache_read": 0.01
       }
     },
-    "inception/mercury-decide": {
-      "name": "Mercury Decide",
-      "family": "mercury",
-      "type": "decision",
-      "released": "2026-09-30",
-      "updated": "2026-09-30",
-      "open_weights": false,
-      "capabilities": {
-        "tools": false,
-        "attachments": true,
-        "structured_output": false,
-        "temperature": false,
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 65536,
-        "output": 0
-      },
-      "provider_options": {
-        "id": "inception/mercury-decide",
-        "name": "Mercury Decide"
-      },
-      "price": {
-        "input": 0.02,
-        "output": 0,
-        "cache_read": 0
-      },
-      "variants": {
-        "free": {
-          "name": "Mercury Decide Free",
-          "tier": "free",
-          "provider_options": {
-            "id": "inception/mercury-decide:free",
-            "name": "Mercury Decide (free)"
-          },
-          "price": {
-            "input": 0,
-            "output": 0
-          }
-        }
-      }
-    },
     "inclusionai/ling-3.0-flash": {
       "name": "Ling 3.0 Flash",
       "family": "ling",
@@ -6034,74 +5827,6 @@
         "input": 0.03,
         "output": 0.15,
         "cache_read": 0.03
-      }
-    },
-    "liquid/d1": {
-      "name": "D1",
-      "family": "liquid",
-      "type": "decision",
-      "released": "2026-09-29",
-      "updated": "2026-09-29",
-      "open_weights": false,
-      "capabilities": {
-        "tools": false,
-        "attachments": true,
-        "structured_output": true,
-        "temperature": false,
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 65536,
-        "output": 0
-      },
-      "provider_options": {
-        "id": "liquid/d1",
-        "name": "Liquid d1"
-      },
-      "price": {
-        "input": 0.02,
-        "output": 0,
-        "cache_read": 0.02
-      }
-    },
-    "liquid/d1-ultra": {
-      "name": "D1 Ultra",
-      "family": "liquid",
-      "type": "decision",
-      "released": "2026-10-15",
-      "updated": "2026-10-15",
-      "open_weights": false,
-      "capabilities": {
-        "tools": false,
-        "attachments": true,
-        "structured_output": false,
-        "temperature": false,
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 32768,
-        "output": 0
-      },
-      "provider_options": {
-        "id": "liquid/d1-ultra",
-        "name": "d1-ultra"
-      },
-      "price": {
-        "input": 0.042,
-        "output": 0,
-        "cache_read": 0.042
       }
     },
     "liquid/lfm2.5-2.6b": {
@@ -6334,12 +6059,12 @@
         "output": 0.201
       }
     },
-    "meta/llama-3.2-3b": {
-      "name": "Llama 3.2 3B",
+    "meta/llama-3.2-3b-instruct": {
+      "name": "Llama 3.2 3B Instruct",
       "family": "llama",
       "released": "2024-09-25",
       "updated": "2024-09-25",
-      "knowledge": "2023-12-31",
+      "knowledge": "2023-12",
       "open_weights": true,
       "capabilities": {
         "tools": false,
@@ -6468,9 +6193,8 @@
     "meta/llama-guard-4-12b": {
       "name": "Llama Guard 4 12B",
       "family": "llama",
-      "released": "2025-04-30",
-      "updated": "2025-04-30",
-      "knowledge": "2024-08-31",
+      "released": "2025-04-29",
+      "updated": "2025-04-29",
       "open_weights": true,
       "capabilities": {
         "tools": false,
@@ -6478,8 +6202,8 @@
         "structured_output": false,
         "temperature": true,
         "input": [
-          "image",
-          "text"
+          "text",
+          "image"
         ],
         "output": [
           "text"
@@ -6770,37 +6494,6 @@
         "cache_read": 0.2
       }
     },
-    "microsoft/decision-1": {
-      "name": "Decision 1",
-      "type": "decision",
-      "released": "2026-10-09",
-      "updated": "2026-10-09",
-      "open_weights": false,
-      "capabilities": {
-        "tools": false,
-        "attachments": false,
-        "structured_output": false,
-        "temperature": false,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 32768,
-        "output": 0
-      },
-      "provider_options": {
-        "id": "microsoft/microsoft-decision-1",
-        "name": "Microsoft-Decision-1"
-      },
-      "price": {
-        "input": 0.042,
-        "output": 0
-      }
-    },
     "microsoft/phi-4": {
       "name": "Phi 4",
       "family": "phi",
@@ -6866,8 +6559,8 @@
         "output": 1.1
       }
     },
-    "minimax/minimax-m1": {
-      "name": "MiniMax M1",
+    "minimax/minimax-m1-80k": {
+      "name": "MiniMax M1 80K",
       "family": "minimax",
       "released": "2025-06-17",
       "updated": "2025-06-17",
@@ -8209,7 +7902,7 @@
       },
       "price": {
         "input": 0.238,
-        "output": 16,
+        "output": 24,
         "cache_read": 0.228
       }
     },
@@ -8273,68 +7966,6 @@
       "price": {
         "input": 0.9,
         "output": 1.9
-      }
-    },
-    "nace-ai/drex-v1.5": {
-      "name": "Drex V1.5",
-      "type": "decision",
-      "released": "2026-09-28",
-      "updated": "2026-09-28",
-      "open_weights": true,
-      "capabilities": {
-        "tools": false,
-        "attachments": false,
-        "structured_output": true,
-        "temperature": false,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 131072,
-        "output": 0
-      },
-      "provider_options": {
-        "id": "nace-ai/drex-v1.5",
-        "name": "Drex 1.5"
-      },
-      "price": {
-        "input": 0.04,
-        "output": 0
-      }
-    },
-    "nace-ai/drex-v2.0": {
-      "name": "Drex V2.0",
-      "type": "decision",
-      "released": "2026-10-06",
-      "updated": "2026-10-12",
-      "open_weights": true,
-      "capabilities": {
-        "tools": false,
-        "attachments": false,
-        "structured_output": true,
-        "temperature": false,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 131072,
-        "output": 0
-      },
-      "provider_options": {
-        "id": "nace-ai/drex-v2.0",
-        "name": "Drex 2.0"
-      },
-      "price": {
-        "input": 0.06,
-        "output": 0
       }
     },
     "nex-agi/nex-n2.5-mini": {
@@ -8630,8 +8261,9 @@
         "name": "Nemotron 3 Super 120B A12B"
       },
       "price": {
-        "input": 0.08,
-        "output": 0.45
+        "input": 0.3,
+        "output": 2.4,
+        "cache_read": 0.15
       },
       "variants": {
         "free": {
@@ -10848,41 +10480,6 @@
         ]
       }
     },
-    "openai/gpt-6-luna-decisions": {
-      "name": "GPT-6 Luna Decisions",
-      "family": "gpt",
-      "type": "decision",
-      "released": "2026-10-06",
-      "updated": "2026-10-06",
-      "open_weights": false,
-      "capabilities": {
-        "tools": false,
-        "attachments": true,
-        "structured_output": false,
-        "temperature": false,
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 1050000,
-        "output": 0
-      },
-      "provider_options": {
-        "id": "openai/gpt-6-luna-decisions",
-        "name": "GPT-6 Luna Decisions"
-      },
-      "price": {
-        "input": 0.1,
-        "output": 0,
-        "cache_read": 0,
-        "cache_write": 0
-      }
-    },
     "openai/gpt-6-luna-pro": {
       "name": "GPT-6 Luna Pro",
       "family": "gpt",
@@ -11875,134 +11472,6 @@
         "output": 1.5
       }
     },
-    "perplexity/pplx-decider-flash-latest": {
-      "name": "Pplx Decider Flash Latest",
-      "type": "decision",
-      "released": "2026-10-16",
-      "updated": "2026-10-16",
-      "open_weights": false,
-      "capabilities": {
-        "tools": false,
-        "attachments": true,
-        "structured_output": false,
-        "temperature": false,
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 262144,
-        "output": 0
-      },
-      "provider_options": {
-        "id": "~perplexity/pplx-decider-flash-latest",
-        "name": "Decider Flash Latest"
-      },
-      "price": {
-        "input": 0.01,
-        "output": 0
-      }
-    },
-    "perplexity/pplx-decider-flash-v1.2": {
-      "name": "Pplx Decider Flash V1.2",
-      "type": "decision",
-      "released": "2026-10-16",
-      "updated": "2026-10-16",
-      "open_weights": false,
-      "capabilities": {
-        "tools": false,
-        "attachments": true,
-        "structured_output": false,
-        "temperature": false,
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 262144,
-        "output": 0
-      },
-      "provider_options": {
-        "id": "perplexity/pplx-decider-flash-v1.2",
-        "name": "Decider Flash V1.2"
-      },
-      "price": {
-        "input": 0.01,
-        "output": 0
-      }
-    },
-    "perplexity/pplx-decider-latest": {
-      "name": "Pplx Decider Latest",
-      "type": "decision",
-      "released": "2026-10-14",
-      "updated": "2026-10-14",
-      "open_weights": false,
-      "capabilities": {
-        "tools": false,
-        "attachments": true,
-        "structured_output": false,
-        "temperature": false,
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 262144,
-        "output": 0
-      },
-      "provider_options": {
-        "id": "~perplexity/pplx-decider-latest",
-        "name": "Decider Latest"
-      },
-      "price": {
-        "input": 0.02,
-        "output": 0
-      }
-    },
-    "perplexity/pplx-decider-v1.2": {
-      "name": "Pplx Decider V1.2",
-      "type": "decision",
-      "released": "2026-10-16",
-      "updated": "2026-10-16",
-      "open_weights": false,
-      "capabilities": {
-        "tools": false,
-        "attachments": true,
-        "structured_output": false,
-        "temperature": false,
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 262144,
-        "output": 0
-      },
-      "provider_options": {
-        "id": "perplexity/pplx-decider-v1.2",
-        "name": "Decider V1.2"
-      },
-      "price": {
-        "input": 0.02,
-        "output": 0
-      }
-    },
     "perplexity/sonar": {
       "name": "Sonar",
       "family": "sonar",
@@ -12312,6 +11781,38 @@
         "cache_read": 0.0375
       }
     },
+    "recursive/flint-v1.0-free": {
+      "name": "Flint V1.0 Free",
+      "family": "flint",
+      "released": "2026-10-21",
+      "updated": "2026-10-21",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 235929
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "recursive/flint-v1.0:free",
+        "name": "Flint (free)"
+      },
+      "price": {
+        "input": 0,
+        "output": 0
+      }
+    },
     "reflection/beam-1.0-501b-a23b": {
       "name": "Beam 1.0 501B A23B",
       "family": "beam",
@@ -12333,7 +11834,7 @@
       },
       "limit": {
         "context": 1048576,
-        "output": 943718
+        "output": 131072
       },
       "reasoning": {
         "efforts": [
@@ -12349,9 +11850,9 @@
         "name": "Beam 1.0 501B A23B"
       },
       "price": {
-        "input": 0.3,
+        "input": 0.25,
         "output": 1,
-        "cache_read": 0.04
+        "cache_read": 0.05
       }
     },
     "rekaai/reka-edge": {
@@ -12478,114 +11979,6 @@
       "price": {
         "input": 1,
         "output": 3
-      }
-    },
-    "respan/span-01": {
-      "name": "Span 01",
-      "type": "decision",
-      "released": "2026-09-26",
-      "updated": "2026-09-26",
-      "open_weights": false,
-      "capabilities": {
-        "tools": false,
-        "attachments": false,
-        "structured_output": false,
-        "temperature": false,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 0,
-        "output": 0
-      },
-      "provider_options": {
-        "id": "respan/span-01",
-        "name": "Span-01"
-      },
-      "price": {
-        "input": 0.02,
-        "output": 0
-      }
-    },
-    "respan/span-01-lite": {
-      "name": "Span 01 Lite",
-      "type": "decision",
-      "released": "2026-09-26",
-      "updated": "2026-09-26",
-      "open_weights": false,
-      "capabilities": {
-        "tools": false,
-        "attachments": false,
-        "structured_output": false,
-        "temperature": false,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 0,
-        "output": 0
-      },
-      "provider_options": {
-        "id": "respan/span-01-lite",
-        "name": "Span-01 Lite"
-      },
-      "price": {
-        "input": 0,
-        "output": 0
-      },
-      "variants": {
-        "free": {
-          "name": "Span 01 Lite Free",
-          "tier": "free",
-          "provider_options": {
-            "id": "respan/span-01-lite:free",
-            "name": "Span-01 Lite (free)"
-          },
-          "price": {
-            "input": 0,
-            "output": 0
-          }
-        }
-      }
-    },
-    "respan/span-02": {
-      "name": "Span 02",
-      "type": "decision",
-      "released": "2026-10-16",
-      "updated": "2026-10-16",
-      "open_weights": false,
-      "capabilities": {
-        "tools": false,
-        "attachments": true,
-        "structured_output": false,
-        "temperature": false,
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 131072,
-        "output": 0
-      },
-      "provider_options": {
-        "id": "respan/span-02",
-        "name": "Span-02"
-      },
-      "price": {
-        "input": 0.01,
-        "output": 0
       }
     },
     "sakana/fugu-max": {
@@ -12832,39 +12225,6 @@
         "output": 0.85
       }
     },
-    "scaledown/classify-1": {
-      "name": "Classify 1",
-      "type": "decision",
-      "released": "2026-10-13",
-      "updated": "2026-10-13",
-      "open_weights": false,
-      "capabilities": {
-        "tools": false,
-        "attachments": true,
-        "structured_output": false,
-        "temperature": false,
-        "input": [
-          "text",
-          "image",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 1000000,
-        "output": 0
-      },
-      "provider_options": {
-        "id": "scaledown/classify-1",
-        "name": "Classify-1"
-      },
-      "price": {
-        "input": 0.04,
-        "output": 0
-      }
-    },
     "scaledown/extract": {
       "name": "Extract",
       "released": "2026-10-13",
@@ -12931,6 +12291,7 @@
     },
     "stepfun/step-3.5-flash": {
       "name": "Step 3.5 Flash",
+      "family": "step",
       "released": "2026-01-29",
       "updated": "2026-02-13",
       "knowledge": "2025-01",
@@ -13506,73 +12867,6 @@
         }
       }
     },
-    "typesafe/jev-1.14.0": {
-      "name": "Jev 1.14.0",
-      "type": "decision",
-      "released": "2026-10-14",
-      "updated": "2026-10-14",
-      "open_weights": false,
-      "capabilities": {
-        "tools": false,
-        "attachments": true,
-        "structured_output": false,
-        "temperature": false,
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 262144,
-        "output": 0
-      },
-      "provider_options": {
-        "id": "typesafe/jev-1.14",
-        "name": "Jev 1.14"
-      },
-      "price": {
-        "input": 0.042,
-        "output": 0
-      }
-    },
-    "typesafe/jev-latest": {
-      "name": "Jev Latest",
-      "type": "decision",
-      "released": "2026-09-15",
-      "updated": "2026-09-15",
-      "open_weights": false,
-      "capabilities": {
-        "tools": false,
-        "attachments": true,
-        "structured_output": true,
-        "temperature": false,
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 262144,
-        "output": 0
-      },
-      "provider_options": {
-        "id": "~typesafe/jev-latest",
-        "name": "Jev Latest"
-      },
-      "price": {
-        "input": 0.042,
-        "output": 0
-      },
-      "aliases": [
-        "typesafe/jev-1.13"
-      ]
-    },
     "unbiased/pareto-26.10": {
       "name": "Pareto 26.10",
       "released": "2026-10-15",
@@ -13698,72 +12992,6 @@
       "price": {
         "input": 0.35,
         "output": 0.65
-      }
-    },
-    "upstage/solar-decide": {
-      "name": "Solar Decide",
-      "family": "solar",
-      "type": "decision",
-      "released": "2026-09-28",
-      "updated": "2026-09-28",
-      "open_weights": false,
-      "capabilities": {
-        "tools": false,
-        "attachments": false,
-        "structured_output": false,
-        "temperature": false,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 524288,
-        "output": 0
-      },
-      "provider_options": {
-        "id": "upstage/solar-decide",
-        "name": "Solar Decide"
-      },
-      "price": {
-        "input": 0.05,
-        "output": 0,
-        "cache_read": 0.05
-      }
-    },
-    "upstage/solar-decide-flash": {
-      "name": "Solar Decide Flash",
-      "family": "solar",
-      "type": "decision",
-      "released": "2026-10-08",
-      "updated": "2026-10-08",
-      "open_weights": false,
-      "capabilities": {
-        "tools": false,
-        "attachments": false,
-        "structured_output": false,
-        "temperature": false,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 524288,
-        "output": 0
-      },
-      "provider_options": {
-        "id": "upstage/solar-decide-flash",
-        "name": "Solar Decide Flash"
-      },
-      "price": {
-        "input": 0.05,
-        "output": 0,
-        "cache_read": 0.05
       }
     },
     "upstage/solar-mini4": {
@@ -15002,9 +14230,9 @@
         "name": "GLM-5.3-Flash"
       },
       "price": {
-        "input": 0.041191,
-        "output": 0.12,
-        "cache_read": 0.00375
+        "input": 0.0052,
+        "output": 0.1985,
+        "cache_read": 0.0052
       },
       "aliases": [
         "z-ai/glm-5.3-flashx",

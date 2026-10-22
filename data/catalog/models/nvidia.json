@@ -37,7 +37,7 @@
     "capabilities": {
       "tools": false,
       "attachments": true,
-      "temperature": true,
+      "temperature": false,
       "input": [
         "video"
       ],
@@ -48,35 +48,6 @@
     "limit": {
       "context": 128000,
       "output": 8192
-    },
-    "providers": [
-      "nvidia"
-    ]
-  },
-  "nvidia/cosmos-predict1-5b": {
-    "id": "nvidia/cosmos-predict1-5b",
-    "lab": "nvidia",
-    "name": "Cosmos Predict1 5B",
-    "released": "2025-03-18",
-    "updated": "2025-03-18",
-    "open_weights": true,
-    "reasoning": false,
-    "capabilities": {
-      "tools": false,
-      "attachments": true,
-      "temperature": false,
-      "input": [
-        "text",
-        "image",
-        "video"
-      ],
-      "output": [
-        "video"
-      ]
-    },
-    "limit": {
-      "context": 0,
-      "output": 4096
     },
     "providers": [
       "nvidia"
@@ -111,39 +82,11 @@
       "nvidia"
     ]
   },
-  "nvidia/cosmos-transfer1-7b": {
-    "id": "nvidia/cosmos-transfer1-7b",
-    "lab": "nvidia",
-    "name": "Cosmos Transfer1 7B",
-    "released": "2025-06-13",
-    "updated": "2025-06-30",
-    "open_weights": true,
-    "reasoning": false,
-    "capabilities": {
-      "tools": false,
-      "attachments": true,
-      "temperature": false,
-      "input": [
-        "text",
-        "image",
-        "video"
-      ],
-      "output": [
-        "video"
-      ]
-    },
-    "limit": {
-      "context": 0,
-      "output": 4096
-    },
-    "providers": [
-      "nvidia"
-    ]
-  },
   "nvidia/cosmos-transfer2-5-2b": {
     "id": "nvidia/cosmos-transfer2-5-2b",
     "lab": "nvidia",
     "name": "Cosmos Transfer2.5 2B",
+    "type": "video",
     "released": "2026-02-26",
     "updated": "2026-02-26",
     "open_weights": true,
@@ -163,33 +106,6 @@
     },
     "limit": {
       "context": 0,
-      "output": 4096
-    },
-    "providers": [
-      "nvidia"
-    ]
-  },
-  "nvidia/gliner-pii": {
-    "id": "nvidia/gliner-pii",
-    "lab": "nvidia",
-    "name": "GLiNER PII",
-    "released": "2026-03-03",
-    "updated": "2026-03-03",
-    "open_weights": true,
-    "reasoning": false,
-    "capabilities": {
-      "tools": false,
-      "attachments": false,
-      "temperature": true,
-      "input": [
-        "text"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 128000,
       "output": 4096
     },
     "providers": [
@@ -223,63 +139,6 @@
     "providers": [
       "edenai",
       "nano-gpt",
-      "nvidia"
-    ]
-  },
-  "nvidia/llama-3.1-nemotron-nano-8b-v1": {
-    "id": "nvidia/llama-3.1-nemotron-nano-8b-v1",
-    "lab": "nvidia",
-    "name": "Llama 3.1 Nemotron Nano 8B V1",
-    "family": "nemotron",
-    "released": "2025-03-18",
-    "updated": "2025-03-18",
-    "open_weights": true,
-    "reasoning": true,
-    "capabilities": {
-      "tools": true,
-      "attachments": false,
-      "temperature": true,
-      "input": [
-        "text"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 131072,
-      "output": 16384
-    },
-    "providers": [
-      "nvidia"
-    ]
-  },
-  "nvidia/llama-3.1-nemotron-nano-vl-8b-v1": {
-    "id": "nvidia/llama-3.1-nemotron-nano-vl-8b-v1",
-    "lab": "nvidia",
-    "name": "Llama 3.1 Nemotron Nano VL 8B V1",
-    "family": "nemotron",
-    "released": "2025-04-10",
-    "updated": "2025-04-10",
-    "open_weights": true,
-    "reasoning": true,
-    "capabilities": {
-      "tools": true,
-      "attachments": true,
-      "temperature": true,
-      "input": [
-        "text",
-        "image"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 32768,
-      "output": 16384
-    },
-    "providers": [
       "nvidia"
     ]
   },
@@ -339,33 +198,6 @@
       "nvidia"
     ]
   },
-  "nvidia/llama-3.2-nemoretriever-300m-embed-v1": {
-    "id": "nvidia/llama-3.2-nemoretriever-300m-embed-v1",
-    "lab": "nvidia",
-    "name": "Llama 3.2 Nemoretriever 300M Embed V1",
-    "released": "2025-07-24",
-    "updated": "2025-07-24",
-    "open_weights": true,
-    "reasoning": false,
-    "capabilities": {
-      "tools": false,
-      "attachments": false,
-      "temperature": false,
-      "input": [
-        "text"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 32768,
-      "output": 2048
-    },
-    "providers": [
-      "nvidia"
-    ]
-  },
   "nvidia/llama-3.3-nemotron-super-49b-v1": {
     "id": "nvidia/llama-3.3-nemotron-super-49b-v1",
     "lab": "nvidia",
@@ -391,8 +223,7 @@
       "output": 131072
     },
     "providers": [
-      "nano-gpt",
-      "nvidia"
+      "nano-gpt"
     ]
   },
   "nvidia/llama-3.3-nemotron-super-49b-v1.5": {
@@ -420,8 +251,7 @@
       "output": 131072
     },
     "providers": [
-      "deepinfra",
-      "nvidia"
+      "deepinfra"
     ]
   },
   "nvidia/llama-nemotron-embed-1b-v2": {
@@ -522,6 +352,7 @@
     "id": "nvidia/magpie-tts-zeroshot",
     "lab": "nvidia",
     "name": "Magpie TTS Zeroshot",
+    "type": "speech",
     "released": "2025-05-22",
     "updated": "2025-06-12",
     "open_weights": true,
@@ -570,9 +401,7 @@
       "context": 128000,
       "output": 8192
     },
-    "providers": [
-      "nvidia"
-    ]
+    "providers": []
   },
   "nvidia/nemotron-3-content-safety": {
     "id": "nvidia/nemotron-3-content-safety",
@@ -598,9 +427,7 @@
       "context": 128000,
       "output": 4096
     },
-    "providers": [
-      "nvidia"
-    ]
+    "providers": []
   },
   "nvidia/nemotron-3-nano-30b-a3b": {
     "id": "nvidia/nemotron-3-nano-30b-a3b",
@@ -638,7 +465,6 @@
       "kilo",
       "nano-gpt",
       "novita-ai",
-      "nvidia",
       "ollama-cloud",
       "openrouter",
       "pioneer",
@@ -1033,9 +859,7 @@
       "context": 128000,
       "output": 4096
     },
-    "providers": [
-      "nvidia"
-    ]
+    "providers": []
   },
   "nvidia/nemotron-mini-4b-instruct": {
     "id": "nvidia/nemotron-mini-4b-instruct",
@@ -1061,9 +885,7 @@
       "context": 128000,
       "output": 8192
     },
-    "providers": [
-      "nvidia"
-    ]
+    "providers": []
   },
   "nvidia/nemotron-nano-12b-v2-vl": {
     "id": "nvidia/nemotron-nano-12b-v2-vl",
@@ -1094,7 +916,6 @@
     "providers": [
       "cortecs",
       "digitalocean",
-      "nvidia",
       "vercel"
     ]
   },
@@ -1124,7 +945,6 @@
       "output": 131072
     },
     "providers": [
-      "nvidia",
       "vercel"
     ]
   },
@@ -1157,64 +977,11 @@
       "nvidia"
     ]
   },
-  "nvidia/nv-embed-v1": {
-    "id": "nvidia/nv-embed-v1",
-    "lab": "nvidia",
-    "name": "Nv Embed V1",
-    "released": "2024-06-07",
-    "updated": "2025-07-22",
-    "open_weights": true,
-    "reasoning": false,
-    "capabilities": {
-      "tools": false,
-      "attachments": false,
-      "temperature": false,
-      "input": [
-        "text"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 32768,
-      "output": 2048
-    },
-    "providers": [
-      "nvidia"
-    ]
-  },
-  "nvidia/nv-embedcode-7b-v1": {
-    "id": "nvidia/nv-embedcode-7b-v1",
-    "lab": "nvidia",
-    "name": "Nv Embedcode 7B V1",
-    "released": "2025-03-17",
-    "updated": "2025-05-29",
-    "open_weights": true,
-    "reasoning": false,
-    "capabilities": {
-      "tools": false,
-      "attachments": false,
-      "temperature": false,
-      "input": [
-        "text"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 32768,
-      "output": 2048
-    },
-    "providers": [
-      "nvidia"
-    ]
-  },
   "nvidia/rerank-qa-mistral-4b": {
     "id": "nvidia/rerank-qa-mistral-4b",
     "lab": "nvidia",
     "name": "Rerank QA Mistral 4B",
+    "type": "reranking",
     "released": "2024-03-17",
     "updated": "2025-01-17",
     "open_weights": true,
@@ -1276,7 +1043,7 @@
     "capabilities": {
       "tools": false,
       "attachments": true,
-      "temperature": true,
+      "temperature": false,
       "input": [
         "video"
       ],
@@ -1303,7 +1070,7 @@
     "capabilities": {
       "tools": false,
       "attachments": true,
-      "temperature": true,
+      "temperature": false,
       "input": [
         "video"
       ],
@@ -1329,18 +1096,18 @@
     "reasoning": false,
     "capabilities": {
       "tools": false,
-      "attachments": false,
-      "temperature": true,
+      "attachments": true,
+      "temperature": false,
       "input": [
-        "text"
+        "audio"
       ],
       "output": [
-        "text"
+        "audio"
       ]
     },
     "limit": {
-      "context": 128000,
-      "output": 8192
+      "context": 0,
+      "output": 0
     },
     "providers": [
       "nvidia"
@@ -1357,7 +1124,7 @@
     "capabilities": {
       "tools": false,
       "attachments": true,
-      "temperature": true,
+      "temperature": false,
       "input": [
         "video"
       ],

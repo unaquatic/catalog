@@ -43,8 +43,8 @@
         "name": "Aion-RP 1.0 (8B)"
       },
       "price": {
-        "input": 1.10032,
-        "output": 2.20064
+        "input": 0.8464,
+        "output": 1.6928
       }
     },
     "alibaba/qwen-max": {
@@ -74,9 +74,9 @@
         "name": "Qwen Max"
       },
       "price": {
-        "input": 2.08,
-        "output": 8.32,
-        "cache_read": 0.416
+        "input": 1.6,
+        "output": 6.4,
+        "cache_read": 0.32
       }
     },
     "alibaba/qwen-plus": {
@@ -107,9 +107,9 @@
         "name": "Qwen Plus"
       },
       "price": {
-        "input": 0.52,
-        "output": 1.56,
-        "cache_read": 0.104
+        "input": 0.4,
+        "output": 1.2,
+        "cache_read": 0.08
       }
     },
     "alibaba/qwen3-coder-480b-a35b-instruct": {
@@ -139,9 +139,9 @@
         "name": "Qwen3 Coder"
       },
       "price": {
-        "input": 1.3754,
-        "output": 6.705075,
-        "cache_read": 1.3754
+        "input": 1.058,
+        "output": 5.15775,
+        "cache_read": 1.058
       }
     },
     "alibaba/qwen3-next-80b-a3b-instruct": {
@@ -171,8 +171,8 @@
         "name": "Qwen3 Next 80B A3B Instruct"
       },
       "price": {
-        "input": 0.20631,
-        "output": 1.65048
+        "input": 0.1587,
+        "output": 1.2696
       }
     },
     "alibaba/qwen3.8-2.4t-a95b": {
@@ -211,9 +211,9 @@
         "name": "Qwen3.8 2.4T A95B"
       },
       "price": {
-        "input": 3.4385,
-        "output": 8.59625,
-        "cache_read": 0.6877
+        "input": 2.645,
+        "output": 6.6125,
+        "cache_read": 0.529
       }
     },
     "alibaba/qwen3.8-27b": {
@@ -254,8 +254,8 @@
         "name": "Qwen3.8 27B"
       },
       "price": {
-        "input": 0.61893,
-        "output": 4.40128
+        "input": 0.4761,
+        "output": 3.3856
       }
     },
     "alibaba/qwen3.8-flash": {
@@ -296,9 +296,9 @@
         "name": "Qwen3.8 Flash"
       },
       "price": {
-        "input": 0.208,
-        "output": 0.611,
-        "cache_read": 0.0208
+        "input": 0.16,
+        "output": 0.47,
+        "cache_read": 0.016
       }
     },
     "alibaba/qwen3.8-max": {
@@ -339,9 +339,9 @@
         "name": "Qwen3.8 Max"
       },
       "price": {
-        "input": 2.6,
-        "output": 7.8,
-        "cache_read": 0.325
+        "input": 2,
+        "output": 6,
+        "cache_read": 0.25
       }
     },
     "alibaba/qwen3.8-max-prime": {
@@ -382,9 +382,9 @@
         "name": "Qwen3.8 Max Prime"
       },
       "price": {
-        "input": 5.5016,
-        "output": 16.5048,
-        "cache_read": 0.6877
+        "input": 4.232,
+        "output": 12.696,
+        "cache_read": 0.529
       }
     },
     "amazon/nova-lite-v1": {
@@ -416,8 +416,8 @@
         "name": "Nova Lite 1.0"
       },
       "price": {
-        "input": 0.082524,
-        "output": 0.330096
+        "input": 0.06348,
+        "output": 0.25392
       }
     },
     "amazon/nova-micro-v1": {
@@ -448,8 +448,8 @@
         "name": "Nova Micro 1.0"
       },
       "price": {
-        "input": 0.048139,
-        "output": 0.192556
+        "input": 0.03703,
+        "output": 0.14812
       }
     },
     "amazon/nova-pro-v1": {
@@ -481,8 +481,8 @@
         "name": "Nova Pro 1.0"
       },
       "price": {
-        "input": 1.10032,
-        "output": 4.40128
+        "input": 0.8464,
+        "output": 3.3856
       }
     },
     "anthracite-org/magnum-v4-72b": {
@@ -512,8 +512,8 @@
         "name": "Magnum v4 72B"
       },
       "price": {
-        "input": 4.1262,
-        "output": 6.877
+        "input": 3.174,
+        "output": 5.29
       }
     },
     "anthropic/claude-fable-5": {
@@ -560,10 +560,10 @@
         "name": "Claude Fable 5"
       },
       "price": {
-        "input": 13,
-        "output": 65,
-        "cache_read": 1.3,
-        "cache_write": 16.25
+        "input": 10,
+        "output": 50,
+        "cache_read": 1,
+        "cache_write": 12.5
       }
     },
     "anthropic/claude-fable-5-1": {
@@ -607,10 +607,10 @@
         "name": "Claude Fable 5.1"
       },
       "price": {
-        "input": 13,
-        "output": 65,
-        "cache_read": 0.325,
-        "cache_write": 16.25
+        "input": 10,
+        "output": 50,
+        "cache_read": 0.25,
+        "cache_write": 12.5
       }
     },
     "anthropic/claude-haiku-4-5": {
@@ -646,10 +646,10 @@
         "name": "Claude 4.5 Haiku"
       },
       "price": {
-        "input": 1.3754,
-        "output": 6.877,
-        "cache_read": 0.13754,
-        "cache_write": 1.71925
+        "input": 1.058,
+        "output": 5.29,
+        "cache_read": 0.1058,
+        "cache_write": 1.3225
       }
     },
     "anthropic/claude-haiku-5-5": {
@@ -694,10 +694,10 @@
         "name": "Claude Haiku 5.5"
       },
       "price": {
-        "input": 0.13,
-        "output": 0.65,
-        "cache_read": 0.013,
-        "cache_write": 0.1625
+        "input": 0.1,
+        "output": 0.5,
+        "cache_read": 0.01,
+        "cache_write": 0.125
       }
     },
     "anthropic/claude-opus-4-5": {
@@ -740,10 +740,10 @@
         "name": "Claude 4.5 Opus"
       },
       "price": {
-        "input": 6.877,
-        "output": 34.385,
-        "cache_read": 0.6877,
-        "cache_write": 8.59625
+        "input": 5.29,
+        "output": 26.45,
+        "cache_read": 0.529,
+        "cache_write": 6.6125
       }
     },
     "anthropic/claude-opus-4-7": {
@@ -788,10 +788,10 @@
         "name": "Claude 4.7 Opus"
       },
       "price": {
-        "input": 6.877,
-        "output": 34.385,
-        "cache_read": 0.6877,
-        "cache_write": 8.59625
+        "input": 5.29,
+        "output": 26.45,
+        "cache_read": 0.529,
+        "cache_write": 6.6125
       }
     },
     "anthropic/claude-opus-4-8": {
@@ -836,10 +836,10 @@
         "name": "Claude 4.8 Opus"
       },
       "price": {
-        "input": 6.877,
-        "output": 34.385,
-        "cache_read": 0.6877,
-        "cache_write": 8.59625
+        "input": 5.29,
+        "output": 26.45,
+        "cache_read": 0.529,
+        "cache_write": 6.6125
       }
     },
     "anthropic/claude-opus-5": {
@@ -884,10 +884,10 @@
         "name": "Claude Opus 5"
       },
       "price": {
-        "input": 6.5,
-        "output": 32.5,
-        "cache_read": 0.65,
-        "cache_write": 8.125
+        "input": 5,
+        "output": 25,
+        "cache_read": 0.5,
+        "cache_write": 6.25
       }
     },
     "anthropic/claude-opus-5-5": {
@@ -930,10 +930,10 @@
         "name": "Claude Opus 5.5"
       },
       "price": {
-        "input": 5.2,
-        "output": 26,
-        "cache_read": 0.26,
-        "cache_write": 6.5
+        "input": 4,
+        "output": 20,
+        "cache_read": 0.2,
+        "cache_write": 5
       }
     },
     "anthropic/claude-sonnet-4-5": {
@@ -969,10 +969,10 @@
         "name": "Claude 4.5 Sonnet"
       },
       "price": {
-        "input": 4.1262,
-        "output": 20.631,
-        "cache_read": 0.41262,
-        "cache_write": 5.15775
+        "input": 3.174,
+        "output": 15.87,
+        "cache_read": 0.3174,
+        "cache_write": 3.9675
       }
     },
     "anthropic/claude-sonnet-4-6": {
@@ -1016,10 +1016,10 @@
         "name": "Claude 4.6 Sonnet"
       },
       "price": {
-        "input": 4.1262,
-        "output": 20.631,
-        "cache_read": 0.41262,
-        "cache_write": 5.15775
+        "input": 3.174,
+        "output": 15.87,
+        "cache_read": 0.3174,
+        "cache_write": 3.9675
       }
     },
     "anthropic/claude-sonnet-5": {
@@ -1067,10 +1067,10 @@
         "name": "Claude Sonnet 5"
       },
       "price": {
-        "input": 2.6,
-        "output": 13,
-        "cache_read": 0.26,
-        "cache_write": 3.25
+        "input": 2,
+        "output": 10,
+        "cache_read": 0.2,
+        "cache_write": 2.5
       }
     },
     "anthropic/claude-sonnet-5-5": {
@@ -1114,10 +1114,10 @@
         "name": "Claude Sonnet 5.5"
       },
       "price": {
-        "input": 2.6,
-        "output": 13,
-        "cache_read": 0.26,
-        "cache_write": 3.25
+        "input": 2,
+        "output": 10,
+        "cache_read": 0.2,
+        "cache_write": 2.5
       }
     },
     "bytedance-seed/seed-1-6-flash": {
@@ -1133,7 +1133,8 @@
         "temperature": true,
         "input": [
           "text",
-          "image"
+          "image",
+          "video"
         ],
         "output": [
           "text"
@@ -1148,8 +1149,8 @@
         "name": "Seed 1.6 Flash"
       },
       "price": {
-        "input": 0.103155,
-        "output": 0.41262
+        "input": 0.07935,
+        "output": 0.3174
       }
     },
     "bytedance-seed/seed-2.0-code": {
@@ -1191,8 +1192,8 @@
         "name": "Seed-2.0-Code"
       },
       "price": {
-        "input": 0.6877,
-        "output": 4.1262
+        "input": 0.529,
+        "output": 3.174
       }
     },
     "bytedance-seed/seed-2.0-lite": {
@@ -1234,8 +1235,8 @@
         "name": "Seed-2.0-Lite"
       },
       "price": {
-        "input": 0.34385,
-        "output": 2.7508
+        "input": 0.2645,
+        "output": 2.116
       }
     },
     "bytedance-seed/seed-2.0-mini": {
@@ -1277,8 +1278,8 @@
         "name": "Seed-2.0-Mini"
       },
       "price": {
-        "input": 0.13754,
-        "output": 0.55016
+        "input": 0.1058,
+        "output": 0.4232
       }
     },
     "cognitivecomputations/dolphin-mistral-24b-venice-edition": {
@@ -1309,8 +1310,8 @@
         "name": "Venice Uncensored"
       },
       "price": {
-        "input": 0.27508,
-        "output": 1.23786
+        "input": 0.2116,
+        "output": 0.9522
       }
     },
     "cohere/command-a": {
@@ -1341,8 +1342,8 @@
         "name": "Command A"
       },
       "price": {
-        "input": 3.4385,
-        "output": 13.754
+        "input": 2.645,
+        "output": 10.58
       }
     },
     "cohere/command-r-08-2024": {
@@ -1372,8 +1373,8 @@
         "name": "Command R (08-2024)"
       },
       "price": {
-        "input": 0.20631,
-        "output": 0.82524
+        "input": 0.1587,
+        "output": 0.6348
       }
     },
     "cohere/command-r-plus-08-2024": {
@@ -1403,8 +1404,8 @@
         "name": "Command R+ (08-2024)"
       },
       "price": {
-        "input": 3.4385,
-        "output": 13.754
+        "input": 2.645,
+        "output": 10.58
       }
     },
     "cohere/command-r7b-12-2024": {
@@ -1434,8 +1435,8 @@
         "name": "Command R7B (12-2024)"
       },
       "price": {
-        "input": 0.051578,
-        "output": 0.20631
+        "input": 0.039675,
+        "output": 0.1587
       }
     },
     "deepseek/deepseek-chat-v3-0324": {
@@ -1466,9 +1467,9 @@
         "name": "DeepSeek V3"
       },
       "price": {
-        "input": 0.398866,
-        "output": 1.567956,
-        "cache_read": 0.192556
+        "input": 0.30682,
+        "output": 1.20612,
+        "cache_read": 0.14812
       }
     },
     "deepseek/deepseek-v4-flash": {
@@ -1510,9 +1511,9 @@
         "name": "DeepSeek V4 Flash"
       },
       "price": {
-        "input": 0.39,
-        "output": 1.56,
-        "cache_read": 0.0078
+        "input": 0.3,
+        "output": 1.2,
+        "cache_read": 0.006
       },
       "aliases": [
         "deepseek/deepseek-chat"
@@ -1557,9 +1558,9 @@
         "name": "DeepSeek V4 Flash Vision Exp"
       },
       "price": {
-        "input": 0.572,
-        "output": 1.716,
-        "cache_read": 0.0182
+        "input": 0.44,
+        "output": 1.32,
+        "cache_read": 0.014
       }
     },
     "deepseek/deepseek-v4-pro": {
@@ -1601,9 +1602,9 @@
         "name": "DeepSeek V4 Pro"
       },
       "price": {
-        "input": 1.17,
-        "output": 3.51,
-        "cache_read": 0.039
+        "input": 0.9,
+        "output": 2.7,
+        "cache_read": 0.03
       }
     },
     "deepseek/deepseek-v4-pro-0813": {
@@ -1644,9 +1645,9 @@
         "name": "DeepSeek V4 Pro 0813"
       },
       "price": {
-        "input": 2.393196,
-        "output": 4.786392,
-        "cache_read": 0.199433
+        "input": 1.84092,
+        "output": 3.68184,
+        "cache_read": 0.15341
       }
     },
     "deepseek/deepseek-v4.1-flash": {
@@ -1684,9 +1685,9 @@
         "name": "DeepSeek V4.1 Flash"
       },
       "price": {
-        "input": 0.39,
-        "output": 1.56,
-        "cache_read": 0.0078
+        "input": 0.3,
+        "output": 1.2,
+        "cache_read": 0.006
       }
     },
     "google/gemini-3.1-flash-lite-preview": {
@@ -1731,10 +1732,10 @@
         "name": "Gemini 3.1 Flash Lite Preview"
       },
       "price": {
-        "input": 0.34385,
-        "output": 2.0631,
-        "cache_read": 0.034385,
-        "cache_write": 0.114617
+        "input": 0.2645,
+        "output": 1.587,
+        "cache_read": 0.02645,
+        "cache_write": 0.088167
       }
     },
     "google/gemini-3.1-pro-preview": {
@@ -1770,9 +1771,9 @@
         "name": "Gemini 3.1 Pro Preview"
       },
       "price": {
-        "input": 2.6,
-        "output": 15.6,
-        "cache_read": 0.65
+        "input": 2,
+        "output": 12,
+        "cache_read": 0.5
       }
     },
     "google/gemini-3.1-pro-preview-customtools": {
@@ -1817,10 +1818,10 @@
         "name": "Gemini 3.1 Pro Preview Custom Tools"
       },
       "price": {
-        "input": 2.7508,
-        "output": 16.5048,
-        "cache_read": 0.27508,
-        "cache_write": 0.515775
+        "input": 2.116,
+        "output": 12.696,
+        "cache_read": 0.2116,
+        "cache_write": 0.39675
       }
     },
     "google/gemini-3.6-flash": {
@@ -1863,9 +1864,9 @@
         "name": "Gemini 3.6 Flash"
       },
       "price": {
-        "input": 1.95,
-        "output": 9.75,
-        "cache_read": 0.195
+        "input": 1.5,
+        "output": 7.5,
+        "cache_read": 0.15
       }
     },
     "google/gemini-3.7-flash": {
@@ -1907,9 +1908,9 @@
         "name": "Gemini 3.7 Flash"
       },
       "price": {
-        "input": 0.975,
-        "output": 4.875,
-        "cache_read": 0.0975
+        "input": 0.75,
+        "output": 3.75,
+        "cache_read": 0.075
       }
     },
     "google/gemini-3.8-flash": {
@@ -1950,9 +1951,9 @@
         "name": "Gemini 3.8 Flash"
       },
       "price": {
-        "input": 0.975,
-        "output": 4.875,
-        "cache_read": 0.0975
+        "input": 0.75,
+        "output": 3.75,
+        "cache_read": 0.075
       },
       "aliases": [
         "google/gemini-3.8-flash"
@@ -2000,10 +2001,10 @@
         "name": "Gemini Flash Latest"
       },
       "price": {
-        "input": 2.0631,
-        "output": 12.3786,
-        "cache_read": 0.20631,
-        "cache_write": 0.114617
+        "input": 1.587,
+        "output": 9.522,
+        "cache_read": 0.1587,
+        "cache_write": 0.088167
       }
     },
     "google/gemma-2-27b-it": {
@@ -2034,8 +2035,8 @@
         "name": "Gemma 2 27B"
       },
       "price": {
-        "input": 0.89401,
-        "output": 0.89401
+        "input": 0.6877,
+        "output": 0.6877
       }
     },
     "google/gemma-3-12b-it": {
@@ -2066,9 +2067,9 @@
         "name": "Gemma 3 12B"
       },
       "price": {
-        "input": 0.06877,
-        "output": 0.20631,
-        "cache_read": 0.055016
+        "input": 0.0529,
+        "output": 0.1587,
+        "cache_read": 0.04232
       }
     },
     "google/gemma-3-27b-it": {
@@ -2099,9 +2100,9 @@
         "name": "Gemma 3 27B"
       },
       "price": {
-        "input": 0.20631,
-        "output": 0.632684,
-        "cache_read": 0.103155
+        "input": 0.1587,
+        "output": 0.48668,
+        "cache_read": 0.07935
       }
     },
     "google/gemma-3-4b-it": {
@@ -2132,9 +2133,9 @@
         "name": "Gemma 3 4B"
       },
       "price": {
-        "input": 0.06877,
-        "output": 0.13754,
-        "cache_read": 0.055016
+        "input": 0.0529,
+        "output": 0.1058,
+        "cache_read": 0.04232
       }
     },
     "google/gemma-4-26b-a4b-it": {
@@ -2166,9 +2167,9 @@
         "name": "Gemma 4 26B A4B IT"
       },
       "price": {
-        "input": 0.20631,
-        "output": 0.82524,
-        "cache_read": 0.20631
+        "input": 0.1587,
+        "output": 0.6348,
+        "cache_read": 0.1587
       }
     },
     "google/gemma-4-31b-it": {
@@ -2201,9 +2202,9 @@
         "name": "Gemma 4 31B Instruct"
       },
       "price": {
-        "input": 1.361646,
-        "output": 2.049346,
-        "cache_read": 1.361646
+        "input": 1.04742,
+        "output": 1.57642,
+        "cache_read": 1.04742
       }
     },
     "gryphe/mythomax-l2-13b": {
@@ -2231,9 +2232,9 @@
         "name": "MythoMax 13B"
       },
       "price": {
-        "input": 2.578875,
-        "output": 2.578875,
-        "cache_read": 2.578875
+        "input": 1.98375,
+        "output": 1.98375,
+        "cache_read": 1.98375
       }
     },
     "ibm/granite-4-h-micro": {
@@ -2263,8 +2264,8 @@
         "name": "Granite 4.0 Micro"
       },
       "price": {
-        "input": 0.023382,
-        "output": 0.154045
+        "input": 0.017986,
+        "output": 0.118496
       }
     },
     "inception/mercury-2": {
@@ -2301,9 +2302,9 @@
         "name": "Mercury 2"
       },
       "price": {
-        "input": 0.34385,
-        "output": 1.03155,
-        "cache_read": 0.034385
+        "input": 0.2645,
+        "output": 0.7935,
+        "cache_read": 0.02645
       }
     },
     "inception/mercury-2.5": {
@@ -2340,9 +2341,9 @@
         "name": "Mercury 2.5"
       },
       "price": {
-        "input": 0.27508,
-        "output": 1.03155,
-        "cache_read": 0.027508
+        "input": 0.2116,
+        "output": 0.7935,
+        "cache_read": 0.02116
       }
     },
     "inference-net/schematron-v2-small": {
@@ -2371,8 +2372,8 @@
         "name": "Schematron V2 Small"
       },
       "price": {
-        "input": 0.06877,
-        "output": 0.316342
+        "input": 0.0529,
+        "output": 0.24334
       }
     },
     "inference-net/schematron-v2-turbo": {
@@ -2401,8 +2402,8 @@
         "name": "Schematron V2 Turbo"
       },
       "price": {
-        "input": 0.041262,
-        "output": 0.20631
+        "input": 0.03174,
+        "output": 0.1587
       }
     },
     "mancer/weaver": {
@@ -2433,8 +2434,8 @@
         "name": "Weaver (alpha)"
       },
       "price": {
-        "input": 1.03155,
-        "output": 1.3754
+        "input": 0.7935,
+        "output": 1.058
       }
     },
     "meta/llama-3.3-70b-instruct": {
@@ -2464,8 +2465,8 @@
         "name": "Llama 3.3 70B Instruct Turbo"
       },
       "price": {
-        "input": 1.352,
-        "output": 1.352
+        "input": 1.04,
+        "output": 1.04
       }
     },
     "meta/muse-glimmer-30b": {
@@ -2507,9 +2508,9 @@
         "name": "Muse Glimmer 30B"
       },
       "price": {
-        "input": 0.48139,
-        "output": 2.0631,
-        "cache_read": 0.055016
+        "input": 0.3703,
+        "output": 1.587,
+        "cache_read": 0.04232
       }
     },
     "meta/muse-spark-1.1": {
@@ -2552,9 +2553,9 @@
         "name": "Muse Spark 1.1"
       },
       "price": {
-        "input": 1.71925,
-        "output": 5.84545,
-        "cache_read": 0.20631
+        "input": 1.3225,
+        "output": 4.4965,
+        "cache_read": 0.1587
       }
     },
     "meta/muse-spark-1.2": {
@@ -2598,9 +2599,9 @@
         "name": "Muse Spark 1.2"
       },
       "price": {
-        "input": 1.71925,
-        "output": 5.84545,
-        "cache_read": 0.20631
+        "input": 1.3225,
+        "output": 4.4965,
+        "cache_read": 0.1587
       }
     },
     "meta/muse-spark-1.3": {
@@ -2641,9 +2642,9 @@
         "name": "Muse Spark 1.3"
       },
       "price": {
-        "input": 1.71925,
-        "output": 5.84545,
-        "cache_read": 0.20631
+        "input": 1.3225,
+        "output": 4.4965,
+        "cache_read": 0.1587
       }
     },
     "mistral/codestral-2508": {
@@ -2673,9 +2674,9 @@
         "name": "Codestral 2508"
       },
       "price": {
-        "input": 0.41262,
-        "output": 1.23786,
-        "cache_read": 0.041262
+        "input": 0.3174,
+        "output": 0.9522,
+        "cache_read": 0.03174
       }
     },
     "mistral/devstral-2512": {
@@ -2705,9 +2706,9 @@
         "name": "Devstral 2 2512"
       },
       "price": {
-        "input": 0.605176,
-        "output": 3.02588,
-        "cache_read": 0.060518
+        "input": 0.46552,
+        "output": 2.3276,
+        "cache_read": 0.046552
       }
     },
     "mistral/ministral-14b-2512": {
@@ -2738,9 +2739,9 @@
         "name": "Ministral 3 14B 2512"
       },
       "price": {
-        "input": 0.48139,
-        "output": 0.48139,
-        "cache_read": 0.027508
+        "input": 0.3703,
+        "output": 0.3703,
+        "cache_read": 0.02116
       }
     },
     "mistral/ministral-3b-2512": {
@@ -2771,9 +2772,9 @@
         "name": "Ministral 3 3B 2512"
       },
       "price": {
-        "input": 0.20631,
-        "output": 0.20631,
-        "cache_read": 0.013754
+        "input": 0.1587,
+        "output": 0.1587,
+        "cache_read": 0.01058
       }
     },
     "mistral/ministral-8b-2512": {
@@ -2804,9 +2805,9 @@
         "name": "Ministral 3 8B 2512"
       },
       "price": {
-        "input": 0.41262,
-        "output": 0.41262,
-        "cache_read": 0.020631
+        "input": 0.3174,
+        "output": 0.3174,
+        "cache_read": 0.01587
       }
     },
     "mistral/mistral-large": {
@@ -2838,9 +2839,9 @@
         "name": "Large"
       },
       "price": {
-        "input": 2.7508,
-        "output": 8.2524,
-        "cache_read": 0.27508
+        "input": 2.116,
+        "output": 6.348,
+        "cache_read": 0.2116
       }
     },
     "mistral/mistral-large-2407": {
@@ -2872,9 +2873,9 @@
         "name": "Large 2407"
       },
       "price": {
-        "input": 2.7508,
-        "output": 8.2524,
-        "cache_read": 0.27508
+        "input": 2.116,
+        "output": 6.348,
+        "cache_read": 0.2116
       }
     },
     "mistral/mistral-medium-3": {
@@ -2907,9 +2908,9 @@
         "name": "Medium 3"
       },
       "price": {
-        "input": 0.55016,
-        "output": 2.7508,
-        "cache_read": 0.055016
+        "input": 0.4232,
+        "output": 2.116,
+        "cache_read": 0.04232
       }
     },
     "mistral/mistral-medium-3-5": {
@@ -2946,8 +2947,8 @@
         "name": "Medium 3.5"
       },
       "price": {
-        "input": 2.0631,
-        "output": 10.3155
+        "input": 1.587,
+        "output": 7.935
       }
     },
     "mistral/mistral-medium-3.1": {
@@ -2980,9 +2981,9 @@
         "name": "Medium 3.1"
       },
       "price": {
-        "input": 0.55016,
-        "output": 2.7508,
-        "cache_read": 0.055016
+        "input": 0.4232,
+        "output": 2.116,
+        "cache_read": 0.04232
       }
     },
     "mistral/mistral-nemo": {
@@ -3012,9 +3013,9 @@
         "name": "Mistral NeMo"
       },
       "price": {
-        "input": 0.20631,
-        "output": 0.233818,
-        "cache_read": 0.20631
+        "input": 0.1587,
+        "output": 0.17986,
+        "cache_read": 0.1587
       }
     },
     "mistral/mistral-saba": {
@@ -3046,9 +3047,9 @@
         "name": "Saba"
       },
       "price": {
-        "input": 0.27508,
-        "output": 0.82524,
-        "cache_read": 0.027508
+        "input": 0.2116,
+        "output": 0.6348,
+        "cache_read": 0.02116
       }
     },
     "mistral/mistral-small-24b-instruct-2501": {
@@ -3079,8 +3080,8 @@
         "name": "Small 3"
       },
       "price": {
-        "input": 0.06877,
-        "output": 0.110032
+        "input": 0.0529,
+        "output": 0.08464
       }
     },
     "mistral/mistral-small-2603": {
@@ -3118,9 +3119,9 @@
         "name": "Small 4"
       },
       "price": {
-        "input": 0.257888,
-        "output": 1.03155,
-        "cache_read": 0.020631
+        "input": 0.198375,
+        "output": 0.7935,
+        "cache_read": 0.01587
       }
     },
     "mistral/mistral-small-3.1-24b-instruct": {
@@ -3152,8 +3153,8 @@
         "name": "Small 3.1 24B"
       },
       "price": {
-        "input": 0.482765,
-        "output": 0.763347
+        "input": 0.371358,
+        "output": 0.58719
       }
     },
     "mistral/mistral-small-3.2-24b-instruct": {
@@ -3185,8 +3186,8 @@
         "name": "Small 3.2 24B"
       },
       "price": {
-        "input": 0.103155,
-        "output": 0.27508
+        "input": 0.07935,
+        "output": 0.2116
       }
     },
     "mistral/mixtral-8x22b-instruct": {
@@ -3218,9 +3219,9 @@
         "name": "Mixtral 8x22B Instruct"
       },
       "price": {
-        "input": 2.7508,
-        "output": 8.2524,
-        "cache_read": 0.27508
+        "input": 2.116,
+        "output": 6.348,
+        "cache_read": 0.2116
       }
     },
     "mistral/voxtral-small-24b-2507": {
@@ -3250,9 +3251,9 @@
         "name": "Voxtral Small 24B 2507"
       },
       "price": {
-        "input": 0.13754,
-        "output": 0.41262,
-        "cache_read": 0.013754
+        "input": 0.1058,
+        "output": 0.3174,
+        "cache_read": 0.01058
       }
     },
     "moonshotai/kimi-k2": {
@@ -3283,8 +3284,8 @@
         "name": "Kimi K2 0711"
       },
       "price": {
-        "input": 0.783978,
-        "output": 3.16342
+        "input": 0.60306,
+        "output": 2.4334
       }
     },
     "moonshotai/kimi-k2-0905": {
@@ -3313,8 +3314,8 @@
         "name": "Kimi K2 0905"
       },
       "price": {
-        "input": 1.3754,
-        "output": 4.1262
+        "input": 1.058,
+        "output": 3.174
       }
     },
     "moonshotai/kimi-k2-thinking": {
@@ -3345,9 +3346,9 @@
         "name": "Kimi K2 Thinking"
       },
       "price": {
-        "input": 0.82524,
-        "output": 3.4385,
-        "cache_read": 0.20631
+        "input": 0.6348,
+        "output": 2.645,
+        "cache_read": 0.1587
       }
     },
     "moonshotai/kimi-k3": {
@@ -3389,9 +3390,9 @@
         "name": "Kimi K3"
       },
       "price": {
-        "input": 3.9,
-        "output": 19.5,
-        "cache_read": 0.39
+        "input": 3,
+        "output": 15,
+        "cache_read": 0.3
       }
     },
     "morph/morph-v3-fast": {
@@ -3421,8 +3422,8 @@
         "name": "V3 Fast"
       },
       "price": {
-        "input": 1.10032,
-        "output": 1.65048
+        "input": 0.8464,
+        "output": 1.2696
       }
     },
     "morph/morph-v3-large": {
@@ -3452,8 +3453,8 @@
         "name": "V3 Large"
       },
       "price": {
-        "input": 1.23786,
-        "output": 2.61326
+        "input": 0.9522,
+        "output": 2.0102
       }
     },
     "nousresearch/hermes-3-llama-3.1-405b": {
@@ -3484,8 +3485,8 @@
         "name": "Hermes 3 405B Instruct"
       },
       "price": {
-        "input": 1.3754,
-        "output": 1.3754
+        "input": 1.058,
+        "output": 1.058
       }
     },
     "nousresearch/hermes-3-llama-3.1-70b": {
@@ -3516,8 +3517,8 @@
         "name": "Hermes 3 70B Instruct"
       },
       "price": {
-        "input": 0.96278,
-        "output": 0.96278
+        "input": 0.7406,
+        "output": 0.7406
       }
     },
     "openai/gpt-3.5-turbo": {
@@ -3548,8 +3549,8 @@
         "name": "GPT-3.5 Turbo"
       },
       "price": {
-        "input": 0.65,
-        "output": 1.95
+        "input": 0.5,
+        "output": 1.5
       }
     },
     "openai/gpt-4": {
@@ -3580,9 +3581,9 @@
         "name": "GPT-4"
       },
       "price": {
-        "input": 39,
-        "output": 78,
-        "cache_read": 39
+        "input": 30,
+        "output": 60,
+        "cache_read": 30
       }
     },
     "openai/gpt-4-turbo": {
@@ -3614,8 +3615,8 @@
         "name": "GPT-4 Turbo"
       },
       "price": {
-        "input": 13,
-        "output": 39
+        "input": 10,
+        "output": 30
       }
     },
     "openai/gpt-4.1": {
@@ -3648,9 +3649,9 @@
         "name": "GPT-4.1"
       },
       "price": {
-        "input": 2.6,
-        "output": 10.4,
-        "cache_read": 0.65
+        "input": 2,
+        "output": 8,
+        "cache_read": 0.5
       }
     },
     "openai/gpt-4.1-mini": {
@@ -3683,9 +3684,9 @@
         "name": "GPT-4.1 Mini"
       },
       "price": {
-        "input": 0.52,
-        "output": 2.08,
-        "cache_read": 0.13
+        "input": 0.4,
+        "output": 1.6,
+        "cache_read": 0.1
       }
     },
     "openai/gpt-4.1-nano": {
@@ -3717,9 +3718,9 @@
         "name": "GPT-4.1 Nano"
       },
       "price": {
-        "input": 0.13,
-        "output": 0.52,
-        "cache_read": 0.0325
+        "input": 0.1,
+        "output": 0.4,
+        "cache_read": 0.025
       }
     },
     "openai/gpt-4o": {
@@ -3752,9 +3753,9 @@
         "name": "GPT-4o"
       },
       "price": {
-        "input": 3.25,
-        "output": 13,
-        "cache_read": 1.625
+        "input": 2.5,
+        "output": 10,
+        "cache_read": 1.25
       }
     },
     "openai/gpt-4o-2024-05-13": {
@@ -3786,8 +3787,8 @@
         "name": "GPT-4o"
       },
       "price": {
-        "input": 6.5,
-        "output": 19.5
+        "input": 5,
+        "output": 15
       }
     },
     "openai/gpt-4o-2024-08-06": {
@@ -3819,9 +3820,9 @@
         "name": "GPT-4o"
       },
       "price": {
-        "input": 3.25,
-        "output": 13,
-        "cache_read": 1.625
+        "input": 2.5,
+        "output": 10,
+        "cache_read": 1.25
       }
     },
     "openai/gpt-4o-2024-11-20": {
@@ -3853,9 +3854,9 @@
         "name": "GPT-4o"
       },
       "price": {
-        "input": 3.25,
-        "output": 13,
-        "cache_read": 1.625
+        "input": 2.5,
+        "output": 10,
+        "cache_read": 1.25
       }
     },
     "openai/gpt-4o-mini": {
@@ -3888,9 +3889,9 @@
         "name": "GPT-4o Mini"
       },
       "price": {
-        "input": 0.195,
-        "output": 0.78,
-        "cache_read": 0.0975
+        "input": 0.15,
+        "output": 0.6,
+        "cache_read": 0.075
       }
     },
     "openai/gpt-5": {
@@ -3934,9 +3935,9 @@
         "name": "GPT-5"
       },
       "price": {
-        "input": 1.625,
-        "output": 13,
-        "cache_read": 0.1625
+        "input": 1.25,
+        "output": 10,
+        "cache_read": 0.125
       }
     },
     "openai/gpt-5-mini": {
@@ -3980,9 +3981,9 @@
         "name": "GPT-5 Mini"
       },
       "price": {
-        "input": 0.325,
-        "output": 2.6,
-        "cache_read": 0.0325
+        "input": 0.25,
+        "output": 2,
+        "cache_read": 0.025
       }
     },
     "openai/gpt-5-nano": {
@@ -4026,9 +4027,9 @@
         "name": "GPT-5 Nano"
       },
       "price": {
-        "input": 0.065,
-        "output": 0.52,
-        "cache_read": 0.0065
+        "input": 0.05,
+        "output": 0.4,
+        "cache_read": 0.005
       }
     },
     "openai/gpt-5-pro": {
@@ -4069,8 +4070,8 @@
         "name": "GPT-5 Pro"
       },
       "price": {
-        "input": 20.631,
-        "output": 165.048
+        "input": 15.87,
+        "output": 126.96
       }
     },
     "openai/gpt-5.1": {
@@ -4112,9 +4113,9 @@
         "name": "GPT-5.1"
       },
       "price": {
-        "input": 1.625,
-        "output": 13,
-        "cache_read": 0.1625
+        "input": 1.25,
+        "output": 10,
+        "cache_read": 0.125
       }
     },
     "openai/gpt-5.1-codex-max": {
@@ -4157,9 +4158,9 @@
         "name": "GPT-5.1-Codex-Max"
       },
       "price": {
-        "input": 3.4385,
-        "output": 27.508,
-        "cache_read": 0.34385
+        "input": 2.645,
+        "output": 21.16,
+        "cache_read": 0.2645
       }
     },
     "openai/gpt-5.2": {
@@ -4201,9 +4202,9 @@
         "name": "GPT-5.2"
       },
       "price": {
-        "input": 2.275,
-        "output": 18.2,
-        "cache_read": 0.2275
+        "input": 1.75,
+        "output": 14,
+        "cache_read": 0.175
       }
     },
     "openai/gpt-5.2-pro": {
@@ -4245,8 +4246,8 @@
         "name": "GPT-5.2 Pro"
       },
       "price": {
-        "input": 28.8834,
-        "output": 231.0672
+        "input": 22.218,
+        "output": 177.744
       }
     },
     "openai/gpt-5.3-codex": {
@@ -4292,9 +4293,9 @@
         "name": "GPT-5.3 Codex"
       },
       "price": {
-        "input": 4.8139,
-        "output": 38.5112,
-        "cache_read": 0.48139
+        "input": 3.703,
+        "output": 29.624,
+        "cache_read": 0.3703
       }
     },
     "openai/gpt-5.4": {
@@ -4337,9 +4338,9 @@
         "name": "GPT-5.4"
       },
       "price": {
-        "input": 3.25,
-        "output": 19.5,
-        "cache_read": 0.325
+        "input": 2.5,
+        "output": 15,
+        "cache_read": 0.25
       }
     },
     "openai/gpt-5.4-image-2": {
@@ -4380,9 +4381,9 @@
         "name": "GPT-5.4 Image 2"
       },
       "price": {
-        "input": 11.0032,
-        "output": 20.631,
-        "cache_read": 2.7508
+        "input": 8.464,
+        "output": 15.87,
+        "cache_read": 2.116
       }
     },
     "openai/gpt-5.4-mini": {
@@ -4424,9 +4425,9 @@
         "name": "GPT-5.4 Mini"
       },
       "price": {
-        "input": 2.0631,
-        "output": 12.3786,
-        "cache_read": 0.20631
+        "input": 1.587,
+        "output": 9.522,
+        "cache_read": 0.1587
       }
     },
     "openai/gpt-5.4-nano": {
@@ -4468,9 +4469,9 @@
         "name": "GPT-5.4 Nano"
       },
       "price": {
-        "input": 0.27508,
-        "output": 1.71925,
-        "cache_read": 0.027508
+        "input": 0.2116,
+        "output": 1.3225,
+        "cache_read": 0.02116
       }
     },
     "openai/gpt-5.4-pro": {
@@ -4512,8 +4513,8 @@
         "name": "GPT-5.4 Pro"
       },
       "price": {
-        "input": 41.262,
-        "output": 247.572
+        "input": 31.74,
+        "output": 190.44
       }
     },
     "openai/gpt-5.5": {
@@ -4556,9 +4557,9 @@
         "name": "GPT-5.5"
       },
       "price": {
-        "input": 6.5,
-        "output": 39,
-        "cache_read": 0.65
+        "input": 5,
+        "output": 30,
+        "cache_read": 0.5
       }
     },
     "openai/gpt-5.5-pro": {
@@ -4601,8 +4602,8 @@
         "name": "GPT-5.5 Pro"
       },
       "price": {
-        "input": 41.262,
-        "output": 247.572
+        "input": 31.74,
+        "output": 190.44
       }
     },
     "openai/gpt-5.6-luna": {
@@ -4645,10 +4646,10 @@
         "name": "GPT-5.6 Luna"
       },
       "price": {
-        "input": 0.26,
-        "output": 1.56,
-        "cache_read": 0.026,
-        "cache_write": 0.325
+        "input": 0.2,
+        "output": 1.2,
+        "cache_read": 0.02,
+        "cache_write": 0.25
       }
     },
     "openai/gpt-5.6-luna-pro": {
@@ -4694,9 +4695,9 @@
         "name": "GPT-5.6 Luna Pro"
       },
       "price": {
-        "input": 0.27508,
-        "output": 1.65048,
-        "cache_read": 0.027508
+        "input": 0.2116,
+        "output": 1.2696,
+        "cache_read": 0.02116
       }
     },
     "openai/gpt-5.6-sol": {
@@ -4739,10 +4740,10 @@
         "name": "GPT-5.6 Sol"
       },
       "price": {
-        "input": 5.2,
-        "output": 26,
-        "cache_read": 0.52,
-        "cache_write": 6.5
+        "input": 4,
+        "output": 20,
+        "cache_read": 0.4,
+        "cache_write": 5
       }
     },
     "openai/gpt-5.6-sol-pro": {
@@ -4788,9 +4789,9 @@
         "name": "GPT-5.6 Sol Pro"
       },
       "price": {
-        "input": 5.5016,
-        "output": 27.508,
-        "cache_read": 0.55016
+        "input": 4.232,
+        "output": 21.16,
+        "cache_read": 0.4232
       }
     },
     "openai/gpt-5.6-terra": {
@@ -4833,10 +4834,10 @@
         "name": "GPT-5.6 Terra"
       },
       "price": {
-        "input": 2.6,
-        "output": 15.6,
-        "cache_read": 0.26,
-        "cache_write": 3.25
+        "input": 2,
+        "output": 12,
+        "cache_read": 0.2,
+        "cache_write": 2.5
       }
     },
     "openai/gpt-5.6-terra-pro": {
@@ -4882,9 +4883,9 @@
         "name": "GPT-5.6 Terra Pro"
       },
       "price": {
-        "input": 2.7508,
-        "output": 16.5048,
-        "cache_read": 0.27508
+        "input": 2.116,
+        "output": 12.696,
+        "cache_read": 0.2116
       }
     },
     "openai/gpt-6-astra": {
@@ -4927,10 +4928,10 @@
         "name": "GPT-6 Astra"
       },
       "price": {
-        "input": 13,
-        "output": 65,
-        "cache_read": 1.3,
-        "cache_write": 16.25
+        "input": 10,
+        "output": 50,
+        "cache_read": 1,
+        "cache_write": 12.5
       }
     },
     "openai/gpt-6-luna": {
@@ -4973,10 +4974,10 @@
         "name": "GPT-6 Luna"
       },
       "price": {
-        "input": 0.13,
-        "output": 0.65,
-        "cache_read": 0.013,
-        "cache_write": 0.1625
+        "input": 0.1,
+        "output": 0.5,
+        "cache_read": 0.01,
+        "cache_write": 0.125
       }
     },
     "openai/gpt-6-sol": {
@@ -5019,10 +5020,10 @@
         "name": "GPT-6 Sol"
       },
       "price": {
-        "input": 2.6,
-        "output": 13,
-        "cache_read": 0.26,
-        "cache_write": 3.25
+        "input": 2,
+        "output": 10,
+        "cache_read": 0.2,
+        "cache_write": 2.5
       }
     },
     "openai/gpt-6.1-sol": {
@@ -5063,10 +5064,10 @@
         "name": "GPT-6.1 Sol"
       },
       "price": {
-        "input": 2.6,
-        "output": 13,
-        "cache_read": 0.13,
-        "cache_write": 3.25
+        "input": 2,
+        "output": 10,
+        "cache_read": 0.1,
+        "cache_write": 2.5
       }
     },
     "openai/gpt-oss-120b": {
@@ -5107,9 +5108,9 @@
         "name": "GPT OSS 120B"
       },
       "price": {
-        "input": 0.48139,
-        "output": 1.30663,
-        "cache_read": 0.48139
+        "input": 0.3703,
+        "output": 1.0051,
+        "cache_read": 0.3703
       }
     },
     "openai/gpt-oss-20b": {
@@ -5150,9 +5151,9 @@
         "name": "GPT OSS 20B"
       },
       "price": {
-        "input": 0.103155,
-        "output": 0.41262,
-        "cache_read": 0.051578
+        "input": 0.07935,
+        "output": 0.3174,
+        "cache_read": 0.039675
       }
     },
     "openai/gpt-oss-safeguard-20b": {
@@ -5189,9 +5190,9 @@
         "name": "gpt-oss-safeguard-20b"
       },
       "price": {
-        "input": 0.103155,
-        "output": 0.41262,
-        "cache_read": 0.051578
+        "input": 0.07935,
+        "output": 0.3174,
+        "cache_read": 0.039675
       }
     },
     "openai/o1": {
@@ -5231,9 +5232,9 @@
         "name": "o1"
       },
       "price": {
-        "input": 19.5,
-        "output": 78,
-        "cache_read": 9.75
+        "input": 15,
+        "output": 60,
+        "cache_read": 7.5
       }
     },
     "openai/o1-pro": {
@@ -5275,8 +5276,8 @@
         "name": "o1-pro"
       },
       "price": {
-        "input": 206.31,
-        "output": 825.24
+        "input": 158.7,
+        "output": 634.8
       }
     },
     "openai/o3-mini": {
@@ -5314,9 +5315,9 @@
         "name": "o3 Mini"
       },
       "price": {
-        "input": 1.43,
-        "output": 5.72,
-        "cache_read": 0.715
+        "input": 1.1,
+        "output": 4.4,
+        "cache_read": 0.55
       }
     },
     "openai/o3-pro": {
@@ -5358,8 +5359,8 @@
         "name": "o3 Pro"
       },
       "price": {
-        "input": 27.508,
-        "output": 110.032
+        "input": 21.16,
+        "output": 84.64
       }
     },
     "perplexity/sonar": {
@@ -5389,8 +5390,8 @@
         "name": "Sonar"
       },
       "price": {
-        "input": 1.3,
-        "output": 1.3
+        "input": 1,
+        "output": 1
       }
     },
     "perplexity/sonar-pro": {
@@ -5421,8 +5422,8 @@
         "name": "Sonar Pro"
       },
       "price": {
-        "input": 3.9,
-        "output": 19.5
+        "input": 3,
+        "output": 15
       }
     },
     "rekaai/reka-edge": {
@@ -5454,8 +5455,8 @@
         "name": "Reka Edge"
       },
       "price": {
-        "input": 0.13754,
-        "output": 0.13754
+        "input": 0.1058,
+        "output": 0.1058
       }
     },
     "relace/relace-apply-3": {
@@ -5484,8 +5485,8 @@
         "name": "Apply 3"
       },
       "price": {
-        "input": 1.16909,
-        "output": 1.71925
+        "input": 0.8993,
+        "output": 1.3225
       }
     },
     "relace/relace-search": {
@@ -5514,8 +5515,8 @@
         "name": "Search"
       },
       "price": {
-        "input": 1.3754,
-        "output": 4.1262
+        "input": 1.058,
+        "output": 3.174
       }
     },
     "sakana/fugu-max": {
@@ -5552,9 +5553,9 @@
         "name": "Fugu Max"
       },
       "price": {
-        "input": 2.7508,
-        "output": 8.2524,
-        "cache_read": 0.34385
+        "input": 2.116,
+        "output": 6.348,
+        "cache_read": 0.2645
       }
     },
     "sakana/fugu-ultra": {
@@ -5590,9 +5591,9 @@
         "name": "Fugu Ultra"
       },
       "price": {
-        "input": 6.877,
-        "output": 41.262,
-        "cache_read": 0.6877
+        "input": 5.29,
+        "output": 31.74,
+        "cache_read": 0.529
       }
     },
     "sakana/fugu-ultra-v2": {
@@ -5630,9 +5631,9 @@
         "name": "Fugu Ultra v2"
       },
       "price": {
-        "input": 6.877,
-        "output": 41.262,
-        "cache_read": 0.6877
+        "input": 5.29,
+        "output": 31.74,
+        "cache_read": 0.529
       }
     },
     "sao10k/l3-lunaris-8b": {
@@ -5663,8 +5664,8 @@
         "name": "Llama 3 8B Lunaris"
       },
       "price": {
-        "input": 0.06877,
-        "output": 0.06877
+        "input": 0.0529,
+        "output": 0.0529
       }
     },
     "sao10k/l3.1-euryale-70b": {
@@ -5695,8 +5696,8 @@
         "name": "Llama 3.1 Euryale 70B v2.2"
       },
       "price": {
-        "input": 1.99488,
-        "output": 1.99488
+        "input": 1.534523,
+        "output": 1.534523
       }
     },
     "sao10k/l3.3-euryale-70b": {
@@ -5727,8 +5728,8 @@
         "name": "Llama 3.3 Euryale 70B"
       },
       "price": {
-        "input": 0.89401,
-        "output": 1.03155
+        "input": 0.6877,
+        "output": 0.7935
       }
     },
     "stepfun/step-5-preview": {
@@ -5767,9 +5768,9 @@
         "name": "Step 5 Preview"
       },
       "price": {
-        "input": 1.3754,
-        "output": 3.71358,
-        "cache_read": 0.06877
+        "input": 1.058,
+        "output": 2.8566,
+        "cache_read": 0.0529
       }
     },
     "tencent/hy-mt2-1.8b": {
@@ -5799,8 +5800,8 @@
         "name": "Hy-MT2-1.8B"
       },
       "price": {
-        "input": 0.060518,
-        "output": 0.243446
+        "input": 0.046552,
+        "output": 0.187266
       }
     },
     "tencent/hy-mt2-30b-a3b": {
@@ -5830,8 +5831,8 @@
         "name": "Hy-MT2-30B-A3B"
       },
       "price": {
-        "input": 0.10178,
-        "output": 0.405743
+        "input": 0.078292,
+        "output": 0.31211
       }
     },
     "tencent/hy-mt2-7b": {
@@ -5861,8 +5862,8 @@
         "name": "Hy-MT2-7B"
       },
       "price": {
-        "input": 0.10178,
-        "output": 0.405743
+        "input": 0.078292,
+        "output": 0.31211
       }
     },
     "tencent/hy3": {
@@ -5900,9 +5901,9 @@
         "name": "Hy3"
       },
       "price": {
-        "input": 0.27508,
-        "output": 1.10032,
-        "cache_read": 0.06877
+        "input": 0.2116,
+        "output": 0.8464,
+        "cache_read": 0.0529
       }
     },
     "tencent/hy4-preview": {
@@ -5940,9 +5941,9 @@
         "name": "Hy4 preview"
       },
       "price": {
-        "input": 1.147084,
-        "output": 3.439875,
-        "cache_read": 0.057767
+        "input": 0.882372,
+        "output": 2.646058,
+        "cache_read": 0.044436
       }
     },
     "thedrummer/cydonia-24b-v4.1": {
@@ -5972,9 +5973,9 @@
         "name": "Cydonia 24B V4.1"
       },
       "price": {
-        "input": 0.41262,
-        "output": 0.6877,
-        "cache_read": 0.20631
+        "input": 0.3174,
+        "output": 0.529,
+        "cache_read": 0.1587
       }
     },
     "thedrummer/skyfall-36b-v2": {
@@ -6004,9 +6005,9 @@
         "name": "Skyfall 36B V2"
       },
       "price": {
-        "input": 0.75647,
-        "output": 1.10032,
-        "cache_read": 0.34385
+        "input": 0.5819,
+        "output": 0.8464,
+        "cache_read": 0.2645
       }
     },
     "thedrummer/unslopnemo-12b": {
@@ -6036,8 +6037,8 @@
         "name": "UnslopNemo 12B"
       },
       "price": {
-        "input": 0.55016,
-        "output": 0.55016
+        "input": 0.4232,
+        "output": 0.4232
       }
     },
     "thinkingmachines/inkling": {
@@ -6078,9 +6079,9 @@
         "name": "Inkling"
       },
       "price": {
-        "input": 1.3754,
-        "output": 5.57037,
-        "cache_read": 0.233818
+        "input": 1.058,
+        "output": 4.2849,
+        "cache_read": 0.17986
       }
     },
     "thinkingmachines/inkling-small": {
@@ -6121,9 +6122,9 @@
         "name": "Inkling Small"
       },
       "price": {
-        "input": 0.797732,
-        "output": 1.980576,
-        "cache_read": 0.159546
+        "input": 0.61364,
+        "output": 1.52352,
+        "cache_read": 0.122728
       }
     },
     "unbiased/pareto": {
@@ -6153,9 +6154,9 @@
         "name": "Pareto"
       },
       "price": {
-        "input": 3.4385,
-        "output": 10.3155,
-        "cache_read": 0.34385
+        "input": 2.645,
+        "output": 7.935,
+        "cache_read": 0.2645
       }
     },
     "undi95/remm-slerp-l2-13b": {
@@ -6185,8 +6186,8 @@
         "name": "ReMM SLERP 13B"
       },
       "price": {
-        "input": 0.6877,
-        "output": 1.03155
+        "input": 0.529,
+        "output": 0.7935
       }
     },
     "upstage/solar-pro3": {
@@ -6223,9 +6224,9 @@
         "name": "Solar Pro 3"
       },
       "price": {
-        "input": 0.20631,
-        "output": 0.82524,
-        "cache_read": 0.020631
+        "input": 0.1587,
+        "output": 0.6348,
+        "cache_read": 0.01587
       }
     },
     "upstage/solar-pro4": {
@@ -6265,13 +6266,14 @@
         "name": "Solar Pro 4"
       },
       "price": {
-        "input": 0.041262,
-        "output": 0.165048,
-        "cache_read": 0.008252
+        "input": 0.03174,
+        "output": 0.12696,
+        "cache_read": 0.006348
       }
     },
     "xai/grok-4-fast-non-reasoning": {
       "name": "Grok 4 Fast Non Reasoning",
+      "family": "grok",
       "released": "2025-12-18",
       "updated": "2025-12-18",
       "open_weights": false,
@@ -6299,9 +6301,9 @@
         "name": "Grok 4 Fast Non-Reasoning"
       },
       "price": {
-        "input": 1.625,
-        "output": 3.25,
-        "cache_read": 0.26
+        "input": 1.25,
+        "output": 2.5,
+        "cache_read": 0.2
       }
     },
     "xai/grok-4.20-0309-non-reasoning": {
@@ -6333,9 +6335,9 @@
         "name": "Grok 4.20 Non-Reasoning"
       },
       "price": {
-        "input": 1.625,
-        "output": 3.25,
-        "cache_read": 0.26
+        "input": 1.25,
+        "output": 2.5,
+        "cache_read": 0.2
       }
     },
     "xiaomi/mimo-v2.5": {
@@ -6372,9 +6374,9 @@
         "name": "MiMo V2.5"
       },
       "price": {
-        "input": 0.192556,
-        "output": 0.385112,
-        "cache_read": 0.003851
+        "input": 0.14812,
+        "output": 0.29624,
+        "cache_read": 0.002962
       }
     },
     "xiaomi/mimo-v2.5-pro": {
@@ -6408,9 +6410,9 @@
         "name": "MiMo V2.5 Pro"
       },
       "price": {
-        "input": 0.598299,
-        "output": 1.196598,
-        "cache_read": 0.004951
+        "input": 0.46023,
+        "output": 0.92046,
+        "cache_read": 0.003809
       }
     },
     "zhipuai/glm-4.5v": {
@@ -6446,9 +6448,9 @@
         "name": "GLM 4.5V"
       },
       "price": {
-        "input": 0.82524,
-        "output": 2.47572,
-        "cache_read": 0.151294
+        "input": 0.6348,
+        "output": 1.9044,
+        "cache_read": 0.11638
       }
     },
     "zhipuai/glm-4.6v": {
@@ -6484,9 +6486,9 @@
         "name": "GLM 4.6V"
       },
       "price": {
-        "input": 0.41262,
-        "output": 1.23786,
-        "cache_read": 0.075647
+        "input": 0.3174,
+        "output": 0.9522,
+        "cache_read": 0.05819
       }
     },
     "zhipuai/glm-4.7-flash": {
@@ -6520,9 +6522,9 @@
         "name": "GLM 4.7 Flash"
       },
       "price": {
-        "input": 0.171925,
-        "output": 0.6877,
-        "cache_read": 0.013754
+        "input": 0.13225,
+        "output": 0.529,
+        "cache_read": 0.01058
       }
     },
     "zhipuai/glm-5-turbo": {
@@ -6553,9 +6555,9 @@
         "name": "GLM 5 Turbo"
       },
       "price": {
-        "input": 1.56,
-        "output": 5.2,
-        "cache_read": 0.312
+        "input": 1.2,
+        "output": 4,
+        "cache_read": 0.24
       }
     },
     "zhipuai/glm-5.2": {
@@ -6590,9 +6592,9 @@
         "name": "GLM 5.2"
       },
       "price": {
-        "input": 1.82,
-        "output": 5.72,
-        "cache_read": 0.338
+        "input": 1.4,
+        "output": 4.4,
+        "cache_read": 0.26
       }
     },
     "zhipuai/glm-5.3": {
@@ -6628,9 +6630,9 @@
         "name": "GLM 5.3"
       },
       "price": {
-        "input": 1.82,
-        "output": 5.72,
-        "cache_read": 0.338
+        "input": 1.4,
+        "output": 4.4,
+        "cache_read": 0.26
       }
     },
     "zhipuai/glm-5.3-flash": {
@@ -6673,9 +6675,9 @@
         "name": "GLM 5.3 Flash"
       },
       "price": {
-        "input": 0.195,
-        "output": 0.65,
-        "cache_read": 0.039
+        "input": 0.15,
+        "output": 0.5,
+        "cache_read": 0.03
       }
     },
     "zhipuai/glm-5v-turbo": {
@@ -6708,9 +6710,9 @@
         "name": "GLM 5V Turbo"
       },
       "price": {
-        "input": 1.56,
-        "output": 5.2,
-        "cache_read": 0.312
+        "input": 1.2,
+        "output": 4,
+        "cache_read": 0.24
       }
     }
   }

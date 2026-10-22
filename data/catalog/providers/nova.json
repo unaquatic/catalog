@@ -17,9 +17,10 @@
   "models": {
     "amazon/nova-2-lite-v1": {
       "name": "Nova 2 Lite V1",
-      "family": "nova-lite",
-      "released": "2025-12-01",
-      "updated": "2025-12-01",
+      "family": "nova",
+      "released": "2025-12-02",
+      "updated": "2025-12-02",
+      "knowledge": "2025-10",
       "open_weights": false,
       "capabilities": {
         "tools": true,

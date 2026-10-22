@@ -49,7 +49,8 @@
         "output": 0,
         "cache_read": 0,
         "cache_write": 0
-      }
+      },
+      "status": "deprecated"
     },
     "moonshotai/kimi-k2.5": {
       "name": "Kimi K2.5",
@@ -90,7 +91,8 @@
         "output": 0,
         "cache_read": 0,
         "cache_write": 0
-      }
+      },
+      "status": "deprecated"
     },
     "tencent/hunyuan-2.0-instruct": {
       "name": "Hunyuan 2.0 Instruct",
@@ -122,7 +124,8 @@
         "output": 0,
         "cache_read": 0,
         "cache_write": 0
-      }
+      },
+      "status": "deprecated"
     },
     "tencent/hunyuan-2.0-thinking": {
       "name": "Hunyuan 2.0 Thinking",
@@ -158,7 +161,8 @@
         "output": 0,
         "cache_read": 0,
         "cache_write": 0
-      }
+      },
+      "status": "deprecated"
     },
     "tencent/hunyuan-t1": {
       "name": "Hunyuan T1",
@@ -194,7 +198,8 @@
         "output": 0,
         "cache_read": 0,
         "cache_write": 0
-      }
+      },
+      "status": "deprecated"
     },
     "tencent/hunyuan-turbos": {
       "name": "Hunyuan TurboS",
@@ -226,14 +231,15 @@
         "output": 0,
         "cache_read": 0,
         "cache_write": 0
-      }
+      },
+      "status": "deprecated"
     },
     "zhipuai/glm-5": {
       "name": "GLM 5",
       "family": "glm",
-      "released": "2026-02-11",
-      "updated": "2026-02-11",
-      "open_weights": false,
+      "released": "2026-02-12",
+      "updated": "2026-02-12",
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": false,
@@ -264,7 +270,8 @@
         "output": 0,
         "cache_read": 0,
         "cache_write": 0
-      }
+      },
+      "status": "deprecated"
     }
   }
 }

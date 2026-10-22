@@ -210,7 +210,18 @@
       },
       "provider_options": {
         "id": "@cf/cloudflare/clairic",
-        "name": "Clairic"
+        "name": "Clairic",
+        "endpoint": {
+          "format": "openai-chat",
+          "api": "https://api.cloudflare.com/client/v4/accounts/${CLOUDFLARE_ACCOUNT_ID}/ai/run",
+          "auth": {
+            "scheme": "bearer"
+          },
+          "env": [
+            "CLOUDFLARE_ACCOUNT_ID",
+            "CLOUDFLARE_API_KEY"
+          ]
+        }
       },
       "price": {
         "input": 0.1,
@@ -242,7 +253,18 @@
       },
       "provider_options": {
         "id": "@cf/cloudflare/clef",
-        "name": "Clef"
+        "name": "Clef",
+        "endpoint": {
+          "format": "openai-chat",
+          "api": "https://api.cloudflare.com/client/v4/accounts/${CLOUDFLARE_ACCOUNT_ID}/ai/run",
+          "auth": {
+            "scheme": "bearer"
+          },
+          "env": [
+            "CLOUDFLARE_ACCOUNT_ID",
+            "CLOUDFLARE_API_KEY"
+          ]
+        }
       },
       "price": {
         "input": 0.24,
@@ -274,7 +296,18 @@
       },
       "provider_options": {
         "id": "@cf/cloudflare/clef-flash",
-        "name": "Clef Flash"
+        "name": "Clef Flash",
+        "endpoint": {
+          "format": "openai-chat",
+          "api": "https://api.cloudflare.com/client/v4/accounts/${CLOUDFLARE_ACCOUNT_ID}/ai/run",
+          "auth": {
+            "scheme": "bearer"
+          },
+          "env": [
+            "CLOUDFLARE_ACCOUNT_ID",
+            "CLOUDFLARE_API_KEY"
+          ]
+        }
       },
       "price": {
         "input": 0.038,
@@ -306,7 +339,18 @@
       },
       "provider_options": {
         "id": "@cf/cloudflare/clef-omni",
-        "name": "Clef Omni"
+        "name": "Clef Omni",
+        "endpoint": {
+          "format": "openai-chat",
+          "api": "https://api.cloudflare.com/client/v4/accounts/${CLOUDFLARE_ACCOUNT_ID}/ai/run",
+          "auth": {
+            "scheme": "bearer"
+          },
+          "env": [
+            "CLOUDFLARE_ACCOUNT_ID",
+            "CLOUDFLARE_API_KEY"
+          ]
+        }
       },
       "price": {
         "input": 0.15,

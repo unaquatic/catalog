@@ -95,44 +95,6 @@
         "output": 0.4
       }
     },
-    "minimax/minimax-m2.5": {
-      "name": "MiniMax M2.5",
-      "family": "minimax",
-      "released": "2026-02-12",
-      "updated": "2026-02-12",
-      "open_weights": true,
-      "capabilities": {
-        "tools": true,
-        "attachments": false,
-        "structured_output": true,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 196608,
-        "output": 131072
-      },
-      "reasoning": {
-        "budget": {}
-      },
-      "interleaved": {
-        "field": "reasoning_content"
-      },
-      "provider_options": {
-        "id": "MiniMaxAI/MiniMax-M2.5",
-        "name": "MiniMax-M2.5"
-      },
-      "price": {
-        "input": 0.3,
-        "output": 1.2,
-        "cache_read": 0.06
-      }
-    },
     "zhipuai/glm-5.1": {
       "name": "GLM 5.1",
       "family": "glm",

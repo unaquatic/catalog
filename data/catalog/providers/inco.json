@@ -51,7 +51,8 @@
       },
       "price": {
         "input": 0.6,
-        "output": 2.4
+        "output": 2.4,
+        "cache_read": 0.012
       }
     },
     "minimax/minimax-m3": {
@@ -87,7 +88,8 @@
       },
       "price": {
         "input": 0.3,
-        "output": 1.2
+        "output": 1.2,
+        "cache_read": 0.06
       },
       "aliases": [
         "minimax-m3:fast"
@@ -129,7 +131,8 @@
       },
       "price": {
         "input": 6,
-        "output": 30
+        "output": 30,
+        "cache_read": 0.6
       }
     },
     "zhipuai/glm-5.3": {
@@ -166,7 +169,8 @@
       },
       "price": {
         "input": 1.4,
-        "output": 4.4
+        "output": 4.4,
+        "cache_read": 0.26
       },
       "aliases": [
         "glm-5.3:fast"
@@ -208,8 +212,9 @@
         "name": "GLM-5.3-Flash"
       },
       "price": {
-        "input": 0.15,
-        "output": 0.5
+        "input": 0.3,
+        "output": 1,
+        "cache_read": 0.06
       }
     }
   }

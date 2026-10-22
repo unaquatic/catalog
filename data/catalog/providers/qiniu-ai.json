@@ -15,15 +15,17 @@
   },
   "doc": "https://developer.qiniu.com/aitokenapi",
   "models": {
-    "alibaba/qwen-max-2025-01-25": {
-      "name": "Qwen Max 20250125",
-      "released": "2025-08-05",
-      "updated": "2025-08-05",
+    "alibaba/qwen-max": {
+      "name": "Qwen Max",
+      "family": "qwen",
+      "released": "2024-04-03",
+      "updated": "2025-01-25",
+      "knowledge": "2024-04",
       "open_weights": false,
       "capabilities": {
         "tools": true,
         "attachments": false,
-        "structured_output": false,
+        "structured_output": true,
         "temperature": true,
         "input": [
           "text"
@@ -39,17 +41,24 @@
       "provider_options": {
         "id": "qwen-max-2025-01-25",
         "name": "Qwen2.5-Max-2025-01-25"
-      }
+      },
+      "price": {
+        "input": 0.34782609,
+        "output": 1.39130435
+      },
+      "status": "deprecated"
     },
     "alibaba/qwen-turbo": {
       "name": "Qwen Turbo",
-      "released": "2025-08-05",
-      "updated": "2025-08-05",
+      "family": "qwen",
+      "released": "2024-11-01",
+      "updated": "2025-04-28",
+      "knowledge": "2024-04",
       "open_weights": false,
       "capabilities": {
         "tools": true,
         "attachments": false,
-        "structured_output": false,
+        "structured_output": true,
         "temperature": true,
         "input": [
           "text"
@@ -68,7 +77,12 @@
       "provider_options": {
         "id": "qwen-turbo",
         "name": "Qwen-Turbo"
-      }
+      },
+      "price": {
+        "input": 0.04347826,
+        "output": 0.08695652
+      },
+      "status": "deprecated"
     },
     "alibaba/qwen-vl-max-2025-01-25": {
       "name": "Qwen VL Max 20250125",
@@ -78,7 +92,7 @@
       "capabilities": {
         "tools": true,
         "attachments": true,
-        "structured_output": false,
+        "structured_output": true,
         "temperature": true,
         "input": [
           "text",
@@ -97,22 +111,28 @@
       "provider_options": {
         "id": "qwen-vl-max-2025-01-25",
         "name": "Qwen VL-MAX-2025-01-25"
-      }
+      },
+      "price": {
+        "input": 0.43478261,
+        "output": 1.30434783
+      },
+      "status": "deprecated"
     },
     "alibaba/qwen2-5-vl-72b-instruct": {
       "name": "Qwen2.5 VL 72B Instruct",
-      "released": "2025-08-05",
-      "updated": "2025-08-05",
-      "open_weights": false,
+      "family": "qwen",
+      "released": "2025-01-26",
+      "updated": "2025-01-26",
+      "knowledge": "2024-04",
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": true,
-        "structured_output": false,
+        "structured_output": true,
         "temperature": true,
         "input": [
           "text",
           "image",
-          "audio",
           "video"
         ],
         "output": [
@@ -126,7 +146,12 @@
       "provider_options": {
         "id": "qwen2.5-vl-72b-instruct",
         "name": "Qwen 2.5 VL 72B Instruct"
-      }
+      },
+      "price": {
+        "input": 2.31884058,
+        "output": 6.95652174
+      },
+      "status": "deprecated"
     },
     "alibaba/qwen2.5-vl-7b-instruct": {
       "name": "Qwen2.5 VL 7B Instruct",
@@ -155,17 +180,20 @@
       "provider_options": {
         "id": "qwen2.5-vl-7b-instruct",
         "name": "Qwen 2.5 VL 7B Instruct"
-      }
+      },
+      "status": "deprecated"
     },
     "alibaba/qwen3-235b-a22b": {
       "name": "Qwen3 235B A22B",
-      "released": "2025-08-05",
-      "updated": "2025-08-05",
-      "open_weights": false,
+      "family": "qwen",
+      "released": "2025-04-28",
+      "updated": "2025-04-28",
+      "knowledge": "2025-04",
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": false,
-        "structured_output": false,
+        "structured_output": true,
         "temperature": true,
         "input": [
           "text"
@@ -178,20 +206,29 @@
         "context": 128000,
         "output": 32000
       },
+      "reasoning": {
+        "mandatory": false
+      },
       "provider_options": {
         "id": "qwen3-235b-a22b",
         "name": "Qwen 3 235B A22B"
-      }
+      },
+      "price": {
+        "input": 0.28985507,
+        "output": 1.15942029
+      },
+      "status": "deprecated"
     },
     "alibaba/qwen3-235b-a22b-instruct-2507": {
       "name": "Qwen3 235B A22B Instruct 2507",
-      "released": "2025-08-12",
-      "updated": "2025-08-12",
-      "open_weights": false,
+      "family": "qwen",
+      "released": "2025-07-21",
+      "updated": "2025-07-21",
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": false,
-        "structured_output": false,
+        "structured_output": true,
         "temperature": true,
         "input": [
           "text"
@@ -207,17 +244,23 @@
       "provider_options": {
         "id": "qwen3-235b-a22b-instruct-2507",
         "name": "Qwen3 235b A22B Instruct 2507"
-      }
+      },
+      "price": {
+        "input": 0.28985507,
+        "output": 1.15942029
+      },
+      "status": "deprecated"
     },
     "alibaba/qwen3-235b-a22b-thinking-2507": {
       "name": "Qwen3 235B A22B Thinking 2507",
-      "released": "2025-08-12",
-      "updated": "2025-08-12",
-      "open_weights": false,
+      "family": "qwen",
+      "released": "2025-07-25",
+      "updated": "2025-07-25",
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": false,
-        "structured_output": false,
+        "structured_output": true,
         "temperature": true,
         "input": [
           "text"
@@ -230,23 +273,27 @@
         "context": 262144,
         "output": 4096
       },
-      "reasoning": {
-        "mandatory": false
-      },
+      "reasoning": {},
       "provider_options": {
         "id": "qwen3-235b-a22b-thinking-2507",
         "name": "Qwen3 235B A22B Thinking 2507"
-      }
+      },
+      "price": {
+        "input": 0.28985507,
+        "output": 2.89855072
+      },
+      "status": "deprecated"
     },
     "alibaba/qwen3-30b-a3b": {
       "name": "Qwen3 30B A3B",
-      "released": "2025-08-05",
-      "updated": "2025-08-05",
-      "open_weights": false,
+      "family": "qwen",
+      "released": "2025-04-28",
+      "updated": "2025-04-28",
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": false,
-        "structured_output": false,
+        "structured_output": true,
         "temperature": true,
         "input": [
           "text"
@@ -265,17 +312,23 @@
       "provider_options": {
         "id": "qwen3-30b-a3b",
         "name": "Qwen3 30B A3B"
-      }
+      },
+      "price": {
+        "input": 0.10869565,
+        "output": 0.43478261
+      },
+      "status": "deprecated"
     },
     "alibaba/qwen3-30b-a3b-instruct-2507": {
       "name": "Qwen3 30B A3B Instruct 2507",
-      "released": "2026-02-04",
-      "updated": "2026-02-04",
-      "open_weights": false,
+      "family": "qwen",
+      "released": "2025-07-28",
+      "updated": "2025-07-28",
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": false,
-        "structured_output": false,
+        "structured_output": true,
         "temperature": true,
         "input": [
           "text"
@@ -291,7 +344,12 @@
       "provider_options": {
         "id": "qwen3-30b-a3b-instruct-2507",
         "name": "Qwen3 30b A3b Instruct 2507"
-      }
+      },
+      "price": {
+        "input": 0.10869565,
+        "output": 0.43478261
+      },
+      "status": "deprecated"
     },
     "alibaba/qwen3-30b-a3b-thinking-2507": {
       "name": "Qwen3 30B A3B Thinking 2507",
@@ -301,7 +359,7 @@
       "capabilities": {
         "tools": true,
         "attachments": false,
-        "structured_output": false,
+        "structured_output": true,
         "temperature": true,
         "input": [
           "text"
@@ -314,23 +372,28 @@
         "context": 126000,
         "output": 32000
       },
-      "reasoning": {
-        "mandatory": false
-      },
+      "reasoning": {},
       "provider_options": {
         "id": "qwen3-30b-a3b-thinking-2507",
         "name": "Qwen3 30b A3b Thinking 2507"
-      }
+      },
+      "price": {
+        "input": 0.10869565,
+        "output": 1.08695652
+      },
+      "status": "deprecated"
     },
     "alibaba/qwen3-32b": {
       "name": "Qwen3 32B",
-      "released": "2025-08-05",
-      "updated": "2025-08-05",
-      "open_weights": false,
+      "family": "qwen",
+      "released": "2025-04-28",
+      "updated": "2025-04-28",
+      "knowledge": "2025-04",
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": false,
-        "structured_output": false,
+        "structured_output": true,
         "temperature": true,
         "input": [
           "text"
@@ -349,17 +412,24 @@
       "provider_options": {
         "id": "qwen3-32b",
         "name": "Qwen3 32B"
-      }
+      },
+      "price": {
+        "input": 0.28985507,
+        "output": 1.15942029
+      },
+      "status": "deprecated"
     },
     "alibaba/qwen3-coder-480b-a35b-instruct": {
       "name": "Qwen3 Coder 480B A35B Instruct",
-      "released": "2025-08-14",
-      "updated": "2025-08-14",
-      "open_weights": false,
+      "family": "qwen",
+      "released": "2025-07-22",
+      "updated": "2025-07-22",
+      "knowledge": "2025-04",
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": false,
-        "structured_output": false,
+        "structured_output": true,
         "temperature": true,
         "input": [
           "text"
@@ -375,17 +445,36 @@
       "provider_options": {
         "id": "qwen3-coder-480b-a35b-instruct",
         "name": "Qwen3 Coder 480B A35B Instruct"
-      }
+      },
+      "price": {
+        "input": 0.86956522,
+        "output": 3.47826087,
+        "tiers": [
+          {
+            "above": 32000,
+            "input": 1.30434783,
+            "output": 5.2173913
+          },
+          {
+            "above": 128000,
+            "input": 2.17391304,
+            "output": 8.69565217
+          }
+        ]
+      },
+      "status": "deprecated"
     },
     "alibaba/qwen3-max": {
       "name": "Qwen3 Max",
-      "released": "2025-09-24",
-      "updated": "2025-09-24",
+      "family": "qwen",
+      "released": "2025-09-23",
+      "updated": "2025-09-23",
+      "knowledge": "2025-04",
       "open_weights": false,
       "capabilities": {
         "tools": true,
         "attachments": false,
-        "structured_output": false,
+        "structured_output": true,
         "temperature": true,
         "input": [
           "text"
@@ -401,17 +490,36 @@
       "provider_options": {
         "id": "qwen3-max",
         "name": "Qwen3 Max"
-      }
+      },
+      "price": {
+        "input": 0.86956522,
+        "output": 3.47826087,
+        "tiers": [
+          {
+            "above": 32000,
+            "input": 1.44927536,
+            "output": 5.79710145
+          },
+          {
+            "above": 128000,
+            "input": 2.17391304,
+            "output": 8.69565217
+          }
+        ]
+      },
+      "status": "deprecated"
     },
     "alibaba/qwen3-max-preview": {
       "name": "Qwen3 Max Preview",
-      "released": "2025-09-06",
-      "updated": "2025-09-06",
+      "family": "qwen",
+      "released": "2025-09-05",
+      "updated": "2025-09-23",
+      "knowledge": "2025-04",
       "open_weights": false,
       "capabilities": {
         "tools": true,
         "attachments": false,
-        "structured_output": false,
+        "structured_output": true,
         "temperature": true,
         "input": [
           "text"
@@ -427,13 +535,32 @@
       "provider_options": {
         "id": "qwen3-max-preview",
         "name": "Qwen3 Max Preview"
-      }
+      },
+      "price": {
+        "input": 0.86956522,
+        "output": 3.47826087,
+        "tiers": [
+          {
+            "above": 32000,
+            "input": 1.44927536,
+            "output": 5.79710145
+          },
+          {
+            "above": 128000,
+            "input": 2.17391304,
+            "output": 8.69565217
+          }
+        ]
+      },
+      "status": "deprecated"
     },
     "alibaba/qwen3-next-80b-a3b-instruct": {
       "name": "Qwen3 Next 80B A3B Instruct",
+      "family": "qwen",
       "released": "2025-09-12",
       "updated": "2025-09-12",
-      "open_weights": false,
+      "knowledge": "2025-04",
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": false,
@@ -453,17 +580,24 @@
       "provider_options": {
         "id": "qwen3-next-80b-a3b-instruct",
         "name": "Qwen3 Next 80B A3B Instruct"
-      }
+      },
+      "price": {
+        "input": 0.14492754,
+        "output": 0.57971014
+      },
+      "status": "deprecated"
     },
     "alibaba/qwen3-next-80b-a3b-thinking": {
       "name": "Qwen3 Next 80B A3B Thinking",
+      "family": "qwen",
       "released": "2025-09-12",
       "updated": "2025-09-12",
-      "open_weights": false,
+      "knowledge": "2025-04",
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": false,
-        "structured_output": false,
+        "structured_output": true,
         "temperature": true,
         "input": [
           "text"
@@ -476,13 +610,16 @@
         "context": 131072,
         "output": 32768
       },
-      "reasoning": {
-        "mandatory": false
-      },
+      "reasoning": {},
       "provider_options": {
         "id": "qwen3-next-80b-a3b-thinking",
         "name": "Qwen3 Next 80B A3B Thinking"
-      }
+      },
+      "price": {
+        "input": 0.14492754,
+        "output": 1.44927536
+      },
+      "status": "deprecated"
     },
     "alibaba/qwen3-vl-30b-a3b-thinking": {
       "name": "Qwen3 VL 30B A3B Thinking",
@@ -492,7 +629,7 @@
       "capabilities": {
         "tools": true,
         "attachments": true,
-        "structured_output": false,
+        "structured_output": true,
         "temperature": true,
         "input": [
           "text",
@@ -507,16 +644,23 @@
         "context": 128000,
         "output": 32000
       },
+      "reasoning": {},
       "provider_options": {
         "id": "qwen3-vl-30b-a3b-thinking",
         "name": "Qwen3-Vl 30b A3b Thinking"
-      }
+      },
+      "price": {
+        "input": 0.10869565,
+        "output": 1.08695652
+      },
+      "status": "deprecated"
     },
     "alibaba/qwen3.5-397b-a17b": {
       "name": "Qwen3.5 397B A17B",
-      "released": "2026-02-22",
-      "updated": "2026-02-22",
-      "open_weights": false,
+      "family": "qwen",
+      "released": "2026-02-15",
+      "updated": "2026-02-15",
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": true,
@@ -540,12 +684,25 @@
       "provider_options": {
         "id": "qwen3.5-397b-a17b",
         "name": "Qwen3.5 397B A17B"
+      },
+      "price": {
+        "input": 0.17391304,
+        "output": 1.04347826,
+        "tiers": [
+          {
+            "above": 128000,
+            "input": 0.43478261,
+            "output": 2.60869565
+          }
+        ]
       }
     },
-    "anthropic/claude-3-5-haiku": {
-      "name": "Claude 3.5 Haiku",
-      "released": "2025-08-26",
-      "updated": "2025-08-26",
+    "anthropic/claude-3-5-haiku-20241022": {
+      "name": "Claude 3.5 Haiku 20241022",
+      "family": "claude-haiku",
+      "released": "2024-10-22",
+      "updated": "2024-10-22",
+      "knowledge": "2024-07-31",
       "open_weights": false,
       "capabilities": {
         "tools": true,
@@ -567,12 +724,15 @@
       "provider_options": {
         "id": "claude-3.5-haiku",
         "name": "Claude 3.5 Haiku"
-      }
+      },
+      "status": "deprecated"
     },
-    "anthropic/claude-3-5-sonnet": {
-      "name": "Claude 3.5 Sonnet",
-      "released": "2025-09-09",
-      "updated": "2025-09-09",
+    "anthropic/claude-3-5-sonnet-20241022": {
+      "name": "Claude 3.5 Sonnet 20241022",
+      "family": "claude-sonnet",
+      "released": "2024-10-22",
+      "updated": "2024-10-22",
+      "knowledge": "2024-04-30",
       "open_weights": false,
       "capabilities": {
         "tools": true,
@@ -589,18 +749,20 @@
       },
       "limit": {
         "context": 200000,
-        "output": 8200
+        "output": 8192
       },
-      "reasoning": {},
       "provider_options": {
         "id": "claude-3.5-sonnet",
         "name": "Claude 3.5 Sonnet"
-      }
+      },
+      "status": "deprecated"
     },
-    "anthropic/claude-3-7-sonnet": {
-      "name": "Claude 3.7 Sonnet",
-      "released": "2025-08-05",
-      "updated": "2025-08-05",
+    "anthropic/claude-3-7-sonnet-20250219": {
+      "name": "Claude 3.7 Sonnet 20250219",
+      "family": "claude-sonnet",
+      "released": "2025-02-19",
+      "updated": "2025-02-19",
+      "knowledge": "2024-10-31",
       "open_weights": false,
       "capabilities": {
         "tools": true,
@@ -626,12 +788,15 @@
       "provider_options": {
         "id": "claude-3.7-sonnet",
         "name": "Claude 3.7 Sonnet"
-      }
+      },
+      "status": "deprecated"
     },
     "anthropic/claude-haiku-4-5": {
       "name": "Claude Haiku 4.5",
-      "released": "2025-10-16",
-      "updated": "2025-10-16",
+      "family": "claude-haiku",
+      "released": "2025-10-15",
+      "updated": "2025-10-15",
+      "knowledge": "2025-02-28",
       "open_weights": false,
       "capabilities": {
         "tools": true,
@@ -657,12 +822,15 @@
       "provider_options": {
         "id": "claude-4.5-haiku",
         "name": "Claude 4.5 Haiku"
-      }
+      },
+      "status": "deprecated"
     },
     "anthropic/claude-opus-4-0": {
       "name": "Claude Opus 4.0",
-      "released": "2025-08-05",
-      "updated": "2025-08-05",
+      "family": "claude-opus",
+      "released": "2025-05-22",
+      "updated": "2025-05-22",
+      "knowledge": "2025-03-31",
       "open_weights": false,
       "capabilities": {
         "tools": true,
@@ -688,12 +856,15 @@
       "provider_options": {
         "id": "claude-4.0-opus",
         "name": "Claude 4.0 Opus"
-      }
+      },
+      "status": "deprecated"
     },
     "anthropic/claude-opus-4-1": {
       "name": "Claude Opus 4.1",
-      "released": "2025-08-06",
-      "updated": "2025-08-06",
+      "family": "claude-opus",
+      "released": "2025-08-05",
+      "updated": "2025-08-05",
+      "knowledge": "2025-03-31",
       "open_weights": false,
       "capabilities": {
         "tools": true,
@@ -719,12 +890,15 @@
       "provider_options": {
         "id": "claude-4.1-opus",
         "name": "Claude 4.1 Opus"
-      }
+      },
+      "status": "deprecated"
     },
     "anthropic/claude-opus-4-5": {
       "name": "Claude Opus 4.5",
-      "released": "2025-11-25",
-      "updated": "2025-11-25",
+      "family": "claude-opus",
+      "released": "2025-11-24",
+      "updated": "2025-11-24",
+      "knowledge": "2025-05",
       "open_weights": false,
       "capabilities": {
         "tools": true,
@@ -750,12 +924,15 @@
       "provider_options": {
         "id": "claude-4.5-opus",
         "name": "Claude 4.5 Opus"
-      }
+      },
+      "status": "deprecated"
     },
     "anthropic/claude-sonnet-4-0": {
       "name": "Claude Sonnet 4.0",
-      "released": "2025-08-05",
-      "updated": "2025-08-05",
+      "family": "claude-sonnet",
+      "released": "2025-05-22",
+      "updated": "2025-05-22",
+      "knowledge": "2025-03-31",
       "open_weights": false,
       "capabilities": {
         "tools": true,
@@ -781,12 +958,15 @@
       "provider_options": {
         "id": "claude-4.0-sonnet",
         "name": "Claude 4.0 Sonnet"
-      }
+      },
+      "status": "deprecated"
     },
     "anthropic/claude-sonnet-4-5": {
       "name": "Claude Sonnet 4.5",
-      "released": "2025-09-30",
-      "updated": "2025-09-30",
+      "family": "claude-sonnet",
+      "released": "2025-09-29",
+      "updated": "2025-09-29",
+      "knowledge": "2025-07-31",
       "open_weights": false,
       "capabilities": {
         "tools": true,
@@ -812,7 +992,8 @@
       "provider_options": {
         "id": "claude-4.5-sonnet",
         "name": "Claude 4.5 Sonnet"
-      }
+      },
+      "status": "deprecated"
     },
     "bytedance-seed/doubao-1.5-pro-32k": {
       "name": "Doubao 1.5 Pro 32K",
@@ -822,7 +1003,7 @@
       "capabilities": {
         "tools": true,
         "attachments": false,
-        "structured_output": false,
+        "structured_output": true,
         "temperature": true,
         "input": [
           "text"
@@ -838,7 +1019,12 @@
       "provider_options": {
         "id": "doubao-1.5-pro-32k",
         "name": "Doubao 1.5 Pro 32k"
-      }
+      },
+      "price": {
+        "input": 0.11594203,
+        "output": 0.28985507
+      },
+      "status": "deprecated"
     },
     "bytedance-seed/doubao-1.5-thinking-pro": {
       "name": "Doubao 1.5 Thinking Pro",
@@ -848,7 +1034,7 @@
       "capabilities": {
         "tools": true,
         "attachments": false,
-        "structured_output": false,
+        "structured_output": true,
         "temperature": true,
         "input": [
           "text"
@@ -865,7 +1051,12 @@
       "provider_options": {
         "id": "doubao-1.5-thinking-pro",
         "name": "Doubao 1.5 Thinking Pro"
-      }
+      },
+      "price": {
+        "input": 0.57971014,
+        "output": 2.31884058
+      },
+      "status": "deprecated"
     },
     "bytedance-seed/doubao-1.5-vision-pro": {
       "name": "Doubao 1.5 Vision Pro",
@@ -875,7 +1066,7 @@
       "capabilities": {
         "tools": false,
         "attachments": true,
-        "structured_output": false,
+        "structured_output": true,
         "temperature": true,
         "input": [
           "text",
@@ -893,17 +1084,23 @@
       "provider_options": {
         "id": "doubao-1.5-vision-pro",
         "name": "Doubao 1.5 Vision Pro"
-      }
+      },
+      "price": {
+        "input": 0.43478261,
+        "output": 1.30434783
+      },
+      "status": "deprecated"
     },
     "bytedance-seed/seed-1-6": {
       "name": "Seed 1.6",
-      "released": "2025-08-15",
-      "updated": "2025-08-15",
+      "family": "seed",
+      "released": "2025-10-15",
+      "updated": "2025-10-15",
       "open_weights": false,
       "capabilities": {
         "tools": true,
         "attachments": true,
-        "structured_output": false,
+        "structured_output": true,
         "temperature": true,
         "input": [
           "text",
@@ -925,6 +1122,23 @@
         "id": "doubao-seed-1.6",
         "name": "Doubao-Seed 1.6"
       },
+      "price": {
+        "input": 0.11594203,
+        "output": 1.15942029,
+        "tiers": [
+          {
+            "above": 32000,
+            "input": 0.17391304,
+            "output": 2.31884058
+          },
+          {
+            "above": 128000,
+            "input": 0.34782609,
+            "output": 3.47826087
+          }
+        ]
+      },
+      "status": "deprecated",
       "variants": {
         "thinking": {
           "name": "Seed 1.6 Thinking",
@@ -932,19 +1146,37 @@
           "provider_options": {
             "id": "doubao-seed-1.6-thinking",
             "name": "Doubao-Seed 1.6 Thinking"
-          }
+          },
+          "price": {
+            "input": 0.11594203,
+            "output": 1.15942029,
+            "tiers": [
+              {
+                "above": 32000,
+                "input": 0.17391304,
+                "output": 2.31884058
+              },
+              {
+                "above": 128000,
+                "input": 0.34782609,
+                "output": 3.47826087
+              }
+            ]
+          },
+          "status": "deprecated"
         }
       }
     },
     "bytedance-seed/seed-1-6-flash": {
       "name": "Seed 1.6 Flash",
-      "released": "2025-08-15",
-      "updated": "2025-08-15",
+      "family": "seed",
+      "released": "2025-08-28",
+      "updated": "2025-08-28",
       "open_weights": false,
       "capabilities": {
         "tools": true,
         "attachments": true,
-        "structured_output": false,
+        "structured_output": true,
         "temperature": true,
         "input": [
           "text",
@@ -965,17 +1197,35 @@
       "provider_options": {
         "id": "doubao-seed-1.6-flash",
         "name": "Doubao-Seed 1.6 Flash"
-      }
+      },
+      "price": {
+        "input": 0.02173913,
+        "output": 0.2173913,
+        "tiers": [
+          {
+            "above": 32000,
+            "input": 0.04347826,
+            "output": 0.43478261
+          },
+          {
+            "above": 128000,
+            "input": 0.08695652,
+            "output": 0.86956522
+          }
+        ]
+      },
+      "status": "deprecated"
     },
     "bytedance-seed/seed-2.0-code": {
       "name": "Seed 2.0 Code",
+      "family": "seed",
       "released": "2026-02-14",
       "updated": "2026-02-14",
       "open_weights": false,
       "capabilities": {
         "tools": true,
         "attachments": true,
-        "structured_output": false,
+        "structured_output": true,
         "temperature": true,
         "input": [
           "text",
@@ -996,17 +1246,38 @@
       "provider_options": {
         "id": "doubao-seed-2.0-code",
         "name": "Doubao Seed 2.0 Code"
-      }
+      },
+      "price": {
+        "input": 0.46376812,
+        "output": 2.31884058,
+        "cache_read": 0.09275362,
+        "tiers": [
+          {
+            "above": 32000,
+            "input": 0.69565217,
+            "output": 3.47826087,
+            "cache_read": 0.13913043
+          },
+          {
+            "above": 128000,
+            "input": 1.39130435,
+            "output": 6.95652174,
+            "cache_read": 0.27826087
+          }
+        ]
+      },
+      "status": "deprecated"
     },
     "bytedance-seed/seed-2.0-lite": {
       "name": "Seed 2.0 Lite",
+      "family": "seed",
       "released": "2026-02-14",
       "updated": "2026-02-14",
       "open_weights": false,
       "capabilities": {
         "tools": true,
         "attachments": true,
-        "structured_output": false,
+        "structured_output": true,
         "temperature": true,
         "input": [
           "text",
@@ -1027,17 +1298,37 @@
       "provider_options": {
         "id": "doubao-seed-2.0-lite",
         "name": "Doubao Seed 2.0 Lite"
+      },
+      "price": {
+        "input": 0.08695652,
+        "output": 0.52173913,
+        "cache_read": 0.0173913,
+        "tiers": [
+          {
+            "above": 32000,
+            "input": 0.13043478,
+            "output": 0.7826087,
+            "cache_read": 0.02608696
+          },
+          {
+            "above": 128000,
+            "input": 0.26086957,
+            "output": 1.56521739,
+            "cache_read": 0.05217391
+          }
+        ]
       }
     },
     "bytedance-seed/seed-2.0-mini": {
       "name": "Seed 2.0 Mini",
+      "family": "seed",
       "released": "2026-02-14",
       "updated": "2026-02-14",
       "open_weights": false,
       "capabilities": {
         "tools": true,
         "attachments": true,
-        "structured_output": false,
+        "structured_output": true,
         "temperature": true,
         "input": [
           "text",
@@ -1058,17 +1349,37 @@
       "provider_options": {
         "id": "doubao-seed-2.0-mini",
         "name": "Doubao Seed 2.0 Mini"
+      },
+      "price": {
+        "input": 0.02898551,
+        "output": 0.28985507,
+        "cache_read": 0.0057971,
+        "tiers": [
+          {
+            "above": 32000,
+            "input": 0.05797101,
+            "output": 0.57971014,
+            "cache_read": 0.0115942
+          },
+          {
+            "above": 128000,
+            "input": 0.11594203,
+            "output": 1.15942029,
+            "cache_read": 0.02318841
+          }
+        ]
       }
     },
     "bytedance-seed/seed-2.0-pro": {
       "name": "Seed 2.0 Pro",
+      "family": "seed",
       "released": "2026-02-14",
       "updated": "2026-02-14",
       "open_weights": false,
       "capabilities": {
         "tools": true,
         "attachments": true,
-        "structured_output": false,
+        "structured_output": true,
         "temperature": true,
         "input": [
           "text",
@@ -1089,7 +1400,27 @@
       "provider_options": {
         "id": "doubao-seed-2.0-pro",
         "name": "Doubao Seed 2.0 Pro"
-      }
+      },
+      "price": {
+        "input": 0.46376812,
+        "output": 2.31884058,
+        "cache_read": 0.09275362,
+        "tiers": [
+          {
+            "above": 32000,
+            "input": 0.69565217,
+            "output": 3.47826087,
+            "cache_read": 0.13913043
+          },
+          {
+            "above": 128000,
+            "input": 1.39130435,
+            "output": 6.95652174,
+            "cache_read": 0.27826087
+          }
+        ]
+      },
+      "status": "deprecated"
     },
     "deepseek/deepseek-math-v2": {
       "name": "DeepSeek Math V2",
@@ -1116,13 +1447,16 @@
       "provider_options": {
         "id": "deepseek/deepseek-math-v2",
         "name": "Deepseek/Deepseek-Math-V2"
-      }
+      },
+      "status": "deprecated"
     },
     "deepseek/deepseek-r1": {
       "name": "DeepSeek R1",
-      "released": "2025-08-05",
-      "updated": "2025-08-05",
-      "open_weights": false,
+      "family": "deepseek-thinking",
+      "released": "2025-01-20",
+      "updated": "2025-05-29",
+      "knowledge": "2024-07",
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": false,
@@ -1143,13 +1477,19 @@
       "provider_options": {
         "id": "deepseek-r1",
         "name": "DeepSeek-R1"
-      }
+      },
+      "price": {
+        "input": 0.57971014,
+        "output": 2.31884058
+      },
+      "status": "deprecated"
     },
     "deepseek/deepseek-r1-0528": {
       "name": "DeepSeek R1 0528",
-      "released": "2025-08-05",
-      "updated": "2025-08-05",
-      "open_weights": false,
+      "family": "deepseek-thinking",
+      "released": "2025-05-28",
+      "updated": "2025-05-28",
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": false,
@@ -1170,15 +1510,21 @@
       "provider_options": {
         "id": "deepseek-r1-0528",
         "name": "DeepSeek-R1-0528"
-      }
+      },
+      "price": {
+        "input": 0.57971014,
+        "output": 2.31884058
+      },
+      "status": "deprecated"
     },
     "deepseek/deepseek-v3": {
       "name": "DeepSeek V3",
-      "released": "2025-08-13",
-      "updated": "2025-08-13",
-      "open_weights": false,
+      "family": "deepseek",
+      "released": "2024-12-26",
+      "updated": "2024-12-26",
+      "open_weights": true,
       "capabilities": {
-        "tools": false,
+        "tools": true,
         "attachments": false,
         "structured_output": false,
         "temperature": true,
@@ -1196,13 +1542,19 @@
       "provider_options": {
         "id": "deepseek-v3",
         "name": "DeepSeek-V3"
-      }
+      },
+      "price": {
+        "input": 0.28985507,
+        "output": 1.15942029
+      },
+      "status": "deprecated"
     },
     "deepseek/deepseek-v3-0324": {
       "name": "DeepSeek V3 0324",
-      "released": "2025-08-05",
-      "updated": "2025-08-05",
-      "open_weights": false,
+      "family": "deepseek",
+      "released": "2025-03-24",
+      "updated": "2025-03-24",
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": false,
@@ -1222,13 +1574,15 @@
       "provider_options": {
         "id": "deepseek-v3-0324",
         "name": "DeepSeek-V3-0324"
-      }
+      },
+      "status": "deprecated"
     },
     "deepseek/deepseek-v3.1": {
       "name": "DeepSeek V3.1",
-      "released": "2025-08-19",
-      "updated": "2025-08-19",
-      "open_weights": false,
+      "family": "deepseek",
+      "released": "2025-08-21",
+      "updated": "2025-08-21",
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": false,
@@ -1249,7 +1603,12 @@
       "provider_options": {
         "id": "deepseek-v3.1",
         "name": "DeepSeek-V3.1"
-      }
+      },
+      "price": {
+        "input": 0.57971014,
+        "output": 1.73913043
+      },
+      "status": "deprecated"
     },
     "deepseek/deepseek-v3.1-terminus": {
       "name": "DeepSeek V3.1 Terminus",
@@ -1276,6 +1635,11 @@
         "id": "deepseek/deepseek-v3.1-terminus",
         "name": "DeepSeek/DeepSeek-V3.1-Terminus"
       },
+      "price": {
+        "input": 0.57971014,
+        "output": 1.73913043
+      },
+      "status": "deprecated",
       "variants": {
         "thinking": {
           "name": "DeepSeek V3.1 Terminus Thinking",
@@ -1283,15 +1647,22 @@
           "provider_options": {
             "id": "deepseek/deepseek-v3.1-terminus-thinking",
             "name": "DeepSeek/DeepSeek-V3.1-Terminus-Thinking"
-          }
+          },
+          "price": {
+            "input": 0.57971014,
+            "output": 1.73913043
+          },
+          "status": "deprecated"
         }
       }
     },
-    "deepseek/deepseek-v3.2-251201": {
-      "name": "DeepSeek V3.2 251201",
+    "deepseek/deepseek-v3.2": {
+      "name": "DeepSeek V3.2",
+      "family": "deepseek",
       "released": "2025-12-01",
       "updated": "2025-12-01",
-      "open_weights": false,
+      "knowledge": "2024-07",
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": false,
@@ -1312,7 +1683,13 @@
       "provider_options": {
         "id": "deepseek/deepseek-v3.2-251201",
         "name": "Deepseek/DeepSeek-V3.2"
-      }
+      },
+      "price": {
+        "input": 0.28985507,
+        "output": 0.43478261,
+        "cache_read": 0.02898551
+      },
+      "status": "deprecated"
     },
     "deepseek/deepseek-v3.2-exp": {
       "name": "DeepSeek V3.2 Exp",
@@ -1339,6 +1716,11 @@
         "id": "deepseek/deepseek-v3.2-exp",
         "name": "DeepSeek/DeepSeek-V3.2-Exp"
       },
+      "price": {
+        "input": 0.28985507,
+        "output": 0.43478261
+      },
+      "status": "deprecated",
       "variants": {
         "thinking": {
           "name": "DeepSeek V3.2 Exp Thinking",
@@ -1346,14 +1728,21 @@
           "provider_options": {
             "id": "deepseek/deepseek-v3.2-exp-thinking",
             "name": "DeepSeek/DeepSeek-V3.2-Exp-Thinking"
-          }
+          },
+          "price": {
+            "input": 0.28985507,
+            "output": 0.43478261
+          },
+          "status": "deprecated"
         }
       }
     },
     "google/gemini-2.0-flash": {
       "name": "Gemini 2.0 Flash",
-      "released": "2025-08-05",
-      "updated": "2025-08-05",
+      "family": "gemini-flash",
+      "released": "2024-12-11",
+      "updated": "2024-12-11",
+      "knowledge": "2024-06",
       "open_weights": false,
       "capabilities": {
         "tools": true,
@@ -1377,12 +1766,15 @@
       "provider_options": {
         "id": "gemini-2.0-flash",
         "name": "Gemini 2.0 Flash"
-      }
+      },
+      "status": "deprecated"
     },
     "google/gemini-2.0-flash-lite": {
       "name": "Gemini 2.0 Flash Lite",
-      "released": "2025-08-05",
-      "updated": "2025-08-05",
+      "family": "gemini-flash-lite",
+      "released": "2024-12-11",
+      "updated": "2024-12-11",
+      "knowledge": "2024-06",
       "open_weights": false,
       "capabilities": {
         "tools": true,
@@ -1403,16 +1795,18 @@
         "context": 1048576,
         "output": 8192
       },
-      "reasoning": {},
       "provider_options": {
         "id": "gemini-2.0-flash-lite",
         "name": "Gemini 2.0 Flash Lite"
-      }
+      },
+      "status": "deprecated"
     },
     "google/gemini-2.5-flash": {
       "name": "Gemini 2.5 Flash",
-      "released": "2025-08-05",
-      "updated": "2025-08-05",
+      "family": "gemini-flash",
+      "released": "2025-06-17",
+      "updated": "2025-06-17",
+      "knowledge": "2025-01",
       "open_weights": false,
       "capabilities": {
         "tools": true,
@@ -1437,12 +1831,16 @@
       "provider_options": {
         "id": "gemini-2.5-flash",
         "name": "Gemini 2.5 Flash"
-      }
+      },
+      "status": "deprecated"
     },
     "google/gemini-2.5-flash-image": {
       "name": "Gemini 2.5 Flash Image",
-      "released": "2025-10-22",
-      "updated": "2025-10-22",
+      "family": "gemini-flash",
+      "type": "image",
+      "released": "2025-08-26",
+      "updated": "2025-08-26",
+      "knowledge": "2024-06",
       "open_weights": false,
       "capabilities": {
         "tools": false,
@@ -1464,12 +1862,15 @@
       "provider_options": {
         "id": "gemini-2.5-flash-image",
         "name": "Gemini 2.5 Flash Image"
-      }
+      },
+      "status": "deprecated"
     },
     "google/gemini-2.5-flash-lite": {
       "name": "Gemini 2.5 Flash Lite",
-      "released": "2025-08-05",
-      "updated": "2025-08-05",
+      "family": "gemini-flash-lite",
+      "released": "2025-06-17",
+      "updated": "2025-06-17",
+      "knowledge": "2025-01",
       "open_weights": false,
       "capabilities": {
         "tools": true,
@@ -1493,12 +1894,15 @@
       "provider_options": {
         "id": "gemini-2.5-flash-lite",
         "name": "Gemini 2.5 Flash Lite"
-      }
+      },
+      "status": "deprecated"
     },
     "google/gemini-2.5-pro": {
       "name": "Gemini 2.5 Pro",
-      "released": "2025-08-05",
-      "updated": "2025-08-05",
+      "family": "gemini-pro",
+      "released": "2025-06-17",
+      "updated": "2025-06-17",
+      "knowledge": "2025-01",
       "open_weights": false,
       "capabilities": {
         "tools": true,
@@ -1523,12 +1927,15 @@
       "provider_options": {
         "id": "gemini-2.5-pro",
         "name": "Gemini 2.5 Pro"
-      }
+      },
+      "status": "deprecated"
     },
-    "google/gemini-3.0-flash-preview": {
-      "name": "Gemini 3.0 Flash Preview",
-      "released": "2025-12-18",
-      "updated": "2025-12-18",
+    "google/gemini-3-flash-preview": {
+      "name": "Gemini 3 Flash Preview",
+      "family": "gemini-flash",
+      "released": "2025-12-17",
+      "updated": "2025-12-17",
+      "knowledge": "2025-01",
       "open_weights": false,
       "capabilities": {
         "tools": true,
@@ -1554,12 +1961,16 @@
       "provider_options": {
         "id": "gemini-3.0-flash-preview",
         "name": "Gemini 3.0 Flash Preview"
-      }
+      },
+      "status": "deprecated"
     },
-    "google/gemini-3.0-pro-image-preview": {
-      "name": "Gemini 3.0 Pro Image Preview",
+    "google/gemini-3-pro-image-preview": {
+      "name": "Gemini 3 Pro Image Preview",
+      "family": "gemini-pro",
+      "type": "image",
       "released": "2025-11-20",
       "updated": "2025-11-20",
+      "knowledge": "2025-01",
       "open_weights": false,
       "capabilities": {
         "tools": false,
@@ -1582,12 +1993,15 @@
       "provider_options": {
         "id": "gemini-3.0-pro-image-preview",
         "name": "Gemini 3.0 Pro Image Preview"
-      }
+      },
+      "status": "deprecated"
     },
-    "google/gemini-3.0-pro-preview": {
-      "name": "Gemini 3.0 Pro Preview",
-      "released": "2025-11-19",
-      "updated": "2025-11-19",
+    "google/gemini-3-pro-preview": {
+      "name": "Gemini 3 Pro Preview",
+      "family": "gemini-pro",
+      "released": "2025-11-18",
+      "updated": "2025-11-18",
+      "knowledge": "2025-01",
       "open_weights": false,
       "capabilities": {
         "tools": true,
@@ -1613,10 +2027,12 @@
       "provider_options": {
         "id": "gemini-3.0-pro-preview",
         "name": "Gemini 3.0 Pro Preview"
-      }
+      },
+      "status": "deprecated"
     },
     "kuaishou/kling-v2-6": {
       "name": "Kling V2.6",
+      "type": "video",
       "released": "2026-01-13",
       "updated": "2026-01-13",
       "open_weights": false,
@@ -1667,7 +2083,8 @@
       "provider_options": {
         "id": "meituan/longcat-flash-chat",
         "name": "Meituan/Longcat-Flash-Chat"
-      }
+      },
+      "status": "deprecated"
     },
     "meituan/longcat-flash-lite": {
       "name": "LongCat Flash Lite",
@@ -1677,7 +2094,7 @@
       "capabilities": {
         "tools": true,
         "attachments": false,
-        "structured_output": false,
+        "structured_output": true,
         "temperature": true,
         "input": [
           "text"
@@ -1690,20 +2107,27 @@
         "context": 256000,
         "output": 320000
       },
+      "reasoning": {},
       "provider_options": {
         "id": "meituan/longcat-flash-lite",
         "name": "Meituan/Longcat-Flash-Lite"
-      }
+      },
+      "price": {
+        "input": 0,
+        "output": 0
+      },
+      "status": "deprecated"
     },
-    "minimax/minimax-m1": {
-      "name": "MiniMax M1",
-      "released": "2025-08-05",
-      "updated": "2025-08-05",
-      "open_weights": false,
+    "minimax/minimax-m1-80k": {
+      "name": "MiniMax M1 80K",
+      "family": "minimax",
+      "released": "2025-06-17",
+      "updated": "2025-06-17",
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": false,
-        "structured_output": false,
+        "structured_output": true,
         "temperature": true,
         "input": [
           "text"
@@ -1716,23 +2140,27 @@
         "context": 1000000,
         "output": 80000
       },
-      "reasoning": {
-        "mandatory": false
-      },
+      "reasoning": {},
       "provider_options": {
         "id": "MiniMax-M1",
         "name": "MiniMax M1"
-      }
+      },
+      "price": {
+        "input": 0.57971014,
+        "output": 2.31884058
+      },
+      "status": "deprecated"
     },
     "minimax/minimax-m2": {
       "name": "MiniMax M2",
-      "released": "2025-10-28",
-      "updated": "2025-10-28",
-      "open_weights": false,
+      "family": "minimax",
+      "released": "2025-10-27",
+      "updated": "2025-10-27",
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": false,
-        "structured_output": false,
+        "structured_output": true,
         "temperature": true,
         "input": [
           "text"
@@ -1745,23 +2173,27 @@
         "context": 200000,
         "output": 128000
       },
-      "reasoning": {
-        "mandatory": false
-      },
+      "reasoning": {},
       "provider_options": {
         "id": "minimax/minimax-m2",
         "name": "Minimax/Minimax-M2"
-      }
+      },
+      "price": {
+        "input": 0.30434783,
+        "output": 1.2173913
+      },
+      "status": "deprecated"
     },
     "minimax/minimax-m2.1": {
       "name": "MiniMax M2.1",
+      "family": "minimax",
       "released": "2025-12-23",
       "updated": "2025-12-23",
-      "open_weights": false,
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": false,
-        "structured_output": false,
+        "structured_output": true,
         "temperature": true,
         "input": [
           "text"
@@ -1774,19 +2206,23 @@
         "context": 204800,
         "output": 128000
       },
-      "reasoning": {
-        "mandatory": false
-      },
+      "reasoning": {},
       "provider_options": {
         "id": "minimax/minimax-m2.1",
         "name": "Minimax/Minimax-M2.1"
-      }
+      },
+      "price": {
+        "input": 0.30434783,
+        "output": 1.2173913
+      },
+      "status": "deprecated"
     },
     "minimax/minimax-m2.5": {
       "name": "MiniMax M2.5",
+      "family": "minimax",
       "released": "2026-02-12",
       "updated": "2026-02-12",
-      "open_weights": false,
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": false,
@@ -1803,19 +2239,22 @@
         "context": 204800,
         "output": 128000
       },
-      "reasoning": {
-        "mandatory": false
-      },
+      "reasoning": {},
       "provider_options": {
         "id": "minimax/minimax-m2.5",
         "name": "Minimax/Minimax-M2.5"
+      },
+      "price": {
+        "input": 0.30434783,
+        "output": 1.2173913
       }
     },
     "minimax/minimax-m2.5-highspeed": {
       "name": "MiniMax M2.5 Highspeed",
-      "released": "2026-02-14",
-      "updated": "2026-02-14",
-      "open_weights": false,
+      "family": "minimax",
+      "released": "2026-02-13",
+      "updated": "2026-02-13",
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": false,
@@ -1832,23 +2271,28 @@
         "context": 204800,
         "output": 128000
       },
-      "reasoning": {
-        "mandatory": false
-      },
+      "reasoning": {},
       "provider_options": {
         "id": "minimax/minimax-m2.5-highspeed",
         "name": "Minimax/Minimax-M2.5 Highspeed"
-      }
+      },
+      "price": {
+        "input": 0.60869565,
+        "output": 2.43478261
+      },
+      "status": "deprecated"
     },
     "moonshotai/kimi-k2": {
       "name": "Kimi K2",
-      "released": "2025-08-05",
-      "updated": "2025-08-05",
-      "open_weights": false,
+      "family": "kimi-k2",
+      "released": "2025-07-11",
+      "updated": "2025-07-11",
+      "knowledge": "2024-12-31",
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": false,
-        "structured_output": false,
+        "structured_output": true,
         "temperature": true,
         "input": [
           "text"
@@ -1864,13 +2308,19 @@
       "provider_options": {
         "id": "kimi-k2",
         "name": "Kimi K2"
-      }
+      },
+      "price": {
+        "input": 0.57971014,
+        "output": 2.31884058
+      },
+      "status": "deprecated"
     },
     "moonshotai/kimi-k2-0905": {
       "name": "Kimi K2 0905",
-      "released": "2025-09-08",
-      "updated": "2025-09-08",
-      "open_weights": false,
+      "family": "kimi-k2",
+      "released": "2025-09-05",
+      "updated": "2025-09-05",
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": false,
@@ -1890,17 +2340,20 @@
       "provider_options": {
         "id": "moonshotai/kimi-k2-0905",
         "name": "Kimi K2 0905"
-      }
+      },
+      "status": "deprecated"
     },
     "moonshotai/kimi-k2-thinking": {
       "name": "Kimi K2 Thinking",
-      "released": "2025-11-07",
-      "updated": "2025-11-07",
-      "open_weights": false,
+      "family": "kimi-thinking",
+      "released": "2025-11-06",
+      "updated": "2025-11-06",
+      "knowledge": "2024-08",
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": false,
-        "structured_output": false,
+        "structured_output": true,
         "temperature": true,
         "input": [
           "text"
@@ -1913,20 +2366,28 @@
         "context": 256000,
         "output": 100000
       },
+      "reasoning": {},
       "provider_options": {
         "id": "moonshotai/kimi-k2-thinking",
         "name": "Kimi K2 Thinking"
-      }
+      },
+      "price": {
+        "input": 0.57971014,
+        "output": 2.31884058
+      },
+      "status": "deprecated"
     },
     "moonshotai/kimi-k2.5": {
       "name": "Kimi K2.5",
-      "released": "2026-01-28",
-      "updated": "2026-01-28",
-      "open_weights": false,
+      "family": "kimi-k2",
+      "released": "2026-01-27",
+      "updated": "2026-01-27",
+      "knowledge": "2025-01",
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": true,
-        "structured_output": false,
+        "structured_output": true,
         "temperature": true,
         "input": [
           "text",
@@ -1941,15 +2402,23 @@
         "context": 256000,
         "output": 256000
       },
+      "reasoning": {},
       "provider_options": {
         "id": "moonshotai/kimi-k2.5",
         "name": "Moonshotai/Kimi-K2.5"
-      }
+      },
+      "price": {
+        "input": 0.57971014,
+        "output": 3.04347826
+      },
+      "status": "deprecated"
     },
     "openai/gpt-5": {
       "name": "GPT-5",
-      "released": "2025-09-19",
-      "updated": "2025-09-19",
+      "family": "gpt",
+      "released": "2025-08-07",
+      "updated": "2025-08-07",
+      "knowledge": "2024-09-30",
       "open_weights": false,
       "capabilities": {
         "tools": true,
@@ -1965,17 +2434,21 @@
       },
       "limit": {
         "context": 400000,
+        "input": 272000,
         "output": 128000
       },
       "provider_options": {
         "id": "openai/gpt-5",
         "name": "OpenAI/GPT-5"
-      }
+      },
+      "status": "deprecated"
     },
     "openai/gpt-5.2": {
       "name": "GPT-5.2",
+      "family": "gpt",
       "released": "2025-12-11",
       "updated": "2025-12-11",
+      "knowledge": "2025-08-31",
       "open_weights": false,
       "capabilities": {
         "tools": true,
@@ -1992,19 +2465,23 @@
       },
       "limit": {
         "context": 400000,
+        "input": 272000,
         "output": 128000
       },
       "reasoning": {},
       "provider_options": {
         "id": "openai/gpt-5.2",
         "name": "OpenAI/GPT-5.2"
-      }
+      },
+      "status": "deprecated"
     },
     "openai/gpt-oss-120b": {
       "name": "GPT OSS 120B",
-      "released": "2025-08-06",
-      "updated": "2025-08-06",
-      "open_weights": false,
+      "family": "gpt-oss",
+      "released": "2025-08-05",
+      "updated": "2025-08-05",
+      "knowledge": "2024-06",
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": false,
@@ -2025,13 +2502,16 @@
       "provider_options": {
         "id": "gpt-oss-120b",
         "name": "gpt-oss-120b"
-      }
+      },
+      "status": "deprecated"
     },
     "openai/gpt-oss-20b": {
       "name": "GPT OSS 20B",
-      "released": "2025-08-06",
-      "updated": "2025-08-06",
-      "open_weights": false,
+      "family": "gpt-oss",
+      "released": "2025-08-05",
+      "updated": "2025-08-05",
+      "knowledge": "2024-06",
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": false,
@@ -2052,7 +2532,8 @@
       "provider_options": {
         "id": "gpt-oss-20b",
         "name": "gpt-oss-20b"
-      }
+      },
+      "status": "deprecated"
     },
     "stepfun/gelab-zero-4b-preview": {
       "name": "Gelab Zero 4B Preview",
@@ -2079,21 +2560,23 @@
       "provider_options": {
         "id": "stepfun-ai/gelab-zero-4b-preview",
         "name": "Stepfun-Ai/Gelab Zero 4b Preview"
-      }
+      },
+      "status": "deprecated"
     },
     "stepfun/step-3.5-flash": {
       "name": "Step 3.5 Flash",
-      "released": "2026-02-02",
-      "updated": "2026-02-02",
-      "open_weights": false,
+      "family": "step",
+      "released": "2026-01-29",
+      "updated": "2026-02-13",
+      "knowledge": "2025-01",
+      "open_weights": true,
       "capabilities": {
         "tools": false,
-        "attachments": true,
+        "attachments": false,
         "structured_output": false,
         "temperature": true,
         "input": [
-          "text",
-          "image"
+          "text"
         ],
         "output": [
           "text"
@@ -2101,12 +2584,14 @@
       },
       "limit": {
         "context": 64000,
+        "input": 256000,
         "output": 4096
       },
       "provider_options": {
         "id": "stepfun/step-3.5-flash",
         "name": "Stepfun/Step-3.5 Flash"
-      }
+      },
+      "status": "deprecated"
     },
     "xai/grok-4-fast": {
       "name": "Grok 4 Fast",
@@ -2136,10 +2621,12 @@
       "provider_options": {
         "id": "x-ai/grok-4-fast",
         "name": "x-AI/Grok-4-Fast"
-      }
+      },
+      "status": "deprecated"
     },
     "xai/grok-4-fast-non-reasoning": {
       "name": "Grok 4 Fast Non Reasoning",
+      "family": "grok",
       "released": "2025-12-18",
       "updated": "2025-12-18",
       "open_weights": false,
@@ -2165,10 +2652,12 @@
       "provider_options": {
         "id": "x-ai/grok-4-fast-non-reasoning",
         "name": "X-Ai/Grok-4-Fast-Non-Reasoning"
-      }
+      },
+      "status": "deprecated"
     },
     "xai/grok-4-fast-reasoning": {
       "name": "Grok 4 Fast Reasoning",
+      "family": "grok",
       "released": "2025-12-18",
       "updated": "2025-12-18",
       "open_weights": false,
@@ -2195,7 +2684,8 @@
       "provider_options": {
         "id": "x-ai/grok-4-fast-reasoning",
         "name": "X-Ai/Grok-4-Fast-Reasoning"
-      }
+      },
+      "status": "deprecated"
     },
     "xai/grok-4.1-fast": {
       "name": "Grok 4.1 Fast",
@@ -2223,14 +2713,16 @@
         "id": "x-ai/grok-4.1-fast",
         "name": "x-AI/Grok-4.1-Fast"
       },
+      "status": "deprecated",
       "aliases": [
         "x-ai/grok-4.1-fast-non-reasoning"
       ]
     },
     "xai/grok-4.1-fast-reasoning": {
       "name": "Grok 4.1 Fast Reasoning",
-      "released": "2025-12-19",
-      "updated": "2025-12-19",
+      "family": "grok",
+      "released": "2025-11-19",
+      "updated": "2025-11-19",
       "open_weights": false,
       "capabilities": {
         "tools": true,
@@ -2239,9 +2731,7 @@
         "temperature": true,
         "input": [
           "text",
-          "image",
-          "audio",
-          "video"
+          "image"
         ],
         "output": [
           "text"
@@ -2255,10 +2745,12 @@
       "provider_options": {
         "id": "x-ai/grok-4.1-fast-reasoning",
         "name": "X-Ai/Grok 4.1 Fast Reasoning"
-      }
+      },
+      "status": "deprecated"
     },
     "xai/grok-code-fast-1": {
       "name": "Grok Code Fast 1",
+      "family": "grok",
       "released": "2025-09-02",
       "updated": "2025-09-02",
       "open_weights": false,
@@ -2282,7 +2774,8 @@
       "provider_options": {
         "id": "x-ai/grok-code-fast-1",
         "name": "x-AI/Grok-Code-Fast 1"
-      }
+      },
+      "status": "deprecated"
     },
     "xiaomi/mimo-v2-flash": {
       "name": "MiMo V2 Flash",
@@ -2316,6 +2809,7 @@
         "output": 0.3,
         "cache_read": 0.01
       },
+      "status": "deprecated",
       "aliases": [
         "mimo-v2-flash"
       ]
@@ -2345,13 +2839,16 @@
       "provider_options": {
         "id": "z-ai/autoglm-phone-9b",
         "name": "Z-Ai/Autoglm Phone 9b"
-      }
+      },
+      "status": "deprecated"
     },
     "zhipuai/glm-4.5": {
       "name": "GLM 4.5",
-      "released": "2025-08-05",
-      "updated": "2025-08-05",
-      "open_weights": false,
+      "family": "glm",
+      "released": "2025-07-28",
+      "updated": "2025-07-28",
+      "knowledge": "2025-04",
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": false,
@@ -2374,13 +2871,20 @@
       "provider_options": {
         "id": "glm-4.5",
         "name": "GLM 4.5"
-      }
+      },
+      "price": {
+        "input": 0.57971014,
+        "output": 2.31884058
+      },
+      "status": "deprecated"
     },
     "zhipuai/glm-4.5-air": {
       "name": "GLM 4.5 Air",
-      "released": "2025-08-05",
-      "updated": "2025-08-05",
-      "open_weights": false,
+      "family": "glm-air",
+      "released": "2025-07-28",
+      "updated": "2025-07-28",
+      "knowledge": "2025-04",
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": false,
@@ -2403,17 +2907,20 @@
       "provider_options": {
         "id": "glm-4.5-air",
         "name": "GLM 4.5 Air"
-      }
+      },
+      "status": "deprecated"
     },
     "zhipuai/glm-4.6": {
       "name": "GLM 4.6",
-      "released": "2025-10-11",
-      "updated": "2025-10-11",
-      "open_weights": false,
+      "family": "glm",
+      "released": "2025-09-30",
+      "updated": "2025-09-30",
+      "knowledge": "2025-04",
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": false,
-        "structured_output": false,
+        "structured_output": true,
         "temperature": true,
         "input": [
           "text"
@@ -2426,20 +2933,30 @@
         "context": 200000,
         "output": 200000
       },
+      "reasoning": {
+        "mandatory": false
+      },
       "provider_options": {
         "id": "z-ai/glm-4.6",
         "name": "Z-AI/GLM 4.6"
-      }
+      },
+      "price": {
+        "input": 1.04347826,
+        "output": 1.82608696
+      },
+      "status": "deprecated"
     },
     "zhipuai/glm-4.7": {
       "name": "GLM 4.7",
-      "released": "2025-12-23",
-      "updated": "2025-12-23",
-      "open_weights": false,
+      "family": "glm",
+      "released": "2025-12-22",
+      "updated": "2025-12-22",
+      "knowledge": "2025-04",
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": false,
-        "structured_output": false,
+        "structured_output": true,
         "temperature": true,
         "input": [
           "text"
@@ -2458,17 +2975,23 @@
       "provider_options": {
         "id": "z-ai/glm-4.7",
         "name": "Z-Ai/GLM 4.7"
-      }
+      },
+      "price": {
+        "input": 0.45913043,
+        "output": 1.81565217
+      },
+      "status": "deprecated"
     },
     "zhipuai/glm-5": {
       "name": "GLM 5",
+      "family": "glm",
       "released": "2026-02-12",
       "updated": "2026-02-12",
-      "open_weights": false,
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": false,
-        "structured_output": false,
+        "structured_output": true,
         "temperature": true,
         "input": [
           "text"
@@ -2487,6 +3010,17 @@
       "provider_options": {
         "id": "z-ai/glm-5",
         "name": "Z-Ai/GLM 5"
+      },
+      "price": {
+        "input": 0.57971014,
+        "output": 2.60869565,
+        "tiers": [
+          {
+            "above": 32000,
+            "input": 0.86956522,
+            "output": 3.1884058
+          }
+        ]
       }
     }
   }
