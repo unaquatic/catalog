@@ -42,18 +42,23 @@ type Head struct {
 	Variant   *VariantNames         `json:"variant,omitempty"`
 }
 
-// ReadDir reads the catalog in catalog directory dir, which must be of
-// format Version, as Decode reads one document. It fails on a lab's file
-// that holds another lab's model, and on a provider's file that holds
-// another provider.
+// ReadDir reads the catalog in catalog directory dir, as ReadFS reads one.
 func ReadDir(dir string) (*Catalog, error) {
 	root, err := os.OpenRoot(dir)
 	if err != nil {
 		return nil, fmt.Errorf("gateway: %w", err)
 	}
 	defer root.Close()
+	return ReadFS(root.FS())
+}
+
+// ReadFS reads the catalog in fsys, a catalog directory, such as one a
+// program embeds, which must be of format Version, as Decode reads one
+// document. It fails on a lab's file that holds another lab's model, and
+// on a provider's file that holds another provider.
+func ReadFS(fsys fs.FS) (*Catalog, error) {
 	var h Head
-	if err := readJSON(root, HeadFile, &h); err != nil {
+	if err := readJSON(fsys, HeadFile, &h); err != nil {
 		return nil, err
 	}
 	if h.Version != Version {
@@ -62,33 +67,33 @@ func ReadDir(dir string) (*Catalog, error) {
 	c := &Catalog{Schema: h.Schema, Version: h.Version, Source: h.Source, Generated: h.Generated,
 		Spellings: h.Spellings, Labs: h.Labs, Families: h.Families, Efforts: h.Efforts, Variant: h.Variant,
 		Models: map[ModelID]Model{}, Providers: map[ProviderID]Provider{}}
-	labs, err := jsonFiles(root, ModelsDir)
+	labs, err := jsonFiles(fsys, ModelsDir)
 	if err != nil {
 		return nil, err
 	}
 	for _, lab := range labs {
 		var models map[ModelID]Model
-		if err := readJSON(root, filepath.Join(ModelsDir, lab+".json"), &models); err != nil {
+		if err := readJSON(fsys, ModelsDir+"/"+lab+".json", &models); err != nil {
 			return nil, err
 		}
 		for id, m := range models {
 			if id.Lab() != ProviderID(lab) {
-				return nil, fmt.Errorf("gateway: %s holds %s, a model of another lab", filepath.Join(ModelsDir, lab+".json"), id)
+				return nil, fmt.Errorf("gateway: %s holds %s, a model of another lab", ModelsDir+"/"+lab+".json", id)
 			}
 			c.Models[id] = m
 		}
 	}
-	providers, err := jsonFiles(root, ProvidersDir)
+	providers, err := jsonFiles(fsys, ProvidersDir)
 	if err != nil {
 		return nil, err
 	}
 	for _, id := range providers {
 		var p Provider
-		if err := readJSON(root, filepath.Join(ProvidersDir, id+".json"), &p); err != nil {
+		if err := readJSON(fsys, ProvidersDir+"/"+id+".json", &p); err != nil {
 			return nil, err
 		}
 		if p.ID != ProviderID(id) {
-			return nil, fmt.Errorf("gateway: %s holds provider %s", filepath.Join(ProvidersDir, id+".json"), p.ID)
+			return nil, fmt.Errorf("gateway: %s holds provider %s", ProvidersDir+"/"+id+".json", p.ID)
 		}
 		c.Providers[p.ID] = p
 	}
@@ -133,9 +138,9 @@ func (c *Catalog) WriteDir(dir string) error {
 	return errors.Join(errs...)
 }
 
-// readJSON decodes the JSON file name of root into v.
-func readJSON(root *os.Root, name string, v any) error {
-	data, err := root.ReadFile(name)
+// readJSON decodes the JSON file name of fsys into v.
+func readJSON(fsys fs.FS, name string, v any) error {
+	data, err := fs.ReadFile(fsys, name)
 	if err != nil {
 		return fmt.Errorf("gateway: %w", err)
 	}
@@ -166,13 +171,13 @@ func writeNamed(root *os.Root, dir, id string, v any) error {
 	if id == "" || id == "." || id == ".." || strings.ContainsAny(id, `/\`) {
 		return fmt.Errorf("gateway: %q is no name for a file of %s", id, dir)
 	}
-	return writeJSON(root, filepath.Join(dir, id+".json"), v)
+	return writeJSON(root, dir+"/"+id+".json", v)
 }
 
-// jsonFiles returns the names of the JSON files of dir in root, without
+// jsonFiles returns the names of the JSON files of dir in fsys, without
 // their extension, in order; none when there is no dir.
-func jsonFiles(root *os.Root, dir string) ([]string, error) {
-	entries, err := fs.ReadDir(root.FS(), dir)
+func jsonFiles(fsys fs.FS, dir string) ([]string, error) {
+	entries, err := fs.ReadDir(fsys, dir)
 	if errors.Is(err, fs.ErrNotExist) {
 		return nil, nil
 	}
@@ -191,14 +196,14 @@ func jsonFiles(root *os.Root, dir string) ([]string, error) {
 // removeStale removes the JSON files of dir in root whose names keep does
 // not hold.
 func removeStale[T ~string](root *os.Root, dir string, keep []T) error {
-	names, err := jsonFiles(root, dir)
+	names, err := jsonFiles(root.FS(), dir)
 	if err != nil {
 		return err
 	}
 	var errs []error
 	for _, name := range names {
 		if !slices.Contains(keep, T(name)) {
-			if err := root.Remove(filepath.Join(dir, name+".json")); err != nil {
+			if err := root.Remove(dir + "/" + name + ".json"); err != nil {
 				errs = append(errs, fmt.Errorf("gateway: %w", err))
 			}
 		}
