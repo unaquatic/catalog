@@ -45,7 +45,7 @@ var rootCmd = &cmdline.Command[cmdline.NoOptions]{
 	Name:     "catalog",
 	Short:    "Build and serve flow's model catalog",
 	Banner:   "Build flow's model catalog from models.dev, and serve it with a page that browses it.",
-	Commands: []cmdline.Node{buildCmd, updateCmd, remapCmd, applyCmd, serveCmd, snapshotCmd},
+	Commands: []cmdline.Node{buildCmd, updateCmd, remapCmd, applyCmd, joinCmd, serveCmd, snapshotCmd},
 }
 
 // SourceOptions choose the models.dev catalog to build from, and what to
@@ -304,7 +304,7 @@ var serveCmd = &cmdline.Command[ServeOptions]{
 	Short: "Serve the catalog and a page that browses it over HTTP",
 	Flags: func(fs *flag.FlagSet, o *ServeOptions) {
 		BindSourceFlags(fs, &o.SourceOptions)
-		fs.StringVar(&o.Catalog, "catalog", "", "Serve the catalog in `file`, which build wrote, instead of building one")
+		fs.StringVar(&o.Catalog, "catalog", "", "Serve the catalog at `path`, a catalog directory, as data/catalog, or a .json file, instead of building one")
 		fs.StringVar(&o.Host, "host", "127.0.0.1", "Listen on `address`")
 		fs.IntVar(&o.Port, "port", 4100, "Port to listen on")
 		fs.DurationVar(&o.Refresh, "refresh", 0, "Load the catalog again every `interval`, such as 1h; 0 never does")

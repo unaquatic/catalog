@@ -25,8 +25,9 @@ go get github.com/unaquatic/catalog
 ## Usage
 
 ```sh
-go generate ./data/                               # apply models.dev's changes to our catalog, data/catalog.json
-go run ./cmd/catalog serve -catalog data/catalog.json   # serve our catalog, and browse it at http://localhost:4100
+go generate ./data/                               # apply models.dev's changes to our catalog, data/catalog
+go run ./cmd/catalog serve -catalog data/catalog  # serve our catalog, and browse it at http://localhost:4100
+go run ./cmd/catalog join -o catalog.json         # write our catalog as one catalog.json
 go run ./cmd/catalog remap -in data/models-dev.json   # write remap.json: how the current mapping differs from our catalog
 go run ./cmd/catalog apply -patch remap.json      # apply a reviewed patch to our catalog
 go run ./cmd/catalog build -o catalog.json        # map models.dev alone, as a catalog of its own
@@ -36,7 +37,7 @@ go run ./cmd/catalog snapshot -providers anthropic,openai -o snapshot.json   # t
 
 ## Hosted catalog
 
-Our catalog, `data/catalog.json`, is its own source of truth: models.dev is where its data comes from, not what it is. Every six hours CI applies what models.dev changed since its last version to the catalog, as a patch, keeping what the catalog holds of its own, and opens a pull request of it to review and squash-merge; a merge that changes the catalog publishes a `data-YYYY.MM.DD.N` release with the catalog, models.dev's catalog.json and the patch, and deploys the browser and `catalog.json` to:
+Our catalog, `data/catalog`, is its own source of truth, a file per lab's models and per provider: models.dev is where its data comes from, not what it is. Every six hours CI applies what models.dev changed since its last version to the catalog, as a patch, keeping what the catalog holds of its own, and opens a pull request of it to review and squash-merge; a merge that changes the catalog publishes a `data-YYYY.MM.DD.N` release with the catalog, models.dev's catalog.json and the patch, and deploys the browser and `catalog.json` to:
 
 - https://aquatic.dev/catalog/ — what flow reads (`gateway.DefaultSource`)
 - https://unaquatic.github.io/catalog/ — a mirror
@@ -48,8 +49,8 @@ Our catalog, `data/catalog.json`, is its own source of truth: models.dev is wher
 - `gateway` — the catalog format, the mapping from models.dev to it and its rules (`gateway/rules.json`), the HTTP handler, and the `Store` that clients such as flow read it with.
 - `gateway/gatewaytest` — catalogs for tests, built from models.dev api.json documents.
 - `modelsdev` — models.dev's catalog.json, and the cache and fetcher of downloads.
-- `cmd/catalog` — applies models.dev's changes to the catalog (`update`), remaps and patches it (`remap`, `apply`), builds a catalog from models.dev alone, serves a catalog with a page that browses it, and writes snapshots.
-- `data` — our catalog (`catalog.json`), models.dev's catalog.json it last took changes from (`models-dev.json`), and the patch of those changes (`patch.json`).
+- `cmd/catalog` — applies models.dev's changes to the catalog (`update`), remaps and patches it (`remap`, `apply`), joins it into one document (`join`), builds a catalog from models.dev alone, serves a catalog with a page that browses it, and writes snapshots.
+- `data` — our catalog (`catalog/`: `catalog.json`, `models/<lab>.json`, `providers/<id>.json`), models.dev's catalog.json it last took changes from (`models-dev.json`), and the patch of those changes (`patch.json`).
 
 ## License
 

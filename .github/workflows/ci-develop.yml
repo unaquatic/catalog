@@ -2,7 +2,7 @@ name: CI Develop
 
 run-name: Deploy ${{ github.sha }}
 
-# A push to main that changes data/catalog.json, as a squash-merged refresh
+# A push to main that changes data/catalog, as a squash-merged refresh
 # pull request does, releases the catalog, which deploys it; any other push
 # deploys the page and the committed catalog as they are.
 on:
@@ -36,7 +36,7 @@ jobs:
         env:
           BEFORE: ${{ github.event.before }}
         run: |
-          if git cat-file -e "$BEFORE^{commit}" 2>/dev/null && git diff --quiet "$BEFORE" HEAD -- data/catalog.json; then
+          if git cat-file -e "$BEFORE^{commit}" 2>/dev/null && git diff --quiet "$BEFORE" HEAD -- data/catalog; then
             echo "catalog=false" >> "$GITHUB_OUTPUT"
           else
             echo "catalog=true" >> "$GITHUB_OUTPUT"

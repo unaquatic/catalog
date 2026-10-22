@@ -3,15 +3,16 @@
 # shape of the repository's pull requests: Summary, Verification and Notes
 # for reviewers.
 #
-#   refresh-pr-body.sh PREVIOUS_CATALOG [PATCH] [CATALOG] > body.md
+#   refresh-pr-body.sh PREVIOUS_CATALOG PATCH CATALOG > body.md
 #
-# PREVIOUS_CATALOG is data/catalog.json before go generate ./data/; PATCH
-# and CATALOG default to data/patch.json and data/catalog.json after it.
+# PREVIOUS_CATALOG and CATALOG are the catalog before and after go generate
+# ./data/, each joined into one catalog.json, as catalog join writes it;
+# PATCH is data/patch.json after it.
 set -euo pipefail
 
 prev=$1
-patch=${2:-data/patch.json}
-catalog=${3:-data/catalog.json}
+patch=$2
+catalog=$3
 
 # count OP prints how many of the patch's operations are OP.
 count() { jq --arg op "$1" '[.ops[] | select(.op == $op)] | length' "$patch"; }
@@ -44,7 +45,7 @@ providers_after=$(jq '.providers | length' "$catalog")
 
 echo "## Summary"
 echo
-echo "- Apply models.dev's changes since \`data/models-dev.json\` to \`data/catalog.json\`: $(count add) added, $(count replace) replaced, $(count remove) removed."
+echo "- Apply models.dev's changes since \`data/models-dev.json\` to \`data/catalog\`: $(count add) added, $(count replace) replaced, $(count remove) removed."
 if [ "$conflicts" -gt 0 ]; then
 	noun=conflicts
 	[ "$conflicts" -ne 1 ] || noun=conflict
@@ -64,7 +65,7 @@ echo
 echo "## Notes for reviewers"
 echo
 if [ "$conflicts" -gt 0 ]; then
-	echo "- Review the conflicts in \`data/patch.json\` first. Ours was kept at each; to take models.dev's value, edit \`data/catalog.json\` on \`main\`."
+	echo "- Review the conflicts in \`data/patch.json\` first. Ours was kept at each; to take models.dev's value, edit \`data/catalog\` on \`main\`."
 else
 	echo "- No conflicts: no value models.dev changed was one we changed too."
 fi

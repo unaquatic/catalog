@@ -4,7 +4,7 @@ run-name: Refresh models.dev data
 
 # Refresh downloads models.dev's catalog.json every six hours and applies
 # what changed since the version data/models-dev.json holds to our catalog,
-# data/catalog.json, as go generate ./data/ does: our catalog keeps what it
+# data/catalog, as go generate ./data/ does: our catalog keeps what it
 # holds of its own, and what it changed that models.dev changed too, which
 # data/patch.json lists as conflicts. When anything in data/ changed, it
 # opens a pull request of it from the branch data/refresh, or updates the
@@ -48,13 +48,16 @@ jobs:
         uses: ./.github/actions/setup
 
       - name: Keep Previous Catalog
-        run: cp data/catalog.json "$RUNNER_TEMP/previous.json"
+        run: go run ./cmd/catalog join -o "$RUNNER_TEMP/previous.json"
 
       - name: Fetch Data
         run: go generate ./data/
 
       - name: Test
         run: go test ./...
+
+      - name: Join Catalog
+        run: go run ./cmd/catalog join -o "$RUNNER_TEMP/catalog.json"
 
       - name: Detect Change
         id: change
@@ -76,11 +79,11 @@ jobs:
           prev="$RUNNER_TEMP/previous.json"
           for key in models providers; do
             old=$(jq ".$key | length" "$prev")
-            new=$(jq ".$key | length" data/catalog.json)
+            new=$(jq ".$key | length" "$RUNNER_TEMP/catalog.json")
             echo "$key: $old -> $new"
             [ $(( new * 10 )) -ge $(( old * 9 )) ] || { echo "$key fell from $old to $new" >&2; exit 1; }
           done
-          [ "$(jq .version "$prev")" = "$(jq .version data/catalog.json)" ] || echo "::warning::catalog format version changed"
+          [ "$(jq .version "$prev")" = "$(jq .version "$RUNNER_TEMP/catalog.json")" ] || echo "::warning::catalog format version changed"
 
       # The commit keeps the repository's commit style, and the squash merge
       # takes its message; the pull request's title is its subject, and its
@@ -94,11 +97,11 @@ jobs:
           counts=$(jq -r '[(.ops | map(select(.op == "add")) | length), (.ops | map(select(.op == "replace")) | length), (.ops | map(select(.op == "remove")) | length), (.conflicts // [] | length)] | @tsv' data/patch.json)
           read -r added replaced removed conflicts <<< "$counts"
           upstream=$(jq '.providers | length' data/models-dev.json)
-          summary=$(jq -r '"\(.models | length) models and \(.providers | length) providers"' data/catalog.json)
+          summary=$(jq -r '"\(.models | length) models and \(.providers | length) providers"' "$RUNNER_TEMP/catalog.json")
           title="chore(data): apply models.dev's changes to the catalog"
           {
             echo "- Update data/models-dev.json from models.dev, of $upstream providers."
-            echo "- Apply its changes to data/catalog.json, now of $summary: $added added, $replaced replaced, $removed removed."
+            echo "- Apply its changes to data/catalog, now of $summary: $added added, $replaced replaced, $removed removed."
             echo "- Keep our own value at $conflicts conflicts, which data/patch.json lists."
           } > "$RUNNER_TEMP/body.md"
 
@@ -113,7 +116,7 @@ jobs:
           EOF
           git push -q -f origin "$BRANCH"
 
-          .github/scripts/refresh-pr-body.sh "$RUNNER_TEMP/previous.json" > "$RUNNER_TEMP/pr.md"
+          .github/scripts/refresh-pr-body.sh "$RUNNER_TEMP/previous.json" data/patch.json "$RUNNER_TEMP/catalog.json" > "$RUNNER_TEMP/pr.md"
           pr=$(gh pr list --head "$BRANCH" --state open --json number --jq '.[0].number')
           if [ -n "$pr" ]; then
             gh pr edit "$pr" --title "$title" --body-file "$RUNNER_TEMP/pr.md"

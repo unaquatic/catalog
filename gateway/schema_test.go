@@ -17,7 +17,7 @@ const datePattern = `^\d{4}-\d{2}(-\d{2})?$`
 // TestSchema checks that catalog.schema.json is the schema of Catalog's
 // JSON, described by catalog.schema.descriptions.json, which must describe
 // every definition and property and nothing else; and that the golden
-// catalog and the committed data/catalog.json keep to it. -update rewrites
+// catalog and the committed data/catalog keep to it. -update rewrites
 // the schema.
 func TestSchema(t *testing.T) {
 	var descs jsonschema.Descriptions
@@ -58,8 +58,19 @@ func TestSchema(t *testing.T) {
 		t.Error("catalog.schema.json is out of date: go test ./gateway/ -run TestSchema -update")
 	}
 
-	for _, name := range []string{"testdata/catalog.golden.json", "../data/catalog.json"} {
-		doc, err := os.ReadFile(name)
+	ours, err := ReadDir("../data/catalog")
+	if err != nil {
+		t.Fatal(err)
+	}
+	joined, err := Encode(ours)
+	if err != nil {
+		t.Fatal(err)
+	}
+	for name, read := range map[string]func() ([]byte, error){
+		"testdata/catalog.golden.json": func() ([]byte, error) { return os.ReadFile("testdata/catalog.golden.json") },
+		"../data/catalog":              func() ([]byte, error) { return joined, nil },
+	} {
+		doc, err := read()
 		if err != nil {
 			t.Fatal(err)
 		}

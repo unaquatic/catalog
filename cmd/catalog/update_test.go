@@ -224,3 +224,45 @@ func TestUpdateAgain(t *testing.T) {
 		t.Errorf("patch file = %q, want it left be when models.dev changed nothing", data)
 	}
 }
+
+// TestUpdateDir checks that update reads and writes a catalog directory as
+// it does one document, and that join writes it back as that document.
+func TestUpdateDir(t *testing.T) {
+	dir := t.ArtifactDir()
+	theirs := edited(t, dir, "theirs.json", func(doc map[string]any) {
+		listing(doc, "anthropic", "claude-opus-4-8")["cost"].(map[string]any)["input"] = 4.0
+	})
+	file, catalog := filepath.Join(dir, "catalog.json"), filepath.Join(dir, "catalog")
+	if err := Build(t.Context(), BuildOptions{SourceOptions: SourceOptions{In: fixture, Providers: "all", Infer: true}, Out: file}, io.Discard, io.Discard); err != nil {
+		t.Fatal(err)
+	}
+	c, err := LoadCatalog(file)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if err := SaveCatalog(catalog, c); err != nil {
+		t.Fatal(err)
+	}
+	o := UpdateOptions{SourceOptions: SourceOptions{In: theirs, Providers: "all", Infer: true}, Base: fixture, Catalog: catalog}
+	if err := Update(t.Context(), o, time.Now(), io.Discard); err != nil {
+		t.Fatal(err)
+	}
+	got, err := LoadCatalog(catalog)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if p := got.Providers["anthropic"].Models["anthropic/claude-opus-4-8"].Price; p == nil || p.Input != 4 {
+		t.Errorf("opus 4.8 price = %+v, want models.dev's new input 4", p)
+	}
+	var joined strings.Builder
+	if err := Join(JoinOptions{Catalog: catalog}, &joined); err != nil {
+		t.Fatal(err)
+	}
+	want, err := gateway.Encode(got)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if joined.String() != string(want) {
+		t.Error("join wrote other than the catalog the directory holds")
+	}
+}

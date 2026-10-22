@@ -11,6 +11,7 @@ import (
 	"io/fs"
 	"os"
 	"slices"
+	"strings"
 	"time"
 
 	"github.com/unaquatic/catalog/gateway"
@@ -75,7 +76,7 @@ var updateCmd = &cmdline.Command[UpdateOptions]{
 	Flags: func(fs *flag.FlagSet, o *UpdateOptions) {
 		BindSourceFlags(fs, &o.SourceOptions)
 		fs.StringVar(&o.Base, "base", "data/models-dev.json", "Read models.dev's catalog.json that the catalog last took changes from, from `file`")
-		fs.StringVar(&o.Catalog, "catalog", "data/catalog.json", "Read our catalog from `file`, and write it back changed")
+		fs.StringVar(&o.Catalog, "catalog", "data/catalog", "Read our catalog from `path`, a catalog directory or a .json file, and write it back changed")
 		fs.StringVar(&o.Patch, "patch", "", "Write the patch to `file` too")
 		fs.StringVar(&o.Upstream, "save-upstream", "", "Write models.dev's new catalog.json to `file`, indented with its keys sorted")
 	},
@@ -158,7 +159,7 @@ var remapCmd = &cmdline.Command[RemapOptions]{
 	Short: "Write how the current mapping of models.dev differs from our catalog, as a patch to review and apply",
 	Flags: func(fs *flag.FlagSet, o *RemapOptions) {
 		BindSourceFlags(fs, &o.SourceOptions)
-		fs.StringVar(&o.Catalog, "catalog", "data/catalog.json", "Read our catalog from `file`")
+		fs.StringVar(&o.Catalog, "catalog", "data/catalog", "Read our catalog from `path`, a catalog directory or a .json file")
 		const out = "Write the patch to `file`"
 		fs.StringVar(&o.Patch, "out", "remap.json", out)
 		fs.StringVar(&o.Patch, "o", "remap.json", out)
@@ -207,7 +208,7 @@ var applyCmd = &cmdline.Command[ApplyOptions]{
 	Name:  "apply",
 	Short: "Apply a patch, as update and remap write them, to our catalog",
 	Flags: func(fs *flag.FlagSet, o *ApplyOptions) {
-		fs.StringVar(&o.Catalog, "catalog", "data/catalog.json", "Read our catalog from `file`, and write it back changed")
+		fs.StringVar(&o.Catalog, "catalog", "data/catalog", "Read our catalog from `path`, a catalog directory or a .json file, and write it back changed")
 		fs.StringVar(&o.Patch, "patch", "remap.json", "Apply the patch in `file`")
 	},
 	Run: func(_ context.Context, o ApplyOptions, _ []string) error {
@@ -241,21 +242,44 @@ func Apply(o ApplyOptions, now time.Time, stderr io.Writer) error {
 	return finish("", p, stderr)
 }
 
-// readCatalog reads our catalog from file, or returns fallback when there is
-// none and fallback is not nil.
-func readCatalog(file string, fallback *gateway.Catalog) (*gateway.Catalog, error) {
-	data, err := os.ReadFile(file)
+// readCatalog reads our catalog from path, as LoadCatalog does, or returns
+// fallback when there is none and fallback is not nil.
+func readCatalog(path string, fallback *gateway.Catalog) (*gateway.Catalog, error) {
+	c, err := LoadCatalog(path)
 	if errors.Is(err, fs.ErrNotExist) && fallback != nil {
 		return fallback, nil
 	}
+	return c, err
+}
+
+// LoadCatalog reads the catalog at path: one document, from a path that
+// ends in .json, or else a catalog directory, as gateway.ReadDir reads one.
+func LoadCatalog(path string) (*gateway.Catalog, error) {
+	if !strings.HasSuffix(path, ".json") {
+		return gateway.ReadDir(path)
+	}
+	data, err := os.ReadFile(path)
 	if err != nil {
 		return nil, err
 	}
 	c, err := gateway.Decode(data)
 	if err != nil {
-		return nil, fmt.Errorf("%s: %w", file, err)
+		return nil, fmt.Errorf("%s: %w", path, err)
 	}
 	return c, nil
+}
+
+// SaveCatalog writes c to path as LoadCatalog reads it: as one document to
+// a path that ends in .json, or else as a catalog directory.
+func SaveCatalog(path string, c *gateway.Catalog) error {
+	if !strings.HasSuffix(path, ".json") {
+		return c.WriteDir(path)
+	}
+	data, err := gateway.Encode(c)
+	if err != nil {
+		return err
+	}
+	return os.WriteFile(path, data, 0o644)
 }
 
 // doc is a catalog as merge reads documents.
@@ -310,11 +334,8 @@ func applyAndWrite(file string, ours *gateway.Catalog, p *Patch, source string, 
 	}
 	if !bytes.Equal(out, before) {
 		c.Generated = now.UTC().Truncate(time.Second)
-		if out, err = gateway.Encode(c); err != nil {
-			return err
-		}
 	}
-	return os.WriteFile(file, out, 0o644)
+	return SaveCatalog(file, c)
 }
 
 // finish writes p to file, when one is named, indented, and reports it on
@@ -338,4 +359,44 @@ func finish(file string, p Patch, stderr io.Writer) error {
 		fmt.Fprintf(stderr, "conflict: %s %s: %s\n", c.Op.Op, c.Path, c.Why)
 	}
 	return nil
+}
+
+// JoinOptions are the flags of the join command.
+type JoinOptions struct {
+	// Catalog is our catalog.
+	Catalog string
+	// Out is the file to write, or "" for standard output.
+	Out string
+}
+
+var joinCmd = &cmdline.Command[JoinOptions]{
+	Name:  "join",
+	Short: "Write our catalog, a catalog directory, as one catalog.json",
+	Flags: func(fs *flag.FlagSet, o *JoinOptions) {
+		fs.StringVar(&o.Catalog, "catalog", "data/catalog", "Read our catalog from `path`, a catalog directory or a .json file")
+		const out = "Write the catalog to `file` instead of standard output"
+		fs.StringVar(&o.Out, "out", "", out)
+		fs.StringVar(&o.Out, "o", "", out)
+	},
+	Run: func(_ context.Context, o JoinOptions, _ []string) error {
+		return Join(o, os.Stdout)
+	},
+}
+
+// Join writes our catalog, o.Catalog, as one catalog document, as the
+// catalog's site serves it, to o.Out or to stdout.
+func Join(o JoinOptions, stdout io.Writer) error {
+	c, err := LoadCatalog(o.Catalog)
+	if err != nil {
+		return err
+	}
+	data, err := gateway.Encode(c)
+	if err != nil {
+		return err
+	}
+	if o.Out == "" {
+		_, err = stdout.Write(data)
+		return err
+	}
+	return os.WriteFile(o.Out, data, 0o644)
 }

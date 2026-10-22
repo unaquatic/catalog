@@ -3,8 +3,9 @@ name: Release
 run-name: Release ${{ inputs.ref || github.sha }}
 
 # Release tags a commit's data as data-YYYY.MM.DD.N, a name Go ignores, so
-# that data releases add no module versions; attaches data/catalog.json and
-# data/models-dev.json to a GitHub release; and deploys both sites. A commit
+# that data releases add no module versions; attaches the catalog, joined
+# into one catalog.json, data/models-dev.json and data/patch.json to a
+# GitHub release; and deploys both sites. A commit
 # released before is deployed again, not tagged again.
 on:
   workflow_dispatch:
@@ -39,6 +40,9 @@ jobs:
           ref: ${{ inputs.ref }}
           fetch-depth: 0
 
+      - name: Setup
+        uses: ./.github/actions/setup
+
       - name: Tag And Release
         id: tag
         env:
@@ -53,16 +57,28 @@ jobs:
           day=$(date -u +%Y.%m.%d)
           tag="data-$day.$(( $(git tag --list "data-$day.*" | wc -l) + 1 ))"
           prev=$(git describe --tags --abbrev=0 --match 'data-*' HEAD 2>/dev/null || true)
+          catalog="$RUNNER_TEMP/catalog.json"
+          go run ./cmd/catalog join -catalog data/catalog -o "$catalog"
+
+          # model_ids prints the model IDs of the catalog at commit $1, split
+          # into data/catalog or, before it was, one data/catalog.json.
+          model_ids() {
+            if git cat-file -e "$1:data/catalog/catalog.json" 2>/dev/null; then
+              git archive "$1" data/catalog/models | tar -xO | jq -r 'keys[]'
+            else
+              git show "$1:data/catalog.json" | jq -r '.models | keys[]'
+            fi
+          }
 
           {
             jq -r '"Built from \(.source) at \(.generated).\n",
-              "- \(.models | length) models, \(.providers | length) providers, \([.providers[].models | length] | add) offerings"' data/catalog.json
+              "- \(.models | length) models, \(.providers | length) providers, \([.providers[].models | length] | add) offerings"' "$catalog"
             if [ -f data/patch.json ]; then
               jq -r '"- models.dev changed: \([.ops[] | select(.op == "add")] | length) added, \([.ops[] | select(.op == "replace")] | length) replaced, \([.ops[] | select(.op == "remove")] | length) removed; \(.conflicts // [] | length) conflicts kept ours"' data/patch.json
             fi
             if [ -n "$prev" ]; then
-              jq -r '.models | keys[]' data/catalog.json | sort > new.txt
-              git show "$prev:data/catalog.json" | jq -r '.models | keys[]' | sort > old.txt
+              jq -r '.models | keys[]' "$catalog" | sort > new.txt
+              model_ids "$prev" | sort > old.txt
               added=$(comm -13 old.txt new.txt)
               removed=$(comm -23 old.txt new.txt)
               echo "- $(grep -c . <<< "$added") models added and $(grep -c . <<< "$removed") removed since $prev"
@@ -71,7 +87,7 @@ jobs:
             fi
           } > notes.md
 
-          assets=(data/catalog.json data/models-dev.json)
+          assets=("$catalog" data/models-dev.json)
           [ ! -f data/patch.json ] || assets+=(data/patch.json)
           gh release create "$tag" "${assets[@]}" \
             --target "$sha" --title "$tag" --notes-file notes.md --latest

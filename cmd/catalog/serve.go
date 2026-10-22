@@ -8,7 +8,6 @@ import (
 	"log/slog"
 	"net"
 	"net/http"
-	"os"
 	"strconv"
 	"sync"
 	"time"
@@ -25,15 +24,7 @@ type Loader func(ctx context.Context) (*gateway.Catalog, error)
 func LoaderFor(o ServeOptions) Loader {
 	if o.Catalog != "" {
 		return func(context.Context) (*gateway.Catalog, error) {
-			data, err := os.ReadFile(o.Catalog)
-			if err != nil {
-				return nil, err
-			}
-			c, err := gateway.Decode(data)
-			if err != nil {
-				return nil, fmt.Errorf("%s: %w", o.Catalog, err)
-			}
-			return c, nil
+			return LoadCatalog(o.Catalog)
 		}
 	}
 	return func(ctx context.Context) (*gateway.Catalog, error) {
