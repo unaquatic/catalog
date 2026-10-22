@@ -17,7 +17,7 @@
     "vispark/vision-large": {
       "name": "Vision Large",
       "released": "2024-05-15",
-      "updated": "2026-09",
+      "updated": "2026-09-01",
       "open_weights": false,
       "capabilities": {
         "tools": true,
@@ -52,7 +52,7 @@
     "vispark/vision-medium": {
       "name": "Vision Medium",
       "released": "2024-05-15",
-      "updated": "2026-09",
+      "updated": "2026-09-01",
       "open_weights": false,
       "capabilities": {
         "tools": true,
@@ -87,7 +87,7 @@
     "vispark/vision-small": {
       "name": "Vision Small",
       "released": "2024-05-15",
-      "updated": "2026-09",
+      "updated": "2026-09-01",
       "open_weights": false,
       "capabilities": {
         "tools": true,

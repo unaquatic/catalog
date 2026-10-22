@@ -17,8 +17,8 @@
     "alibaba/qwen3-235b-a22b-fp8": {
       "name": "Qwen3 235B A22B FP8",
       "family": "qwen",
-      "released": "2026-01",
-      "updated": "2026-01",
+      "released": "2025-04-29",
+      "updated": "2026-01-01",
       "open_weights": true,
       "capabilities": {
         "tools": false,
@@ -49,8 +49,8 @@
     "alibaba/qwen3-235b-a22b-instruct-2507": {
       "name": "Qwen3 235B A22B Instruct 2507",
       "family": "qwen",
-      "released": "2026-01",
-      "updated": "2026-01",
+      "released": "2025-07-21",
+      "updated": "2026-01-01",
       "open_weights": true,
       "capabilities": {
         "tools": true,
@@ -80,8 +80,8 @@
     "alibaba/qwen3-235b-a22b-thinking-2507": {
       "name": "Qwen3 235B A22B Thinking 2507",
       "family": "qwen",
-      "released": "2026-01",
-      "updated": "2026-01",
+      "released": "2025-07-25",
+      "updated": "2026-01-01",
       "open_weights": true,
       "capabilities": {
         "tools": true,
@@ -112,8 +112,8 @@
     "alibaba/qwen3-30b-a3b-fp8": {
       "name": "Qwen3 30B A3B FP8",
       "family": "qwen",
-      "released": "2026-01",
-      "updated": "2026-01",
+      "released": "2025-04-29",
+      "updated": "2026-01-01",
       "open_weights": true,
       "capabilities": {
         "tools": false,
@@ -144,8 +144,8 @@
     "alibaba/qwen3-32b-fp8": {
       "name": "Qwen3 32B FP8",
       "family": "qwen",
-      "released": "2026-01",
-      "updated": "2026-01",
+      "released": "2025-04-29",
+      "updated": "2026-01-01",
       "open_weights": true,
       "capabilities": {
         "tools": false,
@@ -176,8 +176,8 @@
     "alibaba/qwen3-coder-480b-a35b-instruct": {
       "name": "Qwen3 Coder 480B A35B Instruct",
       "family": "qwen",
-      "released": "2026-01",
-      "updated": "2026-01",
+      "released": "2025-07-22",
+      "updated": "2026-01-01",
       "open_weights": true,
       "capabilities": {
         "tools": true,
@@ -207,8 +207,8 @@
     "alibaba/qwen3-coder-next": {
       "name": "Qwen3 Coder Next",
       "family": "qwen",
-      "released": "2026-02",
-      "updated": "2026-02",
+      "released": "2026-02-03",
+      "updated": "2026-02-03",
       "open_weights": true,
       "capabilities": {
         "tools": true,
@@ -238,8 +238,8 @@
     "alibaba/qwen3-next-80b-a3b-instruct": {
       "name": "Qwen3 Next 80B A3B Instruct",
       "family": "qwen",
-      "released": "2026-01",
-      "updated": "2026-01",
+      "released": "2025-09-12",
+      "updated": "2026-01-01",
       "open_weights": true,
       "capabilities": {
         "tools": true,
@@ -269,8 +269,8 @@
     "alibaba/qwen3-next-80b-a3b-thinking": {
       "name": "Qwen3 Next 80B A3B Thinking",
       "family": "qwen",
-      "released": "2026-01",
-      "updated": "2026-01",
+      "released": "2025-09-12",
+      "updated": "2026-01-01",
       "open_weights": true,
       "capabilities": {
         "tools": true,
@@ -301,8 +301,8 @@
     "anthropic/claude-haiku-4-5-20251001": {
       "name": "Claude Haiku 4.5 20251001",
       "family": "claude-haiku",
-      "released": "2026-01",
-      "updated": "2026-01",
+      "released": "2025-10-15",
+      "updated": "2026-01-01",
       "open_weights": false,
       "capabilities": {
         "tools": true,
@@ -333,8 +333,8 @@
     "anthropic/claude-opus-4-1-20250805": {
       "name": "Claude Opus 4.1 20250805",
       "family": "claude-opus",
-      "released": "2026-01",
-      "updated": "2026-01",
+      "released": "2025-08-05",
+      "updated": "2026-01-01",
       "open_weights": false,
       "capabilities": {
         "tools": true,
@@ -365,8 +365,8 @@
     "anthropic/claude-opus-4-20250514": {
       "name": "Claude Opus 4 20250514",
       "family": "claude-opus",
-      "released": "2026-01",
-      "updated": "2026-01",
+      "released": "2025-05-22",
+      "updated": "2026-01-01",
       "open_weights": false,
       "capabilities": {
         "tools": true,
@@ -397,8 +397,8 @@
     "anthropic/claude-opus-4-5-20251101": {
       "name": "Claude Opus 4.5 20251101",
       "family": "claude-opus",
-      "released": "2026-01",
-      "updated": "2026-01",
+      "released": "2025-11-24",
+      "updated": "2026-01-01",
       "open_weights": false,
       "capabilities": {
         "tools": true,
@@ -429,8 +429,8 @@
     "anthropic/claude-opus-4-6": {
       "name": "Claude Opus 4.6",
       "family": "claude-opus",
-      "released": "2026-02",
-      "updated": "2026-02",
+      "released": "2026-02-05",
+      "updated": "2026-02-05",
       "knowledge": "2025-05-31",
       "open_weights": false,
       "capabilities": {
@@ -478,8 +478,8 @@
     "anthropic/claude-sonnet-4-20250514": {
       "name": "Claude Sonnet 4 20250514",
       "family": "claude-sonnet",
-      "released": "2026-01",
-      "updated": "2026-01",
+      "released": "2025-05-22",
+      "updated": "2026-01-01",
       "open_weights": false,
       "capabilities": {
         "tools": true,
@@ -510,8 +510,8 @@
     "anthropic/claude-sonnet-4-5-20250929": {
       "name": "Claude Sonnet 4.5 20250929",
       "family": "claude-sonnet",
-      "released": "2026-01",
-      "updated": "2026-01",
+      "released": "2025-09-29",
+      "updated": "2026-01-01",
       "open_weights": false,
       "capabilities": {
         "tools": true,
@@ -542,8 +542,8 @@
     "baidu/ernie-4.5-300b-a47b-paddle": {
       "name": "ERNIE 4.5 300B A47B Paddle",
       "family": "ernie",
-      "released": "2026-01",
-      "updated": "2026-01",
+      "released": "2025-06-30",
+      "updated": "2026-01-01",
       "open_weights": true,
       "capabilities": {
         "tools": true,
@@ -573,8 +573,8 @@
     "baidu/ernie-4.5-vl-424b-a47b": {
       "name": "ERNIE 4.5 VL 424B A47B",
       "family": "ernie",
-      "released": "2026-01",
-      "updated": "2026-01",
+      "released": "2025-06-30",
+      "updated": "2026-01-01",
       "open_weights": true,
       "capabilities": {
         "tools": true,
@@ -606,8 +606,8 @@
     "deepseek/deepseek-r1-0528": {
       "name": "DeepSeek R1 0528",
       "family": "deepseek-thinking",
-      "released": "2026-01",
-      "updated": "2026-01",
+      "released": "2025-05-28",
+      "updated": "2026-01-01",
       "open_weights": true,
       "capabilities": {
         "tools": true,
@@ -638,8 +638,8 @@
     "deepseek/deepseek-v3-0324": {
       "name": "DeepSeek V3 0324",
       "family": "deepseek",
-      "released": "2026-01",
-      "updated": "2026-01",
+      "released": "2025-03-24",
+      "updated": "2026-01-01",
       "open_weights": true,
       "capabilities": {
         "tools": true,
@@ -669,8 +669,8 @@
     "deepseek/deepseek-v3.1": {
       "name": "DeepSeek V3.1",
       "family": "deepseek",
-      "released": "2026-01",
-      "updated": "2026-01",
+      "released": "2025-08-21",
+      "updated": "2026-01-01",
       "open_weights": true,
       "capabilities": {
         "tools": true,
@@ -706,8 +706,8 @@
     "google/gemini-2.5-flash": {
       "name": "Gemini 2.5 Flash",
       "family": "gemini-flash",
-      "released": "2026-01",
-      "updated": "2026-01",
+      "released": "2025-06-17",
+      "updated": "2026-01-01",
       "open_weights": false,
       "capabilities": {
         "tools": true,
@@ -749,8 +749,8 @@
     "google/gemini-2.5-flash-lite": {
       "name": "Gemini 2.5 Flash Lite",
       "family": "gemini-flash-lite",
-      "released": "2026-01",
-      "updated": "2026-01",
+      "released": "2025-06-17",
+      "updated": "2026-01-01",
       "open_weights": false,
       "capabilities": {
         "tools": true,
@@ -792,8 +792,8 @@
     "google/gemini-2.5-flash-lite-preview-06-17": {
       "name": "Gemini 2.5 Flash Lite Preview 06 17",
       "family": "gemini-flash-lite",
-      "released": "2026-01",
-      "updated": "2026-01",
+      "released": "2025-06-17",
+      "updated": "2026-01-01",
       "open_weights": false,
       "capabilities": {
         "tools": true,
@@ -835,8 +835,8 @@
     "google/gemini-2.5-flash-lite-preview-09-2025": {
       "name": "Gemini 2.5 Flash Lite Preview 09 2025",
       "family": "gemini-flash-lite",
-      "released": "2026-01",
-      "updated": "2026-01",
+      "released": "2025-09-26",
+      "updated": "2026-01-01",
       "open_weights": false,
       "capabilities": {
         "tools": true,
@@ -878,8 +878,8 @@
     "google/gemini-2.5-flash-preview-05-20": {
       "name": "Gemini 2.5 Flash Preview 05 20",
       "family": "gemini-flash",
-      "released": "2026-01",
-      "updated": "2026-01",
+      "released": "2025-05-20",
+      "updated": "2026-01-01",
       "open_weights": false,
       "capabilities": {
         "tools": true,
@@ -921,8 +921,8 @@
     "google/gemini-2.5-pro": {
       "name": "Gemini 2.5 Pro",
       "family": "gemini-pro",
-      "released": "2026-01",
-      "updated": "2026-01",
+      "released": "2025-06-17",
+      "updated": "2026-01-01",
       "open_weights": false,
       "capabilities": {
         "tools": true,
@@ -964,8 +964,8 @@
     "google/gemini-2.5-pro-preview": {
       "name": "Gemini 2.5 Pro Preview",
       "family": "gemini-pro",
-      "released": "2026-01",
-      "updated": "2026-01",
+      "released": "2025-06-05",
+      "updated": "2026-01-01",
       "open_weights": false,
       "capabilities": {
         "tools": true,
@@ -1007,8 +1007,8 @@
     "google/gemini-3-flash-preview": {
       "name": "Gemini 3 Flash Preview",
       "family": "gemini-flash",
-      "released": "2026-01",
-      "updated": "2026-01",
+      "released": "2025-12-17",
+      "updated": "2026-01-01",
       "open_weights": false,
       "capabilities": {
         "tools": true,
@@ -1041,8 +1041,8 @@
     "google/gemini-3-pro-preview": {
       "name": "Gemini 3 Pro Preview",
       "family": "gemini-pro",
-      "released": "2026-01",
-      "updated": "2026-01",
+      "released": "2025-11-18",
+      "updated": "2026-01-01",
       "open_weights": false,
       "capabilities": {
         "tools": true,
@@ -1075,8 +1075,8 @@
     "minimax/minimax-m1-80k": {
       "name": "MiniMax M1 80K",
       "family": "minimax",
-      "released": "2026-01",
-      "updated": "2026-01",
+      "released": "2025-06-17",
+      "updated": "2026-01-01",
       "open_weights": true,
       "capabilities": {
         "tools": true,
@@ -1107,8 +1107,8 @@
     "minimax/minimax-m2.1": {
       "name": "MiniMax M2.1",
       "family": "minimax",
-      "released": "2026-01",
-      "updated": "2026-01",
+      "released": "2025-12-23",
+      "updated": "2026-01-01",
       "open_weights": true,
       "capabilities": {
         "tools": true,
@@ -1144,8 +1144,8 @@
     "moonshotai/kimi-k2-0905": {
       "name": "Kimi K2 0905",
       "family": "kimi-k2",
-      "released": "2026-01",
-      "updated": "2026-01",
+      "released": "2025-09-05",
+      "updated": "2026-01-01",
       "open_weights": true,
       "capabilities": {
         "tools": true,
@@ -1175,8 +1175,8 @@
     "moonshotai/kimi-k2-instruct": {
       "name": "Kimi K2 Instruct",
       "family": "kimi-k2",
-      "released": "2026-01",
-      "updated": "2026-01",
+      "released": "2025-07-11",
+      "updated": "2026-01-01",
       "open_weights": true,
       "capabilities": {
         "tools": true,
@@ -1206,8 +1206,8 @@
     "moonshotai/kimi-k2.5": {
       "name": "Kimi K2.5",
       "family": "kimi-k2",
-      "released": "2026-01",
-      "updated": "2026-01",
+      "released": "2026-01-27",
+      "updated": "2026-01-27",
       "open_weights": true,
       "capabilities": {
         "tools": true,
@@ -1245,8 +1245,8 @@
     "openai/gpt-5-chat-latest": {
       "name": "GPT-5 Chat Latest",
       "family": "gpt",
-      "released": "2026-01",
-      "updated": "2026-01",
+      "released": "2025-08-07",
+      "updated": "2026-01-01",
       "open_weights": false,
       "capabilities": {
         "tools": true,
@@ -1277,8 +1277,8 @@
     "openai/gpt-5-codex": {
       "name": "GPT-5 Codex",
       "family": "gpt-codex",
-      "released": "2026-01",
-      "updated": "2026-01",
+      "released": "2025-09-15",
+      "updated": "2026-01-01",
       "open_weights": false,
       "capabilities": {
         "tools": true,
@@ -1309,8 +1309,8 @@
     "openai/gpt-5-mini": {
       "name": "GPT-5 Mini",
       "family": "gpt-mini",
-      "released": "2026-01",
-      "updated": "2026-01",
+      "released": "2025-08-07",
+      "updated": "2026-01-01",
       "open_weights": false,
       "capabilities": {
         "tools": true,
@@ -1342,8 +1342,8 @@
     "openai/gpt-5-nano": {
       "name": "GPT-5 Nano",
       "family": "gpt-nano",
-      "released": "2026-01",
-      "updated": "2026-01",
+      "released": "2025-08-07",
+      "updated": "2026-01-01",
       "open_weights": false,
       "capabilities": {
         "tools": true,
@@ -1374,8 +1374,8 @@
     "openai/gpt-5-pro": {
       "name": "GPT-5 Pro",
       "family": "gpt-pro",
-      "released": "2026-01",
-      "updated": "2026-01",
+      "released": "2025-10-06",
+      "updated": "2026-01-01",
       "open_weights": false,
       "capabilities": {
         "tools": true,
@@ -1407,8 +1407,8 @@
     "openai/gpt-5.1": {
       "name": "GPT-5.1",
       "family": "gpt",
-      "released": "2026-02",
-      "updated": "2026-02",
+      "released": "2025-11-13",
+      "updated": "2026-02-01",
       "open_weights": false,
       "capabilities": {
         "tools": true,
@@ -1440,8 +1440,8 @@
     "openai/gpt-5.1-codex": {
       "name": "GPT-5.1 Codex",
       "family": "gpt-codex",
-      "released": "2026-01",
-      "updated": "2026-01",
+      "released": "2025-11-13",
+      "updated": "2026-01-01",
       "open_weights": false,
       "capabilities": {
         "tools": true,
@@ -1473,8 +1473,8 @@
     "openai/gpt-5.1-codex-max": {
       "name": "GPT-5.1 Codex Max",
       "family": "gpt-codex",
-      "released": "2026-01",
-      "updated": "2026-01",
+      "released": "2025-11-13",
+      "updated": "2026-01-01",
       "open_weights": false,
       "capabilities": {
         "tools": true,
@@ -1506,8 +1506,8 @@
     "openai/gpt-5.1-codex-mini": {
       "name": "GPT-5.1 Codex Mini",
       "family": "gpt-codex",
-      "released": "2026-01",
-      "updated": "2026-01",
+      "released": "2025-11-13",
+      "updated": "2026-01-01",
       "open_weights": false,
       "capabilities": {
         "tools": true,
@@ -1539,8 +1539,8 @@
     "openai/gpt-5.2": {
       "name": "GPT-5.2",
       "family": "gpt",
-      "released": "2026-01",
-      "updated": "2026-01",
+      "released": "2025-12-11",
+      "updated": "2026-01-01",
       "open_weights": false,
       "capabilities": {
         "tools": true,
@@ -1571,8 +1571,8 @@
     "openai/gpt-5.2-codex": {
       "name": "GPT-5.2 Codex",
       "family": "gpt-codex",
-      "released": "2026-01",
-      "updated": "2026-01",
+      "released": "2025-12-11",
+      "updated": "2026-01-01",
       "open_weights": false,
       "capabilities": {
         "tools": true,
@@ -1604,8 +1604,8 @@
     "openai/gpt-5.2-pro": {
       "name": "GPT-5.2 Pro",
       "family": "gpt-pro",
-      "released": "2026-01",
-      "updated": "2026-01",
+      "released": "2025-12-11",
+      "updated": "2026-01-01",
       "open_weights": false,
       "capabilities": {
         "tools": true,
@@ -1636,8 +1636,8 @@
     },
     "openai/o3": {
       "name": "o3",
-      "released": "2026-01",
-      "updated": "2026-01",
+      "released": "2025-04-16",
+      "updated": "2026-01-01",
       "open_weights": false,
       "capabilities": {
         "tools": true,
@@ -1668,8 +1668,8 @@
     "openai/o3-mini": {
       "name": "o3 Mini",
       "family": "o",
-      "released": "2026-01",
-      "updated": "2026-01",
+      "released": "2024-12-20",
+      "updated": "2026-01-01",
       "open_weights": false,
       "capabilities": {
         "tools": true,
@@ -1700,8 +1700,8 @@
     "openai/o4-mini": {
       "name": "o4 Mini",
       "family": "o",
-      "released": "2026-01",
-      "updated": "2026-01",
+      "released": "2025-04-16",
+      "updated": "2026-01-01",
       "open_weights": false,
       "capabilities": {
         "tools": true,
@@ -1732,8 +1732,8 @@
     "xai/grok-4-0709": {
       "name": "Grok 4 0709",
       "family": "grok",
-      "released": "2026-01",
-      "updated": "2026-01",
+      "released": "2025-07-09",
+      "updated": "2026-01-01",
       "open_weights": false,
       "capabilities": {
         "tools": true,
@@ -1764,8 +1764,8 @@
     "xai/grok-4-fast-non-reasoning": {
       "name": "Grok 4 Fast Non Reasoning",
       "family": "grok",
-      "released": "2026-01",
-      "updated": "2026-01",
+      "released": "2025-12-18",
+      "updated": "2026-01-01",
       "open_weights": false,
       "capabilities": {
         "tools": true,
@@ -1796,8 +1796,8 @@
     "xai/grok-4-fast-reasoning": {
       "name": "Grok 4 Fast Reasoning",
       "family": "grok",
-      "released": "2026-01",
-      "updated": "2026-01",
+      "released": "2025-12-18",
+      "updated": "2026-01-01",
       "open_weights": false,
       "capabilities": {
         "tools": true,
@@ -1828,8 +1828,8 @@
     "xai/grok-4.1-fast": {
       "name": "Grok 4.1 Fast",
       "family": "grok",
-      "released": "2026-01",
-      "updated": "2026-01",
+      "released": "2025-11-19",
+      "updated": "2026-01-01",
       "open_weights": false,
       "capabilities": {
         "tools": true,
@@ -1860,8 +1860,8 @@
     "xai/grok-4.1-fast-reasoning": {
       "name": "Grok 4.1 Fast Reasoning",
       "family": "grok",
-      "released": "2026-01",
-      "updated": "2026-01",
+      "released": "2025-11-19",
+      "updated": "2026-01-01",
       "open_weights": false,
       "capabilities": {
         "tools": true,
@@ -1892,8 +1892,8 @@
     "xai/grok-code-fast-1": {
       "name": "Grok Code Fast 1",
       "family": "grok",
-      "released": "2026-01",
-      "updated": "2026-01",
+      "released": "2025-09-02",
+      "updated": "2026-01-01",
       "open_weights": false,
       "capabilities": {
         "tools": true,
@@ -1924,8 +1924,8 @@
     "xiaomi/mimo-v2-flash": {
       "name": "MiMo V2 Flash",
       "family": "mimo",
-      "released": "2026-01",
-      "updated": "2026-01",
+      "released": "2025-12-16",
+      "updated": "2026-01-01",
       "open_weights": true,
       "capabilities": {
         "tools": true,
@@ -1956,8 +1956,8 @@
     "zhipuai/glm-4.5": {
       "name": "GLM 4.5",
       "family": "glm",
-      "released": "2026-01",
-      "updated": "2026-01",
+      "released": "2025-07-28",
+      "updated": "2026-01-01",
       "open_weights": true,
       "capabilities": {
         "tools": true,
@@ -1990,8 +1990,8 @@
     "zhipuai/glm-4.5v": {
       "name": "GLM 4.5V",
       "family": "glmv",
-      "released": "2026-01",
-      "updated": "2026-01",
+      "released": "2025-08-11",
+      "updated": "2026-01-01",
       "open_weights": true,
       "capabilities": {
         "tools": true,
@@ -2024,8 +2024,8 @@
     "zhipuai/glm-4.7": {
       "name": "GLM 4.7",
       "family": "glm",
-      "released": "2026-01",
-      "updated": "2026-01",
+      "released": "2025-12-22",
+      "updated": "2026-01-01",
       "open_weights": true,
       "capabilities": {
         "tools": true,
@@ -2056,8 +2056,8 @@
     "zhipuai/glm-4.7-flash": {
       "name": "GLM 4.7 Flash",
       "family": "glm-flash",
-      "released": "2026-01",
-      "updated": "2026-01",
+      "released": "2026-01-19",
+      "updated": "2026-01-19",
       "open_weights": true,
       "capabilities": {
         "tools": true,

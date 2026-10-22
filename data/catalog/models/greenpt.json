@@ -3,8 +3,8 @@
     "id": "greenpt/green-s",
     "lab": "greenpt",
     "name": "Green S",
-    "released": "2025-01",
-    "updated": "2025-01",
+    "released": "2025-06-09",
+    "updated": "2025-06-09",
     "open_weights": false,
     "reasoning": false,
     "capabilities": {
@@ -30,8 +30,8 @@
     "id": "greenpt/green-s-pro",
     "lab": "greenpt",
     "name": "Green S Pro",
-    "released": "2025-02",
-    "updated": "2025-02",
+    "released": "2025-09-10",
+    "updated": "2025-09-10",
     "open_weights": false,
     "reasoning": false,
     "capabilities": {

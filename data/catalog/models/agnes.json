@@ -87,8 +87,8 @@
     "id": "agnes/agnes-2.5-flash",
     "lab": "agnes",
     "name": "Agnes 2.5 Flash",
-    "released": "2026-07",
-    "updated": "2026-07",
+    "released": "2026-07-14",
+    "updated": "2026-07-14",
     "open_weights": false,
     "reasoning": true,
     "capabilities": {
@@ -145,8 +145,8 @@
     "id": "agnes/agnes-3.0-flash",
     "lab": "agnes",
     "name": "Agnes 3.0 Flash",
-    "released": "2026-09",
-    "updated": "2026-09",
+    "released": "2026-09-09",
+    "updated": "2026-09-09",
     "open_weights": false,
     "reasoning": true,
     "capabilities": {

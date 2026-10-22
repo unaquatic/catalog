@@ -3,8 +3,8 @@
     "id": "nomic/nomic-embed-text",
     "lab": "nomic",
     "name": "Nomic Embed Text",
-    "released": "2024-02",
-    "updated": "2024-02",
+    "released": "2024-02-01",
+    "updated": "2024-02-01",
     "open_weights": true,
     "reasoning": false,
     "capabilities": {

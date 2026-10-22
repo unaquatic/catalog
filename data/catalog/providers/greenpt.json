@@ -324,8 +324,8 @@
     },
     "greenpt/green-s": {
       "name": "Green S",
-      "released": "2025-01",
-      "updated": "2025-01",
+      "released": "2025-06-09",
+      "updated": "2025-06-09",
       "open_weights": false,
       "capabilities": {
         "tools": false,
@@ -353,8 +353,8 @@
     },
     "greenpt/green-s-pro": {
       "name": "Green S Pro",
-      "released": "2025-02",
-      "updated": "2025-02",
+      "released": "2025-09-10",
+      "updated": "2025-09-10",
       "open_weights": false,
       "capabilities": {
         "tools": false,
@@ -413,8 +413,8 @@
     },
     "hcompany/holo2-30b-a3b": {
       "name": "Holo2 30B A3B",
-      "released": "2025-11",
-      "updated": "2025-11",
+      "released": "2025-11-10",
+      "updated": "2025-11-10",
       "open_weights": true,
       "capabilities": {
         "tools": true,

@@ -1891,8 +1891,8 @@
     "moonshotai/kimi-k2.5": {
       "name": "Kimi K2.5",
       "family": "kimi-k2",
-      "released": "2026-01",
-      "updated": "2026-01",
+      "released": "2026-01-27",
+      "updated": "2026-01-27",
       "knowledge": "2025-01",
       "open_weights": true,
       "capabilities": {

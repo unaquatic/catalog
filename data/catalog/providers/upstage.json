@@ -130,8 +130,8 @@
     "upstage/solar-pro3": {
       "name": "Solar Pro 3",
       "family": "solar-pro",
-      "released": "2026-01",
-      "updated": "2026-01",
+      "released": "2026-01-26",
+      "updated": "2026-01-26",
       "knowledge": "2025-03",
       "open_weights": false,
       "capabilities": {

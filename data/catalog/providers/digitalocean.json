@@ -1797,8 +1797,8 @@
     "intfloat/e5-large-v2": {
       "name": "E5 Large V2",
       "type": "embedding",
-      "released": "2023-05",
-      "updated": "2023-05",
+      "released": "2023-05-19",
+      "updated": "2023-05-19",
       "open_weights": true,
       "capabilities": {
         "tools": false,

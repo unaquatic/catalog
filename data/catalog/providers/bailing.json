@@ -17,8 +17,8 @@
     "inclusionai/ling-1t": {
       "name": "Ling 1T",
       "family": "ling",
-      "released": "2025-10",
-      "updated": "2025-10",
+      "released": "2025-10-09",
+      "updated": "2025-10-09",
       "knowledge": "2024-06",
       "open_weights": true,
       "capabilities": {
@@ -48,8 +48,8 @@
     "inclusionai/ring-1t": {
       "name": "Ring 1T",
       "family": "ring",
-      "released": "2025-10",
-      "updated": "2025-10",
+      "released": "2025-10-12",
+      "updated": "2025-10-12",
       "knowledge": "2024-06",
       "open_weights": true,
       "capabilities": {

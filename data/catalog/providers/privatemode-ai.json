@@ -81,8 +81,8 @@
     "mistral/voxtral-mini-3b": {
       "name": "Voxtral Mini 3B",
       "family": "voxtral",
-      "released": "2025-07",
-      "updated": "2025-07",
+      "released": "2025-07-15",
+      "updated": "2025-07-15",
       "open_weights": true,
       "capabilities": {
         "tools": false,

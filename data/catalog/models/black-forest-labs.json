@@ -301,7 +301,7 @@
     "family": "flux",
     "type": "image",
     "released": "2025-05-29",
-    "updated": "2025-06",
+    "updated": "2025-06-01",
     "open_weights": false,
     "reasoning": false,
     "capabilities": {
@@ -330,7 +330,7 @@
     "family": "flux",
     "type": "image",
     "released": "2025-05-29",
-    "updated": "2025-06",
+    "updated": "2025-06-01",
     "open_weights": false,
     "reasoning": false,
     "capabilities": {
@@ -359,7 +359,7 @@
     "family": "flux",
     "type": "image",
     "released": "2024-10-01",
-    "updated": "2024-10",
+    "updated": "2024-10-01",
     "open_weights": false,
     "reasoning": false,
     "capabilities": {
@@ -388,7 +388,7 @@
     "family": "flux",
     "type": "image",
     "released": "2024-10-02",
-    "updated": "2024-10",
+    "updated": "2024-10-02",
     "open_weights": false,
     "reasoning": false,
     "capabilities": {
@@ -417,7 +417,7 @@
     "family": "flux",
     "type": "image",
     "released": "2024-11-01",
-    "updated": "2024-11",
+    "updated": "2024-11-01",
     "open_weights": false,
     "reasoning": false,
     "capabilities": {

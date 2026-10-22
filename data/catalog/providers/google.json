@@ -1576,7 +1576,7 @@
       "family": "veo",
       "type": "video",
       "released": "2025-10-15",
-      "updated": "2026-01",
+      "updated": "2026-01-01",
       "open_weights": false,
       "capabilities": {
         "tools": false,

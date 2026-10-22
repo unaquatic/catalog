@@ -54,8 +54,8 @@
     },
     "agnes/agnes-2.5-flash": {
       "name": "Agnes 2.5 Flash",
-      "released": "2026-07",
-      "updated": "2026-07",
+      "released": "2026-07-14",
+      "updated": "2026-07-14",
       "open_weights": false,
       "capabilities": {
         "tools": true,
@@ -129,8 +129,8 @@
     },
     "agnes/agnes-3.0-flash": {
       "name": "Agnes 3.0 Flash",
-      "released": "2026-09",
-      "updated": "2026-09",
+      "released": "2026-09-09",
+      "updated": "2026-09-09",
       "open_weights": false,
       "capabilities": {
         "tools": true,

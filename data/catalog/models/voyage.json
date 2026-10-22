@@ -6,7 +6,7 @@
     "family": "voyage",
     "type": "embedding",
     "released": "2025-01-07",
-    "updated": "2024-09",
+    "updated": "2025-01-07",
     "open_weights": false,
     "reasoning": false,
     "capabilities": {
@@ -93,7 +93,7 @@
     "family": "voyage",
     "type": "embedding",
     "released": "2024-01-01",
-    "updated": "2024-01",
+    "updated": "2024-01-01",
     "open_weights": false,
     "reasoning": false,
     "capabilities": {
@@ -122,7 +122,7 @@
     "family": "voyage",
     "type": "embedding",
     "released": "2024-12-04",
-    "updated": "2024-09",
+    "updated": "2024-12-04",
     "open_weights": false,
     "reasoning": false,
     "capabilities": {
@@ -151,7 +151,7 @@
     "family": "voyage",
     "type": "embedding",
     "released": "2024-06-03",
-    "updated": "2024-03",
+    "updated": "2024-06-03",
     "open_weights": false,
     "reasoning": false,
     "capabilities": {
@@ -180,7 +180,7 @@
     "family": "voyage",
     "type": "embedding",
     "released": "2024-04-15",
-    "updated": "2024-03",
+    "updated": "2024-04-15",
     "open_weights": false,
     "reasoning": false,
     "capabilities": {

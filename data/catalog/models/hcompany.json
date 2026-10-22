@@ -3,8 +3,8 @@
     "id": "hcompany/holo2-30b-a3b",
     "lab": "hcompany",
     "name": "Holo2 30B A3B",
-    "released": "2025-11",
-    "updated": "2025-11",
+    "released": "2025-11-10",
+    "updated": "2025-11-10",
     "open_weights": true,
     "reasoning": true,
     "capabilities": {

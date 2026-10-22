@@ -19,7 +19,7 @@
       "name": "Qwen3 14B",
       "family": "qwen",
       "released": "2025-04-28",
-      "updated": "2025-04",
+      "updated": "2025-04-28",
       "knowledge": "2025-04",
       "open_weights": false,
       "capabilities": {
@@ -388,7 +388,7 @@
       "name": "Qwen3 Max Thinking",
       "family": "qwen",
       "released": "2026-01-23",
-      "updated": "2025-01",
+      "updated": "2026-01-23",
       "knowledge": "2025-01",
       "open_weights": true,
       "capabilities": {
@@ -439,8 +439,8 @@
     "alibaba/qwen3-next-80b-a3b-instruct": {
       "name": "Qwen3 Next 80B A3B Instruct",
       "family": "qwen",
-      "released": "2025-09",
-      "updated": "2025-09",
+      "released": "2025-09-12",
+      "updated": "2025-09-12",
       "knowledge": "2025-04",
       "open_weights": true,
       "capabilities": {
@@ -470,8 +470,8 @@
     "alibaba/qwen3-next-80b-a3b-thinking": {
       "name": "Qwen3 Next 80B A3B Thinking",
       "family": "qwen",
-      "released": "2025-09",
-      "updated": "2025-09",
+      "released": "2025-09-12",
+      "updated": "2025-09-12",
       "knowledge": "2025-04",
       "open_weights": true,
       "capabilities": {
@@ -1759,7 +1759,7 @@
       "family": "titan-embed",
       "type": "embedding",
       "released": "2024-04-30",
-      "updated": "2024-04",
+      "updated": "2024-04-30",
       "open_weights": false,
       "capabilities": {
         "tools": false,
@@ -2864,7 +2864,7 @@
       "family": "flux",
       "type": "image",
       "released": "2025-05-29",
-      "updated": "2025-06",
+      "updated": "2025-06-01",
       "open_weights": false,
       "capabilities": {
         "tools": false,
@@ -2901,7 +2901,7 @@
       "family": "flux",
       "type": "image",
       "released": "2025-05-29",
-      "updated": "2025-06",
+      "updated": "2025-06-01",
       "open_weights": false,
       "capabilities": {
         "tools": false,
@@ -2938,7 +2938,7 @@
       "family": "flux",
       "type": "image",
       "released": "2024-10-01",
-      "updated": "2024-10",
+      "updated": "2024-10-01",
       "open_weights": false,
       "capabilities": {
         "tools": false,
@@ -2975,7 +2975,7 @@
       "family": "flux",
       "type": "image",
       "released": "2024-10-02",
-      "updated": "2024-10",
+      "updated": "2024-10-02",
       "open_weights": false,
       "capabilities": {
         "tools": false,
@@ -3012,7 +3012,7 @@
       "family": "flux",
       "type": "image",
       "released": "2024-11-01",
-      "updated": "2024-11",
+      "updated": "2024-11-01",
       "open_weights": false,
       "capabilities": {
         "tools": false,
@@ -5807,7 +5807,7 @@
       "family": "text-embedding",
       "type": "embedding",
       "released": "2024-08-01",
-      "updated": "2024-08",
+      "updated": "2024-08-01",
       "open_weights": false,
       "capabilities": {
         "tools": false,
@@ -5844,7 +5844,7 @@
       "family": "text-embedding",
       "type": "embedding",
       "released": "2024-03-01",
-      "updated": "2024-03",
+      "updated": "2024-03-01",
       "open_weights": false,
       "capabilities": {
         "tools": false,
@@ -12771,7 +12771,7 @@
       "family": "recraft",
       "type": "image",
       "released": "2024-03-13",
-      "updated": "2024-03",
+      "updated": "2024-03-13",
       "open_weights": false,
       "capabilities": {
         "tools": false,
@@ -12808,7 +12808,7 @@
       "family": "recraft",
       "type": "image",
       "released": "2024-10-30",
-      "updated": "2024-10",
+      "updated": "2024-10-30",
       "open_weights": false,
       "capabilities": {
         "tools": false,
@@ -13990,7 +13990,7 @@
       "family": "voyage",
       "type": "embedding",
       "released": "2025-01-07",
-      "updated": "2024-09",
+      "updated": "2025-01-07",
       "open_weights": false,
       "capabilities": {
         "tools": false,
@@ -14101,7 +14101,7 @@
       "family": "voyage",
       "type": "embedding",
       "released": "2024-01-01",
-      "updated": "2024-01",
+      "updated": "2024-01-01",
       "open_weights": false,
       "capabilities": {
         "tools": false,
@@ -14138,7 +14138,7 @@
       "family": "voyage",
       "type": "embedding",
       "released": "2024-12-04",
-      "updated": "2024-09",
+      "updated": "2024-12-04",
       "open_weights": false,
       "capabilities": {
         "tools": false,
@@ -14175,7 +14175,7 @@
       "family": "voyage",
       "type": "embedding",
       "released": "2024-06-03",
-      "updated": "2024-03",
+      "updated": "2024-06-03",
       "open_weights": false,
       "capabilities": {
         "tools": false,
@@ -14212,7 +14212,7 @@
       "family": "voyage",
       "type": "embedding",
       "released": "2024-04-15",
-      "updated": "2024-03",
+      "updated": "2024-04-15",
       "open_weights": false,
       "capabilities": {
         "tools": false,

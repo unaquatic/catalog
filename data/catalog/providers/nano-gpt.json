@@ -1363,8 +1363,8 @@
     "alibaba/qwen3-next-80b-a3b-instruct": {
       "name": "Qwen3 Next 80B A3B Instruct",
       "family": "qwen",
-      "released": "2025-09",
-      "updated": "2025-09",
+      "released": "2025-09-12",
+      "updated": "2025-09-12",
       "knowledge": "2025-04",
       "open_weights": true,
       "capabilities": {
@@ -1397,8 +1397,8 @@
     "alibaba/qwen3-next-80b-a3b-thinking": {
       "name": "Qwen3 Next 80B A3B Thinking",
       "family": "qwen",
-      "released": "2025-09",
-      "updated": "2025-09",
+      "released": "2025-09-12",
+      "updated": "2025-09-12",
       "knowledge": "2025-04",
       "open_weights": true,
       "capabilities": {

@@ -47,8 +47,8 @@
     },
     "openai/gpt-oss-120b": {
       "name": "GPT OSS 120B",
-      "released": "2025-08",
-      "updated": "2025-08",
+      "released": "2025-08-05",
+      "updated": "2025-08-05",
       "open_weights": true,
       "capabilities": {
         "tools": true,

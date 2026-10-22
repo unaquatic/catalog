@@ -4,7 +4,7 @@
     "lab": "clarifai",
     "name": "MM Poly 8B",
     "family": "mm-poly",
-    "released": "2025-06",
+    "released": "2025-06-01",
     "updated": "2026-02-25",
     "open_weights": false,
     "reasoning": false,

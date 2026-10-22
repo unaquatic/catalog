@@ -5,7 +5,7 @@
     "name": "Nova 2 Lite",
     "family": "nova",
     "released": "2025-12-02",
-    "updated": "2025-12-01",
+    "updated": "2025-12-02",
     "knowledge": "2025-10",
     "open_weights": false,
     "reasoning": true,
@@ -334,7 +334,7 @@
     "family": "titan-embed",
     "type": "embedding",
     "released": "2024-04-30",
-    "updated": "2024-04",
+    "updated": "2024-04-30",
     "open_weights": false,
     "reasoning": false,
     "capabilities": {

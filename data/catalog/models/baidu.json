@@ -95,8 +95,8 @@
     "lab": "baidu",
     "name": "ERNIE 4.5 300B A47B Paddle",
     "family": "ernie",
-    "released": "2026-01",
-    "updated": "2026-01",
+    "released": "2025-06-30",
+    "updated": "2026-01-01",
     "open_weights": true,
     "reasoning": false,
     "capabilities": {

@@ -51,8 +51,8 @@
     "alibaba/qwen-deep-research": {
       "name": "Qwen Deep Research",
       "family": "qwen",
-      "released": "2024-01",
-      "updated": "2024-01",
+      "released": "2025-08-22",
+      "updated": "2025-08-22",
       "knowledge": "2024-04",
       "open_weights": false,
       "capabilities": {
@@ -82,8 +82,8 @@
     "alibaba/qwen-doc-turbo": {
       "name": "Qwen Doc Turbo",
       "family": "qwen",
-      "released": "2024-01",
-      "updated": "2024-01",
+      "released": "2024-01-01",
+      "updated": "2024-01-01",
       "knowledge": "2024-04",
       "open_weights": false,
       "capabilities": {
@@ -291,8 +291,8 @@
     "alibaba/qwen-mt-plus": {
       "name": "Qwen MT Plus",
       "family": "qwen",
-      "released": "2025-01",
-      "updated": "2025-01",
+      "released": "2025-07-24",
+      "updated": "2025-07-24",
       "knowledge": "2024-04",
       "open_weights": false,
       "capabilities": {
@@ -322,8 +322,8 @@
     "alibaba/qwen-mt-turbo": {
       "name": "Qwen MT Turbo",
       "family": "qwen",
-      "released": "2025-01",
-      "updated": "2025-01",
+      "released": "2025-01-01",
+      "updated": "2025-01-01",
       "knowledge": "2024-04",
       "open_weights": false,
       "capabilities": {
@@ -485,8 +485,8 @@
     "alibaba/qwen-plus-character": {
       "name": "Qwen Plus Character",
       "family": "qwen",
-      "released": "2024-01",
-      "updated": "2024-01",
+      "released": "2024-01-01",
+      "updated": "2024-01-01",
       "knowledge": "2024-04",
       "open_weights": false,
       "capabilities": {
@@ -653,8 +653,8 @@
     "alibaba/qwen2-5-vl-72b-instruct": {
       "name": "Qwen2.5 VL 72B Instruct",
       "family": "qwen",
-      "released": "2024-09",
-      "updated": "2024-09",
+      "released": "2025-01-26",
+      "updated": "2025-01-26",
       "knowledge": "2024-04",
       "open_weights": true,
       "capabilities": {
@@ -686,8 +686,8 @@
     "alibaba/qwen2.5-14b-instruct": {
       "name": "Qwen2.5 14B Instruct",
       "family": "qwen",
-      "released": "2024-09",
-      "updated": "2024-09",
+      "released": "2024-09-19",
+      "updated": "2024-09-19",
       "knowledge": "2024-04",
       "open_weights": true,
       "capabilities": {
@@ -718,8 +718,8 @@
     "alibaba/qwen2.5-32b-instruct": {
       "name": "Qwen2.5 32B Instruct",
       "family": "qwen",
-      "released": "2024-09",
-      "updated": "2024-09",
+      "released": "2024-09-19",
+      "updated": "2024-09-19",
       "knowledge": "2024-04",
       "open_weights": true,
       "capabilities": {
@@ -750,8 +750,8 @@
     "alibaba/qwen2.5-72b-instruct": {
       "name": "Qwen2.5 72B Instruct",
       "family": "qwen",
-      "released": "2024-09",
-      "updated": "2024-09",
+      "released": "2024-09-19",
+      "updated": "2024-09-19",
       "knowledge": "2024-04",
       "open_weights": true,
       "capabilities": {
@@ -782,8 +782,8 @@
     "alibaba/qwen2.5-7b-instruct": {
       "name": "Qwen2.5 7B Instruct",
       "family": "qwen",
-      "released": "2024-09",
-      "updated": "2024-09",
+      "released": "2024-09-19",
+      "updated": "2024-09-19",
       "knowledge": "2024-04",
       "open_weights": true,
       "capabilities": {
@@ -814,8 +814,8 @@
     "alibaba/qwen2.5-coder-32b-instruct": {
       "name": "Qwen2.5 Coder 32B Instruct",
       "family": "qwen",
-      "released": "2024-11",
-      "updated": "2024-11",
+      "released": "2024-11-12",
+      "updated": "2024-11-12",
       "knowledge": "2024-04",
       "open_weights": true,
       "capabilities": {
@@ -846,8 +846,8 @@
     "alibaba/qwen2.5-coder-7b-instruct": {
       "name": "Qwen2.5 Coder 7B Instruct",
       "family": "qwen",
-      "released": "2024-11",
-      "updated": "2024-11",
+      "released": "2024-09-19",
+      "updated": "2024-11-01",
       "knowledge": "2024-04",
       "open_weights": true,
       "capabilities": {
@@ -878,8 +878,8 @@
     "alibaba/qwen2.5-math-72b-instruct": {
       "name": "Qwen2.5 Math 72B Instruct",
       "family": "qwen",
-      "released": "2024-09",
-      "updated": "2024-09",
+      "released": "2024-09-19",
+      "updated": "2024-09-19",
       "knowledge": "2024-04",
       "open_weights": true,
       "capabilities": {
@@ -910,8 +910,8 @@
     "alibaba/qwen2.5-math-7b-instruct": {
       "name": "Qwen2.5 Math 7B Instruct",
       "family": "qwen",
-      "released": "2024-09",
-      "updated": "2024-09",
+      "released": "2024-09-19",
+      "updated": "2024-09-19",
       "knowledge": "2024-04",
       "open_weights": true,
       "capabilities": {
@@ -942,8 +942,8 @@
     "alibaba/qwen2.5-omni-7b": {
       "name": "Qwen2.5 Omni 7B",
       "family": "qwen",
-      "released": "2024-12",
-      "updated": "2024-12",
+      "released": "2025-03-26",
+      "updated": "2025-03-26",
       "knowledge": "2024-04",
       "open_weights": true,
       "capabilities": {
@@ -979,8 +979,8 @@
     "alibaba/qwen2.5-vl-7b-instruct": {
       "name": "Qwen2.5 VL 7B Instruct",
       "family": "qwen",
-      "released": "2024-09",
-      "updated": "2024-09",
+      "released": "2025-01-26",
+      "updated": "2025-01-26",
       "knowledge": "2024-04",
       "open_weights": true,
       "capabilities": {
@@ -1012,8 +1012,8 @@
     "alibaba/qwen3-14b": {
       "name": "Qwen3 14B",
       "family": "qwen",
-      "released": "2025-04",
-      "updated": "2025-04",
+      "released": "2025-04-29",
+      "updated": "2025-04-29",
       "knowledge": "2025-04",
       "open_weights": true,
       "capabilities": {
@@ -1051,8 +1051,8 @@
     "alibaba/qwen3-235b-a22b": {
       "name": "Qwen3 235B A22B",
       "family": "qwen",
-      "released": "2025-04",
-      "updated": "2025-04",
+      "released": "2025-04-28",
+      "updated": "2025-04-28",
       "knowledge": "2025-04",
       "open_weights": true,
       "capabilities": {
@@ -1090,8 +1090,8 @@
     "alibaba/qwen3-32b": {
       "name": "Qwen3 32B",
       "family": "qwen",
-      "released": "2025-04",
-      "updated": "2025-04",
+      "released": "2025-04-28",
+      "updated": "2025-04-28",
       "knowledge": "2025-04",
       "open_weights": true,
       "capabilities": {
@@ -1129,8 +1129,8 @@
     "alibaba/qwen3-8b": {
       "name": "Qwen3 8B",
       "family": "qwen",
-      "released": "2025-04",
-      "updated": "2025-04",
+      "released": "2025-04-29",
+      "updated": "2025-04-29",
       "knowledge": "2025-04",
       "open_weights": true,
       "capabilities": {
@@ -1200,8 +1200,8 @@
     "alibaba/qwen3-coder-30b-a3b-instruct": {
       "name": "Qwen3 Coder 30B A3B Instruct",
       "family": "qwen",
-      "released": "2025-04",
-      "updated": "2025-04",
+      "released": "2025-07-31",
+      "updated": "2025-07-31",
       "knowledge": "2025-04",
       "open_weights": true,
       "capabilities": {
@@ -1244,8 +1244,8 @@
     "alibaba/qwen3-coder-480b-a35b-instruct": {
       "name": "Qwen3 Coder 480B A35B Instruct",
       "family": "qwen",
-      "released": "2025-04",
-      "updated": "2025-04",
+      "released": "2025-07-22",
+      "updated": "2025-07-22",
       "knowledge": "2025-04",
       "open_weights": true,
       "capabilities": {
@@ -1443,8 +1443,8 @@
     "alibaba/qwen3-next-80b-a3b-instruct": {
       "name": "Qwen3 Next 80B A3B Instruct",
       "family": "qwen",
-      "released": "2025-09",
-      "updated": "2025-09",
+      "released": "2025-09-12",
+      "updated": "2025-09-12",
       "knowledge": "2025-04",
       "open_weights": true,
       "capabilities": {
@@ -1475,8 +1475,8 @@
     "alibaba/qwen3-next-80b-a3b-thinking": {
       "name": "Qwen3 Next 80B A3B Thinking",
       "family": "qwen",
-      "released": "2025-09",
-      "updated": "2025-09",
+      "released": "2025-09-12",
+      "updated": "2025-09-12",
       "knowledge": "2025-04",
       "open_weights": true,
       "capabilities": {
@@ -1588,8 +1588,8 @@
     "alibaba/qwen3-vl-235b-a22b-instruct": {
       "name": "Qwen3 VL 235B A22B Instruct",
       "family": "qwen",
-      "released": "2025-04",
-      "updated": "2025-04",
+      "released": "2025-09-23",
+      "updated": "2025-09-23",
       "knowledge": "2025-04",
       "open_weights": true,
       "capabilities": {
@@ -1623,8 +1623,8 @@
     "alibaba/qwen3-vl-30b-a3b": {
       "name": "Qwen3 VL 30B A3B",
       "family": "qwen",
-      "released": "2025-04",
-      "updated": "2025-04",
+      "released": "2025-10-03",
+      "updated": "2025-10-03",
       "knowledge": "2025-04",
       "open_weights": true,
       "capabilities": {
@@ -2310,8 +2310,8 @@
     "alibaba/qwq-32b": {
       "name": "QwQ 32B",
       "family": "qwen",
-      "released": "2024-12",
-      "updated": "2024-12",
+      "released": "2025-03-05",
+      "updated": "2025-03-05",
       "knowledge": "2024-04",
       "open_weights": true,
       "capabilities": {
@@ -2376,8 +2376,8 @@
     "alibaba/tongyi-intent-detect-v3": {
       "name": "Tongyi Intent Detect V3",
       "family": "yi",
-      "released": "2024-01",
-      "updated": "2024-01",
+      "released": "2024-01-01",
+      "updated": "2024-01-01",
       "knowledge": "2024-04",
       "open_weights": false,
       "capabilities": {
