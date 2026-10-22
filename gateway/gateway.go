@@ -738,8 +738,8 @@ type Model struct {
 	Family string     `json:"family,omitempty"`
 	// Type is the kind of model, or empty for a language model.
 	Type ModelType `json:"type,omitempty"`
-	// Released and Updated are dates, as YYYY-MM-DD, or YYYY-MM when only
-	// the month is known. Every model has both.
+	// Released and Updated are dates, as YYYY-MM-DD; a catalog of a month
+	// alone breaks the schema. Every model has both.
 	Released string `json:"released"`
 	Updated  string `json:"updated"`
 	// Knowledge is the training cutoff, as YYYY-MM or YYYY-MM-DD.

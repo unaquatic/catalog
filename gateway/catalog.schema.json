@@ -457,8 +457,8 @@
           "type": "boolean"
         },
         "released": {
-          "description": "When the model was released, as YYYY-MM-DD, or YYYY-MM when only the month is known. Every model lists it.",
-          "pattern": "^\\d{4}-\\d{2}(-\\d{2})?$",
+          "description": "When the model was released, as YYYY-MM-DD. Every model lists it.",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
           "type": "string"
         },
         "type": {
@@ -466,8 +466,8 @@
           "description": "The kind of model. Absent for a language model."
         },
         "updated": {
-          "description": "When the model was last updated, as YYYY-MM-DD, or YYYY-MM when only the month is known. Every model lists it.",
-          "pattern": "^\\d{4}-\\d{2}(-\\d{2})?$",
+          "description": "When the model was last updated, as YYYY-MM-DD. Every model lists it.",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
           "type": "string"
         },
         "weights": {
@@ -565,8 +565,8 @@
           "description": "The reasoning controls the offering takes. Absent when the model does not reason."
         },
         "released": {
-          "description": "When the model was released, as the provider lists it: YYYY-MM-DD, or YYYY-MM when only the month is known. Every offering lists it.",
-          "pattern": "^\\d{4}-\\d{2}(-\\d{2})?$",
+          "description": "When the model was released, as the provider lists it, as YYYY-MM-DD. Every offering lists it.",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
           "type": "string"
         },
         "status": {
@@ -578,8 +578,8 @@
           "description": "The kind of model. Absent for a language model."
         },
         "updated": {
-          "description": "When the model was last updated, as the provider lists it: YYYY-MM-DD, or YYYY-MM when only the month is known. Every offering lists it.",
-          "pattern": "^\\d{4}-\\d{2}(-\\d{2})?$",
+          "description": "When the model was last updated, as the provider lists it, as YYYY-MM-DD. Every offering lists it.",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
           "type": "string"
         },
         "variants": {

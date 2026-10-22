@@ -10,9 +10,14 @@ import (
 	"github.com/unaquatic/catalog/internal/jsonschema"
 )
 
-// datePattern is a date of a model, as its release, update and training
-// cutoff: YYYY-MM-DD, or YYYY-MM where models.dev knows only the month.
-const datePattern = `^\d{4}-\d{2}(-\d{2})?$`
+// dayPattern is a model's release and update date: YYYY-MM-DD. A refresh
+// that brings one of a month alone fails here, so that it reaches no
+// release; give it its day in data/catalog.
+const dayPattern = `^\d{4}-\d{2}-\d{2}$`
+
+// monthPattern is a model's training cutoff: YYYY-MM-DD, or YYYY-MM, as labs
+// most often give it.
+const monthPattern = `^\d{4}-\d{2}(-\d{2})?$`
 
 // TestSchema checks that catalog.schema.json is the schema of Catalog's
 // JSON, described by catalog.schema.descriptions.json, which must describe
@@ -39,12 +44,12 @@ func TestSchema(t *testing.T) {
 		Consts:       consts,
 		Properties: map[string]map[string]any{
 			"catalog.version":    {"const": Version},
-			"model.released":     {"pattern": datePattern},
-			"offering.released":  {"pattern": datePattern},
-			"model.updated":      {"pattern": datePattern},
-			"offering.updated":   {"pattern": datePattern},
-			"model.knowledge":    {"pattern": datePattern},
-			"offering.knowledge": {"pattern": datePattern},
+			"model.released":     {"pattern": dayPattern},
+			"offering.released":  {"pattern": dayPattern},
+			"model.updated":      {"pattern": dayPattern},
+			"offering.updated":   {"pattern": dayPattern},
+			"model.knowledge":    {"pattern": monthPattern},
+			"offering.knowledge": {"pattern": monthPattern},
 		},
 	})
 	if err != nil {
