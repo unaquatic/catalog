@@ -18,8 +18,17 @@
 
 ## Install
 
+Every merge to main is a release, tagged as the next semantic version: a Go module version whose `data` package embeds that version's catalog, and a GitHub release with the catalog as one `catalog.json`, its `schema.json`, models.dev's `catalog.json` it took changes from, and the patch of those changes.
+
 ```sh
-go get github.com/unaquatic/catalog
+go get github.com/unaquatic/catalog@latest
+curl -LO https://github.com/unaquatic/catalog/releases/latest/download/catalog.json
+```
+
+```go
+import "github.com/unaquatic/catalog/data"
+
+c, err := data.Catalog() // *gateway.Catalog, embedded: no network
 ```
 
 ## Usage
@@ -37,7 +46,7 @@ go run ./cmd/catalog snapshot -providers anthropic,openai -o snapshot.json   # t
 
 ## Hosted catalog
 
-Our catalog, `data/catalog`, is its own source of truth, a file per lab's models and per provider: models.dev is where its data comes from, not what it is. Every six hours CI applies what models.dev changed since its last version to the catalog, as a patch, keeping what the catalog holds of its own, and opens a pull request of it to review and squash-merge; a merge that changes the catalog publishes a `data-YYYY.MM.DD.N` release with the catalog, models.dev's catalog.json and the patch, and deploys the browser and `catalog.json` to:
+Our catalog, `data/catalog`, is its own source of truth, a file per lab's models and per provider: models.dev is where its data comes from, not what it is. Every six hours CI applies what models.dev changed since its last version to the catalog, as a patch, keeping what the catalog holds of its own, and opens a pull request of it to review and squash-merge; its merge is released as the next version, as every merge is, and deploys the browser and `catalog.json` to:
 
 - https://aquatic.dev/catalog/ — what flow reads (`gateway.DefaultSource`)
 - https://unaquatic.github.io/catalog/ — a mirror

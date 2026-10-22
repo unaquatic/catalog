@@ -70,4 +70,4 @@ else
 	echo "- No conflicts: no value models.dev changed was one we changed too."
 fi
 echo "- The next refresh rebuilds this branch from \`main\` and force-pushes it, so edits pushed here are lost; make them on \`main\`, where the next refresh keeps them."
-echo "- Merging releases and deploys the catalog."
+echo "- Merging releases it as the next patch version and deploys it."

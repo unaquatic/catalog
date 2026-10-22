@@ -2,10 +2,12 @@ name: Release
 
 run-name: Release ${{ inputs.ref || github.sha }}
 
-# Release tags a commit's data as data-YYYY.MM.DD.N, a name Go ignores, so
-# that data releases add no module versions; attaches the catalog, joined
-# into one catalog.json, data/models-dev.json and data/patch.json to a
-# GitHub release; and deploys both sites. A commit
+# Release tags a commit as the next semantic version, vX.Y.Z, so that Go
+# repositories take it as a module version, and the data package's
+# catalog with it; next-version.sh picks the version from the commit's
+# Conventional Commits type. It attaches the catalog, joined into one
+# catalog.json, its schema.json, data/models-dev.json and data/patch.json to
+# a GitHub release of the version, and deploys both sites. A commit
 # released before is deployed again, not tagged again.
 on:
   workflow_dispatch:
@@ -47,18 +49,21 @@ jobs:
         id: tag
         env:
           GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
         run: |
           sha=$(git rev-parse HEAD)
           echo "sha=$sha" >> "$GITHUB_OUTPUT"
-          if tag=$(git tag --points-at HEAD --list 'data-*' | head -1) && [ -n "$tag" ]; then
+          if tag=$(git tag --points-at HEAD --list 'v[0-9]*' | head -1) && [ -n "$tag" ]; then
             echo "$sha is released already as $tag"
             exit 0
           fi
-          day=$(date -u +%Y.%m.%d)
-          tag="data-$day.$(( $(git tag --list "data-$day.*" | wc -l) + 1 ))"
-          prev=$(git describe --tags --abbrev=0 --match 'data-*' HEAD 2>/dev/null || true)
-          catalog="$RUNNER_TEMP/catalog.json"
+          prev=$(git tag --merged HEAD --list 'v[0-9]*' --sort=-v:refname | head -1)
+          tag=$(git log -1 --format=%B HEAD | .github/scripts/next-version.sh "$prev")
+          echo "releasing $sha as $tag, after ${prev:-no version}"
+
+          catalog="$RUNNER_TEMP/catalog.json" schema="$RUNNER_TEMP/schema.json"
           go run ./cmd/catalog join -catalog data/catalog -o "$catalog"
+          cp gateway/catalog.schema.json "$schema"
 
           # model_ids prints the model IDs of the catalog at commit $1, split
           # into data/catalog or, before it was, one data/catalog.json.
@@ -71,9 +76,13 @@ jobs:
           }
 
           {
-            jq -r '"Built from \(.source) at \(.generated).\n",
-              "- \(.models | length) models, \(.providers | length) providers, \([.providers[].models | length] | add) offerings"' "$catalog"
-            if [ -f data/patch.json ]; then
+            echo "## Changes"
+            echo
+            git log -1 --format=%B HEAD
+            echo "## Catalog"
+            echo
+            jq -r '"- \(.models | length) models, \(.providers | length) providers, \([.providers[].models | length] | add) offerings, from \(.source) at \(.generated)"' "$catalog"
+            if [ -n "$prev" ] && ! git diff --quiet "$prev" HEAD -- data/patch.json; then
               jq -r '"- models.dev changed: \([.ops[] | select(.op == "add")] | length) added, \([.ops[] | select(.op == "replace")] | length) replaced, \([.ops[] | select(.op == "remove")] | length) removed; \(.conflicts // [] | length) conflicts kept ours"' data/patch.json
             fi
             if [ -n "$prev" ]; then
@@ -81,13 +90,22 @@ jobs:
               model_ids "$prev" | sort > old.txt
               added=$(comm -13 old.txt new.txt)
               removed=$(comm -23 old.txt new.txt)
-              echo "- $(grep -c . <<< "$added") models added and $(grep -c . <<< "$removed") removed since $prev"
-              [ -z "$added" ] || { echo; echo "Added:"; echo; sed 's/^/- `/; s/$/`/' <<< "$added" | head -100; }
-              [ -z "$removed" ] || { echo; echo "Removed:"; echo; sed 's/^/- `/; s/$/`/' <<< "$removed" | head -100; }
+              if [ -n "$added$removed" ]; then
+                echo "- $(grep -c . <<< "$added") models added and $(grep -c . <<< "$removed") removed since $prev"
+                [ -z "$added" ] || { echo; echo "Added:"; echo; sed 's/^/- `/; s/$/`/' <<< "$added" | head -100; }
+                [ -z "$removed" ] || { echo; echo "Removed:"; echo; sed 's/^/- `/; s/$/`/' <<< "$removed" | head -100; }
+              fi
             fi
+            echo
+            echo "## Use"
+            echo
+            echo '```sh'
+            echo "go get github.com/$REPO@$tag   # data.Catalog(): this catalog, embedded"
+            echo "curl -LO https://github.com/$REPO/releases/download/$tag/catalog.json"
+            echo '```'
           } > notes.md
 
-          assets=("$catalog" data/models-dev.json)
+          assets=("$catalog" "$schema" data/models-dev.json)
           [ ! -f data/patch.json ] || assets+=(data/patch.json)
           gh release create "$tag" "${assets[@]}" \
             --target "$sha" --title "$tag" --notes-file notes.md --latest

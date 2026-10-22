@@ -1,10 +1,10 @@
 name: CI Develop
 
-run-name: Deploy ${{ github.sha }}
+run-name: Release ${{ github.sha }}
 
-# A push to main that changes data/catalog, as a squash-merged refresh
-# pull request does, releases the catalog, which deploys it; any other push
-# deploys the page and the committed catalog as they are.
+# Every push to main, as a squash-merged pull request is, is checked and
+# released: tagged as the next semantic version, released on GitHub, and
+# deployed, as release.yml does.
 on:
   push:
     branches:
@@ -19,33 +19,9 @@ jobs:
     uses: ./.github/workflows/run-checks.yml
     secrets: inherit
 
-  changes:
-    name: Changes
-    runs-on: ubuntu-latest
-    timeout-minutes: 5
-    outputs:
-      catalog: ${{ steps.diff.outputs.catalog }}
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v7
-        with:
-          fetch-depth: 0
-
-      - name: Diff Catalog
-        id: diff
-        env:
-          BEFORE: ${{ github.event.before }}
-        run: |
-          if git cat-file -e "$BEFORE^{commit}" 2>/dev/null && git diff --quiet "$BEFORE" HEAD -- data/catalog; then
-            echo "catalog=false" >> "$GITHUB_OUTPUT"
-          else
-            echo "catalog=true" >> "$GITHUB_OUTPUT"
-          fi
-
   release:
     name: Release
-    needs: [check, changes]
-    if: needs.changes.outputs.catalog == 'true'
+    needs: check
     uses: ./.github/workflows/release.yml
     with:
       ref: ${{ github.sha }}
@@ -53,24 +29,4 @@ jobs:
       contents: write
       pages: write
       id-token: write
-    secrets: inherit
-
-  # GitHub Pages needs a public repository on the free plan; set the
-  # repository variable PAGES to true once it is public.
-  deploy-pages:
-    name: Deploy Pages
-    needs: [check, changes]
-    if: needs.changes.outputs.catalog != 'true' && vars.PAGES == 'true'
-    uses: ./.github/workflows/pages-deploy.yml
-    permissions:
-      contents: read
-      pages: write
-      id-token: write
-    secrets: inherit
-
-  deploy-workers:
-    name: Deploy Workers
-    needs: [check, changes]
-    if: needs.changes.outputs.catalog != 'true'
-    uses: ./.github/workflows/workers-build.yml
     secrets: inherit
