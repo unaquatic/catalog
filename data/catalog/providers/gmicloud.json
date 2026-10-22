@@ -2,6 +2,7 @@
   "id": "gmicloud",
   "name": "GMI Cloud",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://api.gmi-serving.com/v1",

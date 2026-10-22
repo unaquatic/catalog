@@ -2,6 +2,7 @@
   "id": "kilo",
   "name": "Kilo Gateway",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://api.kilo.ai/api/gateway",

@@ -2,6 +2,7 @@
   "id": "tinfoil",
   "name": "Tinfoil",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://inference.tinfoil.sh/v1",

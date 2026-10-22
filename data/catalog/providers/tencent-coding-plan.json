@@ -2,6 +2,7 @@
   "id": "tencent-coding-plan",
   "name": "Tencent Coding Plan (China)",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://api.lkeap.cloud.tencent.com/coding/v3",

@@ -2,6 +2,7 @@
   "id": "thinkingmachines",
   "name": "Thinking Machines",
   "kind": "lab",
+  "type": "community",
   "endpoint": {
     "format": "anthropic-messages",
     "api": "https://tinker.thinkingmachines.dev/services/tinker-prod/anthropic/api/v1",

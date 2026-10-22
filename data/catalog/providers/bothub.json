@@ -2,6 +2,7 @@
   "id": "bothub",
   "name": "Bothub",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://openai.bothub.ru/v1",

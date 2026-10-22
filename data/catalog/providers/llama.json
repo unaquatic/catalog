@@ -2,6 +2,7 @@
   "id": "llama",
   "name": "Llama",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://api.llama.com/compat/v1/",

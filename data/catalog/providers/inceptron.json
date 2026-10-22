@@ -2,6 +2,7 @@
   "id": "inceptron",
   "name": "Inceptron",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://api.inceptron.io/v1",

@@ -2,6 +2,7 @@
   "id": "oci",
   "name": "OCI Generative AI",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://inference.generativeai.us-chicago-1.oci.oraclecloud.com/openai/v1",

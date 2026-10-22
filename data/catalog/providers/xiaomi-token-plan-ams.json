@@ -2,6 +2,7 @@
   "id": "xiaomi-token-plan-ams",
   "name": "Xiaomi Token Plan (Europe)",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://token-plan-ams.xiaomimimo.com/v1",

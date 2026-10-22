@@ -2,6 +2,7 @@
   "id": "minimax",
   "name": "MiniMax (minimax.io)",
   "kind": "lab",
+  "type": "community",
   "endpoint": {
     "format": "anthropic-messages",
     "api": "https://api.minimax.io/anthropic/v1",

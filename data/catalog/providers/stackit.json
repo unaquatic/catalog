@@ -2,6 +2,7 @@
   "id": "stackit",
   "name": "STACKIT",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://api.openai-compat.model-serving.eu01.onstackit.cloud/v1",

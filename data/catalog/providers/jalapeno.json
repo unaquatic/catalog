@@ -2,6 +2,7 @@
   "id": "jalapeno",
   "name": "Jalapeno Cloud",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://api.jalapeno-cloud.ai/v1",

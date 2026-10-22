@@ -2,6 +2,7 @@
   "id": "atomic-chat",
   "name": "Atomic Chat",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "http://127.0.0.1:1337/v1",

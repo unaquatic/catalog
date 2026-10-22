@@ -2,6 +2,7 @@
   "id": "boundless",
   "name": "Boundless",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://api.inference.boundless.network/v1",

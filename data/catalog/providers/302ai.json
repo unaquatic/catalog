@@ -2,6 +2,7 @@
   "id": "302ai",
   "name": "302.AI",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://api.302.ai/v1",

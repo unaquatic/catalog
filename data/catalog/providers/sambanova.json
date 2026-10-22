@@ -2,6 +2,7 @@
   "id": "sambanova",
   "name": "SambaNova",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://api.sambanova.ai/v1",

@@ -2,6 +2,7 @@
   "id": "the-grid-ai",
   "name": "The Grid AI",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://api.thegrid.ai/v1",

@@ -2,6 +2,7 @@
   "id": "inco",
   "name": "Inco",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://api.inco.ai/v1",

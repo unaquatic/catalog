@@ -2,6 +2,7 @@
   "id": "neosmith",
   "name": "NeoSmith",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-responses",
     "api": "https://router.neosmith.ai/v1",

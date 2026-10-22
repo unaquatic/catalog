@@ -2,6 +2,7 @@
   "id": "nova",
   "name": "Nova",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://api.nova.amazon.com/v1",

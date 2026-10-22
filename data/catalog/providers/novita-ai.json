@@ -2,6 +2,7 @@
   "id": "novita-ai",
   "name": "Novita AI",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://api.novita.ai/openai",

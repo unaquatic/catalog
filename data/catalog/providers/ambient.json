@@ -2,6 +2,7 @@
   "id": "ambient",
   "name": "Ambient",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://api.ambient.xyz/v1",

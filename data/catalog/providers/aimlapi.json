@@ -2,6 +2,7 @@
   "id": "aimlapi",
   "name": "AI/ML API",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://api.aimlapi.com/v1",

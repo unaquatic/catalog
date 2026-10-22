@@ -2,6 +2,7 @@
   "id": "ainetcafe",
   "name": "ainetcafe",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://microquickjs.com/v1",

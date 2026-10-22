@@ -2,6 +2,7 @@
   "id": "edenai",
   "name": "Eden AI",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://api.edenai.run/v3",

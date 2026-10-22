@@ -2,6 +2,7 @@
   "id": "zhipuai",
   "name": "Zhipu AI",
   "kind": "lab",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://open.bigmodel.cn/api/paas/v4",

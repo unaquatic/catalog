@@ -2,6 +2,7 @@
   "id": "google-vertex-anthropic",
   "name": "Vertex (Anthropic)",
   "kind": "gateway",
+  "type": "official",
   "endpoint": {
     "format": "anthropic-vertex",
     "api": "https://${GOOGLE_VERTEX_ENDPOINT}/v1/projects/${GOOGLE_VERTEX_PROJECT}/locations/${GOOGLE_VERTEX_LOCATION}/publishers/anthropic/models",

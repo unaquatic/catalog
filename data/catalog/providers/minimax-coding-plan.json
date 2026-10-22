@@ -2,6 +2,7 @@
   "id": "minimax-coding-plan",
   "name": "MiniMax Token Plan (minimax.io)",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "anthropic-messages",
     "api": "https://api.minimax.io/anthropic/v1",

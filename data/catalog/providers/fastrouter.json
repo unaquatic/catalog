@@ -2,6 +2,7 @@
   "id": "fastrouter",
   "name": "FastRouter",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://go.fastrouter.ai/api/v1",

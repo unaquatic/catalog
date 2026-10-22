@@ -2,6 +2,7 @@
   "id": "kuae-cloud-coding-plan",
   "name": "KUAE Cloud Coding Plan",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://coding-plan-endpoint.kuaecloud.net/v1",

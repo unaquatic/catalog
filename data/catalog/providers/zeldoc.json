@@ -2,6 +2,7 @@
   "id": "zeldoc",
   "name": "Zeldoc",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://api.zeldoc.ai/v1",

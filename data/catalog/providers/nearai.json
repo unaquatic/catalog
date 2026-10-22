@@ -2,6 +2,7 @@
   "id": "nearai",
   "name": "NEAR AI Cloud",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://cloud-api.near.ai/v1",

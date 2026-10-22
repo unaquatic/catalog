@@ -2,6 +2,7 @@
   "id": "zenifra",
   "name": "Zenifra",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://ai.zenifra.com/v1",

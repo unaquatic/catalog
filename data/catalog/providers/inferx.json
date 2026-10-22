@@ -2,6 +2,7 @@
   "id": "inferx",
   "name": "InferX",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://model.inferx.net/endpoints/v1",

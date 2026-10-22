@@ -2,6 +2,7 @@
   "id": "amd",
   "name": "AMD",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://developer.amd.com.cn/radeon/api/v1",

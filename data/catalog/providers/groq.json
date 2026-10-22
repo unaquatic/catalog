@@ -2,6 +2,7 @@
   "id": "groq",
   "name": "Groq",
   "kind": "gateway",
+  "type": "official",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://api.groq.com/openai/v1",

@@ -2,6 +2,7 @@
   "id": "minimax-cn",
   "name": "MiniMax (minimax.cn)",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "anthropic-messages",
     "api": "https://api.minimax.cn/anthropic/v1",

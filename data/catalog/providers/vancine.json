@@ -2,6 +2,7 @@
   "id": "vancine",
   "name": "Vancine",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://vancine.com/v1",

@@ -2,6 +2,7 @@
   "id": "nvidia",
   "name": "Nvidia",
   "kind": "lab",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://integrate.api.nvidia.com/v1",

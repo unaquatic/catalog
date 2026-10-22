@@ -2,6 +2,7 @@
   "id": "chutes",
   "name": "Chutes",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://llm.chutes.ai/v1",

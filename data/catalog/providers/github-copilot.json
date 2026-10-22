@@ -2,6 +2,7 @@
   "id": "github-copilot",
   "name": "GitHub Copilot",
   "kind": "gateway",
+  "type": "official",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://api.githubcopilot.com",

@@ -2,6 +2,7 @@
   "id": "pendra",
   "name": "Pendra",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://api.pendra.ai/api/v1",

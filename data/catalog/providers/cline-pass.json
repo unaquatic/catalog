@@ -2,6 +2,7 @@
   "id": "cline-pass",
   "name": "ClinePass",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://api.cline.bot/api/v1",

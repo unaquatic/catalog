@@ -2,6 +2,7 @@
   "id": "inference",
   "name": "Inference",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://inference.net/v1",

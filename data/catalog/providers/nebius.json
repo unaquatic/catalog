@@ -2,6 +2,7 @@
   "id": "nebius",
   "name": "Nebius Token Factory",
   "kind": "gateway",
+  "type": "official",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://api.tokenfactory.nebius.com/v1",

@@ -2,6 +2,7 @@
   "id": "helicone",
   "name": "Helicone",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://ai-gateway.helicone.ai/v1",

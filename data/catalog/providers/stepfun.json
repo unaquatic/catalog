@@ -2,6 +2,7 @@
   "id": "stepfun",
   "name": "StepFun (China)",
   "kind": "lab",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://api.stepfun.com/v1",

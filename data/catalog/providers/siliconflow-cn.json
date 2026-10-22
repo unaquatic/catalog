@@ -2,6 +2,7 @@
   "id": "siliconflow-cn",
   "name": "SiliconFlow (China)",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://api.siliconflow.cn/v1",

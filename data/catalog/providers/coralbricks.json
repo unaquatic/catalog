@@ -2,6 +2,7 @@
   "id": "coralbricks",
   "name": "CoralBricks",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://inference.coralbricks.ai/v1",

@@ -2,6 +2,7 @@
   "id": "echo",
   "name": "Echo",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://echo.tracerml.ai/v1",

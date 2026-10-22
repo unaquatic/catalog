@@ -2,6 +2,7 @@
   "id": "umans-ai",
   "name": "Umans AI",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://api.code.umans.ai/v1",

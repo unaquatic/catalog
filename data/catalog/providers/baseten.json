@@ -2,6 +2,7 @@
   "id": "baseten",
   "name": "Baseten",
   "kind": "gateway",
+  "type": "official",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://inference.baseten.co/v1",

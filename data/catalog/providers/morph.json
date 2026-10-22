@@ -2,6 +2,7 @@
   "id": "morph",
   "name": "Morph",
   "kind": "lab",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://api.morphllm.com/v1",

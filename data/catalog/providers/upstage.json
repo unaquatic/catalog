@@ -2,6 +2,7 @@
   "id": "upstage",
   "name": "Upstage",
   "kind": "lab",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://api.upstage.ai/v1/solar",

@@ -2,6 +2,7 @@
   "id": "model-oracle-ai",
   "name": "Model Oracle AI",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://api.modeloracle.com/api/v1",

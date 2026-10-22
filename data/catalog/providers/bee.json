@@ -2,6 +2,7 @@
   "id": "bee",
   "name": "Bee by HEOSSI",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://api.bee.heossi.com/bee",

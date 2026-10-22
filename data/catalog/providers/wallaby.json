@@ -2,6 +2,7 @@
   "id": "wallaby",
   "name": "Wallaby",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://api.wallabytoken.com/v1",

@@ -2,6 +2,7 @@
   "id": "nan",
   "name": "NaN",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://api.nan.builders/v1",

@@ -2,6 +2,7 @@
   "id": "orcarouter",
   "name": "OrcaRouter",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://api.orcarouter.ai/v1",

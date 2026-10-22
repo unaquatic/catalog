@@ -2,6 +2,7 @@
   "id": "alibaba-coding-plan-cn",
   "name": "Alibaba Coding Plan (China)",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://coding.dashscope.aliyuncs.com/v1",

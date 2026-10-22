@@ -2,6 +2,7 @@
   "id": "privatemode-ai",
   "name": "Privatemode AI",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "http://localhost:8080/v1",

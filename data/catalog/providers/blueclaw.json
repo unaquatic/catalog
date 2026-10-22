@@ -2,6 +2,7 @@
   "id": "blueclaw",
   "name": "Blue Claw",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://openai.blueclaw.network/v1",

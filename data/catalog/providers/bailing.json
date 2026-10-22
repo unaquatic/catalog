@@ -2,6 +2,7 @@
   "id": "bailing",
   "name": "Bailing",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://api.tbox.cn/api/llm/v1",

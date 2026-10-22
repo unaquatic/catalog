@@ -2,6 +2,7 @@
   "id": "ollama-cloud",
   "name": "Ollama Cloud",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://ollama.com/v1",

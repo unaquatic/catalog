@@ -2,6 +2,7 @@
   "id": "huggingface",
   "name": "Hugging Face",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://router.huggingface.co/v1",

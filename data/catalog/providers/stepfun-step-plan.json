@@ -2,6 +2,7 @@
   "id": "stepfun-step-plan",
   "name": "StepFun Step Plan (China)",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://api.stepfun.com/step_plan/v1",

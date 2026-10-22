@@ -2,6 +2,7 @@
   "id": "scnet-token-plan",
   "name": "SCNet Token Plan",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://api.scnet.cn/api/llm/v1",

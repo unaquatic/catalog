@@ -2,6 +2,7 @@
   "id": "greenpt",
   "name": "GreenPT",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://api.greenpt.ai/v1",

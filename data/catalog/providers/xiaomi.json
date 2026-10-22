@@ -2,6 +2,7 @@
   "id": "xiaomi",
   "name": "Xiaomi",
   "kind": "lab",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://api.xiaomimimo.com/v1",

@@ -2,6 +2,7 @@
   "id": "alibaba-token-plan",
   "name": "Alibaba Token Plan",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://token-plan.ap-southeast-1.maas.aliyuncs.com/compatible-mode/v1",

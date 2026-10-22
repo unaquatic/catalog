@@ -2,6 +2,7 @@
   "id": "llmgateway",
   "name": "DevPass (LLM Gateway)",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://api.llmgateway.io/v1",

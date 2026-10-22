@@ -2,6 +2,7 @@
   "id": "standardcompute",
   "name": "Standard Compute",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://api.stdcmpt.com/v1",

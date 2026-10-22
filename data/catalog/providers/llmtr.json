@@ -2,6 +2,7 @@
   "id": "llmtr",
   "name": "LLMTR",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://llmtr.com/v1",

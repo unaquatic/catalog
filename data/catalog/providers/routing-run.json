@@ -2,6 +2,7 @@
   "id": "routing-run",
   "name": "routing.run",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://api.routing.run/v1",

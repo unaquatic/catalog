@@ -2,6 +2,7 @@
   "id": "reflection",
   "name": "Reflection",
   "kind": "lab",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://api.reflection.ai/openai/v1",

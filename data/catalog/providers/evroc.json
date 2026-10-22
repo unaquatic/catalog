@@ -2,6 +2,7 @@
   "id": "evroc",
   "name": "evroc",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://models.think.evroc.com/v1",

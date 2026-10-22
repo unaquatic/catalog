@@ -2,6 +2,7 @@
   "id": "subconscious",
   "name": "Subconscious",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "anthropic-messages",
     "api": "https://api.subconscious.dev/v1",

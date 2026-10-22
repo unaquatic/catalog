@@ -2,6 +2,7 @@
   "id": "hyper",
   "name": "Charm Hyper",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://hyper.charm.land/v1",

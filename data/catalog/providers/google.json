@@ -2,6 +2,7 @@
   "id": "google",
   "name": "Google",
   "kind": "lab",
+  "type": "official",
   "endpoint": {
     "format": "gemini",
     "api": "https://generativelanguage.googleapis.com/v1beta",

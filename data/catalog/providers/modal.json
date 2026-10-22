@@ -2,6 +2,7 @@
   "id": "modal",
   "name": "Modal",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://inference.us-west.modal.direct/v1",

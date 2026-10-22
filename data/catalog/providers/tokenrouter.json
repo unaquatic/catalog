@@ -2,6 +2,7 @@
   "id": "tokenrouter",
   "name": "TokenRouter",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://api.tokenrouter.com/v1",

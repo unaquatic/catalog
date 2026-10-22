@@ -2,6 +2,7 @@
   "id": "volcengine",
   "name": "Volcengine Ark",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://ark.cn-beijing.volces.com/api/v3",

@@ -2,6 +2,7 @@
   "id": "siliconflow",
   "name": "SiliconFlow",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://api.siliconflow.com/v1",

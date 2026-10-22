@@ -2,6 +2,7 @@
   "id": "agentrouter",
   "name": "AgentRouter",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://agentrouter.org/v1",

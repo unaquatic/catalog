@@ -2,6 +2,7 @@
   "id": "wafer.ai",
   "name": "Wafer",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://pass.wafer.ai/v1",

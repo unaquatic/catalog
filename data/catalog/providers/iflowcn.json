@@ -2,6 +2,7 @@
   "id": "iflowcn",
   "name": "iFlow",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://apis.iflow.cn/v1",

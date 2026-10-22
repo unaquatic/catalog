@@ -2,6 +2,7 @@
   "id": "synthetic",
   "name": "Synthetic",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://api.synthetic.new/openai/v1",

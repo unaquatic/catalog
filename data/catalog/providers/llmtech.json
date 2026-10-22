@@ -2,6 +2,7 @@
   "id": "llmtech",
   "name": "LLM Tech",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://api.llmtech.eu/v1",

@@ -2,6 +2,7 @@
   "id": "cloudferro-sherlock",
   "name": "CloudFerro Sherlock",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://api-sherlock.cloudferro.com/openai/v1/",

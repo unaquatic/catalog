@@ -2,6 +2,7 @@
   "id": "anyapi",
   "name": "AnyAPI",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://api.anyapi.ai/v1",

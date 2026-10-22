@@ -2,6 +2,7 @@
   "id": "kenari",
   "name": "Kenari",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://kenari.id/v1",

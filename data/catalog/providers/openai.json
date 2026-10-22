@@ -2,6 +2,7 @@
   "id": "openai",
   "name": "OpenAI",
   "kind": "lab",
+  "type": "official",
   "endpoint": {
     "format": "openai-responses",
     "api": "https://api.openai.com/v1",

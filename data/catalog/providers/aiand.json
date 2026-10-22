@@ -2,6 +2,7 @@
   "id": "aiand",
   "name": "ai&",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://api.aiand.com/v1",

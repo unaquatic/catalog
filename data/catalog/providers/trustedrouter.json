@@ -2,6 +2,7 @@
   "id": "trustedrouter",
   "name": "TrustedRouter",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://api.trustedrouter.com/v1",

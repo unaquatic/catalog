@@ -2,6 +2,7 @@
   "id": "lilac",
   "name": "Lilac",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://api.getlilac.com/v1",

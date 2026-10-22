@@ -2,6 +2,7 @@
   "id": "auriko",
   "name": "Auriko",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://api.auriko.ai/v1",

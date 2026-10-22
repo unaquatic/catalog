@@ -2,6 +2,7 @@
   "id": "kosmik",
   "name": "Kosmik Compute",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://api.koscompute.com/v1",

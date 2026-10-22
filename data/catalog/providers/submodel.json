@@ -2,6 +2,7 @@
   "id": "submodel",
   "name": "submodel",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://llm.submodel.ai/v1",

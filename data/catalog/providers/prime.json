@@ -2,6 +2,7 @@
   "id": "prime",
   "name": "Prime Inference",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://api.pinference.ai/api/v1",

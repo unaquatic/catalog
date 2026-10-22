@@ -2,6 +2,7 @@
   "id": "opencode",
   "name": "OpenCode",
   "kind": "gateway",
+  "type": "official",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://opencode.ai/inference/openai/v1",

@@ -2,6 +2,7 @@
   "id": "poolside",
   "name": "Poolside",
   "kind": "lab",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://inference.poolside.ai/v1",

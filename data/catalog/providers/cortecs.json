@@ -2,6 +2,7 @@
   "id": "cortecs",
   "name": "Cortecs",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://api.cortecs.ai/v1",

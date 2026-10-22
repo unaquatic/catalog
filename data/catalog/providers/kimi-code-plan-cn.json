@@ -2,6 +2,7 @@
   "id": "kimi-code-plan-cn",
   "name": "Kimi For Coding (kimi.com)",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://api.kimi.com/coding/v1",

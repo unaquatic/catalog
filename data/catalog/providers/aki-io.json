@@ -2,6 +2,7 @@
   "id": "aki-io",
   "name": "AKI.IO",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://aki.io/v1",

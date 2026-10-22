@@ -2,6 +2,7 @@
   "id": "mixlayer",
   "name": "Mixlayer",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://models.mixlayer.ai/v1",

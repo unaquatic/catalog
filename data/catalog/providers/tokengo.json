@@ -2,6 +2,7 @@
   "id": "tokengo",
   "name": "TokenGo",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://api.tokengo.com/v1",

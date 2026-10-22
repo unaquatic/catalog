@@ -2,6 +2,7 @@
   "id": "snowflake-cortex",
   "name": "Snowflake Cortex",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://${SNOWFLAKE_ACCOUNT}.snowflakecomputing.com/api/v2/cortex/v1",

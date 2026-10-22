@@ -2,6 +2,7 @@
   "id": "freemodel",
   "name": "FreeModel",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "anthropic-messages",
     "api": "https://cc.freemodel.dev/v1",

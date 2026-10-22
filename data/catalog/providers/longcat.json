@@ -2,6 +2,7 @@
   "id": "longcat",
   "name": "LongCat",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://api.longcat.chat/openai",

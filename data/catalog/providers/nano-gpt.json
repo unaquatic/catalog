@@ -2,6 +2,7 @@
   "id": "nano-gpt",
   "name": "NanoGPT",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://nano-gpt.com/api/v1",

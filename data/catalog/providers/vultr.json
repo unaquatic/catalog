@@ -2,6 +2,7 @@
   "id": "vultr",
   "name": "Vultr",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://api.vultrinference.com/v1",

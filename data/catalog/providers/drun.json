@@ -2,6 +2,7 @@
   "id": "drun",
   "name": "D.Run (China)",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://chat.d.run/v1",

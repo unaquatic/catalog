@@ -2,6 +2,7 @@
   "id": "scx-ai",
   "name": "SCX.ai",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://api.scx.ai/v1",

@@ -2,6 +2,7 @@
   "id": "modelis",
   "name": "Modelis",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://modelishub.com/v1",

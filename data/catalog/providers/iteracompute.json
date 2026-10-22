@@ -2,6 +2,7 @@
   "id": "iteracompute",
   "name": "IteraCompute",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://api.iteracompute.com/v1",

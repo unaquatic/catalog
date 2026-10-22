@@ -2,6 +2,7 @@
   "id": "vivgrid",
   "name": "Vivgrid",
   "kind": "lab",
+  "type": "community",
   "endpoint": {
     "format": "openai-responses",
     "api": "https://api.vivgrid.com/v1",

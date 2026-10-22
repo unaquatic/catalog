@@ -2,6 +2,7 @@
   "id": "above",
   "name": "above.dev",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://api.above.dev/v1",

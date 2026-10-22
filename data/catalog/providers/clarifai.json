@@ -2,6 +2,7 @@
   "id": "clarifai",
   "name": "Clarifai",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://api.clarifai.com/v2/ext/openai/v1",

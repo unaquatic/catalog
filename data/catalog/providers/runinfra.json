@@ -2,6 +2,7 @@
   "id": "runinfra",
   "name": "RunInfra",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://api.runinfra.ai/v1",

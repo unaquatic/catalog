@@ -2,6 +2,7 @@
   "id": "cerebras",
   "name": "Cerebras",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://api.cerebras.ai/v1",

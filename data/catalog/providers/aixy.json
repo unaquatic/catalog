@@ -2,6 +2,7 @@
   "id": "aixy",
   "name": "Aixy",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://api.aixy-gateway.com/v1",

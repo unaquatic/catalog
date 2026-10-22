@@ -2,6 +2,7 @@
   "id": "ai21",
   "name": "AI21 Labs",
   "kind": "lab",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://api.ai21.com/studio/v1",

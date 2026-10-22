@@ -2,6 +2,7 @@
   "id": "dinference",
   "name": "DInference",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://api.dinference.com/v1",

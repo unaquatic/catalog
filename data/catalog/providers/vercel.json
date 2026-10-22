@@ -2,6 +2,7 @@
   "id": "vercel",
   "name": "Vercel AI Gateway",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://ai-gateway.vercel.sh/v1",

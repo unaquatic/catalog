@@ -2,6 +2,7 @@
   "id": "jiekou",
   "name": "Jiekou.AI",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://api.jiekou.ai/openai",

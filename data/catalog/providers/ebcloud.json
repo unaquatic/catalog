@@ -2,6 +2,7 @@
   "id": "ebcloud",
   "name": "EBCloud",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://maas-api.ebcloud.com/v1",

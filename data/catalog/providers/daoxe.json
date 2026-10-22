@@ -2,6 +2,7 @@
   "id": "daoxe",
   "name": "DaoXE",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://daoxe.com/v1",

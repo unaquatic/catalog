@@ -2,6 +2,7 @@
   "id": "berget",
   "name": "Berget.AI",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://api.berget.ai/v1",

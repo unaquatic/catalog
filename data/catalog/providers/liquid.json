@@ -2,6 +2,7 @@
   "id": "liquid",
   "name": "Liquid Inference",
   "kind": "lab",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://router.inference.ai.exchange/v1",

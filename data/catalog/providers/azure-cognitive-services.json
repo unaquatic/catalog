@@ -2,6 +2,7 @@
   "id": "azure-cognitive-services",
   "name": "Azure Cognitive Services",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-responses",
     "api": "https://${AZURE_COGNITIVE_SERVICES_RESOURCE_NAME}.cognitiveservices.azure.com/openai/v1",

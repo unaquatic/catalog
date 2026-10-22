@@ -2,6 +2,7 @@
   "id": "ofox",
   "name": "Ofox",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://api.ofox.ai/v1",

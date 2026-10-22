@@ -2,6 +2,7 @@
   "id": "alibaba-cn",
   "name": "Alibaba (China)",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://dashscope.aliyuncs.com/compatible-mode/v1",

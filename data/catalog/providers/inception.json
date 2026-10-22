@@ -2,6 +2,7 @@
   "id": "inception",
   "name": "Inception",
   "kind": "lab",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://api.inceptionlabs.ai/v1/",

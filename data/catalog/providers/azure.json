@@ -2,6 +2,7 @@
   "id": "azure",
   "name": "Azure",
   "kind": "gateway",
+  "type": "official",
   "endpoint": {
     "format": "openai-responses",
     "api": "https://${AZURE_RESOURCE_NAME}.openai.azure.com/openai/v1",

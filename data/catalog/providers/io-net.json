@@ -2,6 +2,7 @@
   "id": "io-net",
   "name": "IO.NET",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://api.intelligence.io.solutions/api/v1",

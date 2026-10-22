@@ -2,6 +2,7 @@
   "id": "crusoe",
   "name": "Crusoe",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://api.inference.crusoecloud.com/v1",

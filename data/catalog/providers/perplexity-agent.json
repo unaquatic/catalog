@@ -2,6 +2,7 @@
   "id": "perplexity-agent",
   "name": "Perplexity Agent",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-responses",
     "api": "https://api.perplexity.ai/v1",

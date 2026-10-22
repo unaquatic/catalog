@@ -2,6 +2,7 @@
   "id": "wandb",
   "name": "CoreWeave",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://api.inference.wandb.ai/v1",

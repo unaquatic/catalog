@@ -2,6 +2,7 @@
   "id": "stepfun-ai",
   "name": "StepFun (Global)",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://api.stepfun.ai/v1",

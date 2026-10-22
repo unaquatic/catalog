@@ -2,6 +2,7 @@
   "id": "zhipuai-coding-plan",
   "name": "Zhipu AI Coding Plan",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://open.bigmodel.cn/api/coding/paas/v4",

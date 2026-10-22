@@ -2,6 +2,7 @@
   "id": "engy",
   "name": "engy",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://api.engy.ai/v1",

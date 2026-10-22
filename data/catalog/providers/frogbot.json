@@ -2,6 +2,7 @@
   "id": "frogbot",
   "name": "FrogBot",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://app.frogbot.ai/api/v1",

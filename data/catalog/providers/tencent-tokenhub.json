@@ -2,6 +2,7 @@
   "id": "tencent-tokenhub",
   "name": "Tencent TokenHub",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://tokenhub.tencentmaas.com/v1",

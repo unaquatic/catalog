@@ -2,6 +2,7 @@
   "id": "xiaomi-token-plan-sgp",
   "name": "Xiaomi Token Plan (Singapore)",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://token-plan-sgp.xiaomimimo.com/v1",

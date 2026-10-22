@@ -2,6 +2,7 @@
   "id": "sarvam",
   "name": "Sarvam AI",
   "kind": "lab",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://api.sarvam.ai/v1",

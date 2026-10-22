@@ -2,6 +2,7 @@
   "id": "claudinio",
   "name": "Claudinio",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://api.claudin.io/v1",

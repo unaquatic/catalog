@@ -2,6 +2,7 @@
   "id": "crossmodel",
   "name": "CrossModel",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://api.crossmodel.ai/v1",

@@ -2,6 +2,7 @@
   "id": "infer",
   "name": "Infer by Flow7",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-responses",
     "api": "https://infer.flow7.org/v1",

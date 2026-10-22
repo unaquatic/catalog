@@ -2,6 +2,7 @@
   "id": "tencent-token-plan",
   "name": "Tencent Token Plan",
   "kind": "gateway",
+  "type": "community",
   "endpoint": {
     "format": "openai-chat",
     "api": "https://api.lkeap.cloud.tencent.com/plan/v3",
