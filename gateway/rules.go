@@ -96,8 +96,8 @@ type Rule struct {
 	Tier  Tier   `json:"tier,omitempty"`
 	Mode  string `json:"mode,omitempty"`
 	Alias bool   `json:"alias,omitempty"`
-	// Regions are the region prefixes clouds put before model IDs, in the
-	// order Bedrock keeps one listing of each model by; "" is no prefix.
+	// Regions are the region prefixes clouds put before model IDs, which
+	// StripRegion strips; "" is no prefix.
 	// It matches nothing.
 	Regions []string `json:"regions,omitempty"`
 	// Listed keeps Match's providers in a catalog of the providers listed.
@@ -615,18 +615,8 @@ func (r *Rules) CutTier(id string) (base string, tier Tier, ok bool) {
 	return id, "", false
 }
 
-// Regions returns the region prefixes clouds put before model IDs, in the
-// order Bedrock keeps one listing of each model by.
+// Regions returns the region prefixes clouds put before model IDs.
 func (r *Rules) Regions() iter.Seq[string] { return slices.Values(r.regions) }
-
-// BedrockScope returns the region scope of a Bedrock model ID, such as
-// "global" or "us", or "" for an in-region ID.
-func (r *Rules) BedrockScope(id string) string {
-	if p, _, ok := strings.Cut(id, "."); ok && p != "" && slices.Contains(r.regions, p) {
-		return p
-	}
-	return ""
-}
 
 // StripRegion returns s, a normalized model ID, without a region prefix and
 // its dash, the longest.

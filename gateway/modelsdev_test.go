@@ -609,7 +609,7 @@ func TestKeepProviders(t *testing.T) {
 func TestUnlistedCanonical(t *testing.T) {
 	b := modelsdev.Bundle{
 		Models: map[string]modelsdev.LabModel{},
-		Providers: modelsdev.Catalog{"reseller": {ID: "reseller", Name: "Reseller", NPM: "custom-sdk", Models: map[modelsdev.ModelID]modelsdev.Model{
+		Providers: modelsdev.Catalog{"reseller": {ID: "reseller", Name: "Reseller", NPM: "@ai-sdk/openai-compatible", Models: map[modelsdev.ModelID]modelsdev.Model{
 			"x": {ID: "x", Name: "X", CanonicalModelID: "lab/missing"},
 		}}},
 	}
@@ -621,7 +621,6 @@ func TestUnlistedCanonical(t *testing.T) {
 		t.Errorf("offering = %+v, want provider-specific", o)
 	}
 	want := []string{
-		`reseller: unknown request format for npm package "custom-sdk"`,
 		`reseller/x: canonical_model_id "lab/missing" names no models.dev model`,
 	}
 	if got := notes(rep.Notes); !slices.Equal(got, want) {
@@ -640,7 +639,6 @@ func TestClassifyMode(t *testing.T) {
 		{"priority", map[string]any{"service_tier": "priority"}, OptionTier, "fast"},
 		{"flex", map[string]any{"service_tier": "flex"}, OptionTier, "flex"},
 		{"ultrafast", map[string]any{"service_tier": "ultrafast"}, OptionTier, "ultrafast"},
-		{"x", map[string]any{"additionalModelRequestFields": map[string]any{"service_tier": "ultrafast"}}, OptionTier, "ultrafast"},
 		{"fast", map[string]any{"speed": "fast"}, OptionTier, "fast"},
 		{"pro", map[string]any{"reasoning": map[string]any{"mode": "pro"}}, OptionMode, "pro"},
 		{"fast", nil, OptionTier, "fast"},

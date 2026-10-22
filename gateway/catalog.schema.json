@@ -18,11 +18,10 @@
       "type": "object"
     },
     "auth_scheme": {
-      "description": "How a request carries its credentials: \"bearer\" sends the API key as \"Authorization: Bearer <key>\", \"header\" sends it in the header \"header\" names, \"aws\" signs the request with AWS credentials, and \"google\" uses Google Cloud credentials.",
+      "description": "How a request carries its credentials: \"bearer\" sends the API key as \"Authorization: Bearer <key>\", \"header\" sends it in the header \"header\" names, and \"google\" uses Google Cloud credentials.",
       "examples": [
         "bearer",
         "header",
-        "aws",
         "google"
       ],
       "type": "string"
@@ -251,7 +250,7 @@
         },
         "format": {
           "$ref": "#/$defs/format",
-          "description": "The request format the API takes. Absent when not known."
+          "description": "The request format the API takes. Every endpoint the catalog lists has one: it leaves out the providers and offerings whose format it does not know."
         }
       },
       "type": "object"
@@ -275,14 +274,13 @@
       "type": "object"
     },
     "format": {
-      "description": "An API's request format: how a client builds a request and reads the response. \"openai-chat\" is OpenAI's Chat Completions, \"openai-responses\" OpenAI's Responses, \"anthropic-messages\" Anthropic's Messages, \"anthropic-vertex\" Anthropic's Messages on Google Vertex AI, \"gemini\" Google's Gemini generateContent, and \"bedrock-converse\" Amazon Bedrock's Converse.",
+      "description": "An API's request format: how a client builds a request and reads the response. \"openai-chat\" is OpenAI's Chat Completions, \"openai-responses\" OpenAI's Responses, \"anthropic-messages\" Anthropic's Messages, \"anthropic-vertex\" Anthropic's Messages on Google Vertex AI, and \"gemini\" Google's Gemini generateContent. The catalog lists no provider or offering of another format.",
       "examples": [
         "openai-chat",
         "openai-responses",
         "anthropic-messages",
         "anthropic-vertex",
-        "gemini",
-        "bedrock-converse"
+        "gemini"
       ],
       "type": "string"
     },

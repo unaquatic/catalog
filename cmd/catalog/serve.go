@@ -31,7 +31,7 @@ func LoaderFor(o ServeOptions) Loader {
 		c, rep, err := Load(ctx, o.SourceOptions, time.Now())
 		if err == nil {
 			slog.Info("catalog built", "source", c.Source, "models", rep.Models, "providers", rep.Providers,
-				"listings", rep.Listings, "offerings", rep.Offerings, "variants", rep.Variants, "aliases", rep.AliasIDs, "dropped", rep.Dropped,
+				"listings", rep.Listings, "offerings", rep.Offerings, "variants", rep.Variants, "aliases", rep.AliasIDs,
 				"unlisted", rep.Bases[gateway.BasisNone], "services", len(rep.Services), "unknown", len(rep.Unknown), "notes", len(rep.Notes))
 		}
 		return c, err

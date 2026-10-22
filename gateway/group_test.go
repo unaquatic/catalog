@@ -109,8 +109,8 @@ func TestGroupCalls(t *testing.T) {
 	if !slices.ContainsFunc(rep.Notes, func(n Note) bool { return strings.Contains(n.Text, `mode "turbo"`) }) {
 		t.Errorf("no note of the turbo mode left out in %v", rep.Notes)
 	}
-	if rep.Offerings != 30 || rep.Dropped != 0 {
-		t.Errorf("offerings %d, dropped %d; want 30, 0", rep.Offerings, rep.Dropped)
+	if rep.Offerings != 30 {
+		t.Errorf("offerings %d, want 30", rep.Offerings)
 	}
 	// Variant IDs are unique at each provider.
 	for p := range c.Providers {
@@ -140,22 +140,6 @@ func TestVariantVocabulary(t *testing.T) {
 				}
 			}
 		}
-	}
-}
-
-func TestGroupBedrock(t *testing.T) {
-	c, rep := groupEndpoints(t)
-	// One region: global first. Its ultrafast tier keeps Converse's
-	// wrapper; the regional Mantle listing is dropped.
-	o := mustOffering(t, c, "amazon-bedrock", "openai/gpt-6.1-sol")
-	if got, want := calls(o), []string{"= global.openai.gpt-6.1-sol", "ultrafast = "}; !slices.Equal(got, want) {
-		t.Errorf("bedrock calls = %q, want %q", got, want)
-	}
-	if o.Price.Input != 2 || o.ProviderOptions.Endpoint != nil {
-		t.Errorf("bedrock call = %+v, want global's $2 at the provider's endpoint", o)
-	}
-	if rep.Dropped != 2 {
-		t.Errorf("dropped %d, want 2: us. and the regional Mantle ID", rep.Dropped)
 	}
 }
 
@@ -251,15 +235,16 @@ func TestCatalogLookup(t *testing.T) {
 
 func TestResolve(t *testing.T) {
 	c, _ := groupEndpoints(t)
-	r, ok := c.Resolve("amazon-bedrock", "openai/gpt-6.1-sol:ultrafast")
-	want := map[string]any{"additionalModelRequestFields": map[string]any{"service_tier": "ultrafast"}}
-	if !ok || r.Model != "openai/gpt-6.1-sol" || r.Tier != TierUltrafast || r.ProviderOptions.ID != "global.openai.gpt-6.1-sol" ||
+	// Azure's gpt-5.1, unlisted here, in its fast tier.
+	r, ok := c.Resolve("azure", "gpt-5.1:fast")
+	want := map[string]any{"service_tier": "priority"}
+	if !ok || r.Model != "" || r.Tier != TierFast || r.ProviderOptions.ID != "gpt-5.1" ||
 		!reflect.DeepEqual(r.ProviderOptions.Body, want) || r.ProviderOptions.Endpoint == nil ||
-		r.ProviderOptions.Endpoint.Format != FormatBedrockConverse || r.Price.Input != 12 {
-		t.Errorf("Resolve = %+v, %v; want global's ID, the tier's fields and price, Bedrock's endpoint", r, ok)
+		r.ProviderOptions.Endpoint.Format != FormatOpenAIResponses {
+		t.Errorf("Resolve = %+v, %v; want gpt-5.1, the tier's fields, Azure's endpoint", r, ok)
 	}
-	if _, ok := c.Resolve("amazon-bedrock", "openai/gpt-6.1-sol:fast"); ok {
-		t.Error("Resolve found a tier Bedrock does not offer")
+	if _, ok := c.Resolve("azure", "gpt-5.1:ultrafast"); ok {
+		t.Error("Resolve found a tier Azure does not offer")
 	}
 
 	f, _ := groupFixture(t)

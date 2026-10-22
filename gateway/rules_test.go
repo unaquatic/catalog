@@ -97,9 +97,6 @@ func TestDefaultRules(t *testing.T) {
 		!slices.Contains(r.NoThinkingSuffixes(), "-nothink") {
 		t.Error("suffixes of free, thinking and no-thinking IDs")
 	}
-	if r.BedrockScope("global.anthropic.claude-opus-4-8") != "global" || r.BedrockScope("anthropic.claude-opus-4-8") != "" {
-		t.Error("BedrockScope")
-	}
 	if got := r.StripRegion("us-gov-anthropic-claude"); got != "anthropic-claude" {
 		t.Errorf("StripRegion = %s, want the longest region off", got)
 	}

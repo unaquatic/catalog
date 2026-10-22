@@ -3,7 +3,6 @@ package gateway
 import (
 	"os"
 	"slices"
-	"strings"
 	"testing"
 
 	"github.com/unaquatic/catalog/modelsdev"
@@ -28,10 +27,7 @@ func buildEndpoints(t *testing.T) (*Listings, Report) {
 	return c, rep
 }
 
-const (
-	awsEnv    = "AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY AWS_REGION AWS_BEARER_TOKEN_BEDROCK"
-	vertexAPI = "https://${GOOGLE_VERTEX_ENDPOINT}/v1/projects/${GOOGLE_VERTEX_PROJECT}/locations/${GOOGLE_VERTEX_LOCATION}"
-)
+const vertexAPI = "https://${GOOGLE_VERTEX_ENDPOINT}/v1/projects/${GOOGLE_VERTEX_PROJECT}/locations/${GOOGLE_VERTEX_LOCATION}"
 
 func TestProviderEndpoints(t *testing.T) {
 	c, _ := buildEndpoints(t)
@@ -39,14 +35,10 @@ func TestProviderEndpoints(t *testing.T) {
 		id   ProviderID
 		want Endpoint
 	}{
-		{"amazon-bedrock", Endpoint{Format: FormatBedrockConverse, API: "https://bedrock-runtime.${AWS_REGION}.amazonaws.com",
-			APIDefault: true, Auth: Auth{Scheme: AuthAWS}}},
 		{"llmgateway-providers", Endpoint{Format: FormatOpenAIChat, API: "https://api.llmgateway.io/v1", Auth: Auth{Scheme: AuthBearer}}},
 		{"google-vertex", Endpoint{Format: FormatGemini, API: vertexAPI + "/publishers/google", APIDefault: true, Auth: Auth{Scheme: AuthGoogle}}},
 		{"azure", Endpoint{Format: FormatOpenAIResponses, API: "https://${AZURE_RESOURCE_NAME}.openai.azure.com/openai/v1", APIDefault: true,
 			Auth: Auth{Scheme: AuthHeader, Header: "api-key"}}},
-		// A package the catalog does not know: no format, no auth.
-		{"gitlab", Endpoint{}},
 	}
 	for _, tt := range tests {
 		ep := c.Providers[tt.id].Endpoint
@@ -55,8 +47,12 @@ func TestProviderEndpoints(t *testing.T) {
 			t.Errorf("%s endpoint = %+v, want %+v", tt.id, ep, tt.want)
 		}
 	}
-	if env := c.Providers["amazon-bedrock"].Endpoint.Env; !slices.Equal(env, strings.Fields(awsEnv)) {
-		t.Errorf("bedrock env = %q, want models.dev's", env)
+	// Packages the catalog knows no format of, Bedrock's and GitLab's,
+	// leave their providers out.
+	for _, id := range []ProviderID{"amazon-bedrock", "gitlab"} {
+		if _, ok := c.Providers[id]; ok {
+			t.Errorf("%s is listed, whose request format the catalog does not know", id)
+		}
 	}
 }
 
@@ -68,20 +64,13 @@ func TestOfferingEndpoints(t *testing.T) {
 		own      bool // the offering has an endpoint of its own
 		want     Endpoint
 	}{
-		// Bedrock's Converse entries take the provider's endpoint; Mantle
-		// takes OpenAI Responses at a URL of its own, with AWS auth.
-		{"amazon-bedrock", "global.openai.gpt-6.1-sol", false, Endpoint{Format: FormatBedrockConverse,
-			API: "https://bedrock-runtime.${AWS_REGION}.amazonaws.com", APIDefault: true, Auth: Auth{Scheme: AuthAWS}}},
-		{"amazon-bedrock", "openai.gpt-6.1-sol", true, Endpoint{Format: FormatOpenAIResponses,
-			API: "https://bedrock-mantle.${AWS_REGION}.api.aws/openai/v1", Auth: Auth{Scheme: AuthAWS}}},
 		// Vertex: Anthropic's own format, at the SDK's default URL; an
-		// OpenAI-compatible endpoint with a Google token; Mistral, which no
-		// format describes, keeps its URL and auth.
+		// OpenAI-compatible endpoint with a Google token. Mistral's, which no
+		// format describes, is left out.
 		{"google-vertex", "claude-opus-4-1@20250805", true, Endpoint{Format: FormatAnthropicVertex,
 			API: vertexAPI + "/publishers/anthropic/models", APIDefault: true, Auth: Auth{Scheme: AuthGoogle}}},
 		{"google-vertex", "zai-org/glm-5.2-maas", true, Endpoint{Format: FormatOpenAIChat,
 			API: vertexAPI + "/endpoints/openapi", Auth: Auth{Scheme: AuthGoogle}}},
-		{"google-vertex", "codestral-2", true, Endpoint{API: vertexAPI + "/publishers/mistralai/models", Auth: Auth{Scheme: AuthGoogle}}},
 		{"google-vertex", "gemini-3.7-flash", false, Endpoint{Format: FormatGemini, API: vertexAPI + "/publishers/google", APIDefault: true,
 			Auth: Auth{Scheme: AuthGoogle}}},
 		// Azure: Anthropic's package sends x-api-key; a completions shape
@@ -110,9 +99,14 @@ func TestOfferingEndpoints(t *testing.T) {
 	if _, ok := c.EndpointOf(Ref{Provider: "azure", ID: "nope"}); ok {
 		t.Error("EndpointOf found an offering the catalog does not list")
 	}
+	if _, ok := c.Providers["google-vertex"].Models["codestral-2"]; ok {
+		t.Error("codestral-2 is listed, whose request format the catalog does not know")
+	}
 	want := []string{
 		`gitlab: unknown request format for npm package "gitlab-ai-provider"`,
+		`gitlab: left out: the catalog does not know its request format`,
 		`google-vertex/codestral-2: Mistral on Vertex AI takes chat bodies at {model}:streamRawPredict, which no format describes`,
+		`google-vertex/codestral-2: left out: the catalog does not know its endpoint's request format`,
 	}
 	var got []string
 	for _, n := range rep.Notes {
@@ -136,12 +130,12 @@ func TestFormatOf(t *testing.T) {
 		{"@ai-sdk/openai", modelsdev.ShapeCompletions, FormatOpenAIChat, true},
 		{"@ai-sdk/openai-compatible", "", FormatOpenAIChat, true},
 		{"@ai-sdk/openai-compatible", modelsdev.ShapeResponses, FormatOpenAIResponses, true},
-		{"@ai-sdk/amazon-bedrock/mantle", modelsdev.ShapeResponses, FormatOpenAIResponses, true},
+		{"@ai-sdk/amazon-bedrock/mantle", modelsdev.ShapeResponses, "", false},
 		{"@ai-sdk/azure", "", FormatOpenAIResponses, true},
 		{"@ai-sdk/anthropic", "", FormatAnthropicMessages, true},
 		{"@ai-sdk/google-vertex/anthropic", "", FormatAnthropicVertex, true},
 		{"@ai-sdk/google-vertex", "", FormatGemini, true},
-		{"@ai-sdk/amazon-bedrock", "", FormatBedrockConverse, true},
+		{"@ai-sdk/amazon-bedrock", "", "", false},
 		{"@openrouter/ai-sdk-provider", "", FormatOpenAIChat, true},
 		{"@ai-sdk/gateway", "", FormatOpenAIChat, true},
 		{"gitlab-ai-provider", "", "", false},
@@ -161,9 +155,6 @@ func TestLookup(t *testing.T) {
 		env  map[string]string
 		want string
 	}{
-		{"AWS_REGION", map[string]string{"AWS_REGION": "eu-west-1", "AWS_DEFAULT_REGION": "us-west-2"}, "eu-west-1"},
-		{"AWS_REGION", map[string]string{"AWS_DEFAULT_REGION": "us-west-2"}, "us-west-2"},
-		{"AWS_REGION", nil, "us-east-1"},
 		{"GOOGLE_VERTEX_PROJECT", map[string]string{"GOOGLE_CLOUD_PROJECT": "p"}, "p"},
 		{"GOOGLE_VERTEX_PROJECT", nil, ""},
 		{"GOOGLE_VERTEX_LOCATION", nil, "global"},
@@ -180,7 +171,7 @@ func TestLookup(t *testing.T) {
 }
 
 // TestKeyEnv checks which variables hold an API key: not a base URL's, not
-// AWS's or Google's credentials, but Bedrock's API key.
+// Google's credentials.
 func TestKeyEnv(t *testing.T) {
 	tests := []struct {
 		ep   Endpoint
@@ -188,7 +179,6 @@ func TestKeyEnv(t *testing.T) {
 	}{
 		{Endpoint{API: "https://${AZURE_RESOURCE_NAME}.openai.azure.com/openai/v1", Auth: Auth{Scheme: AuthHeader, Header: "api-key"},
 			Env: []string{"AZURE_RESOURCE_NAME", "AZURE_API_KEY"}}, []string{"AZURE_API_KEY"}},
-		{Endpoint{Auth: Auth{Scheme: AuthAWS}, Env: []string{"AWS_ACCESS_KEY_ID", "AWS_SECRET_ACCESS_KEY", "AWS_REGION", BedrockKeyEnv}}, []string{BedrockKeyEnv}},
 		{Endpoint{Auth: Auth{Scheme: AuthGoogle}, Env: []string{"GOOGLE_VERTEX_PROJECT", "GOOGLE_APPLICATION_CREDENTIALS"}}, nil},
 		{Endpoint{Auth: Auth{Scheme: AuthBearer}, Env: []string{"OPENROUTER_API_KEY"}}, []string{"OPENROUTER_API_KEY"}},
 	}

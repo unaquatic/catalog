@@ -122,7 +122,7 @@
   "endpoint": {
     "description": "How to call an API: its request format, its base URL, how it authenticates, and the environment variables it reads.",
     "properties": {
-      "format": "The request format the API takes. Absent when not known.",
+      "format": "The request format the API takes. Every endpoint the catalog lists has one: it leaves out the providers and offerings whose format it does not know.",
       "api": "The API's base URL. It may hold environment variables as ${NAME}, such as ${AWS_REGION}, for a client to fill in.",
       "api_default": "True when models.dev lists no base URL, and \"api\" is the one the provider's SDK uses by default.",
       "auth": "How the API authenticates requests. Absent when not known.",
@@ -130,7 +130,7 @@
     }
   },
   "format": {
-    "description": "An API's request format: how a client builds a request and reads the response. \"openai-chat\" is OpenAI's Chat Completions, \"openai-responses\" OpenAI's Responses, \"anthropic-messages\" Anthropic's Messages, \"anthropic-vertex\" Anthropic's Messages on Google Vertex AI, \"gemini\" Google's Gemini generateContent, and \"bedrock-converse\" Amazon Bedrock's Converse."
+    "description": "An API's request format: how a client builds a request and reads the response. \"openai-chat\" is OpenAI's Chat Completions, \"openai-responses\" OpenAI's Responses, \"anthropic-messages\" Anthropic's Messages, \"anthropic-vertex\" Anthropic's Messages on Google Vertex AI, and \"gemini\" Google's Gemini generateContent. The catalog lists no provider or offering of another format."
   },
   "auth": {
     "description": "How an API authenticates requests.",
@@ -140,7 +140,7 @@
     }
   },
   "auth_scheme": {
-    "description": "How a request carries its credentials: \"bearer\" sends the API key as \"Authorization: Bearer <key>\", \"header\" sends it in the header \"header\" names, \"aws\" signs the request with AWS credentials, and \"google\" uses Google Cloud credentials."
+    "description": "How a request carries its credentials: \"bearer\" sends the API key as \"Authorization: Bearer <key>\", \"header\" sends it in the header \"header\" names, and \"google\" uses Google Cloud credentials."
   },
   "offering": {
     "description": "A model as one provider serves it: the model's facts at that provider, and how to call it there.",

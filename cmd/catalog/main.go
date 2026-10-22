@@ -250,8 +250,8 @@ func ParseIDs(list string) []gateway.ProviderID {
 // when all is set.
 func PrintReport(w io.Writer, rep gateway.Report, all bool) {
 	n := rep.Bases
-	fmt.Fprintf(w, "catalog: %d models, %d providers, %d listings grouped into %d offerings with %d variants and %d aliases, %d dropped\n",
-		rep.Models, rep.Providers, rep.Listings, rep.Offerings, rep.Variants, rep.AliasIDs, rep.Dropped)
+	fmt.Fprintf(w, "catalog: %d models, %d providers, %d listings grouped into %d offerings with %d variants and %d aliases\n",
+		rep.Models, rep.Providers, rep.Listings, rep.Offerings, rep.Variants, rep.AliasIDs)
 	fmt.Fprintf(w, "catalog: models.dev ties %d by canonical_model_id and %d as a lab's own; rules tie %d by ID, %d as a tier, %d as pro, %d as inferred; %d provider-specific\n",
 		n[gateway.BasisCanonical], n[gateway.BasisLab], n[gateway.BasisID], n[gateway.BasisTier], n[gateway.BasisPro],
 		n[gateway.BasisInferred], n[gateway.BasisNone])

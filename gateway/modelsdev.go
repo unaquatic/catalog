@@ -96,13 +96,10 @@ type Report struct {
 	// Listings counts models.dev's entries of the providers kept, and
 	// Offerings, Variants and AliasIDs what they were grouped into: the
 	// offerings, their variants, and the model IDs among their aliases.
-	// Dropped counts Bedrock's copies of a model for other regions, which
-	// the grouping leaves out.
 	Listings  int
 	Offerings int
 	Variants  int
 	AliasIDs  int
-	Dropped   int
 	// Bases counts listings by how they were tied to a model.
 	Bases map[Basis]int
 	// Merged lists the models.dev models merged into another as a tier,
@@ -303,6 +300,12 @@ func list(b modelsdev.Bundle, opts Options) (*builder, error) {
 		if !ok {
 			return nil, fmt.Errorf("%w: %q", ErrUnknownProvider, pid)
 		}
+		// A provider whose request format the catalog does not know is
+		// none a client can call.
+		if bl.endpoint(pid, "", p.NPM, "", p.API).Format == "" {
+			bl.note(pid, "", "left out: the catalog does not know its request format")
+			continue
+		}
 		out.Providers[pid] = bl.provider(pid, p)
 	}
 	if bl.infer {
@@ -432,6 +435,10 @@ func (b *builder) provider(pid ProviderID, p modelsdev.Provider) ListedProvider 
 	for _, id := range slices.Sorted(maps.Keys(p.Models)) {
 		m := p.Models[id]
 		o := b.listing(prov, m)
+		if o.Endpoint != nil && o.Endpoint.Format == "" {
+			b.note(pid, o.ID, "left out: the catalog does not know its endpoint's request format")
+			continue
+		}
 		b.tie(pid, &o, m)
 		prov.Models[o.ID] = o
 		b.report.Listings++
@@ -647,16 +654,10 @@ func setOption[K comparable](opts *map[K]Option, k K, o Option) {
 
 // ClassifyMode tells what the models.dev mode named name, which sets body
 // in a request, becomes: a service tier, as OptionTier and the tier, when
-// body sets service_tier (at its top or within Bedrock's
-// additionalModelRequestFields) or speed, or when name is a tier's; a
+// body sets service_tier or speed, or when name is a tier's; a
 // reasoning mode, as OptionMode and its name, when body sets
 // reasoning.mode; or neither, as OptionUnknown and name.
 func ClassifyMode(name string, body map[string]any) (kind OptionKind, key string) {
-	if extra, ok := body["additionalModelRequestFields"].(map[string]any); ok {
-		if st, ok := extra["service_tier"].(string); ok {
-			return OptionTier, string(TierOfServiceTier(st))
-		}
-	}
 	if st, ok := body["service_tier"].(string); ok {
 		return OptionTier, string(TierOfServiceTier(st))
 	}

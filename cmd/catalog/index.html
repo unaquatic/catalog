@@ -349,7 +349,7 @@ function optionNames(rows) {
 const optionBadges = (names) => names.map((n) => h("span", { class: "badge " + (TIERS.includes(n) ? n : "mode"), title: n }, optionName(n)));
 function authText(a) {
   if (!a?.scheme) return "unknown";
-  return { bearer: "Authorization: Bearer <key>", header: `${a.header}: <key>`, aws: "AWS SigV4, or Bearer AWS_BEARER_TOKEN_BEDROCK",
+  return { bearer: "Authorization: Bearer <key>", header: `${a.header}: <key>`,
     google: "Google OAuth token (Bearer)" }[a.scheme] || a.scheme;
 }
 // endpointView shows an endpoint: its format, base URL, auth and env.

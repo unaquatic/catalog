@@ -13,9 +13,6 @@ import (
 // serves, keyed by the model's ID, and its provider-specific listings into
 // Unlisted, keyed by its own IDs:
 //
-//   - Bedrock keeps one region of a model, in the order of the rules'
-//     regions: global if it lists one, then none, then the first
-//     geography. The other regions' listings are dropped.
 //   - One listing is the offering's call, its ProviderOptions and price:
 //     of those that are no tier or mode of another, the one whose ID names
 //     the model most closely, then the one with the most tiers and modes
@@ -52,9 +49,6 @@ func (b *builder) Group() *Catalog {
 				prov.Unlisted = make(map[string]Offering)
 			}
 			prov.Unlisted[key] = named(b.offering(prov, ModelID(key), ls, nil), UnlistedName(key, b.spell))
-		}
-		if lp.Endpoint.Format == FormatBedrockConverse {
-			b.dropRegions(lp.ID, tied)
 		}
 		runs := make(map[ModelID][]run)
 		for _, ls := range tied {
@@ -167,25 +161,6 @@ type run struct {
 	listing Listing
 	mode    string
 	opt     Option
-}
-
-// dropRegions keeps, of each model's Bedrock listings in tied, those of the
-// first of the rules' regions that it lists, and drops the others.
-func (b *builder) dropRegions(pid ProviderID, tied map[ModelID][]Listing) {
-	dropped := 0
-	for m, ls := range tied {
-		keep := slices.MinFunc(ls, func(x, y Listing) int {
-			return cmp.Compare(slices.Index(b.rules.regions, b.rules.BedrockScope(x.ID)), slices.Index(b.rules.regions, b.rules.BedrockScope(y.ID)))
-		})
-		scope := b.rules.BedrockScope(keep.ID)
-		kept := slices.DeleteFunc(slices.Clone(ls), func(o Listing) bool { return b.rules.BedrockScope(o.ID) != scope })
-		dropped += len(ls) - len(kept)
-		tied[m] = kept
-	}
-	if dropped > 0 {
-		b.report.Dropped += dropped
-		b.note(pid, "", "dropped %d listings of other regions: each model keeps one region, global first", dropped)
-	}
 }
 
 // step says how a listing is a tier or mode of another of the same model at

@@ -30,20 +30,15 @@ const (
 	// {api}/models/{model}:streamGenerateContent?alt=sse, at the Gemini API
 	// and at Vertex AI alike.
 	FormatGemini Format = "gemini"
-	// FormatBedrockConverse is Amazon Bedrock's Converse: POST
-	// {api}/model/{model}/converse-stream, which streams AWS event-stream
-	// messages, not server-sent events. A model's own fields go in the
-	// body's additionalModelRequestFields.
-	FormatBedrockConverse Format = "bedrock-converse"
 )
 
 // Formats are the request formats the catalog knows: a client that speaks
-// them all can call every endpoint the catalog lists a format for. An
-// endpoint whose format the catalog does not know, as of an SDK package it
-// cannot map, has none, and the build notes it.
+// them all can call every endpoint the catalog lists. A provider or a
+// listing whose format the catalog does not know, as of an SDK package it
+// cannot map, is left out of it, and the build notes it.
 var Formats = []Format{
 	FormatOpenAIChat, FormatOpenAIResponses, FormatAnthropicMessages,
-	FormatAnthropicVertex, FormatGemini, FormatBedrockConverse,
+	FormatAnthropicVertex, FormatGemini,
 }
 
 // AuthScheme is how a request proves who sends it.
@@ -56,16 +51,13 @@ const (
 	// AuthHeader sends the key in the header Auth.Header names, as
 	// Anthropic's "x-api-key".
 	AuthHeader AuthScheme = "header"
-	// AuthAWS signs the request with AWS credentials (SigV4), or sends
-	// AWS_BEARER_TOKEN_BEDROCK as "Authorization: Bearer <token>".
-	AuthAWS AuthScheme = "aws"
 	// AuthGoogle sends a Google OAuth access token, from application
 	// default credentials, as "Authorization: Bearer <token>".
 	AuthGoogle AuthScheme = "google"
 )
 
 // AuthSchemes are the authentication schemes the catalog knows.
-var AuthSchemes = []AuthScheme{AuthBearer, AuthHeader, AuthAWS, AuthGoogle}
+var AuthSchemes = []AuthScheme{AuthBearer, AuthHeader, AuthGoogle}
 
 // Auth says how an API authenticates requests.
 type Auth struct {
@@ -83,7 +75,8 @@ type Auth struct {
 // GOOGLE_VERTEX_LOCATION is "global" and
 // {GOOGLE_VERTEX_LOCATION}-aiplatform.googleapis.com otherwise.
 type Endpoint struct {
-	// Format is empty when the catalog does not know the API's format.
+	// Format is empty when the catalog does not know the API's format,
+	// which leaves its provider or listing out of the catalog.
 	Format Format `json:"format,omitempty"`
 	API    string `json:"api,omitempty"`
 	// APIDefault reports that models.dev lists no base URL, and API is the
@@ -101,24 +94,12 @@ func (e Endpoint) Equal(f Endpoint) bool {
 		slices.Equal(e.Env, f.Env)
 }
 
-// BedrockKeyEnv is the environment variable that holds an Amazon Bedrock
-// API key, which Bedrock takes as a bearer token in place of signed
-// requests.
-const BedrockKeyEnv = "AWS_BEARER_TOKEN_BEDROCK"
-
 // KeyEnv returns the environment variables of e that may hold an API key,
 // in e's order: for a key sent as a bearer token or in a header, those its
-// base URL does not name, as Azure's names its resource; for AWS, the
-// Bedrock API key, BedrockKeyEnv, as the others hold credentials to sign
-// with; and none for Google, whose variables say where its credentials are.
+// base URL does not name, as Azure's names its resource; and none for
+// Google, whose variables say where its credentials are.
 func (e Endpoint) KeyEnv() []string {
-	switch e.Auth.Scheme {
-	case AuthAWS:
-		if slices.Contains(e.Env, BedrockKeyEnv) {
-			return []string{BedrockKeyEnv}
-		}
-		return nil
-	case AuthGoogle:
+	if e.Auth.Scheme == AuthGoogle {
 		return nil
 	}
 	return slices.DeleteFunc(slices.Clone(e.Env), func(name string) bool { return strings.Contains(e.API, "${"+name+"}") })
@@ -126,8 +107,7 @@ func (e Endpoint) KeyEnv() []string {
 
 // Lookup returns the value of the variable name that a base URL names, as
 // env reads it, or, for the variables models.dev names for the clouds, as
-// their SDKs find them: AWS_REGION from AWS_DEFAULT_REGION, else us-east-1;
-// GOOGLE_VERTEX_PROJECT from GOOGLE_CLOUD_PROJECT, GCP_PROJECT or
+// their SDKs find them: GOOGLE_VERTEX_PROJECT from GOOGLE_CLOUD_PROJECT, GCP_PROJECT or
 // GCLOUD_PROJECT; GOOGLE_VERTEX_LOCATION from GOOGLE_CLOUD_LOCATION or
 // VERTEX_LOCATION, else global, the location that serves the most models;
 // and GOOGLE_VERTEX_ENDPOINT, which no SDK reads, from the location. It
@@ -142,8 +122,6 @@ func Lookup(name string, env func(string) string) string {
 		return ""
 	}
 	switch name {
-	case "AWS_REGION":
-		return cmp.Or(first(name, "AWS_DEFAULT_REGION"), "us-east-1")
 	case "GOOGLE_VERTEX_PROJECT":
 		return first(name, "GOOGLE_CLOUD_PROJECT", "GCP_PROJECT", "GCLOUD_PROJECT")
 	case "GOOGLE_VERTEX_LOCATION":
@@ -172,7 +150,7 @@ func FormatOf(npm string, shape modelsdev.APIShape) (Format, bool) {
 			return FormatOpenAIChat, true
 		}
 		return FormatOpenAIResponses, true
-	case "@ai-sdk/openai-compatible", "@ai-sdk/amazon-bedrock/mantle":
+	case "@ai-sdk/openai-compatible":
 		if shape == modelsdev.ShapeResponses {
 			return FormatOpenAIResponses, true
 		}
@@ -183,8 +161,6 @@ func FormatOf(npm string, shape modelsdev.APIShape) (Format, bool) {
 		return FormatAnthropicVertex, true
 	case "@ai-sdk/google", "@ai-sdk/google-vertex":
 		return FormatGemini, true
-	case "@ai-sdk/amazon-bedrock":
-		return FormatBedrockConverse, true
 	case "@ai-sdk/gateway", "@openrouter/ai-sdk-provider", "@ai-sdk/xai", "@ai-sdk/mistral", "@ai-sdk/groq",
 		"@ai-sdk/cerebras", "@ai-sdk/togetherai", "@ai-sdk/deepinfra", "@ai-sdk/perplexity", "@ai-sdk/cohere":
 		return FormatOpenAIChat, true
@@ -203,7 +179,6 @@ var DefaultAPIs = map[string]string{
 	"@ai-sdk/google":                  "https://generativelanguage.googleapis.com/v1beta",
 	"@ai-sdk/google-vertex":           vertexBase + "/publishers/google",
 	"@ai-sdk/google-vertex/anthropic": vertexBase + "/publishers/anthropic/models",
-	"@ai-sdk/amazon-bedrock":          "https://bedrock-runtime.${AWS_REGION}.amazonaws.com",
 	"@ai-sdk/gateway":                 "https://ai-gateway.vercel.sh/v1",
 	"@openrouter/ai-sdk-provider":     "https://openrouter.ai/api/v1",
 	"@ai-sdk/xai":                     "https://api.x.ai/v1",
@@ -232,17 +207,14 @@ var ProviderAuths = map[ProviderID]Auth{
 
 // AuthOf returns how a request authenticates with package npm at provider
 // pid, whose own package is providerNPM. A cloud's own credentials go with
-// its host, whatever package speaks to it: Bedrock's Mantle endpoint takes
-// AWS credentials, and Vertex AI's OpenAI-compatible one a Google token; so
-// do ProviderAuths. Otherwise the package decides, as Anthropic's sends
+// its host, whatever package speaks to it: Vertex AI's OpenAI-compatible
+// endpoint takes a Google token; so do ProviderAuths. Otherwise the package decides, as Anthropic's sends
 // "x-api-key". It reports false for a package the catalog does not know.
 func AuthOf(pid ProviderID, providerNPM, npm string) (Auth, bool) {
 	if a, ok := ProviderAuths[pid]; ok {
 		return a, true
 	}
 	switch {
-	case strings.HasPrefix(providerNPM, "@ai-sdk/amazon-bedrock"):
-		return Auth{Scheme: AuthAWS}, true
 	case strings.HasPrefix(providerNPM, "@ai-sdk/google-vertex"):
 		return Auth{Scheme: AuthGoogle}, true
 	}

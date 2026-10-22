@@ -47,7 +47,7 @@ func TestBuildFromFile(t *testing.T) {
 		t.Errorf("catalog from %q with %d providers, %d models, generated %v; want the fixture's 7 and 18",
 			c.Source, len(c.Providers), len(c.Models), c.Generated)
 	}
-	want := "catalog: 18 models, 7 providers, 34 listings grouped into 30 offerings with 11 variants and 1 aliases, 0 dropped\n" +
+	want := "catalog: 18 models, 7 providers, 34 listings grouped into 30 offerings with 11 variants and 1 aliases\n" +
 		"catalog: models.dev ties 13 by canonical_model_id and 4 as a lab's own; rules tie 8 by ID, 1 as a tier, 2 as pro, 5 as inferred; 0 provider-specific\n" +
 		"catalog: merged [openai/gpt-6-astra-fast]; derived [openai/gpt-6-astra-pro openai/gpt-6.1-sol-pro]\n"
 	if !strings.HasPrefix(stderr.String(), want) {
@@ -233,14 +233,14 @@ func TestParseIDs(t *testing.T) {
 }
 
 func TestPrintReport(t *testing.T) {
-	rep := gateway.Report{Models: 3, Providers: 2, Listings: 5, Offerings: 4, Variants: 6, Dropped: 1,
+	rep := gateway.Report{Models: 3, Providers: 2, Listings: 5, Offerings: 4, Variants: 6,
 		Bases: map[gateway.Basis]int{gateway.BasisCanonical: 2, gateway.BasisLab: 1, gateway.BasisID: 1, gateway.BasisNone: 1},
 		Tiers: []gateway.Note{{Provider: "vercel", Model: "x-fast", Text: "tier fast of x"}},
 		Notes: []gateway.Note{{Provider: "vercel", Text: "something"}}}
 	var short, long strings.Builder
 	PrintReport(&short, rep, false)
 	PrintReport(&long, rep, true)
-	wantShort := "catalog: 3 models, 2 providers, 5 listings grouped into 4 offerings with 6 variants and 0 aliases, 1 dropped\n" +
+	wantShort := "catalog: 3 models, 2 providers, 5 listings grouped into 4 offerings with 6 variants and 0 aliases\n" +
 		"catalog: models.dev ties 2 by canonical_model_id and 1 as a lab's own; rules tie 1 by ID, 0 as a tier, 0 as pro, 0 as inferred; 1 provider-specific\n" +
 		"catalog: 1 tier listings, 1 notes (-notes lists them)\n"
 	if short.String() != wantShort {

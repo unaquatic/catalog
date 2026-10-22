@@ -20,8 +20,9 @@
 // the ProviderOptions to send: the provider's model ID, request fields, and
 // an Endpoint when it is not the provider's. Its Variants are the tiers and
 // modes it offers on top, by name, such as "fast"; its Aliases are the
-// provider's other model IDs of the model. Bedrock's copies of a model for
-// other regions are dropped: an offering keeps one.
+// provider's other model IDs of the model. A provider or a listing whose
+// request format the catalog does not know is left out, as no client could
+// call it.
 package gateway
 
 import (
@@ -839,8 +840,8 @@ type Listing struct {
 	Knowledge string    `json:"knowledge,omitempty"`
 	Status    Status    `json:"status,omitempty"`
 	// Endpoint is how to call the listing, whole, when it is not the
-	// provider's, as Bedrock's openai.gpt-6.1-sol takes OpenAI Responses at
-	// a base URL of its own. Listings.EndpointOf resolves it.
+	// provider's, as Azure's claude-fable-5 takes Anthropic Messages at a
+	// base URL of its own. Listings.EndpointOf resolves it.
 	Endpoint     *Endpoint    `json:"endpoint,omitempty"`
 	OpenWeights  bool         `json:"open_weights"`
 	Capabilities Capabilities `json:"capabilities"`
@@ -936,9 +937,9 @@ type Interleaved struct {
 
 // Option is a choice that an offering offers on top of its standard
 // request: a service tier or a mode. A request that takes it merges Body
-// into the request body deeply, object by object, so that Bedrock's
-// {"additionalModelRequestFields": {"service_tier": "ultrafast"}} keeps the
-// request's other additionalModelRequestFields; and it adds Headers.
+// into the request body deeply, object by object, so that an option's
+// {"reasoning": {"mode": "pro"}} keeps the request's other reasoning
+// fields; and it adds Headers.
 type Option struct {
 	// Model is the model a mode runs, when the mapping derived one for it:
 	// OpenAI's gpt-6.1-sol in mode pro runs openai/gpt-6.1-sol-pro, not the
