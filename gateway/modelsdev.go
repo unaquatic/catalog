@@ -193,6 +193,11 @@ func FromModelsDev(b modelsdev.Bundle, opts Options) (*Catalog, Report, error) {
 	if err != nil {
 		return nil, Report{}, err
 	}
+	for _, pid := range bl.rules.official {
+		if _, ok := b.Providers[modelsdev.ProviderID(pid)]; !ok {
+			bl.report.Notes = append(bl.report.Notes, Note{Provider: pid, Text: "an official rule names it, but models.dev has no such provider"})
+		}
+	}
 	c := bl.Group()
 	c.Schema, c.Version, c.Source, c.Generated = SchemaURL, Version, opts.Source, opts.Generated
 	c.Spellings = bl.spell.For(c.NameParts())
@@ -424,10 +429,15 @@ func (b *builder) provider(pid ProviderID, p modelsdev.Provider) ListedProvider 
 	if b.labs[pid] {
 		kind = KindLab
 	}
+	typ := ProviderCommunity
+	if b.rules.Official(pid) {
+		typ = ProviderOfficial
+	}
 	prov := ListedProvider{
 		ID:       pid,
 		Name:     p.Name,
 		Kind:     kind,
+		Type:     typ,
 		Endpoint: b.endpoint(pid, "", p.NPM, "", p.API),
 		Doc:      p.Doc,
 		Models:   make(map[string]Listing, len(p.Models)),

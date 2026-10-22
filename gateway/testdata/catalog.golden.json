@@ -651,6 +651,7 @@
       "id": "anthropic",
       "name": "Anthropic",
       "kind": "lab",
+      "type": "official",
       "endpoint": {
         "format": "anthropic-messages",
         "api": "https://api.anthropic.com/v1",
@@ -820,6 +821,7 @@
       "id": "github-copilot",
       "name": "GitHub Copilot",
       "kind": "gateway",
+      "type": "official",
       "endpoint": {
         "format": "openai-chat",
         "api": "https://api.githubcopilot.com",
@@ -889,6 +891,7 @@
       "id": "llmgateway",
       "name": "LLM Gateway",
       "kind": "gateway",
+      "type": "community",
       "endpoint": {
         "format": "openai-chat",
         "api": "https://api.llmgateway.io/v1",
@@ -1092,6 +1095,7 @@
       "id": "openai",
       "name": "OpenAI",
       "kind": "lab",
+      "type": "official",
       "endpoint": {
         "format": "openai-responses",
         "api": "https://api.openai.com/v1",
@@ -1517,6 +1521,7 @@
       "id": "opencode",
       "name": "OpenCode Zen",
       "kind": "gateway",
+      "type": "official",
       "endpoint": {
         "format": "openai-chat",
         "api": "https://opencode.ai/inference/openai/v1",
@@ -1670,6 +1675,7 @@
       "id": "openrouter",
       "name": "OpenRouter",
       "kind": "gateway",
+      "type": "official",
       "endpoint": {
         "format": "openai-chat",
         "api": "https://openrouter.ai/api/v1",
@@ -1929,6 +1935,7 @@
       "id": "vercel",
       "name": "Vercel AI Gateway",
       "kind": "gateway",
+      "type": "community",
       "endpoint": {
         "format": "openai-chat",
         "api": "https://ai-gateway.vercel.sh/v1",

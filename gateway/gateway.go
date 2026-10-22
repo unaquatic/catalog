@@ -293,6 +293,16 @@ const (
 	KindGateway ProviderKind = "gateway"
 )
 
+// ProviderType tells a provider the rules select as official from a
+// community one, as every other provider models.dev lists is.
+type ProviderType string
+
+// Provider types.
+const (
+	ProviderOfficial  ProviderType = "official"
+	ProviderCommunity ProviderType = "community"
+)
+
 // Tier is a service tier other than the standard one, which trades price for
 // speed.
 type Tier string
@@ -494,6 +504,9 @@ type Provider struct {
 	ID   ProviderID   `json:"id"`
 	Name string       `json:"name"`
 	Kind ProviderKind `json:"kind"`
+	// Type is official for a provider an official rule names, and
+	// community for any other.
+	Type ProviderType `json:"type"`
 	// Endpoint is how to call the provider's API, unless a variant names
 	// an endpoint of its own.
 	Endpoint Endpoint `json:"endpoint"`
@@ -697,6 +710,7 @@ type ListedProvider struct {
 	ID   ProviderID   `json:"id"`
 	Name string       `json:"name"`
 	Kind ProviderKind `json:"kind"`
+	Type ProviderType `json:"type"`
 	// Endpoint is how to call the provider's API, unless a listing has an
 	// endpoint of its own.
 	Endpoint Endpoint           `json:"endpoint"`

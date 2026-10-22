@@ -138,6 +138,7 @@ tbody tr.second > td { background: #171717; }
 .badge.fmt { color: var(--fg); }
 .badge.lab { color: var(--ok); border-color: color-mix(in srgb, var(--ok) 40%, transparent); }
 .badge.gateway { color: var(--flex); border-color: color-mix(in srgb, var(--flex) 40%, transparent); }
+.badge.official { color: var(--accent); border-color: color-mix(in srgb, var(--accent) 45%, transparent); }
 .badge.specific { color: var(--warn); border-color: color-mix(in srgb, var(--warn) 40%, transparent); }
 .banner { border: 2px solid color-mix(in srgb, var(--inf) 45%, transparent); background: color-mix(in srgb, var(--inf) 7%, transparent);
   padding: 8px 12px; margin: 6px 0 14px; max-width: 90ch; color: #cfe; }
@@ -347,6 +348,9 @@ function optionNames(rows) {
   return [...TIERS.filter((t) => set.has(t)), ...[...set].filter((t) => !TIERS.includes(t)).sort()];
 }
 const optionBadges = (names) => names.map((n) => h("span", { class: "badge " + (TIERS.includes(n) ? n : "mode"), title: n }, optionName(n)));
+// providerBadges shows a provider's kind, lab or gateway, and its type,
+// official or community.
+const providerBadges = (p) => [h("span", { class: "badge " + p.kind }, p.kind), h("span", { class: "badge " + p.type }, p.type)];
 function authText(a) {
   if (!a?.scheme) return "unknown";
   return { bearer: "Authorization: Bearer <key>", header: `${a.header}: <key>`,
@@ -630,7 +634,7 @@ function modelPage(id, q) {
   const lead = (row) => {
     const first = !row.depth && list.find((r) => r.provider === row.provider) === row;
     const p = db.cat.providers[row.provider];
-    return [h("td", {}, first ? [h("a", { href: providerHref(row.provider) }, p.name), " ", h("span", { class: "badge " + p.kind }, p.kind)] : null), variantCells(row)];
+    return [h("td", {}, first ? [h("a", { href: providerHref(row.provider) }, p.name), " ", ...providerBadges(p)] : null), variantCells(row)];
   };
   return h("div", { class: "page" },
     h("div", { class: "crumbs" }, h("a", { href: "#/models" }, "Models"), " / ", h("a", { href: "#/models?lab=" + encodeURIComponent(m.lab) }, labName(m.lab)), " / ", m.name),
@@ -661,6 +665,7 @@ function modelPage(id, q) {
 const PROVIDER_COLS = [
   { key: "name", label: "Provider", get: (p) => p.name.toLowerCase() },
   { key: "kind", label: "Kind", fit: true, get: (p) => p.kind },
+  { key: "type", label: "Type", fit: true, get: (p) => p.type },
   { key: "offerings", label: "Offerings", cls: "num", fit: true, get: (p) => p._n, desc0: true },
   { key: "variants", label: "Variants", cls: "num", fit: true, get: (p) => p._variants, desc0: true },
   { key: "unlisted", label: "Unlisted", cls: "num", fit: true, get: (p) => p._unlisted, desc0: true },
@@ -675,11 +680,12 @@ function providersPage(q) {
   const draw = () => {
     const q = route().q;
     const ws = words(q.get("q"));
-    const rows = db.providers.filter((p) => (!q.get("kind") || p.kind === q.get("kind")) && (!ws.length || matchAll((p.id + " " + p.name).toLowerCase(), ws)));
+    const rows = db.providers.filter((p) => (!q.get("kind") || p.kind === q.get("kind")) && (!q.get("type") || p.type === q.get("type")) && (!ws.length || matchAll((p.id + " " + p.name).toLowerCase(), ws)));
     const head = sortTable(rows, PROVIDER_COLS, q, { key: "name", desc: false });
     table.replaceChildren(h("thead", {}, head), h("tbody", {}, rows.map((p) => h("tr", { class: "row", onclick: () => (location.hash = providerHref(p.id)) },
       h("td", {}, h("a", { href: providerHref(p.id) }, h("div", {}, p.name)), h("div", { class: "sub" }, p.id)),
       h("td", {}, h("span", { class: "badge " + p.kind }, p.kind)),
+      h("td", {}, h("span", { class: "badge " + p.type }, p.type)),
       h("td", { class: "num" }, p._n), h("td", { class: "num" }, p._variants),
       h("td", { class: "num" }, p._unlisted || h("span", { class: "no" }, "0")),
       h("td", { class: "sub nowrap" }, p.endpoint.format || "-"),
@@ -689,7 +695,8 @@ function providersPage(q) {
     shown.textContent = `${rows.length} of ${db.providers.length} providers`;
   };
   page.append(stickyBar(page, textFilter("Filter providers", "q", q, draw),
-    selectFilter("Kind", "kind", [["lab"], ["gateway"]], q, draw), shown), table);
+    selectFilter("Kind", "kind", [["lab"], ["gateway"]], q, draw),
+    selectFilter("Type", "type", [["official"], ["community"]], q, draw), shown), table);
   draw();
   return page;
 }
@@ -763,7 +770,7 @@ function providerPage(id, q) {
   page.append(
     h("div", { class: "crumbs" }, h("a", { href: "#/providers" }, "Providers"), " / ", p.name),
     h("h1", {}, p.name),
-    h("div", { class: "idline" }, h("span", { class: "id" }, p.id), h("span", { class: "badge " + p.kind }, p.kind),
+    h("div", { class: "idline" }, h("span", { class: "id" }, p.id), ...providerBadges(p),
       p.endpoint.format ? h("span", { class: "badge fmt" }, p.endpoint.format) : h("span", { class: "badge" }, "format unknown"),
       p.doc ? h("a", { class: "badge", href: p.doc, target: "_blank", rel: "noopener" }, "docs →") : null),
     h("div", { class: "facts" },

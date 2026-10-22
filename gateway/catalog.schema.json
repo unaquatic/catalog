@@ -733,6 +733,10 @@
           "description": "The provider's display name.",
           "type": "string"
         },
+        "type": {
+          "$ref": "#/$defs/provider_type",
+          "description": "Whether the provider is official or a community one."
+        },
         "unlisted": {
           "additionalProperties": {
             "$ref": "#/$defs/offering"
@@ -745,6 +749,7 @@
         "id",
         "name",
         "kind",
+        "type",
         "endpoint",
         "models"
       ],
@@ -791,6 +796,14 @@
         }
       },
       "type": "object"
+    },
+    "provider_type": {
+      "description": "\"official\" for one of the few providers the catalog selects, \"community\" for any other provider models.dev lists.",
+      "examples": [
+        "official",
+        "community"
+      ],
+      "type": "string"
     },
     "reasoning": {
       "description": "The reasoning controls an offering takes, and how its model reasons when a request sets none. A fact that is absent is not known.",

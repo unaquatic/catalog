@@ -57,6 +57,7 @@ type Rules struct {
 	regions   []string
 	listed    []ProviderID
 	excluded  []ProviderID
+	official  []ProviderID
 	seps      map[ProviderID][]string
 	pins      []Rule
 	labNames  map[ProviderID]string
@@ -105,6 +106,9 @@ type Rule struct {
 	// Exclude leaves Match's providers out of every catalog, as if
 	// models.dev listed none of them.
 	Exclude bool `json:"exclude,omitempty"`
+	// Official makes Match's providers official in the catalog; every
+	// other provider is community.
+	Official bool `json:"official,omitempty"`
 	// Separator is what Match's providers write between the parts of their
 	// model IDs besides a slash, as SAP AI Core's "--".
 	Separator string `json:"separator,omitempty"`
@@ -219,7 +223,7 @@ func (r *Rules) add(rule Rule) error {
 	says := 0
 	for _, set := range []bool{rule.Lab != "", rule.AddLab != "", rule.Skip, rule.Strip, rule.Service != "",
 		rule.Finetune != "", rule.Tier != "" || rule.Mode != "" || rule.Alias, rule.Regions != nil, rule.Listed, rule.Exclude,
-		rule.Separator != "", rule.Model != "", rule.Name != "", rule.Reasoning != nil} {
+		rule.Official, rule.Separator != "", rule.Model != "", rule.Name != "", rule.Reasoning != nil} {
 		if set {
 			says++
 		}
@@ -318,6 +322,13 @@ func (r *Rules) add(rule Rule) error {
 		for _, p := range m.Provider {
 			r.excluded = append(r.excluded, ProviderID(p))
 		}
+	case rule.Official:
+		if err := only("provider", len(m.Provider) > 0); err != nil {
+			return err
+		}
+		for _, p := range m.Provider {
+			r.official = append(r.official, ProviderID(p))
+		}
 	case rule.Model != "":
 		if err := only("listing", m.Listing != ""); err != nil {
 			return err
@@ -382,6 +393,8 @@ func ruleKind(rule Rule) string {
 		return "listed"
 	case rule.Exclude:
 		return "exclude"
+	case rule.Official:
+		return "official"
 	case rule.Separator != "":
 		return "a separator"
 	case rule.Model != "":
@@ -658,6 +671,10 @@ func (r *Rules) ModelPart(pid ProviderID, id string) string {
 // Excluded reports whether the rules leave provider pid out of every
 // catalog.
 func (r *Rules) Excluded(pid ProviderID) bool { return slices.Contains(r.excluded, pid) }
+
+// Official reports whether an official rule names provider pid, which the
+// catalog types official; it types every other provider community.
+func (r *Rules) Official(pid ProviderID) bool { return slices.Contains(r.official, pid) }
 
 // Listed returns the providers a catalog of the providers listed keeps.
 func (r *Rules) Listed() iter.Seq[ProviderID] { return slices.Values(r.listed) }

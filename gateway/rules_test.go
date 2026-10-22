@@ -131,6 +131,7 @@ func TestDecodeRulesErrors(t *testing.T) {
 		{"model without a listing", `{"version": 1, "rules": [{"match": {"provider": "x"}, "model": "a/b"}]}`, "a model needs a match of listing"},
 		{"separator without a provider", `{"version": 1, "rules": [{"separator": "--"}]}`, "a separator needs a match of provider"},
 		{"exclude without a provider", `{"version": 1, "rules": [{"match": {"maker": "x"}, "exclude": true}]}`, "exclude needs a match of provider"},
+		{"official without a provider", `{"version": 1, "rules": [{"match": {"maker": "x"}, "official": true}]}`, "official needs a match of provider"},
 		{"name without a match", `{"version": 1, "rules": [{"name": "X"}]}`, "a name needs a match of one lab, family, effort, tier or mode"},
 		{"name of a lab and a family", `{"version": 1, "rules": [{"match": {"lab": "x", "family": "y"}, "name": "X"}]}`, "a name needs a match of one lab, family, effort, tier or mode"},
 		{"effort match for no name", `{"version": 1, "rules": [{"match": {"effort": "xhigh"}, "exclude": true}]}`, "a match of lab, family, effort, tier or mode is for a name"},
@@ -184,6 +185,31 @@ func TestExclude(t *testing.T) {
 	}
 	if m, ok := c.Models["thinkingmachines/inkling-256k"]; !ok || !slices.Equal(m.Providers, []ProviderID{"gw"}) {
 		t.Errorf("thinkingmachines/inkling-256k = %+v, %v; want it kept, served by gw", m, ok)
+	}
+}
+
+// TestOfficial checks that a provider an official rule names is official,
+// labs and gateways alike, that every other provider is community, and
+// that a rule naming a provider models.dev lacks gets a note.
+func TestOfficial(t *testing.T) {
+	if !DefaultRules().Official("anthropic") || DefaultRules().Official("vercel") {
+		t.Error("rules.json makes anthropic official, and not vercel")
+	}
+	opts := fixtureOptions(true)
+	opts.Rules = withRules(t, []string{`{"match": {"provider": ["vercel", "nowhere"]}, "official": true}`})
+	c, rep, err := FromModelsDev(loadFixture(t), opts)
+	if err != nil {
+		t.Fatal(err)
+	}
+	for id, want := range map[ProviderID]ProviderType{
+		"anthropic": ProviderOfficial, "openrouter": ProviderOfficial, "vercel": ProviderOfficial, "llmgateway": ProviderCommunity,
+	} {
+		if got := c.Providers[id].Type; got != want {
+			t.Errorf("%s type = %q, want %q", id, got, want)
+		}
+	}
+	if !slices.ContainsFunc(rep.Notes, func(n Note) bool { return n.Provider == "nowhere" && strings.Contains(n.Text, "official rule") }) {
+		t.Errorf("notes %v; want one of the official rule naming nowhere", rep.Notes)
 	}
 }
 

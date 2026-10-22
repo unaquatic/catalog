@@ -107,6 +107,7 @@
       "id": "The provider's ID.",
       "name": "The provider's display name.",
       "kind": "Whether the provider is a lab or a gateway.",
+      "type": "Whether the provider is official or a community one.",
       "endpoint": "How to call the provider's API, unless an offering's \"provider_options\" names an endpoint of its own.",
       "doc": "URL of the provider's documentation of its models.",
       "models": "The provider's offerings, by model ID: the keys are keys of the catalog's \"models\".",
@@ -118,6 +119,9 @@
   },
   "provider_kind": {
     "description": "\"lab\" for a provider that serves the models it makes, \"gateway\" for one that serves models other labs make."
+  },
+  "provider_type": {
+    "description": "\"official\" for one of the few providers the catalog selects, \"community\" for any other provider models.dev lists."
   },
   "endpoint": {
     "description": "How to call an API: its request format, its base URL, how it authenticates, and the environment variables it reads.",

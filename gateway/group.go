@@ -33,7 +33,7 @@ import (
 func (b *builder) Group() *Catalog {
 	c := &Catalog{Models: b.out.Models, Providers: make(map[ProviderID]Provider, len(b.out.Providers))}
 	for lp := range sortedValues(b.out.Providers) {
-		prov := Provider{ID: lp.ID, Name: lp.Name, Kind: lp.Kind, Endpoint: lp.Endpoint, Doc: lp.Doc,
+		prov := Provider{ID: lp.ID, Name: lp.Name, Kind: lp.Kind, Type: lp.Type, Endpoint: lp.Endpoint, Doc: lp.Doc,
 			Models: make(map[ModelID]Offering)}
 		tied := make(map[ModelID][]Listing)
 		var unlisted []Listing
