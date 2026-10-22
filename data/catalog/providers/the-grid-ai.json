@@ -46,8 +46,7 @@
           "high",
           "xhigh",
           "max"
-        ],
-        "default_effort": "medium"
+        ]
       },
       "interleaved": {
         "field": "reasoning_content"

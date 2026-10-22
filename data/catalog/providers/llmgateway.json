@@ -1516,8 +1516,7 @@
           "high",
           "xhigh",
           "max"
-        ],
-        "default_effort": "medium"
+        ]
       },
       "provider_options": {
         "id": "claude-haiku-5-5",
@@ -1812,8 +1811,7 @@
           "high",
           "xhigh",
           "max"
-        ],
-        "default_effort": "medium"
+        ]
       },
       "provider_options": {
         "id": "claude-opus-5-5",

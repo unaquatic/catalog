@@ -451,8 +451,7 @@
           "high",
           "xhigh",
           "max"
-        ],
-        "default_effort": "medium"
+        ]
       },
       "interleaved": {
         "field": "reasoning_details"
@@ -563,8 +562,7 @@
           "high",
           "xhigh",
           "max"
-        ],
-        "default_effort": "medium"
+        ]
       },
       "interleaved": {
         "field": "reasoning_details"

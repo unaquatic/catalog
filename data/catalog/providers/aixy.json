@@ -108,8 +108,7 @@
           "high",
           "xhigh",
           "max"
-        ],
-        "default_effort": "medium"
+        ]
       },
       "provider_options": {
         "id": "anthropic/claude-haiku-5-5",
@@ -176,8 +175,7 @@
           "high",
           "xhigh",
           "max"
-        ],
-        "default_effort": "medium"
+        ]
       },
       "provider_options": {
         "id": "anthropic/claude-opus-5-5",
