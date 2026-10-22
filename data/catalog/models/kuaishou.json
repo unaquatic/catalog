@@ -58,6 +58,7 @@
     "id": "kuaishou/kling-v2-6",
     "lab": "kuaishou",
     "name": "Kling V2.6",
+    "type": "video",
     "released": "2026-01-13",
     "updated": "2026-01-13",
     "open_weights": false,

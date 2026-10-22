@@ -715,8 +715,7 @@
       "infomaniak",
       "lowrouter",
       "mistral",
-      "nano-gpt",
-      "nvidia"
+      "nano-gpt"
     ]
   },
   "mistral/ministral-3-14b-reasoning-2512": {
@@ -1123,6 +1122,7 @@
     "released": "2024-05-22",
     "updated": "2024-05-22",
     "open_weights": true,
+    "license": "Apache 2.0",
     "reasoning": false,
     "capabilities": {
       "tools": true,
@@ -1139,6 +1139,12 @@
       "context": 32768,
       "output": 32768
     },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.3"
+      }
+    ],
     "providers": [
       "digitalocean",
       "nvidia",
@@ -1369,6 +1375,7 @@
     ],
     "providers": [
       "helicone",
+      "io-net",
       "mistral"
     ]
   },
@@ -1423,37 +1430,6 @@
       "vercel"
     ]
   },
-  "mistral/mistral-large-3-675b-instruct-2512": {
-    "id": "mistral/mistral-large-3-675b-instruct-2512",
-    "lab": "mistral",
-    "name": "Mistral Large 3 675B Instruct 2512",
-    "family": "mistral-large",
-    "released": "2025-12-02",
-    "updated": "2025-12-02",
-    "knowledge": "2025-01",
-    "open_weights": true,
-    "reasoning": false,
-    "capabilities": {
-      "tools": true,
-      "attachments": true,
-      "structured_output": true,
-      "temperature": true,
-      "input": [
-        "text",
-        "image"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 262144,
-      "output": 262144
-    },
-    "providers": [
-      "nvidia"
-    ]
-  },
   "mistral/mistral-large-4": {
     "id": "mistral/mistral-large-4",
     "lab": "mistral",
@@ -1494,36 +1470,6 @@
       "requesty",
       "standardcompute",
       "vercel"
-    ]
-  },
-  "mistral/mistral-large-instruct-2411": {
-    "id": "mistral/mistral-large-instruct-2411",
-    "lab": "mistral",
-    "name": "Mistral Large Instruct 2411",
-    "family": "mistral-large",
-    "released": "2024-11-01",
-    "updated": "2024-11-01",
-    "knowledge": "2024-10",
-    "open_weights": false,
-    "reasoning": false,
-    "capabilities": {
-      "tools": true,
-      "attachments": false,
-      "temperature": true,
-      "input": [
-        "text",
-        "image"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 128000,
-      "output": 4096
-    },
-    "providers": [
-      "io-net"
     ]
   },
   "mistral/mistral-large-latest": {
@@ -1669,7 +1615,6 @@
       "kenari",
       "lowrouter",
       "mistral",
-      "nvidia",
       "pioneer",
       "scaleway",
       "tempr"
@@ -1707,6 +1652,7 @@
       "edenai",
       "kilo",
       "nano-gpt",
+      "nvidia",
       "openrouter"
     ]
   },
@@ -1747,36 +1693,6 @@
       "openrouter",
       "requesty",
       "vercel"
-    ]
-  },
-  "mistral/mistral-medium-3-instruct": {
-    "id": "mistral/mistral-medium-3-instruct",
-    "lab": "mistral",
-    "name": "Mistral Medium 3 Instruct",
-    "family": "mistral-medium",
-    "released": "2025-09-25",
-    "updated": "2025-09-25",
-    "open_weights": false,
-    "reasoning": false,
-    "capabilities": {
-      "tools": false,
-      "attachments": true,
-      "structured_output": false,
-      "input": [
-        "text",
-        "image"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 131072,
-      "input": 131072,
-      "output": 32768
-    },
-    "providers": [
-      "nvidia"
     ]
   },
   "mistral/mistral-medium-3.1": {
@@ -1888,7 +1804,10 @@
       "cortecs",
       "digitalocean",
       "helicone",
+      "inference",
+      "io-net",
       "kilo",
+      "meganova",
       "mistral",
       "nano-gpt",
       "openrouter",
@@ -1896,65 +1815,6 @@
       "pioneer",
       "prime",
       "vercel"
-    ]
-  },
-  "mistral/mistral-nemo-12b-instruct": {
-    "id": "mistral/mistral-nemo-12b-instruct",
-    "lab": "mistral",
-    "name": "Mistral Nemo 12B Instruct",
-    "family": "mistral-nemo",
-    "released": "2025-01-01",
-    "updated": "2025-01-01",
-    "knowledge": "2024-12",
-    "open_weights": true,
-    "reasoning": false,
-    "capabilities": {
-      "tools": true,
-      "attachments": false,
-      "temperature": true,
-      "input": [
-        "text"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 16000,
-      "output": 4096
-    },
-    "providers": [
-      "inference"
-    ]
-  },
-  "mistral/mistral-nemo-instruct-2407": {
-    "id": "mistral/mistral-nemo-instruct-2407",
-    "lab": "mistral",
-    "name": "Mistral Nemo Instruct 2407",
-    "family": "mistral-nemo",
-    "released": "2024-07-01",
-    "updated": "2024-07-01",
-    "knowledge": "2024-05",
-    "open_weights": true,
-    "reasoning": false,
-    "capabilities": {
-      "tools": true,
-      "attachments": false,
-      "temperature": true,
-      "input": [
-        "text"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 128000,
-      "output": 4096
-    },
-    "providers": [
-      "io-net",
-      "meganova"
     ]
   },
   "mistral/mistral-saba": {
@@ -2061,6 +1921,7 @@
       "helicone",
       "llmgateway",
       "llmgateway-providers",
+      "meganova",
       "mistral",
       "scaleway"
     ]
@@ -2110,11 +1971,11 @@
       "lowrouter",
       "mistral",
       "nano-gpt",
-      "nvidia",
       "openrouter",
       "opper",
       "pioneer",
       "prime",
+      "regolo-ai",
       "requesty",
       "tempr"
     ]
@@ -2220,71 +2081,12 @@
     },
     "providers": [
       "aimlapi",
+      "berget",
       "cortecs",
       "kilo",
       "nano-gpt",
       "openrouter",
       "ovhcloud"
-    ]
-  },
-  "mistral/mistral-small-3.2-24b-instruct-2506": {
-    "id": "mistral/mistral-small-3.2-24b-instruct-2506",
-    "lab": "mistral",
-    "name": "Mistral Small 3.2 24B Instruct 2506",
-    "family": "mistral-small",
-    "released": "2025-10-01",
-    "updated": "2025-10-01",
-    "knowledge": "2025-09",
-    "open_weights": true,
-    "reasoning": true,
-    "capabilities": {
-      "tools": true,
-      "attachments": false,
-      "structured_output": true,
-      "temperature": true,
-      "input": [
-        "text"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 32000,
-      "output": 8192
-    },
-    "providers": [
-      "berget",
-      "meganova"
-    ]
-  },
-  "mistral/mistral-small-4-119b": {
-    "id": "mistral/mistral-small-4-119b",
-    "lab": "mistral",
-    "name": "Mistral Small 4 119B",
-    "family": "mistral-small",
-    "released": "2026-03-15",
-    "updated": "2026-03-15",
-    "open_weights": false,
-    "reasoning": true,
-    "capabilities": {
-      "tools": true,
-      "attachments": true,
-      "temperature": true,
-      "input": [
-        "text",
-        "image"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 256000,
-      "output": 16384
-    },
-    "providers": [
-      "regolo-ai"
     ]
   },
   "mistral/mistral-small-latest": {
@@ -2356,21 +2158,22 @@
       "aimlapi",
       "kilo",
       "nano-gpt",
-      "nvidia",
       "openrouter",
       "prime"
     ]
   },
-  "mistral/mixtral-8x7b-instruct": {
-    "id": "mistral/mixtral-8x7b-instruct",
+  "mistral/mixtral-8x7b-instruct-v0.1": {
+    "id": "mistral/mixtral-8x7b-instruct-v0.1",
     "lab": "mistral",
-    "name": "Mixtral 8x7B Instruct",
-    "released": "2023-12-10",
-    "updated": "2026-03-15",
+    "name": "Mixtral 8x7B Instruct V0.1",
+    "family": "mistral",
+    "released": "2023-12-11",
+    "updated": "2023-12-11",
     "open_weights": true,
+    "license": "Apache 2.0",
     "reasoning": false,
     "capabilities": {
-      "tools": true,
+      "tools": false,
       "attachments": false,
       "temperature": true,
       "input": [
@@ -2382,40 +2185,17 @@
     },
     "limit": {
       "context": 32768,
-      "output": 16384
+      "output": 32768
     },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/mistralai/Mixtral-8x7B-Instruct-v0.1"
+      }
+    ],
     "providers": [
-      "nvidia"
-    ]
-  },
-  "mistral/mixtral-8x7b-instruct-v0.1": {
-    "id": "mistral/mixtral-8x7b-instruct-v0.1",
-    "lab": "mistral",
-    "name": "Mixtral 8x7B Instruct V0.1",
-    "released": "2023-12-11",
-    "updated": "2023-12-11",
-    "knowledge": "2023-09",
-    "open_weights": true,
-    "reasoning": true,
-    "capabilities": {
-      "tools": false,
-      "attachments": true,
-      "structured_output": true,
-      "temperature": true,
-      "input": [
-        "text",
-        "pdf"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 32000,
-      "output": 4096
-    },
-    "providers": [
-      "cortecs"
+      "cortecs",
+      "edenai"
     ]
   },
   "mistral/mn-12b-mag-mell-r1": {
@@ -2696,35 +2476,6 @@
       "nano-gpt"
     ]
   },
-  "mistral/voxtral-mini-3b": {
-    "id": "mistral/voxtral-mini-3b",
-    "lab": "mistral",
-    "name": "Voxtral Mini 3B",
-    "family": "voxtral",
-    "released": "2025-07-15",
-    "updated": "2025-07-15",
-    "open_weights": true,
-    "reasoning": false,
-    "capabilities": {
-      "tools": false,
-      "attachments": true,
-      "structured_output": false,
-      "temperature": true,
-      "input": [
-        "audio"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 32000,
-      "output": 32000
-    },
-    "providers": [
-      "privatemode-ai"
-    ]
-  },
   "mistral/voxtral-mini-3b-2507": {
     "id": "mistral/voxtral-mini-3b-2507",
     "lab": "mistral",
@@ -2758,7 +2509,8 @@
       }
     ],
     "providers": [
-      "edenai"
+      "edenai",
+      "privatemode-ai"
     ]
   },
   "mistral/voxtral-mini-latest": {
@@ -2773,7 +2525,7 @@
     "reasoning": false,
     "capabilities": {
       "tools": false,
-      "attachments": false,
+      "attachments": true,
       "temperature": false,
       "input": [
         "audio"

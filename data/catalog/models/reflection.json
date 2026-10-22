@@ -64,6 +64,7 @@
       }
     ],
     "providers": [
+      "digitalocean",
       "edenai",
       "kilo",
       "nano-gpt",

@@ -1853,11 +1853,13 @@
       "open_weights": false,
       "capabilities": {
         "tools": true,
-        "attachments": false,
+        "attachments": true,
         "structured_output": true,
         "temperature": true,
         "input": [
-          "text"
+          "text",
+          "image",
+          "video"
         ],
         "output": [
           "text"
@@ -1894,7 +1896,8 @@
         "temperature": true,
         "input": [
           "text",
-          "image"
+          "image",
+          "video"
         ],
         "output": [
           "text"

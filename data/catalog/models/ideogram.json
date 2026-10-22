@@ -4,6 +4,7 @@
     "lab": "ideogram",
     "name": "Ideogram",
     "family": "ideogram",
+    "type": "image",
     "released": "2024-04-03",
     "updated": "2024-04-03",
     "open_weights": false,
@@ -33,6 +34,7 @@
     "lab": "ideogram",
     "name": "Ideogram V2",
     "family": "ideogram",
+    "type": "image",
     "released": "2024-08-21",
     "updated": "2024-08-21",
     "open_weights": false,
@@ -62,13 +64,14 @@
     "lab": "ideogram",
     "name": "Ideogram V2a",
     "family": "ideogram",
+    "type": "image",
     "released": "2025-02-27",
     "updated": "2025-02-27",
     "open_weights": false,
     "reasoning": false,
     "capabilities": {
       "tools": true,
-      "attachments": true,
+      "attachments": false,
       "temperature": false,
       "input": [
         "text"
@@ -90,13 +93,14 @@
     "lab": "ideogram",
     "name": "Ideogram V2a Turbo",
     "family": "ideogram",
+    "type": "image",
     "released": "2025-02-27",
     "updated": "2025-02-27",
     "open_weights": false,
     "reasoning": false,
     "capabilities": {
       "tools": true,
-      "attachments": true,
+      "attachments": false,
       "temperature": false,
       "input": [
         "text"

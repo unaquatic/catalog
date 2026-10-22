@@ -54,7 +54,7 @@
       "price": {
         "input": 1.95,
         "output": 5.7,
-        "cache_read": 0.245
+        "cache_read": 0.25
       }
     },
     "alibaba/qwen3.8-27b": {
@@ -133,9 +133,9 @@
         "name": "DeepSeek V4 Pro 0813"
       },
       "price": {
-        "input": 0.89,
-        "output": 2.69,
-        "cache_read": 0.03
+        "input": 0.79,
+        "output": 2.38,
+        "cache_read": 0.026
       }
     },
     "deepseek/deepseek-v4.1-flash": {
@@ -210,9 +210,9 @@
         "name": "MiniMax-M3"
       },
       "price": {
-        "input": 0.299,
+        "input": 0.3,
         "output": 1.19,
-        "cache_read": 0.045
+        "cache_read": 0.05
       }
     },
     "moonshotai/kimi-k2.7-code": {
@@ -284,9 +284,9 @@
         "name": "Kimi K3"
       },
       "price": {
-        "input": 2.39,
-        "output": 11.99,
-        "cache_read": 0.24
+        "input": 2.35,
+        "output": 11.76,
+        "cache_read": 0.23
       }
     },
     "zhipuai/glm-5.3": {
@@ -323,9 +323,9 @@
         "name": "GLM-5.3"
       },
       "price": {
-        "input": 0.99,
-        "output": 3.45,
-        "cache_read": 0.245
+        "input": 0.82,
+        "output": 2.88,
+        "cache_read": 0.2
       }
     },
     "zhipuai/glm-5.3-flash": {
@@ -363,9 +363,9 @@
         "name": "GLM-5.3-Flash"
       },
       "price": {
-        "input": 0.099,
-        "output": 0.35,
-        "cache_read": 0.025
+        "input": 0.08,
+        "output": 0.28,
+        "cache_read": 0.023
       }
     }
   }

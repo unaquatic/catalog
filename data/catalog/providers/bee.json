@@ -28,7 +28,8 @@
         "input": [
           "text",
           "image",
-          "video"
+          "video",
+          "audio"
         ],
         "output": [
           "text"
@@ -71,7 +72,8 @@
         "input": [
           "text",
           "image",
-          "video"
+          "video",
+          "audio"
         ],
         "output": [
           "text"
@@ -113,7 +115,8 @@
         "temperature": true,
         "input": [
           "text",
-          "image"
+          "image",
+          "audio"
         ],
         "output": [
           "text"
@@ -147,7 +150,8 @@
         "input": [
           "text",
           "image",
-          "video"
+          "video",
+          "audio"
         ],
         "output": [
           "text"
@@ -190,7 +194,8 @@
         "input": [
           "text",
           "image",
-          "video"
+          "video",
+          "audio"
         ],
         "output": [
           "text"
@@ -231,7 +236,8 @@
         "structured_output": false,
         "input": [
           "text",
-          "image"
+          "image",
+          "audio"
         ],
         "output": [
           "text"

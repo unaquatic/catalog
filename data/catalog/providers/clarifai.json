@@ -18,8 +18,8 @@
     "alibaba/qwen3-30b-a3b-instruct-2507": {
       "name": "Qwen3 30B A3B Instruct 2507",
       "family": "qwen",
-      "released": "2025-07-30",
-      "updated": "2026-02-25",
+      "released": "2025-07-28",
+      "updated": "2025-07-28",
       "open_weights": true,
       "capabilities": {
         "tools": true,
@@ -82,7 +82,7 @@
       "name": "Qwen3 Coder 30B A3B Instruct",
       "family": "qwen",
       "released": "2025-07-31",
-      "updated": "2026-02-12",
+      "updated": "2025-07-31",
       "knowledge": "2025-04",
       "open_weights": true,
       "capabilities": {
@@ -113,7 +113,7 @@
       "name": "Trinity Mini",
       "family": "trinity",
       "released": "2025-12-01",
-      "updated": "2026-02-25",
+      "updated": "2026-05-28",
       "knowledge": "2024-10",
       "open_weights": true,
       "capabilities": {
@@ -204,11 +204,11 @@
         "output": 0.7
       }
     },
-    "minimax/minimax-m2-5-high-throughput": {
-      "name": "MiniMax M2.5 High Throughput",
+    "minimax/minimax-m2.5": {
+      "name": "MiniMax M2.5",
       "family": "minimax",
       "released": "2026-02-12",
-      "updated": "2026-02-25",
+      "updated": "2026-02-12",
       "open_weights": true,
       "capabilities": {
         "tools": true,
@@ -337,11 +337,12 @@
         "output": 4
       }
     },
-    "openai/gpt-oss-120b-high-throughput": {
-      "name": "GPT OSS 120B High Throughput",
+    "openai/gpt-oss-120b": {
+      "name": "GPT OSS 120B",
       "family": "gpt-oss",
       "released": "2025-08-05",
-      "updated": "2026-02-25",
+      "updated": "2025-08-05",
+      "knowledge": "2024-06",
       "open_weights": true,
       "capabilities": {
         "tools": true,
@@ -378,7 +379,8 @@
       "name": "GPT OSS 20B",
       "family": "gpt-oss",
       "released": "2025-08-05",
-      "updated": "2025-12-12",
+      "updated": "2025-08-05",
+      "knowledge": "2024-06",
       "open_weights": true,
       "capabilities": {
         "tools": true,

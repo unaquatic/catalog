@@ -110,11 +110,11 @@
         "cache_write": 0
       }
     },
-    "deepseek/deepseek-v4.1-flash": {
-      "name": "DeepSeek V4.1 Flash",
+    "deepseek/deepseek-v4.1-flash-1017": {
+      "name": "DeepSeek V4.1 Flash 1017",
       "family": "deepseek-flash",
-      "released": "2026-09-10",
-      "updated": "2026-09-10",
+      "released": "2026-10-17",
+      "updated": "2026-10-17",
       "knowledge": "2025-05",
       "open_weights": true,
       "capabilities": {
@@ -147,15 +147,18 @@
         "field": "reasoning_content"
       },
       "provider_options": {
-        "id": "umans-deepseek-v4.1-flash",
-        "name": "DeepSeek V4.1 Flash"
+        "id": "umans-deepseek-v4.1-flash-1017",
+        "name": "DeepSeek V4.1 Flash 1017"
       },
       "price": {
         "input": 0,
         "output": 0,
         "cache_read": 0,
         "cache_write": 0
-      }
+      },
+      "aliases": [
+        "umans-deepseek-v4.1-flash"
+      ]
     },
     "moonshotai/kimi-k3": {
       "name": "Kimi K3",

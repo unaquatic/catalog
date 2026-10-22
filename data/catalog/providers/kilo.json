@@ -1084,7 +1084,7 @@
       },
       "limit": {
         "context": 262144,
-        "output": 65536
+        "output": 235929
       },
       "reasoning": {
         "mandatory": false,
@@ -2799,8 +2799,8 @@
         "structured_output": true,
         "temperature": true,
         "input": [
-          "image",
           "text",
+          "image",
           "video"
         ],
         "output": [
@@ -2840,8 +2840,8 @@
         "structured_output": true,
         "temperature": true,
         "input": [
-          "image",
           "text",
+          "image",
           "video"
         ],
         "output": [
@@ -3451,9 +3451,9 @@
         "name": "DeepSeek: DeepSeek Pro Latest"
       },
       "price": {
-        "input": 0.1461,
+        "input": 0.225,
         "output": 8,
-        "cache_read": 0.15
+        "cache_read": 0.23
       }
     },
     "deepseek/deepseek-r1-0528": {
@@ -6043,12 +6043,13 @@
         "output": 0.201
       }
     },
-    "meta/llama-3.2-3b": {
-      "name": "Llama 3.2 3B",
+    "meta/llama-3.2-3b-instruct": {
+      "name": "Llama 3.2 3B Instruct",
       "family": "llama",
       "released": "2024-09-25",
       "updated": "2024-09-25",
-      "open_weights": false,
+      "knowledge": "2023-12",
+      "open_weights": true,
       "capabilities": {
         "tools": false,
         "attachments": false,
@@ -6176,17 +6177,17 @@
     "meta/llama-guard-4-12b": {
       "name": "Llama Guard 4 12B",
       "family": "llama",
-      "released": "2025-04-30",
-      "updated": "2025-04-30",
-      "open_weights": false,
+      "released": "2025-04-29",
+      "updated": "2025-04-29",
+      "open_weights": true,
       "capabilities": {
         "tools": false,
         "attachments": true,
         "structured_output": false,
         "temperature": true,
         "input": [
-          "image",
-          "text"
+          "text",
+          "image"
         ],
         "output": [
           "text"
@@ -6541,8 +6542,8 @@
         "output": 1.1
       }
     },
-    "minimax/minimax-m1": {
-      "name": "MiniMax M1",
+    "minimax/minimax-m1-80k": {
+      "name": "MiniMax M1 80K",
       "family": "minimax",
       "released": "2025-06-17",
       "updated": "2025-06-17",
@@ -7915,7 +7916,7 @@
       },
       "price": {
         "input": 0.238,
-        "output": 16,
+        "output": 24,
         "cache_read": 0.228
       }
     },
@@ -11664,6 +11665,42 @@
         "cache_read": 0.0375
       }
     },
+    "recursive/flint-v1.0-free": {
+      "name": "Flint V1.0 Free",
+      "family": "flint",
+      "released": "2026-10-21",
+      "updated": "2026-10-21",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 235929
+      },
+      "reasoning": {
+        "efforts": [
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "recursive/flint-v1.0:free",
+        "name": "Recursive: Flint (free)"
+      },
+      "price": {
+        "input": 0,
+        "output": 0
+      }
+    },
     "reflection/beam-1.0-501b-a23b": {
       "name": "Beam 1.0 501B A23B",
       "family": "beam",
@@ -11685,7 +11722,7 @@
       },
       "limit": {
         "context": 1048576,
-        "output": 943718
+        "output": 131072
       },
       "reasoning": {
         "efforts": [
@@ -12173,6 +12210,7 @@
     },
     "stepfun/step-3.5-flash": {
       "name": "Step 3.5 Flash",
+      "family": "step",
       "released": "2026-01-29",
       "updated": "2026-02-13",
       "knowledge": "2025-01",
@@ -13458,8 +13496,8 @@
       },
       "price": {
         "input": 0.1,
-        "output": 0.24,
-        "cache_read": 0.003
+        "output": 0.28,
+        "cache_read": 0.05
       }
     },
     "xiaomi/mimo-v2.6-pro": {

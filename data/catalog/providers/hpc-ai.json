@@ -306,8 +306,8 @@
     "zhipuai/glm-5.1": {
       "name": "GLM 5.1",
       "family": "glm",
-      "released": "2026-04-08",
-      "updated": "2026-06-01",
+      "released": "2026-04-07",
+      "updated": "2026-04-07",
       "open_weights": true,
       "capabilities": {
         "tools": true,

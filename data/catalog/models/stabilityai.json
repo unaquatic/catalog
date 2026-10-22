@@ -33,6 +33,7 @@
     "lab": "stabilityai",
     "name": "StableDiffusionXL",
     "family": "stable-diffusion",
+    "type": "image",
     "released": "2023-07-09",
     "updated": "2023-07-09",
     "open_weights": false,

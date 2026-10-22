@@ -15,68 +15,6 @@
   },
   "doc": "https://melious.ai/docs/reference/models",
   "models": {
-    "cloudflare/clef": {
-      "name": "Clef",
-      "type": "decision",
-      "released": "2026-10-01",
-      "updated": "2026-10-01",
-      "open_weights": true,
-      "capabilities": {
-        "tools": false,
-        "attachments": false,
-        "structured_output": true,
-        "temperature": false,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 16384,
-        "output": 0
-      },
-      "provider_options": {
-        "id": "clef",
-        "name": "Clef"
-      },
-      "price": {
-        "input": 0.2245,
-        "output": 0
-      }
-    },
-    "cloudflare/clef-flash": {
-      "name": "Clef Flash",
-      "type": "decision",
-      "released": "2026-10-01",
-      "updated": "2026-10-01",
-      "open_weights": true,
-      "capabilities": {
-        "tools": false,
-        "attachments": false,
-        "structured_output": true,
-        "temperature": false,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 16384,
-        "output": 0
-      },
-      "provider_options": {
-        "id": "clef-flash",
-        "name": "Clef Flash"
-      },
-      "price": {
-        "input": 0.033675,
-        "output": 0
-      }
-    },
     "deepseek/deepseek-r1": {
       "name": "DeepSeek R1",
       "family": "deepseek-thinking",
@@ -111,7 +49,8 @@
         "input": 0.69552,
         "output": 2.78208,
         "cache_read": 0.185472
-      }
+      },
+      "status": "deprecated"
     },
     "deepseek/deepseek-v3.2": {
       "name": "DeepSeek V3.2",
@@ -154,7 +93,8 @@
         "input": 0.34776,
         "output": 0.5796,
         "cache_read": 0.092736
-      }
+      },
+      "status": "deprecated"
     },
     "deepseek/deepseek-v4-flash-0731": {
       "name": "DeepSeek V4 Flash 0731",
@@ -323,7 +263,8 @@
         "input": 0.5796,
         "output": 2.95596,
         "cache_read": 0.139104
-      }
+      },
+      "status": "deprecated"
     },
     "moonshotai/kimi-k2.6": {
       "name": "Kimi K2.6",
@@ -365,9 +306,9 @@
         "name": "Kimi K2.6"
       },
       "price": {
-        "input": 0.81144,
-        "output": 4.0572,
-        "cache_read": 0.266616
+        "input": 0.78505,
+        "output": 3.3645,
+        "cache_read": 0.280375
       }
     },
     "moonshotai/kimi-k2.7-code": {
@@ -410,9 +351,9 @@
         "name": "Kimi K2.7 Code"
       },
       "price": {
-        "input": 0.81144,
-        "output": 3.4776,
-        "cache_read": 0.220248
+        "input": 0.728975,
+        "output": 3.644875,
+        "cache_read": 0.190655
       }
     },
     "moonshotai/kimi-k3": {
@@ -454,9 +395,9 @@
         "name": "Kimi K3"
       },
       "price": {
-        "input": 3.1878,
-        "output": 15.939,
-        "cache_read": 0.788256
+        "input": 3.196275,
+        "output": 15.981375,
+        "cache_read": 0.841125
       }
     },
     "zhipuai/glm-5": {
@@ -492,7 +433,8 @@
         "input": 1.10124,
         "output": 3.36168,
         "cache_read": 0.266616
-      }
+      },
+      "status": "deprecated"
     },
     "zhipuai/glm-5.1": {
       "name": "GLM 5.1",
@@ -534,7 +476,8 @@
         "input": 1.50696,
         "output": 4.6368,
         "cache_read": 0.370944
-      }
+      },
+      "status": "deprecated"
     },
     "zhipuai/glm-5.3": {
       "name": "GLM 5.3",

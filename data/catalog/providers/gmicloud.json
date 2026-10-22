@@ -136,7 +136,8 @@
         "attachments": true,
         "temperature": true,
         "input": [
-          "text"
+          "text",
+          "image"
         ],
         "output": [
           "text"
@@ -176,7 +177,8 @@
         "attachments": true,
         "temperature": false,
         "input": [
-          "text"
+          "text",
+          "image"
         ],
         "output": [
           "text"
@@ -288,7 +290,8 @@
         "attachments": true,
         "temperature": true,
         "input": [
-          "text"
+          "text",
+          "image"
         ],
         "output": [
           "text"
@@ -475,7 +478,7 @@
       "open_weights": true,
       "capabilities": {
         "tools": true,
-        "attachments": true,
+        "attachments": false,
         "structured_output": true,
         "temperature": true,
         "input": [
@@ -512,7 +515,7 @@
       "open_weights": true,
       "capabilities": {
         "tools": true,
-        "attachments": true,
+        "attachments": false,
         "structured_output": true,
         "temperature": false,
         "input": [

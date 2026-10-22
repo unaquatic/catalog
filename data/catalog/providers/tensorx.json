@@ -46,7 +46,8 @@
         "output": 0.464,
         "cache_read": 0.018,
         "cache_write": 0.09
-      }
+      },
+      "status": "deprecated"
     },
     "alibaba/qwen3.5-122b-a10b": {
       "name": "Qwen3.5 122B A10B",
@@ -93,7 +94,8 @@
         "output": 3.5,
         "cache_read": 0.125,
         "cache_write": 0.625
-      }
+      },
+      "status": "deprecated"
     },
     "alibaba/qwen3.5-9b": {
       "name": "Qwen3.5 9B",
@@ -140,7 +142,8 @@
         "output": 0.2,
         "cache_read": 0.0375,
         "cache_write": 0.1875
-      }
+      },
+      "status": "deprecated"
     },
     "alibaba/qwen3.8-2.4t-a95b": {
       "name": "Qwen3.8 2.4T A95B",
@@ -263,8 +266,8 @@
         "cache_read": 0.05
       }
     },
-    "deepseek/deepseek-r1": {
-      "name": "DeepSeek R1",
+    "deepseek/deepseek-r1-0528": {
+      "name": "DeepSeek R1 0528",
       "family": "deepseek-thinking",
       "released": "2025-05-28",
       "updated": "2025-05-28",
@@ -304,7 +307,8 @@
         "output": 2.6,
         "cache_read": 0.165,
         "cache_write": 0.825
-      }
+      },
+      "status": "deprecated"
     },
     "deepseek/deepseek-v3.2": {
       "name": "DeepSeek V3.2",
@@ -349,7 +353,8 @@
         "output": 0.5,
         "cache_read": 0.075,
         "cache_write": 0.375
-      }
+      },
+      "status": "deprecated"
     },
     "deepseek/deepseek-v4-flash-0731": {
       "name": "DeepSeek V4 Flash 0731",
@@ -375,7 +380,12 @@
         "output": 384000
       },
       "reasoning": {
-        "mandatory": false
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "high",
+          "max"
+        ]
       },
       "provider_options": {
         "id": "deepseek/deepseek-v4-flash-0731",
@@ -411,7 +421,12 @@
         "output": 384000
       },
       "reasoning": {
-        "mandatory": false
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "high",
+          "max"
+        ]
       },
       "provider_options": {
         "id": "deepseek/deepseek-v4-pro",
@@ -422,7 +437,8 @@
         "output": 3.5,
         "cache_read": 0.4375,
         "cache_write": 2.185
-      }
+      },
+      "status": "deprecated"
     },
     "deepseek/deepseek-v4-pro-0813": {
       "name": "DeepSeek V4 Pro 0813",
@@ -489,7 +505,12 @@
         "output": 384000
       },
       "reasoning": {
-        "mandatory": false
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "high",
+          "max"
+        ]
       },
       "provider_options": {
         "id": "deepseek/deepseek-v4.1-flash",
@@ -541,7 +562,8 @@
         "output": 1.2,
         "cache_read": 0.075,
         "cache_write": 0.375
-      }
+      },
+      "status": "deprecated"
     },
     "minimax/minimax-m3": {
       "name": "MiniMax M3",
@@ -614,7 +636,8 @@
         "output": 2.8,
         "cache_read": 0.125,
         "cache_write": 0.625
-      }
+      },
+      "status": "deprecated"
     },
     "moonshotai/kimi-k2.6": {
       "name": "Kimi K2.6",
@@ -641,9 +664,7 @@
         "context": 262144,
         "output": 262144
       },
-      "reasoning": {
-        "mandatory": false
-      },
+      "reasoning": {},
       "provider_options": {
         "id": "moonshotai/kimi-k2.6",
         "name": "Kimi K2.6"
@@ -653,7 +674,8 @@
         "output": 4,
         "cache_read": 0.25,
         "cache_write": 1.25
-      }
+      },
+      "status": "deprecated"
     },
     "moonshotai/kimi-k2.7-code": {
       "name": "Kimi K2.7 Code",
@@ -680,9 +702,7 @@
         "context": 262144,
         "output": 262144
       },
-      "reasoning": {
-        "mandatory": false
-      },
+      "reasoning": {},
       "provider_options": {
         "id": "moonshotai/kimi-k2.7-code",
         "name": "Kimi K2.7 Code"
@@ -717,9 +737,7 @@
         "context": 1048576,
         "output": 131072
       },
-      "reasoning": {
-        "mandatory": false
-      },
+      "reasoning": {},
       "provider_options": {
         "id": "moonshotai/kimi-k3",
         "name": "Kimi K3"
@@ -772,7 +790,8 @@
         "output": 3.2,
         "cache_read": 0.25,
         "cache_write": 1.25
-      }
+      },
+      "status": "deprecated"
     },
     "zhipuai/glm-5-turbo": {
       "name": "GLM 5 Turbo",
@@ -797,16 +816,7 @@
         "output": 131072
       },
       "reasoning": {
-        "mandatory": false,
-        "efforts": [
-          "none",
-          "minimal",
-          "low",
-          "medium",
-          "high",
-          "xhigh",
-          "max"
-        ]
+        "mandatory": false
       },
       "provider_options": {
         "id": "z-ai/glm-5-turbo",
@@ -817,7 +827,8 @@
         "output": 4,
         "cache_read": 0.3,
         "cache_write": 1.5
-      }
+      },
+      "status": "deprecated"
     },
     "zhipuai/glm-5.1": {
       "name": "GLM 5.1",
@@ -842,16 +853,7 @@
         "output": 202752
       },
       "reasoning": {
-        "mandatory": false,
-        "efforts": [
-          "none",
-          "minimal",
-          "low",
-          "medium",
-          "high",
-          "xhigh",
-          "max"
-        ]
+        "mandatory": false
       },
       "provider_options": {
         "id": "z-ai/glm-5.1",
@@ -862,7 +864,8 @@
         "output": 4.4,
         "cache_read": 0.35,
         "cache_write": 1.75
-      }
+      },
+      "status": "deprecated"
     },
     "zhipuai/glm-5.2": {
       "name": "GLM 5.2",
@@ -890,11 +893,7 @@
         "mandatory": false,
         "efforts": [
           "none",
-          "minimal",
-          "low",
-          "medium",
           "high",
-          "xhigh",
           "max"
         ]
       },
@@ -1038,7 +1037,8 @@
         "output": 4,
         "cache_read": 0.3,
         "cache_write": 1.5
-      }
+      },
+      "status": "deprecated"
     }
   }
 }

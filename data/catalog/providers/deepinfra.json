@@ -1697,6 +1697,37 @@
         "output": 0.3
       }
     },
+    "meta/llama-guard-4-12b": {
+      "name": "Llama Guard 4 12B",
+      "family": "llama",
+      "released": "2025-04-29",
+      "updated": "2025-04-29",
+      "open_weights": true,
+      "capabilities": {
+        "tools": false,
+        "attachments": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 163840,
+        "output": 163840
+      },
+      "provider_options": {
+        "id": "meta-llama/Llama-Guard-4-12B",
+        "name": "Llama Guard 4 12B"
+      },
+      "price": {
+        "input": 0.18,
+        "output": 0.18
+      }
+    },
     "minimax/minimax-m2.5": {
       "name": "MiniMax M2.5",
       "family": "minimax",
@@ -2364,7 +2395,8 @@
         "input": 0.95,
         "output": 4.05,
         "cache_read": 0.16
-      }
+      },
+      "status": "deprecated"
     },
     "thinkingmachines/inkling-small": {
       "name": "Inkling Small",

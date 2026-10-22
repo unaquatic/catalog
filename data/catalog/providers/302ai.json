@@ -18,10 +18,10 @@
     "alibaba/qwen3-235b-a22b": {
       "name": "Qwen3 235B A22B",
       "family": "qwen",
-      "released": "2025-04-29",
-      "updated": "2025-04-29",
+      "released": "2025-04-28",
+      "updated": "2025-04-28",
       "knowledge": "2025-04",
-      "open_weights": false,
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": false,
@@ -48,10 +48,11 @@
     },
     "alibaba/qwen3-235b-a22b-instruct-2507": {
       "name": "Qwen3 235B A22B Instruct 2507",
-      "released": "2025-07-30",
-      "updated": "2025-07-30",
+      "family": "qwen",
+      "released": "2025-07-21",
+      "updated": "2025-07-21",
       "knowledge": "2025-04",
-      "open_weights": false,
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": false,
@@ -79,10 +80,10 @@
     "alibaba/qwen3-30b-a3b": {
       "name": "Qwen3 30B A3B",
       "family": "qwen",
-      "released": "2025-04-29",
-      "updated": "2025-04-29",
+      "released": "2025-04-28",
+      "updated": "2025-04-28",
       "knowledge": "2025-04",
-      "open_weights": false,
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": false,
@@ -109,10 +110,11 @@
     },
     "alibaba/qwen3-coder-480b-a35b-instruct": {
       "name": "Qwen3 Coder 480B A35B Instruct",
-      "released": "2025-07-23",
-      "updated": "2025-07-23",
+      "family": "qwen",
+      "released": "2025-07-22",
+      "updated": "2025-07-22",
       "knowledge": "2025-04",
-      "open_weights": false,
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": false,
@@ -134,13 +136,26 @@
       },
       "price": {
         "input": 0.86,
-        "output": 3.43
+        "output": 3.43,
+        "tiers": [
+          {
+            "above": 32000,
+            "input": 1.29,
+            "output": 5.15
+          },
+          {
+            "above": 128000,
+            "input": 2.15,
+            "output": 8.58
+          }
+        ]
       }
     },
-    "alibaba/qwen3-max-2025-09-23": {
-      "name": "Qwen3 Max 20250923",
-      "released": "2025-09-24",
-      "updated": "2025-09-24",
+    "alibaba/qwen3-max": {
+      "name": "Qwen3 Max",
+      "family": "qwen",
+      "released": "2025-09-23",
+      "updated": "2025-09-23",
       "knowledge": "2025-04",
       "open_weights": false,
       "capabilities": {
@@ -164,7 +179,19 @@
       },
       "price": {
         "input": 0.86,
-        "output": 3.43
+        "output": 3.43,
+        "tiers": [
+          {
+            "above": 32000,
+            "input": 1.43,
+            "output": 5.72
+          },
+          {
+            "above": 128000,
+            "input": 2.15,
+            "output": 8.58
+          }
+        ]
       }
     },
     "alibaba/qwen3.5-35b-a3b": {
@@ -201,7 +228,14 @@
       },
       "price": {
         "input": 0.06,
-        "output": 0.46
+        "output": 0.46,
+        "tiers": [
+          {
+            "above": 128000,
+            "input": 0.23,
+            "output": 1.83
+          }
+        ]
       }
     },
     "alibaba/qwen3.5-plus": {
@@ -238,7 +272,19 @@
       },
       "price": {
         "input": 0.12,
-        "output": 0.69
+        "output": 0.69,
+        "tiers": [
+          {
+            "above": 128000,
+            "input": 0.29,
+            "output": 1.72
+          },
+          {
+            "above": 256000,
+            "input": 0.58,
+            "output": 3.44
+          }
+        ]
       }
     },
     "alibaba/qwen3.6-35b-a3b": {
@@ -274,8 +320,8 @@
         "name": "Qwen3.6 35B-A3B"
       },
       "price": {
-        "input": 0.283,
-        "output": 1.705
+        "input": 0.28,
+        "output": 1.7
       }
     },
     "alibaba/qwen3.6-flash": {
@@ -311,8 +357,19 @@
         "name": "Qwen3.6 Flash"
       },
       "price": {
-        "input": 0.188,
-        "output": 1.133
+        "input": 0.19,
+        "output": 1.13,
+        "cache_read": 0.0171,
+        "cache_write": 0.214,
+        "tiers": [
+          {
+            "above": 256000,
+            "input": 0.76,
+            "output": 4.52,
+            "cache_read": 0.0686,
+            "cache_write": 0.857
+          }
+        ]
       }
     },
     "alibaba/qwen3.6-plus": {
@@ -349,7 +406,14 @@
       },
       "price": {
         "input": 0.3,
-        "output": 1.8
+        "output": 1.8,
+        "tiers": [
+          {
+            "above": 256000,
+            "input": 1.2,
+            "output": 7.2
+          }
+        ]
       }
     },
     "alibaba/qwen3.7-max": {
@@ -422,8 +486,19 @@
         "name": "Qwen3.7 Plus"
       },
       "price": {
-        "input": 0.285,
-        "output": 1.15
+        "input": 0.228,
+        "output": 0.92,
+        "cache_read": 0.023,
+        "cache_write": 0.286,
+        "tiers": [
+          {
+            "above": 256000,
+            "input": 0.68,
+            "output": 2.74,
+            "cache_read": 0.068,
+            "cache_write": 0.86
+          }
+        ]
       }
     },
     "alibaba/qwen3.8-flash": {
@@ -468,8 +543,10 @@
         "name": "Qwen3.8 Flash"
       },
       "price": {
-        "input": 0.18,
-        "output": 0.564
+        "input": 0.15,
+        "output": 0.47,
+        "cache_read": 0.016,
+        "cache_write": 0.2
       }
     },
     "alibaba/qwen3.8-max": {
@@ -515,7 +592,9 @@
       },
       "price": {
         "input": 2.16,
-        "output": 6.36
+        "output": 6.36,
+        "cache_read": 0.168,
+        "cache_write": 2.58
       }
     },
     "anthropic/claude-fable-5": {
@@ -560,7 +639,9 @@
       },
       "price": {
         "input": 10,
-        "output": 50
+        "output": 50,
+        "cache_read": 1,
+        "cache_write": 12.5
       }
     },
     "anthropic/claude-fable-5-1": {
@@ -605,14 +686,16 @@
       },
       "price": {
         "input": 10,
-        "output": 50
+        "output": 50,
+        "cache_read": 0.25,
+        "cache_write": 12.5
       }
     },
     "anthropic/claude-haiku-4-5": {
       "name": "Claude Haiku 4.5",
       "family": "claude-haiku",
-      "released": "2025-10-16",
-      "updated": "2025-10-16",
+      "released": "2025-10-15",
+      "updated": "2025-10-15",
       "knowledge": "2025-02-28",
       "open_weights": false,
       "capabilities": {
@@ -652,8 +735,8 @@
     "anthropic/claude-haiku-4-5-20251001": {
       "name": "Claude Haiku 4.5 20251001",
       "family": "claude-haiku",
-      "released": "2025-10-16",
-      "updated": "2025-10-16",
+      "released": "2025-10-15",
+      "updated": "2025-10-15",
       "knowledge": "2025-02-28",
       "open_weights": false,
       "capabilities": {
@@ -735,7 +818,16 @@
         "input": 0.1,
         "output": 0.5,
         "cache_read": 0.01,
-        "cache_write": 0.125
+        "cache_write": 0.125,
+        "tiers": [
+          {
+            "above": 100000,
+            "input": 0.5,
+            "output": 2.5,
+            "cache_read": 0.05,
+            "cache_write": 0.625
+          }
+        ]
       }
     },
     "anthropic/claude-opus-4-1-20250805": {
@@ -776,7 +868,9 @@
       },
       "price": {
         "input": 15,
-        "output": 75
+        "output": 75,
+        "cache_read": 1.5,
+        "cache_write": 18.75
       },
       "variants": {
         "thinking": {
@@ -796,8 +890,8 @@
     "anthropic/claude-opus-4-5-20251101": {
       "name": "Claude Opus 4.5 20251101",
       "family": "claude-opus",
-      "released": "2025-11-25",
-      "updated": "2025-11-25",
+      "released": "2025-11-24",
+      "updated": "2025-11-24",
       "knowledge": "2025-03-31",
       "open_weights": false,
       "capabilities": {
@@ -844,8 +938,8 @@
     "anthropic/claude-opus-4-7": {
       "name": "Claude Opus 4.7",
       "family": "claude-opus",
-      "released": "2026-04-17",
-      "updated": "2026-04-17",
+      "released": "2026-04-16",
+      "updated": "2026-04-16",
       "knowledge": "2026-01-31",
       "open_weights": false,
       "capabilities": {
@@ -955,7 +1049,9 @@
       },
       "price": {
         "input": 5,
-        "output": 25
+        "output": 25,
+        "cache_read": 0.5,
+        "cache_write": 6.25
       }
     },
     "anthropic/claude-opus-5": {
@@ -1001,7 +1097,9 @@
       },
       "price": {
         "input": 5,
-        "output": 25
+        "output": 25,
+        "cache_read": 0.5,
+        "cache_write": 5
       },
       "variants": {
         "thinking": {
@@ -1013,7 +1111,9 @@
           },
           "price": {
             "input": 5,
-            "output": 25
+            "output": 25,
+            "cache_read": 0.5,
+            "cache_write": 5
           }
         }
       }
@@ -1067,8 +1167,8 @@
     "anthropic/claude-sonnet-4-5-20250929": {
       "name": "Claude Sonnet 4.5 20250929",
       "family": "claude-sonnet",
-      "released": "2025-09-30",
-      "updated": "2025-09-30",
+      "released": "2025-09-29",
+      "updated": "2025-09-29",
       "knowledge": "2025-07-31",
       "open_weights": false,
       "capabilities": {
@@ -1102,7 +1202,16 @@
       },
       "price": {
         "input": 3,
-        "output": 15
+        "output": 15,
+        "cache_read": 0.3,
+        "cache_write": 3.75,
+        "tiers": [
+          {
+            "above": 200000,
+            "input": 6,
+            "output": 22.5
+          }
+        ]
       },
       "variants": {
         "thinking": {
@@ -1114,7 +1223,16 @@
           },
           "price": {
             "input": 3,
-            "output": 15
+            "output": 15,
+            "cache_read": 0.3,
+            "cache_write": 3.75,
+            "tiers": [
+              {
+                "above": 200000,
+                "input": 6,
+                "output": 22.5
+              }
+            ]
           }
         }
       }
@@ -1122,7 +1240,7 @@
     "anthropic/claude-sonnet-4-6": {
       "name": "Claude Sonnet 4.6",
       "family": "claude-sonnet",
-      "released": "2026-02-18",
+      "released": "2026-02-17",
       "updated": "2026-03-13",
       "knowledge": "2025-08-31",
       "open_weights": false,
@@ -1157,7 +1275,16 @@
       },
       "price": {
         "input": 3,
-        "output": 15
+        "output": 15,
+        "cache_read": 0.3,
+        "cache_write": 3.75,
+        "tiers": [
+          {
+            "above": 200000,
+            "input": 6,
+            "output": 22.5
+          }
+        ]
       },
       "variants": {
         "thinking": {
@@ -1169,7 +1296,16 @@
           },
           "price": {
             "input": 3,
-            "output": 15
+            "output": 15,
+            "cache_read": 0.3,
+            "cache_write": 3.75,
+            "tiers": [
+              {
+                "above": 200000,
+                "input": 6,
+                "output": 22.5
+              }
+            ]
           }
         }
       }
@@ -1217,7 +1353,9 @@
       },
       "price": {
         "input": 2,
-        "output": 10
+        "output": 10,
+        "cache_read": 0.2,
+        "cache_write": 2.5
       }
     },
     "anthropic/claude-sonnet-5-5": {
@@ -1298,10 +1436,11 @@
         "output": 1.21
       }
     },
-    "bytedance-seed/doubao-seed-1-6-vision-250815": {
-      "name": "Doubao Seed 1.6 Vision 250815",
-      "released": "2025-09-30",
-      "updated": "2025-09-30",
+    "bytedance-seed/seed-1-6-vision": {
+      "name": "Seed 1.6 Vision",
+      "family": "seed",
+      "released": "2025-08-15",
+      "updated": "2025-08-15",
       "open_weights": false,
       "capabilities": {
         "tools": true,
@@ -1328,10 +1467,11 @@
         "output": 1.143
       }
     },
-    "bytedance-seed/doubao-seed-1-8-251215": {
-      "name": "Doubao Seed 1.8 251215",
-      "released": "2025-12-18",
-      "updated": "2025-12-18",
+    "bytedance-seed/seed-1-8": {
+      "name": "Seed 1.8",
+      "family": "seed",
+      "released": "2025-12-28",
+      "updated": "2025-12-28",
       "open_weights": false,
       "capabilities": {
         "tools": true,
@@ -1354,16 +1494,29 @@
         "name": "doubao-seed-1-8-251215"
       },
       "price": {
-        "input": 0.114,
-        "output": 0.286
+        "input": 0.1143,
+        "output": 0.286,
+        "tiers": [
+          {
+            "above": 32000,
+            "input": 0.1715,
+            "output": 2.286
+          },
+          {
+            "above": 128000,
+            "input": 0.343,
+            "output": 3.43
+          }
+        ]
       }
     },
     "deepseek/deepseek-v3.2": {
       "name": "DeepSeek V3.2",
+      "family": "deepseek",
       "released": "2025-12-01",
       "updated": "2025-12-01",
       "knowledge": "2024-12",
-      "open_weights": false,
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": false,
@@ -1451,8 +1604,8 @@
     "google/gemini-2.0-flash-lite": {
       "name": "Gemini 2.0 Flash Lite",
       "family": "gemini-flash-lite",
-      "released": "2025-06-16",
-      "updated": "2025-06-16",
+      "released": "2024-12-11",
+      "updated": "2024-12-11",
       "knowledge": "2024-11",
       "open_weights": false,
       "capabilities": {
@@ -1517,8 +1670,10 @@
     },
     "google/gemini-2.5-flash-image": {
       "name": "Gemini 2.5 Flash Image",
-      "released": "2025-10-08",
-      "updated": "2025-10-08",
+      "family": "gemini-flash",
+      "type": "image",
+      "released": "2025-08-26",
+      "updated": "2025-08-26",
       "knowledge": "2025-01",
       "open_weights": false,
       "capabilities": {
@@ -1530,7 +1685,8 @@
           "image"
         ],
         "output": [
-          "text"
+          "text",
+          "image"
         ]
       },
       "limit": {
@@ -1637,13 +1793,21 @@
       },
       "price": {
         "input": 1.25,
-        "output": 10
+        "output": 10,
+        "tiers": [
+          {
+            "above": 200000,
+            "input": 2.5,
+            "output": 15
+          }
+        ]
       }
     },
     "google/gemini-3-flash-preview": {
       "name": "Gemini 3 Flash Preview",
-      "released": "2025-12-18",
-      "updated": "2025-12-18",
+      "family": "gemini-flash",
+      "released": "2025-12-17",
+      "updated": "2025-12-17",
       "knowledge": "2025-06",
       "open_weights": false,
       "capabilities": {
@@ -1673,6 +1837,8 @@
     },
     "google/gemini-3-pro-image-preview": {
       "name": "Gemini 3 Pro Image Preview",
+      "family": "gemini-pro",
+      "type": "image",
       "released": "2025-11-20",
       "updated": "2025-11-20",
       "knowledge": "2025-06",
@@ -1686,7 +1852,8 @@
           "image"
         ],
         "output": [
-          "text"
+          "text",
+          "image"
         ]
       },
       "limit": {
@@ -1704,8 +1871,9 @@
     },
     "google/gemini-3-pro-preview": {
       "name": "Gemini 3 Pro Preview",
-      "released": "2025-11-19",
-      "updated": "2025-11-19",
+      "family": "gemini-pro",
+      "released": "2025-11-18",
+      "updated": "2025-11-18",
       "knowledge": "2025-06",
       "open_weights": false,
       "capabilities": {
@@ -1730,13 +1898,22 @@
       },
       "price": {
         "input": 2,
-        "output": 12
+        "output": 12,
+        "tiers": [
+          {
+            "above": 200000,
+            "input": 4,
+            "output": 18
+          }
+        ]
       }
     },
     "google/gemini-3.1-flash-image-preview": {
       "name": "Gemini 3.1 Flash Image Preview",
-      "released": "2026-02-27",
-      "updated": "2026-02-27",
+      "family": "gemini-flash",
+      "type": "image",
+      "released": "2026-02-26",
+      "updated": "2026-02-26",
       "knowledge": "2025-01",
       "open_weights": false,
       "capabilities": {
@@ -1807,7 +1984,8 @@
       },
       "price": {
         "input": 0.25,
-        "output": 1.5
+        "output": 1.5,
+        "cache_read": 0.03
       }
     },
     "google/gemini-3.1-flash-lite-preview": {
@@ -1894,7 +2072,14 @@
       },
       "price": {
         "input": 2,
-        "output": 12
+        "output": 12,
+        "tiers": [
+          {
+            "above": 200000,
+            "input": 4,
+            "output": 18
+          }
+        ]
       }
     },
     "google/gemini-3.5-flash": {
@@ -1996,7 +2181,8 @@
       },
       "price": {
         "input": 0.3,
-        "output": 2.5
+        "output": 2.5,
+        "cache_read": 0.03
       }
     },
     "google/gemini-3.6-flash": {
@@ -2040,7 +2226,8 @@
       },
       "price": {
         "input": 1.5,
-        "output": 7.5
+        "output": 7.5,
+        "cache_read": 0.15
       }
     },
     "google/gemini-3.7-flash": {
@@ -2083,7 +2270,8 @@
       },
       "price": {
         "input": 0.75,
-        "output": 3.75
+        "output": 3.75,
+        "cache_read": 0.075
       }
     },
     "google/gemini-3.8-flash": {
@@ -2125,7 +2313,8 @@
       },
       "price": {
         "input": 0.75,
-        "output": 3.75
+        "output": 3.75,
+        "cache_read": 0.075
       }
     },
     "google/gemini-4-argon": {
@@ -2173,8 +2362,8 @@
         "cache_write": 0.375
       }
     },
-    "minimax/minimax-m1": {
-      "name": "MiniMax M1",
+    "minimax/minimax-m1-80k": {
+      "name": "MiniMax M1 80K",
       "family": "minimax",
       "released": "2025-06-16",
       "updated": "2025-06-16",
@@ -2205,9 +2394,10 @@
     },
     "minimax/minimax-m2": {
       "name": "MiniMax M2",
-      "released": "2025-10-26",
-      "updated": "2025-10-26",
-      "open_weights": false,
+      "family": "minimax",
+      "released": "2025-10-27",
+      "updated": "2025-10-27",
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": false,
@@ -2357,15 +2547,27 @@
       },
       "price": {
         "input": 0.72,
-        "output": 2.88
+        "output": 2.88,
+        "cache_read": 0.144,
+        "cache_write": 0.9,
+        "tiers": [
+          {
+            "above": 512000,
+            "input": 1.44,
+            "output": 5.76,
+            "cache_read": 0.144,
+            "cache_write": 0.9
+          }
+        ]
       }
     },
     "mistral/ministral-14b-2512": {
       "name": "Ministral 14B 2512",
-      "released": "2025-12-16",
-      "updated": "2025-12-16",
+      "family": "ministral",
+      "released": "2025-12-02",
+      "updated": "2025-12-02",
       "knowledge": "2024-12",
-      "open_weights": false,
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": true,
@@ -2393,10 +2595,11 @@
     },
     "mistral/mistral-large-2512": {
       "name": "Mistral Large 2512",
-      "released": "2025-12-16",
-      "updated": "2025-12-16",
+      "family": "mistral-large",
+      "released": "2025-12-02",
+      "updated": "2025-12-02",
       "knowledge": "2024-12",
-      "open_weights": false,
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": true,
@@ -2422,12 +2625,13 @@
         "output": 3.3
       }
     },
-    "moonshotai/kimi-k2-0905-preview": {
-      "name": "Kimi K2 0905 Preview",
+    "moonshotai/kimi-k2-0905": {
+      "name": "Kimi K2 0905",
+      "family": "kimi-k2",
       "released": "2025-09-05",
       "updated": "2025-09-05",
       "knowledge": "2025-06",
-      "open_weights": false,
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": false,
@@ -2448,16 +2652,17 @@
         "name": "kimi-k2-0905-preview"
       },
       "price": {
-        "input": 0.632,
-        "output": 2.53
+        "input": 0.62854,
+        "output": 2.5146
       }
     },
     "moonshotai/kimi-k2-thinking": {
       "name": "Kimi K2 Thinking",
-      "released": "2025-09-05",
-      "updated": "2025-09-05",
+      "family": "kimi-thinking",
+      "released": "2025-11-06",
+      "updated": "2025-11-06",
       "knowledge": "2025-06",
-      "open_weights": false,
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": false,
@@ -2519,7 +2724,7 @@
         "name": "Kimi K2.5"
       },
       "price": {
-        "input": 0.66,
+        "input": 0.627,
         "output": 3.3
       }
     },
@@ -2643,7 +2848,8 @@
       },
       "price": {
         "input": 3,
-        "output": 15
+        "output": 15,
+        "cache_read": 0.3
       }
     },
     "openai/gpt-4.1": {
@@ -2751,7 +2957,7 @@
       "name": "GPT-4o",
       "family": "gpt",
       "released": "2024-05-13",
-      "updated": "2024-05-13",
+      "updated": "2024-08-06",
       "knowledge": "2023-09",
       "open_weights": false,
       "capabilities": {
@@ -2784,8 +2990,8 @@
     "openai/gpt-5": {
       "name": "GPT-5",
       "family": "gpt",
-      "released": "2025-08-08",
-      "updated": "2025-08-08",
+      "released": "2025-08-07",
+      "updated": "2025-08-07",
       "knowledge": "2024-09-30",
       "open_weights": false,
       "capabilities": {
@@ -2840,8 +3046,8 @@
     "openai/gpt-5-mini": {
       "name": "GPT-5 Mini",
       "family": "gpt-mini",
-      "released": "2025-08-08",
-      "updated": "2025-08-08",
+      "released": "2025-08-07",
+      "updated": "2025-08-07",
       "knowledge": "2024-05-30",
       "open_weights": false,
       "capabilities": {
@@ -2876,14 +3082,15 @@
       },
       "price": {
         "input": 0.25,
-        "output": 2
+        "output": 2,
+        "cache_read": 0.025
       }
     },
     "openai/gpt-5-pro": {
       "name": "GPT-5 Pro",
       "family": "gpt-pro",
-      "released": "2025-10-08",
-      "updated": "2025-10-08",
+      "released": "2025-10-06",
+      "updated": "2025-10-06",
       "knowledge": "2024-09-30",
       "open_weights": false,
       "capabilities": {
@@ -2915,14 +3122,15 @@
       },
       "price": {
         "input": 15,
-        "output": 120
+        "output": 120,
+        "cache_read": 0.005
       }
     },
     "openai/gpt-5.1": {
       "name": "GPT-5.1",
       "family": "gpt",
-      "released": "2025-11-14",
-      "updated": "2025-11-14",
+      "released": "2025-11-13",
+      "updated": "2025-11-13",
       "knowledge": "2024-09-30",
       "open_weights": false,
       "capabilities": {
@@ -2963,9 +3171,9 @@
     },
     "openai/gpt-5.1-chat-latest": {
       "name": "GPT-5.1 Chat Latest",
-      "family": "gpt-codex",
-      "released": "2025-11-14",
-      "updated": "2025-11-14",
+      "family": "gpt",
+      "released": "2025-11-13",
+      "updated": "2025-11-13",
       "knowledge": "2024-09-30",
       "open_weights": false,
       "capabilities": {
@@ -3002,8 +3210,8 @@
     "openai/gpt-5.2": {
       "name": "GPT-5.2",
       "family": "gpt",
-      "released": "2025-12-12",
-      "updated": "2025-12-12",
+      "released": "2025-12-11",
+      "updated": "2025-12-11",
       "knowledge": "2025-08-31",
       "open_weights": false,
       "capabilities": {
@@ -3045,9 +3253,9 @@
     },
     "openai/gpt-5.2-chat-latest": {
       "name": "GPT-5.2 Chat Latest",
-      "family": "gpt-codex",
-      "released": "2025-12-12",
-      "updated": "2025-12-12",
+      "family": "gpt",
+      "released": "2025-12-11",
+      "updated": "2025-12-11",
       "knowledge": "2025-08-31",
       "open_weights": false,
       "capabilities": {
@@ -3171,8 +3379,8 @@
     "openai/gpt-5.4-mini": {
       "name": "GPT-5.4 Mini",
       "family": "gpt-mini",
-      "released": "2026-03-19",
-      "updated": "2026-03-19",
+      "released": "2026-03-17",
+      "updated": "2026-03-17",
       "knowledge": "2025-08-31",
       "open_weights": false,
       "capabilities": {
@@ -3209,14 +3417,15 @@
       },
       "price": {
         "input": 0.75,
-        "output": 4.5
+        "output": 4.5,
+        "cache_read": 0.075
       }
     },
     "openai/gpt-5.4-nano": {
       "name": "GPT-5.4 Nano",
       "family": "gpt-nano",
-      "released": "2026-03-19",
-      "updated": "2026-03-19",
+      "released": "2026-03-17",
+      "updated": "2026-03-17",
       "knowledge": "2025-08-31",
       "open_weights": false,
       "capabilities": {
@@ -3253,7 +3462,8 @@
       },
       "price": {
         "input": 0.2,
-        "output": 1.25
+        "output": 1.25,
+        "cache_read": 0.02
       }
     },
     "openai/gpt-5.5": {
@@ -3298,7 +3508,16 @@
       },
       "price": {
         "input": 5,
-        "output": 30
+        "output": 30,
+        "cache_read": 0.5,
+        "tiers": [
+          {
+            "above": 272000,
+            "input": 10,
+            "output": 45,
+            "cache_read": 0.5
+          }
+        ]
       }
     },
     "openai/gpt-5.6-luna": {
@@ -3344,7 +3563,8 @@
       },
       "price": {
         "input": 0.2,
-        "output": 1.2
+        "output": 1.2,
+        "cache_read": 0.02
       }
     },
     "openai/gpt-5.6-luna-pro": {
@@ -3390,7 +3610,8 @@
       },
       "price": {
         "input": 0.2,
-        "output": 1.2
+        "output": 1.2,
+        "cache_read": 0.02
       }
     },
     "openai/gpt-5.6-sol": {
@@ -3436,7 +3657,8 @@
       },
       "price": {
         "input": 5,
-        "output": 30
+        "output": 30,
+        "cache_read": 0.5
       }
     },
     "openai/gpt-5.6-sol-pro": {
@@ -3482,7 +3704,8 @@
       },
       "price": {
         "input": 5,
-        "output": 30
+        "output": 30,
+        "cache_read": 0.5
       }
     },
     "openai/gpt-5.6-terra": {
@@ -3528,7 +3751,8 @@
       },
       "price": {
         "input": 2,
-        "output": 12
+        "output": 12,
+        "cache_read": 0.2
       }
     },
     "openai/gpt-5.6-terra-pro": {
@@ -3574,7 +3798,8 @@
       },
       "price": {
         "input": 2,
-        "output": 12
+        "output": 12,
+        "cache_read": 0.2
       }
     },
     "openai/gpt-6-astra": {
@@ -3618,7 +3843,8 @@
       },
       "price": {
         "input": 10,
-        "output": 50
+        "output": 50,
+        "cache_read": 1
       }
     },
     "openai/gpt-6-luna": {
@@ -3666,7 +3892,15 @@
         "input": 0.1,
         "output": 0.5,
         "cache_read": 0.01,
-        "cache_write": 0.125
+        "cache_write": 0.125,
+        "tiers": [
+          {
+            "above": 272000,
+            "input": 0.2,
+            "output": 0.75,
+            "cache_read": 0.02
+          }
+        ]
       }
     },
     "openai/gpt-6-sol": {
@@ -3714,7 +3948,15 @@
         "input": 2,
         "output": 10,
         "cache_read": 0.2,
-        "cache_write": 2.5
+        "cache_write": 2.5,
+        "tiers": [
+          {
+            "above": 272000,
+            "input": 4,
+            "output": 15,
+            "cache_read": 0.4
+          }
+        ]
       }
     },
     "openai/gpt-6.1-sol": {
@@ -3760,7 +4002,15 @@
         "input": 2,
         "output": 10,
         "cache_read": 0.1,
-        "cache_write": 2.5
+        "cache_write": 2.5,
+        "tiers": [
+          {
+            "above": 272000,
+            "input": 4,
+            "output": 15,
+            "cache_read": 0.2
+          }
+        ]
       }
     },
     "openai/o3": {
@@ -3806,8 +4056,9 @@
     },
     "xai/grok-4-fast-non-reasoning": {
       "name": "Grok 4 Fast Non Reasoning",
-      "released": "2025-09-23",
-      "updated": "2025-09-23",
+      "family": "grok",
+      "released": "2025-12-18",
+      "updated": "2025-12-18",
       "knowledge": "2025-06",
       "open_weights": false,
       "capabilities": {
@@ -3837,8 +4088,9 @@
     },
     "xai/grok-4-fast-reasoning": {
       "name": "Grok 4 Fast Reasoning",
-      "released": "2025-09-23",
-      "updated": "2025-09-23",
+      "family": "grok",
+      "released": "2025-12-18",
+      "updated": "2025-12-18",
       "knowledge": "2025-06",
       "open_weights": false,
       "capabilities": {
@@ -3900,8 +4152,9 @@
     },
     "xai/grok-4.1-fast-reasoning": {
       "name": "Grok 4.1 Fast Reasoning",
-      "released": "2025-11-20",
-      "updated": "2025-11-20",
+      "family": "grok",
+      "released": "2025-11-19",
+      "updated": "2025-11-19",
       "knowledge": "2025-06",
       "open_weights": false,
       "capabilities": {
@@ -3932,8 +4185,9 @@
     },
     "xai/grok-4.20-0309-reasoning": {
       "name": "Grok 4.20 0309 Reasoning",
-      "released": "2026-03-16",
-      "updated": "2026-03-16",
+      "family": "grok",
+      "released": "2026-03-09",
+      "updated": "2026-03-09",
       "open_weights": false,
       "capabilities": {
         "tools": true,
@@ -4039,7 +4293,8 @@
       },
       "price": {
         "input": 2,
-        "output": 6
+        "output": 6,
+        "cache_read": 0.5
       }
     },
     "xai/grok-4.6": {
@@ -4080,7 +4335,8 @@
       },
       "price": {
         "input": 2,
-        "output": 6
+        "output": 6,
+        "cache_read": 0.5
       }
     },
     "xai/grok-4.7": {
@@ -4133,8 +4389,8 @@
     "zhipuai/glm-4.5": {
       "name": "GLM 4.5",
       "family": "glm",
-      "released": "2025-07-29",
-      "updated": "2025-07-29",
+      "released": "2025-07-28",
+      "updated": "2025-07-28",
       "knowledge": "2025-04",
       "open_weights": true,
       "capabilities": {
@@ -4161,14 +4417,21 @@
       },
       "price": {
         "input": 0.286,
-        "output": 1.142
+        "output": 1.143,
+        "tiers": [
+          {
+            "above": 32000,
+            "input": 0.5714,
+            "output": 2.29
+          }
+        ]
       }
     },
     "zhipuai/glm-4.5v": {
       "name": "GLM 4.5V",
       "family": "glm",
-      "released": "2025-08-12",
-      "updated": "2025-08-12",
+      "released": "2025-08-11",
+      "updated": "2025-08-11",
       "knowledge": "2025-04",
       "open_weights": true,
       "capabilities": {
@@ -4197,7 +4460,14 @@
       },
       "price": {
         "input": 0.29,
-        "output": 0.86
+        "output": 0.86,
+        "tiers": [
+          {
+            "above": 32000,
+            "input": 0.58,
+            "output": 1.72
+          }
+        ]
       }
     },
     "zhipuai/glm-4.6": {
@@ -4231,7 +4501,14 @@
       },
       "price": {
         "input": 0.286,
-        "output": 1.142
+        "output": 1.142,
+        "tiers": [
+          {
+            "above": 32000,
+            "input": 0.572,
+            "output": 2.29
+          }
+        ]
       }
     },
     "zhipuai/glm-4.6v": {
@@ -4267,7 +4544,14 @@
       },
       "price": {
         "input": 0.145,
-        "output": 0.43
+        "output": 0.43,
+        "tiers": [
+          {
+            "above": 32000,
+            "input": 0.29,
+            "output": 0.86
+          }
+        ]
       }
     },
     "zhipuai/glm-4.7": {
@@ -4304,7 +4588,14 @@
       },
       "price": {
         "input": 0.286,
-        "output": 1.142
+        "output": 1.142,
+        "tiers": [
+          {
+            "above": 32000,
+            "input": 0.572,
+            "output": 2.29
+          }
+        ]
       }
     },
     "zhipuai/glm-5": {
@@ -4340,7 +4631,14 @@
       },
       "price": {
         "input": 0.6,
-        "output": 2.6
+        "output": 2.6,
+        "tiers": [
+          {
+            "above": 32000,
+            "input": 0.9,
+            "output": 3.2
+          }
+        ]
       }
     },
     "zhipuai/glm-5-turbo": {
@@ -4377,7 +4675,14 @@
       },
       "price": {
         "input": 0.72,
-        "output": 3.2
+        "output": 3.2,
+        "tiers": [
+          {
+            "above": 32000,
+            "input": 1.1,
+            "output": 3.8
+          }
+        ]
       }
     },
     "zhipuai/glm-5.1": {
@@ -4414,7 +4719,8 @@
       },
       "price": {
         "input": 1.4,
-        "output": 4.4
+        "output": 4.4,
+        "cache_read": 0.26
       }
     },
     "zhipuai/glm-5.2": {
@@ -4454,7 +4760,8 @@
       },
       "price": {
         "input": 1.4,
-        "output": 4.4
+        "output": 4.4,
+        "cache_read": 0.26
       }
     },
     "zhipuai/glm-5.3": {
@@ -4495,7 +4802,8 @@
       },
       "price": {
         "input": 1.4,
-        "output": 4.4
+        "output": 4.4,
+        "cache_read": 0.26
       }
     },
     "zhipuai/glm-5.3-flash": {
@@ -4539,14 +4847,15 @@
       },
       "price": {
         "input": 0.075,
-        "output": 0.25
+        "output": 0.25,
+        "cache_read": 0.015
       }
     },
     "zhipuai/glm-5v-turbo": {
       "name": "GLM 5V Turbo",
       "family": "glm",
-      "released": "2026-04-02",
-      "updated": "2026-04-02",
+      "released": "2026-04-01",
+      "updated": "2026-04-01",
       "open_weights": false,
       "capabilities": {
         "tools": true,
@@ -4579,7 +4888,14 @@
       },
       "price": {
         "input": 0.72,
-        "output": 3.2
+        "output": 3.2,
+        "tiers": [
+          {
+            "above": 32000,
+            "input": 1.1,
+            "output": 3.8
+          }
+        ]
       }
     }
   }

@@ -1139,7 +1139,7 @@
       "open_weights": false,
       "capabilities": {
         "tools": false,
-        "attachments": false,
+        "attachments": true,
         "temperature": false,
         "input": [
           "audio"

@@ -122,7 +122,17 @@
       },
       "provider_options": {
         "id": "canopylabs/orpheus-arabic-saudi",
-        "name": "Canopy Labs Orpheus Arabic Saudi"
+        "name": "Canopy Labs Orpheus Arabic Saudi",
+        "endpoint": {
+          "format": "openai-responses",
+          "api": "https://api.groq.com/openai/v1",
+          "auth": {
+            "scheme": "bearer"
+          },
+          "env": [
+            "GROQ_API_KEY"
+          ]
+        }
       },
       "status": "beta"
     },
@@ -150,7 +160,17 @@
       },
       "provider_options": {
         "id": "canopylabs/orpheus-v1-english",
-        "name": "Canopy Labs Orpheus V1 English"
+        "name": "Canopy Labs Orpheus V1 English",
+        "endpoint": {
+          "format": "openai-responses",
+          "api": "https://api.groq.com/openai/v1",
+          "auth": {
+            "scheme": "bearer"
+          },
+          "env": [
+            "GROQ_API_KEY"
+          ]
+        }
       },
       "status": "beta"
     },

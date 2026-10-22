@@ -2649,9 +2649,9 @@
     },
     "mistral/mixtral-8x7b-instruct-v0.1": {
       "name": "Mixtral 8x7B Instruct V0.1",
+      "family": "mistral",
       "released": "2023-12-11",
       "updated": "2023-12-11",
-      "knowledge": "2023-09",
       "open_weights": true,
       "capabilities": {
         "tools": false,

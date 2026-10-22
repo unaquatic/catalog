@@ -54,38 +54,6 @@
       },
       "status": "deprecated"
     },
-    "cloudflare/clef": {
-      "name": "Clef",
-      "type": "decision",
-      "released": "2026-10-01",
-      "updated": "2026-10-01",
-      "open_weights": true,
-      "capabilities": {
-        "tools": false,
-        "attachments": true,
-        "structured_output": true,
-        "temperature": true,
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 65536,
-        "output": 0
-      },
-      "provider_options": {
-        "id": "clef:27b",
-        "name": "Clef"
-      },
-      "price": {
-        "input": 0.24,
-        "output": 0
-      }
-    },
     "deepseek/deepseek-v4-flash": {
       "name": "DeepSeek V4 Flash",
       "family": "deepseek-flash",

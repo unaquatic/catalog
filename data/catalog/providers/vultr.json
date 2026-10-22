@@ -136,7 +136,8 @@
       "price": {
         "input": 0.1,
         "output": 0.25
-      }
+      },
+      "status": "deprecated"
     },
     "deepseek/deepseek-v4.1-flash": {
       "name": "DeepSeek V4.1 Flash",
@@ -359,7 +360,8 @@
       "price": {
         "input": 0.09,
         "output": 0.18
-      }
+      },
+      "status": "deprecated"
     },
     "xiaomi/mimo-v2.6-flash": {
       "name": "MiMo V2.6 Flash",

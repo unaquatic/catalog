@@ -1063,13 +1063,14 @@
     "alibaba/qwen3-30b-a3b-instruct-2507": {
       "name": "Qwen3 30B A3B Instruct 2507",
       "family": "qwen",
-      "released": "2025-02-20",
-      "updated": "2025-02-20",
+      "released": "2025-07-28",
+      "updated": "2025-07-28",
       "open_weights": true,
       "capabilities": {
         "tools": false,
         "attachments": false,
         "structured_output": false,
+        "temperature": true,
         "input": [
           "text"
         ],
@@ -1130,13 +1131,14 @@
     "alibaba/qwen3-8b": {
       "name": "Qwen3 8B",
       "family": "qwen",
-      "released": "2024-01-01",
-      "updated": "2024-01-01",
+      "released": "2025-04-29",
+      "updated": "2025-04-29",
       "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": false,
         "structured_output": false,
+        "temperature": true,
         "input": [
           "text"
         ],
@@ -4721,72 +4723,6 @@
         "cache_write": 0.003
       }
     },
-    "cloudflare/clef": {
-      "name": "Clef",
-      "type": "decision",
-      "released": "2026-10-01",
-      "updated": "2026-10-01",
-      "open_weights": true,
-      "capabilities": {
-        "tools": false,
-        "attachments": true,
-        "structured_output": false,
-        "temperature": true,
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 1800,
-        "input": 1800,
-        "output": 0
-      },
-      "provider_options": {
-        "id": "cloudflare/clef",
-        "name": "Clef"
-      },
-      "price": {
-        "input": 0.24,
-        "output": 0
-      }
-    },
-    "cloudflare/clef-flash": {
-      "name": "Clef Flash",
-      "type": "decision",
-      "released": "2026-10-01",
-      "updated": "2026-10-01",
-      "open_weights": true,
-      "capabilities": {
-        "tools": false,
-        "attachments": true,
-        "structured_output": false,
-        "temperature": true,
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 1800,
-        "input": 1800,
-        "output": 0
-      },
-      "provider_options": {
-        "id": "cloudflare/clef-flash",
-        "name": "Clef Flash"
-      },
-      "price": {
-        "input": 0.09,
-        "output": 0
-      }
-    },
     "cohere/command-a-reasoning-08-2025": {
       "name": "Command A Reasoning 08 2025",
       "family": "command-a",
@@ -5008,9 +4944,9 @@
         "name": "DeepSeek Latest"
       },
       "price": {
-        "input": 0.66,
-        "output": 1.98,
-        "cache_read": 0.022
+        "input": 0.2244,
+        "output": 0.6732,
+        "cache_read": 0.00714
       }
     },
     "deepseek/deepseek-r1-0528": {
@@ -5655,9 +5591,9 @@
         "name": "DeepSeek V4 Pro 0813"
       },
       "price": {
-        "input": 0.66,
-        "output": 1.98,
-        "cache_read": 0.022
+        "input": 0.2244,
+        "output": 0.6732,
+        "cache_read": 0.00714
       },
       "variants": {
         "thinking": {
@@ -5668,9 +5604,9 @@
             "name": "DeepSeek V4 Pro 0813 Thinking"
           },
           "price": {
-            "input": 0.66,
-            "output": 1.98,
-            "cache_read": 0.022
+            "input": 0.2244,
+            "output": 0.6732,
+            "cache_read": 0.00714
           }
         }
       }
@@ -5714,9 +5650,9 @@
         "name": "DeepSeek V4.1 Flash"
       },
       "price": {
-        "input": 0.14,
-        "output": 0.42,
-        "cache_read": 0.0042
+        "input": 0.09,
+        "output": 0.25,
+        "cache_read": 0.006
       },
       "variants": {
         "thinking": {
@@ -5727,9 +5663,9 @@
             "name": "DeepSeek V4.1 Flash Thinking"
           },
           "price": {
-            "input": 0.14,
-            "output": 0.42,
-            "cache_read": 0.0042
+            "input": 0.09,
+            "output": 0.25,
+            "cache_read": 0.006
           }
         }
       },
@@ -6169,14 +6105,16 @@
     },
     "google/gemini-2.5-flash-lite-preview-06-17": {
       "name": "Gemini 2.5 Flash Lite Preview 06 17",
-      "family": "gemini",
+      "family": "gemini-flash-lite",
       "released": "2025-06-17",
       "updated": "2025-06-17",
+      "knowledge": "2025-01",
       "open_weights": false,
       "capabilities": {
         "tools": false,
         "attachments": true,
         "structured_output": false,
+        "temperature": true,
         "input": [
           "text",
           "image",
@@ -6210,14 +6148,16 @@
     },
     "google/gemini-2.5-flash-lite-preview-09-2025": {
       "name": "Gemini 2.5 Flash Lite Preview 09 2025",
-      "family": "gemini",
+      "family": "gemini-flash-lite",
       "released": "2025-09-25",
       "updated": "2025-09-25",
+      "knowledge": "2025-01",
       "open_weights": false,
       "capabilities": {
         "tools": true,
         "attachments": true,
         "structured_output": true,
+        "temperature": true,
         "input": [
           "text",
           "image",
@@ -6327,14 +6267,16 @@
     },
     "google/gemini-2.5-flash-preview-05-20": {
       "name": "Gemini 2.5 Flash Preview 05 20",
-      "family": "gemini",
+      "family": "gemini-flash",
       "released": "2025-05-20",
       "updated": "2025-05-20",
+      "knowledge": "2025-01",
       "open_weights": false,
       "capabilities": {
         "tools": false,
         "attachments": true,
         "structured_output": false,
+        "temperature": true,
         "input": [
           "text",
           "image"
@@ -7586,9 +7528,9 @@
         "name": "Gemma 4 26B A4B"
       },
       "price": {
-        "input": 0.0765,
-        "output": 0.255,
-        "cache_read": 0.0425
+        "input": 0.09,
+        "output": 0.3,
+        "cache_read": 0.05
       },
       "variants": {
         "thinking": {
@@ -7599,9 +7541,9 @@
             "name": "Gemma 4 26B A4B Thinking"
           },
           "price": {
-            "input": 0.0765,
-            "output": 0.255,
-            "cache_read": 0.0425
+            "input": 0.09,
+            "output": 0.3,
+            "cache_read": 0.05
           }
         }
       }
@@ -8604,6 +8546,116 @@
         "cache_read": 0.05
       }
     },
+    "google/gemma-4-dark-thoughts-v2-31b": {
+      "name": "Gemma 4 Dark Thoughts V2 31B",
+      "family": "gemma",
+      "released": "2026-10-13",
+      "updated": "2026-10-13",
+      "open_weights": true,
+      "capabilities": {
+        "tools": false,
+        "attachments": false,
+        "structured_output": false,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 65536,
+        "input": 65536,
+        "output": 8192
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "ateron/gemma-4-dark-thoughts-v2-31b",
+        "name": "Gemma 4 Dark Thoughts V2 31B"
+      },
+      "price": {
+        "input": 0.1,
+        "output": 0.45,
+        "cache_read": 0.05
+      }
+    },
+    "google/gemma-4-giftige-blume-31b-v2": {
+      "name": "Gemma 4 Giftige Blume 31B V2",
+      "family": "gemma",
+      "released": "2026-10-13",
+      "updated": "2026-10-13",
+      "open_weights": true,
+      "capabilities": {
+        "tools": false,
+        "attachments": false,
+        "structured_output": false,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 65536,
+        "input": 65536,
+        "output": 8192
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "nimbz/gemma-4-giftige-blume-31b-v2",
+        "name": "Gemma 4 Giftige-Blume V2 31B"
+      },
+      "price": {
+        "input": 0.1,
+        "output": 0.45,
+        "cache_read": 0.05
+      }
+    },
+    "google/gemma-4-gutenberg-31b": {
+      "name": "Gemma 4 Gutenberg 31B",
+      "family": "gemma",
+      "released": "2026-10-13",
+      "updated": "2026-10-13",
+      "open_weights": true,
+      "capabilities": {
+        "tools": false,
+        "attachments": false,
+        "structured_output": false,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 65536,
+        "input": 65536,
+        "output": 8192
+      },
+      "provider_options": {
+        "id": "nbeerbower/gemma4-gutenberg-31b",
+        "name": "Gemma 4 Gutenberg 31B"
+      },
+      "price": {
+        "input": 0.1,
+        "output": 0.45,
+        "cache_read": 0.05
+      }
+    },
     "google/veiled-calla-12b": {
       "name": "Veiled Calla 12B",
       "family": "llama",
@@ -9177,40 +9229,6 @@
         "output": 0.3465
       }
     },
-    "liquid/d1": {
-      "name": "D1",
-      "family": "liquid",
-      "type": "decision",
-      "released": "2026-09-29",
-      "updated": "2026-09-29",
-      "open_weights": false,
-      "capabilities": {
-        "tools": false,
-        "attachments": false,
-        "structured_output": false,
-        "temperature": false,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 65536,
-        "input": 65536,
-        "output": 0
-      },
-      "provider_options": {
-        "id": "liquid/d1",
-        "name": "Liquid D1"
-      },
-      "price": {
-        "input": 0.04,
-        "output": 0,
-        "cache_read": 0.04
-      }
-    },
     "liquid/lfm2.5-2.6b": {
       "name": "LFM2.5 2.6B",
       "family": "liquid",
@@ -9754,16 +9772,18 @@
         "cache_read": 0.01
       }
     },
-    "meta/llama-3.2-3b": {
-      "name": "Llama 3.2 3B",
+    "meta/llama-3.2-3b-instruct": {
+      "name": "Llama 3.2 3B Instruct",
       "family": "llama",
-      "released": "2024-01-01",
+      "released": "2024-09-25",
       "updated": "2024-09-25",
+      "knowledge": "2023-12",
       "open_weights": true,
       "capabilities": {
         "tools": false,
         "attachments": true,
         "structured_output": false,
+        "temperature": true,
         "input": [
           "text",
           "pdf"
@@ -10292,13 +10312,15 @@
     "microsoft/phi-4-multimodal-instruct": {
       "name": "Phi 4 Multimodal Instruct",
       "family": "phi",
-      "released": "2025-07-26",
-      "updated": "2025-07-26",
+      "released": "2025-02-26",
+      "updated": "2025-02-26",
+      "knowledge": "2024-06",
       "open_weights": true,
       "capabilities": {
         "tools": false,
         "attachments": false,
         "structured_output": false,
+        "temperature": true,
         "input": [
           "text"
         ],
@@ -10387,38 +10409,6 @@
         "cache_read": 0.0697
       }
     },
-    "minimax/minimax-m1": {
-      "name": "MiniMax M1",
-      "family": "minimax",
-      "released": "2025-01-08",
-      "updated": "2025-06-16",
-      "open_weights": true,
-      "capabilities": {
-        "tools": false,
-        "attachments": false,
-        "structured_output": false,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 1000000,
-        "input": 1000000,
-        "output": 131072
-      },
-      "provider_options": {
-        "id": "MiniMax-M1",
-        "name": "MiniMax M1"
-      },
-      "price": {
-        "input": 0.1394,
-        "output": 1.3328,
-        "cache_read": 0.0697
-      }
-    },
     "minimax/minimax-m1-80k": {
       "name": "MiniMax M1 80K",
       "family": "minimax",
@@ -10450,7 +10440,10 @@
         "input": 0.6052,
         "output": 2.4225,
         "cache_read": 0.3026
-      }
+      },
+      "aliases": [
+        "MiniMax-M1"
+      ]
     },
     "minimax/minimax-m2": {
       "name": "MiniMax M2",
@@ -11976,9 +11969,9 @@
         "name": "Kimi K2.6"
       },
       "price": {
-        "input": 0.45,
-        "output": 1.95,
-        "cache_read": 0.045
+        "input": 0.44935,
+        "output": 1.892,
+        "cache_read": 0.07568
       },
       "variants": {
         "thinking": {
@@ -11989,9 +11982,9 @@
             "name": "Kimi K2.6 Thinking"
           },
           "price": {
-            "input": 0.45,
-            "output": 1.95,
-            "cache_read": 0.045
+            "input": 0.44935,
+            "output": 1.892,
+            "cache_read": 0.07568
           }
         }
       },
@@ -15741,6 +15734,7 @@
     },
     "stepfun/step-3.5-flash": {
       "name": "Step 3.5 Flash",
+      "family": "step",
       "released": "2026-01-29",
       "updated": "2026-02-13",
       "knowledge": "2025-01",
@@ -15781,6 +15775,7 @@
     },
     "stepfun/step-3.5-flash-2603": {
       "name": "Step 3.5 Flash 2603",
+      "family": "step",
       "released": "2026-04-02",
       "updated": "2026-04-02",
       "knowledge": "2025-01",
@@ -16307,6 +16302,37 @@
         "cache_read": 0.204
       }
     },
+    "thedrummer/skyfall-31b-v4.2": {
+      "name": "Skyfall 31B V4.2",
+      "released": "2026-10-12",
+      "updated": "2026-10-12",
+      "open_weights": true,
+      "capabilities": {
+        "tools": false,
+        "attachments": false,
+        "structured_output": false,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 16384,
+        "input": 16384,
+        "output": 4096
+      },
+      "provider_options": {
+        "id": "TheDrummer/skyfall-31b-v4.2",
+        "name": "TheDrummer Skyfall 31B v4.2"
+      },
+      "price": {
+        "input": 0.12,
+        "output": 0.15,
+        "cache_read": 0.06
+      }
+    },
     "thedrummer/skyfall-36b-v2": {
       "name": "Skyfall 36B V2",
       "released": "2025-03-10",
@@ -16472,42 +16498,6 @@
           }
         }
       }
-    },
-    "typesafe/jev-latest": {
-      "name": "Jev Latest",
-      "type": "decision",
-      "released": "2026-09-15",
-      "updated": "2026-09-15",
-      "open_weights": false,
-      "capabilities": {
-        "tools": false,
-        "attachments": false,
-        "structured_output": false,
-        "temperature": false,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 32000,
-        "input": 32000,
-        "output": 0
-      },
-      "provider_options": {
-        "id": "typesafe/jev-latest",
-        "name": "Jev Latest"
-      },
-      "price": {
-        "input": 0.042,
-        "output": 0,
-        "cache_read": 0.021
-      },
-      "aliases": [
-        "typesafe/jev-1.13"
-      ]
     },
     "unbiased/pareto-26.10": {
       "name": "Pareto 26.10",

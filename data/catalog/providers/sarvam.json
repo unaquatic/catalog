@@ -19,7 +19,7 @@
       "name": "Sarvam 105B",
       "family": "sarvam",
       "released": "2026-02-18",
-      "updated": "2026-03-06",
+      "updated": "2026-02-18",
       "open_weights": true,
       "capabilities": {
         "tools": true,
@@ -37,7 +37,9 @@
         "output": 131072
       },
       "reasoning": {
+        "mandatory": false,
         "efforts": [
+          "none",
           "low",
           "medium",
           "high"
@@ -49,13 +51,18 @@
       "provider_options": {
         "id": "sarvam-105b",
         "name": "Sarvam-105B"
+      },
+      "price": {
+        "input": 0.15790269,
+        "output": 0.63161075,
+        "cache_read": 0.05263423
       }
     },
     "sarvam/sarvam-30b": {
       "name": "Sarvam 30B",
       "family": "sarvam",
       "released": "2026-02-18",
-      "updated": "2026-03-06",
+      "updated": "2026-02-18",
       "open_weights": true,
       "capabilities": {
         "tools": true,
@@ -73,7 +80,9 @@
         "output": 65536
       },
       "reasoning": {
+        "mandatory": false,
         "efforts": [
+          "none",
           "low",
           "medium",
           "high"
@@ -85,7 +94,8 @@
       "provider_options": {
         "id": "sarvam-30b",
         "name": "Sarvam-30B"
-      }
+      },
+      "status": "deprecated"
     }
   }
 }

@@ -2,10 +2,9 @@
   "$schema": "https://aquatic.dev/catalog/schema.json",
   "version": 8,
   "source": "https://models.dev",
-  "generated": "2026-10-22T10:01:46Z",
+  "generated": "2026-10-22T13:34:33Z",
   "spellings": {
     "128e": "128E",
-    "16e": "16E",
     "16k": "16K",
     "1t": "1T",
     "2.4t": "2.4T",
@@ -52,17 +51,14 @@
     "diffusiongemma": "DiffusionGemma",
     "e2b": "E2B",
     "e4b": "E4B",
-    "el": "EL",
     "elevenlabs": "ElevenLabs",
     "er": "ER",
     "ernie": "ERNIE",
     "eva": "EVA",
     "flashx": "FlashX",
     "flux": "FLUX",
-    "flux.1": "FLUX.1",
     "fp4": "FP4",
     "fp8": "FP8",
-    "fw": "FW",
     "gemma2": "Gemma 2",
     "gemma3": "Gemma 3",
     "gguf": "GGUF",
@@ -73,7 +69,6 @@
     "glm": "GLM",
     "gpt": "GPT",
     "gte": "GTE",
-    "happyhorse": "HappyHorse",
     "hd": "HD",
     "heygen": "HeyGen",
     "it": "IT",
@@ -99,7 +94,6 @@
     "minicpm5": "MiniCPM5",
     "minilm": "MiniLM",
     "minimax": "MiniMax",
-    "mlx": "MLX",
     "mm": "MM",
     "mn": "MN",
     "moondream3": "Moondream 3",
@@ -115,6 +109,7 @@
     "oss": "OSS",
     "paddleocr": "PaddleOCR",
     "pii": "PII",
+    "pplx": "PPLX",
     "pro2": "Pro 2",
     "pro3": "Pro 3",
     "pro4": "Pro 4",
@@ -151,8 +146,8 @@
     "voicechat": "VoiceChat",
     "voiceclone": "VoiceClone",
     "voicedesign": "VoiceDesign",
+    "wan2.6": "Wan 2.6",
     "wizardlm": "WizardLM",
-    "xhigh": "XHigh",
     "xlam": "xLAM",
     "xs": "XS",
     "xs.2": "XS.2",
@@ -563,6 +558,10 @@
       "id": "recraft",
       "name": "Recraft"
     },
+    "recursive": {
+      "id": "recursive",
+      "name": "Recursive"
+    },
     "reflection": {
       "id": "reflection",
       "name": "Reflection"
@@ -574,10 +573,6 @@
     "relace": {
       "id": "relace",
       "name": "Relace"
-    },
-    "respan": {
-      "id": "respan",
-      "name": "Respan"
     },
     "runway": {
       "id": "runway",
@@ -674,6 +669,10 @@
     "venice": {
       "id": "venice",
       "name": "Venice"
+    },
+    "vercel": {
+      "id": "vercel",
+      "name": "Vercel AI Gateway"
     },
     "vispark": {
       "id": "vispark",
@@ -817,6 +816,10 @@
       "id": "devstral",
       "name": "Devstral"
     },
+    "elephant": {
+      "id": "elephant",
+      "name": "Elephant"
+    },
     "elevenlabs": {
       "id": "elevenlabs",
       "name": "ElevenLabs"
@@ -824,6 +827,10 @@
     "ernie": {
       "id": "ernie",
       "name": "ERNIE"
+    },
+    "flint": {
+      "id": "flint",
+      "name": "Flint"
     },
     "flux": {
       "id": "flux",
@@ -1080,14 +1087,6 @@
     "muse": {
       "id": "muse",
       "name": "Muse"
-    },
-    "muse-free": {
-      "id": "muse-free",
-      "name": "Muse Free"
-    },
-    "nano-banana": {
-      "id": "nano-banana",
-      "name": "Nano Banana"
     },
     "nemotron": {
       "id": "nemotron",

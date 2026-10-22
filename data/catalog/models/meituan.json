@@ -101,11 +101,11 @@
     "released": "2026-02-06",
     "updated": "2026-02-06",
     "open_weights": false,
-    "reasoning": false,
+    "reasoning": true,
     "capabilities": {
       "tools": true,
       "attachments": false,
-      "structured_output": false,
+      "structured_output": true,
       "temperature": true,
       "input": [
         "text"

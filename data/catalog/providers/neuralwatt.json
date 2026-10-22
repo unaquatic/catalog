@@ -288,11 +288,11 @@
       },
       "status": "deprecated"
     },
-    "deepseek/deepseek-v4.1-flash": {
-      "name": "DeepSeek V4.1 Flash",
+    "deepseek/deepseek-v4.1-flash-1017": {
+      "name": "DeepSeek V4.1 Flash 1017",
       "family": "deepseek-flash",
-      "released": "2026-09-10",
-      "updated": "2026-09-10",
+      "released": "2026-10-17",
+      "updated": "2026-10-17",
       "knowledge": "2025-05",
       "open_weights": true,
       "capabilities": {
@@ -334,7 +334,7 @@
       },
       "variants": {
         "flex": {
-          "name": "DeepSeek V4.1 Flash Flex",
+          "name": "DeepSeek V4.1 Flash 1017 Flex",
           "tier": "flex",
           "provider_options": {
             "id": "deepseek-v4.1-flash-flex",
@@ -427,6 +427,7 @@
         "output": 4,
         "cache_read": 0.095
       },
+      "status": "deprecated",
       "variants": {
         "fast": {
           "name": "Kimi K2.7 Code Fast",
@@ -439,7 +440,8 @@
             "input": 0.95,
             "output": 4,
             "cache_read": 0.095
-          }
+          },
+          "status": "deprecated"
         },
         "flex": {
           "name": "Kimi K2.7 Code Flex",
@@ -452,7 +454,8 @@
             "input": 0.6175,
             "output": 2.6,
             "cache_read": 0.06175
-          }
+          },
+          "status": "deprecated"
         }
       }
     },
@@ -588,8 +591,8 @@
     "zhipuai/glm-5.2": {
       "name": "GLM 5.2",
       "family": "glm",
-      "released": "2026-06-17",
-      "updated": "2026-06-17",
+      "released": "2026-06-13",
+      "updated": "2026-06-13",
       "open_weights": true,
       "capabilities": {
         "tools": true,

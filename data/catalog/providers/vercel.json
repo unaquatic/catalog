@@ -2557,7 +2557,8 @@
       },
       "price": {
         "input": 0.25,
-        "output": 0.8
+        "output": 0.8,
+        "cache_read": 0.06
       }
     },
     "black-forest-labs/flux-2-flex": {
@@ -3859,6 +3860,78 @@
         }
       }
     },
+    "cohere/rerank-v5-fast": {
+      "name": "Rerank V5 Fast",
+      "type": "reranking",
+      "released": "2026-10-21",
+      "updated": "2026-10-21",
+      "open_weights": false,
+      "capabilities": {
+        "tools": false,
+        "attachments": false,
+        "temperature": false,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 32768,
+        "output": 0
+      },
+      "provider_options": {
+        "id": "cohere/rerank-v5-fast",
+        "name": "Cohere Rerank 5 Fast",
+        "endpoint": {
+          "format": "openai-chat",
+          "api": "https://ai-gateway.vercel.sh/v4/ai",
+          "auth": {
+            "scheme": "bearer"
+          },
+          "env": [
+            "AI_GATEWAY_API_KEY"
+          ]
+        }
+      }
+    },
+    "cohere/rerank-v5-pro": {
+      "name": "Rerank V5 Pro",
+      "type": "reranking",
+      "released": "2026-10-21",
+      "updated": "2026-10-21",
+      "open_weights": false,
+      "capabilities": {
+        "tools": false,
+        "attachments": false,
+        "temperature": false,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 32768,
+        "output": 0
+      },
+      "provider_options": {
+        "id": "cohere/rerank-v5-pro",
+        "name": "Cohere Rerank 5 Pro",
+        "endpoint": {
+          "format": "openai-chat",
+          "api": "https://ai-gateway.vercel.sh/v4/ai",
+          "auth": {
+            "scheme": "bearer"
+          },
+          "env": [
+            "AI_GATEWAY_API_KEY"
+          ]
+        }
+      }
+    },
     "convaiinnovations/laya": {
       "name": "Laya",
       "type": "decision",
@@ -3881,7 +3954,17 @@
       },
       "provider_options": {
         "id": "convaiinnovations/laya",
-        "name": "Laya"
+        "name": "Laya",
+        "endpoint": {
+          "format": "openai-chat",
+          "api": "https://ai-gateway.vercel.sh/v1",
+          "auth": {
+            "scheme": "bearer"
+          },
+          "env": [
+            "AI_GATEWAY_API_KEY"
+          ]
+        }
       },
       "price": {
         "input": 0,
@@ -5204,7 +5287,7 @@
       "open_weights": false,
       "capabilities": {
         "tools": false,
-        "attachments": false,
+        "attachments": true,
         "temperature": false,
         "input": [
           "audio"
@@ -6803,7 +6886,17 @@
       },
       "provider_options": {
         "id": "liquid/d1",
-        "name": "Liquid d1"
+        "name": "Liquid d1",
+        "endpoint": {
+          "format": "openai-chat",
+          "api": "https://ai-gateway.vercel.sh/v1",
+          "auth": {
+            "scheme": "bearer"
+          },
+          "env": [
+            "AI_GATEWAY_API_KEY"
+          ]
+        }
       },
       "price": {
         "input": 0.02,
@@ -6834,7 +6927,17 @@
       },
       "provider_options": {
         "id": "liquid/d1-ultra",
-        "name": "Liquid d1 Ultra"
+        "name": "Liquid d1 Ultra",
+        "endpoint": {
+          "format": "openai-chat",
+          "api": "https://ai-gateway.vercel.sh/v1",
+          "auth": {
+            "scheme": "bearer"
+          },
+          "env": [
+            "AI_GATEWAY_API_KEY"
+          ]
+        }
       },
       "price": {
         "input": 0.042,
@@ -6987,7 +7090,7 @@
       "open_weights": true,
       "capabilities": {
         "tools": true,
-        "attachments": true,
+        "attachments": false,
         "temperature": true,
         "input": [
           "text"
@@ -6998,15 +7101,15 @@
       },
       "limit": {
         "context": 128000,
-        "output": 4096
+        "output": 8192
       },
       "provider_options": {
         "id": "meta/llama-3.3-70b",
         "name": "Llama-3.3-70B-Instruct"
       },
       "price": {
-        "input": 0,
-        "output": 0
+        "input": 0.72,
+        "output": 0.72
       }
     },
     "meta/llama-4-maverick-17b-instruct": {
@@ -7030,15 +7133,15 @@
       },
       "limit": {
         "context": 128000,
-        "output": 4096
+        "output": 8192
       },
       "provider_options": {
         "id": "meta/llama-4-maverick",
         "name": "Llama-4-Maverick-17B-128E-Instruct-FP8"
       },
       "price": {
-        "input": 0,
-        "output": 0
+        "input": 0.24,
+        "output": 0.97
       }
     },
     "meta/llama-4-scout-17b-instruct": {
@@ -7062,15 +7165,15 @@
       },
       "limit": {
         "context": 128000,
-        "output": 4096
+        "output": 8192
       },
       "provider_options": {
         "id": "meta/llama-4-scout",
         "name": "Llama-4-Scout-17B-16E-Instruct-FP8"
       },
       "price": {
-        "input": 0,
-        "output": 0
+        "input": 0.17,
+        "output": 0.66
       }
     },
     "meta/muse-glimmer-30b": {
@@ -7398,7 +7501,17 @@
       },
       "provider_options": {
         "id": "microsoft/microsoft-decision-1",
-        "name": "Decision-1"
+        "name": "Decision-1",
+        "endpoint": {
+          "format": "openai-chat",
+          "api": "https://ai-gateway.vercel.sh/v1",
+          "auth": {
+            "scheme": "bearer"
+          },
+          "env": [
+            "AI_GATEWAY_API_KEY"
+          ]
+        }
       },
       "price": {
         "input": 0.042,
@@ -11093,7 +11206,17 @@
       },
       "provider_options": {
         "id": "openai/gpt-6-luna-decisions",
-        "name": "GPT-6 Luna Decisions"
+        "name": "GPT-6 Luna Decisions",
+        "endpoint": {
+          "format": "openai-chat",
+          "api": "https://ai-gateway.vercel.sh/v1",
+          "auth": {
+            "scheme": "bearer"
+          },
+          "env": [
+            "AI_GATEWAY_API_KEY"
+          ]
+        }
       }
     },
     "openai/gpt-6-sol": {
@@ -12432,7 +12555,7 @@
       }
     },
     "perplexity/pplx-decider-flash-v1.2": {
-      "name": "Pplx Decider Flash V1.2",
+      "name": "PPLX Decider Flash V1.2",
       "type": "decision",
       "released": "2026-10-16",
       "updated": "2026-10-16",
@@ -12454,7 +12577,17 @@
       },
       "provider_options": {
         "id": "perplexity/pplx-decider-flash-v1.2",
-        "name": "Decider Flash V1.2 4B"
+        "name": "Decider Flash V1.2 4B",
+        "endpoint": {
+          "format": "openai-chat",
+          "api": "https://ai-gateway.vercel.sh/v1",
+          "auth": {
+            "scheme": "bearer"
+          },
+          "env": [
+            "AI_GATEWAY_API_KEY"
+          ]
+        }
       },
       "price": {
         "input": 0.01,
@@ -12462,7 +12595,7 @@
       }
     },
     "perplexity/pplx-decider-v1.2": {
-      "name": "Pplx Decider V1.2",
+      "name": "PPLX Decider V1.2",
       "type": "decision",
       "released": "2026-10-16",
       "updated": "2026-10-16",
@@ -12484,7 +12617,17 @@
       },
       "provider_options": {
         "id": "perplexity/pplx-decider-v1.2",
-        "name": "Decider V1.2 27B"
+        "name": "Decider V1.2 27B",
+        "endpoint": {
+          "format": "openai-chat",
+          "api": "https://ai-gateway.vercel.sh/v1",
+          "auth": {
+            "scheme": "bearer"
+          },
+          "env": [
+            "AI_GATEWAY_API_KEY"
+          ]
+        }
       },
       "price": {
         "input": 0.02,
@@ -12492,7 +12635,7 @@
       }
     },
     "perplexity/pplx-embed-v1-0.6b": {
-      "name": "Pplx Embed V1 0.6B",
+      "name": "PPLX Embed V1 0.6B",
       "family": "v0",
       "type": "embedding",
       "released": "2026-02-26",
@@ -12529,7 +12672,7 @@
       }
     },
     "perplexity/pplx-embed-v1-4b": {
-      "name": "Pplx Embed V1 4B",
+      "name": "PPLX Embed V1 4B",
       "type": "embedding",
       "released": "2026-02-26",
       "updated": "2026-02-26",
@@ -13358,7 +13501,17 @@
       },
       "provider_options": {
         "id": "scaledown/scaledown-classify-1",
-        "name": "Classify-1"
+        "name": "Classify-1",
+        "endpoint": {
+          "format": "openai-chat",
+          "api": "https://ai-gateway.vercel.sh/v1",
+          "auth": {
+            "scheme": "bearer"
+          },
+          "env": [
+            "AI_GATEWAY_API_KEY"
+          ]
+        }
       },
       "price": {
         "input": 0.05,
@@ -13914,7 +14067,17 @@
       },
       "provider_options": {
         "id": "typesafe-ai/jev-1.13.0",
-        "name": "Jev 1.13.0"
+        "name": "Jev 1.13.0",
+        "endpoint": {
+          "format": "openai-chat",
+          "api": "https://ai-gateway.vercel.sh/v1",
+          "auth": {
+            "scheme": "bearer"
+          },
+          "env": [
+            "AI_GATEWAY_API_KEY"
+          ]
+        }
       },
       "price": {
         "input": 0.042,
@@ -13946,7 +14109,17 @@
       },
       "provider_options": {
         "id": "typesafe-ai/jev-1.14.0",
-        "name": "Jev 1.14.0"
+        "name": "Jev 1.14.0",
+        "endpoint": {
+          "format": "openai-chat",
+          "api": "https://ai-gateway.vercel.sh/v1",
+          "auth": {
+            "scheme": "bearer"
+          },
+          "env": [
+            "AI_GATEWAY_API_KEY"
+          ]
+        }
       },
       "price": {
         "input": 0.042,
@@ -13977,10 +14150,99 @@
       },
       "provider_options": {
         "id": "typesafe-ai/jev",
-        "name": "Jev"
+        "name": "Jev",
+        "endpoint": {
+          "format": "openai-chat",
+          "api": "https://ai-gateway.vercel.sh/v1",
+          "auth": {
+            "scheme": "bearer"
+          },
+          "env": [
+            "AI_GATEWAY_API_KEY"
+          ]
+        }
       },
       "price": {
         "input": 0.042,
+        "output": 0
+      }
+    },
+    "vercel/elephant-1": {
+      "name": "Elephant 1",
+      "family": "elephant",
+      "type": "decision",
+      "released": "2026-10-21",
+      "updated": "2026-10-21",
+      "open_weights": false,
+      "capabilities": {
+        "tools": false,
+        "attachments": false,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 16384,
+        "output": 0
+      },
+      "provider_options": {
+        "id": "baseten/elephant-1",
+        "name": "Elephant-1",
+        "endpoint": {
+          "format": "openai-chat",
+          "api": "https://ai-gateway.vercel.sh/v1",
+          "auth": {
+            "scheme": "bearer"
+          },
+          "env": [
+            "AI_GATEWAY_API_KEY"
+          ]
+        }
+      },
+      "price": {
+        "input": 0,
+        "output": 0
+      }
+    },
+    "vercel/mammoth-1": {
+      "name": "Mammoth 1",
+      "type": "decision",
+      "released": "2026-10-21",
+      "updated": "2026-10-21",
+      "open_weights": false,
+      "capabilities": {
+        "tools": false,
+        "attachments": false,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 16384,
+        "output": 0
+      },
+      "provider_options": {
+        "id": "baseten/mammoth-1",
+        "name": "Mammoth-1",
+        "endpoint": {
+          "format": "openai-chat",
+          "api": "https://ai-gateway.vercel.sh/v1",
+          "auth": {
+            "scheme": "bearer"
+          },
+          "env": [
+            "AI_GATEWAY_API_KEY"
+          ]
+        }
+      },
+      "price": {
+        "input": 0,
         "output": 0
       }
     },
@@ -15352,45 +15614,6 @@
       "provider_options": {
         "id": "spacexai/grok-tts",
         "name": "Grok TTS",
-        "endpoint": {
-          "format": "openai-chat",
-          "api": "https://ai-gateway.vercel.sh/v4/ai",
-          "auth": {
-            "scheme": "bearer"
-          },
-          "env": [
-            "AI_GATEWAY_API_KEY"
-          ]
-        }
-      }
-    },
-    "xai/grok-voice-think-fast-1.0": {
-      "name": "Grok Voice Think Fast 1.0",
-      "family": "grok",
-      "type": "realtime",
-      "released": "2026-04-23",
-      "updated": "2026-04-23",
-      "open_weights": false,
-      "capabilities": {
-        "tools": true,
-        "attachments": true,
-        "temperature": true,
-        "input": [
-          "text",
-          "audio"
-        ],
-        "output": [
-          "text",
-          "audio"
-        ]
-      },
-      "limit": {
-        "context": 0,
-        "output": 0
-      },
-      "provider_options": {
-        "id": "spacexai/grok-voice-think-fast-1.0",
-        "name": "Grok Voice Think Fast 1.0",
         "endpoint": {
           "format": "openai-chat",
           "api": "https://ai-gateway.vercel.sh/v4/ai",

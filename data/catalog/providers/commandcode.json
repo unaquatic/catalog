@@ -1410,7 +1410,8 @@
         "input": 0,
         "output": 0,
         "cache_read": 0
-      }
+      },
+      "status": "deprecated"
     },
     "meta/muse-spark-1.1": {
       "name": "Muse Spark 1.1",
@@ -2484,6 +2485,7 @@
     },
     "stepfun/step-3.5-flash": {
       "name": "Step 3.5 Flash",
+      "family": "step",
       "released": "2026-01-29",
       "updated": "2026-02-13",
       "knowledge": "2025-01",

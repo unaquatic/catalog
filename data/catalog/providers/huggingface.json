@@ -207,6 +207,46 @@
         "output": 0.59
       }
     },
+    "alibaba/qwen3-8b": {
+      "name": "Qwen3 8B",
+      "family": "qwen",
+      "released": "2025-04-29",
+      "updated": "2025-04-29",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 40960,
+        "output": 32768
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "Qwen/Qwen3-8B",
+        "name": "Qwen3 8B"
+      },
+      "price": {
+        "input": 0.07,
+        "output": 0.18
+      }
+    },
     "alibaba/qwen3-coder-30b-a3b-instruct": {
       "name": "Qwen3 Coder 30B A3B Instruct",
       "family": "qwen",
@@ -326,7 +366,17 @@
       },
       "provider_options": {
         "id": "Qwen/Qwen3-Embedding-4B",
-        "name": "Qwen 3 Embedding 4B"
+        "name": "Qwen 3 Embedding 4B",
+        "endpoint": {
+          "format": "openai-chat",
+          "api": "https://router.huggingface.co/deepinfra/v1/openai",
+          "auth": {
+            "scheme": "bearer"
+          },
+          "env": [
+            "HF_TOKEN"
+          ]
+        }
       },
       "price": {
         "input": 0.01,
@@ -358,7 +408,17 @@
       },
       "provider_options": {
         "id": "Qwen/Qwen3-Embedding-8B",
-        "name": "Qwen 3 Embedding 8B"
+        "name": "Qwen 3 Embedding 8B",
+        "endpoint": {
+          "format": "openai-chat",
+          "api": "https://router.huggingface.co/deepinfra/v1/openai",
+          "auth": {
+            "scheme": "bearer"
+          },
+          "env": [
+            "HF_TOKEN"
+          ]
+        }
       },
       "price": {
         "input": 0.01,
@@ -1549,6 +1609,37 @@
         "output": 0.79
       }
     },
+    "meta/llama-guard-4-12b": {
+      "name": "Llama Guard 4 12B",
+      "family": "llama",
+      "released": "2025-04-29",
+      "updated": "2025-04-29",
+      "open_weights": true,
+      "capabilities": {
+        "tools": false,
+        "attachments": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 163840,
+        "output": 163840
+      },
+      "provider_options": {
+        "id": "meta-llama/Llama-Guard-4-12B",
+        "name": "Llama Guard 4 12B"
+      },
+      "price": {
+        "input": 0.18,
+        "output": 0.18
+      }
+    },
     "minimax/minimax-m1-80k": {
       "name": "MiniMax M1 80K",
       "family": "minimax",
@@ -2077,6 +2168,7 @@
     },
     "stepfun/step-3.5-flash": {
       "name": "Step 3.5 Flash",
+      "family": "step",
       "released": "2026-01-29",
       "updated": "2026-02-13",
       "knowledge": "2025-01",

@@ -58,7 +58,8 @@
         "input": 0,
         "output": 0,
         "cache_read": 0
-      }
+      },
+      "status": "deprecated"
     },
     "bytedance-seed/seed-2.1-turbo": {
       "name": "Seed 2.1 Turbo",
@@ -103,7 +104,8 @@
         "input": 0,
         "output": 0,
         "cache_read": 0
-      }
+      },
+      "status": "deprecated"
     },
     "bytedance-seed/seed-evolving": {
       "name": "Seed Evolving",
@@ -265,7 +267,8 @@
         "input": 0,
         "output": 0,
         "cache_read": 0
-      }
+      },
+      "status": "deprecated"
     },
     "moonshotai/kimi-k2.7-code": {
       "name": "Kimi K2.7 Code",
@@ -304,7 +307,8 @@
         "input": 0,
         "output": 0,
         "cache_read": 0
-      }
+      },
+      "status": "deprecated"
     },
     "moonshotai/kimi-k3": {
       "name": "Kimi K3",

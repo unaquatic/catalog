@@ -26,8 +26,6 @@
       "output": 0
     },
     "providers": [
-      "nano-gpt",
-      "openrouter",
       "vercel"
     ]
   },
@@ -44,8 +42,6 @@
     "capabilities": {
       "tools": false,
       "attachments": true,
-      "structured_output": false,
-      "temperature": false,
       "input": [
         "text",
         "image"
@@ -59,7 +55,6 @@
       "output": 0
     },
     "providers": [
-      "openrouter",
       "vercel"
     ]
   },

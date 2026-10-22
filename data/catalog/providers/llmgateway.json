@@ -152,6 +152,36 @@
         "cache_write": 0.5
       }
     },
+    "alibaba/qwen3-14b": {
+      "name": "Qwen3 14B",
+      "released": "2025-04-28",
+      "updated": "2025-04-28",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 32768,
+        "output": 32768
+      },
+      "provider_options": {
+        "id": "qwen3-14b",
+        "name": "Qwen3 14B"
+      },
+      "price": {
+        "input": 0.076,
+        "output": 0.228
+      }
+    },
     "alibaba/qwen3-235b-a22b-fp8": {
       "name": "Qwen3 235B A22B FP8",
       "family": "qwen",
@@ -245,6 +275,37 @@
       "price": {
         "input": 0.3,
         "output": 3
+      }
+    },
+    "alibaba/qwen3-30b-a3b": {
+      "name": "Qwen3 30B A3B",
+      "family": "qwen",
+      "released": "2025-04-28",
+      "updated": "2025-04-28",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 32768,
+        "output": 16384
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "qwen3-30b-a3b",
+        "name": "Qwen3 30B A3B"
+      },
+      "price": {
+        "input": 0.095,
+        "output": 0.285
       }
     },
     "alibaba/qwen3-32b": {
@@ -828,6 +889,39 @@
       "price": {
         "input": 0.1,
         "output": 0.15
+      }
+    },
+    "alibaba/qwen3.6-27b": {
+      "name": "Qwen3.6 27B",
+      "family": "qwen",
+      "released": "2026-04-22",
+      "updated": "2026-04-22",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 16384,
+        "output": 65536
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "qwen3.6-27b",
+        "name": "Qwen3.6 27B"
+      },
+      "price": {
+        "input": 0.15,
+        "output": 1.35
       }
     },
     "alibaba/qwen3.6-35b-a3b": {
@@ -3384,8 +3478,8 @@
         "output": 0.33
       }
     },
-    "meta/llama-3.2-3b": {
-      "name": "Llama 3.2 3B",
+    "meta/llama-3.2-3b-instruct": {
+      "name": "Llama 3.2 3B Instruct",
       "family": "llama",
       "released": "2024-09-18",
       "updated": "2024-09-18",
@@ -4551,8 +4645,8 @@
         "name": "Kimi K2.5"
       },
       "price": {
-        "input": 0.405,
-        "output": 1.98,
+        "input": 0.574,
+        "output": 3.011,
         "cache_read": 0.225
       }
     },
@@ -6872,53 +6966,6 @@
         "cache_read": 0.042
       }
     },
-    "thinkingmachines/inkling": {
-      "name": "Inkling",
-      "family": "ling",
-      "released": "2026-07-15",
-      "updated": "2026-07-15",
-      "open_weights": true,
-      "capabilities": {
-        "tools": true,
-        "attachments": true,
-        "structured_output": false,
-        "temperature": true,
-        "input": [
-          "text",
-          "image",
-          "audio"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 524288,
-        "output": 1048576
-      },
-      "reasoning": {
-        "mandatory": false,
-        "efforts": [
-          "none",
-          "minimal",
-          "low",
-          "medium",
-          "high",
-          "xhigh",
-          "max"
-        ]
-      },
-      "provider_options": {
-        "id": "inkling",
-        "name": "Inkling"
-      },
-      "price": {
-        "input": 0.95,
-        "output": 4.05,
-        "cache_read": 0.16
-      },
-      "status": "deprecated"
-    },
     "xai/grok-4": {
       "name": "Grok 4",
       "family": "grok",
@@ -7394,9 +7441,9 @@
         "name": "MiMo-V2.5"
       },
       "price": {
-        "input": 0.168,
-        "output": 0.336,
-        "cache_read": 0.0034,
+        "input": 0.14,
+        "output": 0.28,
+        "cache_read": 0.0028,
         "tiers": [
           {
             "above": 256000,
@@ -7450,9 +7497,9 @@
         "name": "MiMo-V2.5-Pro"
       },
       "price": {
-        "input": 0.522,
-        "output": 1.044,
-        "cache_read": 0.0043,
+        "input": 0.435,
+        "output": 0.87,
+        "cache_read": 0.0036,
         "tiers": [
           {
             "above": 256000,
@@ -7654,9 +7701,9 @@
         "name": "GLM-4.5-Air"
       },
       "price": {
-        "input": 0.13,
-        "output": 0.85,
-        "cache_read": 0.025,
+        "input": 0.2,
+        "output": 1.1,
+        "cache_read": 0.03,
         "cache_write": 0
       }
     },
@@ -7911,8 +7958,8 @@
         "name": "GLM-4.7"
       },
       "price": {
-        "input": 0.38,
-        "output": 1.98,
+        "input": 0.45,
+        "output": 2,
         "cache_read": 0.19,
         "cache_write": 0
       }
@@ -8031,8 +8078,8 @@
         "name": "GLM-5"
       },
       "price": {
-        "input": 0.72,
-        "output": 2.3,
+        "input": 0.573,
+        "output": 2.58,
         "cache_read": 0.144,
         "cache_write": 0
       }
@@ -8120,9 +8167,9 @@
         "name": "GLM-5.1"
       },
       "price": {
-        "input": 0.931,
-        "output": 2.93,
-        "cache_read": 0.173,
+        "input": 1.38,
+        "output": 4.4,
+        "cache_read": 0.26,
         "cache_write": 0
       }
     },

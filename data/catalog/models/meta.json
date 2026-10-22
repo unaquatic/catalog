@@ -1,58 +1,4 @@
 {
-  "meta/esm2-650m": {
-    "id": "meta/esm2-650m",
-    "lab": "meta",
-    "name": "Esm2 650M",
-    "released": "2024-08-29",
-    "updated": "2025-03-10",
-    "open_weights": true,
-    "reasoning": false,
-    "capabilities": {
-      "tools": false,
-      "attachments": false,
-      "temperature": true,
-      "input": [
-        "text"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 128000,
-      "output": 8192
-    },
-    "providers": [
-      "nvidia"
-    ]
-  },
-  "meta/esmfold": {
-    "id": "meta/esmfold",
-    "lab": "meta",
-    "name": "Esmfold",
-    "released": "2024-03-15",
-    "updated": "2025-06-12",
-    "open_weights": true,
-    "reasoning": false,
-    "capabilities": {
-      "tools": false,
-      "attachments": false,
-      "temperature": true,
-      "input": [
-        "text"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 128000,
-      "output": 8192
-    },
-    "providers": [
-      "nvidia"
-    ]
-  },
   "meta/eva-llama-3.33-70b-v0.0": {
     "id": "meta/eva-llama-3.33-70b-v0.0",
     "lab": "meta",
@@ -407,36 +353,8 @@
       "kilo",
       "llmgateway",
       "llmgateway-providers",
-      "nvidia",
       "openrouter",
       "vercel"
-    ]
-  },
-  "meta/llama-3.1-8b-cs": {
-    "id": "meta/llama-3.1-8b-cs",
-    "lab": "meta",
-    "name": "Llama 3.1 8B Cs",
-    "released": "2025-05-13",
-    "updated": "2025-05-13",
-    "open_weights": false,
-    "reasoning": false,
-    "capabilities": {
-      "tools": true,
-      "attachments": true,
-      "temperature": false,
-      "input": [
-        "text"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 128000,
-      "output": 0
-    },
-    "providers": [
-      "poe"
     ]
   },
   "meta/llama-3.1-8b-instruct": {
@@ -472,6 +390,7 @@
     ],
     "providers": [
       "abacus",
+      "atomic-chat",
       "cloudflare-workers-ai",
       "digitalocean",
       "groq",
@@ -482,9 +401,9 @@
       "nano-gpt",
       "neon",
       "novita-ai",
-      "nvidia",
       "openrouter",
       "pioneer",
+      "poe",
       "vercel",
       "wandb"
     ]
@@ -516,63 +435,6 @@
     },
     "providers": [
       "nano-gpt"
-    ]
-  },
-  "meta/llama-3.1-8b-instruct-gguf": {
-    "id": "meta/llama-3.1-8b-instruct-gguf",
-    "lab": "meta",
-    "name": "Llama 3.1 8B Instruct GGUF",
-    "family": "llama",
-    "released": "2024-07-23",
-    "updated": "2024-07-23",
-    "open_weights": true,
-    "reasoning": false,
-    "capabilities": {
-      "tools": true,
-      "attachments": false,
-      "temperature": true,
-      "input": [
-        "text"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 131072,
-      "output": 4096
-    },
-    "providers": [
-      "atomic-chat"
-    ]
-  },
-  "meta/llama-3.1-8b-instruct-turbo": {
-    "id": "meta/llama-3.1-8b-instruct-turbo",
-    "lab": "meta",
-    "name": "Llama 3.1 8B Instruct Turbo",
-    "family": "llama",
-    "released": "2024-07-23",
-    "updated": "2024-07-23",
-    "knowledge": "2024-07",
-    "open_weights": false,
-    "reasoning": false,
-    "capabilities": {
-      "tools": true,
-      "attachments": false,
-      "temperature": true,
-      "input": [
-        "text"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 128000,
-      "output": 128000
-    },
-    "providers": [
-      "helicone"
     ]
   },
   "meta/llama-3.2-11b-instruct": {
@@ -718,7 +580,6 @@
       "inference",
       "kilo",
       "novita-ai",
-      "nvidia",
       "openrouter",
       "pioneer"
     ]
@@ -757,12 +618,48 @@
     ],
     "providers": [
       "cloudflare-workers-ai",
+      "pioneer"
+    ]
+  },
+  "meta/llama-3.2-3b-instruct": {
+    "id": "meta/llama-3.2-3b-instruct",
+    "lab": "meta",
+    "name": "Llama 3.2 3B Instruct",
+    "family": "llama",
+    "released": "2024-09-25",
+    "updated": "2024-09-25",
+    "knowledge": "2023-12",
+    "open_weights": true,
+    "license": "Llama 3.2 Community License",
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 131072
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/meta-llama/Llama-3.2-3B-Instruct"
+      }
+    ],
+    "providers": [
+      "edenai",
       "inference",
       "kilo",
       "llmgateway",
       "llmgateway-providers",
       "nano-gpt",
-      "nvidia",
       "openrouter",
       "pioneer"
     ]
@@ -776,10 +673,11 @@
     "updated": "2024-09-25",
     "knowledge": "2023-12",
     "open_weights": true,
+    "license": "Llama 3.2 Community License",
     "reasoning": false,
     "capabilities": {
       "tools": true,
-      "attachments": false,
+      "attachments": true,
       "temperature": true,
       "input": [
         "text",
@@ -790,39 +688,18 @@
       ]
     },
     "limit": {
-      "context": 16000,
+      "context": 128000,
       "output": 4096
     },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/meta-llama/Llama-3.2-90B-Vision-Instruct"
+      }
+    ],
     "providers": [
       "io-net",
       "nvidia"
-    ]
-  },
-  "meta/llama-3.3-70b-cs": {
-    "id": "meta/llama-3.3-70b-cs",
-    "lab": "meta",
-    "name": "Llama 3.3 70B Cs",
-    "released": "2025-05-13",
-    "updated": "2025-05-13",
-    "open_weights": false,
-    "reasoning": false,
-    "capabilities": {
-      "tools": false,
-      "attachments": true,
-      "temperature": false,
-      "input": [
-        "text"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 0,
-      "output": 0
-    },
-    "providers": [
-      "poe"
     ]
   },
   "meta/llama-3.3-70b-instruct": {
@@ -882,17 +759,18 @@
       "nano-gpt",
       "neon",
       "novita-ai",
-      "nvidia",
       "oci",
       "openrouter",
       "ovhcloud",
       "pendra",
       "pioneer",
+      "poe",
       "prime",
       "regolo-ai",
       "sambanova",
       "scaleway",
       "snowflake-cortex",
+      "stackit",
       "tinfoil",
       "togetherai",
       "vercel",
@@ -926,35 +804,6 @@
     },
     "providers": [
       "nano-gpt"
-    ]
-  },
-  "meta/llama-3.3-70b-instruct-fp8-dynamic": {
-    "id": "meta/llama-3.3-70b-instruct-fp8-dynamic",
-    "lab": "meta",
-    "name": "Llama 3.3 70B Instruct FP8 Dynamic",
-    "family": "llama",
-    "released": "2024-12-05",
-    "updated": "2024-12-05",
-    "open_weights": true,
-    "reasoning": false,
-    "capabilities": {
-      "tools": true,
-      "attachments": false,
-      "structured_output": false,
-      "temperature": true,
-      "input": [
-        "text"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 128000,
-      "output": 4096
-    },
-    "providers": [
-      "stackit"
     ]
   },
   "meta/llama-3.3-70b-instruct-maas": {
@@ -999,7 +848,7 @@
     "reasoning": false,
     "capabilities": {
       "tools": true,
-      "attachments": true,
+      "attachments": false,
       "temperature": true,
       "input": [
         "text"
@@ -1014,36 +863,6 @@
     },
     "providers": [
       "llama"
-    ]
-  },
-  "meta/llama-4-maverick-17b-128e-instruct": {
-    "id": "meta/llama-4-maverick-17b-128e-instruct",
-    "lab": "meta",
-    "name": "Llama 4 Maverick 17B 128E Instruct",
-    "family": "llama",
-    "released": "2025-04-05",
-    "updated": "2025-04-05",
-    "knowledge": "2025-01",
-    "open_weights": true,
-    "reasoning": false,
-    "capabilities": {
-      "tools": true,
-      "attachments": true,
-      "temperature": true,
-      "input": [
-        "text"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 128000,
-      "output": 4096
-    },
-    "providers": [
-      "llama",
-      "nvidia"
     ]
   },
   "meta/llama-4-maverick-17b-128e-instruct-fp8": {
@@ -1074,9 +893,7 @@
     },
     "providers": [
       "azure",
-      "azure-cognitive-services",
-      "io-net",
-      "llama"
+      "azure-cognitive-services"
     ]
   },
   "meta/llama-4-maverick-17b-128e-instruct-maas": {
@@ -1147,7 +964,9 @@
       "deepinfra",
       "digitalocean",
       "helicone",
+      "io-net",
       "kilo",
+      "llama",
       "llmgateway",
       "llmgateway-providers",
       "nano-gpt",
@@ -1156,36 +975,6 @@
       "oci",
       "openrouter",
       "vercel"
-    ]
-  },
-  "meta/llama-4-scout-17b-16e-instruct-fp8": {
-    "id": "meta/llama-4-scout-17b-16e-instruct-fp8",
-    "lab": "meta",
-    "name": "Llama 4 Scout 17B 16E Instruct FP8",
-    "family": "llama",
-    "released": "2025-04-05",
-    "updated": "2025-04-05",
-    "knowledge": "2024-08",
-    "open_weights": true,
-    "reasoning": false,
-    "capabilities": {
-      "tools": true,
-      "attachments": true,
-      "temperature": true,
-      "input": [
-        "text",
-        "image"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 128000,
-      "output": 4096
-    },
-    "providers": [
-      "llama"
     ]
   },
   "meta/llama-4-scout-17b-instruct": {
@@ -1286,7 +1075,7 @@
     "reasoning": false,
     "capabilities": {
       "tools": false,
-      "attachments": false,
+      "attachments": true,
       "temperature": true,
       "input": [
         "text",
@@ -1309,18 +1098,18 @@
     "lab": "meta",
     "name": "Llama Guard 4 12B",
     "family": "llama",
-    "released": "2025-04-30",
-    "updated": "2025-04-30",
-    "open_weights": false,
+    "released": "2025-04-29",
+    "updated": "2025-04-29",
+    "open_weights": true,
+    "license": "Llama 4 Community License",
     "reasoning": false,
     "capabilities": {
       "tools": false,
       "attachments": true,
-      "structured_output": false,
       "temperature": true,
       "input": [
-        "image",
-        "text"
+        "text",
+        "image"
       ],
       "output": [
         "text"
@@ -1328,9 +1117,18 @@
     },
     "limit": {
       "context": 163840,
-      "output": 16384
+      "output": 163840
     },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/meta-llama/Llama-Guard-4-12B"
+      }
+    ],
     "providers": [
+      "deepinfra",
+      "edenai",
+      "huggingface",
       "kilo",
       "nvidia",
       "openrouter"
@@ -1644,39 +1442,6 @@
       "opper",
       "requesty",
       "vercel"
-    ]
-  },
-  "meta/muse-spark-1.3-contributor-free": {
-    "id": "meta/muse-spark-1.3-contributor-free",
-    "lab": "meta",
-    "name": "Muse Spark 1.3 Contributor Free",
-    "family": "muse-free",
-    "released": "2026-09-02",
-    "updated": "2026-09-02",
-    "open_weights": false,
-    "reasoning": true,
-    "capabilities": {
-      "tools": true,
-      "attachments": true,
-      "structured_output": true,
-      "temperature": true,
-      "input": [
-        "text",
-        "image",
-        "video",
-        "pdf",
-        "audio"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 1048576,
-      "output": 131072
-    },
-    "providers": [
-      "opencode"
     ]
   },
   "meta/muse-spark-open": {

@@ -205,7 +205,17 @@
       },
       "provider_options": {
         "id": "qwen3-tts-voicedesign",
-        "name": "Qwen3 TTS VoiceDesign"
+        "name": "Qwen3 TTS VoiceDesign",
+        "endpoint": {
+          "format": "openai-responses",
+          "api": "https://inference.do-ai.run/v1",
+          "auth": {
+            "scheme": "bearer"
+          },
+          "env": [
+            "DIGITALOCEAN_ACCESS_TOKEN"
+          ]
+        }
       }
     },
     "alibaba/qwen3.5-397b-a17b": {
@@ -3773,6 +3783,46 @@
         "input": 1.1,
         "output": 4.4,
         "cache_read": 0.55
+      }
+    },
+    "reflection/beam-1.0-501b-a23b": {
+      "name": "Beam 1.0 501B A23B",
+      "family": "beam",
+      "released": "2026-10-21",
+      "updated": "2026-10-21",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 1048576
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ]
+      },
+      "provider_options": {
+        "id": "reflection-beam",
+        "name": "Beam"
+      },
+      "price": {
+        "input": 0.4,
+        "output": 1.2,
+        "cache_read": 0.04
       }
     },
     "sentence-transformers/all-minilm-l6-v2": {

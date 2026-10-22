@@ -1,14 +1,16 @@
 {
-  "upstage/solar-10.7b-instruct": {
-    "id": "upstage/solar-10.7b-instruct",
+  "upstage/solar-10.7b-instruct-v1.0": {
+    "id": "upstage/solar-10.7b-instruct-v1.0",
     "lab": "upstage",
-    "name": "Solar 10.7B Instruct",
-    "released": "2024-06-05",
-    "updated": "2025-04-10",
+    "name": "Solar 10.7B Instruct V1.0",
+    "family": "solar",
+    "released": "2023-12-12",
+    "updated": "2023-12-12",
     "open_weights": true,
+    "license": "CC-BY-NC-4.0",
     "reasoning": false,
     "capabilities": {
-      "tools": true,
+      "tools": false,
       "attachments": false,
       "temperature": true,
       "input": [
@@ -19,72 +21,16 @@
       ]
     },
     "limit": {
-      "context": 128000,
-      "output": 8192
+      "context": 4096,
+      "output": 4096
     },
-    "providers": [
-      "nvidia"
-    ]
-  },
-  "upstage/solar-decide": {
-    "id": "upstage/solar-decide",
-    "lab": "upstage",
-    "name": "Solar Decide",
-    "family": "solar",
-    "type": "decision",
-    "released": "2026-09-28",
-    "updated": "2026-09-28",
-    "open_weights": false,
-    "reasoning": false,
-    "capabilities": {
-      "tools": false,
-      "attachments": false,
-      "structured_output": false,
-      "temperature": false,
-      "input": [
-        "text"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 524288,
-      "output": 0
-    },
-    "providers": [
-      "openrouter"
-    ]
-  },
-  "upstage/solar-decide-flash": {
-    "id": "upstage/solar-decide-flash",
-    "lab": "upstage",
-    "name": "Solar Decide Flash",
-    "family": "solar",
-    "type": "decision",
-    "released": "2026-10-08",
-    "updated": "2026-10-08",
-    "open_weights": false,
-    "reasoning": false,
-    "capabilities": {
-      "tools": false,
-      "attachments": false,
-      "structured_output": false,
-      "temperature": false,
-      "input": [
-        "text"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 524288,
-      "output": 0
-    },
-    "providers": [
-      "openrouter"
-    ]
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/upstage/SOLAR-10.7B-Instruct-v1.0"
+      }
+    ],
+    "providers": []
   },
   "upstage/solar-mini": {
     "id": "upstage/solar-mini",

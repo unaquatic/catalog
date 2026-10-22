@@ -62,12 +62,14 @@
     "id": "sarvam/sarvam-m",
     "lab": "sarvam",
     "name": "Sarvam M",
-    "released": "2025-07-25",
-    "updated": "2025-07-25",
+    "family": "sarvam",
+    "released": "2025-05-20",
+    "updated": "2025-05-20",
     "open_weights": true,
-    "reasoning": false,
+    "license": "Apache 2.0",
+    "reasoning": true,
     "capabilities": {
-      "tools": true,
+      "tools": false,
       "attachments": false,
       "temperature": true,
       "input": [
@@ -78,11 +80,15 @@
       ]
     },
     "limit": {
-      "context": 128000,
-      "output": 8192
+      "context": 32768,
+      "output": 32768
     },
-    "providers": [
-      "nvidia"
-    ]
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/sarvamai/sarvam-m"
+      }
+    ],
+    "providers": []
   }
 }

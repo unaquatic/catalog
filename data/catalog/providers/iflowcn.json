@@ -15,11 +15,11 @@
   },
   "doc": "https://platform.iflow.cn/en/docs",
   "models": {
-    "alibaba/qwen3-235b": {
-      "name": "Qwen3 235B",
+    "alibaba/qwen3-235b-a22b": {
+      "name": "Qwen3 235B A22B",
       "family": "qwen",
-      "released": "2024-12-01",
-      "updated": "2024-12-01",
+      "released": "2025-04-28",
+      "updated": "2025-04-28",
       "knowledge": "2024-10",
       "open_weights": true,
       "capabilities": {
@@ -45,13 +45,14 @@
       "price": {
         "input": 0,
         "output": 0
-      }
+      },
+      "status": "deprecated"
     },
-    "alibaba/qwen3-235b-a22b-instruct": {
-      "name": "Qwen3 235B A22B Instruct",
+    "alibaba/qwen3-235b-a22b-instruct-2507": {
+      "name": "Qwen3 235B A22B Instruct 2507",
       "family": "qwen",
-      "released": "2025-07-01",
-      "updated": "2025-07-01",
+      "released": "2025-07-21",
+      "updated": "2025-07-21",
       "knowledge": "2025-04",
       "open_weights": true,
       "capabilities": {
@@ -76,13 +77,14 @@
       "price": {
         "input": 0,
         "output": 0
-      }
+      },
+      "status": "deprecated"
     },
     "alibaba/qwen3-235b-a22b-thinking-2507": {
       "name": "Qwen3 235B A22B Thinking 2507",
       "family": "qwen",
-      "released": "2025-07-01",
-      "updated": "2025-07-01",
+      "released": "2025-07-25",
+      "updated": "2025-07-25",
       "knowledge": "2025-04",
       "open_weights": true,
       "capabilities": {
@@ -108,13 +110,14 @@
       "price": {
         "input": 0,
         "output": 0
-      }
+      },
+      "status": "deprecated"
     },
     "alibaba/qwen3-32b": {
       "name": "Qwen3 32B",
       "family": "qwen",
-      "released": "2024-12-01",
-      "updated": "2024-12-01",
+      "released": "2025-04-28",
+      "updated": "2025-04-28",
       "knowledge": "2024-10",
       "open_weights": true,
       "capabilities": {
@@ -139,15 +142,16 @@
       "price": {
         "input": 0,
         "output": 0
-      }
+      },
+      "status": "deprecated"
     },
     "alibaba/qwen3-coder-plus": {
       "name": "Qwen3 Coder Plus",
       "family": "qwen",
-      "released": "2025-07-01",
-      "updated": "2025-07-01",
+      "released": "2025-07-23",
+      "updated": "2025-07-23",
       "knowledge": "2025-04",
-      "open_weights": true,
+      "open_weights": false,
       "capabilities": {
         "tools": true,
         "attachments": false,
@@ -170,13 +174,14 @@
       "price": {
         "input": 0,
         "output": 0
-      }
+      },
+      "status": "deprecated"
     },
     "alibaba/qwen3-max": {
       "name": "Qwen3 Max",
       "family": "qwen",
-      "released": "2025-01-01",
-      "updated": "2025-01-01",
+      "released": "2025-09-23",
+      "updated": "2025-09-23",
       "knowledge": "2024-12",
       "open_weights": false,
       "capabilities": {
@@ -201,13 +206,14 @@
       "price": {
         "input": 0,
         "output": 0
-      }
+      },
+      "status": "deprecated"
     },
     "alibaba/qwen3-max-preview": {
       "name": "Qwen3 Max Preview",
       "family": "qwen",
-      "released": "2025-01-01",
-      "updated": "2025-01-01",
+      "released": "2025-09-05",
+      "updated": "2025-09-23",
       "knowledge": "2024-12",
       "open_weights": false,
       "capabilities": {
@@ -232,13 +238,14 @@
       "price": {
         "input": 0,
         "output": 0
-      }
+      },
+      "status": "deprecated"
     },
     "alibaba/qwen3-vl-plus": {
       "name": "Qwen3 VL Plus",
       "family": "qwen",
-      "released": "2025-01-01",
-      "updated": "2025-01-01",
+      "released": "2025-09-23",
+      "updated": "2025-09-23",
       "knowledge": "2024-12",
       "open_weights": false,
       "capabilities": {
@@ -264,13 +271,14 @@
       "price": {
         "input": 0,
         "output": 0
-      }
+      },
+      "status": "deprecated"
     },
     "deepseek/deepseek-r1": {
       "name": "DeepSeek R1",
       "family": "deepseek-thinking",
       "released": "2025-01-20",
-      "updated": "2025-01-20",
+      "updated": "2025-05-29",
       "knowledge": "2024-12",
       "open_weights": true,
       "capabilities": {
@@ -296,7 +304,8 @@
       "price": {
         "input": 0,
         "output": 0
-      }
+      },
+      "status": "deprecated"
     },
     "deepseek/deepseek-v3": {
       "name": "DeepSeek V3",
@@ -327,7 +336,8 @@
       "price": {
         "input": 0,
         "output": 0
-      }
+      },
+      "status": "deprecated"
     },
     "deepseek/deepseek-v3.2": {
       "name": "DeepSeek V3.2",
@@ -358,15 +368,16 @@
       "price": {
         "input": 0,
         "output": 0
-      }
+      },
+      "status": "deprecated"
     },
     "moonshotai/kimi-k2": {
       "name": "Kimi K2",
       "family": "kimi-k2",
-      "released": "2024-12-01",
-      "updated": "2024-12-01",
+      "released": "2025-07-11",
+      "updated": "2025-07-11",
       "knowledge": "2024-10",
-      "open_weights": false,
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": false,
@@ -389,7 +400,8 @@
       "price": {
         "input": 0,
         "output": 0
-      }
+      },
+      "status": "deprecated"
     },
     "moonshotai/kimi-k2-0905": {
       "name": "Kimi K2 0905",
@@ -397,7 +409,7 @@
       "released": "2025-09-05",
       "updated": "2025-09-05",
       "knowledge": "2024-12",
-      "open_weights": false,
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": false,
@@ -420,15 +432,16 @@
       "price": {
         "input": 0,
         "output": 0
-      }
+      },
+      "status": "deprecated"
     },
     "zhipuai/glm-4.6": {
       "name": "GLM 4.6",
       "family": "glm",
-      "released": "2024-12-01",
-      "updated": "2025-11-13",
+      "released": "2025-09-30",
+      "updated": "2025-09-30",
       "knowledge": "2024-10",
-      "open_weights": false,
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": false,
@@ -452,7 +465,8 @@
       "price": {
         "input": 0,
         "output": 0
-      }
+      },
+      "status": "deprecated"
     }
   }
 }

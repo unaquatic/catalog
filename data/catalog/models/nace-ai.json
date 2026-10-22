@@ -42,9 +42,7 @@
         "type": "license"
       }
     ],
-    "providers": [
-      "openrouter"
-    ]
+    "providers": []
   },
   "nace-ai/drex-v2.0": {
     "id": "nace-ai/drex-v2.0",
@@ -89,8 +87,6 @@
         "type": "license"
       }
     ],
-    "providers": [
-      "openrouter"
-    ]
+    "providers": []
   }
 }

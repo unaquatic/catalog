@@ -155,37 +155,6 @@
       "vercel"
     ]
   },
-  "inception/mercury-decide": {
-    "id": "inception/mercury-decide",
-    "lab": "inception",
-    "name": "Mercury Decide",
-    "family": "mercury",
-    "type": "decision",
-    "released": "2026-09-30",
-    "updated": "2026-09-30",
-    "open_weights": false,
-    "reasoning": false,
-    "capabilities": {
-      "tools": false,
-      "attachments": true,
-      "structured_output": false,
-      "temperature": false,
-      "input": [
-        "text",
-        "image"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 65536,
-      "output": 0
-    },
-    "providers": [
-      "openrouter"
-    ]
-  },
   "inception/mercury-edit-2": {
     "id": "inception/mercury-edit-2",
     "lab": "inception",

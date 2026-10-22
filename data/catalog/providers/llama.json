@@ -24,7 +24,7 @@
       "open_weights": true,
       "capabilities": {
         "tools": true,
-        "attachments": true,
+        "attachments": false,
         "temperature": true,
         "input": [
           "text"
@@ -44,7 +44,8 @@
       "price": {
         "input": 0,
         "output": 0
-      }
+      },
+      "status": "deprecated"
     },
     "meta/llama-3.3-8b-instruct": {
       "name": "Llama 3.3 8B Instruct",
@@ -55,7 +56,7 @@
       "open_weights": true,
       "capabilities": {
         "tools": true,
-        "attachments": true,
+        "attachments": false,
         "temperature": true,
         "input": [
           "text"
@@ -75,44 +76,11 @@
       "price": {
         "input": 0,
         "output": 0
-      }
+      },
+      "status": "deprecated"
     },
-    "meta/llama-4-maverick-17b-128e-instruct": {
-      "name": "Llama 4 Maverick 17B 128E Instruct",
-      "family": "llama",
-      "released": "2025-04-05",
-      "updated": "2025-04-05",
-      "knowledge": "2025-01",
-      "open_weights": true,
-      "capabilities": {
-        "tools": true,
-        "attachments": true,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 128000,
-        "output": 4096
-      },
-      "provider_options": {
-        "id": "groq-llama-4-maverick-17b-128e-instruct",
-        "name": "Groq-Llama-4-Maverick-17B-128E-Instruct"
-      },
-      "price": {
-        "input": 0,
-        "output": 0
-      },
-      "aliases": [
-        "cerebras-llama-4-maverick-17b-128e-instruct"
-      ]
-    },
-    "meta/llama-4-maverick-17b-128e-instruct-fp8": {
-      "name": "Llama 4 Maverick 17B 128E Instruct FP8",
+    "meta/llama-4-maverick-17b-instruct": {
+      "name": "Llama 4 Maverick 17B Instruct",
       "family": "llama",
       "released": "2025-04-05",
       "updated": "2025-04-05",
@@ -141,10 +109,15 @@
       "price": {
         "input": 0,
         "output": 0
-      }
+      },
+      "status": "deprecated",
+      "aliases": [
+        "cerebras-llama-4-maverick-17b-128e-instruct",
+        "groq-llama-4-maverick-17b-128e-instruct"
+      ]
     },
-    "meta/llama-4-scout-17b-16e-instruct-fp8": {
-      "name": "Llama 4 Scout 17B 16E Instruct FP8",
+    "meta/llama-4-scout-17b-instruct": {
+      "name": "Llama 4 Scout 17B Instruct",
       "family": "llama",
       "released": "2025-04-05",
       "updated": "2025-04-05",
@@ -173,38 +146,11 @@
       "price": {
         "input": 0,
         "output": 0
-      }
-    },
-    "meta/llama-4-scout-17b-instruct": {
-      "name": "Llama 4 Scout 17B Instruct",
-      "family": "llama",
-      "released": "2025-04-05",
-      "updated": "2025-04-05",
-      "knowledge": "2025-01",
-      "open_weights": true,
-      "capabilities": {
-        "tools": true,
-        "attachments": true,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
       },
-      "limit": {
-        "context": 128000,
-        "output": 4096
-      },
-      "provider_options": {
-        "id": "cerebras-llama-4-scout-17b-16e-instruct",
-        "name": "Cerebras-Llama-4-Scout-17B-16E-Instruct"
-      },
-      "price": {
-        "input": 0,
-        "output": 0
-      }
+      "status": "deprecated",
+      "aliases": [
+        "cerebras-llama-4-scout-17b-16e-instruct"
+      ]
     }
   }
 }

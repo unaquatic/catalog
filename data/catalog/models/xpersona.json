@@ -10,7 +10,7 @@
     "reasoning": true,
     "capabilities": {
       "tools": true,
-      "attachments": false,
+      "attachments": true,
       "structured_output": true,
       "temperature": false,
       "input": [

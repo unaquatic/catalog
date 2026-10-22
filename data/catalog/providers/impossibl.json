@@ -176,7 +176,8 @@
       "price": {
         "input": 2.5,
         "output": 7.5
-      }
+      },
+      "status": "deprecated"
     },
     "anthropic/claude-fable-5": {
       "name": "Claude Fable 5",
@@ -710,7 +711,8 @@
       "price": {
         "input": 0.3,
         "output": 2.5,
-        "cache_read": 0.03
+        "cache_read": 0.03,
+        "input_audio": 1
       }
     },
     "google/gemini-2.5-flash-lite": {
@@ -754,7 +756,8 @@
       "price": {
         "input": 0.1,
         "output": 0.4,
-        "cache_read": 0.01
+        "cache_read": 0.01,
+        "input_audio": 0.3
       }
     },
     "google/gemini-2.5-pro": {
@@ -850,7 +853,8 @@
       "price": {
         "input": 0.25,
         "output": 1.5,
-        "cache_read": 0.025
+        "cache_read": 0.025,
+        "input_audio": 0.5
       }
     },
     "google/gemini-3.1-pro-preview": {
@@ -1035,9 +1039,9 @@
         "name": "Gemini 3.6 Flash"
       },
       "price": {
-        "input": 1.5,
-        "output": 7.5,
-        "cache_read": 0.15
+        "input": 0.75,
+        "output": 3.75,
+        "cache_read": 0.075
       }
     },
     "moonshotai/kimi-k3": {
@@ -2183,17 +2187,17 @@
         "name": "GPT-5.6 Sol"
       },
       "price": {
-        "input": 5,
-        "output": 30,
-        "cache_read": 0.5,
-        "cache_write": 6.25,
+        "input": 4,
+        "output": 20,
+        "cache_read": 0.4,
+        "cache_write": 5,
         "tiers": [
           {
             "above": 272000,
-            "input": 10,
-            "output": 45,
-            "cache_read": 1,
-            "cache_write": 12.5
+            "input": 8,
+            "output": 30,
+            "cache_read": 0.8,
+            "cache_write": 10
           }
         ]
       }
@@ -2293,6 +2297,7 @@
         "output": 0.6,
         "cache_read": 0.075
       },
+      "status": "deprecated",
       "aliases": [
         "cerebras/gpt-oss-120b",
         "fireworks/gpt-oss-120b"
@@ -2337,6 +2342,7 @@
         "output": 0.3,
         "cache_read": 0.0375
       },
+      "status": "deprecated",
       "aliases": [
         "fireworks/gpt-oss-20b"
       ]
@@ -2580,7 +2586,15 @@
       "price": {
         "input": 1.25,
         "output": 2.5,
-        "cache_read": 0.2
+        "cache_read": 0.2,
+        "tiers": [
+          {
+            "above": 200000,
+            "input": 2.5,
+            "output": 5,
+            "cache_read": 0.4
+          }
+        ]
       }
     },
     "xai/grok-4.20-0309-reasoning": {
@@ -2615,7 +2629,15 @@
       "price": {
         "input": 1.25,
         "output": 2.5,
-        "cache_read": 0.2
+        "cache_read": 0.2,
+        "tiers": [
+          {
+            "above": 200000,
+            "input": 2.5,
+            "output": 5,
+            "cache_read": 0.4
+          }
+        ]
       }
     },
     "xai/grok-4.3": {
@@ -2642,7 +2664,15 @@
         "context": 1000000,
         "output": 30000
       },
-      "reasoning": {},
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "medium",
+          "high"
+        ]
+      },
       "provider_options": {
         "id": "xai/grok-4.3",
         "name": "Grok 4.3"
@@ -2650,7 +2680,15 @@
       "price": {
         "input": 1.25,
         "output": 2.5,
-        "cache_read": 0.2
+        "cache_read": 0.2,
+        "tiers": [
+          {
+            "above": 200000,
+            "input": 2.5,
+            "output": 5,
+            "cache_read": 0.4
+          }
+        ]
       }
     },
     "xai/grok-4.5": {
@@ -2676,7 +2714,13 @@
         "context": 500000,
         "output": 500000
       },
-      "reasoning": {},
+      "reasoning": {
+        "efforts": [
+          "low",
+          "medium",
+          "high"
+        ]
+      },
       "provider_options": {
         "id": "xai/grok-4.5",
         "name": "Grok 4.5"
@@ -2684,7 +2728,15 @@
       "price": {
         "input": 2,
         "output": 6,
-        "cache_read": 0.3
+        "cache_read": 0.3,
+        "tiers": [
+          {
+            "above": 200000,
+            "input": 4,
+            "output": 12,
+            "cache_read": 0.6
+          }
+        ]
       }
     },
     "xai/grok-build-0.1": {
@@ -2719,7 +2771,15 @@
       "price": {
         "input": 1,
         "output": 2,
-        "cache_read": 0.2
+        "cache_read": 0.2,
+        "tiers": [
+          {
+            "above": 200000,
+            "input": 2,
+            "output": 4,
+            "cache_read": 0.4
+          }
+        ]
       }
     },
     "xiaomi/mimo-v2.5": {
@@ -2747,7 +2807,9 @@
         "context": 1048576,
         "output": 131072
       },
-      "reasoning": {},
+      "reasoning": {
+        "mandatory": false
+      },
       "provider_options": {
         "id": "xiaomi/mimo-v2.5",
         "name": "MiMo-V2.5"

@@ -45,7 +45,8 @@
       "price": {
         "input": 0.15,
         "output": 1.5
-      }
+      },
+      "status": "deprecated"
     },
     "alibaba/qwen3-next-80b-a3b-thinking": {
       "name": "Qwen3 Next 80B A3B Thinking",
@@ -81,7 +82,8 @@
       "price": {
         "input": 0.15,
         "output": 1.5
-      }
+      },
+      "status": "deprecated"
     },
     "alibaba/qwen3-vl-235b-a22b-instruct": {
       "name": "Qwen3 VL 235B A22B Instruct",
@@ -114,7 +116,8 @@
       "price": {
         "input": 0.3,
         "output": 1.5
-      }
+      },
+      "status": "deprecated"
     },
     "alibaba/qwen3-vl-235b-a22b-thinking": {
       "name": "Qwen3 VL 235B A22B Thinking",
@@ -151,7 +154,8 @@
       "price": {
         "input": 0.98,
         "output": 3.95
-      }
+      },
+      "status": "deprecated"
     },
     "alibaba/qwen3.5-122b-a10b": {
       "name": "Qwen3.5 122B A10B",
@@ -344,7 +348,8 @@
       },
       "price": {
         "input": 0.14,
-        "output": 0.28
+        "output": 0.28,
+        "cache_read": 0.028
       }
     },
     "deepseek/deepseek-v4-pro": {
@@ -382,7 +387,8 @@
       },
       "price": {
         "input": 1.6,
-        "output": 3.38
+        "output": 3.38,
+        "cache_read": 0.14
       }
     },
     "minimax/minimax-m3": {
@@ -421,7 +427,8 @@
       },
       "price": {
         "input": 0.3,
-        "output": 1.2
+        "output": 1.2,
+        "cache_read": 0.06
       }
     },
     "moonshotai/kimi-k2.5": {
@@ -461,7 +468,8 @@
       },
       "price": {
         "input": 0.6,
-        "output": 3
+        "output": 3,
+        "cache_read": 0.1
       }
     },
     "moonshotai/kimi-k2.7-code": {
@@ -499,7 +507,8 @@
       },
       "price": {
         "input": 0.95,
-        "output": 4
+        "output": 4,
+        "cache_read": 0.19
       }
     },
     "moonshotai/kimi-k3": {
@@ -538,7 +547,8 @@
       },
       "price": {
         "input": 3,
-        "output": 15
+        "output": 15,
+        "cache_read": 0.3
       }
     },
     "tencent/hy3": {
@@ -577,7 +587,8 @@
       "price": {
         "input": 0.14,
         "output": 0.58
-      }
+      },
+      "status": "deprecated"
     },
     "zhipuai/glm-5.1": {
       "name": "GLM 5.1",
@@ -613,7 +624,8 @@
       },
       "price": {
         "input": 1.38,
-        "output": 4.4
+        "output": 4.4,
+        "cache_read": 0.26
       }
     },
     "zhipuai/glm-5.2": {
@@ -650,7 +662,8 @@
       },
       "price": {
         "input": 1.4,
-        "output": 4.4
+        "output": 4.4,
+        "cache_read": 0.26
       }
     }
   }

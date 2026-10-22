@@ -18,7 +18,7 @@
     "alibaba/qwen3-235b-a22b-instruct-2507": {
       "name": "Qwen3 235B A22B Instruct 2507",
       "family": "qwen",
-      "released": "2025-04-28",
+      "released": "2025-07-21",
       "updated": "2025-07-21",
       "knowledge": "2025-04",
       "open_weights": true,
@@ -81,8 +81,8 @@
     "alibaba/qwen3-30b-a3b-instruct-2507": {
       "name": "Qwen3 30B A3B Instruct 2507",
       "family": "qwen",
-      "released": "2025-07-30",
-      "updated": "2025-07-30",
+      "released": "2025-07-28",
+      "updated": "2025-07-28",
       "knowledge": "2025-04",
       "open_weights": true,
       "capabilities": {

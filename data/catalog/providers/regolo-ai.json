@@ -18,6 +18,7 @@
     "alibaba/qwen-image": {
       "name": "Qwen Image",
       "family": "qwen",
+      "type": "image",
       "released": "2026-03-01",
       "updated": "2026-03-01",
       "open_weights": false,
@@ -48,8 +49,9 @@
     "alibaba/qwen3-coder-next": {
       "name": "Qwen3 Coder Next",
       "family": "qwen",
-      "released": "2026-03-01",
-      "updated": "2026-03-01",
+      "released": "2026-02-03",
+      "updated": "2026-02-03",
+      "knowledge": "2025-09",
       "open_weights": true,
       "capabilities": {
         "tools": true,
@@ -74,13 +76,15 @@
       "price": {
         "input": 0.3,
         "output": 1.2
-      }
+      },
+      "status": "deprecated"
     },
     "alibaba/qwen3-embedding-8b": {
       "name": "Qwen3 Embedding 8B",
       "family": "qwen",
-      "released": "2026-02-01",
-      "updated": "2026-02-01",
+      "type": "embedding",
+      "released": "2025-06-05",
+      "updated": "2025-06-05",
       "open_weights": true,
       "capabilities": {
         "tools": false,
@@ -109,6 +113,7 @@
     "alibaba/qwen3-reranker-4b": {
       "name": "Qwen3 Reranker 4B",
       "family": "qwen",
+      "type": "reranking",
       "released": "2026-02-01",
       "updated": "2026-02-01",
       "open_weights": true,
@@ -136,11 +141,11 @@
         "output": 0.12
       }
     },
-    "alibaba/qwen3.5-122b": {
-      "name": "Qwen3.5 122B",
+    "alibaba/qwen3.5-122b-a10b": {
+      "name": "Qwen3.5 122B A10B",
       "family": "qwen",
-      "released": "2026-02-01",
-      "updated": "2026-02-01",
+      "released": "2026-02-23",
+      "updated": "2026-02-23",
       "open_weights": true,
       "capabilities": {
         "tools": true,
@@ -164,15 +169,15 @@
         "name": "Qwen3.5-122B"
       },
       "price": {
-        "input": 0.9,
-        "output": 3.6
+        "input": 1.1215,
+        "output": 4.7103
       }
     },
     "alibaba/qwen3.5-9b": {
       "name": "Qwen3.5 9B",
       "family": "qwen",
-      "released": "2026-02-01",
-      "updated": "2026-02-01",
+      "released": "2026-02-23",
+      "updated": "2026-02-23",
       "open_weights": true,
       "capabilities": {
         "tools": true,
@@ -196,8 +201,8 @@
         "name": "Qwen3.5-9B"
       },
       "price": {
-        "input": 0.15,
-        "output": 0.6
+        "input": 0.078505,
+        "output": 0.392525
       }
     },
     "alibaba/qwen3.8-27b": {
@@ -305,9 +310,10 @@
     "meta/llama-3.3-70b-instruct": {
       "name": "Llama 3.3 70B Instruct",
       "family": "llama",
-      "released": "2025-04-28",
-      "updated": "2025-04-28",
-      "open_weights": false,
+      "released": "2024-12-06",
+      "updated": "2024-12-06",
+      "knowledge": "2023-12",
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": false,
@@ -330,14 +336,16 @@
       "price": {
         "input": 0.6,
         "output": 2.7
-      }
+      },
+      "status": "deprecated"
     },
-    "mistral/mistral-small-4-119b": {
-      "name": "Mistral Small 4 119B",
+    "mistral/mistral-small-2603": {
+      "name": "Mistral Small 2603",
       "family": "mistral-small",
-      "released": "2026-03-15",
-      "updated": "2026-03-15",
-      "open_weights": false,
+      "released": "2026-03-16",
+      "updated": "2026-03-16",
+      "knowledge": "2025-06",
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": true,
@@ -360,8 +368,8 @@
         "name": "Mistral Small 4 119B"
       },
       "price": {
-        "input": 0.75,
-        "output": 3
+        "input": 0.56075,
+        "output": 2.35515
       }
     },
     "openai/gpt-oss-120b": {
@@ -369,7 +377,8 @@
       "family": "gpt-oss",
       "released": "2025-08-05",
       "updated": "2025-08-05",
-      "open_weights": false,
+      "knowledge": "2024-06",
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": false,
@@ -397,15 +406,16 @@
         "name": "GPT-OSS-120B"
       },
       "price": {
-        "input": 1,
-        "output": 4.2
+        "input": 1.1215,
+        "output": 4.7103
       }
     },
     "openai/gpt-oss-20b": {
       "name": "GPT OSS 20B",
       "family": "gpt-oss",
-      "released": "2026-03-01",
-      "updated": "2026-03-01",
+      "released": "2025-08-05",
+      "updated": "2025-08-05",
+      "knowledge": "2024-06",
       "open_weights": true,
       "capabilities": {
         "tools": true,
@@ -434,8 +444,8 @@
         "name": "GPT-OSS-20B"
       },
       "price": {
-        "input": 0.4,
-        "output": 1.8
+        "input": 0.11215,
+        "output": 0.47103
       }
     },
     "openai/whisper-large-v3": {

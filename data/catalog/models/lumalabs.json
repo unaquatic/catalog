@@ -4,6 +4,7 @@
     "lab": "lumalabs",
     "name": "Ray2",
     "family": "ray",
+    "type": "video",
     "released": "2025-02-20",
     "updated": "2025-02-20",
     "open_weights": false,

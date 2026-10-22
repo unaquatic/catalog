@@ -998,6 +998,7 @@
         "tools": true,
         "attachments": true,
         "structured_output": true,
+        "temperature": false,
         "input": [
           "text",
           "image",

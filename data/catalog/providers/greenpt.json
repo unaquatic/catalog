@@ -76,7 +76,8 @@
       "price": {
         "input": 0.285,
         "output": 1.083
-      }
+      },
+      "status": "deprecated"
     },
     "alibaba/qwen3.5-397b-a17b": {
       "name": "Qwen3.5 397B A17B",
@@ -279,7 +280,8 @@
       "price": {
         "input": 0.342,
         "output": 0.684
-      }
+      },
+      "status": "deprecated"
     },
     "google/gemma-4-26b-a4b-it": {
       "name": "Gemma 4 26B A4B IT",
@@ -325,12 +327,13 @@
     },
     "greenpt/green-s": {
       "name": "Green S",
+      "type": "transcription",
       "released": "2025-06-09",
       "updated": "2025-06-09",
       "open_weights": false,
       "capabilities": {
         "tools": false,
-        "attachments": false,
+        "attachments": true,
         "temperature": false,
         "input": [
           "audio"
@@ -345,21 +348,28 @@
       },
       "provider_options": {
         "id": "green-s",
-        "name": "Green S"
-      },
-      "price": {
-        "input": 0.00437,
-        "output": 0
+        "name": "Green S",
+        "endpoint": {
+          "format": "openai-chat",
+          "api": "https://api.greenpt.ai",
+          "auth": {
+            "scheme": "bearer"
+          },
+          "env": [
+            "GREENPT_API_KEY"
+          ]
+        }
       }
     },
     "greenpt/green-s-pro": {
       "name": "Green S Pro",
+      "type": "transcription",
       "released": "2025-09-10",
       "updated": "2025-09-10",
       "open_weights": false,
       "capabilities": {
         "tools": false,
-        "attachments": false,
+        "attachments": true,
         "temperature": false,
         "input": [
           "audio"
@@ -374,42 +384,17 @@
       },
       "provider_options": {
         "id": "green-s-pro",
-        "name": "Green S Pro"
-      },
-      "price": {
-        "input": 0.00437,
-        "output": 0
-      }
-    },
-    "greenpt/metis": {
-      "name": "Metis",
-      "type": "decision",
-      "released": "2026-10-06",
-      "updated": "2026-10-06",
-      "open_weights": false,
-      "capabilities": {
-        "tools": false,
-        "attachments": false,
-        "structured_output": false,
-        "temperature": false,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 32768,
-        "output": 0
-      },
-      "provider_options": {
-        "id": "metis",
-        "name": "Metis"
-      },
-      "price": {
-        "input": 0.137,
-        "output": 0
+        "name": "Green S Pro",
+        "endpoint": {
+          "format": "openai-chat",
+          "api": "https://api.greenpt.ai",
+          "auth": {
+            "scheme": "bearer"
+          },
+          "env": [
+            "GREENPT_API_KEY"
+          ]
+        }
       }
     },
     "hcompany/holo2-30b-a3b": {
@@ -448,7 +433,8 @@
       "price": {
         "input": 0.399,
         "output": 0.969
-      }
+      },
+      "status": "deprecated"
     },
     "meta/llama-3.3-70b-instruct": {
       "name": "Llama 3.3 70B Instruct",
@@ -517,9 +503,9 @@
         "name": "MiniMax-M2.5"
       },
       "price": {
-        "input": 0.1938,
-        "output": 1.129,
-        "cache_read": 0.0627
+        "input": 0.49346,
+        "output": 2.4673,
+        "cache_read": 0.123365
       }
     },
     "mistral/devstral-2512": {
@@ -551,7 +537,8 @@
       "price": {
         "input": 0.57,
         "output": 2.736
-      }
+      },
+      "status": "deprecated"
     },
     "mistral/mistral-medium-2604": {
       "name": "Mistral Medium 2604",
@@ -658,11 +645,12 @@
       "price": {
         "input": 0.285,
         "output": 0.285
-      }
+      },
+      "status": "deprecated"
     },
     "mistral/voxtral-small-24b-2507": {
       "name": "Voxtral Small 24B 2507",
-      "family": "mistral",
+      "family": "voxtral",
       "released": "2025-07-15",
       "updated": "2025-07-15",
       "knowledge": "2025-07",
@@ -691,7 +679,8 @@
       "price": {
         "input": 0.228,
         "output": 0.513
-      }
+      },
+      "status": "deprecated"
     },
     "moonshotai/kimi-k2.6": {
       "name": "Kimi K2.6",
@@ -790,9 +779,9 @@
         "name": "Kimi K2.7 Code"
       },
       "price": {
-        "input": 0.9006,
-        "output": 4.389,
-        "cache_read": 0.1881
+        "input": 0.863555,
+        "output": 4.317775,
+        "cache_read": 0.222057
       }
     },
     "moonshotai/kimi-k3": {
@@ -952,9 +941,9 @@
         "name": "GLM-5.2"
       },
       "price": {
-        "input": 1.254,
-        "output": 5.016,
-        "cache_read": 0.3135
+        "input": 1.738325,
+        "output": 5.1589,
+        "cache_read": 0.4486
       },
       "aliases": [
         "glm-5.2-caveman",

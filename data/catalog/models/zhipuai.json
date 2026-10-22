@@ -345,6 +345,7 @@
       "openrouter",
       "orcarouter",
       "qiniu-ai",
+      "submodel",
       "tempr",
       "vercel",
       "zai",
@@ -465,34 +466,6 @@
       "unorouter",
       "zai",
       "zhipuai"
-    ]
-  },
-  "zhipuai/glm-4.5-fp8": {
-    "id": "zhipuai/glm-4.5-fp8",
-    "lab": "zhipuai",
-    "name": "GLM 4.5 FP8",
-    "family": "glm",
-    "released": "2025-07-28",
-    "updated": "2025-07-28",
-    "open_weights": true,
-    "reasoning": true,
-    "capabilities": {
-      "tools": true,
-      "attachments": false,
-      "temperature": true,
-      "input": [
-        "text"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 131072,
-      "output": 131072
-    },
-    "providers": [
-      "submodel"
     ]
   },
   "zhipuai/glm-4.5-x": {
@@ -1012,33 +985,6 @@
       "google-vertex"
     ]
   },
-  "zhipuai/glm-4.7-n": {
-    "id": "zhipuai/glm-4.7-n",
-    "lab": "zhipuai",
-    "name": "GLM 4.7 N",
-    "released": "2025-12-22",
-    "updated": "2025-12-22",
-    "open_weights": false,
-    "reasoning": true,
-    "capabilities": {
-      "tools": true,
-      "attachments": true,
-      "temperature": false,
-      "input": [
-        "text"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 205000,
-      "output": 131072
-    },
-    "providers": [
-      "poe"
-    ]
-  },
   "zhipuai/glm-5": {
     "id": "zhipuai/glm-5",
     "lab": "zhipuai",
@@ -1328,7 +1274,6 @@
       "neon",
       "neuralwatt",
       "novita-ai",
-      "nvidia",
       "ofox",
       "ollama-cloud",
       "opencode",
@@ -1425,6 +1370,7 @@
       "greenpt",
       "huggingface",
       "hyper",
+      "inceptron",
       "inco",
       "iteracompute",
       "kenari",
@@ -1542,6 +1488,7 @@
       "greenpt",
       "huggingface",
       "hyper",
+      "inceptron",
       "inco",
       "iteracompute",
       "kenari",
