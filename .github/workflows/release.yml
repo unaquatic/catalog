@@ -57,6 +57,9 @@ jobs:
           {
             jq -r '"Built from \(.source) at \(.generated).\n",
               "- \(.models | length) models, \(.providers | length) providers, \([.providers[].models | length] | add) offerings"' data/catalog.json
+            if [ -f data/patch.json ]; then
+              jq -r '"- models.dev changed: \([.ops[] | select(.op == "add")] | length) added, \([.ops[] | select(.op == "replace")] | length) replaced, \([.ops[] | select(.op == "remove")] | length) removed; \(.conflicts // [] | length) conflicts kept ours"' data/patch.json
+            fi
             if [ -n "$prev" ]; then
               jq -r '.models | keys[]' data/catalog.json | sort > new.txt
               git show "$prev:data/catalog.json" | jq -r '.models | keys[]' | sort > old.txt
@@ -68,7 +71,9 @@ jobs:
             fi
           } > notes.md
 
-          gh release create "$tag" data/catalog.json data/models-dev.json \
+          assets=(data/catalog.json data/models-dev.json)
+          [ ! -f data/patch.json ] || assets+=(data/patch.json)
+          gh release create "$tag" "${assets[@]}" \
             --target "$sha" --title "$tag" --notes-file notes.md --latest
 
   # GitHub Pages needs a public repository on the free plan; set the

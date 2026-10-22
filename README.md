@@ -36,7 +36,7 @@ go run ./cmd/catalog snapshot -providers anthropic,openai -o snapshot.json   # t
 
 ## Hosted catalog
 
-CI rebuilds the catalog from models.dev every six hours and, when it changed, commits `data/`, publishes a `data-YYYY.MM.DD.N` release with both files, and deploys the browser and `catalog.json` to:
+Our catalog, `data/catalog.json`, is its own source of truth: models.dev is where its data comes from, not what it is. Every six hours CI applies what models.dev changed since its last version to the catalog, as a patch, keeping what the catalog holds of its own, and opens a pull request of it to review and squash-merge; a merge that changes the catalog publishes a `data-YYYY.MM.DD.N` release with the catalog, models.dev's catalog.json and the patch, and deploys the browser and `catalog.json` to:
 
 - https://aquatic.dev/catalog/ — what flow reads (`gateway.DefaultSource`)
 - https://unaquatic.github.io/catalog/ — a mirror
