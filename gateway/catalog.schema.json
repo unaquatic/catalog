@@ -104,6 +104,16 @@
           "description": "URL of this JSON Schema.",
           "type": "string"
         },
+        "efforts": {
+          "additionalProperties": {
+            "$ref": "#/$defs/effort_name"
+          },
+          "description": "The reasoning efforts the offerings take, and their names, by effort ID.",
+          "propertyNames": {
+            "$ref": "#/$defs/effort"
+          },
+          "type": "object"
+        },
         "families": {
           "additionalProperties": {
             "$ref": "#/$defs/family"
@@ -168,6 +178,10 @@
           "$ref": "#/$defs/spellings",
           "description": "How model names spell words of model IDs."
         },
+        "variant": {
+          "$ref": "#/$defs/variant_names",
+          "description": "The tiers and the modes the variants run in, and their names."
+        },
         "version": {
           "const": 8,
           "description": "Version of the document's format. A reader accepts only the version it knows.",
@@ -194,6 +208,24 @@
         "max"
       ],
       "type": "string"
+    },
+    "effort_name": {
+      "description": "A reasoning effort, and its name, such as \"Extra High\" for \"xhigh\".",
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/effort",
+          "description": "The effort's ID, as an offering's \"efforts\" names it."
+        },
+        "name": {
+          "description": "The effort's display name.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "name"
+      ],
+      "type": "object"
     },
     "endpoint": {
       "description": "How to call an API: its request format, its base URL, how it authenticates, and the environment variables it reads.",
@@ -335,6 +367,24 @@
         "pdf"
       ],
       "type": "string"
+    },
+    "mode_name": {
+      "description": "A mode a variant runs its model in, and its name, such as \"Thinking\" for \"thinking\".",
+      "properties": {
+        "id": {
+          "description": "The mode's ID, as a variant's \"mode\" names it.",
+          "type": "string"
+        },
+        "name": {
+          "description": "The mode's display name.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "name"
+      ],
+      "type": "object"
     },
     "model": {
       "description": "A model as its lab describes it, apart from any provider, and the providers that offer it.",
@@ -799,6 +849,24 @@
       ],
       "type": "string"
     },
+    "tier_name": {
+      "description": "A service tier, and its name, such as \"Ultrafast\" for \"ultrafast\".",
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/tier",
+          "description": "The tier's ID, as a variant's \"tier\" names it."
+        },
+        "name": {
+          "description": "The tier's display name.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "name"
+      ],
+      "type": "object"
+    },
     "variant": {
       "description": "A tier or a mode that an offering offers on top of its call, or both. Its \"provider_options\" change the offering's: an \"id\" or \"endpoint\" replaces the offering's, and \"body\" and \"headers\" merge into the offering's.",
       "properties": {
@@ -831,6 +899,29 @@
         "name",
         "provider_options"
       ],
+      "type": "object"
+    },
+    "variant_names": {
+      "description": "The tiers and the modes the variants run in, and their names.",
+      "properties": {
+        "modes": {
+          "additionalProperties": {
+            "$ref": "#/$defs/mode_name"
+          },
+          "description": "The modes, and their names, by mode ID.",
+          "type": "object"
+        },
+        "tiers": {
+          "additionalProperties": {
+            "$ref": "#/$defs/tier_name"
+          },
+          "description": "The service tiers, and their names, by tier ID.",
+          "propertyNames": {
+            "$ref": "#/$defs/tier"
+          },
+          "type": "object"
+        }
+      },
       "type": "object"
     },
     "weight": {

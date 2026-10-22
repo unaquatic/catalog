@@ -202,6 +202,8 @@ func FromModelsDev(b modelsdev.Bundle, opts Options) (*Catalog, Report, error) {
 	c.Labs, c.Families = bl.names(c.Models)
 	bl.report.Notes = append(bl.report.Notes, c.ApplyReasoning(bl.rules)...)
 	c.ListOff()
+	c.Efforts = c.EffortNames(bl.rules)
+	c.Variant = c.NameVariants(bl.rules)
 	return c, bl.report, nil
 }
 

@@ -139,3 +139,62 @@ func show(r *Reasoning) string {
 	return fmt.Sprintf("{mandatory %v, default_enabled %v, efforts %v, default_effort %q, budget %v}",
 		b(r.Mandatory), b(r.DefaultEnabled), r.Efforts, r.DefaultEffort, r.Budget)
 }
+
+// TestEffortNames checks that every effort the offerings take, or name as
+// their default, gets a name: the rules', or its ID with a capital first
+// letter; and that Keep keeps the names of the efforts of the providers it
+// keeps alone.
+func TestEffortNames(t *testing.T) {
+	rules, err := DecodeRules([]byte(`{"version": 1, "rules": [{"match": {"effort": "xhigh"}, "name": "Extra High"}]}`))
+	if err != nil {
+		t.Fatal(err)
+	}
+	c := &Catalog{
+		Models: map[ModelID]Model{"acme/a": {ID: "acme/a", Lab: "acme"}, "acme/b": {ID: "acme/b", Lab: "acme"}},
+		Providers: map[ProviderID]Provider{
+			"acme": {ID: "acme", Models: map[ModelID]Offering{"acme/a": {Reasoning: &Reasoning{Efforts: []Effort{"none", "xhigh"}, DefaultEffort: "xhigh"}}}},
+			"gw":   {ID: "gw", Models: map[ModelID]Offering{"acme/b": {Reasoning: &Reasoning{Efforts: []Effort{"medium"}}}}},
+		},
+	}
+	c.Efforts = c.EffortNames(rules)
+	want := map[Effort]EffortName{"none": {"none", "None"}, "xhigh": {"xhigh", "Extra High"}, "medium": {"medium", "Medium"}}
+	if !reflect.DeepEqual(c.Efforts, want) {
+		t.Errorf("EffortNames = %v, want %v", c.Efforts, want)
+	}
+	kept := c.Keep("acme")
+	if _, ok := kept.Efforts["medium"]; ok || kept.Efforts["xhigh"].Name != "Extra High" {
+		t.Errorf("Keep(acme) efforts = %v, want none and xhigh alone", kept.Efforts)
+	}
+}
+
+// TestNameVariants checks that every tier and mode the variants run in gets
+// a name, the rules' or its ID with a capital first letter, and that Keep
+// keeps those of the providers it keeps alone.
+func TestNameVariants(t *testing.T) {
+	rules, err := DecodeRules([]byte(`{"version": 1, "rules": [{"match": {"tier": "ultrafast"}, "name": "Ultra Fast"}]}`))
+	if err != nil {
+		t.Fatal(err)
+	}
+	c := &Catalog{
+		Models: map[ModelID]Model{"acme/a": {ID: "acme/a", Lab: "acme"}, "acme/b": {ID: "acme/b", Lab: "acme"}},
+		Providers: map[ProviderID]Provider{
+			"acme": {ID: "acme", Models: map[ModelID]Offering{"acme/a": {Variants: map[string]Variant{
+				"fast": {Tier: "fast"}, "thinking:ultrafast": {Tier: "ultrafast", Mode: "thinking"}}}}},
+			"gw": {ID: "gw", Models: map[ModelID]Offering{"acme/b": {Variants: map[string]Variant{"flex": {Tier: "flex"}}}}},
+		},
+	}
+	c.Variant = c.NameVariants(rules)
+	want := &VariantNames{
+		Tiers: map[Tier]TierName{"fast": {"fast", "Fast"}, "ultrafast": {"ultrafast", "Ultra Fast"}, "flex": {"flex", "Flex"}},
+		Modes: map[string]ModeName{"thinking": {"thinking", "Thinking"}},
+	}
+	if !reflect.DeepEqual(c.Variant, want) {
+		t.Errorf("NameVariants = %+v, want %+v", c.Variant, want)
+	}
+	if kept := c.Keep("acme"); kept.Variant == nil || len(kept.Variant.Tiers) != 2 || kept.Variant.Modes["thinking"].Name != "Thinking" {
+		t.Errorf("Keep(acme) variant = %+v, want fast, ultrafast and thinking alone", kept.Variant)
+	}
+	if n := (&Catalog{}).NameVariants(rules); n != nil {
+		t.Errorf("NameVariants of no variants = %+v, want nil", n)
+	}
+}

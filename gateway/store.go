@@ -268,6 +268,26 @@ func (c *Catalog) Keep(ps ...ProviderID) *Catalog {
 		}
 	}
 	out.Spellings = c.Spellings.For(out.NameParts())
+	for _, p := range out.Providers {
+		for _, off := range p.Models {
+			if c.Variant != nil {
+				for _, v := range off.Variants {
+					out.keepVariantNames(c.Variant, v)
+				}
+			}
+			if off.Reasoning == nil {
+				continue
+			}
+			for _, e := range append(slices.Clone(off.Reasoning.Efforts), off.Reasoning.DefaultEffort) {
+				if l, ok := c.Efforts[e]; ok {
+					if out.Efforts == nil {
+						out.Efforts = make(map[Effort]EffortName)
+					}
+					out.Efforts[e] = l
+				}
+			}
+		}
+	}
 	return out
 }
 
@@ -287,4 +307,23 @@ func (r Rates) Charge(input, cacheRead, cacheWrite, output int) float64 {
 	read := cmp.Or(r.CacheRead, &r.Input)
 	write := cmp.Or(r.CacheWrite, &r.Input)
 	return (r.Input*float64(input) + *read*float64(cacheRead) + *write*float64(cacheWrite) + r.Output*float64(output)) / 1_000_000
+}
+
+// keepVariantNames copies the names of v's tier and mode from names to c.
+func (c *Catalog) keepVariantNames(names *VariantNames, v Variant) {
+	if c.Variant == nil {
+		c.Variant = &VariantNames{}
+	}
+	if t, ok := names.Tiers[v.Tier]; ok {
+		if c.Variant.Tiers == nil {
+			c.Variant.Tiers = map[Tier]TierName{}
+		}
+		c.Variant.Tiers[v.Tier] = t
+	}
+	if m, ok := names.Modes[v.Mode]; ok {
+		if c.Variant.Modes == nil {
+			c.Variant.Modes = map[string]ModeName{}
+		}
+		c.Variant.Modes[v.Mode] = m
+	}
 }

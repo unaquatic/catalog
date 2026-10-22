@@ -9,6 +9,8 @@
       "spellings": "How model names spell words of model IDs.",
       "labs": "The labs that make the models, by lab ID.",
       "families": "The model families, by family ID.",
+      "efforts": "The reasoning efforts the offerings take, and their names, by effort ID.",
+      "variant": "The tiers and the modes the variants run in, and their names.",
       "models": "Every model, by model ID.",
       "providers": "Every provider, by provider ID."
     }
@@ -197,6 +199,34 @@
       "efforts": "The effort levels the offering takes, lowest first. \"none\" turns reasoning off, whatever field the provider's API turns it off by: a client sends it as its API does, such as Anthropic's thinking type \"disabled\".",
       "default_effort": "The effort the model reasons at when a request names none, one of \"efforts\".",
       "budget": "The range of reasoning token budgets the offering takes. Absent when it takes none."
+    }
+  },
+  "variant_names": {
+    "description": "The tiers and the modes the variants run in, and their names.",
+    "properties": {
+      "tiers": "The service tiers, and their names, by tier ID.",
+      "modes": "The modes, and their names, by mode ID."
+    }
+  },
+  "tier_name": {
+    "description": "A service tier, and its name, such as \"Ultrafast\" for \"ultrafast\".",
+    "properties": {
+      "id": "The tier's ID, as a variant's \"tier\" names it.",
+      "name": "The tier's display name."
+    }
+  },
+  "mode_name": {
+    "description": "A mode a variant runs its model in, and its name, such as \"Thinking\" for \"thinking\".",
+    "properties": {
+      "id": "The mode's ID, as a variant's \"mode\" names it.",
+      "name": "The mode's display name."
+    }
+  },
+  "effort_name": {
+    "description": "A reasoning effort, and its name, such as \"Extra High\" for \"xhigh\".",
+    "properties": {
+      "id": "The effort's ID, as an offering's \"efforts\" names it.",
+      "name": "The effort's display name."
     }
   },
   "effort": {

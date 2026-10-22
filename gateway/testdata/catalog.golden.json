@@ -66,6 +66,52 @@
       "name": "o"
     }
   },
+  "efforts": {
+    "high": {
+      "id": "high",
+      "name": "High"
+    },
+    "low": {
+      "id": "low",
+      "name": "Low"
+    },
+    "max": {
+      "id": "max",
+      "name": "Max"
+    },
+    "medium": {
+      "id": "medium",
+      "name": "Medium"
+    },
+    "none": {
+      "id": "none",
+      "name": "None"
+    },
+    "xhigh": {
+      "id": "xhigh",
+      "name": "Extra High"
+    }
+  },
+  "variant": {
+    "tiers": {
+      "fast": {
+        "id": "fast",
+        "name": "Fast"
+      },
+      "flex": {
+        "id": "flex",
+        "name": "Flex"
+      },
+      "free": {
+        "id": "free",
+        "name": "Free"
+      },
+      "ultrafast": {
+        "id": "ultrafast",
+        "name": "Ultrafast"
+      }
+    }
+  },
   "models": {
     "acme/open-1": {
       "id": "acme/open-1",

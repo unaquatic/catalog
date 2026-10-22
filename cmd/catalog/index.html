@@ -239,6 +239,9 @@ const capital = (w) => w[0].toUpperCase() + w.slice(1);
 // or their IDs where it gives none.
 const labName = (lab) => db.cat.labs?.[lab]?.name || lab;
 const familyName = (f) => db.cat.families?.[f]?.name || f;
+// optionName is the name of a variant's tier or mode n, as the catalog's
+// variant names name it, or else n with a capital first letter.
+const optionName = (n) => db.cat.variant?.tiers?.[n]?.name || db.cat.variant?.modes?.[n]?.name || capital(n);
 const providerHref = (p, variant) => href("providers", p) + (variant ? "?v=" + encodeURIComponent(variant) : "");
 
 // idNode draws a model ID, in type16's monospace set (.mid), breakable after each slash.
@@ -318,8 +321,8 @@ function labelBadges(row) {
   return [
     !row.depth && row.off.aliases?.length ? h("span", { class: "badge", title: "other model IDs of it here: " + row.off.aliases.join(", ") },
       `+${row.off.aliases.length} alias${row.off.aliases.length > 1 ? "es" : ""}`) : null,
-    row.depth && v.tier ? h("span", { class: "badge " + v.tier }, v.tier) : null,
-    row.depth && v.mode ? h("span", { class: "badge mode" }, v.mode) : null,
+    row.depth && v.tier ? h("span", { class: "badge " + v.tier, title: v.tier }, optionName(v.tier)) : null,
+    row.depth && v.mode ? h("span", { class: "badge mode", title: v.mode }, optionName(v.mode)) : null,
     row.v.status ? h("span", { class: "badge " + row.v.status }, row.v.status) : null,
   ];
 }
@@ -343,7 +346,7 @@ function optionNames(rows) {
   for (const r of rows) if (r.depth) { if (r.raw.tier) set.add(r.raw.tier); if (r.raw.mode) set.add(r.raw.mode); }
   return [...TIERS.filter((t) => set.has(t)), ...[...set].filter((t) => !TIERS.includes(t)).sort()];
 }
-const optionBadges = (names) => names.map((n) => h("span", { class: "badge " + (TIERS.includes(n) ? n : "mode") }, n));
+const optionBadges = (names) => names.map((n) => h("span", { class: "badge " + (TIERS.includes(n) ? n : "mode"), title: n }, optionName(n)));
 function authText(a) {
   if (!a?.scheme) return "unknown";
   return { bearer: "Authorization: Bearer <key>", header: `${a.header}: <key>`, aws: "AWS SigV4, or Bearer AWS_BEARER_TOKEN_BEDROCK",
@@ -359,10 +362,14 @@ function endpointView(ep, own) {
     h("div", { class: "sub" }, "auth: ", authText(ep.auth)),
     ep.env?.length ? h("div", { class: "sub" }, "env: ", ep.env.join(" ")) : null);
 }
-// effortBadge shows reasoning effort e, set apart when it is r's default.
+// effortName is reasoning effort e's name, as the catalog's efforts name
+// it, or else e.
+const effortName = (e) => db.cat.efforts?.[e]?.name || e;
+// effortBadge shows reasoning effort e by its name, set apart when it is r's
+// default.
 const effortBadge = (r, e) => e === r.default_effort
-  ? h("span", { class: "badge mode", title: "the default effort" }, e)
-  : h("span", { class: "badge" }, e);
+  ? h("span", { class: "badge mode", title: e + ", the default effort" }, effortName(e))
+  : h("span", { class: "badge", title: e }, effortName(e));
 // effortBadges shows, as badges, every reasoning effort a model takes, in
 // order, its default set apart, or how else its reasoning is controlled.
 function effortBadges(r) {
@@ -503,7 +510,7 @@ function modelsPage(q) {
       selectFilter("Provider", "provider", provs, q, draw),
       selectFilter("Family", "family", fams, q, draw),
       selectFilter("Type", "type", types, q, draw),
-      selectFilter("Option", "option", [...TIERS.filter((t) => opts.has(t)), ...[...opts].filter((t) => !TIERS.includes(t))].map((t) => [t, capital(t)]), q, draw),
+      selectFilter("Option", "option", [...TIERS.filter((t) => opts.has(t)), ...[...opts].filter((t) => !TIERS.includes(t))].map((t) => [t, optionName(t)]), q, draw),
       selectFilter("Weights", "weights", weights, q, draw),
       h("button", { class: "btn", onclick: () => { setQuery(new URLSearchParams()); render(); } }, "Clear"),
       shown),

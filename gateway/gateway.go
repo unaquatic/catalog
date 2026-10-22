@@ -330,6 +330,33 @@ type Effort string
 // EffortNone is the effort that turns reasoning off.
 const EffortNone Effort = "none"
 
+// EffortName is a reasoning effort of the catalog's offerings, and its
+// name, as "Extra High" of xhigh.
+type EffortName struct {
+	ID   Effort `json:"id"`
+	Name string `json:"name"`
+}
+
+// VariantNames name the tiers and the modes of the catalog's variants.
+type VariantNames struct {
+	Tiers map[Tier]TierName   `json:"tiers,omitempty"`
+	Modes map[string]ModeName `json:"modes,omitempty"`
+}
+
+// TierName is a service tier of the catalog's variants, and its name, as
+// "Ultrafast" of ultrafast.
+type TierName struct {
+	ID   Tier   `json:"id"`
+	Name string `json:"name"`
+}
+
+// ModeName is a mode of the catalog's variants, and its name, as "Thinking"
+// of thinking.
+type ModeName struct {
+	ID   string `json:"id"`
+	Name string `json:"name"`
+}
+
 // Modality is a kind of content a model takes or makes, such as "text".
 type Modality string
 
@@ -367,8 +394,14 @@ type Catalog struct {
 	Spellings Spellings `json:"spellings,omitempty"`
 	// Labs and Families name the labs and the families of the catalog's
 	// models, by the IDs the models' Lab and Family hold.
-	Labs      map[ProviderID]Lab      `json:"labs,omitempty"`
-	Families  map[string]Family       `json:"families,omitempty"`
+	Labs     map[ProviderID]Lab `json:"labs,omitempty"`
+	Families map[string]Family  `json:"families,omitempty"`
+	// Efforts name the reasoning efforts of the catalog's offerings, by the
+	// IDs their Efforts hold, as EffortNames names them.
+	Efforts map[Effort]EffortName `json:"efforts,omitempty"`
+	// Variant names the tiers and the modes of the catalog's variants, by
+	// the IDs their Tier and Mode hold, as VariantNames names them.
+	Variant   *VariantNames           `json:"variant,omitempty"`
 	Models    map[ModelID]Model       `json:"models"`
 	Providers map[ProviderID]Provider `json:"providers"`
 }

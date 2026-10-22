@@ -134,9 +134,10 @@ func TestDecodeRulesErrors(t *testing.T) {
 		{"model without a listing", `{"version": 1, "rules": [{"match": {"provider": "x"}, "model": "a/b"}]}`, "a model needs a match of listing"},
 		{"separator without a provider", `{"version": 1, "rules": [{"separator": "--"}]}`, "a separator needs a match of provider"},
 		{"exclude without a provider", `{"version": 1, "rules": [{"match": {"maker": "x"}, "exclude": true}]}`, "exclude needs a match of provider"},
-		{"name without a match", `{"version": 1, "rules": [{"name": "X"}]}`, "a name needs a match of lab or family"},
-		{"name of a lab and a family", `{"version": 1, "rules": [{"match": {"lab": "x", "family": "y"}, "name": "X"}]}`, "a name needs a match of lab or family"},
-		{"lab match for no name", `{"version": 1, "rules": [{"match": {"lab": "x"}, "add_lab": "y"}]}`, "a match of lab or family is for a name"},
+		{"name without a match", `{"version": 1, "rules": [{"name": "X"}]}`, "a name needs a match of one lab, family, effort, tier or mode"},
+		{"name of a lab and a family", `{"version": 1, "rules": [{"match": {"lab": "x", "family": "y"}, "name": "X"}]}`, "a name needs a match of one lab, family, effort, tier or mode"},
+		{"effort match for no name", `{"version": 1, "rules": [{"match": {"effort": "xhigh"}, "exclude": true}]}`, "a match of lab, family, effort, tier or mode is for a name"},
+		{"lab match for no name", `{"version": 1, "rules": [{"match": {"lab": "x"}, "add_lab": "y"}]}`, "a match of lab, family, effort, tier or mode is for a name"},
 	} {
 		t.Run(tt.name, func(t *testing.T) {
 			_, err := DecodeRules([]byte(tt.doc))

@@ -43,25 +43,28 @@ type Rules struct {
 	Version int    `json:"version"`
 	Rules   []Rule `json:"rules"`
 
-	makers   map[string]ProviderID
-	added    []ProviderID
-	products []Rule
-	brands   []Rule
-	words    []Rule
-	segments map[string]bool
-	prefixes map[ProviderID][]string
-	services []Rule
-	tunes    []Rule
-	bases    map[string]FinetuneBase
-	suffixes []Rule
-	regions  []string
-	listed   []ProviderID
-	excluded []ProviderID
-	seps     map[ProviderID][]string
-	pins     []Rule
-	labNames map[ProviderID]string
-	famNames map[string]string
-	reasons  []Rule
+	makers    map[string]ProviderID
+	added     []ProviderID
+	products  []Rule
+	brands    []Rule
+	words     []Rule
+	segments  map[string]bool
+	prefixes  map[ProviderID][]string
+	services  []Rule
+	tunes     []Rule
+	bases     map[string]FinetuneBase
+	suffixes  []Rule
+	regions   []string
+	listed    []ProviderID
+	excluded  []ProviderID
+	seps      map[ProviderID][]string
+	pins      []Rule
+	labNames  map[ProviderID]string
+	famNames  map[string]string
+	effNames  map[Effort]string
+	tierNames map[Tier]string
+	modeNames map[string]string
+	reasons   []Rule
 }
 
 // Rule is one rule: what it matches, and the one thing it says of it, by
@@ -108,8 +111,9 @@ type Rule struct {
 	// Model ties Match's listing to this model, which the catalog lists,
 	// whatever the other rules say.
 	Model ModelID `json:"model,omitempty"`
-	// Name names Match's lab or family in the catalog, where the name the
-	// mapping would give it is wrong, as TheDrummer of thedrummer.
+	// Name names Match's lab, family, effort, tier or mode in the catalog,
+	// where the name the mapping would give it is wrong, as TheDrummer of
+	// thedrummer and Extra High of xhigh.
 	Name string `json:"name,omitempty"`
 	// Reasoning sets facts of how Match's models reason, which models.dev
 	// lists wrong or not at all, on their offerings at every provider, as
@@ -147,9 +151,13 @@ type Match struct {
 	Prefix string `json:"prefix,omitempty"`
 	Suffix string `json:"suffix,omitempty"`
 	// Lab and Family are a lab of the catalog's models and a family, by
-	// the IDs models' Lab and Family hold; only a name matches them.
+	// the IDs models' Lab and Family hold, Effort a reasoning effort, and
+	// Tier and Mode a variant's tier and mode; only a name matches them.
 	Lab    ProviderID `json:"lab,omitempty"`
 	Family string     `json:"family,omitempty"`
+	Effort Effort     `json:"effort,omitempty"`
+	Tier   Tier       `json:"tier,omitempty"`
+	Mode   string     `json:"mode,omitempty"`
 	// Models are catalog model IDs, or a list of them; only reasoning
 	// facts match them.
 	Models Strings `json:"models,omitempty"`
@@ -195,7 +203,8 @@ func DecodeRules(data []byte) (*Rules, error) {
 	}
 	r.makers, r.segments, r.prefixes, r.bases, r.seps = make(map[string]ProviderID), make(map[string]bool),
 		make(map[ProviderID][]string), make(map[string]FinetuneBase), make(map[ProviderID][]string)
-	r.labNames, r.famNames = make(map[ProviderID]string), make(map[string]string)
+	r.labNames, r.famNames, r.effNames = make(map[ProviderID]string), make(map[string]string), make(map[Effort]string)
+	r.tierNames, r.modeNames = make(map[Tier]string), make(map[string]string)
 	for i, rule := range r.Rules {
 		if err := r.add(rule); err != nil {
 			return nil, fmt.Errorf("%w: rule %d: %w", ErrRules, i+1, err)
@@ -218,8 +227,8 @@ func (r *Rules) add(rule Rule) error {
 	if says != 1 {
 		return fmt.Errorf("says %d things; a rule says one", says)
 	}
-	if (m.Lab != "" || m.Family != "") && rule.Name == "" {
-		return errors.New("a match of lab or family is for a name")
+	if (m.Lab != "" || m.Family != "" || m.Effort != "" || m.Tier != "" || m.Mode != "") && rule.Name == "" {
+		return errors.New("a match of lab, family, effort, tier or mode is for a name")
 	}
 	if len(m.Models) > 0 && rule.Reasoning == nil {
 		return errors.New("a match of models is for reasoning")
@@ -323,15 +332,36 @@ func (r *Rules) add(rule Rule) error {
 		}
 		r.reasons = append(r.reasons, rule)
 	case rule.Name != "":
-		if err := only("lab or family", (m.Lab != "") != (m.Family != "")); err != nil {
-			return err
+		matched := 0
+		for _, set := range []bool{m.Lab != "", m.Family != "", m.Effort != "", m.Tier != "", m.Mode != ""} {
+			if set {
+				matched++
+			}
 		}
-		if m.Lab != "" {
+		if matched != 1 {
+			return errors.New("a name needs a match of one lab, family, effort, tier or mode")
+		}
+		switch {
+		case m.Lab != "":
 			if _, ok := r.labNames[m.Lab]; !ok {
 				r.labNames[m.Lab] = rule.Name
 			}
-		} else if _, ok := r.famNames[m.Family]; !ok {
-			r.famNames[m.Family] = rule.Name
+		case m.Family != "":
+			if _, ok := r.famNames[m.Family]; !ok {
+				r.famNames[m.Family] = rule.Name
+			}
+		case m.Effort != "":
+			if _, ok := r.effNames[m.Effort]; !ok {
+				r.effNames[m.Effort] = rule.Name
+			}
+		case m.Tier != "":
+			if _, ok := r.tierNames[m.Tier]; !ok {
+				r.tierNames[m.Tier] = rule.Name
+			}
+		default:
+			if _, ok := r.modeNames[m.Mode]; !ok {
+				r.modeNames[m.Mode] = rule.Name
+			}
 		}
 	}
 	return nil
@@ -375,6 +405,27 @@ func (r *Rules) MakerLab(maker string) (ProviderID, bool) {
 // give it one.
 func (r *Rules) LabName(lab ProviderID) (string, bool) {
 	n, ok := r.labNames[lab]
+	return n, ok
+}
+
+// EffortName returns the name the rules give reasoning effort e, and reports
+// whether they give it one.
+func (r *Rules) EffortName(e Effort) (string, bool) {
+	n, ok := r.effNames[e]
+	return n, ok
+}
+
+// TierName returns the name the rules give service tier t, and reports
+// whether they give it one.
+func (r *Rules) TierName(t Tier) (string, bool) {
+	n, ok := r.tierNames[t]
+	return n, ok
+}
+
+// ModeName returns the name the rules give mode m, and reports whether they
+// give it one.
+func (r *Rules) ModeName(m string) (string, bool) {
+	n, ok := r.modeNames[m]
 	return n, ok
 }
 
