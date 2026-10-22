@@ -1,0 +1,214 @@
+{
+  "baidu/cobuddy": {
+    "id": "baidu/cobuddy",
+    "lab": "baidu",
+    "name": "CoBuddy",
+    "released": "2026-05-06",
+    "updated": "2026-05-06",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 65536
+    },
+    "providers": [
+      "novita-ai"
+    ]
+  },
+  "baidu/ernie-4.5-21b-a3b": {
+    "id": "baidu/ernie-4.5-21b-a3b",
+    "lab": "baidu",
+    "name": "ERNIE 4.5 21B A3B",
+    "family": "ernie",
+    "released": "2025-06-30",
+    "updated": "2025-06-30",
+    "open_weights": true,
+    "license": "Apache-2.0",
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 8000
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/baidu/ERNIE-4.5-21B-A3B-PT"
+      }
+    ],
+    "providers": [
+      "novita-ai"
+    ]
+  },
+  "baidu/ernie-4.5-21b-a3b-thinking": {
+    "id": "baidu/ernie-4.5-21b-a3b-thinking",
+    "lab": "baidu",
+    "name": "ERNIE 4.5 21B A3B Thinking",
+    "family": "ernie",
+    "released": "2025-03-16",
+    "updated": "2025-03-16",
+    "knowledge": "2025-03",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 8000
+    },
+    "providers": [
+      "helicone"
+    ]
+  },
+  "baidu/ernie-4.5-300b-a47b-paddle": {
+    "id": "baidu/ernie-4.5-300b-a47b-paddle",
+    "lab": "baidu",
+    "name": "ERNIE 4.5 300B A47B Paddle",
+    "family": "ernie",
+    "released": "2026-01",
+    "updated": "2026-01",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 123000,
+      "output": 12000
+    },
+    "providers": [
+      "jiekou"
+    ]
+  },
+  "baidu/ernie-4.5-vl-424b-a47b": {
+    "id": "baidu/ernie-4.5-vl-424b-a47b",
+    "lab": "baidu",
+    "name": "ERNIE 4.5 VL 424B A47B",
+    "family": "ernie",
+    "released": "2025-06-30",
+    "updated": "2025-06-30",
+    "knowledge": "2025-03-31",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "image",
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 123000,
+      "output": 16000
+    },
+    "providers": [
+      "jiekou",
+      "llmgateway",
+      "llmgateway-providers"
+    ]
+  },
+  "baidu/ernie-5.0-thinking-preview": {
+    "id": "baidu/ernie-5.0-thinking-preview",
+    "lab": "baidu",
+    "name": "ERNIE 5.0 Thinking Preview",
+    "family": "ernie",
+    "released": "2025-11-18",
+    "updated": "2025-11-18",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "structured_output": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "input": 128000,
+      "output": 16384
+    },
+    "providers": [
+      "nano-gpt",
+      "zenmux"
+    ]
+  },
+  "baidu/ernie-5.1": {
+    "id": "baidu/ernie-5.1",
+    "lab": "baidu",
+    "name": "ERNIE 5.1",
+    "family": "ernie",
+    "released": "2026-05-10",
+    "updated": "2026-05-10",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "structured_output": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 119000,
+      "input": 119000,
+      "output": 64000
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  }
+}

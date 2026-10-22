@@ -1,0 +1,93 @@
+{
+  "typesafe/jev-1.13.0": {
+    "id": "typesafe/jev-1.13.0",
+    "lab": "typesafe",
+    "name": "Jev 1.13.0",
+    "type": "decision",
+    "released": "2026-09-15",
+    "updated": "2026-09-15",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32000,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "typesafe/jev-1.14.0": {
+    "id": "typesafe/jev-1.14.0",
+    "lab": "typesafe",
+    "name": "Jev 1.14.0",
+    "type": "decision",
+    "released": "2026-10-14",
+    "updated": "2026-10-14",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 64000,
+      "output": 0
+    },
+    "providers": [
+      "cloudflare-ai-gateway",
+      "openrouter",
+      "vercel"
+    ]
+  },
+  "typesafe/jev-latest": {
+    "id": "typesafe/jev-latest",
+    "lab": "typesafe",
+    "name": "Jev Latest",
+    "type": "decision",
+    "released": "2026-09-15",
+    "updated": "2026-09-15",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 64000,
+      "output": 0
+    },
+    "providers": [
+      "cloudflare-ai-gateway",
+      "nano-gpt",
+      "opencode",
+      "openrouter",
+      "vercel",
+      "vivgrid"
+    ]
+  }
+}

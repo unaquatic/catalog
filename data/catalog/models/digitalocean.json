@@ -1,0 +1,31 @@
+{
+  "digitalocean/fast-sdxl": {
+    "id": "digitalocean/fast-sdxl",
+    "lab": "digitalocean",
+    "name": "Fast SDXL",
+    "family": "stable-diffusion",
+    "type": "image",
+    "released": "2023-07-26",
+    "updated": "2026-04-16",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "image"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "digitalocean"
+    ]
+  }
+}

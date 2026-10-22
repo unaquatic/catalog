@@ -1,0 +1,59 @@
+{
+  "id": "tokenrouter",
+  "name": "TokenRouter",
+  "kind": "gateway",
+  "endpoint": {
+    "format": "openai-chat",
+    "api": "https://api.tokenrouter.com/v1",
+    "auth": {
+      "scheme": "bearer"
+    },
+    "env": [
+      "TOKENROUTER_API_KEY"
+    ]
+  },
+  "doc": "https://www.tokenrouter.com/docs/tokenrouter-feature-guide/",
+  "models": {
+    "zhipuai/glm-5.3": {
+      "name": "GLM 5.3",
+      "family": "glm",
+      "released": "2026-08-14",
+      "updated": "2026-08-14",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "high",
+          "max"
+        ]
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "z-ai/glm-5.3-free",
+        "name": "GLM-5.3 (free)"
+      },
+      "price": {
+        "input": 0,
+        "output": 0
+      }
+    }
+  }
+}

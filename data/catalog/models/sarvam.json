@@ -1,0 +1,88 @@
+{
+  "sarvam/sarvam-105b": {
+    "id": "sarvam/sarvam-105b",
+    "lab": "sarvam",
+    "name": "Sarvam 105B",
+    "family": "sarvam",
+    "released": "2026-02-18",
+    "updated": "2026-02-18",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 131072
+    },
+    "providers": [
+      "fastrouter",
+      "nano-gpt",
+      "sarvam"
+    ]
+  },
+  "sarvam/sarvam-30b": {
+    "id": "sarvam/sarvam-30b",
+    "lab": "sarvam",
+    "name": "Sarvam 30B",
+    "family": "sarvam",
+    "released": "2026-02-18",
+    "updated": "2026-02-18",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 128000
+    },
+    "providers": [
+      "fastrouter",
+      "sarvam"
+    ]
+  },
+  "sarvam/sarvam-m": {
+    "id": "sarvam/sarvam-m",
+    "lab": "sarvam",
+    "name": "Sarvam M",
+    "released": "2025-07-25",
+    "updated": "2025-07-25",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 8192
+    },
+    "providers": [
+      "nvidia"
+    ]
+  }
+}

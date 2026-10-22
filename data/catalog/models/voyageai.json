@@ -1,0 +1,205 @@
+{
+  "voyageai/rerank-2.5": {
+    "id": "voyageai/rerank-2.5",
+    "lab": "voyageai",
+    "name": "Rerank 2.5",
+    "family": "voyage",
+    "type": "reranking",
+    "released": "2025-08-11",
+    "updated": "2025-08-11",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32000,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "voyageai/rerank-2.5-lite": {
+    "id": "voyageai/rerank-2.5-lite",
+    "lab": "voyageai",
+    "name": "Rerank 2.5 Lite",
+    "family": "voyage",
+    "type": "reranking",
+    "released": "2025-08-11",
+    "updated": "2025-08-11",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32000,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "voyageai/rerank-3": {
+    "id": "voyageai/rerank-3",
+    "lab": "voyageai",
+    "name": "Rerank 3",
+    "family": "voyage",
+    "type": "reranking",
+    "released": "2026-09-30",
+    "updated": "2026-09-30",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32000,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "voyageai/rerank-3-lite": {
+    "id": "voyageai/rerank-3-lite",
+    "lab": "voyageai",
+    "name": "Rerank 3 Lite",
+    "family": "voyage",
+    "type": "reranking",
+    "released": "2026-09-30",
+    "updated": "2026-09-30",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32000,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "voyageai/voyage-4": {
+    "id": "voyageai/voyage-4",
+    "lab": "voyageai",
+    "name": "Voyage 4",
+    "family": "voyage",
+    "type": "embedding",
+    "released": "2026-01-15",
+    "updated": "2026-01-15",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32000,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "voyageai/voyage-4-large": {
+    "id": "voyageai/voyage-4-large",
+    "lab": "voyageai",
+    "name": "Voyage 4 Large",
+    "family": "voyage",
+    "type": "embedding",
+    "released": "2026-01-15",
+    "updated": "2026-01-15",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32000,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "voyageai/voyage-4-lite": {
+    "id": "voyageai/voyage-4-lite",
+    "lab": "voyageai",
+    "name": "Voyage 4 Lite",
+    "family": "voyage",
+    "type": "embedding",
+    "released": "2026-01-15",
+    "updated": "2026-01-15",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32000,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  }
+}

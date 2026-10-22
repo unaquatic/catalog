@@ -1,0 +1,181 @@
+{
+  "aion-labs/aion-2.0": {
+    "id": "aion-labs/aion-2.0",
+    "lab": "aion-labs",
+    "name": "Aion 2.0",
+    "released": "2025-12-21",
+    "updated": "2025-12-21",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 32768
+    },
+    "providers": [
+      "kilo",
+      "nano-gpt",
+      "openrouter"
+    ]
+  },
+  "aion-labs/aion-3.0": {
+    "id": "aion-labs/aion-3.0",
+    "lab": "aion-labs",
+    "name": "Aion 3.0",
+    "released": "2026-05-05",
+    "updated": "2026-05-05",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 32768
+    },
+    "providers": [
+      "kilo",
+      "nano-gpt",
+      "openrouter"
+    ]
+  },
+  "aion-labs/aion-3.0-mini": {
+    "id": "aion-labs/aion-3.0-mini",
+    "lab": "aion-labs",
+    "name": "Aion 3.0 Mini",
+    "released": "2026-05-14",
+    "updated": "2026-05-14",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 32768
+    },
+    "providers": [
+      "kilo",
+      "nano-gpt",
+      "openrouter"
+    ]
+  },
+  "aion-labs/aion-3.5": {
+    "id": "aion-labs/aion-3.5",
+    "lab": "aion-labs",
+    "name": "Aion 3.5",
+    "released": "2026-09-23",
+    "updated": "2026-09-23",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "structured_output": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 32768
+    },
+    "providers": [
+      "kilo",
+      "nano-gpt",
+      "openrouter"
+    ]
+  },
+  "aion-labs/aion-3.5-mini": {
+    "id": "aion-labs/aion-3.5-mini",
+    "lab": "aion-labs",
+    "name": "Aion 3.5 Mini",
+    "released": "2026-09-23",
+    "updated": "2026-09-23",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "structured_output": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 32768
+    },
+    "providers": [
+      "kilo",
+      "nano-gpt",
+      "openrouter"
+    ]
+  },
+  "aion-labs/aion-rp-llama-3.1-8b": {
+    "id": "aion-labs/aion-rp-llama-3.1-8b",
+    "lab": "aion-labs",
+    "name": "Aion RP Llama 3.1 8B",
+    "family": "llama",
+    "released": "2025-02-04",
+    "updated": "2025-02-04",
+    "knowledge": "2023-12-31",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32768,
+      "output": 29491
+    },
+    "providers": [
+      "aimlapi",
+      "kilo",
+      "nano-gpt",
+      "openrouter"
+    ]
+  }
+}

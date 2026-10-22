@@ -1,0 +1,33 @@
+{
+  "cognitivecomputations/dolphin-mistral-24b-venice-edition": {
+    "id": "cognitivecomputations/dolphin-mistral-24b-venice-edition",
+    "lab": "cognitivecomputations",
+    "name": "Dolphin Mistral 24B Venice Edition",
+    "family": "mistral",
+    "released": "2025-07-09",
+    "updated": "2025-07-09",
+    "knowledge": "2024-04-30",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 8192
+    },
+    "providers": [
+      "aimlapi",
+      "kilo",
+      "openrouter"
+    ]
+  }
+}

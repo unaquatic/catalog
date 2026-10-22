@@ -1,0 +1,66 @@
+{
+  "perceptron/perceptron-mk1": {
+    "id": "perceptron/perceptron-mk1",
+    "lab": "perceptron",
+    "name": "Perceptron Mk1",
+    "released": "2026-05-12",
+    "updated": "2026-05-12",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32768,
+      "output": 8192
+    },
+    "providers": [
+      "kilo",
+      "nano-gpt",
+      "openrouter"
+    ]
+  },
+  "perceptron/perceptron-mk1.5": {
+    "id": "perceptron/perceptron-mk1.5",
+    "lab": "perceptron",
+    "name": "Perceptron Mk1.5",
+    "released": "2026-09-25",
+    "updated": "2026-09-25",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video",
+        "audio"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 36864,
+      "output": 8192
+    },
+    "providers": [
+      "kilo",
+      "nano-gpt",
+      "openrouter"
+    ]
+  }
+}

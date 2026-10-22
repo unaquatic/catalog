@@ -1,0 +1,126 @@
+{
+  "poolside/laguna-m.1": {
+    "id": "poolside/laguna-m.1",
+    "lab": "poolside",
+    "name": "Laguna M.1",
+    "family": "laguna",
+    "released": "2026-04-28",
+    "updated": "2026-06-13",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 32768
+    },
+    "providers": [
+      "poolside",
+      "requesty"
+    ]
+  },
+  "poolside/laguna-s-2.1": {
+    "id": "poolside/laguna-s-2.1",
+    "lab": "poolside",
+    "name": "Laguna S 2.1",
+    "family": "laguna",
+    "released": "2026-07-21",
+    "updated": "2026-07-21",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "output": 32768
+    },
+    "providers": [
+      "kilo",
+      "nano-gpt",
+      "opencode",
+      "openrouter",
+      "pioneer",
+      "poolside",
+      "vercel",
+      "vultr"
+    ]
+  },
+  "poolside/laguna-xs-2.1": {
+    "id": "poolside/laguna-xs-2.1",
+    "lab": "poolside",
+    "name": "Laguna XS 2.1",
+    "family": "laguna",
+    "released": "2026-07-02",
+    "updated": "2026-07-02",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 32768
+    },
+    "providers": [
+      "kilo",
+      "llmtr",
+      "nvidia",
+      "openrouter",
+      "poolside"
+    ]
+  },
+  "poolside/laguna-xs.2": {
+    "id": "poolside/laguna-xs.2",
+    "lab": "poolside",
+    "name": "Laguna XS.2",
+    "family": "laguna",
+    "released": "2026-04-28",
+    "updated": "2026-06-13",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 32768
+    },
+    "providers": [
+      "requesty"
+    ]
+  }
+}

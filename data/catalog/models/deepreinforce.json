@@ -1,0 +1,226 @@
+{
+  "deepreinforce/ornith-1.0-31b": {
+    "id": "deepreinforce/ornith-1.0-31b",
+    "lab": "deepreinforce",
+    "name": "Ornith 1.0 31B",
+    "family": "ornith",
+    "released": "2026-06-25",
+    "updated": "2026-06-25",
+    "open_weights": true,
+    "license": "MIT",
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 0
+    },
+    "links": [
+      {
+        "label": "Announcement",
+        "url": "https://deep-reinforce.com/ornith_1_0.html",
+        "type": "announcement"
+      }
+    ],
+    "providers": []
+  },
+  "deepreinforce/ornith-1.0-35b": {
+    "id": "deepreinforce/ornith-1.0-35b",
+    "lab": "deepreinforce",
+    "name": "Ornith 1.0 35B",
+    "family": "ornith",
+    "released": "2026-06-25",
+    "updated": "2026-06-25",
+    "open_weights": true,
+    "license": "MIT",
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 0
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/deepreinforce-ai/Ornith-1.0-35B"
+      }
+    ],
+    "links": [
+      {
+        "label": "Model card",
+        "url": "https://huggingface.co/deepreinforce-ai/Ornith-1.0-35B",
+        "type": "model_card"
+      },
+      {
+        "label": "Announcement",
+        "url": "https://deep-reinforce.com/ornith_1_0.html",
+        "type": "announcement"
+      }
+    ],
+    "providers": [
+      "inferx"
+    ]
+  },
+  "deepreinforce/ornith-1.0-397b": {
+    "id": "deepreinforce/ornith-1.0-397b",
+    "lab": "deepreinforce",
+    "name": "Ornith 1.0 397B",
+    "family": "ornith",
+    "released": "2026-06-25",
+    "updated": "2026-06-25",
+    "open_weights": true,
+    "license": "MIT",
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 0
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/deepreinforce-ai/Ornith-1.0-397B"
+      },
+      {
+        "label": "Hugging Face (FP8)",
+        "url": "https://huggingface.co/deepreinforce-ai/Ornith-1.0-397B-FP8",
+        "quantization": "fp8"
+      }
+    ],
+    "links": [
+      {
+        "label": "Model card",
+        "url": "https://huggingface.co/deepreinforce-ai/Ornith-1.0-397B",
+        "type": "model_card"
+      },
+      {
+        "label": "Announcement",
+        "url": "https://deep-reinforce.com/ornith_1_0.html",
+        "type": "announcement"
+      }
+    ],
+    "providers": []
+  },
+  "deepreinforce/ornith-1.0-9b": {
+    "id": "deepreinforce/ornith-1.0-9b",
+    "lab": "deepreinforce",
+    "name": "Ornith 1.0 9B",
+    "family": "ornith",
+    "released": "2026-06-25",
+    "updated": "2026-06-25",
+    "open_weights": true,
+    "license": "MIT",
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 0
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/deepreinforce-ai/Ornith-1.0-9B"
+      }
+    ],
+    "links": [
+      {
+        "label": "Model card",
+        "url": "https://huggingface.co/deepreinforce-ai/Ornith-1.0-9B",
+        "type": "model_card"
+      },
+      {
+        "label": "Announcement",
+        "url": "https://deep-reinforce.com/ornith_1_0.html",
+        "type": "announcement"
+      }
+    ],
+    "providers": []
+  },
+  "deepreinforce/ornith-1.5-35b-a3b": {
+    "id": "deepreinforce/ornith-1.5-35b-a3b",
+    "lab": "deepreinforce",
+    "name": "Ornith 1.5 35B A3B",
+    "family": "ornith",
+    "released": "2026-08-18",
+    "updated": "2026-08-23",
+    "open_weights": true,
+    "license": "MIT",
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 0
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/ornith-ai/Ornith-1.5-35B-A3B"
+      }
+    ],
+    "links": [
+      {
+        "label": "Model card",
+        "url": "https://huggingface.co/ornith-ai/Ornith-1.5-35B-A3B",
+        "type": "model_card"
+      }
+    ],
+    "providers": [
+      "nano-gpt",
+      "runinfra"
+    ]
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "meituan/longcat-2.0": {
+    "id": "meituan/longcat-2.0",
+    "lab": "meituan",
+    "name": "LongCat 2.0",
+    "family": "longcat",
+    "released": "2026-06-30",
+    "updated": "2026-06-30",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 131072
+    },
+    "providers": [
+      "aihubmix",
+      "kilo",
+      "longcat",
+      "nano-gpt",
+      "opencode",
+      "opencode-go",
+      "openrouter",
+      "siliconflow"
+    ]
+  },
+  "meituan/longcat-2.5-preview": {
+    "id": "meituan/longcat-2.5-preview",
+    "lab": "meituan",
+    "name": "LongCat 2.5 Preview",
+    "family": "longcat",
+    "released": "2026-09-25",
+    "updated": "2026-09-25",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 131072
+    },
+    "providers": [
+      "longcat",
+      "nano-gpt",
+      "opencode",
+      "opencode-go",
+      "vercel"
+    ]
+  },
+  "meituan/longcat-flash-chat": {
+    "id": "meituan/longcat-flash-chat",
+    "lab": "meituan",
+    "name": "LongCat Flash Chat",
+    "released": "2025-11-05",
+    "updated": "2025-11-05",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "structured_output": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 131072
+    },
+    "providers": [
+      "qiniu-ai"
+    ]
+  },
+  "meituan/longcat-flash-lite": {
+    "id": "meituan/longcat-flash-lite",
+    "lab": "meituan",
+    "name": "LongCat Flash Lite",
+    "released": "2026-02-06",
+    "updated": "2026-02-06",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "structured_output": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 256000,
+      "output": 320000
+    },
+    "providers": [
+      "qiniu-ai"
+    ]
+  }
+}

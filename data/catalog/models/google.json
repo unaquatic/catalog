@@ -1,0 +1,4875 @@
+{
+  "google/amoral-gemma3-27b-v2": {
+    "id": "google/amoral-gemma3-27b-v2",
+    "lab": "google",
+    "name": "Amoral Gemma 3 27B V2",
+    "family": "gemma",
+    "released": "2025-05-23",
+    "updated": "2025-05-23",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "structured_output": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32768,
+      "input": 32768,
+      "output": 8192
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "google/deep-research-max-preview-04-2026": {
+    "id": "google/deep-research-max-preview-04-2026",
+    "lab": "google",
+    "name": "Deep Research Max Preview 04 2026",
+    "family": "gemini-pro",
+    "released": "2026-04-21",
+    "updated": "2026-04-21",
+    "knowledge": "2025-01",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image",
+        "video",
+        "audio",
+        "pdf"
+      ],
+      "output": [
+        "text",
+        "image"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "output": 65536
+    },
+    "providers": [
+      "edenai",
+      "google"
+    ]
+  },
+  "google/deep-research-preview-04-2026": {
+    "id": "google/deep-research-preview-04-2026",
+    "lab": "google",
+    "name": "Deep Research Preview 04 2026",
+    "family": "gemini-pro",
+    "released": "2026-04-21",
+    "updated": "2026-04-21",
+    "knowledge": "2025-01",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image",
+        "video",
+        "audio",
+        "pdf"
+      ],
+      "output": [
+        "text",
+        "image"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "output": 65536
+    },
+    "providers": [
+      "edenai",
+      "google"
+    ]
+  },
+  "google/diffusiongemma-26b-a4b-it": {
+    "id": "google/diffusiongemma-26b-a4b-it",
+    "lab": "google",
+    "name": "DiffusionGemma 26B A4B IT",
+    "family": "gemma",
+    "released": "2026-06-09",
+    "updated": "2026-07-15",
+    "knowledge": "2025-01",
+    "open_weights": true,
+    "license": "Apache 2.0",
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 32768
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/google/diffusiongemma-26B-A4B-it"
+      }
+    ],
+    "providers": [
+      "nano-gpt",
+      "nvidia",
+      "pioneer"
+    ]
+  },
+  "google/gemini-2.0-flash": {
+    "id": "google/gemini-2.0-flash",
+    "lab": "google",
+    "name": "Gemini 2.0 Flash",
+    "family": "gemini-flash",
+    "released": "2024-12-11",
+    "updated": "2024-12-11",
+    "knowledge": "2024-06",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "audio",
+        "video",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "output": 8192
+    },
+    "providers": [
+      "poe",
+      "qiniu-ai"
+    ]
+  },
+  "google/gemini-2.0-flash-lite": {
+    "id": "google/gemini-2.0-flash-lite",
+    "lab": "google",
+    "name": "Gemini 2.0 Flash Lite",
+    "family": "gemini-flash-lite",
+    "released": "2024-12-11",
+    "updated": "2024-12-11",
+    "knowledge": "2024-06",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "audio",
+        "video",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "output": 8192
+    },
+    "providers": [
+      "302ai",
+      "poe",
+      "qiniu-ai"
+    ]
+  },
+  "google/gemini-2.0-pro-exp-02-05": {
+    "id": "google/gemini-2.0-pro-exp-02-05",
+    "lab": "google",
+    "name": "Gemini 2.0 Pro Exp 02 05",
+    "family": "gemini",
+    "released": "2025-02-05",
+    "updated": "2025-02-05",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "structured_output": false,
+      "input": [
+        "text",
+        "image",
+        "audio"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 2097152,
+      "input": 2097152,
+      "output": 8192
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "google/gemini-2.0-pro-reasoner": {
+    "id": "google/gemini-2.0-pro-reasoner",
+    "lab": "google",
+    "name": "Gemini 2.0 Pro Reasoner",
+    "family": "gemini",
+    "released": "2024-01-01",
+    "updated": "2025-02-05",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "structured_output": false,
+      "input": [
+        "text",
+        "audio"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "input": 128000,
+      "output": 65536
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "google/gemini-2.5-computer-use-preview-10-2025": {
+    "id": "google/gemini-2.5-computer-use-preview-10-2025",
+    "lab": "google",
+    "name": "Gemini 2.5 Computer Use Preview 10 2025",
+    "family": "gemini-pro",
+    "released": "2025-10-07",
+    "updated": "2025-10-07",
+    "knowledge": "2025-01",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 64000
+    },
+    "providers": [
+      "google",
+      "merge-gateway"
+    ]
+  },
+  "google/gemini-2.5-flash": {
+    "id": "google/gemini-2.5-flash",
+    "lab": "google",
+    "name": "Gemini 2.5 Flash",
+    "family": "gemini-flash",
+    "released": "2025-06-17",
+    "updated": "2025-06-17",
+    "knowledge": "2025-01",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "audio",
+        "video",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "output": 65536
+    },
+    "providers": [
+      "302ai",
+      "abacus",
+      "aihubmix",
+      "anyapi",
+      "auriko",
+      "cloudflare-ai-gateway",
+      "cortecs",
+      "crossmodel",
+      "databricks",
+      "fastrouter",
+      "frogbot",
+      "google",
+      "google-vertex",
+      "helicone",
+      "impossibl",
+      "jiekou",
+      "kenari",
+      "kilo",
+      "merge-gateway",
+      "modelis",
+      "nano-gpt",
+      "nearai",
+      "ofox",
+      "openrouter",
+      "orcarouter",
+      "perplexity-agent",
+      "poe",
+      "qihang-ai",
+      "qiniu-ai",
+      "requesty",
+      "sap-ai-core",
+      "standardcompute",
+      "vercel",
+      "zenmux"
+    ]
+  },
+  "google/gemini-2.5-flash-image": {
+    "id": "google/gemini-2.5-flash-image",
+    "lab": "google",
+    "name": "Gemini 2.5 Flash Image",
+    "family": "gemini-flash",
+    "type": "image",
+    "released": "2025-08-26",
+    "updated": "2025-08-26",
+    "knowledge": "2024-06",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text",
+        "image"
+      ]
+    },
+    "limit": {
+      "context": 32768,
+      "output": 32768
+    },
+    "providers": [
+      "302ai",
+      "abacus",
+      "aihubmix",
+      "edenai",
+      "google",
+      "google-vertex",
+      "kilo",
+      "merge-gateway",
+      "openrouter",
+      "qiniu-ai",
+      "vercel"
+    ]
+  },
+  "google/gemini-2.5-flash-lite": {
+    "id": "google/gemini-2.5-flash-lite",
+    "lab": "google",
+    "name": "Gemini 2.5 Flash Lite",
+    "family": "gemini-flash-lite",
+    "released": "2025-06-17",
+    "updated": "2025-06-17",
+    "knowledge": "2025-01",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "audio",
+        "video",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "output": 65536
+    },
+    "providers": [
+      "aihubmix",
+      "anyapi",
+      "cloudflare-ai-gateway",
+      "crossmodel",
+      "google",
+      "google-vertex",
+      "helicone",
+      "impossibl",
+      "jiekou",
+      "kenari",
+      "kilo",
+      "llmtr",
+      "merge-gateway",
+      "nano-gpt",
+      "nearai",
+      "ofox",
+      "openrouter",
+      "orcarouter",
+      "poe",
+      "qiniu-ai",
+      "requesty",
+      "sap-ai-core",
+      "vercel",
+      "zenmux"
+    ]
+  },
+  "google/gemini-2.5-flash-lite-preview-06-17": {
+    "id": "google/gemini-2.5-flash-lite-preview-06-17",
+    "lab": "google",
+    "name": "Gemini 2.5 Flash Lite Preview 06 17",
+    "family": "gemini-flash-lite",
+    "released": "2026-01",
+    "updated": "2026-01",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "video",
+        "image",
+        "audio"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "output": 65535
+    },
+    "providers": [
+      "jiekou",
+      "nano-gpt"
+    ]
+  },
+  "google/gemini-2.5-flash-lite-preview-09-2025": {
+    "id": "google/gemini-2.5-flash-lite-preview-09-2025",
+    "lab": "google",
+    "name": "Gemini 2.5 Flash Lite Preview 09 2025",
+    "released": "2025-09-26",
+    "updated": "2025-09-26",
+    "knowledge": "2025-01",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 65536
+    },
+    "providers": [
+      "302ai",
+      "jiekou",
+      "nano-gpt"
+    ]
+  },
+  "google/gemini-2.5-flash-preview-04-17": {
+    "id": "google/gemini-2.5-flash-preview-04-17",
+    "lab": "google",
+    "name": "Gemini 2.5 Flash Preview 04 17",
+    "family": "gemini",
+    "released": "2025-04-17",
+    "updated": "2025-04-17",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "structured_output": false,
+      "input": [
+        "text",
+        "image",
+        "audio"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "input": 1048576,
+      "output": 65536
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "google/gemini-2.5-flash-preview-05-20": {
+    "id": "google/gemini-2.5-flash-preview-05-20",
+    "lab": "google",
+    "name": "Gemini 2.5 Flash Preview 05 20",
+    "family": "gemini-flash",
+    "released": "2026-01",
+    "updated": "2026-01",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video",
+        "audio"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "output": 200000
+    },
+    "providers": [
+      "jiekou",
+      "nano-gpt"
+    ]
+  },
+  "google/gemini-2.5-flash-preview-09-2025": {
+    "id": "google/gemini-2.5-flash-preview-09-2025",
+    "lab": "google",
+    "name": "Gemini 2.5 Flash Preview 09 2025",
+    "released": "2025-09-26",
+    "updated": "2025-09-26",
+    "knowledge": "2025-01",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 65536
+    },
+    "providers": [
+      "302ai",
+      "nano-gpt"
+    ]
+  },
+  "google/gemini-2.5-flash-preview-tts": {
+    "id": "google/gemini-2.5-flash-preview-tts",
+    "lab": "google",
+    "name": "Gemini 2.5 Flash Preview TTS",
+    "family": "gemini-flash",
+    "type": "speech",
+    "released": "2025-05-01",
+    "updated": "2025-05-01",
+    "knowledge": "2025-01",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "audio"
+      ]
+    },
+    "limit": {
+      "context": 8192,
+      "output": 16384
+    },
+    "providers": [
+      "google"
+    ]
+  },
+  "google/gemini-2.5-flash-tts": {
+    "id": "google/gemini-2.5-flash-tts",
+    "lab": "google",
+    "name": "Gemini 2.5 Flash TTS",
+    "family": "gemini-flash",
+    "type": "speech",
+    "released": "2025-09-30",
+    "updated": "2025-12-10",
+    "knowledge": "2025-01",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "audio"
+      ]
+    },
+    "limit": {
+      "context": 32768,
+      "output": 16384
+    },
+    "providers": [
+      "google-vertex"
+    ]
+  },
+  "google/gemini-2.5-pro": {
+    "id": "google/gemini-2.5-pro",
+    "lab": "google",
+    "name": "Gemini 2.5 Pro",
+    "family": "gemini-pro",
+    "released": "2025-06-17",
+    "updated": "2025-06-17",
+    "knowledge": "2025-01",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "audio",
+        "video",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "output": 65536
+    },
+    "providers": [
+      "302ai",
+      "abacus",
+      "aihubmix",
+      "anyapi",
+      "auriko",
+      "cloudflare-ai-gateway",
+      "cortecs",
+      "crossmodel",
+      "databricks",
+      "fastrouter",
+      "frogbot",
+      "google",
+      "google-vertex",
+      "helicone",
+      "impossibl",
+      "jiekou",
+      "kilo",
+      "merge-gateway",
+      "modelis",
+      "nano-gpt",
+      "nearai",
+      "ofox",
+      "openrouter",
+      "orcarouter",
+      "perplexity-agent",
+      "poe",
+      "qiniu-ai",
+      "requesty",
+      "sap-ai-core",
+      "standardcompute",
+      "vercel",
+      "zenmux"
+    ]
+  },
+  "google/gemini-2.5-pro-exp-03-25": {
+    "id": "google/gemini-2.5-pro-exp-03-25",
+    "lab": "google",
+    "name": "Gemini 2.5 Pro Exp 03 25",
+    "family": "gemini",
+    "released": "2025-03-25",
+    "updated": "2025-03-25",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "structured_output": false,
+      "input": [
+        "text",
+        "image",
+        "audio"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "input": 1048576,
+      "output": 65536
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "google/gemini-2.5-pro-preview": {
+    "id": "google/gemini-2.5-pro-preview",
+    "lab": "google",
+    "name": "Gemini 2.5 Pro Preview",
+    "family": "gemini",
+    "released": "2025-06-05",
+    "updated": "2025-06-05",
+    "knowledge": "2025-01-31",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "pdf",
+        "image",
+        "text",
+        "audio"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "output": 65536
+    },
+    "providers": [
+      "jiekou",
+      "kilo",
+      "nano-gpt",
+      "openrouter"
+    ]
+  },
+  "google/gemini-2.5-pro-preview-03-25": {
+    "id": "google/gemini-2.5-pro-preview-03-25",
+    "lab": "google",
+    "name": "Gemini 2.5 Pro Preview 03 25",
+    "family": "gemini",
+    "released": "2025-03-25",
+    "updated": "2025-03-25",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "structured_output": false,
+      "input": [
+        "text",
+        "image",
+        "audio"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "input": 1048576,
+      "output": 65536
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "google/gemini-2.5-pro-preview-05-06": {
+    "id": "google/gemini-2.5-pro-preview-05-06",
+    "lab": "google",
+    "name": "Gemini 2.5 Pro Preview 05 06",
+    "family": "gemini",
+    "released": "2025-05-06",
+    "updated": "2025-05-06",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "structured_output": false,
+      "input": [
+        "text",
+        "image",
+        "audio"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "input": 1048576,
+      "output": 65536
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "google/gemini-2.5-pro-preview-tts": {
+    "id": "google/gemini-2.5-pro-preview-tts",
+    "lab": "google",
+    "name": "Gemini 2.5 Pro Preview TTS",
+    "family": "gemini-flash",
+    "type": "speech",
+    "released": "2025-05-01",
+    "updated": "2025-05-01",
+    "knowledge": "2025-01",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "audio"
+      ]
+    },
+    "limit": {
+      "context": 8192,
+      "output": 16384
+    },
+    "providers": [
+      "google"
+    ]
+  },
+  "google/gemini-2.5-pro-tts": {
+    "id": "google/gemini-2.5-pro-tts",
+    "lab": "google",
+    "name": "Gemini 2.5 Pro TTS",
+    "family": "gemini-pro",
+    "type": "speech",
+    "released": "2025-09-30",
+    "updated": "2025-12-10",
+    "knowledge": "2025-01",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "audio"
+      ]
+    },
+    "limit": {
+      "context": 32768,
+      "output": 16384
+    },
+    "providers": [
+      "google-vertex"
+    ]
+  },
+  "google/gemini-3-flash-preview": {
+    "id": "google/gemini-3-flash-preview",
+    "lab": "google",
+    "name": "Gemini 3 Flash Preview",
+    "family": "gemini-flash",
+    "released": "2025-12-17",
+    "updated": "2025-12-17",
+    "knowledge": "2025-01",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video",
+        "audio",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "output": 65536
+    },
+    "providers": [
+      "302ai",
+      "abacus",
+      "aihubmix",
+      "anyapi",
+      "cloudflare-ai-gateway",
+      "crossmodel",
+      "databricks",
+      "edenai",
+      "frogbot",
+      "google",
+      "google-vertex",
+      "jiekou",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "merge-gateway",
+      "nano-gpt",
+      "neon",
+      "ofox",
+      "opencode",
+      "openrouter",
+      "opper",
+      "orcarouter",
+      "perplexity-agent",
+      "pioneer",
+      "poe",
+      "prime",
+      "qihang-ai",
+      "tempr",
+      "vercel",
+      "zenmux"
+    ]
+  },
+  "google/gemini-3-pro-image": {
+    "id": "google/gemini-3-pro-image",
+    "lab": "google",
+    "name": "Gemini 3 Pro Image",
+    "family": "gemini-pro",
+    "type": "image",
+    "released": "2026-05-28",
+    "updated": "2026-05-28",
+    "knowledge": "2025-01",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text",
+        "image"
+      ]
+    },
+    "limit": {
+      "context": 65536,
+      "output": 32768
+    },
+    "providers": [
+      "abacus",
+      "aihubmix",
+      "edenai",
+      "google",
+      "google-vertex",
+      "kenari",
+      "kilo",
+      "merge-gateway",
+      "openrouter",
+      "requesty",
+      "vercel"
+    ]
+  },
+  "google/gemini-3-pro-image-preview": {
+    "id": "google/gemini-3-pro-image-preview",
+    "lab": "google",
+    "name": "Gemini 3 Pro Image Preview",
+    "family": "gemini-pro",
+    "type": "image",
+    "released": "2025-11-20",
+    "updated": "2025-11-20",
+    "knowledge": "2025-01",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text",
+        "image"
+      ]
+    },
+    "limit": {
+      "context": 65536,
+      "output": 32768
+    },
+    "providers": [
+      "302ai",
+      "abacus",
+      "edenai",
+      "fastrouter",
+      "google",
+      "kilo",
+      "nano-gpt",
+      "openrouter"
+    ]
+  },
+  "google/gemini-3-pro-preview": {
+    "id": "google/gemini-3-pro-preview",
+    "lab": "google",
+    "name": "Gemini 3 Pro Preview",
+    "family": "gemini-pro",
+    "released": "2025-11-18",
+    "updated": "2025-11-18",
+    "knowledge": "2025-01",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video",
+        "audio",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "output": 65536
+    },
+    "providers": [
+      "302ai",
+      "anyapi",
+      "databricks",
+      "helicone",
+      "jiekou",
+      "merge-gateway",
+      "opencode",
+      "poe",
+      "qihang-ai"
+    ]
+  },
+  "google/gemini-3.0-flash-preview": {
+    "id": "google/gemini-3.0-flash-preview",
+    "lab": "google",
+    "name": "Gemini 3.0 Flash Preview",
+    "released": "2025-12-18",
+    "updated": "2025-12-18",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": false,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "audio",
+        "video",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 64000
+    },
+    "providers": [
+      "qiniu-ai"
+    ]
+  },
+  "google/gemini-3.0-pro-image-preview": {
+    "id": "google/gemini-3.0-pro-image-preview",
+    "lab": "google",
+    "name": "Gemini 3.0 Pro Image Preview",
+    "released": "2025-11-20",
+    "updated": "2025-11-20",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "structured_output": false,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text",
+        "image"
+      ]
+    },
+    "limit": {
+      "context": 32768,
+      "output": 8192
+    },
+    "providers": [
+      "qiniu-ai"
+    ]
+  },
+  "google/gemini-3.0-pro-preview": {
+    "id": "google/gemini-3.0-pro-preview",
+    "lab": "google",
+    "name": "Gemini 3.0 Pro Preview",
+    "released": "2025-11-19",
+    "updated": "2025-11-19",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": false,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video",
+        "pdf",
+        "audio"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 64000
+    },
+    "providers": [
+      "qiniu-ai"
+    ]
+  },
+  "google/gemini-3.1-flash-image": {
+    "id": "google/gemini-3.1-flash-image",
+    "lab": "google",
+    "name": "Gemini 3.1 Flash Image",
+    "family": "gemini-flash",
+    "type": "image",
+    "released": "2026-05-28",
+    "updated": "2026-05-28",
+    "knowledge": "2025-01",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video",
+        "pdf"
+      ],
+      "output": [
+        "text",
+        "image"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 32768
+    },
+    "providers": [
+      "abacus",
+      "aihubmix",
+      "edenai",
+      "google",
+      "google-vertex",
+      "kenari",
+      "kilo",
+      "merge-gateway",
+      "openrouter",
+      "requesty",
+      "vercel"
+    ]
+  },
+  "google/gemini-3.1-flash-image-preview": {
+    "id": "google/gemini-3.1-flash-image-preview",
+    "lab": "google",
+    "name": "Gemini 3.1 Flash Image Preview",
+    "family": "gemini-flash",
+    "type": "image",
+    "released": "2026-02-26",
+    "updated": "2026-02-26",
+    "knowledge": "2025-01",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text",
+        "image"
+      ]
+    },
+    "limit": {
+      "context": 65536,
+      "output": 65536
+    },
+    "providers": [
+      "302ai",
+      "abacus",
+      "edenai",
+      "fastrouter",
+      "google",
+      "kilo",
+      "openrouter",
+      "vercel"
+    ]
+  },
+  "google/gemini-3.1-flash-lite": {
+    "id": "google/gemini-3.1-flash-lite",
+    "lab": "google",
+    "name": "Gemini 3.1 Flash Lite",
+    "family": "gemini-flash-lite",
+    "released": "2026-05-07",
+    "updated": "2026-05-07",
+    "knowledge": "2025-01",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video",
+        "audio",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "output": 65536
+    },
+    "providers": [
+      "302ai",
+      "abacus",
+      "aihubmix",
+      "cloudflare-ai-gateway",
+      "commandcode",
+      "cortecs",
+      "edenai",
+      "google",
+      "google-vertex",
+      "impossibl",
+      "kenari",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "merge-gateway",
+      "nano-gpt",
+      "nearai",
+      "ofox",
+      "openrouter",
+      "orcarouter",
+      "pioneer",
+      "poe",
+      "requesty",
+      "sap-ai-core",
+      "tempr",
+      "vercel",
+      "zenmux"
+    ]
+  },
+  "google/gemini-3.1-flash-lite-image": {
+    "id": "google/gemini-3.1-flash-lite-image",
+    "lab": "google",
+    "name": "Gemini 3.1 Flash Lite Image",
+    "family": "gemini-flash-lite",
+    "type": "image",
+    "released": "2026-06-30",
+    "updated": "2026-06-30",
+    "knowledge": "2025-01",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text",
+        "image"
+      ]
+    },
+    "limit": {
+      "context": 65536,
+      "output": 4096
+    },
+    "providers": [
+      "aihubmix",
+      "edenai",
+      "google",
+      "google-vertex",
+      "kenari",
+      "kilo",
+      "openrouter",
+      "vercel"
+    ]
+  },
+  "google/gemini-3.1-flash-lite-preview": {
+    "id": "google/gemini-3.1-flash-lite-preview",
+    "lab": "google",
+    "name": "Gemini 3.1 Flash Lite Preview",
+    "family": "gemini-flash-lite",
+    "released": "2026-03-03",
+    "updated": "2026-03-03",
+    "knowledge": "2025-01",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video",
+        "audio",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "output": 65536
+    },
+    "providers": [
+      "302ai",
+      "abacus",
+      "aimlapi",
+      "databricks",
+      "edenai",
+      "google",
+      "kilo",
+      "merge-gateway",
+      "neon",
+      "openrouter",
+      "orcarouter",
+      "vivgrid",
+      "zenmux"
+    ]
+  },
+  "google/gemini-3.1-flash-live-preview": {
+    "id": "google/gemini-3.1-flash-live-preview",
+    "lab": "google",
+    "name": "Gemini 3.1 Flash Live Preview",
+    "family": "gemini-flash",
+    "type": "realtime",
+    "released": "2026-03-26",
+    "updated": "2026-03-26",
+    "knowledge": "2025-01",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video",
+        "audio"
+      ],
+      "output": [
+        "text",
+        "audio"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 65536
+    },
+    "providers": [
+      "google"
+    ]
+  },
+  "google/gemini-3.1-flash-tts-preview": {
+    "id": "google/gemini-3.1-flash-tts-preview",
+    "lab": "google",
+    "name": "Gemini 3.1 Flash TTS Preview",
+    "family": "gemini-flash",
+    "type": "speech",
+    "released": "2026-04-15",
+    "updated": "2026-04-15",
+    "knowledge": "2025-01",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "audio"
+      ]
+    },
+    "limit": {
+      "context": 8192,
+      "output": 16384
+    },
+    "providers": [
+      "google",
+      "kenari"
+    ]
+  },
+  "google/gemini-3.1-pro": {
+    "id": "google/gemini-3.1-pro",
+    "lab": "google",
+    "name": "Gemini 3.1 Pro",
+    "family": "gemini-pro",
+    "released": "2026-02-19",
+    "updated": "2026-02-19",
+    "knowledge": "2025-01",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video",
+        "audio",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "output": 65536
+    },
+    "providers": [
+      "opencode"
+    ]
+  },
+  "google/gemini-3.1-pro-preview": {
+    "id": "google/gemini-3.1-pro-preview",
+    "lab": "google",
+    "name": "Gemini 3.1 Pro Preview",
+    "family": "gemini-pro",
+    "released": "2026-02-19",
+    "updated": "2026-02-19",
+    "knowledge": "2025-01",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video",
+        "audio",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "output": 65536
+    },
+    "providers": [
+      "302ai",
+      "abacus",
+      "aihubmix",
+      "aimlapi",
+      "auriko",
+      "cloudflare-ai-gateway",
+      "crossmodel",
+      "daoxe",
+      "databricks",
+      "edenai",
+      "fastrouter",
+      "frogbot",
+      "google",
+      "google-vertex",
+      "impossibl",
+      "kenari",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "merge-gateway",
+      "nano-gpt",
+      "ofox",
+      "openrouter",
+      "opper",
+      "orcarouter",
+      "perplexity-agent",
+      "pioneer",
+      "poe",
+      "prime",
+      "requesty",
+      "snowflake-cortex",
+      "standardcompute",
+      "tempr",
+      "vercel",
+      "vivgrid",
+      "zenmux"
+    ]
+  },
+  "google/gemini-3.1-pro-preview-customtools": {
+    "id": "google/gemini-3.1-pro-preview-customtools",
+    "lab": "google",
+    "name": "Gemini 3.1 Pro Preview Customtools",
+    "family": "gemini-pro",
+    "released": "2026-02-19",
+    "updated": "2026-02-19",
+    "knowledge": "2025-01",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video",
+        "audio",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "output": 65536
+    },
+    "providers": [
+      "aihubmix",
+      "aimlapi",
+      "edenai",
+      "google",
+      "google-vertex",
+      "kilo",
+      "merge-gateway",
+      "nano-gpt",
+      "neon",
+      "openrouter",
+      "orcarouter",
+      "tempr"
+    ]
+  },
+  "google/gemini-3.5-flash": {
+    "id": "google/gemini-3.5-flash",
+    "lab": "google",
+    "name": "Gemini 3.5 Flash",
+    "family": "gemini-flash",
+    "released": "2026-05-19",
+    "updated": "2026-05-19",
+    "knowledge": "2025-01",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video",
+        "audio",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "output": 65536
+    },
+    "providers": [
+      "302ai",
+      "abacus",
+      "aihubmix",
+      "cloudflare-ai-gateway",
+      "commandcode",
+      "cortecs",
+      "crossmodel",
+      "databricks",
+      "edenai",
+      "fastrouter",
+      "github-copilot",
+      "google",
+      "google-vertex",
+      "impossibl",
+      "kenari",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "merge-gateway",
+      "nano-gpt",
+      "nearai",
+      "neon",
+      "ofox",
+      "opencode",
+      "openrouter",
+      "opper",
+      "orcarouter",
+      "pioneer",
+      "poe",
+      "prime",
+      "requesty",
+      "sap-ai-core",
+      "tempr",
+      "unorouter",
+      "vercel",
+      "xpersona",
+      "zenmux"
+    ]
+  },
+  "google/gemini-3.5-flash-lite": {
+    "id": "google/gemini-3.5-flash-lite",
+    "lab": "google",
+    "name": "Gemini 3.5 Flash Lite",
+    "family": "gemini-flash-lite",
+    "released": "2026-07-21",
+    "updated": "2026-07-21",
+    "knowledge": "2026-03",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video",
+        "audio",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "output": 65536
+    },
+    "providers": [
+      "302ai",
+      "abacus",
+      "aihubmix",
+      "cloudflare-ai-gateway",
+      "commandcode",
+      "cortecs",
+      "crossmodel",
+      "edenai",
+      "google",
+      "google-vertex",
+      "impossibl",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "merge-gateway",
+      "nano-gpt",
+      "neon",
+      "ofox",
+      "opencode",
+      "openrouter",
+      "opper",
+      "orcarouter",
+      "pioneer",
+      "poe",
+      "requesty",
+      "sap-ai-core",
+      "standardcompute",
+      "tempr",
+      "vercel"
+    ]
+  },
+  "google/gemini-3.5-live-translate-preview": {
+    "id": "google/gemini-3.5-live-translate-preview",
+    "lab": "google",
+    "name": "Gemini 3.5 Live Translate Preview",
+    "family": "gemini-pro",
+    "type": "realtime",
+    "released": "2026-06-09",
+    "updated": "2026-06-09",
+    "knowledge": "2025-01",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "audio"
+      ],
+      "output": [
+        "audio",
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 65536
+    },
+    "providers": [
+      "google"
+    ]
+  },
+  "google/gemini-3.5-transcribe": {
+    "id": "google/gemini-3.5-transcribe",
+    "lab": "google",
+    "name": "Gemini 3.5 Transcribe",
+    "family": "gemini",
+    "type": "transcription",
+    "released": "2026-08-26",
+    "updated": "2026-08-26",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "audio"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 98304,
+      "output": 32768
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "google/gemini-3.5-transcribe-live": {
+    "id": "google/gemini-3.5-transcribe-live",
+    "lab": "google",
+    "name": "Gemini 3.5 Transcribe Live",
+    "family": "gemini",
+    "type": "transcription",
+    "released": "2026-08-26",
+    "updated": "2026-08-26",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "input": [
+        "audio"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "google/gemini-3.6-flash": {
+    "id": "google/gemini-3.6-flash",
+    "lab": "google",
+    "name": "Gemini 3.6 Flash",
+    "family": "gemini-flash",
+    "released": "2026-07-21",
+    "updated": "2026-07-21",
+    "knowledge": "2026-03",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video",
+        "audio",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "output": 65536
+    },
+    "providers": [
+      "302ai",
+      "abacus",
+      "aihubmix",
+      "aimlapi",
+      "cloudflare-ai-gateway",
+      "commandcode",
+      "cortecs",
+      "crossmodel",
+      "edenai",
+      "github-copilot",
+      "google",
+      "google-vertex",
+      "impossibl",
+      "kenari",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "merge-gateway",
+      "nano-gpt",
+      "neon",
+      "ofox",
+      "opencode",
+      "openrouter",
+      "orcarouter",
+      "perplexity-agent",
+      "pioneer",
+      "poe",
+      "prime",
+      "requesty",
+      "sap-ai-core",
+      "tempr",
+      "vercel"
+    ]
+  },
+  "google/gemini-3.7-flash": {
+    "id": "google/gemini-3.7-flash",
+    "lab": "google",
+    "name": "Gemini 3.7 Flash",
+    "family": "gemini-flash",
+    "released": "2026-08-13",
+    "updated": "2026-08-13",
+    "knowledge": "2026-03",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video",
+        "audio",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "output": 65536
+    },
+    "providers": [
+      "302ai",
+      "abacus",
+      "aihubmix",
+      "aimlapi",
+      "cloudflare-ai-gateway",
+      "commandcode",
+      "cortecs",
+      "crossmodel",
+      "edenai",
+      "github-copilot",
+      "google",
+      "google-vertex",
+      "kenari",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "merge-gateway",
+      "nano-gpt",
+      "neon",
+      "ofox",
+      "opencode",
+      "openrouter",
+      "opper",
+      "perplexity-agent",
+      "poe",
+      "prime",
+      "requesty",
+      "tempr",
+      "vercel",
+      "vivgrid"
+    ]
+  },
+  "google/gemini-3.8-flash": {
+    "id": "google/gemini-3.8-flash",
+    "lab": "google",
+    "name": "Gemini 3.8 Flash",
+    "family": "gemini-flash",
+    "released": "2026-09-02",
+    "updated": "2026-09-02",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video",
+        "audio",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "output": 65536
+    },
+    "providers": [
+      "302ai",
+      "aihubmix",
+      "aimlapi",
+      "aixy",
+      "cloudflare-ai-gateway",
+      "commandcode",
+      "cortecs",
+      "crossmodel",
+      "edenai",
+      "github-copilot",
+      "google",
+      "google-vertex",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "merge-gateway",
+      "nano-gpt",
+      "nearai",
+      "neon",
+      "ofox",
+      "opencode",
+      "openrouter",
+      "opper",
+      "perplexity-agent",
+      "poe",
+      "prime",
+      "requesty",
+      "sap-ai-core",
+      "standardcompute",
+      "tempr",
+      "vercel",
+      "vivgrid"
+    ]
+  },
+  "google/gemini-3.8-flash-lite-tts": {
+    "id": "google/gemini-3.8-flash-lite-tts",
+    "lab": "google",
+    "name": "Gemini 3.8 Flash Lite TTS",
+    "family": "gemini-flash-lite",
+    "type": "speech",
+    "released": "2026-09-22",
+    "updated": "2026-09-22",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "audio"
+      ]
+    },
+    "limit": {
+      "context": 8192,
+      "output": 16384
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "google/gemini-3.8-flash-tts": {
+    "id": "google/gemini-3.8-flash-tts",
+    "lab": "google",
+    "name": "Gemini 3.8 Flash TTS",
+    "family": "gemini-flash",
+    "type": "speech",
+    "released": "2026-09-22",
+    "updated": "2026-09-22",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "audio"
+      ]
+    },
+    "limit": {
+      "context": 8192,
+      "output": 16384
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "google/gemini-3.8-live": {
+    "id": "google/gemini-3.8-live",
+    "lab": "google",
+    "name": "Gemini 3.8 Live",
+    "family": "gemini-flash",
+    "type": "realtime",
+    "released": "2026-09-15",
+    "updated": "2026-09-15",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "audio"
+      ],
+      "output": [
+        "text",
+        "audio"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 65536
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "google/gemini-3.8-live-extended-thinking": {
+    "id": "google/gemini-3.8-live-extended-thinking",
+    "lab": "google",
+    "name": "Gemini 3.8 Live Extended Thinking",
+    "family": "gemini-flash",
+    "type": "realtime",
+    "released": "2026-09-15",
+    "updated": "2026-09-15",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "audio"
+      ],
+      "output": [
+        "text",
+        "audio"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 65536
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "google/gemini-4-argon": {
+    "id": "google/gemini-4-argon",
+    "lab": "google",
+    "name": "Gemini 4 Argon",
+    "family": "gemini",
+    "released": "2026-10-13",
+    "updated": "2026-10-13",
+    "knowledge": "2026-03",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image",
+        "video",
+        "audio",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "output": 65536
+    },
+    "providers": [
+      "302ai",
+      "aihubmix",
+      "aixy",
+      "cloudflare-ai-gateway",
+      "commandcode",
+      "cortecs",
+      "crossmodel",
+      "edenai",
+      "github-copilot",
+      "google",
+      "google-vertex",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "merge-gateway",
+      "nano-gpt",
+      "ofox",
+      "opencode",
+      "opencode-go",
+      "openrouter",
+      "perplexity-agent",
+      "prime",
+      "requesty",
+      "vercel"
+    ]
+  },
+  "google/gemini-deep-research": {
+    "id": "google/gemini-deep-research",
+    "lab": "google",
+    "name": "Gemini Deep Research",
+    "released": "2025-12-11",
+    "updated": "2025-12-11",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "output": 0
+    },
+    "providers": [
+      "poe"
+    ]
+  },
+  "google/gemini-embedding-001": {
+    "id": "google/gemini-embedding-001",
+    "lab": "google",
+    "name": "Gemini Embedding 001",
+    "family": "gemini",
+    "type": "embedding",
+    "released": "2025-05-20",
+    "updated": "2025-05-20",
+    "knowledge": "2025-05",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 2048,
+      "output": 1
+    },
+    "providers": [
+      "google",
+      "google-vertex",
+      "merge-gateway",
+      "sap-ai-core",
+      "tempr",
+      "vercel"
+    ]
+  },
+  "google/gemini-embedding-2": {
+    "id": "google/gemini-embedding-2",
+    "lab": "google",
+    "name": "Gemini Embedding 2",
+    "family": "gemini",
+    "type": "embedding",
+    "released": "2026-04-22",
+    "updated": "2026-04-22",
+    "knowledge": "2025-11",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image",
+        "audio",
+        "video",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 8192,
+      "output": 3072
+    },
+    "providers": [
+      "google",
+      "merge-gateway",
+      "sap-ai-core",
+      "tempr",
+      "vercel"
+    ]
+  },
+  "google/gemini-exp-1206": {
+    "id": "google/gemini-exp-1206",
+    "lab": "google",
+    "name": "Gemini Exp 1206",
+    "family": "gemini",
+    "released": "2024-12-06",
+    "updated": "2024-12-06",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "structured_output": false,
+      "input": [
+        "text",
+        "image",
+        "audio"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 2097152,
+      "input": 2097152,
+      "output": 8192
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "google/gemini-flash-latest": {
+    "id": "google/gemini-flash-latest",
+    "lab": "google",
+    "name": "Gemini Flash Latest",
+    "family": "gemini-flash",
+    "released": "2026-08-13",
+    "updated": "2026-08-13",
+    "knowledge": "2026-03",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video",
+        "audio",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "output": 65536
+    },
+    "providers": [
+      "aimlapi",
+      "google",
+      "kilo",
+      "merge-gateway",
+      "nano-gpt",
+      "openrouter",
+      "orcarouter",
+      "tempr"
+    ]
+  },
+  "google/gemini-flash-lite-latest": {
+    "id": "google/gemini-flash-lite-latest",
+    "lab": "google",
+    "name": "Gemini Flash Lite Latest",
+    "family": "gemini-flash-lite",
+    "released": "2026-07-21",
+    "updated": "2026-07-21",
+    "knowledge": "2026-03",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video",
+        "audio",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "output": 65536
+    },
+    "providers": [
+      "google",
+      "merge-gateway",
+      "nano-gpt",
+      "orcarouter",
+      "tempr"
+    ]
+  },
+  "google/gemini-nano-banana-2.1": {
+    "id": "google/gemini-nano-banana-2.1",
+    "lab": "google",
+    "name": "Gemini Nano Banana 2.1",
+    "family": "gemini-flash",
+    "type": "image",
+    "released": "2026-10-06",
+    "updated": "2026-10-06",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output": [
+        "text",
+        "image"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 32768
+    },
+    "providers": [
+      "edenai",
+      "google-vertex",
+      "kilo",
+      "openrouter",
+      "vercel"
+    ]
+  },
+  "google/gemini-omni-1.1-flash": {
+    "id": "google/gemini-omni-1.1-flash",
+    "lab": "google",
+    "name": "Gemini Omni 1.1 Flash",
+    "family": "gemini",
+    "type": "video",
+    "released": "2026-08-27",
+    "updated": "2026-08-27",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output": [
+        "video"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "output": 57920
+    },
+    "providers": [
+      "poe"
+    ]
+  },
+  "google/gemini-omni-flash-preview": {
+    "id": "google/gemini-omni-flash-preview",
+    "lab": "google",
+    "name": "Gemini Omni Flash Preview",
+    "family": "gemini",
+    "type": "video",
+    "released": "2026-06-30",
+    "updated": "2026-06-30",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output": [
+        "video"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "output": 57920
+    },
+    "providers": [
+      "google",
+      "vercel"
+    ]
+  },
+  "google/gemini-pro-latest": {
+    "id": "google/gemini-pro-latest",
+    "lab": "google",
+    "name": "Gemini Pro Latest",
+    "family": "gemini-pro",
+    "released": "2026-04-27",
+    "updated": "2026-04-27",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "audio",
+        "pdf",
+        "image",
+        "text",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "output": 943718
+    },
+    "providers": [
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "nano-gpt",
+      "openrouter",
+      "the-grid-ai"
+    ]
+  },
+  "google/gemini-robotics-er-1.6-preview": {
+    "id": "google/gemini-robotics-er-1.6-preview",
+    "lab": "google",
+    "name": "Gemini Robotics ER 1.6 Preview",
+    "family": "gemini",
+    "released": "2026-04-14",
+    "updated": "2026-04-14",
+    "knowledge": "2025-01",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video",
+        "audio"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 65536
+    },
+    "providers": [
+      "orcarouter"
+    ]
+  },
+  "google/gemini-robotics-er-2-preview": {
+    "id": "google/gemini-robotics-er-2-preview",
+    "lab": "google",
+    "name": "Gemini Robotics ER 2 Preview",
+    "family": "gemini",
+    "released": "2026-07-30",
+    "updated": "2026-07-30",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "pdf",
+        "audio",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 65536
+    },
+    "providers": [
+      "edenai"
+    ]
+  },
+  "google/gemma-2-27b-it": {
+    "id": "google/gemma-2-27b-it",
+    "lab": "google",
+    "name": "Gemma 2 27B IT",
+    "family": "gemma",
+    "released": "2024-07-13",
+    "updated": "2024-07-13",
+    "knowledge": "2024-06-30",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 8192,
+      "output": 2048
+    },
+    "providers": [
+      "aimlapi",
+      "kilo",
+      "openrouter"
+    ]
+  },
+  "google/gemma-2-2b-it": {
+    "id": "google/gemma-2-2b-it",
+    "lab": "google",
+    "name": "Gemma 2 2B IT",
+    "released": "2024-07-16",
+    "updated": "2024-07-16",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 4096
+    },
+    "providers": [
+      "nvidia"
+    ]
+  },
+  "google/gemma-2-9b-it": {
+    "id": "google/gemma-2-9b-it",
+    "lab": "google",
+    "name": "Gemma 2 9B IT",
+    "family": "gemma",
+    "released": "2024-06-25",
+    "updated": "2024-06-25",
+    "knowledge": "2024-06",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 8192,
+      "output": 8192
+    },
+    "providers": [
+      "helicone"
+    ]
+  },
+  "google/gemma-3": {
+    "id": "google/gemma-3",
+    "lab": "google",
+    "name": "Gemma 3",
+    "family": "gemma",
+    "released": "2025-01-01",
+    "updated": "2025-01-01",
+    "knowledge": "2024-12",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 125000,
+      "output": 4096
+    },
+    "providers": [
+      "inference"
+    ]
+  },
+  "google/gemma-3-12b-it": {
+    "id": "google/gemma-3-12b-it",
+    "lab": "google",
+    "name": "Gemma 3 12B IT",
+    "family": "gemma",
+    "released": "2025-03-12",
+    "updated": "2025-03-12",
+    "knowledge": "2024-08",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 131072
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/google/gemma-3-12b-it"
+      }
+    ],
+    "providers": [
+      "aimlapi",
+      "amazon-bedrock",
+      "deepinfra",
+      "edenai",
+      "helicone",
+      "huggingface",
+      "kilo",
+      "merge-gateway",
+      "nano-gpt",
+      "neon",
+      "novita-ai",
+      "nvidia",
+      "openrouter"
+    ]
+  },
+  "google/gemma-3-27b-it": {
+    "id": "google/gemma-3-27b-it",
+    "lab": "google",
+    "name": "Gemma 3 27B IT",
+    "family": "gemma",
+    "released": "2025-03-12",
+    "updated": "2025-03-12",
+    "knowledge": "2024-08",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 131072
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/google/gemma-3-27b-it"
+      }
+    ],
+    "providers": [
+      "aimlapi",
+      "amazon-bedrock",
+      "cortecs",
+      "deepinfra",
+      "edenai",
+      "empiriolabs",
+      "greenpt",
+      "huggingface",
+      "kilo",
+      "merge-gateway",
+      "nano-gpt",
+      "nebius",
+      "novita-ai",
+      "openrouter",
+      "prime",
+      "stackit"
+    ]
+  },
+  "google/gemma-3-4b-it": {
+    "id": "google/gemma-3-4b-it",
+    "lab": "google",
+    "name": "Gemma 3 4B IT",
+    "family": "gemma",
+    "released": "2025-03-12",
+    "updated": "2025-03-12",
+    "knowledge": "2024-08",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 131072
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/google/gemma-3-4b-it"
+      }
+    ],
+    "providers": [
+      "aimlapi",
+      "amazon-bedrock",
+      "deepinfra",
+      "edenai",
+      "huggingface",
+      "kilo",
+      "merge-gateway",
+      "nano-gpt",
+      "nvidia",
+      "openrouter"
+    ]
+  },
+  "google/gemma-3-4b-pt": {
+    "id": "google/gemma-3-4b-pt",
+    "lab": "google",
+    "name": "Gemma 3 4B Pt",
+    "released": "2025-02-28",
+    "updated": "2025-02-28",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32768,
+      "output": 32768
+    },
+    "providers": [
+      "pioneer"
+    ]
+  },
+  "google/gemma-3n-e2b-it": {
+    "id": "google/gemma-3n-e2b-it",
+    "lab": "google",
+    "name": "Gemma 3n E2B IT",
+    "released": "2025-06-12",
+    "updated": "2025-06-12",
+    "knowledge": "2024-06",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 4096
+    },
+    "providers": [
+      "nvidia"
+    ]
+  },
+  "google/gemma-3n-e4b-it": {
+    "id": "google/gemma-3n-e4b-it",
+    "lab": "google",
+    "name": "Gemma 3n E4B IT",
+    "released": "2025-06-03",
+    "updated": "2025-06-03",
+    "knowledge": "2024-06",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 4096
+    },
+    "providers": [
+      "nvidia"
+    ]
+  },
+  "google/gemma-4-12b-it": {
+    "id": "google/gemma-4-12b-it",
+    "lab": "google",
+    "name": "Gemma 4 12B IT",
+    "family": "gemma",
+    "released": "2026-06-09",
+    "updated": "2026-06-09",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 32768
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/google/gemma-4-12B-it"
+      }
+    ],
+    "providers": [
+      "nano-gpt",
+      "pioneer",
+      "siliconflow"
+    ]
+  },
+  "google/gemma-4-12b-it-semancer": {
+    "id": "google/gemma-4-12b-it-semancer",
+    "lab": "google",
+    "name": "Gemma 4 12B IT Semancer",
+    "family": "gemma",
+    "released": "2026-09-09",
+    "updated": "2026-09-09",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "input": 131072,
+      "output": 32768
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "google/gemma-4-12b-it-station-keeper": {
+    "id": "google/gemma-4-12b-it-station-keeper",
+    "lab": "google",
+    "name": "Gemma 4 12B IT Station Keeper",
+    "family": "gemma",
+    "released": "2026-09-09",
+    "updated": "2026-09-09",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "input": 131072,
+      "output": 32768
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "google/gemma-4-26b-a4b-it": {
+    "id": "google/gemma-4-26b-a4b-it",
+    "lab": "google",
+    "name": "Gemma 4 26B A4B IT",
+    "family": "gemma",
+    "released": "2026-04-02",
+    "updated": "2026-04-02",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 32768
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/google/gemma-4-26B-A4B-it"
+      }
+    ],
+    "providers": [
+      "aimlapi",
+      "aki-io",
+      "amazon-bedrock",
+      "cloudflare-workers-ai",
+      "cortecs",
+      "deepinfra",
+      "empiriolabs",
+      "evroc",
+      "google",
+      "google-vertex",
+      "greenpt",
+      "huggingface",
+      "hyper",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "merge-gateway",
+      "nan",
+      "nano-gpt",
+      "novita-ai",
+      "openrouter",
+      "orcarouter",
+      "requesty",
+      "scaleway",
+      "siliconflow",
+      "tempr",
+      "vercel",
+      "wandb"
+    ]
+  },
+  "google/gemma-4-26b-a4b-it-chimerax": {
+    "id": "google/gemma-4-26b-a4b-it-chimerax",
+    "lab": "google",
+    "name": "Gemma 4 26B A4B IT Chimerax",
+    "family": "gemma",
+    "released": "2026-07-29",
+    "updated": "2026-07-29",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "input": 262144,
+      "output": 32768
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "google/gemma-4-26b-a4b-it-chimeraxheretic": {
+    "id": "google/gemma-4-26b-a4b-it-chimeraxheretic",
+    "lab": "google",
+    "name": "Gemma 4 26B A4B IT Chimeraxheretic",
+    "family": "gemma",
+    "released": "2026-10-08",
+    "updated": "2026-10-08",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "input": 262144,
+      "output": 32768
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "google/gemma-4-26b-a4b-it-cybersecurity": {
+    "id": "google/gemma-4-26b-a4b-it-cybersecurity",
+    "lab": "google",
+    "name": "Gemma 4 26B A4B IT Cybersecurity",
+    "family": "gemma",
+    "released": "2026-09-19",
+    "updated": "2026-09-19",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "input": 262144,
+      "output": 32768
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "google/gemma-4-26b-a4b-it-darksoul": {
+    "id": "google/gemma-4-26b-a4b-it-darksoul",
+    "lab": "google",
+    "name": "Gemma 4 26B A4B IT Darksoul",
+    "family": "gemma",
+    "released": "2026-07-29",
+    "updated": "2026-07-29",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "input": 262144,
+      "output": 32768
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "google/gemma-4-26b-a4b-it-luminous": {
+    "id": "google/gemma-4-26b-a4b-it-luminous",
+    "lab": "google",
+    "name": "Gemma 4 26B A4B IT Luminous",
+    "family": "gemma",
+    "released": "2026-07-29",
+    "updated": "2026-07-29",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "input": 262144,
+      "output": 32768
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "google/gemma-4-26b-a4b-it-moonlight": {
+    "id": "google/gemma-4-26b-a4b-it-moonlight",
+    "lab": "google",
+    "name": "Gemma 4 26B A4B IT Moonlight",
+    "family": "gemma",
+    "released": "2026-07-29",
+    "updated": "2026-07-29",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "input": 262144,
+      "output": 32768
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "google/gemma-4-26b-a4b-it-musica": {
+    "id": "google/gemma-4-26b-a4b-it-musica",
+    "lab": "google",
+    "name": "Gemma 4 26B A4B IT Musica",
+    "family": "gemma",
+    "released": "2026-07-29",
+    "updated": "2026-07-29",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "input": 262144,
+      "output": 32768
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "google/gemma-4-26b-a4b-it-opusdistill": {
+    "id": "google/gemma-4-26b-a4b-it-opusdistill",
+    "lab": "google",
+    "name": "Gemma 4 26B A4B IT Opusdistill",
+    "family": "gemma",
+    "released": "2026-07-29",
+    "updated": "2026-07-29",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "input": 262144,
+      "output": 32768
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "google/gemma-4-26b-a4b-it-shadowsiren": {
+    "id": "google/gemma-4-26b-a4b-it-shadowsiren",
+    "lab": "google",
+    "name": "Gemma 4 26B A4B IT Shadowsiren",
+    "family": "gemma",
+    "released": "2026-07-29",
+    "updated": "2026-07-29",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "input": 262144,
+      "output": 32768
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "google/gemma-4-26b-a4b-meromero": {
+    "id": "google/gemma-4-26b-a4b-meromero",
+    "lab": "google",
+    "name": "Gemma 4 26B A4B MeroMero",
+    "family": "gemma",
+    "released": "2026-07-29",
+    "updated": "2026-08-26",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "input": 262144,
+      "output": 32768
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "google/gemma-4-26b-a4b-uncensored": {
+    "id": "google/gemma-4-26b-a4b-uncensored",
+    "lab": "google",
+    "name": "Gemma 4 26B A4B Uncensored",
+    "family": "gemma",
+    "released": "2026-05-23",
+    "updated": "2026-05-23",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "structured_output": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 65536,
+      "input": 65536,
+      "output": 65536
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "google/gemma-4-31b-claude-4.6-opus-reasoning-distilled": {
+    "id": "google/gemma-4-31b-claude-4.6-opus-reasoning-distilled",
+    "lab": "google",
+    "name": "Gemma 4 31B Claude 4.6 Opus Reasoning Distilled",
+    "family": "claude",
+    "released": "2026-05-01",
+    "updated": "2026-05-01",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "input": 262144,
+      "output": 16384
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "google/gemma-4-31b-cognitive-unshackled": {
+    "id": "google/gemma-4-31b-cognitive-unshackled",
+    "lab": "google",
+    "name": "Gemma 4 31B Cognitive Unshackled",
+    "family": "gemma",
+    "released": "2026-05-01",
+    "updated": "2026-05-01",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "input": 262144,
+      "output": 16384
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "google/gemma-4-31b-darkidol": {
+    "id": "google/gemma-4-31b-darkidol",
+    "lab": "google",
+    "name": "Gemma 4 31B DarkIdol",
+    "family": "gemma",
+    "released": "2026-05-01",
+    "updated": "2026-05-01",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "input": 262144,
+      "output": 16384
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "google/gemma-4-31b-garnetv2": {
+    "id": "google/gemma-4-31b-garnetv2",
+    "lab": "google",
+    "name": "Gemma 4 31B Garnetv2",
+    "family": "gemma",
+    "released": "2026-05-01",
+    "updated": "2026-05-01",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "input": 262144,
+      "output": 16384
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "google/gemma-4-31b-it": {
+    "id": "google/gemma-4-31b-it",
+    "lab": "google",
+    "name": "Gemma 4 31B IT",
+    "family": "gemma",
+    "released": "2026-04-02",
+    "updated": "2026-04-02",
+    "knowledge": "2025-01",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 32768
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/google/gemma-4-31B-it"
+      }
+    ],
+    "providers": [
+      "abacus",
+      "aiand",
+      "aimlapi",
+      "amazon-bedrock",
+      "amd",
+      "berget",
+      "bothub",
+      "chutes",
+      "cortecs",
+      "crusoe",
+      "deepinfra",
+      "digitalocean",
+      "fastrouter",
+      "friendli",
+      "google",
+      "huggingface",
+      "inferx",
+      "infomaniak",
+      "kenari",
+      "kilo",
+      "lilac",
+      "llmgateway",
+      "llmgateway-providers",
+      "llmtr",
+      "merge-gateway",
+      "nano-gpt",
+      "neuralwatt",
+      "novita-ai",
+      "nvidia",
+      "ollama-cloud",
+      "openrouter",
+      "opper",
+      "orcarouter",
+      "pioneer",
+      "poe",
+      "qvac",
+      "regolo-ai",
+      "requesty",
+      "sambanova",
+      "siliconflow",
+      "tempr",
+      "tinfoil",
+      "unorouter",
+      "vercel",
+      "wandb"
+    ]
+  },
+  "google/gemma-4-31b-it-darkidol": {
+    "id": "google/gemma-4-31b-it-darkidol",
+    "lab": "google",
+    "name": "Gemma 4 31B IT DarkIdol",
+    "family": "gemma",
+    "released": "2026-07-29",
+    "updated": "2026-07-29",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "input": 262144,
+      "output": 32768
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "google/gemma-4-31b-it-fabled": {
+    "id": "google/gemma-4-31b-it-fabled",
+    "lab": "google",
+    "name": "Gemma 4 31B IT Fabled",
+    "family": "gemma",
+    "released": "2026-07-29",
+    "updated": "2026-07-29",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "input": 262144,
+      "output": 32768
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "google/gemma-4-31b-it-garnet": {
+    "id": "google/gemma-4-31b-it-garnet",
+    "lab": "google",
+    "name": "Gemma 4 31B IT Garnet",
+    "family": "gemma",
+    "released": "2026-07-29",
+    "updated": "2026-07-29",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "input": 262144,
+      "output": 32768
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "google/gemma-4-31b-it-gembrain": {
+    "id": "google/gemma-4-31b-it-gembrain",
+    "lab": "google",
+    "name": "Gemma 4 31B IT Gembrain",
+    "family": "gemma",
+    "released": "2026-07-29",
+    "updated": "2026-07-29",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "input": 262144,
+      "output": 32768
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "google/gemma-4-31b-it-gemsicle": {
+    "id": "google/gemma-4-31b-it-gemsicle",
+    "lab": "google",
+    "name": "Gemma 4 31B IT Gemsicle",
+    "family": "gemma",
+    "released": "2026-07-29",
+    "updated": "2026-07-29",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "input": 262144,
+      "output": 32768
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "google/gemma-4-31b-it-isometry": {
+    "id": "google/gemma-4-31b-it-isometry",
+    "lab": "google",
+    "name": "Gemma 4 31B IT Isometry",
+    "family": "gemma",
+    "released": "2026-07-29",
+    "updated": "2026-07-29",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "input": 262144,
+      "output": 32768
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "google/gemma-4-31b-it-novelist": {
+    "id": "google/gemma-4-31b-it-novelist",
+    "lab": "google",
+    "name": "Gemma 4 31B IT Novelist",
+    "family": "gemma",
+    "released": "2026-07-29",
+    "updated": "2026-07-29",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "input": 262144,
+      "output": 32768
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "google/gemma-4-31b-it-scarlet": {
+    "id": "google/gemma-4-31b-it-scarlet",
+    "lab": "google",
+    "name": "Gemma 4 31B IT Scarlet",
+    "family": "gemma",
+    "released": "2026-10-08",
+    "updated": "2026-10-08",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "input": 262144,
+      "output": 32768
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "google/gemma-4-31b-meromero-v2": {
+    "id": "google/gemma-4-31b-meromero-v2",
+    "lab": "google",
+    "name": "Gemma 4 31B MeroMero V2",
+    "family": "gemma",
+    "released": "2026-07-29",
+    "updated": "2026-08-23",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "input": 262144,
+      "output": 32768
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "google/gemma-4-31b-queen": {
+    "id": "google/gemma-4-31b-queen",
+    "lab": "google",
+    "name": "Gemma 4 31B Queen",
+    "family": "gemma",
+    "released": "2026-05-01",
+    "updated": "2026-05-01",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "input": 262144,
+      "output": 16384
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "google/gemma-4-31b-splituntied": {
+    "id": "google/gemma-4-31b-splituntied",
+    "lab": "google",
+    "name": "Gemma 4 31B Splituntied",
+    "family": "gemma",
+    "released": "2026-09-17",
+    "updated": "2026-09-17",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "structured_output": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "input": 262144,
+      "output": 32768
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "google/gemma-4-e2b-it": {
+    "id": "google/gemma-4-e2b-it",
+    "lab": "google",
+    "name": "Gemma 4 E2B IT",
+    "family": "gemma",
+    "released": "2026-04-02",
+    "updated": "2026-04-02",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "audio"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 8192
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/google/gemma-4-E2B-it"
+      }
+    ],
+    "providers": [
+      "amazon-bedrock",
+      "pioneer"
+    ]
+  },
+  "google/gemma-4-e4b-it": {
+    "id": "google/gemma-4-e4b-it",
+    "lab": "google",
+    "name": "Gemma 4 E4B IT",
+    "family": "gemma",
+    "released": "2026-04-02",
+    "updated": "2026-04-02",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "audio"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 8192
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/google/gemma-4-E4B-it"
+      }
+    ],
+    "providers": [
+      "deepinfra",
+      "pioneer"
+    ]
+  },
+  "google/gemma-4-e4b-it-iq4-xs": {
+    "id": "google/gemma-4-e4b-it-iq4-xs",
+    "lab": "google",
+    "name": "Gemma 4 E4B IT Iq4 XS",
+    "family": "gemma",
+    "released": "2026-04-02",
+    "updated": "2026-04-02",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32768,
+      "output": 8192
+    },
+    "providers": [
+      "atomic-chat"
+    ]
+  },
+  "google/gemma-4-e4b-it-mlx-4bit": {
+    "id": "google/gemma-4-e4b-it-mlx-4bit",
+    "lab": "google",
+    "name": "Gemma 4 E4B IT MLX 4bit",
+    "family": "gemma",
+    "released": "2026-04-02",
+    "updated": "2026-04-02",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32768,
+      "output": 8192
+    },
+    "providers": [
+      "atomic-chat"
+    ]
+  },
+  "google/imagen-3": {
+    "id": "google/imagen-3",
+    "lab": "google",
+    "name": "Imagen 3",
+    "family": "imagen",
+    "released": "2024-10-15",
+    "updated": "2024-10-15",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "image"
+      ]
+    },
+    "limit": {
+      "context": 480,
+      "output": 0
+    },
+    "providers": [
+      "poe"
+    ]
+  },
+  "google/imagen-4": {
+    "id": "google/imagen-4",
+    "lab": "google",
+    "name": "Imagen 4",
+    "family": "imagen",
+    "released": "2025-05-22",
+    "updated": "2025-05-22",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "image"
+      ]
+    },
+    "limit": {
+      "context": 480,
+      "output": 0
+    },
+    "providers": [
+      "poe"
+    ]
+  },
+  "google/imagen-4-ultra": {
+    "id": "google/imagen-4-ultra",
+    "lab": "google",
+    "name": "Imagen 4 Ultra",
+    "family": "imagen",
+    "released": "2025-05-24",
+    "updated": "2025-05-24",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "image"
+      ]
+    },
+    "limit": {
+      "context": 480,
+      "output": 0
+    },
+    "providers": [
+      "poe"
+    ]
+  },
+  "google/imagen-4.0-fast": {
+    "id": "google/imagen-4.0-fast",
+    "lab": "google",
+    "name": "Imagen 4.0 Fast",
+    "family": "imagen",
+    "released": "2025-05-20",
+    "updated": "2025-05-20",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "image"
+      ]
+    },
+    "limit": {
+      "context": 480,
+      "output": 0
+    },
+    "providers": [
+      "fastrouter"
+    ]
+  },
+  "google/imagen-4.0-ultra": {
+    "id": "google/imagen-4.0-ultra",
+    "lab": "google",
+    "name": "Imagen 4.0 Ultra",
+    "family": "imagen",
+    "released": "2025-05-20",
+    "updated": "2025-05-20",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "image"
+      ]
+    },
+    "limit": {
+      "context": 480,
+      "output": 0
+    },
+    "providers": [
+      "fastrouter"
+    ]
+  },
+  "google/lyria": {
+    "id": "google/lyria",
+    "lab": "google",
+    "name": "Lyria",
+    "family": "lyria",
+    "released": "2025-06-04",
+    "updated": "2025-06-04",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "audio"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "poe"
+    ]
+  },
+  "google/lyria-3-clip-preview": {
+    "id": "google/lyria-3-clip-preview",
+    "lab": "google",
+    "name": "Lyria 3 Clip Preview",
+    "family": "lyria",
+    "released": "2026-03-25",
+    "updated": "2026-03-25",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text",
+        "audio"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 65536
+    },
+    "providers": [
+      "google",
+      "kilo",
+      "openrouter"
+    ]
+  },
+  "google/lyria-3-pro-preview": {
+    "id": "google/lyria-3-pro-preview",
+    "lab": "google",
+    "name": "Lyria 3 Pro Preview",
+    "family": "lyria",
+    "released": "2026-03-25",
+    "updated": "2026-03-25",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text",
+        "audio"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 8192
+    },
+    "providers": [
+      "google",
+      "kilo",
+      "openrouter"
+    ]
+  },
+  "google/medgemma-4b": {
+    "id": "google/medgemma-4b",
+    "lab": "google",
+    "name": "MedGemma 4B",
+    "released": "2026-04-26",
+    "updated": "2026-08-16",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 8192,
+      "output": 8192
+    },
+    "providers": [
+      "llmtr"
+    ]
+  },
+  "google/nano-banana": {
+    "id": "google/nano-banana",
+    "lab": "google",
+    "name": "Nano Banana",
+    "family": "nano-banana",
+    "released": "2025-08-21",
+    "updated": "2025-08-21",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text",
+        "image"
+      ]
+    },
+    "limit": {
+      "context": 65536,
+      "output": 0
+    },
+    "providers": [
+      "poe"
+    ]
+  },
+  "google/nano-banana-pro": {
+    "id": "google/nano-banana-pro",
+    "lab": "google",
+    "name": "Nano Banana Pro",
+    "family": "nano-banana",
+    "released": "2025-11-19",
+    "updated": "2025-11-19",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "image"
+      ]
+    },
+    "limit": {
+      "context": 65536,
+      "output": 0
+    },
+    "providers": [
+      "poe"
+    ]
+  },
+  "google/paligemma": {
+    "id": "google/paligemma",
+    "lab": "google",
+    "name": "Paligemma",
+    "released": "2024-05-14",
+    "updated": "2024-08-26",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 8192
+    },
+    "providers": [
+      "nvidia"
+    ]
+  },
+  "google/text-embedding-005": {
+    "id": "google/text-embedding-005",
+    "lab": "google",
+    "name": "Text Embedding 005",
+    "family": "text-embedding",
+    "type": "embedding",
+    "released": "2024-08-01",
+    "updated": "2024-08",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 8192,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "google/text-multilingual-embedding-002": {
+    "id": "google/text-multilingual-embedding-002",
+    "lab": "google",
+    "name": "Text Multilingual Embedding 002",
+    "family": "text-embedding",
+    "type": "embedding",
+    "released": "2024-03-01",
+    "updated": "2024-03",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 8192,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "google/veiled-calla-12b": {
+    "id": "google/veiled-calla-12b",
+    "lab": "google",
+    "name": "Veiled Calla 12B",
+    "family": "llama",
+    "released": "2025-04-13",
+    "updated": "2025-04-13",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "structured_output": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32768,
+      "input": 32768,
+      "output": 8192
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "google/veo-2": {
+    "id": "google/veo-2",
+    "lab": "google",
+    "name": "Veo 2",
+    "family": "veo",
+    "released": "2024-12-02",
+    "updated": "2024-12-02",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "video"
+      ]
+    },
+    "limit": {
+      "context": 480,
+      "output": 0
+    },
+    "providers": [
+      "poe"
+    ]
+  },
+  "google/veo-3": {
+    "id": "google/veo-3",
+    "lab": "google",
+    "name": "Veo 3",
+    "family": "veo",
+    "released": "2025-05-21",
+    "updated": "2025-05-21",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "video"
+      ]
+    },
+    "limit": {
+      "context": 480,
+      "output": 0
+    },
+    "providers": [
+      "poe"
+    ]
+  },
+  "google/veo-3.0-generate-001": {
+    "id": "google/veo-3.0-generate-001",
+    "lab": "google",
+    "name": "Veo 3.0 Generate 001",
+    "family": "veo",
+    "type": "video",
+    "released": "2025-05-20",
+    "updated": "2026-06-08",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "video"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "google/veo-3.1": {
+    "id": "google/veo-3.1",
+    "lab": "google",
+    "name": "Veo 3.1",
+    "family": "veo",
+    "released": "2026-05-01",
+    "updated": "2026-05-01",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "video"
+      ]
+    },
+    "limit": {
+      "context": 400000,
+      "output": 0
+    },
+    "providers": [
+      "fastrouter",
+      "poe"
+    ]
+  },
+  "google/veo-3.1-fast-generate-preview": {
+    "id": "google/veo-3.1-fast-generate-preview",
+    "lab": "google",
+    "name": "Veo 3.1 Fast Generate Preview",
+    "family": "veo",
+    "type": "video",
+    "released": "2025-10-15",
+    "updated": "2026-01-01",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output": [
+        "video"
+      ]
+    },
+    "limit": {
+      "context": 1024,
+      "output": 0
+    },
+    "providers": [
+      "google"
+    ]
+  },
+  "google/veo-3.1-generate-001": {
+    "id": "google/veo-3.1-generate-001",
+    "lab": "google",
+    "name": "Veo 3.1 Generate 001",
+    "family": "veo",
+    "type": "video",
+    "released": "2025-10-15",
+    "updated": "2026-06-08",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output": [
+        "video"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "google/veo-3.1-generate-preview": {
+    "id": "google/veo-3.1-generate-preview",
+    "lab": "google",
+    "name": "Veo 3.1 Generate Preview",
+    "family": "veo",
+    "type": "video",
+    "released": "2025-10-15",
+    "updated": "2026-01",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "video"
+      ]
+    },
+    "limit": {
+      "context": 1024,
+      "output": 1
+    },
+    "providers": [
+      "google"
+    ]
+  },
+  "google/veo-3.1-lite": {
+    "id": "google/veo-3.1-lite",
+    "lab": "google",
+    "name": "Veo 3.1 Lite",
+    "family": "veo",
+    "released": "2026-05-01",
+    "updated": "2026-05-01",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "video"
+      ]
+    },
+    "limit": {
+      "context": 400000,
+      "output": 0
+    },
+    "providers": [
+      "fastrouter"
+    ]
+  },
+  "google/veo-3.1-lite-generate-001": {
+    "id": "google/veo-3.1-lite-generate-001",
+    "lab": "google",
+    "name": "Veo 3.1 Lite Generate 001",
+    "family": "veo",
+    "type": "video",
+    "released": "2026-04-02",
+    "updated": "2026-04-02",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output": [
+        "video"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "google/veo-3.1-lite-generate-preview": {
+    "id": "google/veo-3.1-lite-generate-preview",
+    "lab": "google",
+    "name": "Veo 3.1 Lite Generate Preview",
+    "family": "veo",
+    "type": "video",
+    "released": "2026-03-31",
+    "updated": "2026-03-31",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "video"
+      ]
+    },
+    "limit": {
+      "context": 1024,
+      "output": 0
+    },
+    "providers": [
+      "google"
+    ]
+  }
+}

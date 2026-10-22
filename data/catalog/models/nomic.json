@@ -1,0 +1,30 @@
+{
+  "nomic/nomic-embed-text": {
+    "id": "nomic/nomic-embed-text",
+    "lab": "nomic",
+    "name": "Nomic Embed Text",
+    "released": "2024-02",
+    "updated": "2024-02",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "structured_output": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 8192,
+      "output": 768
+    },
+    "providers": [
+      "tinfoil"
+    ]
+  }
+}

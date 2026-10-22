@@ -1,0 +1,93 @@
+{
+  "id": "longcat",
+  "name": "LongCat",
+  "kind": "gateway",
+  "endpoint": {
+    "format": "openai-chat",
+    "api": "https://api.longcat.chat/openai",
+    "auth": {
+      "scheme": "bearer"
+    },
+    "env": [
+      "LONGCAT_API_KEY"
+    ]
+  },
+  "doc": "https://longcat.chat/platform/docs/",
+  "models": {
+    "meituan/longcat-2.0": {
+      "name": "LongCat 2.0",
+      "family": "longcat",
+      "released": "2026-06-30",
+      "updated": "2026-06-30",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": false,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "reasoning": {
+        "mandatory": false
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "LongCat-2.0",
+        "name": "LongCat-2.0"
+      },
+      "price": {
+        "input": 0.3,
+        "output": 1.2,
+        "cache_read": 0.006
+      }
+    },
+    "meituan/longcat-2.5-preview": {
+      "name": "LongCat 2.5 Preview",
+      "family": "longcat",
+      "released": "2026-09-25",
+      "updated": "2026-09-25",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 262144
+      },
+      "reasoning": {
+        "mandatory": false
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "LongCat-2.5-Preview",
+        "name": "LongCat-2.5-Preview"
+      },
+      "price": {
+        "input": 0.3,
+        "output": 1.2,
+        "cache_read": 0.006
+      }
+    }
+  }
+}

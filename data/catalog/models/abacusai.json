@@ -1,0 +1,58 @@
+{
+  "abacusai/dracarys-72b-instruct": {
+    "id": "abacusai/dracarys-72b-instruct",
+    "lab": "abacusai",
+    "name": "Dracarys 72B Instruct",
+    "family": "llama",
+    "released": "2025-08-02",
+    "updated": "2025-08-02",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "structured_output": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32768,
+      "input": 32768,
+      "output": 8192
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "abacusai/dracarys-llama-3.1-70b-instruct": {
+    "id": "abacusai/dracarys-llama-3.1-70b-instruct",
+    "lab": "abacusai",
+    "name": "Dracarys Llama 3.1 70B Instruct",
+    "released": "2024-09-11",
+    "updated": "2025-05-22",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 8192
+    },
+    "providers": [
+      "nvidia"
+    ]
+  }
+}

@@ -1,0 +1,205 @@
+{
+  "voyage/voyage-3-large": {
+    "id": "voyage/voyage-3-large",
+    "lab": "voyage",
+    "name": "Voyage 3 Large",
+    "family": "voyage",
+    "type": "embedding",
+    "released": "2025-01-07",
+    "updated": "2024-09",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32000,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "voyage/voyage-3.5": {
+    "id": "voyage/voyage-3.5",
+    "lab": "voyage",
+    "name": "Voyage 3.5",
+    "family": "voyage",
+    "type": "embedding",
+    "released": "2025-05-20",
+    "updated": "2025-05-20",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32000,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "voyage/voyage-3.5-lite": {
+    "id": "voyage/voyage-3.5-lite",
+    "lab": "voyage",
+    "name": "Voyage 3.5 Lite",
+    "family": "voyage",
+    "type": "embedding",
+    "released": "2025-05-20",
+    "updated": "2025-05-20",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32000,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "voyage/voyage-code-2": {
+    "id": "voyage/voyage-code-2",
+    "lab": "voyage",
+    "name": "Voyage Code 2",
+    "family": "voyage",
+    "type": "embedding",
+    "released": "2024-01-01",
+    "updated": "2024-01",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 16000,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "voyage/voyage-code-3": {
+    "id": "voyage/voyage-code-3",
+    "lab": "voyage",
+    "name": "Voyage Code 3",
+    "family": "voyage",
+    "type": "embedding",
+    "released": "2024-12-04",
+    "updated": "2024-09",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32000,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "voyage/voyage-finance-2": {
+    "id": "voyage/voyage-finance-2",
+    "lab": "voyage",
+    "name": "Voyage Finance 2",
+    "family": "voyage",
+    "type": "embedding",
+    "released": "2024-06-03",
+    "updated": "2024-03",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32000,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "voyage/voyage-law-2": {
+    "id": "voyage/voyage-law-2",
+    "lab": "voyage",
+    "name": "Voyage Law 2",
+    "family": "voyage",
+    "type": "embedding",
+    "released": "2024-04-15",
+    "updated": "2024-03",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 16000,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  }
+}

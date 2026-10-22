@@ -1,0 +1,64 @@
+{
+  "inference-net/schematron-v2-small": {
+    "id": "inference-net/schematron-v2-small",
+    "lab": "inference-net",
+    "name": "Schematron V2 Small",
+    "released": "2026-04-16",
+    "updated": "2026-04-16",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 4096
+    },
+    "providers": [
+      "aimlapi",
+      "kilo",
+      "nano-gpt",
+      "openrouter",
+      "vercel"
+    ]
+  },
+  "inference-net/schematron-v2-turbo": {
+    "id": "inference-net/schematron-v2-turbo",
+    "lab": "inference-net",
+    "name": "Schematron V2 Turbo",
+    "released": "2026-04-16",
+    "updated": "2026-04-16",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 8192
+    },
+    "providers": [
+      "aimlapi",
+      "kilo",
+      "nano-gpt",
+      "openrouter",
+      "vercel"
+    ]
+  }
+}

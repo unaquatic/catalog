@@ -1,0 +1,72 @@
+{
+  "ai21/jamba-large": {
+    "id": "ai21/jamba-large",
+    "lab": "ai21",
+    "name": "Jamba Large",
+    "family": "jamba",
+    "released": "2025-07-03",
+    "updated": "2025-07-03",
+    "knowledge": "2024-08-22",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 256000,
+      "output": 4096
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/ai21labs/AI21-Jamba-Large-1.7"
+      }
+    ],
+    "providers": [
+      "ai21"
+    ]
+  },
+  "ai21/jamba-mini": {
+    "id": "ai21/jamba-mini",
+    "lab": "ai21",
+    "name": "Jamba Mini",
+    "family": "jamba",
+    "released": "2026-01-08",
+    "updated": "2026-01-08",
+    "knowledge": "2024-08-22",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 256000,
+      "output": 4096
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/ai21labs/AI21-Jamba2-Mini"
+      }
+    ],
+    "providers": [
+      "ai21"
+    ]
+  }
+}

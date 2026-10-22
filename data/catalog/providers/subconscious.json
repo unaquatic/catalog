@@ -1,0 +1,103 @@
+{
+  "id": "subconscious",
+  "name": "Subconscious",
+  "kind": "gateway",
+  "endpoint": {
+    "format": "anthropic-messages",
+    "api": "https://api.subconscious.dev/v1",
+    "auth": {
+      "scheme": "header",
+      "header": "x-api-key"
+    },
+    "env": [
+      "SUBCONSCIOUS_API_KEY"
+    ]
+  },
+  "doc": "https://docs.subconscious.dev",
+  "models": {
+    "deepseek/deepseek-v4.1-flash": {
+      "name": "DeepSeek V4.1 Flash",
+      "family": "deepseek-flash",
+      "released": "2026-09-10",
+      "updated": "2026-09-10",
+      "knowledge": "2025-05",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 5000000,
+        "output": 384000
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "high",
+          "max"
+        ]
+      },
+      "provider_options": {
+        "id": "subconscious/deepseek-v4.1-flash-marathon",
+        "name": "DeepSeek V4.1 Flash Marathon"
+      },
+      "price": {
+        "input": 0.14,
+        "output": 0.28,
+        "cache_read": 0.0028
+      }
+    },
+    "zhipuai/glm-5.3": {
+      "name": "GLM 5.3",
+      "family": "glm",
+      "released": "2026-08-14",
+      "updated": "2026-08-14",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 5000000,
+        "output": 131072
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "high",
+          "max"
+        ]
+      },
+      "provider_options": {
+        "id": "subconscious/glm-5.3-marathon",
+        "name": "GLM-5.3 Marathon"
+      },
+      "price": {
+        "input": 1.4,
+        "output": 4.4,
+        "cache_read": 0.26
+      }
+    }
+  }
+}

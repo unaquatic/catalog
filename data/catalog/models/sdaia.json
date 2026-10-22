@@ -1,0 +1,36 @@
+{
+  "sdaia/allam-2-7b": {
+    "id": "sdaia/allam-2-7b",
+    "lab": "sdaia",
+    "name": "ALLaM 2 7B",
+    "released": "2025-01-23",
+    "updated": "2025-01-23",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 4096,
+      "output": 4096
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/ALLaM-AI/ALLaM-2.0-7B-Instruct"
+      }
+    ],
+    "providers": [
+      "groq",
+      "tempr"
+    ]
+  }
+}

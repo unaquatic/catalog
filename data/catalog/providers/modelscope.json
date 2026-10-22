@@ -1,0 +1,243 @@
+{
+  "id": "modelscope",
+  "name": "ModelScope",
+  "kind": "gateway",
+  "endpoint": {
+    "format": "openai-chat",
+    "api": "https://api-inference.modelscope.cn/v1",
+    "auth": {
+      "scheme": "bearer"
+    },
+    "env": [
+      "MODELSCOPE_API_KEY"
+    ]
+  },
+  "doc": "https://modelscope.cn/docs/model-service/API-Inference/intro",
+  "models": {
+    "alibaba/qwen3-235b-a22b-instruct-2507": {
+      "name": "Qwen3 235B A22B Instruct 2507",
+      "family": "qwen",
+      "released": "2025-04-28",
+      "updated": "2025-07-21",
+      "knowledge": "2025-04",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 131072
+      },
+      "provider_options": {
+        "id": "Qwen/Qwen3-235B-A22B-Instruct-2507",
+        "name": "Qwen3 235B A22B Instruct 2507"
+      },
+      "price": {
+        "input": 0,
+        "output": 0
+      }
+    },
+    "alibaba/qwen3-235b-a22b-thinking-2507": {
+      "name": "Qwen3 235B A22B Thinking 2507",
+      "family": "qwen",
+      "released": "2025-07-25",
+      "updated": "2025-07-25",
+      "knowledge": "2025-04",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 131072
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "Qwen/Qwen3-235B-A22B-Thinking-2507",
+        "name": "Qwen3-235B-A22B-Thinking-2507"
+      },
+      "price": {
+        "input": 0,
+        "output": 0
+      }
+    },
+    "alibaba/qwen3-30b-a3b-instruct-2507": {
+      "name": "Qwen3 30B A3B Instruct 2507",
+      "family": "qwen",
+      "released": "2025-07-30",
+      "updated": "2025-07-30",
+      "knowledge": "2025-04",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 16384
+      },
+      "provider_options": {
+        "id": "Qwen/Qwen3-30B-A3B-Instruct-2507",
+        "name": "Qwen3 30B A3B Instruct 2507"
+      },
+      "price": {
+        "input": 0,
+        "output": 0
+      }
+    },
+    "alibaba/qwen3-30b-a3b-thinking-2507": {
+      "name": "Qwen3 30B A3B Thinking 2507",
+      "family": "qwen",
+      "released": "2025-07-30",
+      "updated": "2025-07-30",
+      "knowledge": "2025-04",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 32768
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "Qwen/Qwen3-30B-A3B-Thinking-2507",
+        "name": "Qwen3 30B A3B Thinking 2507"
+      },
+      "price": {
+        "input": 0,
+        "output": 0
+      }
+    },
+    "alibaba/qwen3-coder-30b-a3b-instruct": {
+      "name": "Qwen3 Coder 30B A3B Instruct",
+      "family": "qwen",
+      "released": "2025-07-31",
+      "updated": "2025-07-31",
+      "knowledge": "2025-04",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 65536
+      },
+      "provider_options": {
+        "id": "Qwen/Qwen3-Coder-30B-A3B-Instruct",
+        "name": "Qwen3 Coder 30B A3B Instruct"
+      },
+      "price": {
+        "input": 0,
+        "output": 0
+      }
+    },
+    "zhipuai/glm-4.5": {
+      "name": "GLM 4.5",
+      "family": "glm",
+      "released": "2025-07-28",
+      "updated": "2025-07-28",
+      "knowledge": "2025-04",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 131072,
+        "output": 98304
+      },
+      "reasoning": {
+        "mandatory": false
+      },
+      "provider_options": {
+        "id": "ZhipuAI/GLM-4.5",
+        "name": "GLM-4.5"
+      },
+      "price": {
+        "input": 0,
+        "output": 0
+      }
+    },
+    "zhipuai/glm-4.6": {
+      "name": "GLM 4.6",
+      "family": "glm",
+      "released": "2025-09-30",
+      "updated": "2025-09-30",
+      "knowledge": "2025-07",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 202752,
+        "output": 98304
+      },
+      "reasoning": {
+        "mandatory": false
+      },
+      "provider_options": {
+        "id": "ZhipuAI/GLM-4.6",
+        "name": "GLM-4.6"
+      },
+      "price": {
+        "input": 0,
+        "output": 0
+      }
+    }
+  }
+}

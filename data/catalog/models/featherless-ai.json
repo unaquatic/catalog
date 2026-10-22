@@ -1,0 +1,31 @@
+{
+  "featherless-ai/qwerky-72b": {
+    "id": "featherless-ai/qwerky-72b",
+    "lab": "featherless-ai",
+    "name": "Qwerky 72B",
+    "family": "qwerky",
+    "released": "2024-01-01",
+    "updated": "2025-03-20",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "structured_output": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32000,
+      "input": 32000,
+      "output": 8192
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "pokee/pokee-isaac": {
+    "id": "pokee/pokee-isaac",
+    "lab": "pokee",
+    "name": "Pokee Isaac",
+    "released": "2026-08-04",
+    "updated": "2026-08-04",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "structured_output": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 10000000,
+      "input": 10000000,
+      "output": 60000
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  }
+}

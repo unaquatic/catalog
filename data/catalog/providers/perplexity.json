@@ -1,0 +1,166 @@
+{
+  "id": "perplexity",
+  "name": "Perplexity",
+  "kind": "lab",
+  "endpoint": {
+    "format": "openai-chat",
+    "api": "https://api.perplexity.ai",
+    "api_default": true,
+    "auth": {
+      "scheme": "bearer"
+    },
+    "env": [
+      "PERPLEXITY_API_KEY"
+    ]
+  },
+  "doc": "https://docs.perplexity.ai",
+  "models": {
+    "perplexity/sonar": {
+      "name": "Sonar",
+      "family": "sonar",
+      "released": "2024-01-01",
+      "updated": "2025-09-01",
+      "knowledge": "2025-09-01",
+      "open_weights": false,
+      "capabilities": {
+        "tools": false,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 128000,
+        "output": 4096
+      },
+      "provider_options": {
+        "id": "sonar",
+        "name": "Sonar"
+      },
+      "price": {
+        "input": 1,
+        "output": 1
+      },
+      "status": "deprecated"
+    },
+    "perplexity/sonar-deep-research": {
+      "name": "Sonar Deep Research",
+      "family": "sonar",
+      "released": "2025-02-01",
+      "updated": "2025-09-01",
+      "knowledge": "2025-01",
+      "open_weights": false,
+      "capabilities": {
+        "tools": false,
+        "attachments": false,
+        "temperature": false,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 128000,
+        "output": 32768
+      },
+      "reasoning": {
+        "efforts": [
+          "minimal",
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "sonar-deep-research",
+        "name": "Perplexity Sonar Deep Research"
+      },
+      "price": {
+        "input": 2,
+        "output": 8,
+        "reasoning": 3
+      },
+      "status": "deprecated"
+    },
+    "perplexity/sonar-pro": {
+      "name": "Sonar Pro",
+      "family": "sonar-pro",
+      "released": "2024-01-01",
+      "updated": "2025-09-01",
+      "knowledge": "2025-09-01",
+      "open_weights": false,
+      "capabilities": {
+        "tools": false,
+        "attachments": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 200000,
+        "output": 8192
+      },
+      "provider_options": {
+        "id": "sonar-pro",
+        "name": "Sonar Pro"
+      },
+      "price": {
+        "input": 3,
+        "output": 15
+      },
+      "status": "deprecated"
+    },
+    "perplexity/sonar-reasoning-pro": {
+      "name": "Sonar Reasoning Pro",
+      "family": "sonar-reasoning",
+      "released": "2024-01-01",
+      "updated": "2025-09-01",
+      "knowledge": "2025-09-01",
+      "open_weights": false,
+      "capabilities": {
+        "tools": false,
+        "attachments": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 128000,
+        "output": 4096
+      },
+      "reasoning": {
+        "efforts": [
+          "minimal",
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "sonar-reasoning-pro",
+        "name": "Sonar Reasoning Pro"
+      },
+      "price": {
+        "input": 2,
+        "output": 8
+      },
+      "status": "deprecated"
+    }
+  }
+}

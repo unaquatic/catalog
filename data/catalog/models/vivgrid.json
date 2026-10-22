@@ -1,0 +1,37 @@
+{
+  "vivgrid/viv-fast": {
+    "id": "vivgrid/viv-fast",
+    "lab": "vivgrid",
+    "name": "Viv Fast",
+    "released": "2026-09-21",
+    "updated": "2026-09-21",
+    "knowledge": "2026-09",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 256000
+    },
+    "links": [
+      {
+        "label": "Model docs",
+        "url": "https://docs.vivgrid.com/models/viv-fast"
+      }
+    ],
+    "providers": [
+      "vivgrid"
+    ]
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "interfaze/interfaze-beta": {
+    "id": "interfaze/interfaze-beta",
+    "lab": "interfaze",
+    "name": "Interfaze Beta",
+    "released": "2025-10-07",
+    "updated": "2026-04-29",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 32000
+    },
+    "providers": [
+      "vercel"
+    ]
+  }
+}

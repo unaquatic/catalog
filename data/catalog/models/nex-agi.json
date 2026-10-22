@@ -1,0 +1,98 @@
+{
+  "nex-agi/nex-n2-pro": {
+    "id": "nex-agi/nex-n2-pro",
+    "lab": "nex-agi",
+    "name": "Nex N2 Pro",
+    "released": "2026-06-02",
+    "updated": "2026-06-02",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 262144
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/nex-agi/Nex-N2-Pro"
+      }
+    ],
+    "providers": [
+      "siliconflow"
+    ]
+  },
+  "nex-agi/nex-n2.5-mini": {
+    "id": "nex-agi/nex-n2.5-mini",
+    "lab": "nex-agi",
+    "name": "Nex N2.5 Mini",
+    "family": "agi",
+    "released": "2026-09-08",
+    "updated": "2026-09-08",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 235929
+    },
+    "providers": [
+      "kilo",
+      "openrouter"
+    ]
+  },
+  "nex-agi/nex-n2.5-pro": {
+    "id": "nex-agi/nex-n2.5-pro",
+    "lab": "nex-agi",
+    "name": "Nex N2.5 Pro",
+    "family": "agi",
+    "released": "2026-09-08",
+    "updated": "2026-09-08",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 235929
+    },
+    "providers": [
+      "kilo",
+      "openrouter"
+    ]
+  }
+}

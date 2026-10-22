@@ -1,0 +1,90 @@
+{
+  "id": "sarvam",
+  "name": "Sarvam AI",
+  "kind": "lab",
+  "endpoint": {
+    "format": "openai-chat",
+    "api": "https://api.sarvam.ai/v1",
+    "auth": {
+      "scheme": "bearer"
+    },
+    "env": [
+      "SARVAM_API_KEY"
+    ]
+  },
+  "doc": "https://docs.sarvam.ai/api-reference-docs/getting-started/models",
+  "models": {
+    "sarvam/sarvam-105b": {
+      "name": "Sarvam 105B",
+      "family": "sarvam",
+      "released": "2026-02-18",
+      "updated": "2026-03-06",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 131072,
+        "output": 131072
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "sarvam-105b",
+        "name": "Sarvam-105B"
+      }
+    },
+    "sarvam/sarvam-30b": {
+      "name": "Sarvam 30B",
+      "family": "sarvam",
+      "released": "2026-02-18",
+      "updated": "2026-03-06",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 65536,
+        "output": 65536
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "sarvam-30b",
+        "name": "Sarvam-30B"
+      }
+    }
+  }
+}

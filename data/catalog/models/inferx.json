@@ -1,0 +1,29 @@
+{
+  "inferx/agents-a1": {
+    "id": "inferx/agents-a1",
+    "lab": "inferx",
+    "name": "Agents A1",
+    "released": "2026-06-26",
+    "updated": "2026-06-26",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262000,
+      "output": 100000
+    },
+    "providers": [
+      "inferx"
+    ]
+  }
+}

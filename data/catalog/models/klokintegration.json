@@ -1,0 +1,86 @@
+{
+  "klokintegration/kloker": {
+    "id": "klokintegration/kloker",
+    "lab": "klokintegration",
+    "name": "Kloker",
+    "released": "2026-08-29",
+    "updated": "2026-08-29",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "structured_output": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 200000,
+      "output": 50000
+    },
+    "providers": [
+      "klokintegration"
+    ]
+  },
+  "klokintegration/kloker-integration-architect": {
+    "id": "klokintegration/kloker-integration-architect",
+    "lab": "klokintegration",
+    "name": "Kloker Integration Architect",
+    "released": "2026-08-29",
+    "updated": "2026-08-29",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "structured_output": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 200000,
+      "output": 50000
+    },
+    "providers": [
+      "klokintegration"
+    ]
+  },
+  "klokintegration/kloker-integration-developer": {
+    "id": "klokintegration/kloker-integration-developer",
+    "lab": "klokintegration",
+    "name": "Kloker Integration Developer",
+    "released": "2026-08-29",
+    "updated": "2026-08-29",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "structured_output": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 200000,
+      "output": 50000
+    },
+    "providers": [
+      "klokintegration"
+    ]
+  }
+}

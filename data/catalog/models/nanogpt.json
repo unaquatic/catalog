@@ -1,0 +1,114 @@
+{
+  "nanogpt/celeris-1": {
+    "id": "nanogpt/celeris-1",
+    "lab": "nanogpt",
+    "name": "Celeris 1",
+    "released": "2026-07-25",
+    "updated": "2026-07-25",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "structured_output": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 8192,
+      "input": 8192,
+      "output": 8192
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "nanogpt/claw-high": {
+    "id": "nanogpt/claw-high",
+    "lab": "nanogpt",
+    "name": "Claw High",
+    "released": "2026-05-11",
+    "updated": "2026-05-11",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "structured_output": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "input": 1048576,
+      "output": 131072
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "nanogpt/claw-low": {
+    "id": "nanogpt/claw-low",
+    "lab": "nanogpt",
+    "name": "Claw Low",
+    "released": "2026-05-11",
+    "updated": "2026-05-11",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "structured_output": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "input": 1048576,
+      "output": 131072
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "nanogpt/claw-medium": {
+    "id": "nanogpt/claw-medium",
+    "lab": "nanogpt",
+    "name": "Claw Medium",
+    "released": "2026-05-11",
+    "updated": "2026-05-11",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "structured_output": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "input": 1048576,
+      "output": 131072
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  }
+}

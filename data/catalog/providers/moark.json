@@ -1,0 +1,349 @@
+{
+  "id": "moark",
+  "name": "Moark",
+  "kind": "gateway",
+  "endpoint": {
+    "format": "openai-chat",
+    "api": "https://moark.com/v1",
+    "auth": {
+      "scheme": "bearer"
+    },
+    "env": [
+      "MOARK_API_KEY"
+    ]
+  },
+  "doc": "https://moark.com/docs/openapi/v1#tag/%E6%96%87%E6%9C%AC%E7%94%9F%E6%88%90",
+  "models": {
+    "alibaba/qwen3.6-flash": {
+      "name": "Qwen3.6 Flash",
+      "family": "qwen3.6",
+      "released": "2026-04-27",
+      "updated": "2026-04-27",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 65536
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "Qwen3.6-Flash",
+        "name": "Qwen3.6 Flash"
+      },
+      "price": {
+        "input": 0.18,
+        "output": 1.03
+      }
+    },
+    "deepseek/deepseek-v4-flash": {
+      "name": "DeepSeek V4 Flash",
+      "family": "deepseek-flash",
+      "released": "2026-04-24",
+      "updated": "2026-04-24",
+      "knowledge": "2025-05",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 384000
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "DeepSeek-V4-Flash",
+        "name": "DeepSeek V4 Flash"
+      },
+      "price": {
+        "input": 0.5,
+        "output": 0.5
+      }
+    },
+    "deepseek/deepseek-v4-flash-0731": {
+      "name": "DeepSeek V4 Flash 0731",
+      "family": "deepseek-flash",
+      "released": "2026-07-31",
+      "updated": "2026-07-31",
+      "knowledge": "2025-05",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 384000
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "deepseek-v4-flash-0731",
+        "name": "DeepSeek V4 Flash 0731"
+      },
+      "price": {
+        "input": 0.15,
+        "output": 0.3
+      }
+    },
+    "deepseek/deepseek-v4-pro": {
+      "name": "DeepSeek V4 Pro",
+      "family": "deepseek-thinking",
+      "released": "2026-04-24",
+      "updated": "2026-04-24",
+      "knowledge": "2025-05",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 384000
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "DeepSeek-V4-Pro",
+        "name": "DeepSeek V4 Pro"
+      },
+      "price": {
+        "input": 1.8,
+        "output": 3.6
+      }
+    },
+    "minimax/minimax-m2.1": {
+      "name": "MiniMax M2.1",
+      "family": "minimax",
+      "released": "2025-12-23",
+      "updated": "2025-12-23",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 204800,
+        "output": 131072
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "MiniMax-M2.1",
+        "name": "MiniMax-M2.1"
+      },
+      "price": {
+        "input": 0.29,
+        "output": 1.2
+      }
+    },
+    "minimax/minimax-m2.7": {
+      "name": "MiniMax M2.7",
+      "family": "minimax",
+      "released": "2026-03-18",
+      "updated": "2026-03-18",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 204800,
+        "output": 131072
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "MiniMax-M2.7",
+        "name": "MiniMax-M2.7"
+      },
+      "price": {
+        "input": 0.29,
+        "output": 1.2
+      }
+    },
+    "moonshotai/kimi-k2.6": {
+      "name": "Kimi K2.6",
+      "family": "kimi-k2",
+      "released": "2026-04-20",
+      "updated": "2026-04-20",
+      "knowledge": "2025-01",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "Kimi-K2.6",
+        "name": "Kimi K2.6"
+      },
+      "price": {
+        "input": 0.98,
+        "output": 4
+      }
+    },
+    "moonshotai/kimi-k3": {
+      "name": "Kimi K3",
+      "family": "kimi-k3",
+      "released": "2026-07-16",
+      "updated": "2026-07-16",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "kimi-k3",
+        "name": "Kimi K3"
+      },
+      "price": {
+        "input": 3,
+        "output": 15
+      }
+    },
+    "zhipuai/glm-4.7": {
+      "name": "GLM 4.7",
+      "family": "glm",
+      "released": "2025-12-22",
+      "updated": "2025-12-22",
+      "knowledge": "2025-04",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 204800,
+        "output": 131072
+      },
+      "reasoning": {},
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "GLM-4.7",
+        "name": "GLM-4.7"
+      },
+      "price": {
+        "input": 0.42,
+        "output": 2.2
+      }
+    },
+    "zhipuai/glm-5.3": {
+      "name": "GLM 5.3",
+      "family": "glm",
+      "released": "2026-08-14",
+      "updated": "2026-08-14",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "GLM-5.3",
+        "name": "GLM-5.3"
+      },
+      "price": {
+        "input": 1.2,
+        "output": 4.18
+      }
+    }
+  }
+}

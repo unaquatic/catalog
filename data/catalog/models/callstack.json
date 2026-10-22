@@ -1,0 +1,29 @@
+{
+  "callstack/apex": {
+    "id": "callstack/apex",
+    "lab": "callstack",
+    "name": "Apex",
+    "released": "2026-10-08",
+    "updated": "2026-10-08",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 131072
+    },
+    "providers": [
+      "vercel"
+    ]
+  }
+}

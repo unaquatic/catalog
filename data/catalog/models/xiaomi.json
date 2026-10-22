@@ -1,0 +1,622 @@
+{
+  "xiaomi/mimo-v2-flash": {
+    "id": "xiaomi/mimo-v2-flash",
+    "lab": "xiaomi",
+    "name": "MiMo V2 Flash",
+    "family": "mimo",
+    "released": "2025-12-16",
+    "updated": "2026-02-04",
+    "knowledge": "2024-12-01",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 65536
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/XiaomiMiMo/MiMo-V2-Flash"
+      }
+    ],
+    "providers": [
+      "huggingface",
+      "jiekou",
+      "meganova",
+      "opencode",
+      "qiniu-ai",
+      "xiaomi",
+      "zenmux"
+    ]
+  },
+  "xiaomi/mimo-v2-omni": {
+    "id": "xiaomi/mimo-v2-omni",
+    "lab": "xiaomi",
+    "name": "MiMo V2 Omni",
+    "family": "mimo",
+    "released": "2026-03-18",
+    "updated": "2026-03-18",
+    "knowledge": "2024-12",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "audio",
+        "video",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 131072
+    },
+    "providers": [
+      "opencode",
+      "xiaomi",
+      "zenmux"
+    ]
+  },
+  "xiaomi/mimo-v2-pro": {
+    "id": "xiaomi/mimo-v2-pro",
+    "lab": "xiaomi",
+    "name": "MiMo V2 Pro",
+    "family": "mimo",
+    "released": "2026-03-18",
+    "updated": "2026-03-18",
+    "knowledge": "2024-12",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "output": 131072
+    },
+    "providers": [
+      "abacus",
+      "opencode",
+      "xiaomi",
+      "xiaomi-token-plan-ams",
+      "xiaomi-token-plan-cn",
+      "xiaomi-token-plan-sgp",
+      "zenmux"
+    ]
+  },
+  "xiaomi/mimo-v2-tts": {
+    "id": "xiaomi/mimo-v2-tts",
+    "lab": "xiaomi",
+    "name": "MiMo V2 TTS",
+    "family": "mimo",
+    "type": "speech",
+    "released": "2026-03-18",
+    "updated": "2026-03-18",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "audio"
+      ]
+    },
+    "limit": {
+      "context": 8192,
+      "output": 8192
+    },
+    "providers": [
+      "xiaomi-token-plan-ams",
+      "xiaomi-token-plan-cn",
+      "xiaomi-token-plan-sgp"
+    ]
+  },
+  "xiaomi/mimo-v2.5": {
+    "id": "xiaomi/mimo-v2.5",
+    "lab": "xiaomi",
+    "name": "MiMo V2.5",
+    "family": "mimo",
+    "released": "2026-04-22",
+    "updated": "2026-04-22",
+    "knowledge": "2024-12",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "audio",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "output": 131072
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/XiaomiMiMo/MiMo-V2.5"
+      }
+    ],
+    "providers": [
+      "aihubmix",
+      "aimlapi",
+      "ambient",
+      "cline-pass",
+      "deepinfra",
+      "huggingface",
+      "impossibl",
+      "inferx",
+      "kenari",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "llmtr",
+      "nano-gpt",
+      "novita-ai",
+      "opencode",
+      "opencode-go",
+      "openrouter",
+      "pioneer",
+      "requesty",
+      "standardcompute",
+      "vercel",
+      "xiaomi",
+      "xiaomi-token-plan-ams",
+      "xiaomi-token-plan-cn",
+      "xiaomi-token-plan-sgp",
+      "zenmux"
+    ]
+  },
+  "xiaomi/mimo-v2.5-pro": {
+    "id": "xiaomi/mimo-v2.5-pro",
+    "lab": "xiaomi",
+    "name": "MiMo V2.5 Pro",
+    "family": "mimo",
+    "released": "2026-04-22",
+    "updated": "2026-04-22",
+    "knowledge": "2024-12",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "output": 131072
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/XiaomiMiMo/MiMo-V2.5-Pro"
+      }
+    ],
+    "providers": [
+      "aihubmix",
+      "aimlapi",
+      "cline-pass",
+      "deepinfra",
+      "digitalocean",
+      "huggingface",
+      "kenari",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "llmtr",
+      "nano-gpt",
+      "novita-ai",
+      "opencode-go",
+      "openrouter",
+      "pioneer",
+      "requesty",
+      "standardcompute",
+      "vercel",
+      "xiaomi",
+      "xiaomi-token-plan-ams",
+      "xiaomi-token-plan-cn",
+      "xiaomi-token-plan-sgp",
+      "zenmux"
+    ]
+  },
+  "xiaomi/mimo-v2.5-pro-ultraspeed": {
+    "id": "xiaomi/mimo-v2.5-pro-ultraspeed",
+    "lab": "xiaomi",
+    "name": "MiMo V2.5 Pro UltraSpeed",
+    "family": "mimo",
+    "released": "2026-06-08",
+    "updated": "2026-06-09",
+    "knowledge": "2024-12",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "output": 131072
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/XiaomiMiMo/MiMo-V2.5-Pro-FP4-DFlash"
+      }
+    ],
+    "providers": [
+      "xiaomi"
+    ]
+  },
+  "xiaomi/mimo-v2.5-tts": {
+    "id": "xiaomi/mimo-v2.5-tts",
+    "lab": "xiaomi",
+    "name": "MiMo V2.5 TTS",
+    "family": "mimo",
+    "type": "speech",
+    "released": "2026-04-22",
+    "updated": "2026-04-22",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "audio"
+      ]
+    },
+    "limit": {
+      "context": 8192,
+      "output": 8192
+    },
+    "providers": [
+      "xiaomi-token-plan-ams",
+      "xiaomi-token-plan-cn",
+      "xiaomi-token-plan-sgp"
+    ]
+  },
+  "xiaomi/mimo-v2.5-tts-voiceclone": {
+    "id": "xiaomi/mimo-v2.5-tts-voiceclone",
+    "lab": "xiaomi",
+    "name": "MiMo V2.5 TTS VoiceClone",
+    "family": "mimo",
+    "type": "speech",
+    "released": "2026-04-22",
+    "updated": "2026-04-22",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "audio"
+      ]
+    },
+    "limit": {
+      "context": 8192,
+      "output": 8192
+    },
+    "providers": [
+      "xiaomi-token-plan-ams",
+      "xiaomi-token-plan-cn",
+      "xiaomi-token-plan-sgp"
+    ]
+  },
+  "xiaomi/mimo-v2.5-tts-voicedesign": {
+    "id": "xiaomi/mimo-v2.5-tts-voicedesign",
+    "lab": "xiaomi",
+    "name": "MiMo V2.5 TTS VoiceDesign",
+    "family": "mimo",
+    "type": "speech",
+    "released": "2026-04-22",
+    "updated": "2026-04-22",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "audio"
+      ]
+    },
+    "limit": {
+      "context": 8192,
+      "output": 8192
+    },
+    "providers": [
+      "xiaomi-token-plan-ams",
+      "xiaomi-token-plan-cn",
+      "xiaomi-token-plan-sgp"
+    ]
+  },
+  "xiaomi/mimo-v2.6-flash": {
+    "id": "xiaomi/mimo-v2.6-flash",
+    "lab": "xiaomi",
+    "name": "MiMo V2.6 Flash",
+    "family": "mimo",
+    "released": "2026-09-22",
+    "updated": "2026-09-22",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "audio",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "output": 131072
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Flash-RL"
+      }
+    ],
+    "providers": [
+      "above",
+      "aihubmix",
+      "amd",
+      "boundless",
+      "cline-pass",
+      "crossmodel",
+      "deepinfra",
+      "empiriolabs",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "nan",
+      "nano-gpt",
+      "novita-ai",
+      "opencode",
+      "opencode-go",
+      "openrouter",
+      "requesty",
+      "standardcompute",
+      "tempr",
+      "vercel",
+      "vultr",
+      "xiaomi",
+      "xiaomi-token-plan-ams",
+      "xiaomi-token-plan-cn",
+      "xiaomi-token-plan-sgp"
+    ]
+  },
+  "xiaomi/mimo-v2.6-flash-abliterated": {
+    "id": "xiaomi/mimo-v2.6-flash-abliterated",
+    "lab": "xiaomi",
+    "name": "MiMo V2.6 Flash Abliterated",
+    "family": "mimo",
+    "released": "2026-09-25",
+    "updated": "2026-09-25",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "input": 1048576,
+      "output": 65536
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "xiaomi/mimo-v2.6-flash-uncensored": {
+    "id": "xiaomi/mimo-v2.6-flash-uncensored",
+    "lab": "xiaomi",
+    "name": "MiMo V2.6 Flash Uncensored",
+    "family": "mimo",
+    "released": "2026-09-25",
+    "updated": "2026-09-25",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "input": 1048576,
+      "output": 65536
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "xiaomi/mimo-v2.6-pro": {
+    "id": "xiaomi/mimo-v2.6-pro",
+    "lab": "xiaomi",
+    "name": "MiMo V2.6 Pro",
+    "family": "mimo",
+    "released": "2026-09-22",
+    "updated": "2026-09-22",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "audio",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "output": 131072
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL"
+      }
+    ],
+    "providers": [
+      "above",
+      "aihubmix",
+      "boundless",
+      "cline-pass",
+      "crossmodel",
+      "deepinfra",
+      "empiriolabs",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "nano-gpt",
+      "neuralwatt",
+      "novita-ai",
+      "opencode-go",
+      "openrouter",
+      "requesty",
+      "standardcompute",
+      "tempr",
+      "vercel",
+      "vultr",
+      "xiaomi",
+      "xiaomi-token-plan-ams",
+      "xiaomi-token-plan-cn",
+      "xiaomi-token-plan-sgp",
+      "zenmux"
+    ]
+  },
+  "xiaomi/mimo-v2.6-pro-ultraspeed": {
+    "id": "xiaomi/mimo-v2.6-pro-ultraspeed",
+    "lab": "xiaomi",
+    "name": "MiMo V2.6 Pro UltraSpeed",
+    "family": "mimo",
+    "released": "2026-09-21",
+    "updated": "2026-09-21",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "audio",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "output": 131072
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL"
+      }
+    ],
+    "providers": [
+      "above",
+      "aihubmix",
+      "empiriolabs",
+      "kilo",
+      "nano-gpt",
+      "openrouter",
+      "tempr",
+      "vercel",
+      "xiaomi"
+    ]
+  }
+}

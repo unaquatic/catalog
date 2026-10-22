@@ -1,0 +1,107 @@
+{
+  "baai/bge-m3": {
+    "id": "baai/bge-m3",
+    "lab": "baai",
+    "name": "BGE M3",
+    "family": "bge",
+    "type": "embedding",
+    "released": "2024-01-30",
+    "updated": "2024-01-30",
+    "open_weights": true,
+    "license": "MIT",
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 8192,
+      "output": 0
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/BAAI/bge-m3"
+      }
+    ],
+    "providers": [
+      "digitalocean",
+      "novita-ai",
+      "nvidia"
+    ]
+  },
+  "baai/bge-multilingual-gemma2": {
+    "id": "baai/bge-multilingual-gemma2",
+    "lab": "baai",
+    "name": "BGE Multilingual Gemma 2",
+    "family": "text-embedding",
+    "released": "2024-07-25",
+    "updated": "2026-08-01",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 8000,
+      "input": 8000,
+      "output": 3584
+    },
+    "providers": [
+      "infomaniak",
+      "scaleway"
+    ]
+  },
+  "baai/bge-reranker-v2-m3": {
+    "id": "baai/bge-reranker-v2-m3",
+    "lab": "baai",
+    "name": "BGE Reranker V2 M3",
+    "family": "bge",
+    "type": "reranking",
+    "released": "2024-03-15",
+    "updated": "2024-03-15",
+    "open_weights": true,
+    "license": "Apache-2.0",
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 8192,
+      "output": 0
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/BAAI/bge-reranker-v2-m3"
+      }
+    ],
+    "providers": [
+      "digitalocean",
+      "novita-ai"
+    ]
+  }
+}

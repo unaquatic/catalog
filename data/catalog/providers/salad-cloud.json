@@ -1,0 +1,49 @@
+{
+  "id": "salad-cloud",
+  "name": "SaladCloud AI Gateway",
+  "kind": "gateway",
+  "endpoint": {
+    "env": [
+      "SALAD_CLOUD_API_KEY"
+    ]
+  },
+  "doc": "https://docs.salad.com/ai-gateway/explanation/overview",
+  "models": {
+    "alibaba/qwen3.6-35b-a3b": {
+      "name": "Qwen3.6 35B A3B",
+      "family": "qwen",
+      "released": "2026-04-17",
+      "updated": "2026-04-17",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "input": 262144,
+        "output": 262144
+      },
+      "reasoning": {
+        "mandatory": false
+      },
+      "provider_options": {
+        "id": "qwen3.6-35b-a3b",
+        "name": "Qwen3.6 35B-A3B"
+      },
+      "price": {
+        "input": 0.09,
+        "output": 0.6
+      }
+    }
+  }
+}

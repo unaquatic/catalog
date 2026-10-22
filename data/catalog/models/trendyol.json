@@ -1,0 +1,38 @@
+{
+  "trendyol/asure-12b": {
+    "id": "trendyol/asure-12b",
+    "lab": "trendyol",
+    "name": "Asure 12B",
+    "family": "gemma",
+    "released": "2026-02-19",
+    "updated": "2026-02-20",
+    "open_weights": true,
+    "license": "Gemma",
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 0
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/Trendyol/Trendyol-LLM-Asure-12B"
+      }
+    ],
+    "providers": [
+      "llmtr"
+    ]
+  }
+}

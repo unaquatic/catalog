@@ -1,0 +1,311 @@
+{
+  "id": "minimax-cn",
+  "name": "MiniMax (minimax.cn)",
+  "kind": "gateway",
+  "endpoint": {
+    "format": "anthropic-messages",
+    "api": "https://api.minimax.cn/anthropic/v1",
+    "auth": {
+      "scheme": "header",
+      "header": "x-api-key"
+    },
+    "env": [
+      "MINIMAX_API_KEY"
+    ]
+  },
+  "doc": "https://platform.minimaxi.com/docs/guides/quickstart",
+  "models": {
+    "minimax/minimax-m2": {
+      "name": "MiniMax M2",
+      "family": "minimax",
+      "released": "2025-10-27",
+      "updated": "2025-10-27",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 204800,
+        "output": 131072
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "MiniMax-M2",
+        "name": "MiniMax-M2"
+      },
+      "price": {
+        "input": 0.3137,
+        "output": 1.2549,
+        "cache_read": 0.0314,
+        "cache_write": 0.3922
+      },
+      "status": "deprecated"
+    },
+    "minimax/minimax-m2.1": {
+      "name": "MiniMax M2.1",
+      "family": "minimax",
+      "released": "2025-12-23",
+      "updated": "2025-12-23",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 204800,
+        "output": 131072
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "MiniMax-M2.1",
+        "name": "MiniMax-M2.1"
+      },
+      "price": {
+        "input": 0.3137,
+        "output": 1.2549,
+        "cache_read": 0.0314,
+        "cache_write": 0.3922
+      },
+      "status": "deprecated"
+    },
+    "minimax/minimax-m2.5": {
+      "name": "MiniMax M2.5",
+      "family": "minimax",
+      "released": "2026-02-12",
+      "updated": "2026-02-12",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 204800,
+        "output": 131072
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "MiniMax-M2.5",
+        "name": "MiniMax-M2.5"
+      },
+      "price": {
+        "input": 0.3137,
+        "output": 1.2549,
+        "cache_read": 0.0314,
+        "cache_write": 0.3922
+      },
+      "status": "deprecated"
+    },
+    "minimax/minimax-m2.5-highspeed": {
+      "name": "MiniMax M2.5 Highspeed",
+      "family": "minimax",
+      "released": "2026-02-13",
+      "updated": "2026-02-13",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 204800,
+        "output": 131072
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "MiniMax-M2.5-highspeed",
+        "name": "MiniMax-M2.5-highspeed"
+      },
+      "price": {
+        "input": 0.6275,
+        "output": 2.5098,
+        "cache_read": 0.0314,
+        "cache_write": 0.3922
+      },
+      "status": "deprecated"
+    },
+    "minimax/minimax-m2.7": {
+      "name": "MiniMax M2.7",
+      "family": "minimax",
+      "released": "2026-03-18",
+      "updated": "2026-03-18",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 204800,
+        "output": 131072
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "MiniMax-M2.7",
+        "name": "MiniMax-M2.7"
+      },
+      "price": {
+        "input": 0.3137,
+        "output": 1.2549,
+        "cache_read": 0.0627,
+        "cache_write": 0.3922
+      },
+      "status": "deprecated"
+    },
+    "minimax/minimax-m2.7-highspeed": {
+      "name": "MiniMax M2.7 Highspeed",
+      "family": "minimax",
+      "released": "2026-03-18",
+      "updated": "2026-03-18",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 204800,
+        "output": 131072
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "MiniMax-M2.7-highspeed",
+        "name": "MiniMax-M2.7-highspeed"
+      },
+      "price": {
+        "input": 0.6275,
+        "output": 2.5098,
+        "cache_read": 0.0627,
+        "cache_write": 0.3922
+      },
+      "status": "deprecated"
+    },
+    "minimax/minimax-m3": {
+      "name": "MiniMax M3",
+      "family": "minimax",
+      "released": "2026-06-01",
+      "updated": "2026-06-25",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": false,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 524288
+      },
+      "reasoning": {
+        "mandatory": false
+      },
+      "provider_options": {
+        "id": "MiniMax-M3",
+        "name": "MiniMax-M3"
+      },
+      "price": {
+        "input": 0.3137,
+        "output": 1.2549,
+        "cache_read": 0.0627,
+        "tiers": [
+          {
+            "above": 512000,
+            "input": 0.6275,
+            "output": 2.5098,
+            "cache_read": 0.1255
+          }
+        ]
+      }
+    },
+    "minimax/minimax-m3.1-flash": {
+      "name": "MiniMax M3.1 Flash",
+      "family": "minimax",
+      "released": "2026-10-19",
+      "updated": "2026-10-19",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": false,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 524288
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ]
+      },
+      "provider_options": {
+        "id": "MiniMax-M3.1-Flash",
+        "name": "MiniMax-M3.1-Flash"
+      },
+      "price": {
+        "input": 0.1494,
+        "output": 0.5976,
+        "cache_read": 0.0149
+      }
+    }
+  }
+}

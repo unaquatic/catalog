@@ -1,0 +1,60 @@
+{
+  "neosmith/neosmith.intelligent-maestro": {
+    "id": "neosmith/neosmith.intelligent-maestro",
+    "lab": "neosmith",
+    "name": "Neosmith.intelligent Maestro",
+    "released": "2026-08-03",
+    "updated": "2026-08-08",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": false,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 128000
+    },
+    "providers": [
+      "neosmith"
+    ]
+  },
+  "neosmith/neosmith.neolite": {
+    "id": "neosmith/neosmith.neolite",
+    "lab": "neosmith",
+    "name": "Neosmith.neolite",
+    "released": "2026-06-20",
+    "updated": "2026-08-03",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": false,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 512000,
+      "output": 64000
+    },
+    "providers": [
+      "neosmith"
+    ]
+  }
+}

@@ -1,0 +1,1492 @@
+{
+  "bytedance-seed/bytedance-pro-latest": {
+    "id": "bytedance-seed/bytedance-pro-latest",
+    "lab": "bytedance-seed",
+    "name": "ByteDance Pro Latest",
+    "released": "2026-07-06",
+    "updated": "2026-07-06",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "structured_output": true,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "input": 256000,
+      "output": 131072
+    },
+    "providers": [
+      "the-grid-ai"
+    ]
+  },
+  "bytedance-seed/dola-seed-2.0-code-preview": {
+    "id": "bytedance-seed/dola-seed-2.0-code-preview",
+    "lab": "bytedance-seed",
+    "name": "Dola Seed 2.0 Code Preview",
+    "family": "seed",
+    "released": "2026-03-28",
+    "updated": "2026-03-28",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "structured_output": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 32768
+    },
+    "providers": [
+      "merge-gateway"
+    ]
+  },
+  "bytedance-seed/doubao-1.5-pro-256k": {
+    "id": "bytedance-seed/doubao-1.5-pro-256k",
+    "lab": "bytedance-seed",
+    "name": "Doubao 1.5 Pro 256K",
+    "released": "2025-03-12",
+    "updated": "2025-03-12",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "structured_output": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 256000,
+      "input": 256000,
+      "output": 16384
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "bytedance-seed/doubao-1.5-pro-32k": {
+    "id": "bytedance-seed/doubao-1.5-pro-32k",
+    "lab": "bytedance-seed",
+    "name": "Doubao 1.5 Pro 32K",
+    "released": "2024-11-20",
+    "updated": "2025-01-22",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "structured_output": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32000,
+      "input": 32000,
+      "output": 8192
+    },
+    "providers": [
+      "nano-gpt",
+      "qiniu-ai"
+    ]
+  },
+  "bytedance-seed/doubao-1.5-thinking-pro": {
+    "id": "bytedance-seed/doubao-1.5-thinking-pro",
+    "lab": "bytedance-seed",
+    "name": "Doubao 1.5 Thinking Pro",
+    "released": "2025-08-05",
+    "updated": "2025-08-05",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "structured_output": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 16000
+    },
+    "providers": [
+      "qiniu-ai"
+    ]
+  },
+  "bytedance-seed/doubao-1.5-vision-pro": {
+    "id": "bytedance-seed/doubao-1.5-vision-pro",
+    "lab": "bytedance-seed",
+    "name": "Doubao 1.5 Vision Pro",
+    "released": "2025-08-05",
+    "updated": "2025-08-05",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "structured_output": false,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 16000
+    },
+    "providers": [
+      "qiniu-ai"
+    ]
+  },
+  "bytedance-seed/doubao-1.5-vision-pro-32k": {
+    "id": "bytedance-seed/doubao-1.5-vision-pro-32k",
+    "lab": "bytedance-seed",
+    "name": "Doubao 1.5 Vision Pro 32K",
+    "released": "2024-11-20",
+    "updated": "2025-01-22",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "structured_output": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32000,
+      "input": 32000,
+      "output": 8192
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "bytedance-seed/doubao-seed-1-6-thinking-250715": {
+    "id": "bytedance-seed/doubao-seed-1-6-thinking-250715",
+    "lab": "bytedance-seed",
+    "name": "Doubao Seed 1.6 Thinking 250715",
+    "released": "2025-07-15",
+    "updated": "2025-07-15",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 256000,
+      "output": 16000
+    },
+    "providers": [
+      "302ai"
+    ]
+  },
+  "bytedance-seed/doubao-seed-1-6-vision-250815": {
+    "id": "bytedance-seed/doubao-seed-1-6-vision-250815",
+    "lab": "bytedance-seed",
+    "name": "Doubao Seed 1.6 Vision 250815",
+    "released": "2025-09-30",
+    "updated": "2025-09-30",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 256000,
+      "output": 32000
+    },
+    "providers": [
+      "302ai"
+    ]
+  },
+  "bytedance-seed/doubao-seed-1-8-251215": {
+    "id": "bytedance-seed/doubao-seed-1-8-251215",
+    "lab": "bytedance-seed",
+    "name": "Doubao Seed 1.8 251215",
+    "released": "2025-12-18",
+    "updated": "2025-12-18",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 224000,
+      "output": 64000
+    },
+    "providers": [
+      "302ai"
+    ]
+  },
+  "bytedance-seed/doubao-seed-2-0-code-preview": {
+    "id": "bytedance-seed/doubao-seed-2-0-code-preview",
+    "lab": "bytedance-seed",
+    "name": "Doubao Seed 2.0 Code Preview",
+    "family": "seed",
+    "released": "2026-02-14",
+    "updated": "2026-02-14",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 256000,
+      "output": 128000
+    },
+    "providers": [
+      "aihubmix"
+    ]
+  },
+  "bytedance-seed/doubao-seed-2-0-lite-260428": {
+    "id": "bytedance-seed/doubao-seed-2-0-lite-260428",
+    "lab": "bytedance-seed",
+    "name": "Doubao Seed 2.0 Lite 260428",
+    "family": "seed",
+    "released": "2026-04-28",
+    "updated": "2026-04-28",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 256000,
+      "output": 128000
+    },
+    "providers": [
+      "aihubmix"
+    ]
+  },
+  "bytedance-seed/doubao-seed-2-0-mini-260428": {
+    "id": "bytedance-seed/doubao-seed-2-0-mini-260428",
+    "lab": "bytedance-seed",
+    "name": "Doubao Seed 2.0 Mini 260428",
+    "family": "seed",
+    "released": "2026-04-28",
+    "updated": "2026-04-28",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 256000,
+      "output": 128000
+    },
+    "providers": [
+      "aihubmix"
+    ]
+  },
+  "bytedance-seed/doubao-seed-code": {
+    "id": "bytedance-seed/doubao-seed-code",
+    "lab": "bytedance-seed",
+    "name": "Doubao Seed Code",
+    "released": "2025-11-11",
+    "updated": "2025-11-11",
+    "knowledge": "2025-01-01",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 256000,
+      "output": 64000
+    },
+    "providers": [
+      "zenmux"
+    ]
+  },
+  "bytedance-seed/seed-1-6": {
+    "id": "bytedance-seed/seed-1-6",
+    "lab": "bytedance-seed",
+    "name": "Seed 1.6",
+    "family": "seed",
+    "released": "2025-10-15",
+    "updated": "2025-10-15",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 256000,
+      "output": 64000
+    },
+    "providers": [
+      "kilo",
+      "ofox",
+      "openrouter",
+      "qiniu-ai",
+      "vercel",
+      "volcengine"
+    ]
+  },
+  "bytedance-seed/seed-1-6-flash": {
+    "id": "bytedance-seed/seed-1-6-flash",
+    "lab": "bytedance-seed",
+    "name": "Seed 1.6 Flash",
+    "family": "seed",
+    "released": "2025-08-28",
+    "updated": "2025-08-28",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 256000,
+      "output": 32000
+    },
+    "providers": [
+      "aimlapi",
+      "kilo",
+      "ofox",
+      "openrouter",
+      "qiniu-ai",
+      "volcengine"
+    ]
+  },
+  "bytedance-seed/seed-1-6-vision": {
+    "id": "bytedance-seed/seed-1-6-vision",
+    "lab": "bytedance-seed",
+    "name": "Seed 1.6 Vision",
+    "family": "seed",
+    "released": "2025-08-15",
+    "updated": "2025-08-15",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 256000,
+      "output": 32000
+    },
+    "providers": [
+      "ofox",
+      "volcengine"
+    ]
+  },
+  "bytedance-seed/seed-1-8": {
+    "id": "bytedance-seed/seed-1-8",
+    "lab": "bytedance-seed",
+    "name": "Seed 1.8",
+    "family": "seed",
+    "released": "2025-12-28",
+    "updated": "2025-12-28",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 256000,
+      "output": 64000
+    },
+    "providers": [
+      "ofox",
+      "requesty",
+      "vercel",
+      "volcengine",
+      "zenmux"
+    ]
+  },
+  "bytedance-seed/seed-1.6-250615": {
+    "id": "bytedance-seed/seed-1.6-250615",
+    "lab": "bytedance-seed",
+    "name": "Seed 1.6 250615",
+    "family": "seed",
+    "released": "2025-06-25",
+    "updated": "2025-06-25",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 256000,
+      "output": 8192
+    },
+    "providers": [
+      "llmgateway",
+      "llmgateway-providers"
+    ]
+  },
+  "bytedance-seed/seed-1.6-250915": {
+    "id": "bytedance-seed/seed-1.6-250915",
+    "lab": "bytedance-seed",
+    "name": "Seed 1.6 250915",
+    "family": "seed",
+    "released": "2025-09-15",
+    "updated": "2025-09-15",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 256000,
+      "output": 8192
+    },
+    "providers": [
+      "llmgateway",
+      "llmgateway-providers"
+    ]
+  },
+  "bytedance-seed/seed-1.6-flash-250715": {
+    "id": "bytedance-seed/seed-1.6-flash-250715",
+    "lab": "bytedance-seed",
+    "name": "Seed 1.6 Flash 250715",
+    "family": "seed",
+    "released": "2025-07-26",
+    "updated": "2025-07-26",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 256000,
+      "output": 8192
+    },
+    "providers": [
+      "llmgateway",
+      "llmgateway-providers"
+    ]
+  },
+  "bytedance-seed/seed-1.8-251228": {
+    "id": "bytedance-seed/seed-1.8-251228",
+    "lab": "bytedance-seed",
+    "name": "Seed 1.8 251228",
+    "family": "seed",
+    "released": "2025-12-18",
+    "updated": "2025-12-18",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 256000,
+      "output": 8192
+    },
+    "providers": [
+      "llmgateway",
+      "llmgateway-providers"
+    ]
+  },
+  "bytedance-seed/seed-2.0-code": {
+    "id": "bytedance-seed/seed-2.0-code",
+    "lab": "bytedance-seed",
+    "name": "Seed 2.0 Code",
+    "family": "seed",
+    "released": "2026-02-14",
+    "updated": "2026-02-14",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 131072
+    },
+    "providers": [
+      "aimlapi",
+      "deepinfra",
+      "edenai",
+      "empiriolabs",
+      "kilo",
+      "merge-gateway",
+      "nano-gpt",
+      "ofox",
+      "openrouter",
+      "qiniu-ai",
+      "requesty",
+      "volcengine",
+      "zenmux"
+    ]
+  },
+  "bytedance-seed/seed-2.0-code-preview-260328": {
+    "id": "bytedance-seed/seed-2.0-code-preview-260328",
+    "lab": "bytedance-seed",
+    "name": "Seed 2.0 Code Preview 260328",
+    "family": "seed",
+    "released": "2026-03-28",
+    "updated": "2026-03-28",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": false,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 262144
+    },
+    "providers": [
+      "llmgateway",
+      "llmgateway-providers"
+    ]
+  },
+  "bytedance-seed/seed-2.0-lite": {
+    "id": "bytedance-seed/seed-2.0-lite",
+    "lab": "bytedance-seed",
+    "name": "Seed 2.0 Lite",
+    "family": "seed",
+    "released": "2026-02-14",
+    "updated": "2026-02-14",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 256000,
+      "output": 32000
+    },
+    "providers": [
+      "aimlapi",
+      "empiriolabs",
+      "kilo",
+      "merge-gateway",
+      "nano-gpt",
+      "ofox",
+      "openrouter",
+      "qiniu-ai",
+      "volcengine",
+      "volcengine-coding-plan",
+      "zenmux"
+    ]
+  },
+  "bytedance-seed/seed-2.0-lite-260428": {
+    "id": "bytedance-seed/seed-2.0-lite-260428",
+    "lab": "bytedance-seed",
+    "name": "Seed 2.0 Lite 260428",
+    "family": "seed",
+    "released": "2026-04-28",
+    "updated": "2026-04-28",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 262144
+    },
+    "providers": [
+      "llmgateway",
+      "llmgateway-providers"
+    ]
+  },
+  "bytedance-seed/seed-2.0-mini": {
+    "id": "bytedance-seed/seed-2.0-mini",
+    "lab": "bytedance-seed",
+    "name": "Seed 2.0 Mini",
+    "family": "seed",
+    "released": "2026-02-14",
+    "updated": "2026-02-14",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 256000,
+      "output": 32000
+    },
+    "providers": [
+      "aimlapi",
+      "deepinfra",
+      "edenai",
+      "empiriolabs",
+      "kilo",
+      "merge-gateway",
+      "nano-gpt",
+      "ofox",
+      "openrouter",
+      "qiniu-ai",
+      "requesty",
+      "volcengine",
+      "zenmux"
+    ]
+  },
+  "bytedance-seed/seed-2.0-mini-260428": {
+    "id": "bytedance-seed/seed-2.0-mini-260428",
+    "lab": "bytedance-seed",
+    "name": "Seed 2.0 Mini 260428",
+    "family": "seed",
+    "released": "2026-04-28",
+    "updated": "2026-04-28",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 262144
+    },
+    "providers": [
+      "llmgateway",
+      "llmgateway-providers"
+    ]
+  },
+  "bytedance-seed/seed-2.0-pro": {
+    "id": "bytedance-seed/seed-2.0-pro",
+    "lab": "bytedance-seed",
+    "name": "Seed 2.0 Pro",
+    "family": "seed",
+    "released": "2026-02-14",
+    "updated": "2026-02-14",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 256000,
+      "output": 128000
+    },
+    "providers": [
+      "aihubmix",
+      "deepinfra",
+      "empiriolabs",
+      "merge-gateway",
+      "nano-gpt",
+      "ofox",
+      "qiniu-ai",
+      "requesty",
+      "volcengine",
+      "zenmux"
+    ]
+  },
+  "bytedance-seed/seed-2.0-pro-260328": {
+    "id": "bytedance-seed/seed-2.0-pro-260328",
+    "lab": "bytedance-seed",
+    "name": "Seed 2.0 Pro 260328",
+    "family": "seed",
+    "released": "2026-03-28",
+    "updated": "2026-03-28",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 262144
+    },
+    "providers": [
+      "llmgateway",
+      "llmgateway-providers"
+    ]
+  },
+  "bytedance-seed/seed-2.1-pro": {
+    "id": "bytedance-seed/seed-2.1-pro",
+    "lab": "bytedance-seed",
+    "name": "Seed 2.1 Pro",
+    "family": "seed",
+    "released": "2026-06-23",
+    "updated": "2026-06-23",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 256000,
+      "output": 256000
+    },
+    "providers": [
+      "nano-gpt",
+      "ofox",
+      "volcengine"
+    ]
+  },
+  "bytedance-seed/seed-2.1-turbo": {
+    "id": "bytedance-seed/seed-2.1-turbo",
+    "lab": "bytedance-seed",
+    "name": "Seed 2.1 Turbo",
+    "family": "seed",
+    "released": "2026-06-23",
+    "updated": "2026-06-23",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 256000,
+      "output": 256000
+    },
+    "providers": [
+      "empiriolabs",
+      "kilo",
+      "nano-gpt",
+      "ofox",
+      "openrouter",
+      "vercel",
+      "volcengine",
+      "volcengine-coding-plan"
+    ]
+  },
+  "bytedance-seed/seed-character": {
+    "id": "bytedance-seed/seed-character",
+    "lab": "bytedance-seed",
+    "name": "Seed Character",
+    "family": "seed",
+    "released": "2026-06-23",
+    "updated": "2026-06-23",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 256000,
+      "output": 256000
+    },
+    "providers": [
+      "nano-gpt",
+      "ofox",
+      "volcengine"
+    ]
+  },
+  "bytedance-seed/seed-evolving": {
+    "id": "bytedance-seed/seed-evolving",
+    "lab": "bytedance-seed",
+    "name": "Seed Evolving",
+    "family": "seed",
+    "released": "2026-06-23",
+    "updated": "2026-06-23",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 256000,
+      "output": 256000
+    },
+    "providers": [
+      "ofox",
+      "volcengine",
+      "volcengine-coding-plan"
+    ]
+  },
+  "bytedance-seed/seed-oss-36b-instruct": {
+    "id": "bytedance-seed/seed-oss-36b-instruct",
+    "lab": "bytedance-seed",
+    "name": "Seed OSS 36B Instruct",
+    "family": "seed",
+    "released": "2025-09-04",
+    "updated": "2025-11-25",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262000,
+      "output": 262000
+    },
+    "providers": [
+      "nvidia",
+      "siliconflow",
+      "siliconflow-cn"
+    ]
+  },
+  "bytedance-seed/seedance-2": {
+    "id": "bytedance-seed/seedance-2",
+    "lab": "bytedance-seed",
+    "name": "Seedance 2",
+    "family": "seed",
+    "released": "2026-04-01",
+    "updated": "2026-04-01",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "video"
+      ]
+    },
+    "limit": {
+      "context": 4096,
+      "output": 0
+    },
+    "providers": [
+      "fastrouter"
+    ]
+  },
+  "bytedance-seed/seedance-2.0": {
+    "id": "bytedance-seed/seedance-2.0",
+    "lab": "bytedance-seed",
+    "name": "Seedance 2.0",
+    "family": "seed",
+    "type": "video",
+    "released": "2026-02-12",
+    "updated": "2026-10-04",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image",
+        "video",
+        "audio"
+      ],
+      "output": [
+        "video",
+        "audio"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "links": [
+      {
+        "url": "https://seed.bytedance.com/en/blog/seedance-2-0-official-launch",
+        "type": "announcement"
+      }
+    ],
+    "providers": [
+      "vercel"
+    ]
+  },
+  "bytedance-seed/seedance-2.0-fast": {
+    "id": "bytedance-seed/seedance-2.0-fast",
+    "lab": "bytedance-seed",
+    "name": "Seedance 2.0 Fast",
+    "family": "seed",
+    "type": "video",
+    "released": "2026-04-14",
+    "updated": "2026-04-14",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image",
+        "video",
+        "audio"
+      ],
+      "output": [
+        "video"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "bytedance-seed/seedance-2.0-mini": {
+    "id": "bytedance-seed/seedance-2.0-mini",
+    "lab": "bytedance-seed",
+    "name": "Seedance 2.0 Mini",
+    "family": "seed",
+    "type": "video",
+    "released": "2026-06-22",
+    "updated": "2026-06-22",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image",
+        "video",
+        "audio"
+      ],
+      "output": [
+        "video"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "bytedance-seed/seedance-2.5": {
+    "id": "bytedance-seed/seedance-2.5",
+    "lab": "bytedance-seed",
+    "name": "Seedance 2.5",
+    "family": "seed",
+    "type": "video",
+    "released": "2026-07-31",
+    "updated": "2026-10-04",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image",
+        "video",
+        "audio"
+      ],
+      "output": [
+        "video",
+        "audio"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "links": [
+      {
+        "url": "https://seed.bytedance.com/en/blog/one-take-creation-flexible-referencing-introducing-seedance-2-5",
+        "type": "announcement"
+      }
+    ],
+    "providers": [
+      "vercel"
+    ]
+  },
+  "bytedance-seed/seedance-v1.0-pro": {
+    "id": "bytedance-seed/seedance-v1.0-pro",
+    "lab": "bytedance-seed",
+    "name": "Seedance V1.0 Pro",
+    "family": "seed",
+    "type": "video",
+    "released": "2025-06-11",
+    "updated": "2025-06-11",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "video"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "bytedance-seed/seedance-v1.5-pro": {
+    "id": "bytedance-seed/seedance-v1.5-pro",
+    "lab": "bytedance-seed",
+    "name": "Seedance V1.5 Pro",
+    "family": "seed",
+    "type": "video",
+    "released": "2025-12-16",
+    "updated": "2025-12-16",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "video"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "bytedance-seed/seedream-4.0": {
+    "id": "bytedance-seed/seedream-4.0",
+    "lab": "bytedance-seed",
+    "name": "Seedream 4.0",
+    "family": "seed",
+    "type": "image",
+    "released": "2025-09-09",
+    "updated": "2025-08-28",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "image"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "bytedance-seed/seedream-4.5": {
+    "id": "bytedance-seed/seedream-4.5",
+    "lab": "bytedance-seed",
+    "name": "Seedream 4.5",
+    "family": "seed",
+    "type": "image",
+    "released": "2025-12-03",
+    "updated": "2025-11-28",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "image"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "bytedance-seed/seedream-5.0-lite": {
+    "id": "bytedance-seed/seedream-5.0-lite",
+    "lab": "bytedance-seed",
+    "name": "Seedream 5.0 Lite",
+    "family": "seed",
+    "type": "image",
+    "released": "2026-02-13",
+    "updated": "2026-01-28",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "image"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "bytedance-seed/seedream-5.0-pro": {
+    "id": "bytedance-seed/seedream-5.0-pro",
+    "lab": "bytedance-seed",
+    "name": "Seedream 5.0 Pro",
+    "family": "seed",
+    "type": "image",
+    "released": "2026-07-11",
+    "updated": "2026-07-11",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "image"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "bytedance-seed/ui-tars-1.5-7b": {
+    "id": "bytedance-seed/ui-tars-1.5-7b",
+    "lab": "bytedance-seed",
+    "name": "UI TARS 1.5 7B",
+    "released": "2025-07-22",
+    "updated": "2025-07-22",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "image",
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 2048
+    },
+    "providers": [
+      "kilo",
+      "openrouter"
+    ]
+  }
+}

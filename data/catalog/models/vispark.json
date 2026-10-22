@@ -1,0 +1,95 @@
+{
+  "vispark/vision-large": {
+    "id": "vispark/vision-large",
+    "lab": "vispark",
+    "name": "Vision Large",
+    "released": "2024-05-15",
+    "updated": "2026-09",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "audio",
+        "video",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 65536
+    },
+    "providers": [
+      "vispark"
+    ]
+  },
+  "vispark/vision-medium": {
+    "id": "vispark/vision-medium",
+    "lab": "vispark",
+    "name": "Vision Medium",
+    "released": "2024-05-15",
+    "updated": "2026-09",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "audio",
+        "video",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 65536
+    },
+    "providers": [
+      "vispark"
+    ]
+  },
+  "vispark/vision-small": {
+    "id": "vispark/vision-small",
+    "lab": "vispark",
+    "name": "Vision Small",
+    "released": "2024-05-15",
+    "updated": "2026-09",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "audio",
+        "video",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 65536
+    },
+    "providers": [
+      "vispark"
+    ]
+  }
+}

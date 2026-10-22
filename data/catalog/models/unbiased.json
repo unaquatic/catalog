@@ -1,0 +1,123 @@
+{
+  "unbiased/pareto": {
+    "id": "unbiased/pareto",
+    "lab": "unbiased",
+    "name": "Pareto",
+    "released": "2026-09-17",
+    "updated": "2026-09-17",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 131072
+    },
+    "providers": [
+      "aimlapi",
+      "cloudflare-ai-gateway"
+    ]
+  },
+  "unbiased/pareto-26.10": {
+    "id": "unbiased/pareto-26.10",
+    "lab": "unbiased",
+    "name": "Pareto 26.10",
+    "released": "2026-10-15",
+    "updated": "2026-10-15",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": false,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "output": 131072
+    },
+    "providers": [
+      "kilo",
+      "nano-gpt",
+      "openrouter"
+    ]
+  },
+  "unbiased/pareto-26.9": {
+    "id": "unbiased/pareto-26.9",
+    "lab": "unbiased",
+    "name": "Pareto 26.9",
+    "released": "2026-10-13",
+    "updated": "2026-10-13",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": false,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 131072
+    },
+    "providers": [
+      "kilo",
+      "nano-gpt",
+      "openrouter"
+    ]
+  },
+  "unbiased/pareto-latest": {
+    "id": "unbiased/pareto-latest",
+    "lab": "unbiased",
+    "name": "Pareto Latest",
+    "released": "2026-10-13",
+    "updated": "2026-10-13",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": false,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "output": 131072
+    },
+    "providers": [
+      "kilo",
+      "openrouter"
+    ]
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "topaz/proteus": {
+    "id": "topaz/proteus",
+    "lab": "topaz",
+    "name": "Proteus",
+    "type": "video",
+    "released": "2026-10-06",
+    "updated": "2026-10-06",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "video"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "topaz/starlight-precise-2.6": {
+    "id": "topaz/starlight-precise-2.6",
+    "lab": "topaz",
+    "name": "Starlight Precise 2.6",
+    "type": "video",
+    "released": "2026-10-06",
+    "updated": "2026-10-06",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "video"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "topaz/topazlabs": {
+    "id": "topaz/topazlabs",
+    "lab": "topaz",
+    "name": "TopazLabs",
+    "family": "topazlabs",
+    "released": "2024-12-03",
+    "updated": "2024-12-03",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "image"
+      ]
+    },
+    "limit": {
+      "context": 204,
+      "output": 0
+    },
+    "providers": [
+      "poe"
+    ]
+  },
+  "topaz/wonder-3.5": {
+    "id": "topaz/wonder-3.5",
+    "lab": "topaz",
+    "name": "Wonder 3.5",
+    "type": "image",
+    "released": "2026-10-06",
+    "updated": "2026-10-06",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "image"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  }
+}

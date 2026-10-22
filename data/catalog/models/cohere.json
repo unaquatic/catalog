@@ -1,0 +1,939 @@
+{
+  "cohere/c4ai-aya-expanse-32b": {
+    "id": "cohere/c4ai-aya-expanse-32b",
+    "lab": "cohere",
+    "name": "C4ai Aya Expanse 32B",
+    "released": "2024-10-24",
+    "updated": "2024-10-24",
+    "open_weights": true,
+    "license": "CC-BY-NC-4.0",
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 4000
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/CohereLabs/aya-expanse-32b"
+      }
+    ],
+    "providers": [
+      "cohere",
+      "edenai"
+    ]
+  },
+  "cohere/c4ai-aya-expanse-8b": {
+    "id": "cohere/c4ai-aya-expanse-8b",
+    "lab": "cohere",
+    "name": "C4ai Aya Expanse 8B",
+    "released": "2024-10-24",
+    "updated": "2024-10-24",
+    "open_weights": true,
+    "license": "CC-BY-NC-4.0",
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 8000,
+      "output": 4000
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/CohereLabs/aya-expanse-8b"
+      }
+    ],
+    "providers": []
+  },
+  "cohere/c4ai-aya-vision-32b": {
+    "id": "cohere/c4ai-aya-vision-32b",
+    "lab": "cohere",
+    "name": "C4ai Aya Vision 32B",
+    "released": "2025-03-04",
+    "updated": "2025-05-14",
+    "open_weights": true,
+    "license": "CC-BY-NC-4.0",
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 16000,
+      "output": 4000
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/CohereLabs/aya-vision-32b"
+      }
+    ],
+    "providers": [
+      "cohere"
+    ]
+  },
+  "cohere/c4ai-aya-vision-8b": {
+    "id": "cohere/c4ai-aya-vision-8b",
+    "lab": "cohere",
+    "name": "C4ai Aya Vision 8B",
+    "released": "2025-03-04",
+    "updated": "2025-05-14",
+    "open_weights": true,
+    "license": "CC-BY-NC-4.0",
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 16000,
+      "output": 4000
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/CohereLabs/aya-vision-8b"
+      }
+    ],
+    "providers": []
+  },
+  "cohere/command-a": {
+    "id": "cohere/command-a",
+    "lab": "cohere",
+    "name": "Command A",
+    "family": "command-a",
+    "released": "2025-03-13",
+    "updated": "2025-03-13",
+    "knowledge": "2024-08-31",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 256000,
+      "output": 8192
+    },
+    "providers": [
+      "aimlapi",
+      "azure",
+      "azure-cognitive-services",
+      "kilo",
+      "openrouter",
+      "vercel"
+    ]
+  },
+  "cohere/command-a-03-2025": {
+    "id": "cohere/command-a-03-2025",
+    "lab": "cohere",
+    "name": "Command A 03 2025",
+    "family": "command-a",
+    "released": "2025-03-13",
+    "updated": "2025-03-13",
+    "knowledge": "2024-06-01",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 256000,
+      "output": 8000
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/CohereLabs/c4ai-command-a-03-2025"
+      }
+    ],
+    "providers": [
+      "cohere",
+      "edenai",
+      "merge-gateway"
+    ]
+  },
+  "cohere/command-a-plus-05-2026": {
+    "id": "cohere/command-a-plus-05-2026",
+    "lab": "cohere",
+    "name": "Command A Plus 05 2026",
+    "family": "command-a",
+    "released": "2026-05-20",
+    "updated": "2026-06-09",
+    "knowledge": "2025-04-01",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 64000
+    },
+    "providers": [
+      "cohere",
+      "kilo",
+      "openrouter"
+    ]
+  },
+  "cohere/command-a-reasoning-08-2025": {
+    "id": "cohere/command-a-reasoning-08-2025",
+    "lab": "cohere",
+    "name": "Command A Reasoning 08 2025",
+    "family": "command-a",
+    "released": "2025-08-21",
+    "updated": "2025-08-21",
+    "knowledge": "2024-06-01",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 256000,
+      "output": 32000
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/CohereLabs/c4ai-command-a-reasoning-08-2025"
+      }
+    ],
+    "providers": [
+      "cohere",
+      "nano-gpt",
+      "sap-ai-core"
+    ]
+  },
+  "cohere/command-a-translate-08-2025": {
+    "id": "cohere/command-a-translate-08-2025",
+    "lab": "cohere",
+    "name": "Command A Translate 08 2025",
+    "family": "command-a",
+    "released": "2025-08-28",
+    "updated": "2025-08-28",
+    "knowledge": "2024-06-01",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 8000,
+      "output": 8000
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/CohereLabs/c4ai-command-a-translate-08-2025"
+      }
+    ],
+    "providers": [
+      "cohere"
+    ]
+  },
+  "cohere/command-a-vision-07-2025": {
+    "id": "cohere/command-a-vision-07-2025",
+    "lab": "cohere",
+    "name": "Command A Vision 07 2025",
+    "family": "command-a",
+    "released": "2025-07-31",
+    "updated": "2025-07-31",
+    "knowledge": "2024-06-01",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 8000
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/CohereLabs/c4ai-command-a-vision-07-2025"
+      }
+    ],
+    "providers": [
+      "cohere"
+    ]
+  },
+  "cohere/command-r-08-2024": {
+    "id": "cohere/command-r-08-2024",
+    "lab": "cohere",
+    "name": "Command R 08 2024",
+    "family": "command-r",
+    "released": "2024-08-30",
+    "updated": "2024-08-30",
+    "knowledge": "2024-06-01",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 4000
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/CohereLabs/c4ai-command-r-08-2024"
+      }
+    ],
+    "providers": [
+      "aimlapi",
+      "cohere",
+      "edenai",
+      "kilo",
+      "merge-gateway",
+      "openrouter"
+    ]
+  },
+  "cohere/command-r-plus-08-2024": {
+    "id": "cohere/command-r-plus-08-2024",
+    "lab": "cohere",
+    "name": "Command R Plus 08 2024",
+    "family": "command-r",
+    "released": "2024-08-30",
+    "updated": "2024-08-30",
+    "knowledge": "2024-06-01",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 4000
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/CohereLabs/c4ai-command-r-plus-08-2024"
+      }
+    ],
+    "providers": [
+      "aimlapi",
+      "anyapi",
+      "cohere",
+      "edenai",
+      "kilo",
+      "merge-gateway",
+      "nano-gpt",
+      "openrouter"
+    ]
+  },
+  "cohere/command-r7b-12-2024": {
+    "id": "cohere/command-r7b-12-2024",
+    "lab": "cohere",
+    "name": "Command R7B 12 2024",
+    "family": "command-r",
+    "released": "2024-12-13",
+    "updated": "2024-12-13",
+    "knowledge": "2024-06-01",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 4000
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/CohereLabs/c4ai-command-r7b-12-2024"
+      }
+    ],
+    "providers": [
+      "aimlapi",
+      "cohere",
+      "edenai",
+      "kilo",
+      "merge-gateway",
+      "openrouter"
+    ]
+  },
+  "cohere/command-r7b-arabic-02-2025": {
+    "id": "cohere/command-r7b-arabic-02-2025",
+    "lab": "cohere",
+    "name": "Command R7B Arabic 02 2025",
+    "family": "command-r",
+    "released": "2025-02-27",
+    "updated": "2025-02-27",
+    "knowledge": "2024-06-01",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 4000
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/CohereLabs/c4ai-command-r7b-arabic-02-2025"
+      }
+    ],
+    "providers": [
+      "cohere"
+    ]
+  },
+  "cohere/embed-v3-english": {
+    "id": "cohere/embed-v3-english",
+    "lab": "cohere",
+    "name": "Embed V3 English",
+    "family": "cohere-embed",
+    "released": "2023-11-07",
+    "updated": "2023-11-07",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 512,
+      "output": 1024
+    },
+    "providers": [
+      "azure",
+      "azure-cognitive-services"
+    ]
+  },
+  "cohere/embed-v3-multilingual": {
+    "id": "cohere/embed-v3-multilingual",
+    "lab": "cohere",
+    "name": "Embed V3 Multilingual",
+    "family": "cohere-embed",
+    "released": "2023-11-07",
+    "updated": "2023-11-07",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 512,
+      "output": 1024
+    },
+    "providers": [
+      "azure",
+      "azure-cognitive-services"
+    ]
+  },
+  "cohere/embed-v4.0": {
+    "id": "cohere/embed-v4.0",
+    "lab": "cohere",
+    "name": "Embed V4.0",
+    "family": "cohere-embed",
+    "released": "2025-04-15",
+    "updated": "2025-04-15",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 1536
+    },
+    "providers": [
+      "azure",
+      "azure-cognitive-services",
+      "vercel"
+    ]
+  },
+  "cohere/embed-v5.0-fast": {
+    "id": "cohere/embed-v5.0-fast",
+    "lab": "cohere",
+    "name": "Embed V5.0 Fast",
+    "family": "cohere-embed",
+    "type": "embedding",
+    "released": "2026-09-30",
+    "updated": "2026-09-30",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 2048
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "cohere/embed-v5.0-pro": {
+    "id": "cohere/embed-v5.0-pro",
+    "lab": "cohere",
+    "name": "Embed V5.0 Pro",
+    "family": "cohere-embed",
+    "type": "embedding",
+    "released": "2026-09-30",
+    "updated": "2026-09-30",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 2048
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "cohere/north-mini-code-1-0": {
+    "id": "cohere/north-mini-code-1-0",
+    "lab": "cohere",
+    "name": "North Mini Code 1.0",
+    "family": "north",
+    "released": "2026-06-09",
+    "updated": "2026-06-09",
+    "knowledge": "2025-09-23",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 256000,
+      "output": 64000
+    },
+    "providers": [
+      "cohere",
+      "kilo",
+      "opencode",
+      "openrouter"
+    ]
+  },
+  "cohere/north-small-translate-1-0": {
+    "id": "cohere/north-small-translate-1-0",
+    "lab": "cohere",
+    "name": "North Small Translate 1.0",
+    "family": "north",
+    "released": "2026-09-09",
+    "updated": "2026-09-09",
+    "open_weights": true,
+    "license": "CC-BY-NC-4.0",
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 16000,
+      "output": 16000
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/CohereLabs/North-Small-Translate-1.0"
+      }
+    ],
+    "providers": [
+      "cohere"
+    ]
+  },
+  "cohere/rerank-v3.5": {
+    "id": "cohere/rerank-v3.5",
+    "lab": "cohere",
+    "name": "Rerank V3.5",
+    "type": "reranking",
+    "released": "2024-12-02",
+    "updated": "2024-12-02",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 4096,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "cohere/rerank-v4.0-fast": {
+    "id": "cohere/rerank-v4.0-fast",
+    "lab": "cohere",
+    "name": "Rerank V4.0 Fast",
+    "type": "reranking",
+    "released": "2025-12-11",
+    "updated": "2025-12-11",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32000,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "cohere/rerank-v4.0-pro": {
+    "id": "cohere/rerank-v4.0-pro",
+    "lab": "cohere",
+    "name": "Rerank V4.0 Pro",
+    "type": "reranking",
+    "released": "2025-12-11",
+    "updated": "2025-12-11",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32000,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "cohere/tiny-aya-earth": {
+    "id": "cohere/tiny-aya-earth",
+    "lab": "cohere",
+    "name": "Tiny Aya Earth",
+    "released": "2026-02-17",
+    "updated": "2026-02-17",
+    "open_weights": true,
+    "license": "CC-BY-NC-4.0",
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 8000,
+      "output": 8000
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/CohereLabs/tiny-aya-earth"
+      }
+    ],
+    "providers": [
+      "cohere"
+    ]
+  },
+  "cohere/tiny-aya-fire": {
+    "id": "cohere/tiny-aya-fire",
+    "lab": "cohere",
+    "name": "Tiny Aya Fire",
+    "released": "2026-02-17",
+    "updated": "2026-02-17",
+    "open_weights": true,
+    "license": "CC-BY-NC-4.0",
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 8000,
+      "output": 8000
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/CohereLabs/tiny-aya-fire"
+      }
+    ],
+    "providers": [
+      "cohere"
+    ]
+  },
+  "cohere/tiny-aya-global": {
+    "id": "cohere/tiny-aya-global",
+    "lab": "cohere",
+    "name": "Tiny Aya Global",
+    "released": "2026-02-17",
+    "updated": "2026-02-17",
+    "open_weights": true,
+    "license": "CC-BY-NC-4.0",
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 8000,
+      "output": 8000
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/CohereLabs/tiny-aya-global"
+      }
+    ],
+    "providers": [
+      "cohere"
+    ]
+  },
+  "cohere/tiny-aya-water": {
+    "id": "cohere/tiny-aya-water",
+    "lab": "cohere",
+    "name": "Tiny Aya Water",
+    "released": "2026-02-17",
+    "updated": "2026-02-17",
+    "open_weights": true,
+    "license": "CC-BY-NC-4.0",
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 8000,
+      "output": 8000
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/CohereLabs/tiny-aya-water"
+      }
+    ],
+    "providers": [
+      "cohere"
+    ]
+  }
+}

@@ -1,0 +1,450 @@
+{
+  "id": "ovhcloud",
+  "name": "OVHcloud AI Endpoints",
+  "kind": "gateway",
+  "endpoint": {
+    "format": "openai-chat",
+    "api": "https://oai.endpoints.kepler.ai.cloud.ovh.net/v1",
+    "auth": {
+      "scheme": "bearer"
+    },
+    "env": [
+      "OVHCLOUD_API_KEY"
+    ]
+  },
+  "doc": "https://www.ovhcloud.com/en/public-cloud/ai-endpoints/catalog//",
+  "models": {
+    "alibaba/qwen2-5-vl-72b-instruct": {
+      "name": "Qwen2.5 VL 72B Instruct",
+      "family": "qwen",
+      "released": "2025-01-26",
+      "updated": "2025-01-26",
+      "knowledge": "2024-04",
+      "open_weights": true,
+      "capabilities": {
+        "tools": false,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 32768,
+        "output": 32768
+      },
+      "provider_options": {
+        "id": "qwen2.5-vl-72b-instruct",
+        "name": "Qwen2.5-VL-72B-Instruct"
+      },
+      "price": {
+        "input": 1.01,
+        "output": 1.01
+      }
+    },
+    "alibaba/qwen3.5-397b-a17b": {
+      "name": "Qwen3.5 397B A17B",
+      "family": "qwen",
+      "released": "2026-02-15",
+      "updated": "2026-02-15",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "qwen3.5-397b-a17b",
+        "name": "Qwen3.5-397B-A17B"
+      },
+      "price": {
+        "input": 0.71,
+        "output": 4.25
+      }
+    },
+    "alibaba/qwen3.5-9b": {
+      "name": "Qwen3.5 9B",
+      "family": "qwen",
+      "released": "2026-02-23",
+      "updated": "2026-02-23",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "qwen3.5-9b",
+        "name": "Qwen3.5-9B"
+      },
+      "price": {
+        "input": 0.12,
+        "output": 0.18
+      }
+    },
+    "alibaba/qwen3.6-27b": {
+      "name": "Qwen3.6 27B",
+      "family": "qwen",
+      "released": "2026-04-22",
+      "updated": "2026-04-22",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "minimal",
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "qwen3.6-27b",
+        "name": "Qwen3.6-27B"
+      },
+      "price": {
+        "input": 0.47,
+        "output": 3.19
+      }
+    },
+    "alibaba/qwen3.8-27b": {
+      "name": "Qwen3.8 27B",
+      "family": "qwen",
+      "released": "2026-08-14",
+      "updated": "2026-08-14",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "minimal",
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "qwen3.8-27b",
+        "name": "Qwen3.8-27B"
+      },
+      "price": {
+        "input": 0.47,
+        "output": 3.19
+      }
+    },
+    "alibaba/qwen3guard-gen-0.6b": {
+      "name": "Qwen3Guard Gen 0.6B",
+      "released": "2026-01-22",
+      "updated": "2026-01-22",
+      "open_weights": true,
+      "capabilities": {
+        "tools": false,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 32768,
+        "output": 16384
+      },
+      "provider_options": {
+        "id": "qwen3guard-gen-0.6b",
+        "name": "Qwen3Guard-Gen-0.6B"
+      },
+      "price": {
+        "input": 0,
+        "output": 0
+      }
+    },
+    "alibaba/qwen3guard-gen-8b": {
+      "name": "Qwen3Guard Gen 8B",
+      "released": "2026-01-22",
+      "updated": "2026-01-22",
+      "open_weights": true,
+      "capabilities": {
+        "tools": false,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 32768,
+        "output": 16384
+      },
+      "provider_options": {
+        "id": "qwen3guard-gen-8b",
+        "name": "Qwen3Guard-Gen-8B"
+      },
+      "price": {
+        "input": 0,
+        "output": 0
+      }
+    },
+    "meta/llama-3.3-70b-instruct": {
+      "name": "Llama 3.3 70B Instruct",
+      "family": "llama",
+      "released": "2024-12-06",
+      "updated": "2024-12-06",
+      "knowledge": "2023-12",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 131072,
+        "output": 131072
+      },
+      "provider_options": {
+        "id": "meta-llama-3_3-70b-instruct",
+        "name": "Meta-Llama-3_3-70B-Instruct"
+      },
+      "price": {
+        "input": 0.74,
+        "output": 0.74
+      }
+    },
+    "mistral/mistral-nemo": {
+      "name": "Mistral Nemo",
+      "family": "mistral-nemo",
+      "released": "2024-07-18",
+      "updated": "2024-07-18",
+      "knowledge": "2024-07",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 65536,
+        "output": 65536
+      },
+      "provider_options": {
+        "id": "mistral-nemo-instruct-2407",
+        "name": "Mistral-Nemo-Instruct-2407"
+      },
+      "price": {
+        "input": 0.14,
+        "output": 0.14
+      }
+    },
+    "mistral/mistral-small-3.2-24b-instruct": {
+      "name": "Mistral Small 3.2 24B Instruct",
+      "family": "mistral-small",
+      "released": "2025-06-20",
+      "updated": "2025-06-20",
+      "knowledge": "2023-10-31",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "image",
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 131072,
+        "output": 131072
+      },
+      "provider_options": {
+        "id": "mistral-small-3.2-24b-instruct-2506",
+        "name": "Mistral-Small-3.2-24B-Instruct-2506"
+      },
+      "price": {
+        "input": 0.1,
+        "output": 0.31
+      }
+    },
+    "openai/gpt-oss-120b": {
+      "name": "GPT OSS 120B",
+      "family": "gpt-oss",
+      "released": "2025-08-05",
+      "updated": "2025-08-05",
+      "knowledge": "2024-06",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 131072,
+        "output": 131072
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "gpt-oss-120b",
+        "name": "gpt-oss-120b"
+      },
+      "price": {
+        "input": 0.09,
+        "output": 0.47
+      }
+    },
+    "openai/gpt-oss-20b": {
+      "name": "GPT OSS 20B",
+      "family": "gpt-oss",
+      "released": "2025-08-05",
+      "updated": "2025-08-05",
+      "knowledge": "2024-06",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 131072,
+        "output": 131072
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "gpt-oss-20b",
+        "name": "gpt-oss-20b"
+      },
+      "price": {
+        "input": 0.05,
+        "output": 0.18
+      }
+    }
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "id": "reflection",
+  "name": "Reflection",
+  "kind": "lab",
+  "endpoint": {
+    "format": "openai-chat",
+    "api": "https://api.reflection.ai/openai/v1",
+    "auth": {
+      "scheme": "bearer"
+    },
+    "env": [
+      "REFLECTION_API_KEY"
+    ]
+  },
+  "doc": "https://developers.reflection.ai/models",
+  "models": {
+    "reflection/beam-1.0-501b-a23b": {
+      "name": "Beam 1.0 501B A23B",
+      "family": "beam",
+      "released": "2026-10-05",
+      "updated": "2026-10-16",
+      "knowledge": "2026-06-30",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ]
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "Beam-1.0-501B-A23B",
+        "name": "Beam 1.0 501B A23B"
+      },
+      "price": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,3014 @@
+{
+  "mistral/codestral-22b-v0.1": {
+    "id": "mistral/codestral-22b-v0.1",
+    "lab": "mistral",
+    "name": "Codestral 22B V0.1",
+    "family": "codestral",
+    "released": "2024-05-29",
+    "updated": "2024-05-29",
+    "open_weights": true,
+    "license": "Mistral AI Non-Production License",
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32768,
+      "output": 8192
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/mistralai/Codestral-22B-v0.1"
+      }
+    ],
+    "providers": [
+      "pioneer"
+    ]
+  },
+  "mistral/codestral-2501": {
+    "id": "mistral/codestral-2501",
+    "lab": "mistral",
+    "name": "Codestral 2501",
+    "family": "codestral",
+    "released": "2025-01-01",
+    "updated": "2025-01-01",
+    "knowledge": "2024-03",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 256000,
+      "output": 256000
+    },
+    "providers": [
+      "azure",
+      "azure-cognitive-services"
+    ]
+  },
+  "mistral/codestral-2508": {
+    "id": "mistral/codestral-2508",
+    "lab": "mistral",
+    "name": "Codestral 2508",
+    "family": "codestral",
+    "released": "2025-07-30",
+    "updated": "2025-07-30",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 8192
+    },
+    "providers": [
+      "aimlapi",
+      "cortecs",
+      "edenai",
+      "google-vertex",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "lowrouter",
+      "mistral",
+      "nano-gpt",
+      "openrouter"
+    ]
+  },
+  "mistral/codestral-embed-2505": {
+    "id": "mistral/codestral-embed-2505",
+    "lab": "mistral",
+    "name": "Codestral Embed 2505",
+    "family": "codestral-embed",
+    "type": "embedding",
+    "released": "2025-05-28",
+    "updated": "2025-05-28",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 8192,
+      "output": 3072
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "mistral/codestral-latest": {
+    "id": "mistral/codestral-latest",
+    "lab": "mistral",
+    "name": "Codestral Latest",
+    "family": "codestral",
+    "released": "2024-05-29",
+    "updated": "2025-01-04",
+    "knowledge": "2024-10",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 256000,
+      "output": 4096
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/mistralai/Codestral-22B-v0.1"
+      }
+    ],
+    "providers": [
+      "edenai",
+      "merge-gateway",
+      "mistral",
+      "vercel"
+    ]
+  },
+  "mistral/devstral-2512": {
+    "id": "mistral/devstral-2512",
+    "lab": "mistral",
+    "name": "Devstral 2512",
+    "family": "devstral",
+    "released": "2025-12-09",
+    "updated": "2025-12-09",
+    "knowledge": "2025-12",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 262144
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/mistralai/Devstral-2-123B-Instruct-2512"
+      }
+    ],
+    "providers": [
+      "aimlapi",
+      "amazon-bedrock",
+      "anyapi",
+      "cortecs",
+      "edenai",
+      "greenpt",
+      "inferx",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "merge-gateway",
+      "mistral",
+      "nano-gpt",
+      "openrouter",
+      "opper",
+      "pioneer"
+    ]
+  },
+  "mistral/devstral-latest": {
+    "id": "mistral/devstral-latest",
+    "lab": "mistral",
+    "name": "Devstral Latest",
+    "family": "devstral",
+    "released": "2025-12-09",
+    "updated": "2025-12-09",
+    "knowledge": "2025-12",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 262144
+    },
+    "providers": [
+      "mistral",
+      "requesty"
+    ]
+  },
+  "mistral/devstral-medium-2507": {
+    "id": "mistral/devstral-medium-2507",
+    "lab": "mistral",
+    "name": "Devstral Medium 2507",
+    "family": "devstral",
+    "released": "2025-07-10",
+    "updated": "2025-07-10",
+    "knowledge": "2025-05",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 128000
+    },
+    "providers": [
+      "merge-gateway",
+      "mistral"
+    ]
+  },
+  "mistral/devstral-medium-latest": {
+    "id": "mistral/devstral-medium-latest",
+    "lab": "mistral",
+    "name": "Devstral Medium Latest",
+    "family": "devstral",
+    "released": "2025-12-02",
+    "updated": "2025-12-02",
+    "knowledge": "2025-12",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 262144
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/mistralai/Devstral-2-123B-Instruct-2512"
+      }
+    ],
+    "providers": [
+      "edenai",
+      "merge-gateway",
+      "mistral"
+    ]
+  },
+  "mistral/devstral-small-2": {
+    "id": "mistral/devstral-small-2",
+    "lab": "mistral",
+    "name": "Devstral Small 2",
+    "family": "devstral",
+    "released": "2025-12-09",
+    "updated": "2025-12-09",
+    "knowledge": "2025-12",
+    "open_weights": true,
+    "license": "Apache-2.0",
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 262144
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/mistralai/Devstral-Small-2-24B-Instruct-2512"
+      }
+    ],
+    "providers": [
+      "pioneer"
+    ]
+  },
+  "mistral/devstral-small-2505": {
+    "id": "mistral/devstral-small-2505",
+    "lab": "mistral",
+    "name": "Devstral Small 2505",
+    "family": "devstral",
+    "released": "2025-05-07",
+    "updated": "2025-05-07",
+    "knowledge": "2025-05",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 128000
+    },
+    "providers": [
+      "io-net",
+      "mistral",
+      "nano-gpt"
+    ]
+  },
+  "mistral/devstral-small-2507": {
+    "id": "mistral/devstral-small-2507",
+    "lab": "mistral",
+    "name": "Devstral Small 2507",
+    "family": "devstral",
+    "released": "2025-07-10",
+    "updated": "2025-07-10",
+    "knowledge": "2025-05",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 128000
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/mistralai/Devstral-Small-2507"
+      }
+    ],
+    "providers": [
+      "merge-gateway",
+      "mistral"
+    ]
+  },
+  "mistral/labs-devstral-small-2512": {
+    "id": "mistral/labs-devstral-small-2512",
+    "lab": "mistral",
+    "name": "Labs Devstral Small 2512",
+    "family": "devstral",
+    "released": "2025-12-09",
+    "updated": "2025-12-09",
+    "knowledge": "2025-12",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 256000,
+      "output": 256000
+    },
+    "providers": [
+      "mistral"
+    ]
+  },
+  "mistral/labs-leanstral-1-5-1": {
+    "id": "mistral/labs-leanstral-1-5-1",
+    "lab": "mistral",
+    "name": "Labs Leanstral 1.5.1",
+    "family": "leanstral",
+    "released": "2026-06-30",
+    "updated": "2026-06-30",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 128000
+    },
+    "providers": [
+      "mistral"
+    ]
+  },
+  "mistral/leanstral-1-5": {
+    "id": "mistral/leanstral-1-5",
+    "lab": "mistral",
+    "name": "Leanstral 1.5",
+    "family": "leanstral",
+    "released": "2026-05-27",
+    "updated": "2026-05-27",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "structured_output": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 32768
+    },
+    "providers": [
+      "requesty"
+    ]
+  },
+  "mistral/magistral-medium-latest": {
+    "id": "mistral/magistral-medium-latest",
+    "lab": "mistral",
+    "name": "Magistral Medium Latest",
+    "family": "magistral-medium",
+    "released": "2025-03-17",
+    "updated": "2025-03-20",
+    "knowledge": "2025-06",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 16384
+    },
+    "providers": [
+      "edenai",
+      "merge-gateway",
+      "mistral",
+      "pioneer"
+    ]
+  },
+  "mistral/magistral-small-2506": {
+    "id": "mistral/magistral-small-2506",
+    "lab": "mistral",
+    "name": "Magistral Small 2506",
+    "family": "magistral",
+    "released": "2025-06-10",
+    "updated": "2025-06-10",
+    "open_weights": true,
+    "license": "Apache 2.0",
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 8192
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/mistralai/Magistral-Small-2506"
+      }
+    ],
+    "providers": [
+      "io-net",
+      "nvidia",
+      "pioneer"
+    ]
+  },
+  "mistral/magistral-small-2509": {
+    "id": "mistral/magistral-small-2509",
+    "lab": "mistral",
+    "name": "Magistral Small 2509",
+    "family": "magistral",
+    "released": "2025-09-18",
+    "updated": "2025-09-18",
+    "open_weights": true,
+    "license": "Apache 2.0",
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 131072
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/mistralai/Magistral-Small-2509"
+      }
+    ],
+    "providers": [
+      "amazon-bedrock"
+    ]
+  },
+  "mistral/ministral-14b": {
+    "id": "mistral/ministral-14b",
+    "lab": "mistral",
+    "name": "Ministral 14B",
+    "family": "ministral",
+    "released": "2025-12-02",
+    "updated": "2025-12-02",
+    "open_weights": true,
+    "license": "Apache-2.0",
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 262144
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/mistralai/Ministral-3-14B-Instruct-2512"
+      }
+    ],
+    "providers": [
+      "pioneer",
+      "vercel"
+    ]
+  },
+  "mistral/ministral-14b-2512": {
+    "id": "mistral/ministral-14b-2512",
+    "lab": "mistral",
+    "name": "Ministral 14B 2512",
+    "family": "ministral",
+    "released": "2025-12-02",
+    "updated": "2025-12-02",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 209715
+    },
+    "providers": [
+      "302ai",
+      "aimlapi",
+      "cortecs",
+      "edenai",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "nano-gpt",
+      "openrouter"
+    ]
+  },
+  "mistral/ministral-3-14b-instruct-2512": {
+    "id": "mistral/ministral-3-14b-instruct-2512",
+    "lab": "mistral",
+    "name": "Ministral 3 14B Instruct 2512",
+    "family": "ministral",
+    "released": "2025-12-02",
+    "updated": "2025-12-02",
+    "open_weights": true,
+    "license": "Apache 2.0",
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 262144
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/mistralai/Ministral-3-14B-Instruct-2512"
+      }
+    ],
+    "providers": [
+      "amazon-bedrock",
+      "digitalocean",
+      "edenai",
+      "infomaniak",
+      "lowrouter",
+      "mistral",
+      "nano-gpt",
+      "nvidia"
+    ]
+  },
+  "mistral/ministral-3-14b-reasoning-2512": {
+    "id": "mistral/ministral-3-14b-reasoning-2512",
+    "lab": "mistral",
+    "name": "Ministral 3 14B Reasoning 2512",
+    "family": "ministral",
+    "released": "2025-12-01",
+    "updated": "2025-12-12",
+    "knowledge": "2025-12",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 262144
+    },
+    "providers": [
+      "clarifai"
+    ]
+  },
+  "mistral/ministral-3-3b-instruct-2512": {
+    "id": "mistral/ministral-3-3b-instruct-2512",
+    "lab": "mistral",
+    "name": "Ministral 3 3B Instruct 2512",
+    "family": "ministral",
+    "released": "2025-12-02",
+    "updated": "2025-12-02",
+    "open_weights": true,
+    "license": "Apache 2.0",
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 262144
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/mistralai/Ministral-3-3B-Instruct-2512"
+      }
+    ],
+    "providers": [
+      "amazon-bedrock",
+      "lowrouter",
+      "mistral"
+    ]
+  },
+  "mistral/ministral-3-3b-reasoning-2512": {
+    "id": "mistral/ministral-3-3b-reasoning-2512",
+    "lab": "mistral",
+    "name": "Ministral 3 3B Reasoning 2512",
+    "family": "ministral",
+    "released": "2025-12",
+    "updated": "2026-02-25",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 262144
+    },
+    "providers": [
+      "clarifai"
+    ]
+  },
+  "mistral/ministral-3-8b-instruct-2512": {
+    "id": "mistral/ministral-3-8b-instruct-2512",
+    "lab": "mistral",
+    "name": "Ministral 3 8B Instruct 2512",
+    "family": "ministral",
+    "released": "2025-12-02",
+    "updated": "2025-12-02",
+    "open_weights": true,
+    "license": "Apache 2.0",
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 262144
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/mistralai/Ministral-3-8B-Instruct-2512"
+      }
+    ],
+    "providers": [
+      "amazon-bedrock",
+      "digitalocean",
+      "lowrouter",
+      "mistral"
+    ]
+  },
+  "mistral/ministral-3b": {
+    "id": "mistral/ministral-3b",
+    "lab": "mistral",
+    "name": "Ministral 3B",
+    "family": "ministral",
+    "released": "2024-10-16",
+    "updated": "2024-10-16",
+    "knowledge": "2024-03",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 8192
+    },
+    "providers": [
+      "azure",
+      "azure-cognitive-services",
+      "pioneer",
+      "vercel"
+    ]
+  },
+  "mistral/ministral-3b-2512": {
+    "id": "mistral/ministral-3b-2512",
+    "lab": "mistral",
+    "name": "Ministral 3B 2512",
+    "family": "ministral",
+    "released": "2025-12-02",
+    "updated": "2025-12-02",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 104857
+    },
+    "providers": [
+      "aimlapi",
+      "cortecs",
+      "edenai",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "nano-gpt",
+      "openrouter"
+    ]
+  },
+  "mistral/ministral-3b-latest": {
+    "id": "mistral/ministral-3b-latest",
+    "lab": "mistral",
+    "name": "Ministral 3B Latest",
+    "family": "ministral",
+    "released": "2024-10-01",
+    "updated": "2024-10-04",
+    "knowledge": "2024-10",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 128000
+    },
+    "providers": [
+      "mistral"
+    ]
+  },
+  "mistral/ministral-8b": {
+    "id": "mistral/ministral-8b",
+    "lab": "mistral",
+    "name": "Ministral 8B",
+    "family": "ministral",
+    "released": "2024-10-16",
+    "updated": "2024-10-04",
+    "knowledge": "2024-10",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 4000
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "mistral/ministral-8b-2512": {
+    "id": "mistral/ministral-8b-2512",
+    "lab": "mistral",
+    "name": "Ministral 8B 2512",
+    "family": "ministral",
+    "released": "2025-12-02",
+    "updated": "2025-12-02",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 209715
+    },
+    "providers": [
+      "aimlapi",
+      "cortecs",
+      "edenai",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "nano-gpt",
+      "openrouter"
+    ]
+  },
+  "mistral/ministral-8b-instruct-2410": {
+    "id": "mistral/ministral-8b-instruct-2410",
+    "lab": "mistral",
+    "name": "Ministral 8B Instruct 2410",
+    "family": "ministral",
+    "released": "2024-10-16",
+    "updated": "2024-10-16",
+    "open_weights": true,
+    "license": "Mistral Research License",
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 8192
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/mistralai/Ministral-8B-Instruct-2410"
+      }
+    ],
+    "providers": [
+      "pioneer"
+    ]
+  },
+  "mistral/ministral-8b-latest": {
+    "id": "mistral/ministral-8b-latest",
+    "lab": "mistral",
+    "name": "Ministral 8B Latest",
+    "family": "ministral",
+    "released": "2024-10-01",
+    "updated": "2024-10-04",
+    "knowledge": "2024-10",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 128000
+    },
+    "providers": [
+      "mistral"
+    ]
+  },
+  "mistral/mistral-7b-instruct-v0.2": {
+    "id": "mistral/mistral-7b-instruct-v0.2",
+    "lab": "mistral",
+    "name": "Mistral 7B Instruct V0.2",
+    "released": "2025-05-26",
+    "updated": "2025-05-26",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "structured_output": false,
+      "temperature": false,
+      "input": [
+        "text",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32000,
+      "output": 8192
+    },
+    "providers": [
+      "cortecs"
+    ]
+  },
+  "mistral/mistral-7b-instruct-v0.3": {
+    "id": "mistral/mistral-7b-instruct-v0.3",
+    "lab": "mistral",
+    "name": "Mistral 7B Instruct V0.3",
+    "family": "mistral",
+    "released": "2024-05-22",
+    "updated": "2024-05-22",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32768,
+      "output": 32768
+    },
+    "providers": [
+      "digitalocean",
+      "nvidia",
+      "pioneer"
+    ]
+  },
+  "mistral/mistral-code-agent-latest": {
+    "id": "mistral/mistral-code-agent-latest",
+    "lab": "mistral",
+    "name": "Mistral Code Agent Latest",
+    "family": "mistral",
+    "released": "2026-06-02",
+    "updated": "2026-06-02",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "structured_output": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "input": 262144,
+      "output": 32768
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "mistral/mistral-code-latest": {
+    "id": "mistral/mistral-code-latest",
+    "lab": "mistral",
+    "name": "Mistral Code Latest",
+    "family": "mistral",
+    "released": "2026-06-02",
+    "updated": "2026-06-02",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "structured_output": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 256000,
+      "input": 256000,
+      "output": 32768
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "mistral/mistral-embed": {
+    "id": "mistral/mistral-embed",
+    "lab": "mistral",
+    "name": "Mistral Embed",
+    "family": "mistral-embed",
+    "type": "embedding",
+    "released": "2023-12-11",
+    "updated": "2023-12-11",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 8000,
+      "output": 3072
+    },
+    "providers": [
+      "mistral",
+      "tempr",
+      "vercel"
+    ]
+  },
+  "mistral/mistral-large": {
+    "id": "mistral/mistral-large",
+    "lab": "mistral",
+    "name": "Mistral Large",
+    "family": "mistral-large",
+    "released": "2024-02-26",
+    "updated": "2024-02-26",
+    "knowledge": "2024-11-30",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 102400
+    },
+    "providers": [
+      "aimlapi",
+      "kilo",
+      "nano-gpt",
+      "openrouter"
+    ]
+  },
+  "mistral/mistral-large-2402": {
+    "id": "mistral/mistral-large-2402",
+    "lab": "mistral",
+    "name": "Mistral Large 2402",
+    "released": "2025-05-26",
+    "updated": "2025-05-26",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32000,
+      "output": 8192
+    },
+    "providers": [
+      "cortecs"
+    ]
+  },
+  "mistral/mistral-large-2407": {
+    "id": "mistral/mistral-large-2407",
+    "lab": "mistral",
+    "name": "Mistral Large 2407",
+    "family": "mistral-large",
+    "released": "2024-07-24",
+    "updated": "2024-07-24",
+    "knowledge": "2024-03-31",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 104857
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/mistralai/Mistral-Large-Instruct-2407"
+      }
+    ],
+    "providers": [
+      "aimlapi",
+      "edenai",
+      "kilo",
+      "openrouter",
+      "snowflake-cortex"
+    ]
+  },
+  "mistral/mistral-large-2411": {
+    "id": "mistral/mistral-large-2411",
+    "lab": "mistral",
+    "name": "Mistral Large 2411",
+    "family": "mistral-large",
+    "released": "2024-11-18",
+    "updated": "2024-11-18",
+    "knowledge": "2024-11",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 16384
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/mistralai/Mistral-Large-Instruct-2411"
+      }
+    ],
+    "providers": [
+      "helicone",
+      "merge-gateway",
+      "mistral"
+    ]
+  },
+  "mistral/mistral-large-2512": {
+    "id": "mistral/mistral-large-2512",
+    "lab": "mistral",
+    "name": "Mistral Large 2512",
+    "family": "mistral-large",
+    "released": "2025-12-02",
+    "updated": "2025-12-02",
+    "knowledge": "2024-11",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 262144
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/mistralai/Mistral-Large-3-675B-Instruct-2512"
+      }
+    ],
+    "providers": [
+      "302ai",
+      "amazon-bedrock",
+      "anyapi",
+      "cortecs",
+      "edenai",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "lowrouter",
+      "merge-gateway",
+      "mistral",
+      "ollama-cloud",
+      "openrouter",
+      "opper",
+      "pioneer",
+      "prime",
+      "tempr",
+      "vercel"
+    ]
+  },
+  "mistral/mistral-large-3-675b-instruct-2512": {
+    "id": "mistral/mistral-large-3-675b-instruct-2512",
+    "lab": "mistral",
+    "name": "Mistral Large 3 675B Instruct 2512",
+    "family": "mistral-large",
+    "released": "2025-12-02",
+    "updated": "2025-12-02",
+    "knowledge": "2025-01",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 262144
+    },
+    "providers": [
+      "nvidia"
+    ]
+  },
+  "mistral/mistral-large-4": {
+    "id": "mistral/mistral-large-4",
+    "lab": "mistral",
+    "name": "Mistral Large 4",
+    "family": "mistral-large",
+    "released": "2026-10-06",
+    "updated": "2026-10-06",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "output": 262144
+    },
+    "providers": [
+      "commandcode",
+      "cortecs",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "lowrouter",
+      "mistral",
+      "nano-gpt",
+      "ollama-cloud",
+      "opencode",
+      "openrouter",
+      "requesty",
+      "standardcompute",
+      "vercel"
+    ]
+  },
+  "mistral/mistral-large-instruct-2411": {
+    "id": "mistral/mistral-large-instruct-2411",
+    "lab": "mistral",
+    "name": "Mistral Large Instruct 2411",
+    "family": "mistral-large",
+    "released": "2024-11-01",
+    "updated": "2024-11-01",
+    "knowledge": "2024-10",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 4096
+    },
+    "providers": [
+      "io-net"
+    ]
+  },
+  "mistral/mistral-large-latest": {
+    "id": "mistral/mistral-large-latest",
+    "lab": "mistral",
+    "name": "Mistral Large Latest",
+    "family": "mistral-large",
+    "released": "2024-11-01",
+    "updated": "2025-12-02",
+    "knowledge": "2024-11",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 262144
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/mistralai/Mistral-Large-3-675B-Instruct-2512"
+      }
+    ],
+    "providers": [
+      "edenai",
+      "kenari",
+      "llmgateway",
+      "llmgateway-providers",
+      "merge-gateway",
+      "mistral",
+      "tempr"
+    ]
+  },
+  "mistral/mistral-medium-2505": {
+    "id": "mistral/mistral-medium-2505",
+    "lab": "mistral",
+    "name": "Mistral Medium 2505",
+    "family": "mistral-medium",
+    "released": "2025-05-07",
+    "updated": "2025-05-07",
+    "knowledge": "2025-05",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 131072
+    },
+    "providers": [
+      "azure",
+      "azure-cognitive-services",
+      "edenai",
+      "google-vertex",
+      "merge-gateway",
+      "mistral",
+      "pioneer",
+      "sap-ai-core"
+    ]
+  },
+  "mistral/mistral-medium-2508": {
+    "id": "mistral/mistral-medium-2508",
+    "lab": "mistral",
+    "name": "Mistral Medium 2508",
+    "family": "mistral-medium",
+    "released": "2025-08-12",
+    "updated": "2025-08-12",
+    "knowledge": "2025-05",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 262144
+    },
+    "providers": [
+      "mistral"
+    ]
+  },
+  "mistral/mistral-medium-2604": {
+    "id": "mistral/mistral-medium-2604",
+    "lab": "mistral",
+    "name": "Mistral Medium 2604",
+    "family": "mistral-medium",
+    "released": "2026-04-29",
+    "updated": "2026-04-29",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 262144
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/mistralai/Mistral-Medium-3.5-128B"
+      }
+    ],
+    "providers": [
+      "edenai",
+      "evroc",
+      "greenpt",
+      "kenari",
+      "lowrouter",
+      "mistral",
+      "nvidia",
+      "pioneer",
+      "sap-ai-core",
+      "scaleway",
+      "tempr"
+    ]
+  },
+  "mistral/mistral-medium-3": {
+    "id": "mistral/mistral-medium-3",
+    "lab": "mistral",
+    "name": "Mistral Medium 3",
+    "family": "mistral-medium",
+    "released": "2025-05-07",
+    "updated": "2025-05-07",
+    "knowledge": "2025-03-31",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 104857
+    },
+    "providers": [
+      "aimlapi",
+      "edenai",
+      "kilo",
+      "nano-gpt",
+      "openrouter"
+    ]
+  },
+  "mistral/mistral-medium-3-5": {
+    "id": "mistral/mistral-medium-3-5",
+    "lab": "mistral",
+    "name": "Mistral Medium 3.5",
+    "family": "mistral-medium",
+    "released": "2026-04-30",
+    "updated": "2026-04-30",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 209715
+    },
+    "providers": [
+      "aimlapi",
+      "cortecs",
+      "edenai",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "nano-gpt",
+      "openrouter",
+      "requesty",
+      "vercel"
+    ]
+  },
+  "mistral/mistral-medium-3-instruct": {
+    "id": "mistral/mistral-medium-3-instruct",
+    "lab": "mistral",
+    "name": "Mistral Medium 3 Instruct",
+    "family": "mistral-medium",
+    "released": "2025-09-25",
+    "updated": "2025-09-25",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "structured_output": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "input": 131072,
+      "output": 32768
+    },
+    "providers": [
+      "nvidia"
+    ]
+  },
+  "mistral/mistral-medium-3.1": {
+    "id": "mistral/mistral-medium-3.1",
+    "lab": "mistral",
+    "name": "Mistral Medium 3.1",
+    "family": "mistral-medium",
+    "released": "2025-08-12",
+    "updated": "2025-08-12",
+    "knowledge": "2025-06-30",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 104857
+    },
+    "providers": [
+      "aimlapi",
+      "kilo",
+      "nano-gpt",
+      "openrouter"
+    ]
+  },
+  "mistral/mistral-medium-latest": {
+    "id": "mistral/mistral-medium-latest",
+    "lab": "mistral",
+    "name": "Mistral Medium Latest",
+    "family": "mistral-medium",
+    "released": "2026-04-29",
+    "updated": "2026-04-29",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 262144
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/mistralai/Mistral-Medium-3.5-128B"
+      }
+    ],
+    "providers": [
+      "edenai",
+      "merge-gateway",
+      "mistral",
+      "requesty",
+      "tempr"
+    ]
+  },
+  "mistral/mistral-nemo": {
+    "id": "mistral/mistral-nemo",
+    "lab": "mistral",
+    "name": "Mistral Nemo",
+    "family": "mistral-nemo",
+    "released": "2024-07-18",
+    "updated": "2024-07-18",
+    "knowledge": "2024-07",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 128000
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/mistralai/Mistral-Nemo-Instruct-2407"
+      }
+    ],
+    "providers": [
+      "aimlapi",
+      "chutes",
+      "cortecs",
+      "digitalocean",
+      "helicone",
+      "kilo",
+      "mistral",
+      "nano-gpt",
+      "openrouter",
+      "ovhcloud",
+      "pioneer",
+      "prime",
+      "vercel"
+    ]
+  },
+  "mistral/mistral-nemo-12b-instruct": {
+    "id": "mistral/mistral-nemo-12b-instruct",
+    "lab": "mistral",
+    "name": "Mistral Nemo 12B Instruct",
+    "family": "mistral-nemo",
+    "released": "2025-01-01",
+    "updated": "2025-01-01",
+    "knowledge": "2024-12",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 16000,
+      "output": 4096
+    },
+    "providers": [
+      "inference"
+    ]
+  },
+  "mistral/mistral-nemo-instruct-2407": {
+    "id": "mistral/mistral-nemo-instruct-2407",
+    "lab": "mistral",
+    "name": "Mistral Nemo Instruct 2407",
+    "family": "mistral-nemo",
+    "released": "2024-07-01",
+    "updated": "2024-07-01",
+    "knowledge": "2024-05",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 4096
+    },
+    "providers": [
+      "io-net",
+      "meganova"
+    ]
+  },
+  "mistral/mistral-saba": {
+    "id": "mistral/mistral-saba",
+    "lab": "mistral",
+    "name": "Mistral Saba",
+    "family": "mistral",
+    "released": "2025-02-17",
+    "updated": "2025-02-17",
+    "knowledge": "2024-09-30",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32768,
+      "output": 26214
+    },
+    "providers": [
+      "aimlapi",
+      "kilo",
+      "nano-gpt",
+      "openrouter"
+    ]
+  },
+  "mistral/mistral-small-24b-instruct-2501": {
+    "id": "mistral/mistral-small-24b-instruct-2501",
+    "lab": "mistral",
+    "name": "Mistral Small 24B Instruct 2501",
+    "family": "mistral-small",
+    "released": "2025-01-30",
+    "updated": "2025-01-30",
+    "knowledge": "2023-10-31",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32768,
+      "output": 16384
+    },
+    "providers": [
+      "aimlapi",
+      "deepinfra",
+      "edenai",
+      "kilo",
+      "nano-gpt",
+      "openrouter"
+    ]
+  },
+  "mistral/mistral-small-2506": {
+    "id": "mistral/mistral-small-2506",
+    "lab": "mistral",
+    "name": "Mistral Small 2506",
+    "family": "mistral-small",
+    "released": "2025-06-20",
+    "updated": "2025-06-20",
+    "knowledge": "2025-03",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 16384
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/mistralai/Mistral-Small-3.2-24B-Instruct-2506"
+      }
+    ],
+    "providers": [
+      "greenpt",
+      "helicone",
+      "llmgateway",
+      "llmgateway-providers",
+      "mistral",
+      "scaleway"
+    ]
+  },
+  "mistral/mistral-small-2603": {
+    "id": "mistral/mistral-small-2603",
+    "lab": "mistral",
+    "name": "Mistral Small 2603",
+    "family": "mistral-small",
+    "released": "2026-03-16",
+    "updated": "2026-03-16",
+    "knowledge": "2025-06",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 256000,
+      "output": 256000
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/mistralai/Mistral-Small-4-119B-2603"
+      }
+    ],
+    "providers": [
+      "aimlapi",
+      "aki-io",
+      "cortecs",
+      "edenai",
+      "empiriolabs",
+      "infomaniak",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "lowrouter",
+      "mistral",
+      "nano-gpt",
+      "nvidia",
+      "openrouter",
+      "opper",
+      "pioneer",
+      "prime",
+      "requesty",
+      "sap-ai-core",
+      "tempr"
+    ]
+  },
+  "mistral/mistral-small-3-1-24b-instruct-2503": {
+    "id": "mistral/mistral-small-3-1-24b-instruct-2503",
+    "lab": "mistral",
+    "name": "Mistral Small 3.1 24B Instruct 2503",
+    "family": "mistral-small",
+    "released": "2025-03-17",
+    "updated": "2025-03-17",
+    "knowledge": "2024-06",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 16384
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503"
+      }
+    ],
+    "providers": [
+      "azure",
+      "azure-cognitive-services",
+      "cloudflare-workers-ai",
+      "cortecs",
+      "google-vertex",
+      "watsonx"
+    ]
+  },
+  "mistral/mistral-small-3.1-24b-instruct": {
+    "id": "mistral/mistral-small-3.1-24b-instruct",
+    "lab": "mistral",
+    "name": "Mistral Small 3.1 24B Instruct",
+    "family": "mistral-small",
+    "released": "2025-03-17",
+    "updated": "2025-03-17",
+    "knowledge": "2023-10-31",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 102400
+    },
+    "providers": [
+      "aimlapi",
+      "edenai",
+      "kilo",
+      "nano-gpt",
+      "openrouter"
+    ]
+  },
+  "mistral/mistral-small-3.2-24b-instruct": {
+    "id": "mistral/mistral-small-3.2-24b-instruct",
+    "lab": "mistral",
+    "name": "Mistral Small 3.2 24B Instruct",
+    "family": "mistral-small",
+    "released": "2025-06-20",
+    "updated": "2025-06-20",
+    "knowledge": "2023-10-31",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "image",
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 256000,
+      "output": 16384
+    },
+    "providers": [
+      "aimlapi",
+      "cortecs",
+      "kilo",
+      "nano-gpt",
+      "openrouter",
+      "ovhcloud"
+    ]
+  },
+  "mistral/mistral-small-3.2-24b-instruct-2506": {
+    "id": "mistral/mistral-small-3.2-24b-instruct-2506",
+    "lab": "mistral",
+    "name": "Mistral Small 3.2 24B Instruct 2506",
+    "family": "mistral-small",
+    "released": "2025-10-01",
+    "updated": "2025-10-01",
+    "knowledge": "2025-09",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32000,
+      "output": 8192
+    },
+    "providers": [
+      "berget",
+      "meganova"
+    ]
+  },
+  "mistral/mistral-small-4-119b": {
+    "id": "mistral/mistral-small-4-119b",
+    "lab": "mistral",
+    "name": "Mistral Small 4 119B",
+    "family": "mistral-small",
+    "released": "2026-03-15",
+    "updated": "2026-03-15",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 256000,
+      "output": 16384
+    },
+    "providers": [
+      "regolo-ai"
+    ]
+  },
+  "mistral/mistral-small-latest": {
+    "id": "mistral/mistral-small-latest",
+    "lab": "mistral",
+    "name": "Mistral Small Latest",
+    "family": "mistral-small",
+    "released": "2026-03-16",
+    "updated": "2026-03-16",
+    "knowledge": "2025-06",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 256000,
+      "output": 256000
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/mistralai/Mistral-Small-4-119B-2603"
+      }
+    ],
+    "providers": [
+      "edenai",
+      "merge-gateway",
+      "mistral",
+      "tempr",
+      "vercel"
+    ]
+  },
+  "mistral/mixtral-8x22b-instruct": {
+    "id": "mistral/mixtral-8x22b-instruct",
+    "lab": "mistral",
+    "name": "Mixtral 8x22B Instruct",
+    "family": "mistral",
+    "released": "2024-04-17",
+    "updated": "2024-04-17",
+    "knowledge": "2024-01-31",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 65536,
+      "output": 52428
+    },
+    "providers": [
+      "aimlapi",
+      "kilo",
+      "nano-gpt",
+      "nvidia",
+      "openrouter",
+      "prime"
+    ]
+  },
+  "mistral/mixtral-8x7b-instruct": {
+    "id": "mistral/mixtral-8x7b-instruct",
+    "lab": "mistral",
+    "name": "Mixtral 8x7B Instruct",
+    "released": "2023-12-10",
+    "updated": "2026-03-15",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32768,
+      "output": 16384
+    },
+    "providers": [
+      "nvidia"
+    ]
+  },
+  "mistral/mixtral-8x7b-instruct-v0.1": {
+    "id": "mistral/mixtral-8x7b-instruct-v0.1",
+    "lab": "mistral",
+    "name": "Mixtral 8x7B Instruct V0.1",
+    "released": "2023-12-11",
+    "updated": "2023-12-11",
+    "knowledge": "2023-09",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32000,
+      "output": 4096
+    },
+    "providers": [
+      "cortecs"
+    ]
+  },
+  "mistral/mn-12b-mag-mell-r1": {
+    "id": "mistral/mn-12b-mag-mell-r1",
+    "lab": "mistral",
+    "name": "MN 12B Mag Mell R1",
+    "family": "mistral-nemo",
+    "released": "2024-01-01",
+    "updated": "2024-07-01",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "structured_output": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 16384,
+      "input": 16384,
+      "output": 8192
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "mistral/mn-loosecannon-12b-v1": {
+    "id": "mistral/mn-loosecannon-12b-v1",
+    "lab": "mistral",
+    "name": "MN LooseCannon 12B V1",
+    "family": "mistral-nemo",
+    "released": "2024-01-01",
+    "updated": "2024-07-01",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "structured_output": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 16384,
+      "input": 16384,
+      "output": 8192
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "mistral/ms3.2-24b-magnum-diamond": {
+    "id": "mistral/ms3.2-24b-magnum-diamond",
+    "lab": "mistral",
+    "name": "MS3.2 24B Magnum Diamond",
+    "family": "mistral",
+    "released": "2025-11-24",
+    "updated": "2025-11-24",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "structured_output": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32768,
+      "input": 32768,
+      "output": 32768
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "mistral/ms3.2-the-omega-directive-24b-unslop-v2.0": {
+    "id": "mistral/ms3.2-the-omega-directive-24b-unslop-v2.0",
+    "lab": "mistral",
+    "name": "MS3.2 The Omega Directive 24B Unslop V2.0",
+    "family": "llama",
+    "released": "2025-12-08",
+    "updated": "2025-12-08",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "structured_output": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32768,
+      "input": 32768,
+      "output": 32768
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "mistral/open-mistral-nemo": {
+    "id": "mistral/open-mistral-nemo",
+    "lab": "mistral",
+    "name": "Open Mistral Nemo",
+    "family": "mistral-nemo",
+    "released": "2024-07-01",
+    "updated": "2024-07-01",
+    "knowledge": "2024-07",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 128000
+    },
+    "providers": [
+      "mistral"
+    ]
+  },
+  "mistral/pixtral-12b": {
+    "id": "mistral/pixtral-12b",
+    "lab": "mistral",
+    "name": "Pixtral 12B",
+    "family": "pixtral",
+    "released": "2024-09-11",
+    "updated": "2024-09-11",
+    "knowledge": "2024-09",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 128000
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/mistralai/Pixtral-12B-2409"
+      }
+    ],
+    "providers": [
+      "greenpt",
+      "mistral",
+      "pioneer"
+    ]
+  },
+  "mistral/pixtral-large-2502": {
+    "id": "mistral/pixtral-large-2502",
+    "lab": "mistral",
+    "name": "Pixtral Large 2502",
+    "family": "pixtral",
+    "released": "2025-04-08",
+    "updated": "2025-04-08",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 8192
+    },
+    "providers": [
+      "amazon-bedrock",
+      "cortecs",
+      "edenai"
+    ]
+  },
+  "mistral/pixtral-large-latest": {
+    "id": "mistral/pixtral-large-latest",
+    "lab": "mistral",
+    "name": "Pixtral Large Latest",
+    "family": "pixtral",
+    "released": "2024-11-01",
+    "updated": "2024-11-04",
+    "knowledge": "2024-11",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 128000
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/mistralai/Pixtral-Large-Instruct-2411"
+      }
+    ],
+    "providers": [
+      "merge-gateway",
+      "mistral"
+    ]
+  },
+  "mistral/starcannon-unleashed-12b-v1.0": {
+    "id": "mistral/starcannon-unleashed-12b-v1.0",
+    "lab": "mistral",
+    "name": "Starcannon Unleashed 12B V1.0",
+    "family": "mistral-nemo",
+    "released": "2024-01-01",
+    "updated": "2024-07-01",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "structured_output": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 16384,
+      "input": 16384,
+      "output": 8192
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "mistral/voxtral-mini-3b": {
+    "id": "mistral/voxtral-mini-3b",
+    "lab": "mistral",
+    "name": "Voxtral Mini 3B",
+    "family": "voxtral",
+    "released": "2025-07",
+    "updated": "2025-07",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "structured_output": false,
+      "temperature": true,
+      "input": [
+        "audio"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32000,
+      "output": 32000
+    },
+    "providers": [
+      "privatemode-ai"
+    ]
+  },
+  "mistral/voxtral-mini-3b-2507": {
+    "id": "mistral/voxtral-mini-3b-2507",
+    "lab": "mistral",
+    "name": "Voxtral Mini 3B 2507",
+    "family": "voxtral",
+    "released": "2025-07-15",
+    "updated": "2025-07-15",
+    "open_weights": true,
+    "license": "Apache 2.0",
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "audio"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32768,
+      "output": 32768
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/mistralai/Voxtral-Mini-3B-2507"
+      }
+    ],
+    "providers": [
+      "amazon-bedrock",
+      "edenai"
+    ]
+  },
+  "mistral/voxtral-mini-latest": {
+    "id": "mistral/voxtral-mini-latest",
+    "lab": "mistral",
+    "name": "Voxtral Mini Latest",
+    "family": "voxtral",
+    "type": "transcription",
+    "released": "2026-02-04",
+    "updated": "2026-02-04",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "audio"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "mistral"
+    ]
+  },
+  "mistral/voxtral-mini-transcribe-3": {
+    "id": "mistral/voxtral-mini-transcribe-3",
+    "lab": "mistral",
+    "name": "Voxtral Mini Transcribe 3",
+    "family": "mistral",
+    "type": "transcription",
+    "released": "2026-10-20",
+    "updated": "2026-10-20",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "audio"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "mistral/voxtral-mini-tts-3": {
+    "id": "mistral/voxtral-mini-tts-3",
+    "lab": "mistral",
+    "name": "Voxtral Mini TTS 3",
+    "family": "mistral",
+    "type": "speech",
+    "released": "2026-10-20",
+    "updated": "2026-10-20",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "audio"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "mistral/voxtral-mini-tts-latest": {
+    "id": "mistral/voxtral-mini-tts-latest",
+    "lab": "mistral",
+    "name": "Voxtral Mini TTS Latest",
+    "family": "voxtral",
+    "type": "speech",
+    "released": "2026-03-23",
+    "updated": "2026-03-23",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "audio"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "mistral"
+    ]
+  },
+  "mistral/voxtral-small-24b-2507": {
+    "id": "mistral/voxtral-small-24b-2507",
+    "lab": "mistral",
+    "name": "Voxtral Small 24B 2507",
+    "family": "voxtral",
+    "released": "2025-07-15",
+    "updated": "2025-07-15",
+    "open_weights": true,
+    "license": "Apache 2.0",
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "audio"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32768,
+      "output": 32768
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/mistralai/Voxtral-Small-24B-2507"
+      }
+    ],
+    "providers": [
+      "aimlapi",
+      "amazon-bedrock",
+      "cortecs",
+      "edenai",
+      "evroc",
+      "greenpt",
+      "kilo",
+      "mistral",
+      "openrouter"
+    ]
+  },
+  "mistral/voxtral-small-latest": {
+    "id": "mistral/voxtral-small-latest",
+    "lab": "mistral",
+    "name": "Voxtral Small Latest",
+    "family": "voxtral",
+    "released": "2025-07-15",
+    "updated": "2025-07-15",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "audio"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32000,
+      "output": 32000
+    },
+    "providers": [
+      "edenai",
+      "llmtr",
+      "mistral",
+      "tempr"
+    ]
+  },
+  "mistral/voxtral-small-transcribe-3": {
+    "id": "mistral/voxtral-small-transcribe-3",
+    "lab": "mistral",
+    "name": "Voxtral Small Transcribe 3",
+    "family": "mistral",
+    "type": "transcription",
+    "released": "2026-10-20",
+    "updated": "2026-10-20",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "audio"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  }
+}

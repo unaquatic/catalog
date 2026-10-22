@@ -1,0 +1,31 @@
+{
+  "marinaraspaghetti/nemomix-unleashed-12b": {
+    "id": "marinaraspaghetti/nemomix-unleashed-12b",
+    "lab": "marinaraspaghetti",
+    "name": "NemoMix Unleashed 12B",
+    "family": "mistral-nemo",
+    "released": "2024-01-01",
+    "updated": "2024-07-01",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "structured_output": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32768,
+      "input": 32768,
+      "output": 8192
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  }
+}

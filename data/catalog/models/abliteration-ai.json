@@ -1,0 +1,93 @@
+{
+  "abliteration-ai/abliterated-model": {
+    "id": "abliteration-ai/abliterated-model",
+    "lab": "abliteration-ai",
+    "name": "Abliterated Model",
+    "released": "2026-01-06",
+    "updated": "2026-07-28",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": false,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 150000,
+      "input": 150000,
+      "output": 8192
+    },
+    "providers": [
+      "abliteration-ai",
+      "nano-gpt"
+    ]
+  },
+  "abliteration-ai/abliterated-model-large": {
+    "id": "abliteration-ai/abliterated-model-large",
+    "lab": "abliteration-ai",
+    "name": "Abliterated Model Large",
+    "released": "2026-07-25",
+    "updated": "2026-07-28",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "input": 1000000,
+      "output": 999990
+    },
+    "providers": [
+      "abliteration-ai",
+      "nano-gpt"
+    ]
+  },
+  "abliteration-ai/abliterated-model-large-v2": {
+    "id": "abliteration-ai/abliterated-model-large-v2",
+    "lab": "abliteration-ai",
+    "name": "Abliterated Model Large V2",
+    "released": "2026-08-29",
+    "updated": "2026-08-31",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "input": 1000000,
+      "output": 999990
+    },
+    "providers": [
+      "abliteration-ai",
+      "nano-gpt"
+    ]
+  }
+}

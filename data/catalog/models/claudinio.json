@@ -1,0 +1,62 @@
+{
+  "claudinio/claudinio": {
+    "id": "claudinio/claudinio",
+    "lab": "claudinio",
+    "name": "Claudinio",
+    "released": "2026-05-12",
+    "updated": "2026-06-02",
+    "knowledge": "2026-05",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "input": [
+        "text",
+        "image",
+        "audio",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 256000,
+      "output": 64000
+    },
+    "providers": [
+      "claudinio"
+    ]
+  },
+  "claudinio/claudius": {
+    "id": "claudinio/claudius",
+    "lab": "claudinio",
+    "name": "Claudius",
+    "released": "2026-05-12",
+    "updated": "2026-05-12",
+    "knowledge": "2026-05",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "input": [
+        "text",
+        "image",
+        "audio",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 256000,
+      "output": 64000
+    },
+    "providers": [
+      "claudinio"
+    ]
+  }
+}

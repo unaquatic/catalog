@@ -1,0 +1,3443 @@
+{
+  "id": "alibaba-cn",
+  "name": "Alibaba (China)",
+  "kind": "gateway",
+  "endpoint": {
+    "format": "openai-chat",
+    "api": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+    "auth": {
+      "scheme": "bearer"
+    },
+    "env": [
+      "DASHSCOPE_API_KEY"
+    ]
+  },
+  "doc": "https://www.alibabacloud.com/help/en/model-studio/models",
+  "models": {
+    "alibaba/qvq-max": {
+      "name": "QVQ Max",
+      "family": "qvq",
+      "released": "2025-03-25",
+      "updated": "2025-03-25",
+      "knowledge": "2024-04",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 131072,
+        "output": 8192
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "qvq-max",
+        "name": "QVQ Max"
+      },
+      "price": {
+        "input": 1.147,
+        "output": 4.588
+      },
+      "status": "deprecated"
+    },
+    "alibaba/qwen-deep-research": {
+      "name": "Qwen Deep Research",
+      "family": "qwen",
+      "released": "2024-01",
+      "updated": "2024-01",
+      "knowledge": "2024-04",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 32768
+      },
+      "provider_options": {
+        "id": "qwen-deep-research",
+        "name": "Qwen Deep Research"
+      },
+      "price": {
+        "input": 7.742,
+        "output": 23.367
+      }
+    },
+    "alibaba/qwen-doc-turbo": {
+      "name": "Qwen Doc Turbo",
+      "family": "qwen",
+      "released": "2024-01",
+      "updated": "2024-01",
+      "knowledge": "2024-04",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 131072,
+        "output": 8192
+      },
+      "provider_options": {
+        "id": "qwen-doc-turbo",
+        "name": "Qwen Doc Turbo"
+      },
+      "price": {
+        "input": 0.087,
+        "output": 0.144
+      }
+    },
+    "alibaba/qwen-flash": {
+      "name": "Qwen Flash",
+      "family": "qwen",
+      "released": "2025-07-28",
+      "updated": "2025-07-28",
+      "knowledge": "2024-04",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 32768
+      },
+      "reasoning": {
+        "mandatory": false,
+        "budget": {
+          "max": 81920
+        }
+      },
+      "provider_options": {
+        "id": "qwen-flash",
+        "name": "Qwen Flash"
+      },
+      "price": {
+        "input": 0.022,
+        "output": 0.216,
+        "tiers": [
+          {
+            "above": 128000,
+            "input": 0.087,
+            "output": 0.861
+          },
+          {
+            "above": 256000,
+            "input": 0.173,
+            "output": 1.721
+          }
+        ]
+      }
+    },
+    "alibaba/qwen-long": {
+      "name": "Qwen Long",
+      "family": "qwen",
+      "released": "2025-01-25",
+      "updated": "2025-01-25",
+      "knowledge": "2024-04",
+      "open_weights": false,
+      "capabilities": {
+        "tools": false,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 10000000,
+        "output": 8192
+      },
+      "provider_options": {
+        "id": "qwen-long",
+        "name": "Qwen Long"
+      },
+      "price": {
+        "input": 0.072,
+        "output": 0.287
+      }
+    },
+    "alibaba/qwen-math-plus": {
+      "name": "Qwen Math Plus",
+      "family": "qwen",
+      "released": "2024-08-16",
+      "updated": "2024-09-19",
+      "knowledge": "2024-04",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 4096,
+        "output": 3072
+      },
+      "provider_options": {
+        "id": "qwen-math-plus",
+        "name": "Qwen Math Plus"
+      },
+      "price": {
+        "input": 0.574,
+        "output": 1.721
+      },
+      "status": "deprecated"
+    },
+    "alibaba/qwen-math-turbo": {
+      "name": "Qwen Math Turbo",
+      "family": "qwen",
+      "released": "2024-09-19",
+      "updated": "2024-09-19",
+      "knowledge": "2024-04",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 4096,
+        "output": 3072
+      },
+      "provider_options": {
+        "id": "qwen-math-turbo",
+        "name": "Qwen Math Turbo"
+      },
+      "price": {
+        "input": 0.287,
+        "output": 0.861
+      },
+      "status": "deprecated"
+    },
+    "alibaba/qwen-max": {
+      "name": "Qwen Max",
+      "family": "qwen",
+      "released": "2024-04-03",
+      "updated": "2025-01-25",
+      "knowledge": "2024-04",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 131072,
+        "output": 8192
+      },
+      "provider_options": {
+        "id": "qwen-max",
+        "name": "Qwen Max"
+      },
+      "price": {
+        "input": 0.345,
+        "output": 1.377
+      }
+    },
+    "alibaba/qwen-mt-plus": {
+      "name": "Qwen MT Plus",
+      "family": "qwen",
+      "released": "2025-01",
+      "updated": "2025-01",
+      "knowledge": "2024-04",
+      "open_weights": false,
+      "capabilities": {
+        "tools": false,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 16384,
+        "output": 8192
+      },
+      "provider_options": {
+        "id": "qwen-mt-plus",
+        "name": "Qwen-MT Plus"
+      },
+      "price": {
+        "input": 0.259,
+        "output": 0.775
+      }
+    },
+    "alibaba/qwen-mt-turbo": {
+      "name": "Qwen MT Turbo",
+      "family": "qwen",
+      "released": "2025-01",
+      "updated": "2025-01",
+      "knowledge": "2024-04",
+      "open_weights": false,
+      "capabilities": {
+        "tools": false,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 16384,
+        "output": 8192
+      },
+      "provider_options": {
+        "id": "qwen-mt-turbo",
+        "name": "Qwen-MT Turbo"
+      },
+      "price": {
+        "input": 0.101,
+        "output": 0.28
+      },
+      "status": "deprecated"
+    },
+    "alibaba/qwen-omni-turbo": {
+      "name": "Qwen Omni Turbo",
+      "family": "qwen",
+      "released": "2025-01-19",
+      "updated": "2025-03-26",
+      "knowledge": "2024-04",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "audio",
+          "video"
+        ],
+        "output": [
+          "text",
+          "audio"
+        ]
+      },
+      "limit": {
+        "context": 32768,
+        "output": 2048
+      },
+      "provider_options": {
+        "id": "qwen-omni-turbo",
+        "name": "Qwen-Omni Turbo"
+      },
+      "price": {
+        "input": 0.058,
+        "output": 0.23,
+        "input_audio": 3.584,
+        "output_audio": 7.168
+      },
+      "status": "deprecated"
+    },
+    "alibaba/qwen-omni-turbo-realtime": {
+      "name": "Qwen Omni Turbo Realtime",
+      "family": "qwen",
+      "type": "realtime",
+      "released": "2025-05-08",
+      "updated": "2025-05-08",
+      "knowledge": "2024-04",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "audio"
+        ],
+        "output": [
+          "text",
+          "audio"
+        ]
+      },
+      "limit": {
+        "context": 32768,
+        "output": 2048
+      },
+      "provider_options": {
+        "id": "qwen-omni-turbo-realtime",
+        "name": "Qwen-Omni Turbo Realtime"
+      },
+      "price": {
+        "input": 0.23,
+        "output": 0.918,
+        "input_audio": 3.584,
+        "output_audio": 7.168
+      },
+      "status": "deprecated"
+    },
+    "alibaba/qwen-plus": {
+      "name": "Qwen Plus",
+      "family": "qwen",
+      "released": "2024-01-25",
+      "updated": "2025-09-11",
+      "knowledge": "2024-04",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 32768
+      },
+      "reasoning": {
+        "mandatory": false,
+        "budget": {
+          "max": 81920
+        }
+      },
+      "provider_options": {
+        "id": "qwen-plus",
+        "name": "Qwen Plus"
+      },
+      "price": {
+        "input": 0.115,
+        "output": 0.287,
+        "cache_read": 0.012,
+        "cache_write": 0.144,
+        "reasoning": 1.147,
+        "tiers": [
+          {
+            "above": 128000,
+            "input": 0.345,
+            "output": 2.868,
+            "reasoning": 3.441
+          },
+          {
+            "above": 256000,
+            "input": 0.689,
+            "output": 6.881,
+            "reasoning": 9.175
+          }
+        ]
+      }
+    },
+    "alibaba/qwen-plus-character": {
+      "name": "Qwen Plus Character",
+      "family": "qwen",
+      "released": "2024-01",
+      "updated": "2024-01",
+      "knowledge": "2024-04",
+      "open_weights": false,
+      "capabilities": {
+        "tools": false,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 32768,
+        "output": 4096
+      },
+      "provider_options": {
+        "id": "qwen-plus-character",
+        "name": "Qwen Plus Character"
+      },
+      "price": {
+        "input": 0.115,
+        "output": 0.287
+      }
+    },
+    "alibaba/qwen-turbo": {
+      "name": "Qwen Turbo",
+      "family": "qwen",
+      "released": "2024-11-01",
+      "updated": "2025-07-15",
+      "knowledge": "2024-04",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 16384
+      },
+      "reasoning": {
+        "mandatory": false,
+        "budget": {
+          "max": 38912
+        }
+      },
+      "provider_options": {
+        "id": "qwen-turbo",
+        "name": "Qwen Turbo"
+      },
+      "price": {
+        "input": 0.044,
+        "output": 0.087,
+        "reasoning": 0.431
+      },
+      "status": "deprecated"
+    },
+    "alibaba/qwen-vl-max": {
+      "name": "Qwen VL Max",
+      "family": "qwen",
+      "released": "2024-04-08",
+      "updated": "2025-08-13",
+      "knowledge": "2024-04",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 131072,
+        "output": 8192
+      },
+      "provider_options": {
+        "id": "qwen-vl-max",
+        "name": "Qwen-VL Max"
+      },
+      "price": {
+        "input": 0.23,
+        "output": 0.574
+      },
+      "status": "deprecated"
+    },
+    "alibaba/qwen-vl-ocr": {
+      "name": "Qwen VL OCR",
+      "family": "qwen",
+      "released": "2024-10-28",
+      "updated": "2026-09-11",
+      "knowledge": "2024-04",
+      "open_weights": false,
+      "capabilities": {
+        "tools": false,
+        "attachments": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 34096,
+        "output": 4096
+      },
+      "provider_options": {
+        "id": "qwen-vl-ocr",
+        "name": "Qwen-VL OCR"
+      },
+      "price": {
+        "input": 0.043,
+        "output": 0.072
+      }
+    },
+    "alibaba/qwen-vl-plus": {
+      "name": "Qwen VL Plus",
+      "family": "qwen",
+      "released": "2024-01-25",
+      "updated": "2025-08-15",
+      "knowledge": "2024-04",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 131072,
+        "output": 8192
+      },
+      "provider_options": {
+        "id": "qwen-vl-plus",
+        "name": "Qwen-VL Plus"
+      },
+      "price": {
+        "input": 0.115,
+        "output": 0.287
+      },
+      "status": "deprecated"
+    },
+    "alibaba/qwen2-5-vl-72b-instruct": {
+      "name": "Qwen2.5 VL 72B Instruct",
+      "family": "qwen",
+      "released": "2024-09",
+      "updated": "2024-09",
+      "knowledge": "2024-04",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 131072,
+        "output": 8192
+      },
+      "provider_options": {
+        "id": "qwen2-5-vl-72b-instruct",
+        "name": "Qwen2.5-VL 72B Instruct"
+      },
+      "price": {
+        "input": 2.294,
+        "output": 6.881
+      },
+      "status": "deprecated"
+    },
+    "alibaba/qwen2.5-14b-instruct": {
+      "name": "Qwen2.5 14B Instruct",
+      "family": "qwen",
+      "released": "2024-09",
+      "updated": "2024-09",
+      "knowledge": "2024-04",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 131072,
+        "output": 8192
+      },
+      "provider_options": {
+        "id": "qwen2-5-14b-instruct",
+        "name": "Qwen2.5 14B Instruct"
+      },
+      "price": {
+        "input": 0.144,
+        "output": 0.431
+      },
+      "status": "deprecated"
+    },
+    "alibaba/qwen2.5-32b-instruct": {
+      "name": "Qwen2.5 32B Instruct",
+      "family": "qwen",
+      "released": "2024-09",
+      "updated": "2024-09",
+      "knowledge": "2024-04",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 131072,
+        "output": 8192
+      },
+      "provider_options": {
+        "id": "qwen2-5-32b-instruct",
+        "name": "Qwen2.5 32B Instruct"
+      },
+      "price": {
+        "input": 0.287,
+        "output": 0.861
+      },
+      "status": "deprecated"
+    },
+    "alibaba/qwen2.5-72b-instruct": {
+      "name": "Qwen2.5 72B Instruct",
+      "family": "qwen",
+      "released": "2024-09",
+      "updated": "2024-09",
+      "knowledge": "2024-04",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 131072,
+        "output": 8192
+      },
+      "provider_options": {
+        "id": "qwen2-5-72b-instruct",
+        "name": "Qwen2.5 72B Instruct"
+      },
+      "price": {
+        "input": 0.574,
+        "output": 1.721
+      },
+      "status": "deprecated"
+    },
+    "alibaba/qwen2.5-7b-instruct": {
+      "name": "Qwen2.5 7B Instruct",
+      "family": "qwen",
+      "released": "2024-09",
+      "updated": "2024-09",
+      "knowledge": "2024-04",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 131072,
+        "output": 8192
+      },
+      "provider_options": {
+        "id": "qwen2-5-7b-instruct",
+        "name": "Qwen2.5 7B Instruct"
+      },
+      "price": {
+        "input": 0.072,
+        "output": 0.144
+      },
+      "status": "deprecated"
+    },
+    "alibaba/qwen2.5-coder-32b-instruct": {
+      "name": "Qwen2.5 Coder 32B Instruct",
+      "family": "qwen",
+      "released": "2024-11",
+      "updated": "2024-11",
+      "knowledge": "2024-04",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 131072,
+        "output": 8192
+      },
+      "provider_options": {
+        "id": "qwen2-5-coder-32b-instruct",
+        "name": "Qwen2.5-Coder 32B Instruct"
+      },
+      "price": {
+        "input": 0.287,
+        "output": 0.861
+      },
+      "status": "deprecated"
+    },
+    "alibaba/qwen2.5-coder-7b-instruct": {
+      "name": "Qwen2.5 Coder 7B Instruct",
+      "family": "qwen",
+      "released": "2024-11",
+      "updated": "2024-11",
+      "knowledge": "2024-04",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 131072,
+        "output": 8192
+      },
+      "provider_options": {
+        "id": "qwen2-5-coder-7b-instruct",
+        "name": "Qwen2.5-Coder 7B Instruct"
+      },
+      "price": {
+        "input": 0.144,
+        "output": 0.287
+      },
+      "status": "deprecated"
+    },
+    "alibaba/qwen2.5-math-72b-instruct": {
+      "name": "Qwen2.5 Math 72B Instruct",
+      "family": "qwen",
+      "released": "2024-09",
+      "updated": "2024-09",
+      "knowledge": "2024-04",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 4096,
+        "output": 3072
+      },
+      "provider_options": {
+        "id": "qwen2-5-math-72b-instruct",
+        "name": "Qwen2.5-Math 72B Instruct"
+      },
+      "price": {
+        "input": 0.574,
+        "output": 1.721
+      },
+      "status": "deprecated"
+    },
+    "alibaba/qwen2.5-math-7b-instruct": {
+      "name": "Qwen2.5 Math 7B Instruct",
+      "family": "qwen",
+      "released": "2024-09",
+      "updated": "2024-09",
+      "knowledge": "2024-04",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 4096,
+        "output": 3072
+      },
+      "provider_options": {
+        "id": "qwen2-5-math-7b-instruct",
+        "name": "Qwen2.5-Math 7B Instruct"
+      },
+      "price": {
+        "input": 0.144,
+        "output": 0.287
+      },
+      "status": "deprecated"
+    },
+    "alibaba/qwen2.5-omni-7b": {
+      "name": "Qwen2.5 Omni 7B",
+      "family": "qwen",
+      "released": "2024-12",
+      "updated": "2024-12",
+      "knowledge": "2024-04",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "audio",
+          "video"
+        ],
+        "output": [
+          "text",
+          "audio"
+        ]
+      },
+      "limit": {
+        "context": 32768,
+        "output": 2048
+      },
+      "provider_options": {
+        "id": "qwen2-5-omni-7b",
+        "name": "Qwen2.5-Omni 7B"
+      },
+      "price": {
+        "input": 0.087,
+        "output": 0.345,
+        "input_audio": 5.448
+      },
+      "status": "deprecated"
+    },
+    "alibaba/qwen2.5-vl-7b-instruct": {
+      "name": "Qwen2.5 VL 7B Instruct",
+      "family": "qwen",
+      "released": "2024-09",
+      "updated": "2024-09",
+      "knowledge": "2024-04",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 131072,
+        "output": 8192
+      },
+      "provider_options": {
+        "id": "qwen2-5-vl-7b-instruct",
+        "name": "Qwen2.5-VL 7B Instruct"
+      },
+      "price": {
+        "input": 0.287,
+        "output": 0.717
+      },
+      "status": "deprecated"
+    },
+    "alibaba/qwen3-14b": {
+      "name": "Qwen3 14B",
+      "family": "qwen",
+      "released": "2025-04",
+      "updated": "2025-04",
+      "knowledge": "2025-04",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 131072,
+        "output": 8192
+      },
+      "reasoning": {
+        "mandatory": false,
+        "budget": {
+          "max": 38912
+        }
+      },
+      "provider_options": {
+        "id": "qwen3-14b",
+        "name": "Qwen3 14B"
+      },
+      "price": {
+        "input": 0.144,
+        "output": 0.574,
+        "reasoning": 1.434
+      },
+      "status": "deprecated"
+    },
+    "alibaba/qwen3-235b-a22b": {
+      "name": "Qwen3 235B A22B",
+      "family": "qwen",
+      "released": "2025-04",
+      "updated": "2025-04",
+      "knowledge": "2025-04",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 131072,
+        "output": 16384
+      },
+      "reasoning": {
+        "mandatory": false,
+        "budget": {
+          "max": 38912
+        }
+      },
+      "provider_options": {
+        "id": "qwen3-235b-a22b",
+        "name": "Qwen3 235B-A22B"
+      },
+      "price": {
+        "input": 0.287,
+        "output": 1.147,
+        "reasoning": 2.868
+      },
+      "status": "deprecated"
+    },
+    "alibaba/qwen3-32b": {
+      "name": "Qwen3 32B",
+      "family": "qwen",
+      "released": "2025-04",
+      "updated": "2025-04",
+      "knowledge": "2025-04",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 131072,
+        "output": 16384
+      },
+      "reasoning": {
+        "mandatory": false,
+        "budget": {
+          "max": 38912
+        }
+      },
+      "provider_options": {
+        "id": "qwen3-32b",
+        "name": "Qwen3 32B"
+      },
+      "price": {
+        "input": 0.287,
+        "output": 1.147,
+        "reasoning": 2.868
+      },
+      "status": "deprecated"
+    },
+    "alibaba/qwen3-8b": {
+      "name": "Qwen3 8B",
+      "family": "qwen",
+      "released": "2025-04",
+      "updated": "2025-04",
+      "knowledge": "2025-04",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 131072,
+        "output": 8192
+      },
+      "reasoning": {
+        "mandatory": false,
+        "budget": {
+          "max": 38912
+        }
+      },
+      "provider_options": {
+        "id": "qwen3-8b",
+        "name": "Qwen3 8B"
+      },
+      "price": {
+        "input": 0.072,
+        "output": 0.287,
+        "reasoning": 0.717
+      },
+      "status": "deprecated"
+    },
+    "alibaba/qwen3-asr-flash": {
+      "name": "Qwen3 ASR Flash",
+      "family": "qwen",
+      "type": "transcription",
+      "released": "2025-09-08",
+      "updated": "2025-09-08",
+      "knowledge": "2024-04",
+      "open_weights": false,
+      "capabilities": {
+        "tools": false,
+        "attachments": false,
+        "temperature": false,
+        "input": [
+          "audio"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 53248,
+        "output": 4096
+      },
+      "provider_options": {
+        "id": "qwen3-asr-flash",
+        "name": "Qwen3-ASR Flash"
+      },
+      "price": {
+        "input": 0.032,
+        "output": 0.032
+      }
+    },
+    "alibaba/qwen3-coder-30b-a3b-instruct": {
+      "name": "Qwen3 Coder 30B A3B Instruct",
+      "family": "qwen",
+      "released": "2025-04",
+      "updated": "2025-04",
+      "knowledge": "2025-04",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 65536
+      },
+      "provider_options": {
+        "id": "qwen3-coder-30b-a3b-instruct",
+        "name": "Qwen3-Coder 30B-A3B Instruct"
+      },
+      "price": {
+        "input": 0.216,
+        "output": 0.861,
+        "tiers": [
+          {
+            "above": 32000,
+            "input": 0.323,
+            "output": 1.291
+          },
+          {
+            "above": 128000,
+            "input": 0.538,
+            "output": 2.151
+          }
+        ]
+      },
+      "status": "deprecated"
+    },
+    "alibaba/qwen3-coder-480b-a35b-instruct": {
+      "name": "Qwen3 Coder 480B A35B Instruct",
+      "family": "qwen",
+      "released": "2025-04",
+      "updated": "2025-04",
+      "knowledge": "2025-04",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 65536
+      },
+      "provider_options": {
+        "id": "qwen3-coder-480b-a35b-instruct",
+        "name": "Qwen3-Coder 480B-A35B Instruct"
+      },
+      "price": {
+        "input": 0.861,
+        "output": 3.441,
+        "tiers": [
+          {
+            "above": 32000,
+            "input": 1.291,
+            "output": 5.161
+          },
+          {
+            "above": 128000,
+            "input": 2.151,
+            "output": 8.602
+          }
+        ]
+      },
+      "status": "deprecated"
+    },
+    "alibaba/qwen3-coder-flash": {
+      "name": "Qwen3 Coder Flash",
+      "family": "qwen",
+      "released": "2025-07-28",
+      "updated": "2025-07-28",
+      "knowledge": "2025-04",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 65536
+      },
+      "provider_options": {
+        "id": "qwen3-coder-flash",
+        "name": "Qwen3 Coder Flash"
+      },
+      "price": {
+        "input": 0.144,
+        "output": 0.574,
+        "tiers": [
+          {
+            "above": 32000,
+            "input": 0.216,
+            "output": 0.861
+          },
+          {
+            "above": 128000,
+            "input": 0.359,
+            "output": 1.434
+          },
+          {
+            "above": 256000,
+            "input": 0.717,
+            "output": 3.584
+          }
+        ]
+      }
+    },
+    "alibaba/qwen3-coder-plus": {
+      "name": "Qwen3 Coder Plus",
+      "family": "qwen",
+      "released": "2025-07-23",
+      "updated": "2026-09-11",
+      "knowledge": "2025-04",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "provider_options": {
+        "id": "qwen3-coder-plus",
+        "name": "Qwen3 Coder Plus"
+      },
+      "price": {
+        "input": 0.574,
+        "output": 2.296,
+        "tiers": [
+          {
+            "above": 32000,
+            "input": 0.861,
+            "output": 3.444
+          },
+          {
+            "above": 128000,
+            "input": 1.435,
+            "output": 5.74
+          },
+          {
+            "above": 256000,
+            "input": 2.87,
+            "output": 28.7
+          }
+        ]
+      },
+      "status": "deprecated"
+    },
+    "alibaba/qwen3-max": {
+      "name": "Qwen3 Max",
+      "family": "qwen",
+      "released": "2026-01-23",
+      "updated": "2026-09-22",
+      "knowledge": "2025-04",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 65536
+      },
+      "reasoning": {
+        "mandatory": false,
+        "budget": {
+          "max": 81920
+        }
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "qwen3-max",
+        "name": "Qwen3 Max"
+      },
+      "price": {
+        "input": 0.359,
+        "output": 1.434,
+        "reasoning": 1.434,
+        "tiers": [
+          {
+            "above": 32000,
+            "input": 0.574,
+            "output": 2.294,
+            "reasoning": 2.294
+          },
+          {
+            "above": 128000,
+            "input": 1.004,
+            "output": 4.014,
+            "reasoning": 4.014
+          }
+        ]
+      },
+      "status": "deprecated"
+    },
+    "alibaba/qwen3-next-80b-a3b-instruct": {
+      "name": "Qwen3 Next 80B A3B Instruct",
+      "family": "qwen",
+      "released": "2025-09",
+      "updated": "2025-09",
+      "knowledge": "2025-04",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 131072,
+        "output": 32768
+      },
+      "provider_options": {
+        "id": "qwen3-next-80b-a3b-instruct",
+        "name": "Qwen3-Next 80B-A3B Instruct"
+      },
+      "price": {
+        "input": 0.144,
+        "output": 0.574
+      },
+      "status": "deprecated"
+    },
+    "alibaba/qwen3-next-80b-a3b-thinking": {
+      "name": "Qwen3 Next 80B A3B Thinking",
+      "family": "qwen",
+      "released": "2025-09",
+      "updated": "2025-09",
+      "knowledge": "2025-04",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 131072,
+        "output": 32768
+      },
+      "reasoning": {
+        "budget": {}
+      },
+      "provider_options": {
+        "id": "qwen3-next-80b-a3b-thinking",
+        "name": "Qwen3-Next 80B-A3B (Thinking)"
+      },
+      "price": {
+        "input": 0.144,
+        "output": 1.434
+      },
+      "status": "deprecated"
+    },
+    "alibaba/qwen3-omni-flash": {
+      "name": "Qwen3 Omni Flash",
+      "family": "qwen",
+      "released": "2025-09-15",
+      "updated": "2025-09-15",
+      "knowledge": "2024-04",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "audio",
+          "video"
+        ],
+        "output": [
+          "text",
+          "audio"
+        ]
+      },
+      "limit": {
+        "context": 65536,
+        "output": 16384
+      },
+      "reasoning": {
+        "mandatory": false
+      },
+      "provider_options": {
+        "id": "qwen3-omni-flash",
+        "name": "Qwen3-Omni Flash"
+      },
+      "price": {
+        "input": 0.258,
+        "output": 0.989,
+        "input_audio": 2.265,
+        "output_audio": 8.974
+      }
+    },
+    "alibaba/qwen3-omni-flash-realtime": {
+      "name": "Qwen3 Omni Flash Realtime",
+      "family": "qwen",
+      "type": "realtime",
+      "released": "2025-09-15",
+      "updated": "2025-09-15",
+      "knowledge": "2024-04",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "audio"
+        ],
+        "output": [
+          "text",
+          "audio"
+        ]
+      },
+      "limit": {
+        "context": 65536,
+        "output": 16384
+      },
+      "provider_options": {
+        "id": "qwen3-omni-flash-realtime",
+        "name": "Qwen3-Omni Flash Realtime"
+      },
+      "price": {
+        "input": 0.23,
+        "output": 0.918,
+        "input_audio": 3.584,
+        "output_audio": 7.168
+      },
+      "status": "deprecated"
+    },
+    "alibaba/qwen3-vl-235b-a22b-instruct": {
+      "name": "Qwen3 VL 235B A22B Instruct",
+      "family": "qwen",
+      "released": "2025-04",
+      "updated": "2025-04",
+      "knowledge": "2025-04",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 131072,
+        "output": 32768
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "qwen3-vl-235b-a22b",
+        "name": "Qwen3-VL 235B-A22B"
+      },
+      "price": {
+        "input": 0.286705,
+        "output": 1.14682,
+        "reasoning": 2.867051
+      },
+      "status": "deprecated"
+    },
+    "alibaba/qwen3-vl-30b-a3b": {
+      "name": "Qwen3 VL 30B A3B",
+      "family": "qwen",
+      "released": "2025-04",
+      "updated": "2025-04",
+      "knowledge": "2025-04",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 131072,
+        "output": 32768
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "qwen3-vl-30b-a3b",
+        "name": "Qwen3-VL 30B-A3B"
+      },
+      "price": {
+        "input": 0.108,
+        "output": 0.431,
+        "reasoning": 1.076
+      },
+      "status": "deprecated"
+    },
+    "alibaba/qwen3-vl-plus": {
+      "name": "Qwen3 VL Plus",
+      "family": "qwen",
+      "released": "2025-09-23",
+      "updated": "2025-09-23",
+      "knowledge": "2025-04",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 32768
+      },
+      "reasoning": {
+        "mandatory": false,
+        "budget": {
+          "max": 81920
+        }
+      },
+      "provider_options": {
+        "id": "qwen3-vl-plus",
+        "name": "Qwen3-VL Plus"
+      },
+      "price": {
+        "input": 0.143353,
+        "output": 1.433525,
+        "tiers": [
+          {
+            "above": 32000,
+            "input": 0.215,
+            "output": 2.15
+          },
+          {
+            "above": 128000,
+            "input": 0.43,
+            "output": 4.301
+          }
+        ]
+      }
+    },
+    "alibaba/qwen3.5-397b-a17b": {
+      "name": "Qwen3.5 397B A17B",
+      "family": "qwen",
+      "released": "2026-02-16",
+      "updated": "2026-02-16",
+      "knowledge": "2025-04",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 65536
+      },
+      "reasoning": {
+        "mandatory": false,
+        "budget": {
+          "max": 81920
+        }
+      },
+      "provider_options": {
+        "id": "qwen3.5-397b-a17b",
+        "name": "Qwen3.5 397B-A17B"
+      },
+      "price": {
+        "input": 0.172,
+        "output": 1.032,
+        "reasoning": 1.032,
+        "tiers": [
+          {
+            "above": 128000,
+            "input": 0.43,
+            "output": 2.58,
+            "reasoning": 2.58
+          }
+        ]
+      }
+    },
+    "alibaba/qwen3.5-flash": {
+      "name": "Qwen3.5 Flash",
+      "family": "qwen",
+      "released": "2026-02-23",
+      "updated": "2026-09-22",
+      "knowledge": "2025-04",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 65536
+      },
+      "reasoning": {
+        "mandatory": false,
+        "budget": {
+          "max": 81920
+        }
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "qwen3.5-flash",
+        "name": "Qwen3.5 Flash"
+      },
+      "price": {
+        "input": 0.029,
+        "output": 0.287,
+        "reasoning": 0.287,
+        "tiers": [
+          {
+            "above": 128000,
+            "input": 0.115,
+            "output": 1.147,
+            "reasoning": 1.147
+          },
+          {
+            "above": 256000,
+            "input": 0.172,
+            "output": 1.72,
+            "reasoning": 1.72
+          }
+        ]
+      }
+    },
+    "alibaba/qwen3.5-plus": {
+      "name": "Qwen3.5 Plus",
+      "family": "qwen",
+      "released": "2026-02-16",
+      "updated": "2026-09-22",
+      "knowledge": "2025-04",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 65536
+      },
+      "reasoning": {
+        "mandatory": false,
+        "budget": {
+          "max": 81920
+        }
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "qwen3.5-plus",
+        "name": "Qwen3.5 Plus"
+      },
+      "price": {
+        "input": 0.115,
+        "output": 0.688,
+        "reasoning": 0.688,
+        "tiers": [
+          {
+            "above": 128000,
+            "input": 0.287,
+            "output": 1.72,
+            "reasoning": 1.72
+          },
+          {
+            "above": 256000,
+            "input": 0.573,
+            "output": 3.44,
+            "reasoning": 3.44
+          }
+        ]
+      }
+    },
+    "alibaba/qwen3.6-flash": {
+      "name": "Qwen3.6 Flash",
+      "family": "qwen3.6",
+      "released": "2026-04-27",
+      "updated": "2026-04-27",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 65536
+      },
+      "reasoning": {
+        "mandatory": false,
+        "budget": {
+          "max": 131072
+        }
+      },
+      "provider_options": {
+        "id": "qwen3.6-flash",
+        "name": "Qwen3.6 Flash"
+      },
+      "price": {
+        "input": 0.165,
+        "output": 0.99,
+        "cache_read": 0.0165,
+        "cache_write": 0.20625,
+        "tiers": [
+          {
+            "above": 256000,
+            "input": 0.66,
+            "output": 3.961,
+            "cache_read": 0.066,
+            "cache_write": 0.825
+          }
+        ]
+      }
+    },
+    "alibaba/qwen3.6-max-preview": {
+      "name": "Qwen3.6 Max Preview",
+      "family": "qwen",
+      "released": "2026-04-20",
+      "updated": "2026-04-21",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 245800,
+        "output": 65536
+      },
+      "reasoning": {
+        "mandatory": false,
+        "budget": {
+          "max": 131072
+        }
+      },
+      "provider_options": {
+        "id": "qwen3.6-max-preview",
+        "name": "Qwen3.6 Max Preview"
+      },
+      "price": {
+        "input": 1.32,
+        "output": 7.9,
+        "cache_read": 0.132
+      },
+      "status": "deprecated"
+    },
+    "alibaba/qwen3.6-plus": {
+      "name": "Qwen3.6 Plus",
+      "family": "qwen",
+      "released": "2026-04-02",
+      "updated": "2026-04-02",
+      "knowledge": "2025-04",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 65536
+      },
+      "reasoning": {
+        "mandatory": false,
+        "budget": {
+          "max": 81920
+        }
+      },
+      "provider_options": {
+        "id": "qwen3.6-plus",
+        "name": "Qwen3.6 Plus"
+      },
+      "price": {
+        "input": 0.276,
+        "output": 1.651,
+        "cache_read": 0.0276,
+        "cache_write": 0.345,
+        "tiers": [
+          {
+            "above": 256000,
+            "input": 1.101,
+            "output": 6.602,
+            "cache_read": 0.1101,
+            "cache_write": 1.37625
+          }
+        ]
+      }
+    },
+    "alibaba/qwen3.7-flash": {
+      "name": "Qwen3.7 Flash",
+      "family": "qwen",
+      "released": "2026-07-15",
+      "updated": "2026-07-15",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "input": 991808,
+        "output": 131072
+      },
+      "reasoning": {
+        "mandatory": false,
+        "budget": {
+          "max": 262144
+        }
+      },
+      "provider_options": {
+        "id": "qwen3.7-flash",
+        "name": "Qwen3.7 Flash"
+      },
+      "price": {
+        "input": 0.02962,
+        "output": 0.1185,
+        "cache_read": 0.002962,
+        "cache_write": 0.03703,
+        "tiers": [
+          {
+            "above": 32000,
+            "input": 0.08887,
+            "output": 0.35549,
+            "cache_read": 0.008887,
+            "cache_write": 0.11109
+          },
+          {
+            "above": 256000,
+            "input": 0.17774,
+            "output": 0.71098,
+            "cache_read": 0.017774,
+            "cache_write": 0.22218
+          }
+        ]
+      }
+    },
+    "alibaba/qwen3.7-max": {
+      "name": "Qwen3.7 Max",
+      "family": "qwen",
+      "released": "2026-05-21",
+      "updated": "2026-05-21",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "reasoning": {
+        "mandatory": false,
+        "budget": {
+          "max": 262144
+        }
+      },
+      "provider_options": {
+        "id": "qwen3.7-max",
+        "name": "Qwen3.7 Max"
+      },
+      "price": {
+        "input": 1.65,
+        "output": 4.951,
+        "cache_read": 0.33,
+        "cache_write": 2.0625
+      }
+    },
+    "alibaba/qwen3.7-plus": {
+      "name": "Qwen3.7 Plus",
+      "family": "qwen",
+      "released": "2026-06-02",
+      "updated": "2026-06-02",
+      "knowledge": "2025-04",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 64000
+      },
+      "reasoning": {
+        "mandatory": false,
+        "budget": {
+          "max": 262144
+        }
+      },
+      "provider_options": {
+        "id": "qwen3.7-plus",
+        "name": "Qwen3.7 Plus"
+      },
+      "price": {
+        "input": 0.276,
+        "output": 1.101,
+        "cache_read": 0.0276,
+        "cache_write": 0.345,
+        "tiers": [
+          {
+            "above": 256000,
+            "input": 0.826,
+            "output": 3.301,
+            "cache_read": 0.0826,
+            "cache_write": 1.0325
+          }
+        ]
+      }
+    },
+    "alibaba/qwen3.8-flash": {
+      "name": "Qwen3.8 Flash",
+      "family": "qwen",
+      "released": "2026-08-26",
+      "updated": "2026-08-26",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "medium",
+          "xhigh"
+        ],
+        "budget": {
+          "max": 262144
+        }
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "qwen3.8-flash",
+        "name": "Qwen3.8 Flash"
+      },
+      "price": {
+        "input": 0.11875,
+        "output": 0.40073,
+        "cache_read": 0.01187,
+        "cache_write": 0.14844
+      }
+    },
+    "alibaba/qwen3.8-max": {
+      "name": "Qwen3.8 Max",
+      "family": "qwen",
+      "released": "2026-08-03",
+      "updated": "2026-08-03",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "video",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "medium",
+          "xhigh"
+        ],
+        "budget": {
+          "max": 262144
+        }
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "qwen3.8-max",
+        "name": "Qwen3.8 Max"
+      },
+      "price": {
+        "input": 1.77744,
+        "output": 5.33231,
+        "cache_read": 0.22218,
+        "cache_write": 2.22179
+      }
+    },
+    "alibaba/qwen3.8-omni-flash": {
+      "name": "Qwen3.8 Omni Flash",
+      "family": "qwen",
+      "released": "2026-09-17",
+      "updated": "2026-09-17",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "audio",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "medium",
+          "xhigh"
+        ]
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "qwen3.8-omni-flash",
+        "name": "Qwen3.8 Omni Flash"
+      },
+      "price": {
+        "input": 0.113,
+        "output": 0.382,
+        "cache_read": 0.014
+      }
+    },
+    "alibaba/qwq-32b": {
+      "name": "QwQ 32B",
+      "family": "qwen",
+      "released": "2024-12",
+      "updated": "2024-12",
+      "knowledge": "2024-04",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 131072,
+        "output": 8192
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "qwq-32b",
+        "name": "QwQ 32B"
+      },
+      "price": {
+        "input": 0.287,
+        "output": 0.861
+      },
+      "status": "deprecated"
+    },
+    "alibaba/qwq-plus": {
+      "name": "QwQ Plus",
+      "family": "qwen",
+      "released": "2025-03-05",
+      "updated": "2025-03-05",
+      "knowledge": "2024-04",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 131072,
+        "output": 8192
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "qwq-plus",
+        "name": "QwQ Plus"
+      },
+      "price": {
+        "input": 0.23,
+        "output": 0.574
+      },
+      "status": "deprecated"
+    },
+    "alibaba/tongyi-intent-detect-v3": {
+      "name": "Tongyi Intent Detect V3",
+      "family": "yi",
+      "released": "2024-01",
+      "updated": "2024-01",
+      "knowledge": "2024-04",
+      "open_weights": false,
+      "capabilities": {
+        "tools": false,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 8192,
+        "output": 1024
+      },
+      "provider_options": {
+        "id": "tongyi-intent-detect-v3",
+        "name": "Tongyi Intent Detect V3"
+      },
+      "price": {
+        "input": 0.058,
+        "output": 0.144
+      }
+    },
+    "deepseek/deepseek-r1": {
+      "name": "DeepSeek R1",
+      "family": "deepseek-thinking",
+      "released": "2025-01-01",
+      "updated": "2025-01-01",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 131072,
+        "output": 16384
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "deepseek-r1",
+        "name": "DeepSeek R1"
+      },
+      "price": {
+        "input": 0.574,
+        "output": 2.294
+      },
+      "status": "deprecated"
+    },
+    "deepseek/deepseek-r1-0528": {
+      "name": "DeepSeek R1 0528",
+      "family": "deepseek-thinking",
+      "released": "2025-05-28",
+      "updated": "2025-05-28",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 131072,
+        "output": 16384
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "deepseek-r1-0528",
+        "name": "DeepSeek R1 0528"
+      },
+      "price": {
+        "input": 0.574,
+        "output": 2.294
+      },
+      "status": "deprecated",
+      "aliases": [
+        "siliconflow/deepseek-r1-0528"
+      ]
+    },
+    "deepseek/deepseek-r1-distill-llama-70b": {
+      "name": "DeepSeek R1 Distill Llama 70B",
+      "family": "deepseek-thinking",
+      "released": "2025-01-01",
+      "updated": "2025-01-01",
+      "open_weights": false,
+      "capabilities": {
+        "tools": false,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 32768,
+        "output": 16384
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "deepseek-r1-distill-llama-70b",
+        "name": "DeepSeek R1 Distill Llama 70B"
+      },
+      "price": {
+        "input": 0.287,
+        "output": 0.861
+      }
+    },
+    "deepseek/deepseek-r1-distill-llama-8b": {
+      "name": "DeepSeek R1 Distill Llama 8B",
+      "family": "deepseek-thinking",
+      "released": "2025-01-01",
+      "updated": "2025-01-01",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 32768,
+        "output": 16384
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "deepseek-r1-distill-llama-8b",
+        "name": "DeepSeek R1 Distill Llama 8B"
+      },
+      "price": {
+        "input": 0,
+        "output": 0
+      },
+      "status": "deprecated"
+    },
+    "deepseek/deepseek-r1-distill-qwen-1-5b": {
+      "name": "DeepSeek R1 Distill Qwen 1 5B",
+      "family": "qwen",
+      "released": "2025-01-01",
+      "updated": "2025-01-01",
+      "open_weights": false,
+      "capabilities": {
+        "tools": false,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 32768,
+        "output": 16384
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "deepseek-r1-distill-qwen-1-5b",
+        "name": "DeepSeek R1 Distill Qwen 1.5B"
+      },
+      "price": {
+        "input": 0,
+        "output": 0
+      }
+    },
+    "deepseek/deepseek-r1-distill-qwen-14b": {
+      "name": "DeepSeek R1 Distill Qwen 14B",
+      "family": "qwen",
+      "released": "2025-01-01",
+      "updated": "2025-01-01",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 32768,
+        "output": 16384
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "deepseek-r1-distill-qwen-14b",
+        "name": "DeepSeek R1 Distill Qwen 14B"
+      },
+      "price": {
+        "input": 0.144,
+        "output": 0.431
+      },
+      "status": "deprecated"
+    },
+    "deepseek/deepseek-r1-distill-qwen-32b": {
+      "name": "DeepSeek R1 Distill Qwen 32B",
+      "family": "qwen",
+      "released": "2025-01-01",
+      "updated": "2025-01-01",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 32768,
+        "output": 16384
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "deepseek-r1-distill-qwen-32b",
+        "name": "DeepSeek R1 Distill Qwen 32B"
+      },
+      "price": {
+        "input": 0.287,
+        "output": 0.861
+      },
+      "status": "deprecated"
+    },
+    "deepseek/deepseek-r1-distill-qwen-7b": {
+      "name": "DeepSeek R1 Distill Qwen 7B",
+      "family": "qwen",
+      "released": "2025-01-01",
+      "updated": "2025-01-01",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 32768,
+        "output": 16384
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "deepseek-r1-distill-qwen-7b",
+        "name": "DeepSeek R1 Distill Qwen 7B"
+      },
+      "price": {
+        "input": 0.072,
+        "output": 0.144
+      },
+      "status": "deprecated"
+    },
+    "deepseek/deepseek-v3": {
+      "name": "DeepSeek V3",
+      "family": "deepseek",
+      "released": "2024-12-01",
+      "updated": "2024-12-01",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 65536,
+        "output": 8192
+      },
+      "provider_options": {
+        "id": "deepseek-v3",
+        "name": "DeepSeek V3"
+      },
+      "price": {
+        "input": 0.287,
+        "output": 1.147
+      },
+      "status": "deprecated"
+    },
+    "deepseek/deepseek-v3-0324": {
+      "name": "DeepSeek V3 0324",
+      "family": "deepseek",
+      "released": "2024-12-26",
+      "updated": "2025-11-25",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 163840,
+        "output": 163840
+      },
+      "provider_options": {
+        "id": "siliconflow/deepseek-v3-0324",
+        "name": "siliconflow/deepseek-v3-0324"
+      },
+      "price": {
+        "input": 0.25,
+        "output": 1
+      }
+    },
+    "deepseek/deepseek-v3.1": {
+      "name": "DeepSeek V3.1",
+      "family": "deepseek",
+      "released": "2025-01-01",
+      "updated": "2025-01-01",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 131072,
+        "output": 65536
+      },
+      "provider_options": {
+        "id": "deepseek-v3-1",
+        "name": "DeepSeek V3.1"
+      },
+      "price": {
+        "input": 0.574,
+        "output": 1.721
+      },
+      "status": "deprecated"
+    },
+    "deepseek/deepseek-v3.1-terminus": {
+      "name": "DeepSeek V3.1 Terminus",
+      "family": "deepseek",
+      "released": "2025-09-29",
+      "updated": "2025-11-25",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 163840,
+        "output": 65536
+      },
+      "reasoning": {
+        "mandatory": false
+      },
+      "provider_options": {
+        "id": "siliconflow/deepseek-v3.1-terminus",
+        "name": "siliconflow/deepseek-v3.1-terminus"
+      },
+      "price": {
+        "input": 0.27,
+        "output": 1
+      }
+    },
+    "deepseek/deepseek-v3.2": {
+      "name": "DeepSeek V3.2",
+      "family": "deepseek",
+      "released": "2025-12-03",
+      "updated": "2025-12-03",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 163840,
+        "output": 65536
+      },
+      "reasoning": {
+        "mandatory": false
+      },
+      "provider_options": {
+        "id": "siliconflow/deepseek-v3.2",
+        "name": "siliconflow/deepseek-v3.2"
+      },
+      "price": {
+        "input": 0.27,
+        "output": 0.42
+      }
+    },
+    "deepseek/deepseek-v3.2-exp": {
+      "name": "DeepSeek V3.2 Exp",
+      "family": "deepseek",
+      "released": "2025-01-01",
+      "updated": "2025-01-01",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 131072,
+        "output": 65536
+      },
+      "provider_options": {
+        "id": "deepseek-v3-2-exp",
+        "name": "DeepSeek V3.2 Exp"
+      },
+      "price": {
+        "input": 0.287,
+        "output": 0.431
+      },
+      "status": "deprecated"
+    },
+    "deepseek/deepseek-v4-flash": {
+      "name": "DeepSeek V4 Flash",
+      "family": "deepseek-flash",
+      "released": "2026-04-24",
+      "updated": "2026-04-24",
+      "knowledge": "2025-05",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 384000
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "high",
+          "max"
+        ]
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "deepseek-v4-flash",
+        "name": "DeepSeek V4 Flash"
+      },
+      "price": {
+        "input": 0.14,
+        "output": 0.28,
+        "cache_read": 0.0028
+      },
+      "status": "deprecated"
+    },
+    "deepseek/deepseek-v4-pro": {
+      "name": "DeepSeek V4 Pro",
+      "family": "deepseek-thinking",
+      "released": "2026-04-24",
+      "updated": "2026-04-24",
+      "knowledge": "2025-05",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 384000
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "high",
+          "max"
+        ]
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "deepseek-v4-pro",
+        "name": "DeepSeek V4 Pro"
+      },
+      "price": {
+        "input": 1.65,
+        "output": 3.301
+      }
+    },
+    "deepseek/deepseek-v4.1-flash": {
+      "name": "DeepSeek V4.1 Flash",
+      "family": "deepseek-flash",
+      "released": "2026-09-10",
+      "updated": "2026-09-10",
+      "knowledge": "2025-05",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 384000
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "high",
+          "max"
+        ]
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "deepseek-v4.1-flash",
+        "name": "DeepSeek V4.1 Flash"
+      },
+      "price": {
+        "input": 0.29754,
+        "output": 1.19015,
+        "cache_read": 0.01488
+      }
+    },
+    "minimax/minimax-m2.5": {
+      "name": "MiniMax M2.5",
+      "family": "minimax",
+      "released": "2026-02-12",
+      "updated": "2026-02-12",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 204800,
+        "output": 131072
+      },
+      "reasoning": {},
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "MiniMax-M2.5",
+        "name": "MiniMax-M2.5"
+      },
+      "price": {
+        "input": 0.3,
+        "output": 1.2
+      }
+    },
+    "minimax/minimax-m2.7": {
+      "name": "MiniMax M2.7",
+      "family": "minimax",
+      "released": "2026-03-18",
+      "updated": "2026-03-18",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 204800,
+        "output": 131072
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "MiniMax/MiniMax-M2.7",
+        "name": "MiniMax-M2.7"
+      },
+      "price": {
+        "input": 0.3,
+        "output": 1.2,
+        "cache_read": 0.06,
+        "cache_write": 0.375
+      }
+    },
+    "moonshotai/kimi-k2-instruct": {
+      "name": "Kimi K2 Instruct",
+      "family": "kimi-k2",
+      "released": "2025-01-01",
+      "updated": "2025-01-01",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 131072,
+        "output": 8192
+      },
+      "provider_options": {
+        "id": "moonshot-kimi-k2-instruct",
+        "name": "Moonshot Kimi K2 Instruct"
+      },
+      "price": {
+        "input": 0.574,
+        "output": 2.294
+      },
+      "status": "deprecated"
+    },
+    "moonshotai/kimi-k2-thinking": {
+      "name": "Kimi K2 Thinking",
+      "family": "kimi-thinking",
+      "released": "2025-11-06",
+      "updated": "2025-11-06",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 16384
+      },
+      "reasoning": {
+        "budget": {}
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "kimi-k2-thinking",
+        "name": "Moonshot Kimi K2 Thinking"
+      },
+      "price": {
+        "input": 0.574,
+        "output": 2.294
+      },
+      "status": "deprecated"
+    },
+    "moonshotai/kimi-k2.5": {
+      "name": "Kimi K2.5",
+      "family": "kimi-k2",
+      "released": "2026-01-27",
+      "updated": "2026-01-27",
+      "knowledge": "2025-01",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": false,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 32768
+      },
+      "reasoning": {
+        "mandatory": false,
+        "budget": {
+          "max": 81920
+        }
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "kimi-k2.5",
+        "name": "Moonshot Kimi K2.5"
+      },
+      "price": {
+        "input": 0.574,
+        "output": 3.011
+      },
+      "aliases": [
+        "kimi/kimi-k2.5"
+      ]
+    },
+    "moonshotai/kimi-k2.6": {
+      "name": "Kimi K2.6",
+      "family": "kimi-k2",
+      "released": "2026-04-21",
+      "updated": "2026-04-21",
+      "knowledge": "2025-01",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": false,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 16384
+      },
+      "reasoning": {
+        "mandatory": false,
+        "budget": {
+          "max": 81920
+        }
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "kimi-k2.6",
+        "name": "Moonshot Kimi K2.6"
+      },
+      "price": {
+        "input": 0.929,
+        "output": 3.858
+      }
+    },
+    "moonshotai/kimi-k3": {
+      "name": "Kimi K3",
+      "family": "kimi-k3",
+      "released": "2026-07-16",
+      "updated": "2026-07-16",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 1048576
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "high",
+          "max"
+        ]
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "kimi-k3",
+        "name": "Kimi K3"
+      },
+      "price": {
+        "input": 2.827,
+        "output": 14.133,
+        "cache_read": 0.283
+      }
+    },
+    "zhipuai/glm-5": {
+      "name": "GLM 5",
+      "family": "glm",
+      "released": "2026-02-11",
+      "updated": "2026-02-11",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 202752,
+        "output": 16384
+      },
+      "reasoning": {
+        "mandatory": false,
+        "budget": {
+          "max": 32768
+        }
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "glm-5",
+        "name": "GLM-5"
+      },
+      "price": {
+        "input": 0.573,
+        "output": 2.58,
+        "tiers": [
+          {
+            "above": 32000,
+            "input": 0.86,
+            "output": 3.154
+          }
+        ]
+      }
+    },
+    "zhipuai/glm-5.1": {
+      "name": "GLM 5.1",
+      "family": "glm",
+      "released": "2026-04-14",
+      "updated": "2026-04-14",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 202752,
+        "output": 128000
+      },
+      "reasoning": {
+        "mandatory": false,
+        "budget": {
+          "max": 131072
+        }
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "glm-5.1",
+        "name": "GLM-5.1"
+      },
+      "price": {
+        "input": 0.825,
+        "output": 3.301,
+        "cache_read": 0.17,
+        "tiers": [
+          {
+            "above": 32000,
+            "input": 1.1,
+            "output": 3.851
+          }
+        ]
+      }
+    },
+    "zhipuai/glm-5.2": {
+      "name": "GLM 5.2",
+      "family": "glm",
+      "released": "2026-06-13",
+      "updated": "2026-06-13",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "high",
+          "max"
+        ]
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "glm-5.2",
+        "name": "GLM-5.2"
+      },
+      "price": {
+        "input": 1.1,
+        "output": 3.851,
+        "cache_read": 0.275,
+        "cache_write": 0
+      }
+    },
+    "zhipuai/glm-5.3": {
+      "name": "GLM 5.3",
+      "family": "glm",
+      "released": "2026-08-14",
+      "updated": "2026-08-14",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "high",
+          "max"
+        ]
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "glm-5.3",
+        "name": "GLM-5.3"
+      },
+      "price": {
+        "input": 1.1,
+        "output": 3.851,
+        "cache_read": 0.275,
+        "cache_write": 0
+      }
+    }
+  }
+}

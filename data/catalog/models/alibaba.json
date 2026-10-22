@@ -1,0 +1,6812 @@
+{
+  "alibaba/cogito-v1-preview-qwen-32b": {
+    "id": "alibaba/cogito-v1-preview-qwen-32b",
+    "lab": "alibaba",
+    "name": "Cogito V1 Preview Qwen 32B",
+    "family": "qwen",
+    "released": "2025-05-10",
+    "updated": "2025-05-10",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "structured_output": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "input": 128000,
+      "output": 32768
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "alibaba/eva-qwen2.5-32b-v0.2": {
+    "id": "alibaba/eva-qwen2.5-32b-v0.2",
+    "lab": "alibaba",
+    "name": "EVA Qwen2.5 32B V0.2",
+    "family": "qwen",
+    "released": "2025-07-26",
+    "updated": "2025-07-26",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "structured_output": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 16384,
+      "input": 16384,
+      "output": 8192
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "alibaba/eva-qwen2.5-72b-v0.2": {
+    "id": "alibaba/eva-qwen2.5-72b-v0.2",
+    "lab": "alibaba",
+    "name": "EVA Qwen2.5 72B V0.2",
+    "family": "qwen",
+    "released": "2025-09-25",
+    "updated": "2025-09-25",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "structured_output": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 16384,
+      "input": 16384,
+      "output": 8192
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "alibaba/gte-large-en-v1.5": {
+    "id": "alibaba/gte-large-en-v1.5",
+    "lab": "alibaba",
+    "name": "GTE Large En V1.5",
+    "family": "text-embedding",
+    "type": "embedding",
+    "released": "2024-03-27",
+    "updated": "2026-04-16",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 8192,
+      "output": 1024
+    },
+    "providers": [
+      "digitalocean"
+    ]
+  },
+  "alibaba/happyhorse-1.1-i2v": {
+    "id": "alibaba/happyhorse-1.1-i2v",
+    "lab": "alibaba",
+    "name": "HappyHorse 1.1 I2v",
+    "type": "video",
+    "released": "2026-07-17",
+    "updated": "2026-07-17",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "image",
+        "text"
+      ],
+      "output": [
+        "video"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "alibaba-token-plan",
+      "alibaba-token-plan-cn"
+    ]
+  },
+  "alibaba/happyhorse-1.1-r2v": {
+    "id": "alibaba/happyhorse-1.1-r2v",
+    "lab": "alibaba",
+    "name": "HappyHorse 1.1 R2v",
+    "type": "video",
+    "released": "2026-07-17",
+    "updated": "2026-07-17",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "image",
+        "text"
+      ],
+      "output": [
+        "video"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "alibaba-token-plan",
+      "alibaba-token-plan-cn"
+    ]
+  },
+  "alibaba/happyhorse-1.1-t2v": {
+    "id": "alibaba/happyhorse-1.1-t2v",
+    "lab": "alibaba",
+    "name": "HappyHorse 1.1 T2V",
+    "type": "video",
+    "released": "2026-07-17",
+    "updated": "2026-07-17",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "video"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "alibaba-token-plan",
+      "alibaba-token-plan-cn"
+    ]
+  },
+  "alibaba/k2-think": {
+    "id": "alibaba/k2-think",
+    "lab": "alibaba",
+    "name": "K2 Think",
+    "family": "kimi-thinking",
+    "released": "2025-07-26",
+    "updated": "2025-07-26",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "structured_output": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "input": 128000,
+      "output": 32768
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "alibaba/kev-4b": {
+    "id": "alibaba/kev-4b",
+    "lab": "alibaba",
+    "name": "Kev 4B",
+    "type": "decision",
+    "released": "2026-09-25",
+    "updated": "2026-09-25",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "structured_output": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 8192,
+      "output": 0
+    },
+    "providers": [
+      "openrouter"
+    ]
+  },
+  "alibaba/openreasoning-nemotron-32b": {
+    "id": "alibaba/openreasoning-nemotron-32b",
+    "lab": "alibaba",
+    "name": "OpenReasoning Nemotron 32B",
+    "family": "nemotron",
+    "released": "2025-08-21",
+    "updated": "2025-08-21",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "structured_output": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32768,
+      "input": 32768,
+      "output": 65536
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "alibaba/qvq-max": {
+    "id": "alibaba/qvq-max",
+    "lab": "alibaba",
+    "name": "QVQ Max",
+    "family": "qvq",
+    "released": "2025-03-25",
+    "updated": "2025-03-25",
+    "knowledge": "2024-04",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 8192
+    },
+    "providers": [
+      "alibaba",
+      "alibaba-cn",
+      "nano-gpt"
+    ]
+  },
+  "alibaba/qwen-deep-research": {
+    "id": "alibaba/qwen-deep-research",
+    "lab": "alibaba",
+    "name": "Qwen Deep Research",
+    "family": "qwen",
+    "released": "2024-01",
+    "updated": "2024-01",
+    "knowledge": "2024-04",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 32768
+    },
+    "providers": [
+      "alibaba-cn"
+    ]
+  },
+  "alibaba/qwen-doc-turbo": {
+    "id": "alibaba/qwen-doc-turbo",
+    "lab": "alibaba",
+    "name": "Qwen Doc Turbo",
+    "family": "qwen",
+    "released": "2024-01",
+    "updated": "2024-01",
+    "knowledge": "2024-04",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 8192
+    },
+    "providers": [
+      "alibaba-cn"
+    ]
+  },
+  "alibaba/qwen-flash": {
+    "id": "alibaba/qwen-flash",
+    "lab": "alibaba",
+    "name": "Qwen Flash",
+    "family": "qwen",
+    "released": "2025-07-28",
+    "updated": "2025-07-28",
+    "knowledge": "2024-04",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 32768
+    },
+    "providers": [
+      "alibaba",
+      "alibaba-cn",
+      "llmgateway",
+      "llmgateway-providers",
+      "llmtr",
+      "merge-gateway",
+      "ofox"
+    ]
+  },
+  "alibaba/qwen-image": {
+    "id": "alibaba/qwen-image",
+    "lab": "alibaba",
+    "name": "Qwen Image",
+    "family": "qwen",
+    "released": "2025-08-07",
+    "updated": "2025-08-07",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "structured_output": false,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "image"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "nvidia",
+      "regolo-ai"
+    ]
+  },
+  "alibaba/qwen-image-2.0": {
+    "id": "alibaba/qwen-image-2.0",
+    "lab": "alibaba",
+    "name": "Qwen Image 2.0",
+    "family": "qwen",
+    "type": "image",
+    "released": "2026-03-03",
+    "updated": "2026-03-03",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "image"
+      ]
+    },
+    "limit": {
+      "context": 8192,
+      "output": 0
+    },
+    "providers": [
+      "alibaba-token-plan",
+      "alibaba-token-plan-cn"
+    ]
+  },
+  "alibaba/qwen-image-2.0-pro": {
+    "id": "alibaba/qwen-image-2.0-pro",
+    "lab": "alibaba",
+    "name": "Qwen Image 2.0 Pro",
+    "family": "qwen",
+    "type": "image",
+    "released": "2026-03-03",
+    "updated": "2026-03-03",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "image"
+      ]
+    },
+    "limit": {
+      "context": 8192,
+      "output": 0
+    },
+    "providers": [
+      "alibaba-token-plan",
+      "alibaba-token-plan-cn"
+    ]
+  },
+  "alibaba/qwen-image-2.1": {
+    "id": "alibaba/qwen-image-2.1",
+    "lab": "alibaba",
+    "name": "Qwen Image 2.1",
+    "family": "qwen",
+    "type": "image",
+    "released": "2026-09-14",
+    "updated": "2026-09-21",
+    "open_weights": true,
+    "license": "qwen-research",
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "image"
+      ]
+    },
+    "limit": {
+      "context": 8192,
+      "output": 0
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/Qwen/Qwen-Image-2.1"
+      }
+    ],
+    "links": [
+      {
+        "label": "Blog",
+        "url": "https://qwen.ai/blog?id=qwen-image-2.1",
+        "type": "announcement"
+      },
+      {
+        "label": "GitHub",
+        "url": "https://github.com/QwenLM/Qwen-Image-2.1",
+        "type": "docs"
+      }
+    ],
+    "providers": [
+      "nan"
+    ]
+  },
+  "alibaba/qwen-image-edit": {
+    "id": "alibaba/qwen-image-edit",
+    "lab": "alibaba",
+    "name": "Qwen Image Edit",
+    "family": "qwen",
+    "released": "2025-08-19",
+    "updated": "2025-08-19",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "structured_output": false,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "image"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "nvidia"
+    ]
+  },
+  "alibaba/qwen-long": {
+    "id": "alibaba/qwen-long",
+    "lab": "alibaba",
+    "name": "Qwen Long",
+    "family": "qwen",
+    "released": "2025-01-25",
+    "updated": "2025-01-25",
+    "knowledge": "2024-04",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 10000000,
+      "output": 8192
+    },
+    "providers": [
+      "alibaba-cn",
+      "nano-gpt"
+    ]
+  },
+  "alibaba/qwen-math-plus": {
+    "id": "alibaba/qwen-math-plus",
+    "lab": "alibaba",
+    "name": "Qwen Math Plus",
+    "family": "qwen",
+    "released": "2024-08-16",
+    "updated": "2024-09-19",
+    "knowledge": "2024-04",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 4096,
+      "output": 3072
+    },
+    "providers": [
+      "alibaba-cn"
+    ]
+  },
+  "alibaba/qwen-math-turbo": {
+    "id": "alibaba/qwen-math-turbo",
+    "lab": "alibaba",
+    "name": "Qwen Math Turbo",
+    "family": "qwen",
+    "released": "2024-09-19",
+    "updated": "2024-09-19",
+    "knowledge": "2024-04",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 4096,
+      "output": 3072
+    },
+    "providers": [
+      "alibaba-cn"
+    ]
+  },
+  "alibaba/qwen-max": {
+    "id": "alibaba/qwen-max",
+    "lab": "alibaba",
+    "name": "Qwen Max",
+    "family": "qwen",
+    "released": "2024-04-03",
+    "updated": "2025-01-25",
+    "knowledge": "2024-04",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32768,
+      "output": 8192
+    },
+    "providers": [
+      "aimlapi",
+      "alibaba",
+      "alibaba-cn",
+      "edenai",
+      "llmgateway",
+      "llmgateway-providers",
+      "nano-gpt",
+      "ofox"
+    ]
+  },
+  "alibaba/qwen-max-2025-01-25": {
+    "id": "alibaba/qwen-max-2025-01-25",
+    "lab": "alibaba",
+    "name": "Qwen Max 20250125",
+    "released": "2025-08-05",
+    "updated": "2025-08-05",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "structured_output": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 4096
+    },
+    "providers": [
+      "qiniu-ai"
+    ]
+  },
+  "alibaba/qwen-mt-plus": {
+    "id": "alibaba/qwen-mt-plus",
+    "lab": "alibaba",
+    "name": "Qwen MT Plus",
+    "family": "qwen",
+    "released": "2025-07-24",
+    "updated": "2025-07-24",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 16384,
+      "output": 8192
+    },
+    "providers": [
+      "alibaba",
+      "alibaba-cn",
+      "edenai",
+      "novita-ai"
+    ]
+  },
+  "alibaba/qwen-mt-turbo": {
+    "id": "alibaba/qwen-mt-turbo",
+    "lab": "alibaba",
+    "name": "Qwen MT Turbo",
+    "family": "qwen",
+    "released": "2025-01",
+    "updated": "2025-01",
+    "knowledge": "2024-04",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 16384,
+      "output": 8192
+    },
+    "providers": [
+      "alibaba",
+      "alibaba-cn"
+    ]
+  },
+  "alibaba/qwen-omni-turbo": {
+    "id": "alibaba/qwen-omni-turbo",
+    "lab": "alibaba",
+    "name": "Qwen Omni Turbo",
+    "family": "qwen",
+    "released": "2025-01-19",
+    "updated": "2025-03-26",
+    "knowledge": "2024-04",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "audio",
+        "video"
+      ],
+      "output": [
+        "text",
+        "audio"
+      ]
+    },
+    "limit": {
+      "context": 32768,
+      "output": 2048
+    },
+    "providers": [
+      "alibaba",
+      "alibaba-cn"
+    ]
+  },
+  "alibaba/qwen-omni-turbo-realtime": {
+    "id": "alibaba/qwen-omni-turbo-realtime",
+    "lab": "alibaba",
+    "name": "Qwen Omni Turbo Realtime",
+    "family": "qwen",
+    "type": "realtime",
+    "released": "2025-05-08",
+    "updated": "2025-05-08",
+    "knowledge": "2024-04",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "audio"
+      ],
+      "output": [
+        "text",
+        "audio"
+      ]
+    },
+    "limit": {
+      "context": 32768,
+      "output": 2048
+    },
+    "providers": [
+      "alibaba",
+      "alibaba-cn"
+    ]
+  },
+  "alibaba/qwen-plus": {
+    "id": "alibaba/qwen-plus",
+    "lab": "alibaba",
+    "name": "Qwen Plus",
+    "family": "qwen",
+    "released": "2024-01-25",
+    "updated": "2025-09-11",
+    "knowledge": "2024-04",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 32768
+    },
+    "providers": [
+      "aimlapi",
+      "alibaba",
+      "alibaba-cn",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "llmtr",
+      "merge-gateway",
+      "nano-gpt",
+      "ofox",
+      "openrouter"
+    ]
+  },
+  "alibaba/qwen-plus-character": {
+    "id": "alibaba/qwen-plus-character",
+    "lab": "alibaba",
+    "name": "Qwen Plus Character",
+    "family": "qwen",
+    "released": "2024-01",
+    "updated": "2024-01",
+    "knowledge": "2024-04",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32768,
+      "output": 4096
+    },
+    "providers": [
+      "alibaba-cn"
+    ]
+  },
+  "alibaba/qwen-plus-character-ja": {
+    "id": "alibaba/qwen-plus-character-ja",
+    "lab": "alibaba",
+    "name": "Qwen Plus Character Ja",
+    "family": "qwen",
+    "released": "2024-01",
+    "updated": "2024-01",
+    "knowledge": "2024-04",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 8192,
+      "output": 512
+    },
+    "providers": [
+      "alibaba"
+    ]
+  },
+  "alibaba/qwen-plus-latest": {
+    "id": "alibaba/qwen-plus-latest",
+    "lab": "alibaba",
+    "name": "Qwen Plus Latest",
+    "family": "qwen",
+    "released": "2025-01-25",
+    "updated": "2025-01-25",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 8192
+    },
+    "providers": [
+      "llmgateway",
+      "llmgateway-providers"
+    ]
+  },
+  "alibaba/qwen-turbo": {
+    "id": "alibaba/qwen-turbo",
+    "lab": "alibaba",
+    "name": "Qwen Turbo",
+    "family": "qwen",
+    "released": "2024-11-01",
+    "updated": "2025-04-28",
+    "knowledge": "2024-04",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 16384
+    },
+    "providers": [
+      "alibaba",
+      "alibaba-cn",
+      "nano-gpt",
+      "ofox",
+      "qiniu-ai"
+    ]
+  },
+  "alibaba/qwen-vl-max": {
+    "id": "alibaba/qwen-vl-max",
+    "lab": "alibaba",
+    "name": "Qwen VL Max",
+    "family": "qwen",
+    "released": "2024-04-08",
+    "updated": "2025-08-13",
+    "knowledge": "2024-04",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 8192
+    },
+    "providers": [
+      "alibaba",
+      "alibaba-cn",
+      "ofox"
+    ]
+  },
+  "alibaba/qwen-vl-max-2025-01-25": {
+    "id": "alibaba/qwen-vl-max-2025-01-25",
+    "lab": "alibaba",
+    "name": "Qwen VL Max 20250125",
+    "released": "2025-08-05",
+    "updated": "2025-08-05",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": false,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "audio",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 4096
+    },
+    "providers": [
+      "qiniu-ai"
+    ]
+  },
+  "alibaba/qwen-vl-ocr": {
+    "id": "alibaba/qwen-vl-ocr",
+    "lab": "alibaba",
+    "name": "Qwen VL OCR",
+    "family": "qwen",
+    "released": "2024-10-28",
+    "updated": "2025-04-13",
+    "knowledge": "2024-04",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 34096,
+      "output": 4096
+    },
+    "providers": [
+      "alibaba",
+      "alibaba-cn"
+    ]
+  },
+  "alibaba/qwen-vl-plus": {
+    "id": "alibaba/qwen-vl-plus",
+    "lab": "alibaba",
+    "name": "Qwen VL Plus",
+    "family": "qwen",
+    "released": "2024-01-25",
+    "updated": "2025-08-15",
+    "knowledge": "2024-04",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 8192
+    },
+    "providers": [
+      "alibaba",
+      "alibaba-cn"
+    ]
+  },
+  "alibaba/qwen2-5-vl-72b-instruct": {
+    "id": "alibaba/qwen2-5-vl-72b-instruct",
+    "lab": "alibaba",
+    "name": "Qwen2.5 VL 72B Instruct",
+    "family": "qwen",
+    "released": "2025-01-26",
+    "updated": "2025-01-26",
+    "knowledge": "2024-04",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 8192
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/Qwen/Qwen2.5-VL-72B-Instruct"
+      }
+    ],
+    "providers": [
+      "alibaba",
+      "alibaba-cn",
+      "cortecs",
+      "kilo",
+      "nano-gpt",
+      "openrouter",
+      "ovhcloud",
+      "qiniu-ai"
+    ]
+  },
+  "alibaba/qwen2.5-14b-instruct": {
+    "id": "alibaba/qwen2.5-14b-instruct",
+    "lab": "alibaba",
+    "name": "Qwen2.5 14B Instruct",
+    "family": "qwen",
+    "released": "2024-09",
+    "updated": "2024-09",
+    "knowledge": "2024-04",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 8192
+    },
+    "providers": [
+      "alibaba",
+      "alibaba-cn",
+      "digitalocean"
+    ]
+  },
+  "alibaba/qwen2.5-32b-instruct": {
+    "id": "alibaba/qwen2.5-32b-instruct",
+    "lab": "alibaba",
+    "name": "Qwen2.5 32B Instruct",
+    "family": "qwen",
+    "released": "2024-09",
+    "updated": "2024-09",
+    "knowledge": "2024-04",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 8192
+    },
+    "providers": [
+      "alibaba",
+      "alibaba-cn"
+    ]
+  },
+  "alibaba/qwen2.5-32b-instruct-abliterated": {
+    "id": "alibaba/qwen2.5-32b-instruct-abliterated",
+    "lab": "alibaba",
+    "name": "Qwen2.5 32B Instruct Abliterated",
+    "family": "qwen",
+    "released": "2025-01-06",
+    "updated": "2025-01-06",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "structured_output": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32768,
+      "input": 32768,
+      "output": 8192
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "alibaba/qwen2.5-72b-instruct": {
+    "id": "alibaba/qwen2.5-72b-instruct",
+    "lab": "alibaba",
+    "name": "Qwen2.5 72B Instruct",
+    "family": "qwen",
+    "released": "2024-09",
+    "updated": "2024-09",
+    "knowledge": "2024-04",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 8192
+    },
+    "providers": [
+      "abacus",
+      "alibaba",
+      "alibaba-cn",
+      "kilo",
+      "nano-gpt",
+      "openrouter",
+      "siliconflow",
+      "siliconflow-cn"
+    ]
+  },
+  "alibaba/qwen2.5-7b-instruct": {
+    "id": "alibaba/qwen2.5-7b-instruct",
+    "lab": "alibaba",
+    "name": "Qwen2.5 7B Instruct",
+    "family": "qwen",
+    "released": "2024-09-19",
+    "updated": "2024-09-19",
+    "open_weights": true,
+    "license": "Apache 2.0",
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 8192
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/Qwen/Qwen2.5-7B-Instruct"
+      }
+    ],
+    "providers": [
+      "alibaba",
+      "alibaba-cn",
+      "edenai",
+      "kilo",
+      "openrouter",
+      "siliconflow",
+      "siliconflow-cn",
+      "togetherai"
+    ]
+  },
+  "alibaba/qwen2.5-7b-vision-instruct": {
+    "id": "alibaba/qwen2.5-7b-vision-instruct",
+    "lab": "alibaba",
+    "name": "Qwen2.5 7B Vision Instruct",
+    "family": "qwen",
+    "released": "2025-01-01",
+    "updated": "2025-01-01",
+    "knowledge": "2024-12",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 125000,
+      "output": 4096
+    },
+    "providers": [
+      "inference"
+    ]
+  },
+  "alibaba/qwen2.5-coder-0.5b": {
+    "id": "alibaba/qwen2.5-coder-0.5b",
+    "lab": "alibaba",
+    "name": "Qwen2.5 Coder 0.5B",
+    "family": "qwen",
+    "released": "2024-11-12",
+    "updated": "2024-11-12",
+    "open_weights": true,
+    "license": "Apache 2.0",
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32768,
+      "output": 8192
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/Qwen/Qwen2.5-Coder-0.5B"
+      }
+    ],
+    "providers": [
+      "pioneer"
+    ]
+  },
+  "alibaba/qwen2.5-coder-32b": {
+    "id": "alibaba/qwen2.5-coder-32b",
+    "lab": "alibaba",
+    "name": "Qwen2.5 Coder 32B",
+    "family": "qwen",
+    "released": "2024-11-11",
+    "updated": "2024-11-11",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 8192
+    },
+    "providers": [
+      "abacus"
+    ]
+  },
+  "alibaba/qwen2.5-coder-32b-instruct": {
+    "id": "alibaba/qwen2.5-coder-32b-instruct",
+    "lab": "alibaba",
+    "name": "Qwen2.5 Coder 32B Instruct",
+    "family": "qwen",
+    "released": "2024-11-12",
+    "updated": "2024-11-12",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 8192
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/Qwen/Qwen2.5-Coder-32B-Instruct"
+      }
+    ],
+    "providers": [
+      "alibaba-cn",
+      "cloudflare-workers-ai",
+      "edenai",
+      "huggingface",
+      "kilo",
+      "nano-gpt",
+      "nvidia",
+      "openrouter"
+    ]
+  },
+  "alibaba/qwen2.5-coder-7b-fast": {
+    "id": "alibaba/qwen2.5-coder-7b-fast",
+    "lab": "alibaba",
+    "name": "Qwen2.5 Coder 7B Fast",
+    "family": "qwen",
+    "released": "2024-09-15",
+    "updated": "2024-09-15",
+    "knowledge": "2024-09",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32000,
+      "output": 8192
+    },
+    "providers": [
+      "helicone"
+    ]
+  },
+  "alibaba/qwen2.5-coder-7b-instruct": {
+    "id": "alibaba/qwen2.5-coder-7b-instruct",
+    "lab": "alibaba",
+    "name": "Qwen2.5 Coder 7B Instruct",
+    "family": "qwen",
+    "released": "2024-11",
+    "updated": "2024-11",
+    "knowledge": "2024-04",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 8192
+    },
+    "providers": [
+      "alibaba-cn"
+    ]
+  },
+  "alibaba/qwen2.5-math-72b-instruct": {
+    "id": "alibaba/qwen2.5-math-72b-instruct",
+    "lab": "alibaba",
+    "name": "Qwen2.5 Math 72B Instruct",
+    "family": "qwen",
+    "released": "2024-09",
+    "updated": "2024-09",
+    "knowledge": "2024-04",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 4096,
+      "output": 3072
+    },
+    "providers": [
+      "alibaba-cn"
+    ]
+  },
+  "alibaba/qwen2.5-math-7b-instruct": {
+    "id": "alibaba/qwen2.5-math-7b-instruct",
+    "lab": "alibaba",
+    "name": "Qwen2.5 Math 7B Instruct",
+    "family": "qwen",
+    "released": "2024-09",
+    "updated": "2024-09",
+    "knowledge": "2024-04",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 4096,
+      "output": 3072
+    },
+    "providers": [
+      "alibaba-cn"
+    ]
+  },
+  "alibaba/qwen2.5-omni-7b": {
+    "id": "alibaba/qwen2.5-omni-7b",
+    "lab": "alibaba",
+    "name": "Qwen2.5 Omni 7B",
+    "family": "qwen",
+    "released": "2024-12",
+    "updated": "2024-12",
+    "knowledge": "2024-04",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "audio",
+        "video"
+      ],
+      "output": [
+        "text",
+        "audio"
+      ]
+    },
+    "limit": {
+      "context": 32768,
+      "output": 2048
+    },
+    "providers": [
+      "alibaba",
+      "alibaba-cn"
+    ]
+  },
+  "alibaba/qwen2.5-vl-32b-instruct": {
+    "id": "alibaba/qwen2.5-vl-32b-instruct",
+    "lab": "alibaba",
+    "name": "Qwen2.5 VL 32B Instruct",
+    "family": "qwen",
+    "released": "2024-11-01",
+    "updated": "2024-11-01",
+    "knowledge": "2024-09",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32000,
+      "output": 4096
+    },
+    "providers": [
+      "io-net",
+      "meganova"
+    ]
+  },
+  "alibaba/qwen2.5-vl-7b-instruct": {
+    "id": "alibaba/qwen2.5-vl-7b-instruct",
+    "lab": "alibaba",
+    "name": "Qwen2.5 VL 7B Instruct",
+    "family": "qwen",
+    "released": "2024-09",
+    "updated": "2024-09",
+    "knowledge": "2024-04",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 8192
+    },
+    "providers": [
+      "alibaba",
+      "alibaba-cn",
+      "qiniu-ai"
+    ]
+  },
+  "alibaba/qwen3-1.7b-base": {
+    "id": "alibaba/qwen3-1.7b-base",
+    "lab": "alibaba",
+    "name": "Qwen3 1.7B Base",
+    "released": "2025-03-31",
+    "updated": "2025-03-31",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32768,
+      "output": 32768
+    },
+    "providers": [
+      "pioneer"
+    ]
+  },
+  "alibaba/qwen3-14b": {
+    "id": "alibaba/qwen3-14b",
+    "lab": "alibaba",
+    "name": "Qwen3 14B",
+    "family": "qwen",
+    "released": "2025-04",
+    "updated": "2025-04",
+    "knowledge": "2025-04",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 8192
+    },
+    "providers": [
+      "alibaba",
+      "alibaba-cn",
+      "kilo",
+      "llmgateway-providers",
+      "nano-gpt",
+      "openrouter",
+      "siliconflow",
+      "siliconflow-cn",
+      "vercel"
+    ]
+  },
+  "alibaba/qwen3-235b": {
+    "id": "alibaba/qwen3-235b",
+    "lab": "alibaba",
+    "name": "Qwen3 235B",
+    "family": "qwen",
+    "released": "2024-12-01",
+    "updated": "2024-12-01",
+    "knowledge": "2024-10",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 32000
+    },
+    "providers": [
+      "iflowcn"
+    ]
+  },
+  "alibaba/qwen3-235b-2507-cs": {
+    "id": "alibaba/qwen3-235b-2507-cs",
+    "lab": "alibaba",
+    "name": "Qwen3 235B 2507 Cs",
+    "released": "2025-08-06",
+    "updated": "2025-08-06",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "poe"
+    ]
+  },
+  "alibaba/qwen3-235b-a22b": {
+    "id": "alibaba/qwen3-235b-a22b",
+    "lab": "alibaba",
+    "name": "Qwen3 235B A22B",
+    "family": "qwen",
+    "released": "2025-04-28",
+    "updated": "2025-04-28",
+    "knowledge": "2025-04",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 16384
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/Qwen/Qwen3-235B-A22B"
+      }
+    ],
+    "providers": [
+      "302ai",
+      "alibaba",
+      "alibaba-cn",
+      "huggingface",
+      "merge-gateway",
+      "nano-gpt",
+      "qiniu-ai",
+      "scaleway"
+    ]
+  },
+  "alibaba/qwen3-235b-a22b-fp8": {
+    "id": "alibaba/qwen3-235b-a22b-fp8",
+    "lab": "alibaba",
+    "name": "Qwen3 235B A22B FP8",
+    "family": "qwen",
+    "released": "2026-01",
+    "updated": "2026-01",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "structured_output": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 40960,
+      "output": 20000
+    },
+    "providers": [
+      "jiekou",
+      "llmgateway",
+      "llmgateway-providers"
+    ]
+  },
+  "alibaba/qwen3-235b-a22b-instruct": {
+    "id": "alibaba/qwen3-235b-a22b-instruct",
+    "lab": "alibaba",
+    "name": "Qwen3 235B A22B Instruct",
+    "family": "qwen",
+    "released": "2025-07-01",
+    "updated": "2025-07-01",
+    "knowledge": "2025-04",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 256000,
+      "output": 64000
+    },
+    "providers": [
+      "iflowcn"
+    ]
+  },
+  "alibaba/qwen3-235b-a22b-instruct-2507": {
+    "id": "alibaba/qwen3-235b-a22b-instruct-2507",
+    "lab": "alibaba",
+    "name": "Qwen3 235B A22B Instruct 2507",
+    "family": "qwen",
+    "released": "2025-07-21",
+    "updated": "2025-07-21",
+    "open_weights": true,
+    "license": "Apache 2.0",
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 16384
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/Qwen/Qwen3-235B-A22B-Instruct-2507"
+      }
+    ],
+    "providers": [
+      "302ai",
+      "abacus",
+      "amazon-bedrock",
+      "cortecs",
+      "crusoe",
+      "deepinfra",
+      "edenai",
+      "greenpt",
+      "huggingface",
+      "jiekou",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "meganova",
+      "merge-gateway",
+      "modelscope",
+      "nano-gpt",
+      "nebius",
+      "openrouter",
+      "pioneer",
+      "qiniu-ai",
+      "submodel",
+      "tensorx",
+      "togetherai",
+      "vercel"
+    ]
+  },
+  "alibaba/qwen3-235b-a22b-instruct-2507-maas": {
+    "id": "alibaba/qwen3-235b-a22b-instruct-2507-maas",
+    "lab": "alibaba",
+    "name": "Qwen3 235B A22B Instruct 2507 Maas",
+    "family": "qwen",
+    "released": "2025-08-13",
+    "updated": "2025-08-13",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 16384
+    },
+    "providers": [
+      "google-vertex"
+    ]
+  },
+  "alibaba/qwen3-235b-a22b-thinking": {
+    "id": "alibaba/qwen3-235b-a22b-thinking",
+    "lab": "alibaba",
+    "name": "Qwen3 235B A22B Thinking",
+    "family": "qwen",
+    "released": "2025-07-25",
+    "updated": "2025-07-25",
+    "knowledge": "2025-07",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 81920
+    },
+    "providers": [
+      "helicone"
+    ]
+  },
+  "alibaba/qwen3-235b-a22b-thinking-2507": {
+    "id": "alibaba/qwen3-235b-a22b-thinking-2507",
+    "lab": "alibaba",
+    "name": "Qwen3 235B A22B Thinking 2507",
+    "family": "qwen",
+    "released": "2025-07-25",
+    "updated": "2025-07-25",
+    "open_weights": true,
+    "license": "Apache 2.0",
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 81920
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/Qwen/Qwen3-235B-A22B-Thinking-2507"
+      }
+    ],
+    "providers": [
+      "chutes",
+      "edenai",
+      "huggingface",
+      "iflowcn",
+      "io-net",
+      "jiekou",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "modelscope",
+      "nano-gpt",
+      "openrouter",
+      "qiniu-ai",
+      "siliconflow-cn",
+      "submodel"
+    ]
+  },
+  "alibaba/qwen3-30b-a3b": {
+    "id": "alibaba/qwen3-30b-a3b",
+    "lab": "alibaba",
+    "name": "Qwen3 30B A3B",
+    "family": "qwen",
+    "released": "2025-04-28",
+    "updated": "2025-04-28",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 16384
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/Qwen/Qwen3-30B-A3B"
+      }
+    ],
+    "providers": [
+      "302ai",
+      "cloudflare-workers-ai",
+      "deepinfra",
+      "helicone",
+      "huggingface",
+      "kilo",
+      "llmgateway-providers",
+      "merge-gateway",
+      "nano-gpt",
+      "openrouter",
+      "qiniu-ai",
+      "vercel"
+    ]
+  },
+  "alibaba/qwen3-30b-a3b-2507": {
+    "id": "alibaba/qwen3-30b-a3b-2507",
+    "lab": "alibaba",
+    "name": "Qwen3 30B A3B 2507",
+    "family": "qwen",
+    "released": "2025-07-30",
+    "updated": "2025-07-30",
+    "knowledge": "2025-04",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 16384
+    },
+    "providers": [
+      "lmstudio"
+    ]
+  },
+  "alibaba/qwen3-30b-a3b-fp8": {
+    "id": "alibaba/qwen3-30b-a3b-fp8",
+    "lab": "alibaba",
+    "name": "Qwen3 30B A3B FP8",
+    "family": "qwen",
+    "released": "2026-01",
+    "updated": "2026-01",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "structured_output": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 40960,
+      "output": 20000
+    },
+    "providers": [
+      "jiekou"
+    ]
+  },
+  "alibaba/qwen3-30b-a3b-instruct-2507": {
+    "id": "alibaba/qwen3-30b-a3b-instruct-2507",
+    "lab": "alibaba",
+    "name": "Qwen3 30B A3B Instruct 2507",
+    "family": "qwen",
+    "released": "2025-07-28",
+    "updated": "2025-07-28",
+    "open_weights": true,
+    "license": "Apache 2.0",
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 16384
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/Qwen/Qwen3-30B-A3B-Instruct-2507"
+      }
+    ],
+    "providers": [
+      "ambient",
+      "clarifai",
+      "cortecs",
+      "edenai",
+      "kilo",
+      "modelscope",
+      "nano-gpt",
+      "nebius",
+      "openrouter",
+      "prime",
+      "qiniu-ai",
+      "siliconflow",
+      "siliconflow-cn"
+    ]
+  },
+  "alibaba/qwen3-30b-a3b-thinking-2507": {
+    "id": "alibaba/qwen3-30b-a3b-thinking-2507",
+    "lab": "alibaba",
+    "name": "Qwen3 30B A3B Thinking 2507",
+    "family": "qwen",
+    "released": "2025-07-31",
+    "updated": "2026-02-25",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 131072
+    },
+    "providers": [
+      "clarifai",
+      "modelscope",
+      "qiniu-ai"
+    ]
+  },
+  "alibaba/qwen3-32b": {
+    "id": "alibaba/qwen3-32b",
+    "lab": "alibaba",
+    "name": "Qwen3 32B",
+    "family": "qwen",
+    "released": "2025-04-28",
+    "updated": "2025-04-28",
+    "knowledge": "2025-04",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 16384
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/Qwen/Qwen3-32B"
+      }
+    ],
+    "providers": [
+      "abacus",
+      "alibaba",
+      "alibaba-cn",
+      "amazon-bedrock",
+      "chutes",
+      "cortecs",
+      "deepinfra",
+      "digitalocean",
+      "helicone",
+      "huggingface",
+      "iflowcn",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "merge-gateway",
+      "nano-gpt",
+      "openrouter",
+      "pioneer",
+      "qiniu-ai",
+      "siliconflow",
+      "siliconflow-cn",
+      "vercel"
+    ]
+  },
+  "alibaba/qwen3-32b-cs": {
+    "id": "alibaba/qwen3-32b-cs",
+    "lab": "alibaba",
+    "name": "Qwen3 32B Cs",
+    "released": "2025-05-15",
+    "updated": "2025-05-15",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "poe"
+    ]
+  },
+  "alibaba/qwen3-32b-fp8": {
+    "id": "alibaba/qwen3-32b-fp8",
+    "lab": "alibaba",
+    "name": "Qwen3 32B FP8",
+    "family": "qwen",
+    "released": "2026-01",
+    "updated": "2026-01",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "structured_output": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 40960,
+      "output": 20000
+    },
+    "providers": [
+      "jiekou"
+    ]
+  },
+  "alibaba/qwen3-4b-base": {
+    "id": "alibaba/qwen3-4b-base",
+    "lab": "alibaba",
+    "name": "Qwen3 4B Base",
+    "released": "2025-03-31",
+    "updated": "2025-03-31",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32768,
+      "output": 32768
+    },
+    "providers": [
+      "pioneer"
+    ]
+  },
+  "alibaba/qwen3-4b-instruct-2507": {
+    "id": "alibaba/qwen3-4b-instruct-2507",
+    "lab": "alibaba",
+    "name": "Qwen3 4B Instruct 2507",
+    "released": "2025-07-31",
+    "updated": "2025-07-31",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32768,
+      "output": 32768
+    },
+    "providers": [
+      "pioneer"
+    ]
+  },
+  "alibaba/qwen3-8b": {
+    "id": "alibaba/qwen3-8b",
+    "lab": "alibaba",
+    "name": "Qwen3 8B",
+    "family": "qwen",
+    "released": "2025-04-29",
+    "updated": "2025-04-29",
+    "open_weights": true,
+    "license": "Apache-2.0",
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32768,
+      "output": 32768
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/Qwen/Qwen3-8B"
+      }
+    ],
+    "providers": [
+      "alibaba",
+      "alibaba-cn",
+      "nano-gpt",
+      "pioneer",
+      "siliconflow",
+      "siliconflow-cn",
+      "thinkingmachines"
+    ]
+  },
+  "alibaba/qwen3-asr-flash": {
+    "id": "alibaba/qwen3-asr-flash",
+    "lab": "alibaba",
+    "name": "Qwen3 ASR Flash",
+    "family": "qwen",
+    "type": "transcription",
+    "released": "2025-09-08",
+    "updated": "2025-09-08",
+    "knowledge": "2024-04",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "audio"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 53248,
+      "output": 4096
+    },
+    "providers": [
+      "alibaba",
+      "alibaba-cn"
+    ]
+  },
+  "alibaba/qwen3-coder-30b-a3b-instruct": {
+    "id": "alibaba/qwen3-coder-30b-a3b-instruct",
+    "lab": "alibaba",
+    "name": "Qwen3 Coder 30B A3B Instruct",
+    "family": "qwen",
+    "released": "2025-07-31",
+    "updated": "2025-07-31",
+    "knowledge": "2025-04",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 65536
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/Qwen/Qwen3-Coder-30B-A3B-Instruct"
+      }
+    ],
+    "providers": [
+      "alibaba",
+      "alibaba-cn",
+      "amazon-bedrock",
+      "clarifai",
+      "cortecs",
+      "edenai",
+      "greenpt",
+      "helicone",
+      "huggingface",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "lmstudio",
+      "modelscope",
+      "nano-gpt",
+      "openrouter",
+      "pendra",
+      "siliconflow",
+      "siliconflow-cn",
+      "vercel"
+    ]
+  },
+  "alibaba/qwen3-coder-480b-a35b-instruct": {
+    "id": "alibaba/qwen3-coder-480b-a35b-instruct",
+    "lab": "alibaba",
+    "name": "Qwen3 Coder 480B A35B Instruct",
+    "family": "qwen",
+    "released": "2025-07-22",
+    "updated": "2025-07-22",
+    "knowledge": "2025-04",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 65536
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/Qwen/Qwen3-Coder-480B-A35B-Instruct"
+      }
+    ],
+    "providers": [
+      "302ai",
+      "abacus",
+      "aimlapi",
+      "alibaba",
+      "alibaba-cn",
+      "amazon-bedrock",
+      "deepinfra",
+      "edenai",
+      "fastrouter",
+      "helicone",
+      "huggingface",
+      "jiekou",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "merge-gateway",
+      "nano-gpt",
+      "nvidia",
+      "opencode",
+      "openrouter",
+      "qiniu-ai",
+      "siliconflow",
+      "siliconflow-cn",
+      "togetherai",
+      "vercel"
+    ]
+  },
+  "alibaba/qwen3-coder-480b-a35b-instruct-fp8": {
+    "id": "alibaba/qwen3-coder-480b-a35b-instruct-fp8",
+    "lab": "alibaba",
+    "name": "Qwen3 Coder 480B A35B Instruct FP8",
+    "family": "qwen",
+    "released": "2025-08-23",
+    "updated": "2025-08-23",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 262144
+    },
+    "providers": [
+      "submodel"
+    ]
+  },
+  "alibaba/qwen3-coder-480b-a35b-instruct-int4-mixed-ar": {
+    "id": "alibaba/qwen3-coder-480b-a35b-instruct-int4-mixed-ar",
+    "lab": "alibaba",
+    "name": "Qwen3 Coder 480B A35B Instruct Int4 Mixed Ar",
+    "family": "qwen",
+    "released": "2025-01-15",
+    "updated": "2025-01-15",
+    "knowledge": "2024-12",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 106000,
+      "output": 4096
+    },
+    "providers": [
+      "io-net"
+    ]
+  },
+  "alibaba/qwen3-coder-flash": {
+    "id": "alibaba/qwen3-coder-flash",
+    "lab": "alibaba",
+    "name": "Qwen3 Coder Flash",
+    "family": "qwen",
+    "released": "2025-07-28",
+    "updated": "2025-07-28",
+    "knowledge": "2025-04",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 65536
+    },
+    "providers": [
+      "alibaba",
+      "alibaba-cn",
+      "digitalocean",
+      "edenai",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "llmtr",
+      "merge-gateway",
+      "nano-gpt",
+      "ofox",
+      "openrouter"
+    ]
+  },
+  "alibaba/qwen3-coder-next": {
+    "id": "alibaba/qwen3-coder-next",
+    "lab": "alibaba",
+    "name": "Qwen3 Coder Next",
+    "family": "qwen",
+    "released": "2026-02-03",
+    "updated": "2026-02-03",
+    "knowledge": "2025-09",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 65536
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/Qwen/Qwen3-Coder-Next"
+      }
+    ],
+    "providers": [
+      "alibaba-coding-plan",
+      "alibaba-coding-plan-cn",
+      "amazon-bedrock",
+      "cortecs",
+      "edenai",
+      "huggingface",
+      "jiekou",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "merge-gateway",
+      "nano-gpt",
+      "ofox",
+      "openrouter",
+      "opper",
+      "prime",
+      "regolo-ai",
+      "togetherai",
+      "vercel"
+    ]
+  },
+  "alibaba/qwen3-coder-next-fp8": {
+    "id": "alibaba/qwen3-coder-next-fp8",
+    "lab": "alibaba",
+    "name": "Qwen3 Coder Next FP8",
+    "family": "qwen",
+    "released": "2026-02-03",
+    "updated": "2026-02-03",
+    "knowledge": "2025-04",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 256144,
+      "output": 65536
+    },
+    "providers": [
+      "inferx"
+    ]
+  },
+  "alibaba/qwen3-coder-next-fp8-no-thinking": {
+    "id": "alibaba/qwen3-coder-next-fp8-no-thinking",
+    "lab": "alibaba",
+    "name": "Qwen3 Coder Next FP8 No Thinking",
+    "family": "qwen",
+    "released": "2026-02-03",
+    "updated": "2026-02-03",
+    "knowledge": "2025-04",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 260000,
+      "output": 65536
+    },
+    "providers": [
+      "inferx"
+    ]
+  },
+  "alibaba/qwen3-coder-plus": {
+    "id": "alibaba/qwen3-coder-plus",
+    "lab": "alibaba",
+    "name": "Qwen3 Coder Plus",
+    "family": "qwen",
+    "released": "2025-07-23",
+    "updated": "2025-07-23",
+    "knowledge": "2025-04",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "output": 65536
+    },
+    "providers": [
+      "alibaba",
+      "alibaba-cn",
+      "alibaba-coding-plan",
+      "alibaba-coding-plan-cn",
+      "iflowcn",
+      "llmtr",
+      "merge-gateway",
+      "ofox",
+      "zenmux"
+    ]
+  },
+  "alibaba/qwen3-embedding-0.6b": {
+    "id": "alibaba/qwen3-embedding-0.6b",
+    "lab": "alibaba",
+    "name": "Qwen3 Embedding 0.6B",
+    "family": "text-embedding",
+    "type": "embedding",
+    "released": "2025-06-03",
+    "updated": "2026-04-16",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 8000,
+      "output": 1024
+    },
+    "providers": [
+      "digitalocean",
+      "nearai",
+      "vercel"
+    ]
+  },
+  "alibaba/qwen3-embedding-4b": {
+    "id": "alibaba/qwen3-embedding-4b",
+    "lab": "alibaba",
+    "name": "Qwen3 Embedding 4B",
+    "family": "qwen",
+    "type": "embedding",
+    "released": "2025-06-05",
+    "updated": "2025-06-05",
+    "knowledge": "2024-12",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32768,
+      "output": 0
+    },
+    "providers": [
+      "huggingface",
+      "inference",
+      "privatemode-ai",
+      "vercel"
+    ]
+  },
+  "alibaba/qwen3-embedding-8b": {
+    "id": "alibaba/qwen3-embedding-8b",
+    "lab": "alibaba",
+    "name": "Qwen3 Embedding 8B",
+    "family": "qwen",
+    "type": "embedding",
+    "released": "2025-06-05",
+    "updated": "2025-06-05",
+    "open_weights": true,
+    "license": "Apache-2.0",
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32768,
+      "output": 0
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/Qwen/Qwen3-Embedding-8B"
+      }
+    ],
+    "providers": [
+      "evroc",
+      "huggingface",
+      "inferx",
+      "nebius",
+      "novita-ai",
+      "regolo-ai",
+      "scaleway",
+      "vercel"
+    ]
+  },
+  "alibaba/qwen3-livetranslate-flash-realtime": {
+    "id": "alibaba/qwen3-livetranslate-flash-realtime",
+    "lab": "alibaba",
+    "name": "Qwen3 LiveTranslate Flash Realtime",
+    "family": "qwen",
+    "type": "realtime",
+    "released": "2025-09-22",
+    "updated": "2025-09-22",
+    "knowledge": "2024-04",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "audio",
+        "video"
+      ],
+      "output": [
+        "text",
+        "audio"
+      ]
+    },
+    "limit": {
+      "context": 53248,
+      "output": 4096
+    },
+    "providers": [
+      "alibaba"
+    ]
+  },
+  "alibaba/qwen3-max": {
+    "id": "alibaba/qwen3-max",
+    "lab": "alibaba",
+    "name": "Qwen3 Max",
+    "family": "qwen",
+    "released": "2025-09-23",
+    "updated": "2025-09-23",
+    "knowledge": "2025-04",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 65536
+    },
+    "providers": [
+      "abacus",
+      "aihubmix",
+      "alibaba",
+      "alibaba-cn",
+      "cloudflare-ai-gateway",
+      "deepinfra",
+      "edenai",
+      "iflowcn",
+      "llmgateway",
+      "llmgateway-providers",
+      "llmtr",
+      "merge-gateway",
+      "nano-gpt",
+      "ofox",
+      "orcarouter",
+      "qiniu-ai",
+      "zenmux"
+    ]
+  },
+  "alibaba/qwen3-max-2025-09-23": {
+    "id": "alibaba/qwen3-max-2025-09-23",
+    "lab": "alibaba",
+    "name": "Qwen3 Max 20250923",
+    "released": "2025-09-24",
+    "updated": "2025-09-24",
+    "knowledge": "2025-04",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 258048,
+      "output": 65536
+    },
+    "providers": [
+      "302ai"
+    ]
+  },
+  "alibaba/qwen3-max-2026-01-23": {
+    "id": "alibaba/qwen3-max-2026-01-23",
+    "lab": "alibaba",
+    "name": "Qwen3 Max 20260123",
+    "family": "qwen",
+    "released": "2026-01-23",
+    "updated": "2026-01-23",
+    "knowledge": "2025-04",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 32768
+    },
+    "providers": [
+      "alibaba-coding-plan",
+      "alibaba-coding-plan-cn",
+      "nano-gpt"
+    ]
+  },
+  "alibaba/qwen3-max-preview": {
+    "id": "alibaba/qwen3-max-preview",
+    "lab": "alibaba",
+    "name": "Qwen3 Max Preview",
+    "family": "qwen",
+    "released": "2025-09-05",
+    "updated": "2025-09-23",
+    "knowledge": "2025-04",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 32768
+    },
+    "providers": [
+      "iflowcn",
+      "merge-gateway",
+      "qiniu-ai"
+    ]
+  },
+  "alibaba/qwen3-max-thinking": {
+    "id": "alibaba/qwen3-max-thinking",
+    "lab": "alibaba",
+    "name": "Qwen3 Max Thinking",
+    "family": "qwen",
+    "released": "2026-01-23",
+    "updated": "2025-01",
+    "knowledge": "2025-01",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 256000,
+      "output": 65536
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "alibaba/qwen3-next-80b-a3b-instruct": {
+    "id": "alibaba/qwen3-next-80b-a3b-instruct",
+    "lab": "alibaba",
+    "name": "Qwen3 Next 80B A3B Instruct",
+    "family": "qwen",
+    "released": "2025-09",
+    "updated": "2025-09",
+    "knowledge": "2025-04",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 32768
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/Qwen/Qwen3-Next-80B-A3B-Instruct"
+      }
+    ],
+    "providers": [
+      "aimlapi",
+      "alibaba",
+      "alibaba-cn",
+      "amazon-bedrock",
+      "deepinfra",
+      "edenai",
+      "helicone",
+      "huggingface",
+      "io-net",
+      "jalapeno",
+      "jiekou",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "merge-gateway",
+      "nano-gpt",
+      "neon",
+      "nvidia",
+      "openrouter",
+      "qiniu-ai",
+      "vercel"
+    ]
+  },
+  "alibaba/qwen3-next-80b-a3b-thinking": {
+    "id": "alibaba/qwen3-next-80b-a3b-thinking",
+    "lab": "alibaba",
+    "name": "Qwen3 Next 80B A3B Thinking",
+    "family": "qwen",
+    "released": "2025-09",
+    "updated": "2025-09",
+    "knowledge": "2025-04",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 32768
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/Qwen/Qwen3-Next-80B-A3B-Thinking"
+      }
+    ],
+    "providers": [
+      "alibaba",
+      "alibaba-cn",
+      "huggingface",
+      "jalapeno",
+      "jiekou",
+      "kilo",
+      "merge-gateway",
+      "nano-gpt",
+      "openrouter",
+      "qiniu-ai",
+      "vercel"
+    ]
+  },
+  "alibaba/qwen3-omni-30b-a3b-thinking": {
+    "id": "alibaba/qwen3-omni-30b-a3b-thinking",
+    "lab": "alibaba",
+    "name": "Qwen3 Omni 30B A3B Thinking",
+    "family": "qwen",
+    "released": "2025-09-22",
+    "updated": "2025-09-22",
+    "open_weights": true,
+    "license": "Apache-2.0",
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video",
+        "audio"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 65536,
+      "output": 16384
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/Qwen/Qwen3-Omni-30B-A3B-Thinking"
+      }
+    ],
+    "providers": [
+      "novita-ai"
+    ]
+  },
+  "alibaba/qwen3-omni-flash": {
+    "id": "alibaba/qwen3-omni-flash",
+    "lab": "alibaba",
+    "name": "Qwen3 Omni Flash",
+    "family": "qwen",
+    "released": "2025-09-15",
+    "updated": "2025-09-15",
+    "knowledge": "2024-04",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "audio",
+        "video"
+      ],
+      "output": [
+        "text",
+        "audio"
+      ]
+    },
+    "limit": {
+      "context": 65536,
+      "output": 16384
+    },
+    "providers": [
+      "alibaba",
+      "alibaba-cn"
+    ]
+  },
+  "alibaba/qwen3-omni-flash-realtime": {
+    "id": "alibaba/qwen3-omni-flash-realtime",
+    "lab": "alibaba",
+    "name": "Qwen3 Omni Flash Realtime",
+    "family": "qwen",
+    "type": "realtime",
+    "released": "2025-09-15",
+    "updated": "2025-09-15",
+    "knowledge": "2024-04",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "audio",
+        "video"
+      ],
+      "output": [
+        "text",
+        "audio"
+      ]
+    },
+    "limit": {
+      "context": 65536,
+      "output": 16384
+    },
+    "providers": [
+      "alibaba",
+      "alibaba-cn"
+    ]
+  },
+  "alibaba/qwen3-reranker-0.6b": {
+    "id": "alibaba/qwen3-reranker-0.6b",
+    "lab": "alibaba",
+    "name": "Qwen3 Reranker 0.6B",
+    "family": "qwen",
+    "type": "reranking",
+    "released": "2025-06-05",
+    "updated": "2025-06-05",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 40960,
+      "output": 1024
+    },
+    "providers": [
+      "nearai"
+    ]
+  },
+  "alibaba/qwen3-reranker-4b": {
+    "id": "alibaba/qwen3-reranker-4b",
+    "lab": "alibaba",
+    "name": "Qwen3 Reranker 4B",
+    "family": "qwen",
+    "released": "2025-07-30",
+    "updated": "2025-07-30",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32000,
+      "output": 4096
+    },
+    "providers": [
+      "evroc",
+      "regolo-ai"
+    ]
+  },
+  "alibaba/qwen3-reranker-8b": {
+    "id": "alibaba/qwen3-reranker-8b",
+    "lab": "alibaba",
+    "name": "Qwen3 Reranker 8B",
+    "family": "qwen",
+    "type": "reranking",
+    "released": "2025-06-05",
+    "updated": "2025-06-05",
+    "open_weights": true,
+    "license": "Apache-2.0",
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32768,
+      "output": 0
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/Qwen/Qwen3-Reranker-8B"
+      }
+    ],
+    "providers": [
+      "novita-ai"
+    ]
+  },
+  "alibaba/qwen3-tts-voicedesign": {
+    "id": "alibaba/qwen3-tts-voicedesign",
+    "lab": "alibaba",
+    "name": "Qwen3 TTS VoiceDesign",
+    "family": "qwen",
+    "type": "speech",
+    "released": "2026-04-21",
+    "updated": "2026-04-30",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "audio"
+      ]
+    },
+    "limit": {
+      "context": 32768,
+      "output": 1
+    },
+    "providers": [
+      "digitalocean"
+    ]
+  },
+  "alibaba/qwen3-vl-235b-a22b-instruct": {
+    "id": "alibaba/qwen3-vl-235b-a22b-instruct",
+    "lab": "alibaba",
+    "name": "Qwen3 VL 235B A22B Instruct",
+    "family": "qwen",
+    "released": "2025-09-23",
+    "updated": "2025-09-23",
+    "knowledge": "2025-03-31",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 32768
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/Qwen/Qwen3-VL-235B-A22B-Instruct"
+      }
+    ],
+    "providers": [
+      "alibaba",
+      "alibaba-cn",
+      "amazon-bedrock",
+      "cortecs",
+      "deepinfra",
+      "edenai",
+      "helicone",
+      "huggingface",
+      "jalapeno",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "merge-gateway",
+      "nano-gpt",
+      "openrouter",
+      "orcarouter",
+      "prime"
+    ]
+  },
+  "alibaba/qwen3-vl-235b-a22b-instruct-fp8": {
+    "id": "alibaba/qwen3-vl-235b-a22b-instruct-fp8",
+    "lab": "alibaba",
+    "name": "Qwen3 VL 235B A22B Instruct FP8",
+    "family": "qwen",
+    "released": "2024-11-01",
+    "updated": "2024-11-01",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": false,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 218000,
+      "output": 16384
+    },
+    "providers": [
+      "stackit"
+    ]
+  },
+  "alibaba/qwen3-vl-235b-a22b-thinking": {
+    "id": "alibaba/qwen3-vl-235b-a22b-thinking",
+    "lab": "alibaba",
+    "name": "Qwen3 VL 235B A22B Thinking",
+    "family": "qwen",
+    "released": "2025-09-23",
+    "updated": "2025-09-23",
+    "knowledge": "2025-03-31",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 32768
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/Qwen/Qwen3-VL-235B-A22B-Thinking"
+      }
+    ],
+    "providers": [
+      "huggingface",
+      "jalapeno",
+      "llmgateway",
+      "llmgateway-providers",
+      "merge-gateway",
+      "nano-gpt",
+      "orcarouter"
+    ]
+  },
+  "alibaba/qwen3-vl-30b-a3b": {
+    "id": "alibaba/qwen3-vl-30b-a3b",
+    "lab": "alibaba",
+    "name": "Qwen3 VL 30B A3B",
+    "family": "qwen",
+    "released": "2025-04",
+    "updated": "2025-04",
+    "knowledge": "2025-04",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 32768
+    },
+    "providers": [
+      "alibaba",
+      "alibaba-cn"
+    ]
+  },
+  "alibaba/qwen3-vl-30b-a3b-instruct": {
+    "id": "alibaba/qwen3-vl-30b-a3b-instruct",
+    "lab": "alibaba",
+    "name": "Qwen3 VL 30B A3B Instruct",
+    "family": "qwen",
+    "released": "2025-10-04",
+    "updated": "2025-10-04",
+    "open_weights": true,
+    "license": "Apache-2.0",
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 32768
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/Qwen/Qwen3-VL-30B-A3B-Instruct"
+      }
+    ],
+    "providers": [
+      "deepinfra",
+      "edenai",
+      "huggingface",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "merge-gateway",
+      "nearai",
+      "novita-ai",
+      "openrouter",
+      "prime",
+      "siliconflow",
+      "siliconflow-cn"
+    ]
+  },
+  "alibaba/qwen3-vl-30b-a3b-thinking": {
+    "id": "alibaba/qwen3-vl-30b-a3b-thinking",
+    "lab": "alibaba",
+    "name": "Qwen3 VL 30B A3B Thinking",
+    "family": "qwen",
+    "released": "2025-10-06",
+    "updated": "2025-10-06",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 235929
+    },
+    "providers": [
+      "kilo",
+      "openrouter",
+      "qiniu-ai",
+      "siliconflow",
+      "siliconflow-cn"
+    ]
+  },
+  "alibaba/qwen3-vl-32b-instruct": {
+    "id": "alibaba/qwen3-vl-32b-instruct",
+    "lab": "alibaba",
+    "name": "Qwen3 VL 32B Instruct",
+    "family": "qwen",
+    "released": "2025-10-21",
+    "updated": "2025-11-25",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262000,
+      "output": 262000
+    },
+    "providers": [
+      "siliconflow",
+      "siliconflow-cn"
+    ]
+  },
+  "alibaba/qwen3-vl-32b-thinking": {
+    "id": "alibaba/qwen3-vl-32b-thinking",
+    "lab": "alibaba",
+    "name": "Qwen3 VL 32B Thinking",
+    "family": "qwen",
+    "released": "2025-10-21",
+    "updated": "2025-11-25",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262000,
+      "output": 262000
+    },
+    "providers": [
+      "siliconflow",
+      "siliconflow-cn"
+    ]
+  },
+  "alibaba/qwen3-vl-8b-instruct": {
+    "id": "alibaba/qwen3-vl-8b-instruct",
+    "lab": "alibaba",
+    "name": "Qwen3 VL 8B Instruct",
+    "family": "qwen",
+    "released": "2025-10-14",
+    "updated": "2025-10-14",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "image",
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 235929
+    },
+    "providers": [
+      "kilo",
+      "openrouter",
+      "siliconflow",
+      "siliconflow-cn"
+    ]
+  },
+  "alibaba/qwen3-vl-embedding-8b": {
+    "id": "alibaba/qwen3-vl-embedding-8b",
+    "lab": "alibaba",
+    "name": "Qwen3 VL Embedding 8B",
+    "family": "qwen",
+    "released": "2026-02-05",
+    "updated": "2026-02-05",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "structured_output": false,
+      "temperature": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32000,
+      "output": 4096
+    },
+    "providers": [
+      "stackit"
+    ]
+  },
+  "alibaba/qwen3-vl-flash": {
+    "id": "alibaba/qwen3-vl-flash",
+    "lab": "alibaba",
+    "name": "Qwen3 VL Flash",
+    "released": "2025-10-15",
+    "updated": "2025-10-15",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 32768
+    },
+    "providers": [
+      "merge-gateway"
+    ]
+  },
+  "alibaba/qwen3-vl-instruct": {
+    "id": "alibaba/qwen3-vl-instruct",
+    "lab": "alibaba",
+    "name": "Qwen3 VL Instruct",
+    "family": "qwen",
+    "released": "2025-09-23",
+    "updated": "2025-09-24",
+    "knowledge": "2025-04",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 262144
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "alibaba/qwen3-vl-plus": {
+    "id": "alibaba/qwen3-vl-plus",
+    "lab": "alibaba",
+    "name": "Qwen3 VL Plus",
+    "family": "qwen",
+    "released": "2025-09-23",
+    "updated": "2025-09-23",
+    "knowledge": "2025-04",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 32768
+    },
+    "providers": [
+      "aihubmix",
+      "alibaba",
+      "alibaba-cn",
+      "iflowcn",
+      "llmgateway",
+      "llmgateway-providers",
+      "llmtr",
+      "merge-gateway"
+    ]
+  },
+  "alibaba/qwen3.5-0.8b": {
+    "id": "alibaba/qwen3.5-0.8b",
+    "lab": "alibaba",
+    "name": "Qwen3.5 0.8B",
+    "family": "qwen",
+    "released": "2025-11-01",
+    "updated": "2025-11-01",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32768,
+      "output": 8192
+    },
+    "providers": [
+      "qvac"
+    ]
+  },
+  "alibaba/qwen3.5-122b": {
+    "id": "alibaba/qwen3.5-122b",
+    "lab": "alibaba",
+    "name": "Qwen3.5 122B",
+    "family": "qwen",
+    "released": "2026-02-01",
+    "updated": "2026-02-01",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 16384
+    },
+    "providers": [
+      "regolo-ai"
+    ]
+  },
+  "alibaba/qwen3.5-122b-a10b": {
+    "id": "alibaba/qwen3.5-122b-a10b",
+    "lab": "alibaba",
+    "name": "Qwen3.5 122B A10B",
+    "family": "qwen",
+    "released": "2026-02-23",
+    "updated": "2026-02-23",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 65536
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/Qwen/Qwen3.5-122B-A10B"
+      }
+    ],
+    "providers": [
+      "aihubmix",
+      "alibaba",
+      "deepinfra",
+      "empiriolabs",
+      "huggingface",
+      "infomaniak",
+      "jalapeno",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "merge-gateway",
+      "mixlayer",
+      "nano-gpt",
+      "neon",
+      "novita-ai",
+      "nvidia",
+      "ofox",
+      "openrouter",
+      "orcarouter",
+      "siliconflow",
+      "siliconflow-cn",
+      "tensorx"
+    ]
+  },
+  "alibaba/qwen3.5-27b": {
+    "id": "alibaba/qwen3.5-27b",
+    "lab": "alibaba",
+    "name": "Qwen3.5 27B",
+    "family": "qwen",
+    "released": "2026-02-23",
+    "updated": "2026-02-23",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 65536
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/Qwen/Qwen3.5-27B"
+      }
+    ],
+    "providers": [
+      "aihubmix",
+      "alibaba",
+      "deepinfra",
+      "empiriolabs",
+      "huggingface",
+      "jalapeno",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "merge-gateway",
+      "mixlayer",
+      "nano-gpt",
+      "novita-ai",
+      "ofox",
+      "openrouter",
+      "orcarouter",
+      "requesty",
+      "siliconflow",
+      "siliconflow-cn"
+    ]
+  },
+  "alibaba/qwen3.5-27b-bluestar-v3-derestricted": {
+    "id": "alibaba/qwen3.5-27b-bluestar-v3-derestricted",
+    "lab": "alibaba",
+    "name": "Qwen3.5 27B BlueStar V3 Derestricted",
+    "family": "qwen3.5",
+    "released": "2026-04-30",
+    "updated": "2026-04-30",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "input": 262144,
+      "output": 16384
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "alibaba/qwen3.5-27b-queen-derestricted": {
+    "id": "alibaba/qwen3.5-27b-queen-derestricted",
+    "lab": "alibaba",
+    "name": "Qwen3.5 27B Queen Derestricted",
+    "family": "qwen3.5",
+    "released": "2026-04-30",
+    "updated": "2026-04-30",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "input": 262144,
+      "output": 16384
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "alibaba/qwen3.5-2b": {
+    "id": "alibaba/qwen3.5-2b",
+    "lab": "alibaba",
+    "name": "Qwen3.5 2B",
+    "family": "qwen",
+    "released": "2026-03-02",
+    "updated": "2026-03-02",
+    "open_weights": true,
+    "license": "Apache-2.0",
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 81920
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/Qwen/Qwen3.5-2B"
+      }
+    ],
+    "providers": [
+      "qvac",
+      "requesty"
+    ]
+  },
+  "alibaba/qwen3.5-35b-a3b": {
+    "id": "alibaba/qwen3.5-35b-a3b",
+    "lab": "alibaba",
+    "name": "Qwen3.5 35B A3B",
+    "family": "qwen",
+    "released": "2026-02-23",
+    "updated": "2026-02-23",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 65536
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/Qwen/Qwen3.5-35B-A3B"
+      }
+    ],
+    "providers": [
+      "302ai",
+      "aihubmix",
+      "alibaba",
+      "deepinfra",
+      "empiriolabs",
+      "huggingface",
+      "jalapeno",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "merge-gateway",
+      "mixlayer",
+      "nano-gpt",
+      "novita-ai",
+      "ofox",
+      "openrouter",
+      "orcarouter",
+      "requesty",
+      "siliconflow",
+      "siliconflow-cn"
+    ]
+  },
+  "alibaba/qwen3.5-35b-a3b-base": {
+    "id": "alibaba/qwen3.5-35b-a3b-base",
+    "lab": "alibaba",
+    "name": "Qwen3.5 35B A3B Base",
+    "family": "qwen",
+    "released": "2026-02-24",
+    "updated": "2026-02-24",
+    "open_weights": true,
+    "license": "Apache-2.0",
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 65536
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/Qwen/Qwen3.5-35B-A3B-Base"
+      }
+    ],
+    "providers": [
+      "thinkingmachines"
+    ]
+  },
+  "alibaba/qwen3.5-397b-a17b": {
+    "id": "alibaba/qwen3.5-397b-a17b",
+    "lab": "alibaba",
+    "name": "Qwen3.5 397B A17B",
+    "family": "qwen",
+    "released": "2026-02-15",
+    "updated": "2026-02-15",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 65536
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/Qwen/Qwen3.5-397B-A17B"
+      }
+    ],
+    "providers": [
+      "aihubmix",
+      "alibaba",
+      "alibaba-cn",
+      "chutes",
+      "cloudflare-ai-gateway",
+      "cortecs",
+      "deepinfra",
+      "digitalocean",
+      "empiriolabs",
+      "greenpt",
+      "huggingface",
+      "infomaniak",
+      "jalapeno",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "llmtr",
+      "merge-gateway",
+      "mixlayer",
+      "nano-gpt",
+      "nearai",
+      "nebius",
+      "novita-ai",
+      "nvidia",
+      "ofox",
+      "ollama-cloud",
+      "openrouter",
+      "orcarouter",
+      "ovhcloud",
+      "qiniu-ai",
+      "scaleway",
+      "siliconflow",
+      "siliconflow-cn",
+      "thinkingmachines",
+      "togetherai",
+      "tokengo",
+      "unorouter"
+    ]
+  },
+  "alibaba/qwen3.5-4b": {
+    "id": "alibaba/qwen3.5-4b",
+    "lab": "alibaba",
+    "name": "Qwen3.5 4B",
+    "family": "qwen",
+    "released": "2026-03-02",
+    "updated": "2026-03-02",
+    "open_weights": true,
+    "license": "Apache-2.0",
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 81920
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/Qwen/Qwen3.5-4B"
+      }
+    ],
+    "providers": [
+      "empiriolabs",
+      "merge-gateway",
+      "qvac",
+      "siliconflow-cn",
+      "thinkingmachines"
+    ]
+  },
+  "alibaba/qwen3.5-9b": {
+    "id": "alibaba/qwen3.5-9b",
+    "lab": "alibaba",
+    "name": "Qwen3.5 9B",
+    "family": "qwen",
+    "released": "2026-02-23",
+    "updated": "2026-02-23",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 65536
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/Qwen/Qwen3.5-9B"
+      }
+    ],
+    "providers": [
+      "cortecs",
+      "deepinfra",
+      "empiriolabs",
+      "huggingface",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "merge-gateway",
+      "mixlayer",
+      "nano-gpt",
+      "openrouter",
+      "ovhcloud",
+      "pioneer",
+      "qvac",
+      "regolo-ai",
+      "routing-run",
+      "siliconflow",
+      "siliconflow-cn",
+      "tensorx",
+      "thinkingmachines",
+      "togetherai"
+    ]
+  },
+  "alibaba/qwen3.5-9b-base": {
+    "id": "alibaba/qwen3.5-9b-base",
+    "lab": "alibaba",
+    "name": "Qwen3.5 9B Base",
+    "family": "qwen",
+    "released": "2026-02-26",
+    "updated": "2026-02-26",
+    "open_weights": true,
+    "license": "Apache-2.0",
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 65536
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/Qwen/Qwen3.5-9B-Base"
+      }
+    ],
+    "providers": [
+      "thinkingmachines"
+    ]
+  },
+  "alibaba/qwen3.5-9b-mlx-4bit": {
+    "id": "alibaba/qwen3.5-9b-mlx-4bit",
+    "lab": "alibaba",
+    "name": "Qwen3.5 9B MLX 4bit",
+    "family": "qwen",
+    "released": "2026-03-05",
+    "updated": "2026-04-04",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32768,
+      "output": 8192
+    },
+    "providers": [
+      "atomic-chat"
+    ]
+  },
+  "alibaba/qwen3.5-9b-q4-k-m": {
+    "id": "alibaba/qwen3.5-9b-q4-k-m",
+    "lab": "alibaba",
+    "name": "Qwen3.5 9B Q4 K M",
+    "family": "qwen",
+    "released": "2026-03-05",
+    "updated": "2026-04-04",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32768,
+      "output": 8192
+    },
+    "providers": [
+      "atomic-chat"
+    ]
+  },
+  "alibaba/qwen3.5-flash": {
+    "id": "alibaba/qwen3.5-flash",
+    "lab": "alibaba",
+    "name": "Qwen3.5 Flash",
+    "family": "qwen",
+    "released": "2026-02-23",
+    "updated": "2026-02-23",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 65536
+    },
+    "providers": [
+      "aihubmix",
+      "alibaba",
+      "alibaba-cn",
+      "empiriolabs",
+      "merge-gateway",
+      "nano-gpt",
+      "ofox",
+      "orcarouter",
+      "vercel",
+      "zenmux"
+    ]
+  },
+  "alibaba/qwen3.5-flash-02-23": {
+    "id": "alibaba/qwen3.5-flash-02-23",
+    "lab": "alibaba",
+    "name": "Qwen3.5 Flash 02 23",
+    "family": "qwen3.5",
+    "released": "2026-02-25",
+    "updated": "2026-02-25",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 65536
+    },
+    "providers": [
+      "kilo",
+      "openrouter"
+    ]
+  },
+  "alibaba/qwen3.5-omni-flash": {
+    "id": "alibaba/qwen3.5-omni-flash",
+    "lab": "alibaba",
+    "name": "Qwen3.5 Omni Flash",
+    "family": "qwen3.5",
+    "released": "2026-03-30",
+    "updated": "2026-03-30",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "structured_output": false,
+      "input": [
+        "text",
+        "image",
+        "video",
+        "audio"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 49152,
+      "input": 49152,
+      "output": 16384
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "alibaba/qwen3.5-omni-plus": {
+    "id": "alibaba/qwen3.5-omni-plus",
+    "lab": "alibaba",
+    "name": "Qwen3.5 Omni Plus",
+    "family": "qwen3.5",
+    "released": "2026-03-30",
+    "updated": "2026-03-30",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "structured_output": false,
+      "input": [
+        "text",
+        "image",
+        "video",
+        "audio"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 983616,
+      "input": 983616,
+      "output": 65536
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "alibaba/qwen3.5-plus": {
+    "id": "alibaba/qwen3.5-plus",
+    "lab": "alibaba",
+    "name": "Qwen3.5 Plus",
+    "family": "qwen",
+    "released": "2026-02-16",
+    "updated": "2026-02-16",
+    "knowledge": "2025-04",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 65536
+    },
+    "providers": [
+      "302ai",
+      "aihubmix",
+      "alibaba",
+      "alibaba-cn",
+      "alibaba-coding-plan",
+      "alibaba-coding-plan-cn",
+      "empiriolabs",
+      "llmtr",
+      "meganova",
+      "merge-gateway",
+      "nano-gpt",
+      "ofox",
+      "opencode",
+      "orcarouter",
+      "vercel",
+      "zenmux"
+    ]
+  },
+  "alibaba/qwen3.5-plus-02-15": {
+    "id": "alibaba/qwen3.5-plus-02-15",
+    "lab": "alibaba",
+    "name": "Qwen3.5 Plus 02 15",
+    "family": "qwen3.5",
+    "released": "2026-02-16",
+    "updated": "2026-02-16",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 65536
+    },
+    "providers": [
+      "kilo",
+      "openrouter"
+    ]
+  },
+  "alibaba/qwen3.5-plus-20260420": {
+    "id": "alibaba/qwen3.5-plus-20260420",
+    "lab": "alibaba",
+    "name": "Qwen3.5 Plus 20260420",
+    "family": "qwen3.5",
+    "released": "2026-04-27",
+    "updated": "2026-04-27",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 65536
+    },
+    "providers": [
+      "kilo",
+      "openrouter"
+    ]
+  },
+  "alibaba/qwen3.6-27b": {
+    "id": "alibaba/qwen3.6-27b",
+    "lab": "alibaba",
+    "name": "Qwen3.6 27B",
+    "family": "qwen",
+    "released": "2026-04-22",
+    "updated": "2026-04-22",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 65536
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/Qwen/Qwen3.6-27B"
+      }
+    ],
+    "providers": [
+      "abacus",
+      "aiand",
+      "alibaba",
+      "ambient",
+      "chutes",
+      "cortecs",
+      "deepinfra",
+      "empiriolabs",
+      "groq",
+      "huggingface",
+      "inferx",
+      "kilo",
+      "llmgateway-providers",
+      "merge-gateway",
+      "nano-gpt",
+      "novita-ai",
+      "ofox",
+      "openrouter",
+      "ovhcloud",
+      "pendra",
+      "pioneer",
+      "qvac",
+      "siliconflow",
+      "stackit",
+      "synthetic",
+      "thinkingmachines",
+      "vercel"
+    ]
+  },
+  "alibaba/qwen3.6-35b-a3b": {
+    "id": "alibaba/qwen3.6-35b-a3b",
+    "lab": "alibaba",
+    "name": "Qwen3.6 35B A3B",
+    "family": "qwen",
+    "released": "2026-04-17",
+    "updated": "2026-04-17",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 65536
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/Qwen/Qwen3.6-35B-A3B"
+      }
+    ],
+    "providers": [
+      "302ai",
+      "aihubmix",
+      "aki-io",
+      "alibaba",
+      "ambient",
+      "boundless",
+      "cortecs",
+      "deepinfra",
+      "empiriolabs",
+      "engy",
+      "evroc",
+      "greenpt",
+      "hetzner",
+      "huggingface",
+      "inferx",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "llmtr",
+      "merge-gateway",
+      "nan",
+      "nano-gpt",
+      "nearai",
+      "neuralwatt",
+      "novita-ai",
+      "openrouter",
+      "opper",
+      "orcarouter",
+      "pioneer",
+      "qvac",
+      "salad-cloud",
+      "scaleway",
+      "siliconflow",
+      "siliconflow-cn",
+      "thinkingmachines",
+      "umans-ai",
+      "umans-ai-coding-plan",
+      "wandb",
+      "zenifra"
+    ]
+  },
+  "alibaba/qwen3.6-flash": {
+    "id": "alibaba/qwen3.6-flash",
+    "lab": "alibaba",
+    "name": "Qwen3.6 Flash",
+    "family": "qwen3.6",
+    "released": "2026-04-27",
+    "updated": "2026-04-27",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 65536
+    },
+    "providers": [
+      "302ai",
+      "aihubmix",
+      "alibaba",
+      "alibaba-cn",
+      "alibaba-token-plan",
+      "alibaba-token-plan-cn",
+      "crossmodel",
+      "empiriolabs",
+      "impossibl",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "llmtr",
+      "merge-gateway",
+      "moark",
+      "nano-gpt",
+      "ofox",
+      "openrouter",
+      "orcarouter",
+      "pioneer"
+    ]
+  },
+  "alibaba/qwen3.6-max-preview": {
+    "id": "alibaba/qwen3.6-max-preview",
+    "lab": "alibaba",
+    "name": "Qwen3.6 Max Preview",
+    "family": "qwen",
+    "released": "2026-04-20",
+    "updated": "2026-04-20",
+    "knowledge": "2025-04",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 65536
+    },
+    "providers": [
+      "aihubmix",
+      "alibaba",
+      "alibaba-cn",
+      "merge-gateway",
+      "nano-gpt",
+      "ofox",
+      "pioneer"
+    ]
+  },
+  "alibaba/qwen3.6-plus": {
+    "id": "alibaba/qwen3.6-plus",
+    "lab": "alibaba",
+    "name": "Qwen3.6 Plus",
+    "family": "qwen",
+    "released": "2026-04-02",
+    "updated": "2026-04-02",
+    "knowledge": "2025-04",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 65536
+    },
+    "providers": [
+      "302ai",
+      "aihubmix",
+      "alibaba",
+      "alibaba-cn",
+      "alibaba-coding-plan",
+      "alibaba-coding-plan-cn",
+      "alibaba-token-plan",
+      "alibaba-token-plan-cn",
+      "auriko",
+      "crossmodel",
+      "empiriolabs",
+      "frogbot",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "llmtr",
+      "merge-gateway",
+      "nano-gpt",
+      "ofox",
+      "opencode",
+      "openrouter",
+      "orcarouter",
+      "pioneer",
+      "requesty",
+      "togetherai",
+      "vercel",
+      "zenmux"
+    ]
+  },
+  "alibaba/qwen3.7-flash": {
+    "id": "alibaba/qwen3.7-flash",
+    "lab": "alibaba",
+    "name": "Qwen3.7 Flash",
+    "family": "qwen",
+    "released": "2026-07-15",
+    "updated": "2026-07-15",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "input": 991808,
+      "output": 131072
+    },
+    "providers": [
+      "aihubmix",
+      "alibaba",
+      "alibaba-cn",
+      "crossmodel",
+      "empiriolabs",
+      "hyper",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "nano-gpt",
+      "openrouter",
+      "orcarouter",
+      "standardcompute",
+      "vercel"
+    ]
+  },
+  "alibaba/qwen3.7-max": {
+    "id": "alibaba/qwen3.7-max",
+    "lab": "alibaba",
+    "name": "Qwen3.7 Max",
+    "family": "qwen",
+    "released": "2026-05-21",
+    "updated": "2026-05-21",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 131072
+    },
+    "providers": [
+      "302ai",
+      "abacus",
+      "aihubmix",
+      "alibaba",
+      "alibaba-cn",
+      "alibaba-token-plan",
+      "alibaba-token-plan-cn",
+      "cline-pass",
+      "cloudflare-ai-gateway",
+      "crossmodel",
+      "deepinfra",
+      "empiriolabs",
+      "gmicloud",
+      "hyper",
+      "impossibl",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "merge-gateway",
+      "modelis",
+      "nano-gpt",
+      "nearai",
+      "novita-ai",
+      "ofox",
+      "openrouter",
+      "orcarouter",
+      "pioneer",
+      "requesty",
+      "standardcompute",
+      "togetherai",
+      "vercel",
+      "zenmux"
+    ]
+  },
+  "alibaba/qwen3.7-plus": {
+    "id": "alibaba/qwen3.7-plus",
+    "lab": "alibaba",
+    "name": "Qwen3.7 Plus",
+    "family": "qwen",
+    "released": "2026-06-02",
+    "updated": "2026-06-02",
+    "knowledge": "2025-04",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 64000
+    },
+    "providers": [
+      "302ai",
+      "aihubmix",
+      "alibaba",
+      "alibaba-cn",
+      "alibaba-coding-plan",
+      "alibaba-coding-plan-cn",
+      "alibaba-token-plan",
+      "alibaba-token-plan-cn",
+      "cline-pass",
+      "cloudflare-ai-gateway",
+      "crossmodel",
+      "empiriolabs",
+      "hyper",
+      "impossibl",
+      "kenari",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "llmtr",
+      "merge-gateway",
+      "modelis",
+      "nano-gpt",
+      "ofox",
+      "opencode-go",
+      "openrouter",
+      "orcarouter",
+      "pioneer",
+      "requesty",
+      "standardcompute",
+      "vercel",
+      "zenmux"
+    ]
+  },
+  "alibaba/qwen3.8-2.4t-a95b": {
+    "id": "alibaba/qwen3.8-2.4t-a95b",
+    "lab": "alibaba",
+    "name": "Qwen3.8 2.4T A95B",
+    "family": "qwen",
+    "released": "2026-08-12",
+    "updated": "2026-08-12",
+    "open_weights": true,
+    "license": "qwen3.8-max",
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 131072
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B"
+      }
+    ],
+    "providers": [
+      "aihubmix",
+      "aimlapi",
+      "cortecs",
+      "deepinfra",
+      "edenai",
+      "fireworks-ai",
+      "huggingface",
+      "hyper",
+      "iteracompute",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "merge-gateway",
+      "modal",
+      "novita-ai",
+      "openrouter",
+      "opper",
+      "requesty",
+      "runinfra",
+      "siliconflow",
+      "tensorx",
+      "vercel"
+    ]
+  },
+  "alibaba/qwen3.8-27b": {
+    "id": "alibaba/qwen3.8-27b",
+    "lab": "alibaba",
+    "name": "Qwen3.8 27B",
+    "family": "qwen",
+    "released": "2026-08-14",
+    "updated": "2026-08-14",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 32768
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/Qwen/Qwen3.8-27B"
+      }
+    ],
+    "providers": [
+      "aiand",
+      "aimlapi",
+      "aki-io",
+      "ambient",
+      "amd",
+      "berget",
+      "blueclaw",
+      "cerebras",
+      "chutes",
+      "cloudflare-workers-ai",
+      "commandcode",
+      "cortecs",
+      "deepinfra",
+      "edenai",
+      "empiriolabs",
+      "engy",
+      "evroc",
+      "groq",
+      "hetzner",
+      "huggingface",
+      "hyper",
+      "iteracompute",
+      "kilo",
+      "kosmik",
+      "llmgateway",
+      "llmgateway-providers",
+      "llmtech",
+      "nano-gpt",
+      "nearai",
+      "nebius",
+      "neuralwatt",
+      "novita-ai",
+      "ofox",
+      "openrouter",
+      "opper",
+      "orcarouter",
+      "ovhcloud",
+      "prime",
+      "regolo-ai",
+      "runinfra",
+      "scaleway",
+      "standardcompute",
+      "tempr",
+      "tensorx",
+      "thinkingmachines",
+      "vercel",
+      "vultr",
+      "wandb"
+    ]
+  },
+  "alibaba/qwen3.8-27b-antislop": {
+    "id": "alibaba/qwen3.8-27b-antislop",
+    "lab": "alibaba",
+    "name": "Qwen3.8 27B Antislop",
+    "family": "qwen",
+    "released": "2026-10-05",
+    "updated": "2026-10-05",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "input": 262144,
+      "output": 32768
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "alibaba/qwen3.8-27b-cybersecurity": {
+    "id": "alibaba/qwen3.8-27b-cybersecurity",
+    "lab": "alibaba",
+    "name": "Qwen3.8 27B Cybersecurity",
+    "family": "qwen",
+    "released": "2026-09-19",
+    "updated": "2026-09-19",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "input": 262144,
+      "output": 32768
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "alibaba/qwen3.8-27b-darkidol": {
+    "id": "alibaba/qwen3.8-27b-darkidol",
+    "lab": "alibaba",
+    "name": "Qwen3.8 27B DarkIdol",
+    "family": "qwen",
+    "released": "2026-10-05",
+    "updated": "2026-10-05",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "input": 262144,
+      "output": 32768
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "alibaba/qwen3.8-27b-fable": {
+    "id": "alibaba/qwen3.8-27b-fable",
+    "lab": "alibaba",
+    "name": "Qwen3.8 27B Fable",
+    "family": "qwen",
+    "released": "2026-07-29",
+    "updated": "2026-08-28",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 524288,
+      "input": 524288,
+      "output": 32768
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "alibaba/qwen3.8-27b-fimi": {
+    "id": "alibaba/qwen3.8-27b-fimi",
+    "lab": "alibaba",
+    "name": "Qwen3.8 27B Fimi",
+    "family": "qwen",
+    "released": "2026-10-05",
+    "updated": "2026-10-05",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "input": 262144,
+      "output": 32768
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "alibaba/qwen3.8-27b-gguf": {
+    "id": "alibaba/qwen3.8-27b-gguf",
+    "lab": "alibaba",
+    "name": "Qwen3.8 27B GGUF",
+    "family": "unsloth",
+    "released": "2026-10-13",
+    "updated": "2026-10-13",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "structured_output": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 101072,
+      "output": 101072
+    },
+    "providers": [
+      "ambient"
+    ]
+  },
+  "alibaba/qwen3.8-27b-hemmingway": {
+    "id": "alibaba/qwen3.8-27b-hemmingway",
+    "lab": "alibaba",
+    "name": "Qwen3.8 27B Hemmingway",
+    "family": "qwen",
+    "released": "2026-09-21",
+    "updated": "2026-09-21",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "input": 262144,
+      "output": 32768
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "alibaba/qwen3.8-27b-kimiko": {
+    "id": "alibaba/qwen3.8-27b-kimiko",
+    "lab": "alibaba",
+    "name": "Qwen3.8 27B Kimiko",
+    "family": "qwen",
+    "released": "2026-10-05",
+    "updated": "2026-10-05",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "input": 262144,
+      "output": 32768
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "alibaba/qwen3.8-27b-kiwen": {
+    "id": "alibaba/qwen3.8-27b-kiwen",
+    "lab": "alibaba",
+    "name": "Qwen3.8 27B Kiwen",
+    "family": "qwen",
+    "released": "2026-10-05",
+    "updated": "2026-10-05",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "input": 262144,
+      "output": 32768
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "alibaba/qwen3.8-27b-novelist": {
+    "id": "alibaba/qwen3.8-27b-novelist",
+    "lab": "alibaba",
+    "name": "Qwen3.8 27B Novelist",
+    "family": "qwen",
+    "released": "2026-10-05",
+    "updated": "2026-10-05",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "input": 262144,
+      "output": 32768
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "alibaba/qwen3.8-27b-obliterated": {
+    "id": "alibaba/qwen3.8-27b-obliterated",
+    "lab": "alibaba",
+    "name": "Qwen3.8 27B Obliterated",
+    "family": "qwen",
+    "released": "2026-07-29",
+    "updated": "2026-08-24",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 524288,
+      "input": 524288,
+      "output": 32768
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "alibaba/qwen3.8-27b-queen": {
+    "id": "alibaba/qwen3.8-27b-queen",
+    "lab": "alibaba",
+    "name": "Qwen3.8 27B Queen",
+    "family": "qwen",
+    "released": "2026-09-09",
+    "updated": "2026-09-09",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 524288,
+      "input": 524288,
+      "output": 32768
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "alibaba/qwen3.8-27b-swift": {
+    "id": "alibaba/qwen3.8-27b-swift",
+    "lab": "alibaba",
+    "name": "Qwen3.8 27B Swift",
+    "family": "qwen",
+    "released": "2026-10-05",
+    "updated": "2026-10-05",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "input": 262144,
+      "output": 32768
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "alibaba/qwen3.8-27b-synthia": {
+    "id": "alibaba/qwen3.8-27b-synthia",
+    "lab": "alibaba",
+    "name": "Qwen3.8 27B Synthia",
+    "family": "qwen",
+    "released": "2026-10-05",
+    "updated": "2026-10-05",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "structured_output": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "input": 262144,
+      "output": 32768
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "alibaba/qwen3.8-27b-uncensored": {
+    "id": "alibaba/qwen3.8-27b-uncensored",
+    "lab": "alibaba",
+    "name": "Qwen3.8 27B Uncensored",
+    "family": "qwen",
+    "released": "2026-07-29",
+    "updated": "2026-08-21",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "input": 1048576,
+      "output": 32768
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "alibaba/qwen3.8-27b-uncensored-fast": {
+    "id": "alibaba/qwen3.8-27b-uncensored-fast",
+    "lab": "alibaba",
+    "name": "Qwen3.8 27B Uncensored Fast",
+    "family": "qwen",
+    "released": "2026-10-16",
+    "updated": "2026-10-16",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 524288,
+      "input": 524288,
+      "output": 235929
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "alibaba/qwen3.8-flash": {
+    "id": "alibaba/qwen3.8-flash",
+    "lab": "alibaba",
+    "name": "Qwen3.8 Flash",
+    "family": "qwen",
+    "released": "2026-08-26",
+    "updated": "2026-08-26",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 131072
+    },
+    "providers": [
+      "302ai",
+      "aihubmix",
+      "aimlapi",
+      "alibaba",
+      "alibaba-cn",
+      "alibaba-token-plan",
+      "alibaba-token-plan-cn",
+      "boundless",
+      "commandcode",
+      "crossmodel",
+      "deepinfra",
+      "edenai",
+      "empiriolabs",
+      "gmicloud",
+      "hyper",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "merge-gateway",
+      "nan",
+      "nano-gpt",
+      "novita-ai",
+      "ofox",
+      "opencode",
+      "opencode-go",
+      "openrouter",
+      "requesty",
+      "scnet-token-plan",
+      "standardcompute",
+      "vancine",
+      "vercel"
+    ]
+  },
+  "alibaba/qwen3.8-flash-next": {
+    "id": "alibaba/qwen3.8-flash-next",
+    "lab": "alibaba",
+    "name": "Qwen3.8 Flash Next",
+    "family": "qwen",
+    "released": "2026-08-27",
+    "updated": "2026-08-27",
+    "open_weights": true,
+    "license": "qwen-community-1.0",
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 131072
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next"
+      }
+    ],
+    "providers": [
+      "amd",
+      "cortecs",
+      "requesty",
+      "tensorx",
+      "vultr"
+    ]
+  },
+  "alibaba/qwen3.8-max": {
+    "id": "alibaba/qwen3.8-max",
+    "lab": "alibaba",
+    "name": "Qwen3.8 Max",
+    "family": "qwen",
+    "released": "2026-08-03",
+    "updated": "2026-08-03",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 131072
+    },
+    "providers": [
+      "302ai",
+      "abacus",
+      "above",
+      "aihubmix",
+      "aimlapi",
+      "alibaba",
+      "alibaba-cn",
+      "alibaba-token-plan",
+      "alibaba-token-plan-cn",
+      "cline-pass",
+      "cloudflare-ai-gateway",
+      "commandcode",
+      "crossmodel",
+      "deepinfra",
+      "digitalocean",
+      "edenai",
+      "empiriolabs",
+      "fireworks-ai",
+      "gmicloud",
+      "kenari",
+      "llmgateway-providers",
+      "merge-gateway",
+      "nano-gpt",
+      "novita-ai",
+      "ofox",
+      "opencode",
+      "opencode-go",
+      "opper",
+      "orcarouter",
+      "requesty",
+      "scnet-token-plan",
+      "scx-ai",
+      "vancine"
+    ]
+  },
+  "alibaba/qwen3.8-max-0902": {
+    "id": "alibaba/qwen3.8-max-0902",
+    "lab": "alibaba",
+    "name": "Qwen3.8 Max 0902",
+    "family": "qwen",
+    "released": "2026-09-02",
+    "updated": "2026-09-02",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 131072
+    },
+    "providers": [
+      "commandcode",
+      "edenai",
+      "empiriolabs",
+      "kilo",
+      "nano-gpt",
+      "ofox",
+      "openrouter",
+      "standardcompute",
+      "vercel"
+    ]
+  },
+  "alibaba/qwen3.8-max-preview": {
+    "id": "alibaba/qwen3.8-max-preview",
+    "lab": "alibaba",
+    "name": "Qwen3.8 Max Preview",
+    "family": "qwen",
+    "released": "2026-07-19",
+    "updated": "2026-07-19",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 131072
+    },
+    "providers": [
+      "aihubmix",
+      "alibaba-token-plan",
+      "alibaba-token-plan-cn",
+      "hyper",
+      "impossibl",
+      "llmgateway",
+      "vercel"
+    ]
+  },
+  "alibaba/qwen3.8-max-prime": {
+    "id": "alibaba/qwen3.8-max-prime",
+    "lab": "alibaba",
+    "name": "Qwen3.8 Max Prime",
+    "family": "qwen3.8-max",
+    "released": "2026-09-23",
+    "updated": "2026-09-23",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 131072
+    },
+    "providers": [
+      "aimlapi",
+      "kilo",
+      "nano-gpt",
+      "openrouter",
+      "vercel"
+    ]
+  },
+  "alibaba/qwen3.8-omni-flash": {
+    "id": "alibaba/qwen3.8-omni-flash",
+    "lab": "alibaba",
+    "name": "Qwen3.8 Omni Flash",
+    "family": "qwen",
+    "released": "2026-09-17",
+    "updated": "2026-09-17",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "audio",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 131072
+    },
+    "providers": [
+      "aihubmix",
+      "alibaba",
+      "alibaba-cn",
+      "commandcode",
+      "crossmodel",
+      "edenai",
+      "empiriolabs",
+      "kilo",
+      "nano-gpt",
+      "openrouter",
+      "vercel"
+    ]
+  },
+  "alibaba/qwen3guard-gen-0.6b": {
+    "id": "alibaba/qwen3guard-gen-0.6b",
+    "lab": "alibaba",
+    "name": "Qwen3Guard Gen 0.6B",
+    "released": "2026-02-04",
+    "updated": "2026-02-04",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "structured_output": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32000,
+      "output": 32000
+    },
+    "providers": [
+      "cortecs",
+      "ovhcloud"
+    ]
+  },
+  "alibaba/qwen3guard-gen-8b": {
+    "id": "alibaba/qwen3guard-gen-8b",
+    "lab": "alibaba",
+    "name": "Qwen3Guard Gen 8B",
+    "released": "2026-02-04",
+    "updated": "2026-02-04",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "structured_output": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32000,
+      "output": 32000
+    },
+    "providers": [
+      "cortecs",
+      "ovhcloud"
+    ]
+  },
+  "alibaba/qwq-32b": {
+    "id": "alibaba/qwq-32b",
+    "lab": "alibaba",
+    "name": "QwQ 32B",
+    "family": "qwen",
+    "released": "2025-03-05",
+    "updated": "2025-03-05",
+    "knowledge": "2024-04",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 8192
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/Qwen/QwQ-32B"
+      }
+    ],
+    "providers": [
+      "abacus",
+      "alibaba-cn",
+      "cloudflare-workers-ai"
+    ]
+  },
+  "alibaba/qwq-plus": {
+    "id": "alibaba/qwq-plus",
+    "lab": "alibaba",
+    "name": "QwQ Plus",
+    "family": "qwen",
+    "released": "2025-03-05",
+    "updated": "2025-03-05",
+    "knowledge": "2024-04",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 8192
+    },
+    "providers": [
+      "alibaba",
+      "alibaba-cn"
+    ]
+  },
+  "alibaba/tev1-4b-experimental": {
+    "id": "alibaba/tev1-4b-experimental",
+    "lab": "alibaba",
+    "name": "Tev1 4B Experimental",
+    "type": "decision",
+    "released": "2026-09-30",
+    "updated": "2026-09-30",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "structured_output": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32768,
+      "output": 0
+    },
+    "providers": [
+      "openrouter"
+    ]
+  },
+  "alibaba/tongyi-intent-detect-v3": {
+    "id": "alibaba/tongyi-intent-detect-v3",
+    "lab": "alibaba",
+    "name": "Tongyi Intent Detect V3",
+    "family": "yi",
+    "released": "2024-01",
+    "updated": "2024-01",
+    "knowledge": "2024-04",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 8192,
+      "output": 1024
+    },
+    "providers": [
+      "alibaba-cn"
+    ]
+  },
+  "alibaba/wan-v2-6": {
+    "id": "alibaba/wan-v2-6",
+    "lab": "alibaba",
+    "name": "Wan V2.6",
+    "released": "2025-12-01",
+    "updated": "2025-12-01",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "video"
+      ]
+    },
+    "limit": {
+      "context": 400000,
+      "output": 0
+    },
+    "providers": [
+      "fastrouter"
+    ]
+  },
+  "alibaba/wan-v2.5-t2v-preview": {
+    "id": "alibaba/wan-v2.5-t2v-preview",
+    "lab": "alibaba",
+    "name": "Wan V2.5 T2V Preview",
+    "type": "video",
+    "released": "2025-09-24",
+    "updated": "2025-09-24",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "audio"
+      ],
+      "output": [
+        "video"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "alibaba/wan-v2.6-i2v": {
+    "id": "alibaba/wan-v2.6-i2v",
+    "lab": "alibaba",
+    "name": "Wan V2.6 I2v",
+    "type": "video",
+    "released": "2025-12-16",
+    "updated": "2025-12-16",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image",
+        "audio"
+      ],
+      "output": [
+        "video"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "alibaba/wan-v2.6-i2v-flash": {
+    "id": "alibaba/wan-v2.6-i2v-flash",
+    "lab": "alibaba",
+    "name": "Wan V2.6 I2v Flash",
+    "type": "video",
+    "released": "2025-12-16",
+    "updated": "2025-12-16",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image",
+        "audio"
+      ],
+      "output": [
+        "video"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "alibaba/wan-v2.6-r2v": {
+    "id": "alibaba/wan-v2.6-r2v",
+    "lab": "alibaba",
+    "name": "Wan V2.6 R2v",
+    "type": "video",
+    "released": "2025-12-16",
+    "updated": "2025-12-16",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output": [
+        "video"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "alibaba/wan-v2.6-r2v-flash": {
+    "id": "alibaba/wan-v2.6-r2v-flash",
+    "lab": "alibaba",
+    "name": "Wan V2.6 R2v Flash",
+    "type": "video",
+    "released": "2025-12-16",
+    "updated": "2025-12-16",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output": [
+        "video"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "alibaba/wan-v2.6-t2v": {
+    "id": "alibaba/wan-v2.6-t2v",
+    "lab": "alibaba",
+    "name": "Wan V2.6 T2V",
+    "type": "video",
+    "released": "2025-12-16",
+    "updated": "2025-12-16",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "audio"
+      ],
+      "output": [
+        "video"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "alibaba/wan-v2.7-r2v": {
+    "id": "alibaba/wan-v2.7-r2v",
+    "lab": "alibaba",
+    "name": "Wan V2.7 R2v",
+    "type": "video",
+    "released": "2026-04-07",
+    "updated": "2026-04-07",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image",
+        "video",
+        "audio"
+      ],
+      "output": [
+        "video"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "alibaba/wan-v2.7-t2v": {
+    "id": "alibaba/wan-v2.7-t2v",
+    "lab": "alibaba",
+    "name": "Wan V2.7 T2V",
+    "type": "video",
+    "released": "2026-04-07",
+    "updated": "2026-04-07",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "audio"
+      ],
+      "output": [
+        "video"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "alibaba/wan-v3.0-video": {
+    "id": "alibaba/wan-v3.0-video",
+    "lab": "alibaba",
+    "name": "Wan V3.0 Video",
+    "type": "video",
+    "released": "2026-08-23",
+    "updated": "2026-08-23",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image",
+        "video",
+        "audio"
+      ],
+      "output": [
+        "video"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "alibaba/wan-v3.0-video-prime": {
+    "id": "alibaba/wan-v3.0-video-prime",
+    "lab": "alibaba",
+    "name": "Wan V3.0 Video Prime",
+    "type": "video",
+    "released": "2026-08-28",
+    "updated": "2026-08-28",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image",
+        "video",
+        "audio"
+      ],
+      "output": [
+        "video"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "alibaba/wan2-2-t2v-a14b": {
+    "id": "alibaba/wan2-2-t2v-a14b",
+    "lab": "alibaba",
+    "name": "Wan2.2 T2V A14B",
+    "type": "video",
+    "released": "2025-07-28",
+    "updated": "2026-04-30",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "video"
+      ]
+    },
+    "limit": {
+      "context": 100,
+      "output": 1
+    },
+    "providers": [
+      "digitalocean"
+    ]
+  },
+  "alibaba/wan2.7-image": {
+    "id": "alibaba/wan2.7-image",
+    "lab": "alibaba",
+    "name": "Wan2.7 Image",
+    "type": "image",
+    "released": "2026-05-29",
+    "updated": "2026-05-29",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "image"
+      ]
+    },
+    "limit": {
+      "context": 8192,
+      "output": 0
+    },
+    "providers": [
+      "alibaba-token-plan",
+      "alibaba-token-plan-cn"
+    ]
+  },
+  "alibaba/wan2.7-image-pro": {
+    "id": "alibaba/wan2.7-image-pro",
+    "lab": "alibaba",
+    "name": "Wan2.7 Image Pro",
+    "type": "image",
+    "released": "2026-05-29",
+    "updated": "2026-05-29",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "image"
+      ]
+    },
+    "limit": {
+      "context": 8192,
+      "output": 0
+    },
+    "providers": [
+      "alibaba-token-plan",
+      "alibaba-token-plan-cn"
+    ]
+  }
+}

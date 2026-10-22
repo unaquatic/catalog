@@ -1,0 +1,111 @@
+{
+  "id": "klokintegration",
+  "name": "klokintegration.se",
+  "kind": "gateway",
+  "endpoint": {
+    "format": "openai-chat",
+    "api": "https://api-gw.klok.ipaas.se/proxy/kloker-key/v1",
+    "auth": {
+      "scheme": "bearer"
+    },
+    "env": [
+      "KLOKINTEGRATION_API_KEY"
+    ]
+  },
+  "doc": "https://klokintegration.se/docs/ai-api",
+  "models": {
+    "klokintegration/kloker": {
+      "name": "Kloker",
+      "released": "2026-08-29",
+      "updated": "2026-08-29",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 200000,
+        "output": 50000
+      },
+      "provider_options": {
+        "id": "Kloker",
+        "name": "Kloker"
+      },
+      "price": {
+        "input": 0.23,
+        "output": 1.16
+      },
+      "status": "beta"
+    },
+    "klokintegration/kloker-integration-architect": {
+      "name": "Kloker Integration Architect",
+      "released": "2026-08-29",
+      "updated": "2026-08-29",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 200000,
+        "output": 50000
+      },
+      "provider_options": {
+        "id": "Kloker-Integration-Architect",
+        "name": "Kloker Integration Architect"
+      },
+      "price": {
+        "input": 0.23,
+        "output": 1.16
+      },
+      "status": "beta"
+    },
+    "klokintegration/kloker-integration-developer": {
+      "name": "Kloker Integration Developer",
+      "released": "2026-08-29",
+      "updated": "2026-08-29",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 200000,
+        "output": 50000
+      },
+      "provider_options": {
+        "id": "Kloker-Integration-Developer",
+        "name": "Kloker Integration Developer"
+      },
+      "price": {
+        "input": 0.23,
+        "output": 1.16
+      },
+      "status": "beta"
+    }
+  }
+}

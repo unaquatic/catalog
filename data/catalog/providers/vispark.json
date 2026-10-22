@@ -1,0 +1,123 @@
+{
+  "id": "vispark",
+  "name": "Vispark",
+  "kind": "lab",
+  "endpoint": {
+    "format": "openai-chat",
+    "api": "https://api.lab.vispark.in/v1",
+    "auth": {
+      "scheme": "bearer"
+    },
+    "env": [
+      "VISPARK_LAB_API_KEY"
+    ]
+  },
+  "doc": "https://lab.vispark.in/#vision",
+  "models": {
+    "vispark/vision-large": {
+      "name": "Vision Large",
+      "released": "2024-05-15",
+      "updated": "2026-09",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "audio",
+          "video",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 65536
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "vispark/vision-large",
+        "name": "Vision Large"
+      },
+      "price": {
+        "input": 7.37,
+        "output": 22.11
+      }
+    },
+    "vispark/vision-medium": {
+      "name": "Vision Medium",
+      "released": "2024-05-15",
+      "updated": "2026-09",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "audio",
+          "video",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 65536
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "vispark/vision-medium",
+        "name": "Vision Medium"
+      },
+      "price": {
+        "input": 4.21,
+        "output": 12.63
+      }
+    },
+    "vispark/vision-small": {
+      "name": "Vision Small",
+      "released": "2024-05-15",
+      "updated": "2026-09",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "audio",
+          "video",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 65536
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "vispark/vision-small",
+        "name": "Vision Small"
+      },
+      "price": {
+        "input": 1.05,
+        "output": 3.16
+      }
+    }
+  }
+}

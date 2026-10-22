@@ -1,0 +1,31 @@
+{
+  "lightonai/lightonocr-2-1b": {
+    "id": "lightonai/lightonocr-2-1b",
+    "lab": "lightonai",
+    "name": "LightOnOCR 2 1B",
+    "released": "2026-09-10",
+    "updated": "2026-09-10",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32768,
+      "input": 32768,
+      "output": 8192
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  }
+}

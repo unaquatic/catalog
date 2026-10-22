@@ -1,0 +1,174 @@
+{
+  "agnes/agnes-1.5-lite": {
+    "id": "agnes/agnes-1.5-lite",
+    "lab": "agnes",
+    "name": "Agnes 1.5 Lite",
+    "released": "2026-03-26",
+    "updated": "2026-03-26",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 256000,
+      "output": 256000
+    },
+    "providers": [
+      "zenmux"
+    ]
+  },
+  "agnes/agnes-1.5-pro": {
+    "id": "agnes/agnes-1.5-pro",
+    "lab": "agnes",
+    "name": "Agnes 1.5 Pro",
+    "released": "2026-03-21",
+    "updated": "2026-03-21",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 256000,
+      "output": 256000
+    },
+    "providers": [
+      "zenmux"
+    ]
+  },
+  "agnes/agnes-2.0-flash": {
+    "id": "agnes/agnes-2.0-flash",
+    "lab": "agnes",
+    "name": "Agnes 2.0 Flash",
+    "released": "2026-05-25",
+    "updated": "2026-05-25",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 512000,
+      "output": 65536
+    },
+    "providers": [
+      "agnes"
+    ]
+  },
+  "agnes/agnes-2.5-flash": {
+    "id": "agnes/agnes-2.5-flash",
+    "lab": "agnes",
+    "name": "Agnes 2.5 Flash",
+    "released": "2026-07",
+    "updated": "2026-07",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 512000,
+      "output": 65536
+    },
+    "providers": [
+      "agnes"
+    ]
+  },
+  "agnes/agnes-2.5-pro-alpha": {
+    "id": "agnes/agnes-2.5-pro-alpha",
+    "lab": "agnes",
+    "name": "Agnes 2.5 Pro Alpha",
+    "released": "2026-07-24",
+    "updated": "2026-07-24",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 65536
+    },
+    "providers": [
+      "agnes"
+    ]
+  },
+  "agnes/agnes-3.0-flash": {
+    "id": "agnes/agnes-3.0-flash",
+    "lab": "agnes",
+    "name": "Agnes 3.0 Flash",
+    "released": "2026-09",
+    "updated": "2026-09",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 512000,
+      "output": 65536
+    },
+    "providers": [
+      "agnes",
+      "nano-gpt"
+    ]
+  }
+}

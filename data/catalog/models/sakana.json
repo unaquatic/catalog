@@ -1,0 +1,208 @@
+{
+  "sakana/fugu": {
+    "id": "sakana/fugu",
+    "lab": "sakana",
+    "name": "Fugu",
+    "family": "fugu",
+    "released": "2026-06-15",
+    "updated": "2026-06-15",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 0
+    },
+    "links": [
+      {
+        "label": "Official model catalog",
+        "url": "https://raw.githubusercontent.com/SakanaAI/fugu/refs/heads/main/configs/files/fugu.json",
+        "type": "docs"
+      }
+    ],
+    "providers": [
+      "sakana"
+    ]
+  },
+  "sakana/fugu-max": {
+    "id": "sakana/fugu-max",
+    "lab": "sakana",
+    "name": "Fugu Max",
+    "family": "fugu",
+    "released": "2026-09-11",
+    "updated": "2026-09-11",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 128000
+    },
+    "providers": [
+      "aimlapi",
+      "empiriolabs",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "merge-gateway",
+      "nano-gpt",
+      "openrouter",
+      "vercel"
+    ]
+  },
+  "sakana/fugu-ultra": {
+    "id": "sakana/fugu-ultra",
+    "lab": "sakana",
+    "name": "Fugu Ultra",
+    "family": "fugu",
+    "released": "2026-06-15",
+    "updated": "2026-06-15",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 0
+    },
+    "links": [
+      {
+        "label": "Official model catalog",
+        "url": "https://raw.githubusercontent.com/SakanaAI/fugu/refs/heads/main/configs/files/fugu.json",
+        "type": "docs"
+      }
+    ],
+    "providers": [
+      "aimlapi",
+      "commandcode",
+      "empiriolabs",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "llmtr",
+      "merge-gateway",
+      "nano-gpt",
+      "openrouter",
+      "pioneer",
+      "requesty",
+      "sakana",
+      "vercel"
+    ]
+  },
+  "sakana/fugu-ultra-v2": {
+    "id": "sakana/fugu-ultra-v2",
+    "lab": "sakana",
+    "name": "Fugu Ultra V2",
+    "family": "fugu",
+    "released": "2026-09-11",
+    "updated": "2026-09-11",
+    "knowledge": "2026-08-28",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 128000
+    },
+    "providers": [
+      "aimlapi",
+      "empiriolabs",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "openrouter",
+      "vercel"
+    ]
+  },
+  "sakana/sakana-namazu": {
+    "id": "sakana/sakana-namazu",
+    "lab": "sakana",
+    "name": "Sakana Namazu",
+    "family": "sakana-namazu",
+    "released": "2026-08-03",
+    "updated": "2026-08-03",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 65536
+    },
+    "links": [
+      {
+        "label": "Official product page",
+        "url": "https://sakana.ai/namazu/",
+        "type": "announcement"
+      },
+      {
+        "label": "Official model documentation",
+        "url": "https://console.sakana.ai/models?model=sakana-namazu",
+        "type": "docs"
+      }
+    ],
+    "providers": [
+      "kilo",
+      "merge-gateway",
+      "openrouter",
+      "sakana",
+      "vercel"
+    ]
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "ideogram/ideogram": {
+    "id": "ideogram/ideogram",
+    "lab": "ideogram",
+    "name": "Ideogram",
+    "family": "ideogram",
+    "released": "2024-04-03",
+    "updated": "2024-04-03",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "image"
+      ]
+    },
+    "limit": {
+      "context": 150,
+      "output": 0
+    },
+    "providers": [
+      "poe"
+    ]
+  },
+  "ideogram/ideogram-v2": {
+    "id": "ideogram/ideogram-v2",
+    "lab": "ideogram",
+    "name": "Ideogram V2",
+    "family": "ideogram",
+    "released": "2024-08-21",
+    "updated": "2024-08-21",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "image"
+      ]
+    },
+    "limit": {
+      "context": 150,
+      "output": 0
+    },
+    "providers": [
+      "poe"
+    ]
+  },
+  "ideogram/ideogram-v2a": {
+    "id": "ideogram/ideogram-v2a",
+    "lab": "ideogram",
+    "name": "Ideogram V2a",
+    "family": "ideogram",
+    "released": "2025-02-27",
+    "updated": "2025-02-27",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "image"
+      ]
+    },
+    "limit": {
+      "context": 150,
+      "output": 0
+    },
+    "providers": [
+      "poe"
+    ]
+  },
+  "ideogram/ideogram-v2a-turbo": {
+    "id": "ideogram/ideogram-v2a-turbo",
+    "lab": "ideogram",
+    "name": "Ideogram V2a Turbo",
+    "family": "ideogram",
+    "released": "2025-02-27",
+    "updated": "2025-02-27",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "image"
+      ]
+    },
+    "limit": {
+      "context": 150,
+      "output": 0
+    },
+    "providers": [
+      "poe"
+    ]
+  }
+}

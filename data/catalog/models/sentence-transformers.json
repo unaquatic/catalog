@@ -1,0 +1,87 @@
+{
+  "sentence-transformers/all-minilm-l6-v2": {
+    "id": "sentence-transformers/all-minilm-l6-v2",
+    "lab": "sentence-transformers",
+    "name": "All MiniLM L6 V2",
+    "type": "embedding",
+    "released": "2021-08-30",
+    "updated": "2021-08-30",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 256,
+      "output": 384
+    },
+    "providers": [
+      "digitalocean"
+    ]
+  },
+  "sentence-transformers/mini-lm-l12-v2": {
+    "id": "sentence-transformers/mini-lm-l12-v2",
+    "lab": "sentence-transformers",
+    "name": "Mini Lm L12 V2",
+    "family": "text-embedding",
+    "released": "2021-08-30",
+    "updated": "2026-08-01",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128,
+      "input": 128,
+      "output": 384
+    },
+    "providers": [
+      "infomaniak"
+    ]
+  },
+  "sentence-transformers/multi-qa-mpnet-base-dot-v1": {
+    "id": "sentence-transformers/multi-qa-mpnet-base-dot-v1",
+    "lab": "sentence-transformers",
+    "name": "Multi QA Mpnet Base Dot V1",
+    "type": "embedding",
+    "released": "2021-08-23",
+    "updated": "2021-08-23",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 512,
+      "output": 768
+    },
+    "providers": [
+      "digitalocean"
+    ]
+  }
+}

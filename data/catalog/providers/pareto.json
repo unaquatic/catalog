@@ -1,0 +1,62 @@
+{
+  "id": "pareto",
+  "name": "Pareto Inference",
+  "kind": "gateway",
+  "endpoint": {
+    "format": "openai-chat",
+    "api": "https://api.paretoinference.com/v1",
+    "auth": {
+      "scheme": "bearer"
+    },
+    "env": [
+      "PARETO_API_KEY"
+    ]
+  },
+  "doc": "https://docs.paretoinference.com/",
+  "models": {
+    "zhipuai/glm-5.3-flash": {
+      "name": "GLM 5.3 Flash",
+      "family": "glm-flash",
+      "released": "2026-08-26",
+      "updated": "2026-08-26",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "high",
+          "max"
+        ]
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "z-ai/glm-5.3-flash",
+        "name": "GLM-5.3-Flash"
+      },
+      "price": {
+        "input": 0.03,
+        "output": 0.1,
+        "cache_read": 0.006
+      }
+    }
+  }
+}

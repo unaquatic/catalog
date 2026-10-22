@@ -1,0 +1,66 @@
+{
+  "morph/morph-v3-fast": {
+    "id": "morph/morph-v3-fast",
+    "lab": "morph",
+    "name": "Morph V3 Fast",
+    "family": "morph",
+    "released": "2025-07-07",
+    "updated": "2025-07-07",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 81920,
+      "output": 38000
+    },
+    "providers": [
+      "aimlapi",
+      "kilo",
+      "morph",
+      "openrouter",
+      "vercel"
+    ]
+  },
+  "morph/morph-v3-large": {
+    "id": "morph/morph-v3-large",
+    "lab": "morph",
+    "name": "Morph V3 Large",
+    "family": "morph",
+    "released": "2025-07-07",
+    "updated": "2025-07-07",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 131072
+    },
+    "providers": [
+      "aimlapi",
+      "kilo",
+      "morph",
+      "openrouter",
+      "vercel"
+    ]
+  }
+}

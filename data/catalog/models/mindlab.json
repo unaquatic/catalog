@@ -1,0 +1,71 @@
+{
+  "mindlab/macaron-v1-tall": {
+    "id": "mindlab/macaron-v1-tall",
+    "lab": "mindlab",
+    "name": "Macaron V1 Tall",
+    "released": "2026-07-21",
+    "updated": "2026-07-21",
+    "open_weights": true,
+    "license": "MIT",
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 32768
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/mindlab-research/Macaron-V1-Tall"
+      }
+    ],
+    "providers": [
+      "novita-ai"
+    ]
+  },
+  "mindlab/macaron-v1-venti": {
+    "id": "mindlab/macaron-v1-venti",
+    "lab": "mindlab",
+    "name": "Macaron V1 Venti",
+    "released": "2026-07-21",
+    "updated": "2026-07-21",
+    "open_weights": true,
+    "license": "MIT",
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "output": 131072
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/mindlab-research/Macaron-V1-Venti"
+      }
+    ],
+    "providers": [
+      "novita-ai"
+    ]
+  }
+}

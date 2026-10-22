@@ -1,0 +1,30 @@
+{
+  "echo/echo": {
+    "id": "echo/echo",
+    "lab": "echo",
+    "name": "Echo",
+    "released": "2026-07-19",
+    "updated": "2026-08-16",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "structured_output": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 65536
+    },
+    "providers": [
+      "echo"
+    ]
+  }
+}

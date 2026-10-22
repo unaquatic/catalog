@@ -1,0 +1,142 @@
+{
+  "id": "abliteration-ai",
+  "name": "abliteration.ai",
+  "kind": "lab",
+  "endpoint": {
+    "format": "openai-chat",
+    "api": "https://api.abliteration.ai/v1",
+    "auth": {
+      "scheme": "bearer"
+    },
+    "env": [
+      "ABLIT_KEY"
+    ]
+  },
+  "doc": "https://docs.abliteration.ai/models",
+  "models": {
+    "abliteration-ai/abliterated-model": {
+      "name": "Abliterated Model",
+      "released": "2026-01-06",
+      "updated": "2026-07-28",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": false,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 150000,
+        "input": 150000,
+        "output": 8192
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "minimal",
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ]
+      },
+      "provider_options": {
+        "id": "abliterated-model",
+        "name": "Abliterated Model"
+      },
+      "price": {
+        "input": 3,
+        "output": 3,
+        "cache_read": 0.3
+      }
+    },
+    "abliteration-ai/abliterated-model-large": {
+      "name": "Abliterated Model Large",
+      "released": "2026-07-25",
+      "updated": "2026-07-28",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "input": 1000000,
+        "output": 999990
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "high",
+          "max"
+        ]
+      },
+      "provider_options": {
+        "id": "abliterated-model-large",
+        "name": "Abliterated Model Large"
+      },
+      "price": {
+        "input": 5,
+        "output": 5,
+        "cache_read": 0.5
+      }
+    },
+    "abliteration-ai/abliterated-model-large-v2": {
+      "name": "Abliterated Model Large V2",
+      "released": "2026-08-29",
+      "updated": "2026-08-31",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "input": 1000000,
+        "output": 999990
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "high",
+          "max"
+        ]
+      },
+      "provider_options": {
+        "id": "abliterated-model-large-v2",
+        "name": "Abliterated Model Large V2"
+      },
+      "price": {
+        "input": 5,
+        "output": 5,
+        "cache_read": 0.5
+      }
+    }
+  }
+}

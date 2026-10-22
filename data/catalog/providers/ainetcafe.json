@@ -1,0 +1,61 @@
+{
+  "id": "ainetcafe",
+  "name": "ainetcafe",
+  "kind": "gateway",
+  "endpoint": {
+    "format": "openai-chat",
+    "api": "https://microquickjs.com/v1",
+    "auth": {
+      "scheme": "bearer"
+    },
+    "env": [
+      "AINETCAFE_API_KEY"
+    ]
+  },
+  "doc": "https://ainetcafe.com/k3/guides/",
+  "models": {
+    "moonshotai/kimi-k3": {
+      "name": "Kimi K3",
+      "family": "kimi-k3",
+      "released": "2026-07-16",
+      "updated": "2026-07-16",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 32768
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "high",
+          "max"
+        ]
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "Kimi-K3",
+        "name": "Kimi K3"
+      },
+      "price": {
+        "input": 2.1,
+        "output": 10.5,
+        "cache_read": 0.3
+      }
+    }
+  }
+}

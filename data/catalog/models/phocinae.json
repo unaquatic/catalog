@@ -1,0 +1,42 @@
+{
+  "phocinae/phocinae-largha-150m-v1": {
+    "id": "phocinae/phocinae-largha-150m-v1",
+    "lab": "phocinae",
+    "name": "Phocinae Largha 150M V1",
+    "type": "decision",
+    "released": "2026-10-08",
+    "updated": "2026-10-09",
+    "open_weights": true,
+    "license": "Apache-2.0",
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 8192,
+      "output": 0
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/Phocinae/Phocinae-Largha-150M-v1"
+      }
+    ],
+    "links": [
+      {
+        "label": "Model card",
+        "url": "https://huggingface.co/Phocinae/Phocinae-Largha-150M-v1",
+        "type": "model_card"
+      }
+    ],
+    "providers": []
+  }
+}

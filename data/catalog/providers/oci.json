@@ -1,0 +1,380 @@
+{
+  "id": "oci",
+  "name": "OCI Generative AI",
+  "kind": "gateway",
+  "endpoint": {
+    "format": "openai-chat",
+    "api": "https://inference.generativeai.us-chicago-1.oci.oraclecloud.com/openai/v1",
+    "auth": {
+      "scheme": "bearer"
+    },
+    "env": [
+      "OCI_GENAI_API_KEY"
+    ]
+  },
+  "doc": "https://docs.oracle.com/en-us/iaas/Content/generative-ai/pretrained-models.htm",
+  "models": {
+    "meta/llama-3.3-70b-instruct": {
+      "name": "Llama 3.3 70B Instruct",
+      "family": "llama",
+      "released": "2024-12-06",
+      "updated": "2024-12-06",
+      "knowledge": "2023-12",
+      "open_weights": true,
+      "capabilities": {
+        "tools": false,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 128000,
+        "output": 4096
+      },
+      "provider_options": {
+        "id": "meta.llama-3.3-70b-instruct",
+        "name": "Llama-3.3-70B-Instruct"
+      },
+      "price": {
+        "input": 0.72,
+        "output": 0.72
+      }
+    },
+    "meta/llama-4-maverick-17b-instruct": {
+      "name": "Llama 4 Maverick 17B Instruct",
+      "family": "llama",
+      "released": "2025-04-05",
+      "updated": "2025-04-05",
+      "knowledge": "2024-08",
+      "open_weights": true,
+      "capabilities": {
+        "tools": false,
+        "attachments": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 512000,
+        "output": 16384
+      },
+      "provider_options": {
+        "id": "meta.llama-4-maverick-17b-128e-instruct-fp8",
+        "name": "Llama 4 Maverick 17B Instruct"
+      },
+      "price": {
+        "input": 0.72,
+        "output": 0.72
+      }
+    },
+    "meta/llama-4-scout-17b-instruct": {
+      "name": "Llama 4 Scout 17B Instruct",
+      "family": "llama",
+      "released": "2025-04-05",
+      "updated": "2025-04-05",
+      "knowledge": "2024-08",
+      "open_weights": true,
+      "capabilities": {
+        "tools": false,
+        "attachments": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 192000,
+        "output": 16384
+      },
+      "provider_options": {
+        "id": "meta.llama-4-scout-17b-16e-instruct",
+        "name": "Llama 4 Scout 17B Instruct"
+      },
+      "price": {
+        "input": 0.72,
+        "output": 0.72
+      }
+    },
+    "openai/gpt-oss-120b": {
+      "name": "GPT OSS 120B",
+      "family": "gpt-oss",
+      "released": "2025-08-05",
+      "updated": "2025-08-05",
+      "knowledge": "2024-06",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 128000,
+        "output": 16384
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "openai.gpt-oss-120b",
+        "name": "GPT OSS 120B"
+      },
+      "price": {
+        "input": 0.15,
+        "output": 0.6
+      }
+    },
+    "openai/gpt-oss-20b": {
+      "name": "GPT OSS 20B",
+      "family": "gpt-oss",
+      "released": "2025-08-05",
+      "updated": "2025-08-05",
+      "knowledge": "2024-06",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 128000,
+        "output": 16384
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "openai.gpt-oss-20b",
+        "name": "GPT OSS 20B"
+      },
+      "price": {
+        "input": 0.07,
+        "output": 0.3
+      }
+    },
+    "xai/grok-4.20-0309-non-reasoning": {
+      "name": "Grok 4.20 0309 Non Reasoning",
+      "family": "grok",
+      "released": "2026-03-09",
+      "updated": "2026-03-09",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 30000
+      },
+      "provider_options": {
+        "id": "xai.grok-4.20-non-reasoning",
+        "name": "Grok 4.20 (Non-Reasoning)"
+      },
+      "price": {
+        "input": 1.25,
+        "output": 2.5,
+        "cache_read": 0.2,
+        "tiers": [
+          {
+            "above": 200000,
+            "input": 2.5,
+            "output": 5,
+            "cache_read": 0.4
+          }
+        ]
+      }
+    },
+    "xai/grok-4.20-0309-reasoning": {
+      "name": "Grok 4.20 0309 Reasoning",
+      "family": "grok",
+      "released": "2026-03-09",
+      "updated": "2026-03-09",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 30000
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "xai.grok-4.20-reasoning",
+        "name": "Grok 4.20 (Reasoning)"
+      },
+      "price": {
+        "input": 1.25,
+        "output": 2.5,
+        "cache_read": 0.2,
+        "tiers": [
+          {
+            "above": 200000,
+            "input": 2.5,
+            "output": 5,
+            "cache_read": 0.4
+          }
+        ]
+      }
+    },
+    "xai/grok-4.3": {
+      "name": "Grok 4.3",
+      "family": "grok",
+      "released": "2026-04-17",
+      "updated": "2026-04-17",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 30000
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "xai.grok-4.3",
+        "name": "Grok 4.3"
+      },
+      "price": {
+        "input": 1.25,
+        "output": 2.5,
+        "cache_read": 0.2,
+        "tiers": [
+          {
+            "above": 200000,
+            "input": 2.5,
+            "output": 5,
+            "cache_read": 0.4
+          }
+        ]
+      }
+    },
+    "xai/grok-4.6": {
+      "name": "Grok 4.6",
+      "family": "grok",
+      "released": "2026-08-12",
+      "updated": "2026-08-12",
+      "knowledge": "2026-02-01",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 500000,
+        "output": 500000
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "medium",
+          "high",
+          "xhigh"
+        ]
+      },
+      "provider_options": {
+        "id": "xai.grok-4.6",
+        "name": "Grok 4.6"
+      },
+      "price": {
+        "input": 2,
+        "output": 6,
+        "cache_read": 0.5,
+        "tiers": [
+          {
+            "above": 200000,
+            "input": 4,
+            "output": 12,
+            "cache_read": 1
+          }
+        ]
+      }
+    }
+  }
+}

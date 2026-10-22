@@ -1,0 +1,31 @@
+{
+  "sensenova/sensenova-6.8-flash-lite": {
+    "id": "sensenova/sensenova-6.8-flash-lite",
+    "lab": "sensenova",
+    "name": "SenseNova 6.8 Flash Lite",
+    "released": "2026-08-11",
+    "updated": "2026-08-28",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 65536
+    },
+    "providers": [
+      "sensenova"
+    ]
+  }
+}

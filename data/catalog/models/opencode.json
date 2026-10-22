@@ -1,0 +1,207 @@
+{
+  "opencode/big-pickle": {
+    "id": "opencode/big-pickle",
+    "lab": "opencode",
+    "name": "Big Pickle",
+    "family": "big-pickle",
+    "released": "2025-10-17",
+    "updated": "2025-10-17",
+    "knowledge": "2025-01",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 200000,
+      "input": 160000,
+      "output": 32000
+    },
+    "providers": [
+      "opencode"
+    ]
+  },
+  "opencode/cat-jam-free": {
+    "id": "opencode/cat-jam-free",
+    "lab": "opencode",
+    "name": "Cat Jam Free",
+    "released": "2026-10-12",
+    "updated": "2026-10-12",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "output": 131072
+    },
+    "providers": [
+      "opencode",
+      "opencode-go"
+    ]
+  },
+  "opencode/exo-free": {
+    "id": "opencode/exo-free",
+    "lab": "opencode",
+    "name": "Exo Free",
+    "released": "2026-10-06",
+    "updated": "2026-10-06",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "output": 131072
+    },
+    "providers": [
+      "opencode"
+    ]
+  },
+  "opencode/fledge-alpha-free": {
+    "id": "opencode/fledge-alpha-free",
+    "lab": "opencode",
+    "name": "Fledge Alpha Free",
+    "released": "2026-10-01",
+    "updated": "2026-10-01",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "output": 131072
+    },
+    "providers": [
+      "opencode"
+    ]
+  },
+  "opencode/ll-alpha-free": {
+    "id": "opencode/ll-alpha-free",
+    "lab": "opencode",
+    "name": "LL Alpha Free",
+    "released": "2026-10-15",
+    "updated": "2026-10-15",
+    "knowledge": "2026-06",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 65536
+    },
+    "providers": [
+      "opencode"
+    ]
+  },
+  "opencode/space-bunny": {
+    "id": "opencode/space-bunny",
+    "lab": "opencode",
+    "name": "Space Bunny",
+    "released": "2026-09-23",
+    "updated": "2026-09-23",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "input": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "input": 524288,
+      "output": 524288
+    },
+    "providers": [
+      "opencode",
+      "opencode-go"
+    ]
+  },
+  "opencode/x-preview-f-free": {
+    "id": "opencode/x-preview-f-free",
+    "lab": "opencode",
+    "name": "X Preview F Free",
+    "released": "2026-08-21",
+    "updated": "2026-08-21",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 131072
+    },
+    "providers": [
+      "opencode"
+    ]
+  }
+}

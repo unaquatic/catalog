@@ -1,0 +1,63 @@
+{
+  "id": "wallaby",
+  "name": "Wallaby",
+  "kind": "gateway",
+  "endpoint": {
+    "format": "openai-chat",
+    "api": "https://api.wallabytoken.com/v1",
+    "auth": {
+      "scheme": "bearer"
+    },
+    "env": [
+      "WALLABY_API_KEY"
+    ]
+  },
+  "doc": "https://wallabytoken.com/docs",
+  "models": {
+    "moonshotai/kimi-k3": {
+      "name": "Kimi K3",
+      "family": "kimi-k3",
+      "released": "2026-07-16",
+      "updated": "2026-07-16",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "medium",
+          "high",
+          "max"
+        ]
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "moonshotai/kimi-k3",
+        "name": "Kimi K3"
+      },
+      "price": {
+        "input": 2.7,
+        "output": 13.5,
+        "cache_read": 0.27
+      }
+    }
+  }
+}

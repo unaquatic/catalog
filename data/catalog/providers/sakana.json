@@ -1,0 +1,159 @@
+{
+  "id": "sakana",
+  "name": "Sakana AI",
+  "kind": "lab",
+  "endpoint": {
+    "format": "openai-chat",
+    "api": "https://api.sakana.ai/v1",
+    "auth": {
+      "scheme": "bearer"
+    },
+    "env": [
+      "SAKANA_API_KEY"
+    ]
+  },
+  "doc": "https://console.sakana.ai/models",
+  "models": {
+    "sakana/fugu": {
+      "name": "Fugu",
+      "family": "fugu",
+      "released": "2026-06-15",
+      "updated": "2026-06-15",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 1000000
+      },
+      "reasoning": {
+        "efforts": [
+          "high",
+          "xhigh"
+        ]
+      },
+      "provider_options": {
+        "id": "fugu",
+        "name": "Fugu",
+        "endpoint": {
+          "format": "openai-responses",
+          "api": "https://api.sakana.ai/v1",
+          "auth": {
+            "scheme": "bearer"
+          },
+          "env": [
+            "SAKANA_API_KEY"
+          ]
+        }
+      }
+    },
+    "sakana/fugu-ultra": {
+      "name": "Fugu Ultra",
+      "family": "fugu",
+      "released": "2026-06-15",
+      "updated": "2026-06-15",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 1000000
+      },
+      "reasoning": {
+        "efforts": [
+          "high",
+          "xhigh"
+        ]
+      },
+      "provider_options": {
+        "id": "fugu-ultra",
+        "name": "Fugu Ultra",
+        "endpoint": {
+          "format": "openai-responses",
+          "api": "https://api.sakana.ai/v1",
+          "auth": {
+            "scheme": "bearer"
+          },
+          "env": [
+            "SAKANA_API_KEY"
+          ]
+        }
+      },
+      "price": {
+        "input": 5,
+        "output": 30,
+        "cache_read": 0.5,
+        "tiers": [
+          {
+            "above": 272000,
+            "input": 10,
+            "output": 45,
+            "cache_read": 1
+          }
+        ]
+      },
+      "aliases": [
+        "fugu-ultra-20260615"
+      ]
+    },
+    "sakana/sakana-namazu": {
+      "name": "Sakana Namazu",
+      "family": "sakana-namazu",
+      "released": "2026-08-03",
+      "updated": "2026-08-03",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 65536
+      },
+      "reasoning": {
+        "mandatory": false
+      },
+      "provider_options": {
+        "id": "sakana-namazu",
+        "name": "Sakana Namazu"
+      },
+      "price": {
+        "input": 0.95,
+        "output": 4,
+        "cache_read": 0.15
+      }
+    }
+  }
+}

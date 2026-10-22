@@ -1,0 +1,599 @@
+{
+  "microsoft/decision-1": {
+    "id": "microsoft/decision-1",
+    "lab": "microsoft",
+    "name": "Decision 1",
+    "type": "decision",
+    "released": "2026-10-09",
+    "updated": "2026-10-09",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "structured_output": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32768,
+      "output": 0
+    },
+    "providers": [
+      "openrouter",
+      "vercel"
+    ]
+  },
+  "microsoft/mai-code-1-flash": {
+    "id": "microsoft/mai-code-1-flash",
+    "lab": "microsoft",
+    "name": "MAI Code 1 Flash",
+    "family": "mai",
+    "released": "2026-06-02",
+    "updated": "2026-06-08",
+    "knowledge": "2025-12",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 256000,
+      "output": 128000
+    },
+    "links": [
+      {
+        "label": "Model card",
+        "url": "https://microsoft.ai/pdf/MAI-Code-1-Flash-Model-Card.PDF",
+        "type": "model_card"
+      },
+      {
+        "label": "Announcement",
+        "url": "https://microsoft.ai/news/introducingmai-code-1-flash/",
+        "type": "announcement"
+      }
+    ],
+    "providers": [
+      "github-copilot"
+    ]
+  },
+  "microsoft/mai-code-1.1-flash": {
+    "id": "microsoft/mai-code-1.1-flash",
+    "lab": "microsoft",
+    "name": "MAI Code 1.1 Flash",
+    "family": "mai",
+    "released": "2026-08-11",
+    "updated": "2026-08-11",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 256000,
+      "output": 128000
+    },
+    "links": [
+      {
+        "label": "Announcement",
+        "url": "https://microsoft.ai/news/mai-code-1-1-flash-br-better-faster-at-a-quarter-of-the-cost/",
+        "type": "announcement"
+      }
+    ],
+    "providers": [
+      "github-copilot"
+    ]
+  },
+  "microsoft/mai-image-2.6": {
+    "id": "microsoft/mai-image-2.6",
+    "lab": "microsoft",
+    "name": "MAI Image 2.6",
+    "family": "mai",
+    "type": "image",
+    "released": "2026-10-13",
+    "updated": "2026-10-13",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "image"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "microsoft/mai-image-2.6-flash": {
+    "id": "microsoft/mai-image-2.6-flash",
+    "lab": "microsoft",
+    "name": "MAI Image 2.6 Flash",
+    "family": "mai",
+    "type": "image",
+    "released": "2026-10-13",
+    "updated": "2026-10-13",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "image"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "microsoft/mai-transcribe-2": {
+    "id": "microsoft/mai-transcribe-2",
+    "lab": "microsoft",
+    "name": "MAI Transcribe 2",
+    "family": "mai",
+    "type": "transcription",
+    "released": "2026-09-03",
+    "updated": "2026-09-03",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "audio"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "microsoft/mai-transcribe-2-streaming": {
+    "id": "microsoft/mai-transcribe-2-streaming",
+    "lab": "microsoft",
+    "name": "MAI Transcribe 2 Streaming",
+    "family": "mai",
+    "type": "transcription",
+    "released": "2026-10-01",
+    "updated": "2026-10-01",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "audio"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "microsoft/mai-voice-2": {
+    "id": "microsoft/mai-voice-2",
+    "lab": "microsoft",
+    "name": "MAI Voice 2",
+    "family": "mai",
+    "type": "speech",
+    "released": "2026-06-02",
+    "updated": "2026-06-02",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "audio"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "microsoft/mai-voice-2-flash": {
+    "id": "microsoft/mai-voice-2-flash",
+    "lab": "microsoft",
+    "name": "MAI Voice 2 Flash",
+    "family": "mai",
+    "type": "speech",
+    "released": "2026-07-23",
+    "updated": "2026-07-23",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "audio"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "microsoft/mai-voice-2.1": {
+    "id": "microsoft/mai-voice-2.1",
+    "lab": "microsoft",
+    "name": "MAI Voice 2.1",
+    "family": "mai",
+    "type": "speech",
+    "released": "2026-10-01",
+    "updated": "2026-10-01",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "audio"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "microsoft/mai-voice-2.1-flash": {
+    "id": "microsoft/mai-voice-2.1-flash",
+    "lab": "microsoft",
+    "name": "MAI Voice 2.1 Flash",
+    "family": "mai",
+    "type": "speech",
+    "released": "2026-10-01",
+    "updated": "2026-10-01",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "audio"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "microsoft/phi-4": {
+    "id": "microsoft/phi-4",
+    "lab": "microsoft",
+    "name": "Phi 4",
+    "family": "phi",
+    "released": "2024-12-11",
+    "updated": "2024-12-11",
+    "knowledge": "2023-10",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 4096
+    },
+    "providers": [
+      "azure",
+      "azure-cognitive-services",
+      "kilo",
+      "openrouter"
+    ]
+  },
+  "microsoft/phi-4-mini": {
+    "id": "microsoft/phi-4-mini",
+    "lab": "microsoft",
+    "name": "Phi 4 Mini",
+    "family": "phi",
+    "released": "2025-02-26",
+    "updated": "2025-02-26",
+    "knowledge": "2024-06",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 4096
+    },
+    "links": [
+      {
+        "label": "Weights",
+        "url": "https://huggingface.co/microsoft/Phi-4-mini-instruct",
+        "type": "weights"
+      }
+    ],
+    "providers": [
+      "azure",
+      "azure-cognitive-services",
+      "nano-gpt",
+      "nvidia"
+    ]
+  },
+  "microsoft/phi-4-mini-reasoning": {
+    "id": "microsoft/phi-4-mini-reasoning",
+    "lab": "microsoft",
+    "name": "Phi 4 Mini Reasoning",
+    "family": "phi",
+    "released": "2024-12-11",
+    "updated": "2024-12-11",
+    "knowledge": "2023-10",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 4096
+    },
+    "providers": [
+      "azure",
+      "azure-cognitive-services"
+    ]
+  },
+  "microsoft/phi-4-multimodal": {
+    "id": "microsoft/phi-4-multimodal",
+    "lab": "microsoft",
+    "name": "Phi 4 Multimodal",
+    "family": "phi",
+    "released": "2024-12-11",
+    "updated": "2024-12-11",
+    "knowledge": "2023-10",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "audio"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "output": 4096
+    },
+    "providers": [
+      "azure",
+      "azure-cognitive-services"
+    ]
+  },
+  "microsoft/phi-4-multimodal-instruct": {
+    "id": "microsoft/phi-4-multimodal-instruct",
+    "lab": "microsoft",
+    "name": "Phi 4 Multimodal Instruct",
+    "family": "phi",
+    "released": "2025-07-26",
+    "updated": "2025-07-26",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "structured_output": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 128000,
+      "input": 128000,
+      "output": 16384
+    },
+    "providers": [
+      "nano-gpt",
+      "nvidia"
+    ]
+  },
+  "microsoft/phi-4-reasoning": {
+    "id": "microsoft/phi-4-reasoning",
+    "lab": "microsoft",
+    "name": "Phi 4 Reasoning",
+    "family": "phi",
+    "released": "2024-12-11",
+    "updated": "2024-12-11",
+    "knowledge": "2023-10",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32000,
+      "output": 4096
+    },
+    "providers": [
+      "azure",
+      "azure-cognitive-services"
+    ]
+  },
+  "microsoft/phi-4-reasoning-plus": {
+    "id": "microsoft/phi-4-reasoning-plus",
+    "lab": "microsoft",
+    "name": "Phi 4 Reasoning Plus",
+    "family": "phi",
+    "released": "2024-12-11",
+    "updated": "2024-12-11",
+    "knowledge": "2023-10",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32000,
+      "output": 4096
+    },
+    "providers": [
+      "azure",
+      "azure-cognitive-services"
+    ]
+  },
+  "microsoft/wizardlm-2-8x22b": {
+    "id": "microsoft/wizardlm-2-8x22b",
+    "lab": "microsoft",
+    "name": "WizardLM 2 8x22B",
+    "released": "2024-04-15",
+    "updated": "2024-04-15",
+    "open_weights": true,
+    "license": "Apache-2.0",
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 65536,
+      "output": 8000
+    },
+    "weights": [
+      {
+        "label": "Hugging Face archive",
+        "url": "https://huggingface.co/alpindale/WizardLM-2-8x22B"
+      }
+    ],
+    "providers": [
+      "edenai",
+      "nano-gpt",
+      "novita-ai"
+    ]
+  }
+}

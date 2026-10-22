@@ -1,0 +1,3116 @@
+{
+  "id": "google-vertex",
+  "name": "Vertex",
+  "kind": "gateway",
+  "endpoint": {
+    "format": "gemini",
+    "api": "https://${GOOGLE_VERTEX_ENDPOINT}/v1/projects/${GOOGLE_VERTEX_PROJECT}/locations/${GOOGLE_VERTEX_LOCATION}/publishers/google",
+    "api_default": true,
+    "auth": {
+      "scheme": "google"
+    },
+    "env": [
+      "GOOGLE_VERTEX_PROJECT",
+      "GOOGLE_VERTEX_LOCATION",
+      "GOOGLE_APPLICATION_CREDENTIALS"
+    ]
+  },
+  "doc": "https://cloud.google.com/vertex-ai/generative-ai/docs/models",
+  "models": {
+    "alibaba/qwen3-235b-a22b-instruct-2507-maas": {
+      "name": "Qwen3 235B A22B Instruct 2507 Maas",
+      "family": "qwen",
+      "released": "2025-08-13",
+      "updated": "2025-08-13",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 16384
+      },
+      "provider_options": {
+        "id": "qwen/qwen3-235b-a22b-instruct-2507-maas",
+        "name": "Qwen3 235B A22B Instruct",
+        "endpoint": {
+          "format": "openai-chat",
+          "api": "https://${GOOGLE_VERTEX_ENDPOINT}/v1/projects/${GOOGLE_VERTEX_PROJECT}/locations/${GOOGLE_VERTEX_LOCATION}/endpoints/openapi",
+          "auth": {
+            "scheme": "google"
+          },
+          "env": [
+            "GOOGLE_VERTEX_PROJECT",
+            "GOOGLE_VERTEX_LOCATION",
+            "GOOGLE_APPLICATION_CREDENTIALS"
+          ]
+        }
+      },
+      "price": {
+        "input": 0.22,
+        "output": 0.88
+      },
+      "status": "deprecated"
+    },
+    "anthropic/claude-fable-5": {
+      "name": "Claude Fable 5",
+      "family": "claude-fable",
+      "released": "2026-06-09",
+      "updated": "2026-06-09",
+      "knowledge": "2026-01-31",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "reasoning": {
+        "mandatory": true,
+        "default_enabled": true,
+        "efforts": [
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ],
+        "default_effort": "high"
+      },
+      "provider_options": {
+        "id": "claude-fable-5@default",
+        "name": "Claude Fable 5",
+        "endpoint": {
+          "format": "anthropic-vertex",
+          "api": "https://${GOOGLE_VERTEX_ENDPOINT}/v1/projects/${GOOGLE_VERTEX_PROJECT}/locations/${GOOGLE_VERTEX_LOCATION}/publishers/anthropic/models",
+          "api_default": true,
+          "auth": {
+            "scheme": "google"
+          },
+          "env": [
+            "GOOGLE_VERTEX_PROJECT",
+            "GOOGLE_VERTEX_LOCATION",
+            "GOOGLE_APPLICATION_CREDENTIALS"
+          ]
+        }
+      },
+      "price": {
+        "input": 10,
+        "output": 50,
+        "cache_read": 1,
+        "cache_write": 12.5
+      }
+    },
+    "anthropic/claude-fable-5-1": {
+      "name": "Claude Fable 5.1",
+      "family": "claude-fable",
+      "released": "2026-09-01",
+      "updated": "2026-09-01",
+      "knowledge": "2026-06",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "reasoning": {
+        "mandatory": true,
+        "default_enabled": true,
+        "efforts": [
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ],
+        "default_effort": "high"
+      },
+      "provider_options": {
+        "id": "claude-fable-5-1@default",
+        "name": "Claude Fable 5.1",
+        "endpoint": {
+          "format": "anthropic-vertex",
+          "api": "https://${GOOGLE_VERTEX_ENDPOINT}/v1/projects/${GOOGLE_VERTEX_PROJECT}/locations/${GOOGLE_VERTEX_LOCATION}/publishers/anthropic/models",
+          "api_default": true,
+          "auth": {
+            "scheme": "google"
+          },
+          "env": [
+            "GOOGLE_VERTEX_PROJECT",
+            "GOOGLE_VERTEX_LOCATION",
+            "GOOGLE_APPLICATION_CREDENTIALS"
+          ]
+        }
+      },
+      "price": {
+        "input": 10,
+        "output": 50,
+        "cache_read": 0.25,
+        "cache_write": 12.5
+      }
+    },
+    "anthropic/claude-haiku-4-5-20251001": {
+      "name": "Claude Haiku 4.5 20251001",
+      "family": "claude-haiku",
+      "released": "2025-10-15",
+      "updated": "2025-10-15",
+      "knowledge": "2025-02-28",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 200000,
+        "output": 64000
+      },
+      "reasoning": {
+        "mandatory": false,
+        "default_enabled": false,
+        "budget": {
+          "min": 1024
+        }
+      },
+      "provider_options": {
+        "id": "claude-haiku-4-5@20251001",
+        "name": "Claude Haiku 4.5",
+        "endpoint": {
+          "format": "anthropic-vertex",
+          "api": "https://${GOOGLE_VERTEX_ENDPOINT}/v1/projects/${GOOGLE_VERTEX_PROJECT}/locations/${GOOGLE_VERTEX_LOCATION}/publishers/anthropic/models",
+          "api_default": true,
+          "auth": {
+            "scheme": "google"
+          },
+          "env": [
+            "GOOGLE_VERTEX_PROJECT",
+            "GOOGLE_VERTEX_LOCATION",
+            "GOOGLE_APPLICATION_CREDENTIALS"
+          ]
+        }
+      },
+      "price": {
+        "input": 1,
+        "output": 5,
+        "cache_read": 0.1,
+        "cache_write": 1.25
+      }
+    },
+    "anthropic/claude-haiku-5-5": {
+      "name": "Claude Haiku 5.5",
+      "family": "claude-haiku",
+      "released": "2026-10-07",
+      "updated": "2026-10-07",
+      "knowledge": "2026-06",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "reasoning": {
+        "mandatory": false,
+        "default_enabled": true,
+        "efforts": [
+          "none",
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ],
+        "default_effort": "medium"
+      },
+      "provider_options": {
+        "id": "claude-haiku-5-5@default",
+        "name": "Claude Haiku 5.5",
+        "endpoint": {
+          "format": "anthropic-vertex",
+          "api": "https://${GOOGLE_VERTEX_ENDPOINT}/v1/projects/${GOOGLE_VERTEX_PROJECT}/locations/${GOOGLE_VERTEX_LOCATION}/publishers/anthropic/models",
+          "api_default": true,
+          "auth": {
+            "scheme": "google"
+          },
+          "env": [
+            "GOOGLE_VERTEX_PROJECT",
+            "GOOGLE_VERTEX_LOCATION",
+            "GOOGLE_APPLICATION_CREDENTIALS"
+          ]
+        }
+      },
+      "price": {
+        "input": 0.1,
+        "output": 0.5,
+        "cache_read": 0.01,
+        "cache_write": 0.125,
+        "tiers": [
+          {
+            "above": 100000,
+            "input": 0.5,
+            "output": 2.5,
+            "cache_read": 0.05,
+            "cache_write": 0.625
+          }
+        ]
+      }
+    },
+    "anthropic/claude-opus-4-1-20250805": {
+      "name": "Claude Opus 4.1 20250805",
+      "family": "claude-opus",
+      "released": "2025-08-05",
+      "updated": "2025-08-05",
+      "knowledge": "2025-03-31",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": false,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 200000,
+        "output": 32000
+      },
+      "reasoning": {
+        "mandatory": false,
+        "default_enabled": false,
+        "budget": {
+          "min": 1024
+        }
+      },
+      "provider_options": {
+        "id": "claude-opus-4-1@20250805",
+        "name": "Claude Opus 4.1",
+        "endpoint": {
+          "format": "anthropic-vertex",
+          "api": "https://${GOOGLE_VERTEX_ENDPOINT}/v1/projects/${GOOGLE_VERTEX_PROJECT}/locations/${GOOGLE_VERTEX_LOCATION}/publishers/anthropic/models",
+          "api_default": true,
+          "auth": {
+            "scheme": "google"
+          },
+          "env": [
+            "GOOGLE_VERTEX_PROJECT",
+            "GOOGLE_VERTEX_LOCATION",
+            "GOOGLE_APPLICATION_CREDENTIALS"
+          ]
+        }
+      },
+      "price": {
+        "input": 15,
+        "output": 75,
+        "cache_read": 1.5,
+        "cache_write": 18.75
+      },
+      "status": "deprecated"
+    },
+    "anthropic/claude-opus-4-20250514": {
+      "name": "Claude Opus 4 20250514",
+      "family": "claude-opus",
+      "released": "2025-05-22",
+      "updated": "2025-05-22",
+      "knowledge": "2025-03-31",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": false,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 200000,
+        "output": 32000
+      },
+      "reasoning": {
+        "mandatory": false,
+        "default_enabled": false,
+        "budget": {
+          "min": 1024
+        }
+      },
+      "provider_options": {
+        "id": "claude-opus-4@20250514",
+        "name": "Claude Opus 4",
+        "endpoint": {
+          "format": "anthropic-vertex",
+          "api": "https://${GOOGLE_VERTEX_ENDPOINT}/v1/projects/${GOOGLE_VERTEX_PROJECT}/locations/${GOOGLE_VERTEX_LOCATION}/publishers/anthropic/models",
+          "api_default": true,
+          "auth": {
+            "scheme": "google"
+          },
+          "env": [
+            "GOOGLE_VERTEX_PROJECT",
+            "GOOGLE_VERTEX_LOCATION",
+            "GOOGLE_APPLICATION_CREDENTIALS"
+          ]
+        }
+      },
+      "price": {
+        "input": 15,
+        "output": 75,
+        "cache_read": 1.5,
+        "cache_write": 18.75
+      },
+      "status": "deprecated"
+    },
+    "anthropic/claude-opus-4-5-20251101": {
+      "name": "Claude Opus 4.5 20251101",
+      "family": "claude-opus",
+      "released": "2025-11-24",
+      "updated": "2025-11-24",
+      "knowledge": "2025-05",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 200000,
+        "output": 64000
+      },
+      "reasoning": {
+        "mandatory": false,
+        "default_enabled": false,
+        "efforts": [
+          "none",
+          "low",
+          "medium",
+          "high"
+        ],
+        "default_effort": "high",
+        "budget": {
+          "min": 1024
+        }
+      },
+      "provider_options": {
+        "id": "claude-opus-4-5@20251101",
+        "name": "Claude Opus 4.5",
+        "endpoint": {
+          "format": "anthropic-vertex",
+          "api": "https://${GOOGLE_VERTEX_ENDPOINT}/v1/projects/${GOOGLE_VERTEX_PROJECT}/locations/${GOOGLE_VERTEX_LOCATION}/publishers/anthropic/models",
+          "api_default": true,
+          "auth": {
+            "scheme": "google"
+          },
+          "env": [
+            "GOOGLE_VERTEX_PROJECT",
+            "GOOGLE_VERTEX_LOCATION",
+            "GOOGLE_APPLICATION_CREDENTIALS"
+          ]
+        }
+      },
+      "price": {
+        "input": 5,
+        "output": 25,
+        "cache_read": 0.5,
+        "cache_write": 6.25
+      }
+    },
+    "anthropic/claude-opus-4-6": {
+      "name": "Claude Opus 4.6",
+      "family": "claude-opus",
+      "released": "2026-02-05",
+      "updated": "2026-03-13",
+      "knowledge": "2025-05-31",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "reasoning": {
+        "mandatory": false,
+        "default_enabled": false,
+        "efforts": [
+          "none",
+          "low",
+          "medium",
+          "high",
+          "max"
+        ],
+        "default_effort": "high",
+        "budget": {
+          "min": 1024
+        }
+      },
+      "provider_options": {
+        "id": "claude-opus-4-6@default",
+        "name": "Claude Opus 4.6",
+        "endpoint": {
+          "format": "anthropic-vertex",
+          "api": "https://${GOOGLE_VERTEX_ENDPOINT}/v1/projects/${GOOGLE_VERTEX_PROJECT}/locations/${GOOGLE_VERTEX_LOCATION}/publishers/anthropic/models",
+          "api_default": true,
+          "auth": {
+            "scheme": "google"
+          },
+          "env": [
+            "GOOGLE_VERTEX_PROJECT",
+            "GOOGLE_VERTEX_LOCATION",
+            "GOOGLE_APPLICATION_CREDENTIALS"
+          ]
+        }
+      },
+      "price": {
+        "input": 5,
+        "output": 25,
+        "cache_read": 0.5,
+        "cache_write": 6.25
+      }
+    },
+    "anthropic/claude-opus-4-7": {
+      "name": "Claude Opus 4.7",
+      "family": "claude-opus",
+      "released": "2026-04-16",
+      "updated": "2026-04-16",
+      "knowledge": "2026-01-31",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "reasoning": {
+        "mandatory": false,
+        "default_enabled": false,
+        "efforts": [
+          "none",
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ],
+        "default_effort": "high"
+      },
+      "provider_options": {
+        "id": "claude-opus-4-7@default",
+        "name": "Claude Opus 4.7",
+        "endpoint": {
+          "format": "anthropic-vertex",
+          "api": "https://${GOOGLE_VERTEX_ENDPOINT}/v1/projects/${GOOGLE_VERTEX_PROJECT}/locations/${GOOGLE_VERTEX_LOCATION}/publishers/anthropic/models",
+          "api_default": true,
+          "auth": {
+            "scheme": "google"
+          },
+          "env": [
+            "GOOGLE_VERTEX_PROJECT",
+            "GOOGLE_VERTEX_LOCATION",
+            "GOOGLE_APPLICATION_CREDENTIALS"
+          ]
+        }
+      },
+      "price": {
+        "input": 5,
+        "output": 25,
+        "cache_read": 0.5,
+        "cache_write": 6.25
+      }
+    },
+    "anthropic/claude-opus-4-8": {
+      "name": "Claude Opus 4.8",
+      "family": "claude-opus",
+      "released": "2026-05-28",
+      "updated": "2026-05-28",
+      "knowledge": "2026-01",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "reasoning": {
+        "mandatory": false,
+        "default_enabled": false,
+        "efforts": [
+          "none",
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ],
+        "default_effort": "high"
+      },
+      "provider_options": {
+        "id": "claude-opus-4-8@default",
+        "name": "Claude Opus 4.8",
+        "endpoint": {
+          "format": "anthropic-vertex",
+          "api": "https://${GOOGLE_VERTEX_ENDPOINT}/v1/projects/${GOOGLE_VERTEX_PROJECT}/locations/${GOOGLE_VERTEX_LOCATION}/publishers/anthropic/models",
+          "api_default": true,
+          "auth": {
+            "scheme": "google"
+          },
+          "env": [
+            "GOOGLE_VERTEX_PROJECT",
+            "GOOGLE_VERTEX_LOCATION",
+            "GOOGLE_APPLICATION_CREDENTIALS"
+          ]
+        }
+      },
+      "price": {
+        "input": 5,
+        "output": 25,
+        "cache_read": 0.5,
+        "cache_write": 6.25
+      }
+    },
+    "anthropic/claude-opus-5": {
+      "name": "Claude Opus 5",
+      "family": "claude-opus",
+      "released": "2026-07-24",
+      "updated": "2026-07-24",
+      "knowledge": "2026-05",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "reasoning": {
+        "mandatory": false,
+        "default_enabled": true,
+        "efforts": [
+          "none",
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ],
+        "default_effort": "high"
+      },
+      "provider_options": {
+        "id": "claude-opus-5@default",
+        "name": "Claude Opus 5",
+        "endpoint": {
+          "format": "anthropic-vertex",
+          "api": "https://${GOOGLE_VERTEX_ENDPOINT}/v1/projects/${GOOGLE_VERTEX_PROJECT}/locations/${GOOGLE_VERTEX_LOCATION}/publishers/anthropic/models",
+          "api_default": true,
+          "auth": {
+            "scheme": "google"
+          },
+          "env": [
+            "GOOGLE_VERTEX_PROJECT",
+            "GOOGLE_VERTEX_LOCATION",
+            "GOOGLE_APPLICATION_CREDENTIALS"
+          ]
+        }
+      },
+      "price": {
+        "input": 5,
+        "output": 25,
+        "cache_read": 0.5,
+        "cache_write": 6.25
+      }
+    },
+    "anthropic/claude-opus-5-5": {
+      "name": "Claude Opus 5.5",
+      "family": "claude-opus",
+      "released": "2026-09-22",
+      "updated": "2026-09-22",
+      "knowledge": "2026-06",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "reasoning": {
+        "mandatory": true,
+        "default_enabled": true,
+        "efforts": [
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ],
+        "default_effort": "medium"
+      },
+      "provider_options": {
+        "id": "claude-opus-5-5@default",
+        "name": "Claude Opus 5.5",
+        "endpoint": {
+          "format": "anthropic-vertex",
+          "api": "https://${GOOGLE_VERTEX_ENDPOINT}/v1/projects/${GOOGLE_VERTEX_PROJECT}/locations/${GOOGLE_VERTEX_LOCATION}/publishers/anthropic/models",
+          "api_default": true,
+          "auth": {
+            "scheme": "google"
+          },
+          "env": [
+            "GOOGLE_VERTEX_PROJECT",
+            "GOOGLE_VERTEX_LOCATION",
+            "GOOGLE_APPLICATION_CREDENTIALS"
+          ]
+        }
+      },
+      "price": {
+        "input": 4,
+        "output": 20,
+        "cache_read": 0.2,
+        "cache_write": 5
+      }
+    },
+    "anthropic/claude-sonnet-4-20250514": {
+      "name": "Claude Sonnet 4 20250514",
+      "family": "claude-sonnet",
+      "released": "2025-05-22",
+      "updated": "2025-05-22",
+      "knowledge": "2025-03-31",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": false,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 200000,
+        "output": 64000
+      },
+      "reasoning": {
+        "mandatory": false,
+        "default_enabled": false,
+        "budget": {
+          "min": 1024
+        }
+      },
+      "provider_options": {
+        "id": "claude-sonnet-4@20250514",
+        "name": "Claude Sonnet 4",
+        "endpoint": {
+          "format": "anthropic-vertex",
+          "api": "https://${GOOGLE_VERTEX_ENDPOINT}/v1/projects/${GOOGLE_VERTEX_PROJECT}/locations/${GOOGLE_VERTEX_LOCATION}/publishers/anthropic/models",
+          "api_default": true,
+          "auth": {
+            "scheme": "google"
+          },
+          "env": [
+            "GOOGLE_VERTEX_PROJECT",
+            "GOOGLE_VERTEX_LOCATION",
+            "GOOGLE_APPLICATION_CREDENTIALS"
+          ]
+        }
+      },
+      "price": {
+        "input": 3,
+        "output": 15,
+        "cache_read": 0.3,
+        "cache_write": 3.75
+      },
+      "status": "deprecated"
+    },
+    "anthropic/claude-sonnet-4-5-20250929": {
+      "name": "Claude Sonnet 4.5 20250929",
+      "family": "claude-sonnet",
+      "released": "2025-09-29",
+      "updated": "2025-09-29",
+      "knowledge": "2025-07-31",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 200000,
+        "output": 64000
+      },
+      "reasoning": {
+        "mandatory": false,
+        "default_enabled": false,
+        "budget": {
+          "min": 1024
+        }
+      },
+      "provider_options": {
+        "id": "claude-sonnet-4-5@20250929",
+        "name": "Claude Sonnet 4.5",
+        "endpoint": {
+          "format": "anthropic-vertex",
+          "api": "https://${GOOGLE_VERTEX_ENDPOINT}/v1/projects/${GOOGLE_VERTEX_PROJECT}/locations/${GOOGLE_VERTEX_LOCATION}/publishers/anthropic/models",
+          "api_default": true,
+          "auth": {
+            "scheme": "google"
+          },
+          "env": [
+            "GOOGLE_VERTEX_PROJECT",
+            "GOOGLE_VERTEX_LOCATION",
+            "GOOGLE_APPLICATION_CREDENTIALS"
+          ]
+        }
+      },
+      "price": {
+        "input": 3,
+        "output": 15,
+        "cache_read": 0.3,
+        "cache_write": 3.75
+      },
+      "status": "deprecated"
+    },
+    "anthropic/claude-sonnet-4-6": {
+      "name": "Claude Sonnet 4.6",
+      "family": "claude-sonnet",
+      "released": "2026-02-17",
+      "updated": "2026-03-13",
+      "knowledge": "2025-08-31",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "reasoning": {
+        "mandatory": false,
+        "default_enabled": false,
+        "efforts": [
+          "none",
+          "low",
+          "medium",
+          "high",
+          "max"
+        ],
+        "default_effort": "high",
+        "budget": {
+          "min": 1024
+        }
+      },
+      "provider_options": {
+        "id": "claude-sonnet-4-6@default",
+        "name": "Claude Sonnet 4.6",
+        "endpoint": {
+          "format": "anthropic-vertex",
+          "api": "https://${GOOGLE_VERTEX_ENDPOINT}/v1/projects/${GOOGLE_VERTEX_PROJECT}/locations/${GOOGLE_VERTEX_LOCATION}/publishers/anthropic/models",
+          "api_default": true,
+          "auth": {
+            "scheme": "google"
+          },
+          "env": [
+            "GOOGLE_VERTEX_PROJECT",
+            "GOOGLE_VERTEX_LOCATION",
+            "GOOGLE_APPLICATION_CREDENTIALS"
+          ]
+        }
+      },
+      "price": {
+        "input": 3,
+        "output": 15,
+        "cache_read": 0.3,
+        "cache_write": 3.75
+      }
+    },
+    "anthropic/claude-sonnet-5": {
+      "name": "Claude Sonnet 5",
+      "family": "claude-sonnet",
+      "released": "2026-06-30",
+      "updated": "2026-06-30",
+      "knowledge": "2026-01-31",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "reasoning": {
+        "mandatory": false,
+        "default_enabled": true,
+        "efforts": [
+          "none",
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ],
+        "default_effort": "high"
+      },
+      "provider_options": {
+        "id": "claude-sonnet-5@default",
+        "name": "Claude Sonnet 5",
+        "endpoint": {
+          "format": "anthropic-vertex",
+          "api": "https://${GOOGLE_VERTEX_ENDPOINT}/v1/projects/${GOOGLE_VERTEX_PROJECT}/locations/${GOOGLE_VERTEX_LOCATION}/publishers/anthropic/models",
+          "api_default": true,
+          "auth": {
+            "scheme": "google"
+          },
+          "env": [
+            "GOOGLE_VERTEX_PROJECT",
+            "GOOGLE_VERTEX_LOCATION",
+            "GOOGLE_APPLICATION_CREDENTIALS"
+          ]
+        }
+      },
+      "price": {
+        "input": 2,
+        "output": 10,
+        "cache_read": 0.2,
+        "cache_write": 2.5
+      }
+    },
+    "anthropic/claude-sonnet-5-5": {
+      "name": "Claude Sonnet 5.5",
+      "family": "claude-sonnet",
+      "released": "2026-09-28",
+      "updated": "2026-09-28",
+      "knowledge": "2026-06",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "reasoning": {
+        "mandatory": true,
+        "default_enabled": true,
+        "efforts": [
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ],
+        "default_effort": "high"
+      },
+      "provider_options": {
+        "id": "claude-sonnet-5-5@default",
+        "name": "Claude Sonnet 5.5",
+        "endpoint": {
+          "format": "anthropic-vertex",
+          "api": "https://${GOOGLE_VERTEX_ENDPOINT}/v1/projects/${GOOGLE_VERTEX_PROJECT}/locations/${GOOGLE_VERTEX_LOCATION}/publishers/anthropic/models",
+          "api_default": true,
+          "auth": {
+            "scheme": "google"
+          },
+          "env": [
+            "GOOGLE_VERTEX_PROJECT",
+            "GOOGLE_VERTEX_LOCATION",
+            "GOOGLE_APPLICATION_CREDENTIALS"
+          ]
+        }
+      },
+      "price": {
+        "input": 2,
+        "output": 10,
+        "cache_read": 0.1,
+        "cache_write": 2.5
+      }
+    },
+    "deepseek/deepseek-v3.1-maas": {
+      "name": "DeepSeek V3.1 Maas",
+      "family": "deepseek",
+      "released": "2025-08-28",
+      "updated": "2025-08-28",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 163840,
+        "output": 32768
+      },
+      "reasoning": {
+        "mandatory": false
+      },
+      "provider_options": {
+        "id": "deepseek-ai/deepseek-v3.1-maas",
+        "name": "DeepSeek V3.1",
+        "endpoint": {
+          "format": "openai-chat",
+          "api": "https://${GOOGLE_VERTEX_ENDPOINT}/v1/projects/${GOOGLE_VERTEX_PROJECT}/locations/${GOOGLE_VERTEX_LOCATION}/endpoints/openapi",
+          "auth": {
+            "scheme": "google"
+          },
+          "env": [
+            "GOOGLE_VERTEX_PROJECT",
+            "GOOGLE_VERTEX_LOCATION",
+            "GOOGLE_APPLICATION_CREDENTIALS"
+          ]
+        }
+      },
+      "price": {
+        "input": 0.6,
+        "output": 1.7,
+        "cache_read": 0.06
+      },
+      "status": "deprecated"
+    },
+    "deepseek/deepseek-v3.2-maas": {
+      "name": "DeepSeek V3.2 Maas",
+      "family": "deepseek",
+      "released": "2025-12-17",
+      "updated": "2026-04-04",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 163840,
+        "output": 65536
+      },
+      "reasoning": {
+        "mandatory": false
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "deepseek-ai/deepseek-v3.2-maas",
+        "name": "DeepSeek V3.2",
+        "endpoint": {
+          "format": "openai-chat",
+          "api": "https://${GOOGLE_VERTEX_ENDPOINT}/v1/projects/${GOOGLE_VERTEX_PROJECT}/locations/${GOOGLE_VERTEX_LOCATION}/endpoints/openapi",
+          "auth": {
+            "scheme": "google"
+          },
+          "env": [
+            "GOOGLE_VERTEX_PROJECT",
+            "GOOGLE_VERTEX_LOCATION",
+            "GOOGLE_APPLICATION_CREDENTIALS"
+          ]
+        }
+      },
+      "price": {
+        "input": 0.56,
+        "output": 1.68,
+        "cache_read": 0.056
+      },
+      "status": "deprecated"
+    },
+    "google/gemini-2.5-flash": {
+      "name": "Gemini 2.5 Flash",
+      "family": "gemini-flash",
+      "released": "2025-06-17",
+      "updated": "2025-06-17",
+      "knowledge": "2025-01",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "audio",
+          "video",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "reasoning": {
+        "mandatory": false,
+        "budget": {
+          "max": 24576
+        }
+      },
+      "provider_options": {
+        "id": "gemini-2.5-flash",
+        "name": "Gemini 2.5 Flash"
+      },
+      "price": {
+        "input": 0.3,
+        "output": 2.5,
+        "cache_read": 0.03,
+        "input_audio": 1
+      },
+      "status": "deprecated"
+    },
+    "google/gemini-2.5-flash-image": {
+      "name": "Gemini 2.5 Flash Image",
+      "family": "gemini-flash",
+      "type": "image",
+      "released": "2025-08-26",
+      "updated": "2025-08-26",
+      "knowledge": "2024-06",
+      "open_weights": false,
+      "capabilities": {
+        "tools": false,
+        "attachments": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text",
+          "image"
+        ]
+      },
+      "limit": {
+        "context": 32768,
+        "output": 32768
+      },
+      "provider_options": {
+        "id": "gemini-2.5-flash-image",
+        "name": "Nano Banana"
+      },
+      "price": {
+        "input": 0.3,
+        "output": 30
+      }
+    },
+    "google/gemini-2.5-flash-lite": {
+      "name": "Gemini 2.5 Flash Lite",
+      "family": "gemini-flash-lite",
+      "released": "2025-06-17",
+      "updated": "2025-06-17",
+      "knowledge": "2025-01",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "audio",
+          "video",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "reasoning": {
+        "mandatory": false,
+        "budget": {
+          "min": 512,
+          "max": 24576
+        }
+      },
+      "provider_options": {
+        "id": "gemini-2.5-flash-lite",
+        "name": "Gemini 2.5 Flash-Lite"
+      },
+      "price": {
+        "input": 0.1,
+        "output": 0.4,
+        "cache_read": 0.01,
+        "input_audio": 0.3
+      },
+      "status": "deprecated"
+    },
+    "google/gemini-2.5-flash-tts": {
+      "name": "Gemini 2.5 Flash TTS",
+      "family": "gemini-flash",
+      "type": "speech",
+      "released": "2025-09-30",
+      "updated": "2025-12-10",
+      "knowledge": "2025-01",
+      "open_weights": false,
+      "capabilities": {
+        "tools": false,
+        "attachments": false,
+        "temperature": false,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "audio"
+        ]
+      },
+      "limit": {
+        "context": 32768,
+        "input": 8192,
+        "output": 16384
+      },
+      "provider_options": {
+        "id": "gemini-2.5-flash-tts",
+        "name": "Gemini 2.5 Flash TTS"
+      },
+      "price": {
+        "input": 0.5,
+        "output": 10
+      }
+    },
+    "google/gemini-2.5-pro": {
+      "name": "Gemini 2.5 Pro",
+      "family": "gemini-pro",
+      "released": "2025-06-17",
+      "updated": "2025-06-17",
+      "knowledge": "2025-01",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "audio",
+          "video",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "reasoning": {
+        "budget": {
+          "min": 128,
+          "max": 32768
+        }
+      },
+      "provider_options": {
+        "id": "gemini-2.5-pro",
+        "name": "Gemini 2.5 Pro"
+      },
+      "price": {
+        "input": 1.25,
+        "output": 10,
+        "cache_read": 0.125,
+        "tiers": [
+          {
+            "above": 200000,
+            "input": 2.5,
+            "output": 15,
+            "cache_read": 0.25
+          }
+        ]
+      },
+      "status": "deprecated"
+    },
+    "google/gemini-2.5-pro-tts": {
+      "name": "Gemini 2.5 Pro TTS",
+      "family": "gemini-pro",
+      "type": "speech",
+      "released": "2025-09-30",
+      "updated": "2025-12-10",
+      "knowledge": "2025-01",
+      "open_weights": false,
+      "capabilities": {
+        "tools": false,
+        "attachments": false,
+        "temperature": false,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "audio"
+        ]
+      },
+      "limit": {
+        "context": 32768,
+        "input": 8192,
+        "output": 16384
+      },
+      "provider_options": {
+        "id": "gemini-2.5-pro-tts",
+        "name": "Gemini 2.5 Pro TTS"
+      },
+      "price": {
+        "input": 1,
+        "output": 20
+      }
+    },
+    "google/gemini-3-flash-preview": {
+      "name": "Gemini 3 Flash Preview",
+      "family": "gemini-flash",
+      "released": "2025-12-17",
+      "updated": "2025-12-17",
+      "knowledge": "2025-01",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "video",
+          "audio",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "reasoning": {
+        "efforts": [
+          "minimal",
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "gemini-3-flash-preview",
+        "name": "Gemini 3 Flash Preview"
+      },
+      "price": {
+        "input": 0.5,
+        "output": 3,
+        "cache_read": 0.05,
+        "input_audio": 1
+      },
+      "status": "beta"
+    },
+    "google/gemini-3-pro-image": {
+      "name": "Gemini 3 Pro Image",
+      "family": "gemini-pro",
+      "type": "image",
+      "released": "2026-05-28",
+      "updated": "2026-05-28",
+      "knowledge": "2025-01",
+      "open_weights": false,
+      "capabilities": {
+        "tools": false,
+        "attachments": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text",
+          "image"
+        ]
+      },
+      "limit": {
+        "context": 65536,
+        "output": 32768
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "gemini-3-pro-image",
+        "name": "Nano Banana Pro"
+      },
+      "price": {
+        "input": 2,
+        "output": 120,
+        "cache_read": 0.2
+      }
+    },
+    "google/gemini-3.1-flash-image": {
+      "name": "Gemini 3.1 Flash Image",
+      "family": "gemini-flash",
+      "type": "image",
+      "released": "2026-05-28",
+      "updated": "2026-05-28",
+      "knowledge": "2025-01",
+      "open_weights": false,
+      "capabilities": {
+        "tools": false,
+        "attachments": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "video",
+          "pdf"
+        ],
+        "output": [
+          "text",
+          "image"
+        ]
+      },
+      "limit": {
+        "context": 131072,
+        "output": 32768
+      },
+      "reasoning": {
+        "efforts": [
+          "minimal",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "gemini-3.1-flash-image",
+        "name": "Nano Banana 2"
+      },
+      "price": {
+        "input": 0.5,
+        "output": 60,
+        "cache_read": 0.05
+      }
+    },
+    "google/gemini-3.1-flash-lite": {
+      "name": "Gemini 3.1 Flash Lite",
+      "family": "gemini-flash-lite",
+      "released": "2026-05-07",
+      "updated": "2026-05-07",
+      "knowledge": "2025-01",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "video",
+          "audio",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "reasoning": {
+        "efforts": [
+          "minimal",
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "gemini-3.1-flash-lite",
+        "name": "Gemini 3.1 Flash Lite"
+      },
+      "price": {
+        "input": 0.25,
+        "output": 1.5,
+        "cache_read": 0.025,
+        "input_audio": 0.5
+      }
+    },
+    "google/gemini-3.1-flash-lite-image": {
+      "name": "Gemini 3.1 Flash Lite Image",
+      "family": "gemini-flash-lite",
+      "type": "image",
+      "released": "2026-06-30",
+      "updated": "2026-06-30",
+      "knowledge": "2025-01",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": false,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "video",
+          "pdf"
+        ],
+        "output": [
+          "text",
+          "image"
+        ]
+      },
+      "limit": {
+        "context": 65536,
+        "output": 4096
+      },
+      "reasoning": {
+        "efforts": [
+          "minimal",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "gemini-3.1-flash-lite-image",
+        "name": "Nano Banana 2 Lite"
+      },
+      "price": {
+        "input": 0.25,
+        "output": 30,
+        "cache_read": 0.025
+      }
+    },
+    "google/gemini-3.1-pro-preview": {
+      "name": "Gemini 3.1 Pro Preview",
+      "family": "gemini-pro",
+      "released": "2026-02-19",
+      "updated": "2026-02-19",
+      "knowledge": "2025-01",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "video",
+          "audio",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "gemini-3.1-pro-preview",
+        "name": "Gemini 3.1 Pro Preview"
+      },
+      "price": {
+        "input": 2,
+        "output": 12,
+        "cache_read": 0.2,
+        "tiers": [
+          {
+            "above": 200000,
+            "input": 4,
+            "output": 18,
+            "cache_read": 0.4
+          }
+        ]
+      },
+      "status": "beta"
+    },
+    "google/gemini-3.1-pro-preview-customtools": {
+      "name": "Gemini 3.1 Pro Preview Customtools",
+      "family": "gemini-pro",
+      "released": "2026-02-19",
+      "updated": "2026-02-19",
+      "knowledge": "2025-01",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "video",
+          "audio",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "gemini-3.1-pro-preview-customtools",
+        "name": "Gemini 3.1 Pro Preview Custom Tools"
+      },
+      "price": {
+        "input": 2,
+        "output": 12,
+        "cache_read": 0.2,
+        "tiers": [
+          {
+            "above": 200000,
+            "input": 4,
+            "output": 18,
+            "cache_read": 0.4
+          }
+        ]
+      },
+      "status": "beta"
+    },
+    "google/gemini-3.5-flash": {
+      "name": "Gemini 3.5 Flash",
+      "family": "gemini-flash",
+      "released": "2026-05-19",
+      "updated": "2026-05-19",
+      "knowledge": "2025-01",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "video",
+          "audio",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "reasoning": {
+        "efforts": [
+          "minimal",
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "gemini-3.5-flash",
+        "name": "Gemini 3.5 Flash"
+      },
+      "price": {
+        "input": 1.5,
+        "output": 9,
+        "cache_read": 0.15,
+        "input_audio": 1.5
+      }
+    },
+    "google/gemini-3.5-flash-lite": {
+      "name": "Gemini 3.5 Flash Lite",
+      "family": "gemini-flash-lite",
+      "released": "2026-07-21",
+      "updated": "2026-07-21",
+      "knowledge": "2026-03",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "video",
+          "audio",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "reasoning": {
+        "efforts": [
+          "minimal",
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "gemini-3.5-flash-lite",
+        "name": "Gemini 3.5 Flash Lite"
+      },
+      "price": {
+        "input": 0.3,
+        "output": 2.5,
+        "cache_read": 0.03
+      }
+    },
+    "google/gemini-3.6-flash": {
+      "name": "Gemini 3.6 Flash",
+      "family": "gemini-flash",
+      "released": "2026-07-21",
+      "updated": "2026-07-21",
+      "knowledge": "2026-03",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "video",
+          "audio",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "reasoning": {
+        "efforts": [
+          "minimal",
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "gemini-3.6-flash",
+        "name": "Gemini 3.6 Flash"
+      },
+      "price": {
+        "input": 0.75,
+        "output": 3.75,
+        "cache_read": 0.075,
+        "input_audio": 0.75
+      },
+      "status": "deprecated"
+    },
+    "google/gemini-3.7-flash": {
+      "name": "Gemini 3.7 Flash",
+      "family": "gemini-flash",
+      "released": "2026-08-13",
+      "updated": "2026-08-13",
+      "knowledge": "2026-03",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "video",
+          "audio",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "gemini-3.7-flash",
+        "name": "Gemini 3.7 Flash"
+      },
+      "price": {
+        "input": 0.75,
+        "output": 3.75,
+        "cache_read": 0.075,
+        "input_audio": 0.75
+      }
+    },
+    "google/gemini-3.8-flash": {
+      "name": "Gemini 3.8 Flash",
+      "family": "gemini-flash",
+      "released": "2026-09-02",
+      "updated": "2026-09-02",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "video",
+          "audio",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "gemini-3.8-flash",
+        "name": "Gemini 3.8 Flash"
+      },
+      "price": {
+        "input": 0.75,
+        "output": 3.75,
+        "cache_read": 0.075,
+        "input_audio": 0.75
+      }
+    },
+    "google/gemini-4-argon": {
+      "name": "Gemini 4 Argon",
+      "family": "gemini",
+      "released": "2026-10-13",
+      "updated": "2026-10-13",
+      "knowledge": "2026-03",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image",
+          "video",
+          "audio",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "gemini-4-argon",
+        "name": "Gemini 4 Argon"
+      },
+      "price": {
+        "input": 2,
+        "output": 10,
+        "cache_read": 0.1,
+        "input_audio": 2
+      }
+    },
+    "google/gemini-embedding-001": {
+      "name": "Gemini Embedding 001",
+      "family": "gemini",
+      "type": "embedding",
+      "released": "2025-05-20",
+      "updated": "2025-05-20",
+      "knowledge": "2025-05",
+      "open_weights": false,
+      "capabilities": {
+        "tools": false,
+        "attachments": false,
+        "temperature": false,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 2048,
+        "output": 1
+      },
+      "provider_options": {
+        "id": "gemini-embedding-001",
+        "name": "Gemini Embedding 001"
+      },
+      "price": {
+        "input": 0.15,
+        "output": 0
+      }
+    },
+    "google/gemini-nano-banana-2.1": {
+      "name": "Gemini Nano Banana 2.1",
+      "family": "gemini-flash",
+      "type": "image",
+      "released": "2026-10-06",
+      "updated": "2026-10-06",
+      "open_weights": false,
+      "capabilities": {
+        "tools": false,
+        "attachments": true,
+        "structured_output": false,
+        "temperature": false,
+        "input": [
+          "text",
+          "image",
+          "video",
+          "pdf"
+        ],
+        "output": [
+          "text",
+          "image"
+        ]
+      },
+      "limit": {
+        "context": 131072,
+        "output": 32768
+      },
+      "reasoning": {
+        "efforts": [
+          "minimal",
+          "medium",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "gemini-nano-banana-2.1",
+        "name": "Nano Banana 2.1"
+      },
+      "price": {
+        "input": 1.5,
+        "output": 30,
+        "cache_read": 0.15
+      }
+    },
+    "google/gemma-4-26b-a4b-it": {
+      "name": "Gemma 4 26B A4B IT",
+      "family": "gemma",
+      "released": "2026-04-02",
+      "updated": "2026-04-02",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 128000
+      },
+      "reasoning": {},
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "google/gemma-4-26b-a4b-it-maas",
+        "name": "Gemma 4 26B A4B IT",
+        "endpoint": {
+          "format": "openai-chat",
+          "api": "https://${GOOGLE_VERTEX_ENDPOINT}/v1/projects/${GOOGLE_VERTEX_PROJECT}/locations/${GOOGLE_VERTEX_LOCATION}/endpoints/openapi",
+          "auth": {
+            "scheme": "google"
+          },
+          "env": [
+            "GOOGLE_VERTEX_PROJECT",
+            "GOOGLE_VERTEX_LOCATION",
+            "GOOGLE_APPLICATION_CREDENTIALS"
+          ]
+        }
+      },
+      "price": {
+        "input": 0.15,
+        "output": 0.6,
+        "cache_read": 0.015
+      },
+      "status": "alpha"
+    },
+    "meta/llama-3.3-70b-instruct-maas": {
+      "name": "Llama 3.3 70B Instruct Maas",
+      "family": "llama",
+      "released": "2025-04-29",
+      "updated": "2025-04-29",
+      "knowledge": "2023-12",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 128000,
+        "output": 8192
+      },
+      "provider_options": {
+        "id": "meta/llama-3.3-70b-instruct-maas",
+        "name": "Llama 3.3 70B Instruct",
+        "endpoint": {
+          "format": "openai-chat",
+          "api": "https://${GOOGLE_VERTEX_ENDPOINT}/v1/projects/${GOOGLE_VERTEX_PROJECT}/locations/${GOOGLE_VERTEX_LOCATION}/endpoints/openapi",
+          "auth": {
+            "scheme": "google"
+          },
+          "env": [
+            "GOOGLE_VERTEX_PROJECT",
+            "GOOGLE_VERTEX_LOCATION",
+            "GOOGLE_APPLICATION_CREDENTIALS"
+          ]
+        }
+      },
+      "price": {
+        "input": 0.72,
+        "output": 0.72
+      },
+      "status": "deprecated"
+    },
+    "meta/llama-4-maverick-17b-128e-instruct-maas": {
+      "name": "Llama 4 Maverick 17B 128E Instruct Maas",
+      "family": "llama",
+      "released": "2025-04-29",
+      "updated": "2025-04-29",
+      "knowledge": "2024-08",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 524288,
+        "output": 8192
+      },
+      "provider_options": {
+        "id": "meta/llama-4-maverick-17b-128e-instruct-maas",
+        "name": "Llama 4 Maverick 17B 128E Instruct",
+        "endpoint": {
+          "format": "openai-chat",
+          "api": "https://${GOOGLE_VERTEX_ENDPOINT}/v1/projects/${GOOGLE_VERTEX_PROJECT}/locations/${GOOGLE_VERTEX_LOCATION}/endpoints/openapi",
+          "auth": {
+            "scheme": "google"
+          },
+          "env": [
+            "GOOGLE_VERTEX_PROJECT",
+            "GOOGLE_VERTEX_LOCATION",
+            "GOOGLE_APPLICATION_CREDENTIALS"
+          ]
+        }
+      },
+      "price": {
+        "input": 0.35,
+        "output": 1.15
+      }
+    },
+    "meta/llama-4-scout-17b-instruct": {
+      "name": "Llama 4 Scout 17B Instruct",
+      "family": "llama",
+      "released": "2025-04-05",
+      "updated": "2025-04-05",
+      "knowledge": "2024-08",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1310720,
+        "output": 8192
+      },
+      "provider_options": {
+        "id": "meta/llama-4-scout-17b-16e-instruct-maas",
+        "name": "Llama 4 Scout 17B Instruct",
+        "endpoint": {
+          "format": "openai-chat",
+          "api": "https://${GOOGLE_VERTEX_ENDPOINT}/v1/projects/${GOOGLE_VERTEX_PROJECT}/locations/${GOOGLE_VERTEX_LOCATION}/endpoints/openapi",
+          "auth": {
+            "scheme": "google"
+          },
+          "env": [
+            "GOOGLE_VERTEX_PROJECT",
+            "GOOGLE_VERTEX_LOCATION",
+            "GOOGLE_APPLICATION_CREDENTIALS"
+          ]
+        }
+      },
+      "price": {
+        "input": 0.25,
+        "output": 0.7
+      }
+    },
+    "mistral/codestral-2508": {
+      "name": "Codestral 2508",
+      "family": "codestral",
+      "released": "2025-07-30",
+      "updated": "2025-07-30",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 128000,
+        "output": 8192
+      },
+      "provider_options": {
+        "id": "codestral-2",
+        "name": "Codestral 2",
+        "endpoint": {
+          "api": "https://${GOOGLE_VERTEX_ENDPOINT}/v1/projects/${GOOGLE_VERTEX_PROJECT}/locations/${GOOGLE_VERTEX_LOCATION}/publishers/mistralai/models",
+          "auth": {
+            "scheme": "google"
+          },
+          "env": [
+            "GOOGLE_VERTEX_PROJECT",
+            "GOOGLE_VERTEX_LOCATION",
+            "GOOGLE_APPLICATION_CREDENTIALS"
+          ]
+        }
+      },
+      "price": {
+        "input": 0.3,
+        "output": 0.9
+      }
+    },
+    "mistral/mistral-medium-2505": {
+      "name": "Mistral Medium 2505",
+      "family": "mistral-medium",
+      "released": "2025-05-07",
+      "updated": "2025-05-07",
+      "knowledge": "2025-05",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 131072,
+        "output": 131072
+      },
+      "provider_options": {
+        "id": "mistral-medium-3",
+        "name": "Mistral Medium 3",
+        "endpoint": {
+          "api": "https://${GOOGLE_VERTEX_ENDPOINT}/v1/projects/${GOOGLE_VERTEX_PROJECT}/locations/${GOOGLE_VERTEX_LOCATION}/publishers/mistralai/models",
+          "auth": {
+            "scheme": "google"
+          },
+          "env": [
+            "GOOGLE_VERTEX_PROJECT",
+            "GOOGLE_VERTEX_LOCATION",
+            "GOOGLE_APPLICATION_CREDENTIALS"
+          ]
+        }
+      },
+      "price": {
+        "input": 0.4,
+        "output": 2
+      }
+    },
+    "mistral/mistral-small-3-1-24b-instruct-2503": {
+      "name": "Mistral Small 3.1 24B Instruct 2503",
+      "family": "mistral-small",
+      "released": "2025-03-17",
+      "updated": "2025-03-17",
+      "knowledge": "2024-06",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 128000,
+        "output": 16384
+      },
+      "provider_options": {
+        "id": "mistral-small-2503",
+        "name": "Mistral Small 3.1 24B",
+        "endpoint": {
+          "api": "https://${GOOGLE_VERTEX_ENDPOINT}/v1/projects/${GOOGLE_VERTEX_PROJECT}/locations/${GOOGLE_VERTEX_LOCATION}/publishers/mistralai/models",
+          "auth": {
+            "scheme": "google"
+          },
+          "env": [
+            "GOOGLE_VERTEX_PROJECT",
+            "GOOGLE_VERTEX_LOCATION",
+            "GOOGLE_APPLICATION_CREDENTIALS"
+          ]
+        }
+      },
+      "price": {
+        "input": 0.1,
+        "output": 0.3
+      }
+    },
+    "moonshotai/kimi-k2-thinking-maas": {
+      "name": "Kimi K2 Thinking Maas",
+      "family": "kimi-thinking",
+      "released": "2025-11-13",
+      "updated": "2025-11-13",
+      "knowledge": "2024-08",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "reasoning": {},
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "moonshotai/kimi-k2-thinking-maas",
+        "name": "Kimi K2 Thinking",
+        "endpoint": {
+          "format": "openai-chat",
+          "api": "https://${GOOGLE_VERTEX_ENDPOINT}/v1/projects/${GOOGLE_VERTEX_PROJECT}/locations/${GOOGLE_VERTEX_LOCATION}/endpoints/openapi",
+          "auth": {
+            "scheme": "google"
+          },
+          "env": [
+            "GOOGLE_VERTEX_PROJECT",
+            "GOOGLE_VERTEX_LOCATION",
+            "GOOGLE_APPLICATION_CREDENTIALS"
+          ]
+        }
+      },
+      "price": {
+        "input": 0.6,
+        "output": 2.5,
+        "cache_read": 0.06
+      },
+      "status": "deprecated"
+    },
+    "openai/gpt-oss-120b": {
+      "name": "GPT OSS 120B",
+      "family": "gpt-oss",
+      "released": "2025-08-05",
+      "updated": "2025-08-05",
+      "knowledge": "2024-06",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 131072,
+        "output": 131072
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "openai/gpt-oss-120b-maas",
+        "name": "GPT OSS 120B",
+        "endpoint": {
+          "format": "openai-chat",
+          "api": "https://${GOOGLE_VERTEX_ENDPOINT}/v1/projects/${GOOGLE_VERTEX_PROJECT}/locations/${GOOGLE_VERTEX_LOCATION}/endpoints/openapi",
+          "auth": {
+            "scheme": "google"
+          },
+          "env": [
+            "GOOGLE_VERTEX_PROJECT",
+            "GOOGLE_VERTEX_LOCATION",
+            "GOOGLE_APPLICATION_CREDENTIALS"
+          ]
+        }
+      },
+      "price": {
+        "input": 0.09,
+        "output": 0.36
+      }
+    },
+    "openai/gpt-oss-20b-maas": {
+      "name": "GPT OSS 20B Maas",
+      "family": "gpt-oss",
+      "released": "2025-08-05",
+      "updated": "2025-08-05",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 131072,
+        "output": 32768
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "openai/gpt-oss-20b-maas",
+        "name": "GPT OSS 20B",
+        "endpoint": {
+          "format": "openai-chat",
+          "api": "https://${GOOGLE_VERTEX_ENDPOINT}/v1/projects/${GOOGLE_VERTEX_PROJECT}/locations/${GOOGLE_VERTEX_LOCATION}/endpoints/openapi",
+          "auth": {
+            "scheme": "google"
+          },
+          "env": [
+            "GOOGLE_VERTEX_PROJECT",
+            "GOOGLE_VERTEX_LOCATION",
+            "GOOGLE_APPLICATION_CREDENTIALS"
+          ]
+        }
+      },
+      "price": {
+        "input": 0.07,
+        "output": 0.25,
+        "cache_read": 0.007
+      },
+      "status": "deprecated"
+    },
+    "xai/grok-4.1-fast": {
+      "name": "Grok 4.1 Fast",
+      "family": "grok",
+      "released": "2025-11-19",
+      "updated": "2025-11-19",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 128000,
+        "output": 30000
+      },
+      "provider_options": {
+        "id": "xai/grok-4.1-fast-non-reasoning",
+        "name": "Grok 4.1 Fast",
+        "endpoint": {
+          "format": "openai-chat",
+          "api": "https://${GOOGLE_VERTEX_ENDPOINT}/v1/projects/${GOOGLE_VERTEX_PROJECT}/locations/${GOOGLE_VERTEX_LOCATION}/endpoints/openapi",
+          "auth": {
+            "scheme": "google"
+          },
+          "env": [
+            "GOOGLE_VERTEX_PROJECT",
+            "GOOGLE_VERTEX_LOCATION",
+            "GOOGLE_APPLICATION_CREDENTIALS"
+          ]
+        }
+      },
+      "price": {
+        "input": 0.2,
+        "output": 0.5,
+        "cache_read": 0.05
+      },
+      "status": "deprecated"
+    },
+    "xai/grok-4.1-fast-reasoning": {
+      "name": "Grok 4.1 Fast Reasoning",
+      "family": "grok",
+      "released": "2025-11-19",
+      "updated": "2025-11-19",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 128000,
+        "output": 30000
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "xai/grok-4.1-fast-reasoning",
+        "name": "Grok 4.1 Fast (Reasoning)",
+        "endpoint": {
+          "format": "openai-chat",
+          "api": "https://${GOOGLE_VERTEX_ENDPOINT}/v1/projects/${GOOGLE_VERTEX_PROJECT}/locations/${GOOGLE_VERTEX_LOCATION}/endpoints/openapi",
+          "auth": {
+            "scheme": "google"
+          },
+          "env": [
+            "GOOGLE_VERTEX_PROJECT",
+            "GOOGLE_VERTEX_LOCATION",
+            "GOOGLE_APPLICATION_CREDENTIALS"
+          ]
+        }
+      },
+      "price": {
+        "input": 0.2,
+        "output": 0.5,
+        "cache_read": 0.05
+      },
+      "status": "deprecated"
+    },
+    "xai/grok-4.20-0309-non-reasoning": {
+      "name": "Grok 4.20 0309 Non Reasoning",
+      "family": "grok",
+      "released": "2026-03-09",
+      "updated": "2026-03-09",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 2000000,
+        "output": 30000
+      },
+      "provider_options": {
+        "id": "xai/grok-4.20-non-reasoning",
+        "name": "Grok 4.20 (Non-Reasoning)",
+        "endpoint": {
+          "format": "openai-chat",
+          "api": "https://${GOOGLE_VERTEX_ENDPOINT}/v1/projects/${GOOGLE_VERTEX_PROJECT}/locations/${GOOGLE_VERTEX_LOCATION}/endpoints/openapi",
+          "auth": {
+            "scheme": "google"
+          },
+          "env": [
+            "GOOGLE_VERTEX_PROJECT",
+            "GOOGLE_VERTEX_LOCATION",
+            "GOOGLE_APPLICATION_CREDENTIALS"
+          ]
+        }
+      },
+      "price": {
+        "input": 1.25,
+        "output": 2.5,
+        "cache_read": 0.2,
+        "tiers": [
+          {
+            "above": 200000,
+            "input": 2.5,
+            "output": 5,
+            "cache_read": 0.4
+          }
+        ]
+      }
+    },
+    "xai/grok-4.20-0309-reasoning": {
+      "name": "Grok 4.20 0309 Reasoning",
+      "family": "grok",
+      "released": "2026-03-09",
+      "updated": "2026-03-09",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 2000000,
+        "output": 30000
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "xai/grok-4.20-reasoning",
+        "name": "Grok 4.20 (Reasoning)",
+        "endpoint": {
+          "format": "openai-chat",
+          "api": "https://${GOOGLE_VERTEX_ENDPOINT}/v1/projects/${GOOGLE_VERTEX_PROJECT}/locations/${GOOGLE_VERTEX_LOCATION}/endpoints/openapi",
+          "auth": {
+            "scheme": "google"
+          },
+          "env": [
+            "GOOGLE_VERTEX_PROJECT",
+            "GOOGLE_VERTEX_LOCATION",
+            "GOOGLE_APPLICATION_CREDENTIALS"
+          ]
+        }
+      },
+      "price": {
+        "input": 1.25,
+        "output": 2.5,
+        "cache_read": 0.2,
+        "tiers": [
+          {
+            "above": 200000,
+            "input": 2.5,
+            "output": 5,
+            "cache_read": 0.4
+          }
+        ]
+      }
+    },
+    "xai/grok-4.3": {
+      "name": "Grok 4.3",
+      "family": "grok",
+      "released": "2026-04-17",
+      "updated": "2026-04-17",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 200000,
+        "output": 30000
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "xai/grok-4.3",
+        "name": "Grok 4.3",
+        "endpoint": {
+          "format": "openai-chat",
+          "api": "https://${GOOGLE_VERTEX_ENDPOINT}/v1/projects/${GOOGLE_VERTEX_PROJECT}/locations/${GOOGLE_VERTEX_LOCATION}/endpoints/openapi",
+          "auth": {
+            "scheme": "google"
+          },
+          "env": [
+            "GOOGLE_VERTEX_PROJECT",
+            "GOOGLE_VERTEX_LOCATION",
+            "GOOGLE_APPLICATION_CREDENTIALS"
+          ]
+        }
+      },
+      "price": {
+        "input": 1.25,
+        "output": 2.5,
+        "cache_read": 0.2,
+        "tiers": [
+          {
+            "above": 200000,
+            "input": 2.5,
+            "output": 5,
+            "cache_read": 0.4
+          }
+        ]
+      },
+      "status": "beta"
+    },
+    "xai/grok-4.6": {
+      "name": "Grok 4.6",
+      "family": "grok",
+      "released": "2026-08-12",
+      "updated": "2026-08-12",
+      "knowledge": "2026-02-01",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 524288,
+        "output": 500000
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "xai/grok-4.6",
+        "name": "Grok 4.6",
+        "endpoint": {
+          "format": "openai-chat",
+          "api": "https://${GOOGLE_VERTEX_ENDPOINT}/v1/projects/${GOOGLE_VERTEX_PROJECT}/locations/${GOOGLE_VERTEX_LOCATION}/endpoints/openapi",
+          "auth": {
+            "scheme": "google"
+          },
+          "env": [
+            "GOOGLE_VERTEX_PROJECT",
+            "GOOGLE_VERTEX_LOCATION",
+            "GOOGLE_APPLICATION_CREDENTIALS"
+          ]
+        }
+      },
+      "price": {
+        "input": 2,
+        "output": 6,
+        "cache_read": 0.5,
+        "tiers": [
+          {
+            "above": 200000,
+            "input": 4,
+            "output": 12,
+            "cache_read": 1
+          }
+        ]
+      }
+    },
+    "xai/grok-4.7": {
+      "name": "Grok 4.7",
+      "family": "grok",
+      "released": "2026-09-21",
+      "updated": "2026-09-21",
+      "knowledge": "2026-05",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 524288,
+        "output": 500000
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "xai/grok-4.7",
+        "name": "Grok 4.7",
+        "endpoint": {
+          "format": "openai-chat",
+          "api": "https://${GOOGLE_VERTEX_ENDPOINT}/v1/projects/${GOOGLE_VERTEX_PROJECT}/locations/${GOOGLE_VERTEX_LOCATION}/endpoints/openapi",
+          "auth": {
+            "scheme": "google"
+          },
+          "env": [
+            "GOOGLE_VERTEX_PROJECT",
+            "GOOGLE_VERTEX_LOCATION",
+            "GOOGLE_APPLICATION_CREDENTIALS"
+          ]
+        }
+      },
+      "price": {
+        "input": 2,
+        "output": 6,
+        "cache_read": 0.5,
+        "tiers": [
+          {
+            "above": 200000,
+            "input": 4,
+            "output": 12,
+            "cache_read": 1
+          }
+        ]
+      },
+      "status": "beta"
+    },
+    "zhipuai/glm-4.7-maas": {
+      "name": "GLM 4.7 Maas",
+      "family": "glm",
+      "released": "2026-01-06",
+      "updated": "2026-01-06",
+      "knowledge": "2025-04",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 200000,
+        "output": 128000
+      },
+      "reasoning": {
+        "mandatory": false
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "zai-org/glm-4.7-maas",
+        "name": "GLM-4.7",
+        "endpoint": {
+          "format": "openai-chat",
+          "api": "https://${GOOGLE_VERTEX_ENDPOINT}/v1/projects/${GOOGLE_VERTEX_PROJECT}/locations/${GOOGLE_VERTEX_LOCATION}/endpoints/openapi",
+          "auth": {
+            "scheme": "google"
+          },
+          "env": [
+            "GOOGLE_VERTEX_PROJECT",
+            "GOOGLE_VERTEX_LOCATION",
+            "GOOGLE_APPLICATION_CREDENTIALS"
+          ]
+        }
+      },
+      "price": {
+        "input": 0.6,
+        "output": 2.2,
+        "cache_read": 0.06
+      },
+      "status": "deprecated"
+    },
+    "zhipuai/glm-5": {
+      "name": "GLM 5",
+      "family": "glm",
+      "released": "2026-02-12",
+      "updated": "2026-02-12",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 200000,
+        "output": 128000
+      },
+      "reasoning": {
+        "mandatory": false
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "zai-org/glm-5-maas",
+        "name": "GLM-5",
+        "endpoint": {
+          "format": "openai-chat",
+          "api": "https://${GOOGLE_VERTEX_ENDPOINT}/v1/projects/${GOOGLE_VERTEX_PROJECT}/locations/${GOOGLE_VERTEX_LOCATION}/endpoints/openapi",
+          "auth": {
+            "scheme": "google"
+          },
+          "env": [
+            "GOOGLE_VERTEX_PROJECT",
+            "GOOGLE_VERTEX_LOCATION",
+            "GOOGLE_APPLICATION_CREDENTIALS"
+          ]
+        }
+      },
+      "price": {
+        "input": 1,
+        "output": 3.2,
+        "cache_read": 0.1
+      },
+      "status": "deprecated"
+    },
+    "zhipuai/glm-5.2": {
+      "name": "GLM 5.2",
+      "family": "glm",
+      "released": "2026-06-13",
+      "updated": "2026-06-13",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 64000
+      },
+      "reasoning": {
+        "mandatory": false
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "zai-org/glm-5.2-maas",
+        "name": "GLM-5.2",
+        "endpoint": {
+          "format": "openai-chat",
+          "api": "https://${GOOGLE_VERTEX_ENDPOINT}/v1/projects/${GOOGLE_VERTEX_PROJECT}/locations/${GOOGLE_VERTEX_LOCATION}/endpoints/openapi",
+          "auth": {
+            "scheme": "google"
+          },
+          "env": [
+            "GOOGLE_VERTEX_PROJECT",
+            "GOOGLE_VERTEX_LOCATION",
+            "GOOGLE_APPLICATION_CREDENTIALS"
+          ]
+        }
+      },
+      "price": {
+        "input": 1.4,
+        "output": 4.4,
+        "cache_read": 0.14
+      },
+      "status": "beta"
+    }
+  }
+}

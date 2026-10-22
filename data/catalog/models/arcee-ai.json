@@ -1,0 +1,217 @@
+{
+  "arcee-ai/trinity-large-preview": {
+    "id": "arcee-ai/trinity-large-preview",
+    "lab": "arcee-ai",
+    "name": "Trinity Large Preview",
+    "family": "trinity",
+    "released": "2026-01-27",
+    "updated": "2026-05-28",
+    "open_weights": true,
+    "license": "OpenMDW-1.1",
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 524288,
+      "output": 262144
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/arcee-ai/Trinity-Large-Preview",
+        "format": "safetensors"
+      }
+    ],
+    "links": [
+      {
+        "label": "Model card",
+        "url": "https://huggingface.co/arcee-ai/Trinity-Large-Preview",
+        "type": "model_card"
+      },
+      {
+        "label": "Announcement",
+        "url": "https://www.arcee.ai/blog/trinity-large",
+        "type": "announcement"
+      },
+      {
+        "label": "License",
+        "url": "https://huggingface.co/arcee-ai/Trinity-Large-Preview/blob/main/LICENSE",
+        "type": "license"
+      }
+    ],
+    "providers": [
+      "opencode"
+    ]
+  },
+  "arcee-ai/trinity-large-thinking": {
+    "id": "arcee-ai/trinity-large-thinking",
+    "lab": "arcee-ai",
+    "name": "Trinity Large Thinking",
+    "family": "trinity",
+    "released": "2026-04-01",
+    "updated": "2026-05-28",
+    "open_weights": true,
+    "license": "OpenMDW-1.1",
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 524288,
+      "output": 262144
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/arcee-ai/Trinity-Large-Thinking",
+        "format": "safetensors"
+      }
+    ],
+    "links": [
+      {
+        "label": "Model card",
+        "url": "https://huggingface.co/arcee-ai/Trinity-Large-Thinking",
+        "type": "model_card"
+      },
+      {
+        "label": "Announcement",
+        "url": "https://www.arcee.ai/blog/trinity-large-thinking",
+        "type": "announcement"
+      },
+      {
+        "label": "License",
+        "url": "https://huggingface.co/arcee-ai/Trinity-Large-Thinking/blob/main/LICENSE",
+        "type": "license"
+      }
+    ],
+    "providers": [
+      "arcee",
+      "digitalocean",
+      "kilo",
+      "nano-gpt",
+      "openrouter",
+      "vercel"
+    ]
+  },
+  "arcee-ai/trinity-mini": {
+    "id": "arcee-ai/trinity-mini",
+    "lab": "arcee-ai",
+    "name": "Trinity Mini",
+    "family": "trinity",
+    "released": "2025-12-01",
+    "updated": "2026-05-28",
+    "open_weights": true,
+    "license": "OpenMDW-1.1",
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 131072
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/arcee-ai/Trinity-Mini",
+        "format": "safetensors"
+      }
+    ],
+    "links": [
+      {
+        "label": "Model card",
+        "url": "https://huggingface.co/arcee-ai/Trinity-Mini",
+        "type": "model_card"
+      },
+      {
+        "label": "Announcement",
+        "url": "https://www.arcee.ai/blog/the-trinity-manifesto",
+        "type": "announcement"
+      },
+      {
+        "label": "License",
+        "url": "https://huggingface.co/arcee-ai/Trinity-Mini/blob/main/LICENSE",
+        "type": "license"
+      }
+    ],
+    "providers": [
+      "clarifai"
+    ]
+  },
+  "arcee-ai/trinity-nano-preview": {
+    "id": "arcee-ai/trinity-nano-preview",
+    "lab": "arcee-ai",
+    "name": "Trinity Nano Preview",
+    "family": "trinity",
+    "released": "2025-12-01",
+    "updated": "2026-05-28",
+    "open_weights": true,
+    "license": "OpenMDW-1.1",
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "output": 131072
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/arcee-ai/Trinity-Nano-Preview",
+        "format": "safetensors"
+      }
+    ],
+    "links": [
+      {
+        "label": "Model card",
+        "url": "https://huggingface.co/arcee-ai/Trinity-Nano-Preview",
+        "type": "model_card"
+      },
+      {
+        "label": "Announcement",
+        "url": "https://www.arcee.ai/blog/the-trinity-manifesto",
+        "type": "announcement"
+      },
+      {
+        "label": "License",
+        "url": "https://huggingface.co/arcee-ai/Trinity-Nano-Preview/blob/main/LICENSE",
+        "type": "license"
+      }
+    ],
+    "providers": []
+  }
+}

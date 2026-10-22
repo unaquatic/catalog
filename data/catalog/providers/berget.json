@@ -1,0 +1,254 @@
+{
+  "id": "berget",
+  "name": "Berget.AI",
+  "kind": "gateway",
+  "endpoint": {
+    "format": "openai-chat",
+    "api": "https://api.berget.ai/v1",
+    "auth": {
+      "scheme": "bearer"
+    },
+    "env": [
+      "BERGET_API_KEY"
+    ]
+  },
+  "doc": "https://api.berget.ai",
+  "models": {
+    "alibaba/qwen3.8-27b": {
+      "name": "Qwen3.8 27B",
+      "family": "qwen",
+      "released": "2026-08-14",
+      "updated": "2026-09-01",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 65536
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "medium",
+          "xhigh"
+        ]
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "Qwen/Qwen3.8-27B-FP8",
+        "name": "Qwen3.8 27B"
+      },
+      "price": {
+        "input": 0.46,
+        "output": 3.48
+      }
+    },
+    "google/gemma-4-31b-it": {
+      "name": "Gemma 4 31B IT",
+      "family": "gemma",
+      "released": "2026-04-02",
+      "updated": "2026-04-02",
+      "knowledge": "2025-12",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "audio",
+          "image",
+          "text",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 128000,
+        "output": 8192
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "google/gemma-4-31B-it",
+        "name": "Gemma 4 31B Instruct"
+      },
+      "price": {
+        "input": 0.275,
+        "output": 0.55
+      }
+    },
+    "mistral/mistral-small-3.2-24b-instruct-2506": {
+      "name": "Mistral Small 3.2 24B Instruct 2506",
+      "family": "mistral-small",
+      "released": "2025-10-01",
+      "updated": "2025-10-01",
+      "knowledge": "2025-09",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 32000,
+        "output": 8192
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "mistralai/Mistral-Small-3.2-24B-Instruct-2506",
+        "name": "Mistral Small 3.2 24B Instruct 2506"
+      },
+      "price": {
+        "input": 0.33,
+        "output": 0.33
+      }
+    },
+    "moonshotai/kimi-k3": {
+      "name": "Kimi K3",
+      "family": "kimi-k3",
+      "released": "2026-07-27",
+      "updated": "2026-07-28",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 327680,
+        "output": 32768
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "high",
+          "max"
+        ]
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "moonshotai/Kimi-K3",
+        "name": "Kimi K3"
+      },
+      "price": {
+        "input": 3,
+        "output": 15
+      }
+    },
+    "zhipuai/glm-5.2": {
+      "name": "GLM 5.2",
+      "family": "glm",
+      "released": "2026-06-13",
+      "updated": "2026-06-13",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 524288,
+        "output": 32768
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "zai-org/GLM-5.2",
+        "name": "GLM-5.2"
+      },
+      "price": {
+        "input": 1.54,
+        "output": 4.84
+      }
+    },
+    "zhipuai/glm-5.3-flash": {
+      "name": "GLM 5.3 Flash",
+      "family": "glm-flash",
+      "released": "2026-08-26",
+      "updated": "2026-09-30",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 16384
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "high",
+          "max"
+        ]
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "zai-org/GLM-5.3-Flash",
+        "name": "GLM-5.3-Flash"
+      },
+      "price": {
+        "input": 0.29,
+        "output": 0.58
+      }
+    }
+  }
+}

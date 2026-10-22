@@ -1,0 +1,31 @@
+{
+  "stealth/glyph-cluster": {
+    "id": "stealth/glyph-cluster",
+    "lab": "stealth",
+    "name": "Glyph Cluster",
+    "released": "2025-08-26",
+    "updated": "2025-08-26",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "structured_output": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 256000,
+      "output": 256000
+    },
+    "providers": [
+      "kilo",
+      "vercel"
+    ]
+  }
+}

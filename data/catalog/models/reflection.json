@@ -1,0 +1,82 @@
+{
+  "reflection/beam-1.0-501b-a23b": {
+    "id": "reflection/beam-1.0-501b-a23b",
+    "lab": "reflection",
+    "name": "Beam 1.0 501B A23B",
+    "family": "beam",
+    "released": "2026-10-05",
+    "updated": "2026-10-16",
+    "knowledge": "2026-06-30",
+    "open_weights": true,
+    "license": "Apache-2.0",
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "output": 131072
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/reflection/Beam-1.0-501B-A23B"
+      },
+      {
+        "label": "Hugging Face (FP8)",
+        "url": "https://huggingface.co/reflection/Beam-1.0-501B-A23B-FP8",
+        "quantization": "fp8"
+      },
+      {
+        "label": "Hugging Face (NVFP4)",
+        "url": "https://huggingface.co/reflection/Beam-1.0-501B-A23B-NVFP4",
+        "quantization": "nvfp4"
+      }
+    ],
+    "links": [
+      {
+        "label": "Model card",
+        "url": "https://huggingface.co/reflection/Beam-1.0-501B-A23B",
+        "type": "model_card"
+      },
+      {
+        "label": "Launch announcement",
+        "url": "https://reflection.ai/blog/beam-is-available",
+        "type": "announcement"
+      },
+      {
+        "label": "Introducing Beam",
+        "url": "https://reflection.ai/blog/introducing-beam",
+        "type": "blog"
+      },
+      {
+        "label": "API docs",
+        "url": "https://developers.reflection.ai/models",
+        "type": "docs"
+      }
+    ],
+    "providers": [
+      "cloudflare-ai-gateway",
+      "edenai",
+      "kilo",
+      "nano-gpt",
+      "nebius",
+      "ollama-cloud",
+      "opencode",
+      "opencode-go",
+      "openrouter",
+      "reflection",
+      "togetherai",
+      "vercel",
+      "wandb"
+    ]
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "id": "echo",
+  "name": "Echo",
+  "kind": "gateway",
+  "endpoint": {
+    "format": "openai-chat",
+    "api": "https://echo.tracerml.ai/v1",
+    "auth": {
+      "scheme": "bearer"
+    },
+    "env": [
+      "ECHO_API_KEY"
+    ]
+  },
+  "doc": "https://echo.tracerml.ai/docs/api",
+  "models": {
+    "echo/echo": {
+      "name": "Echo",
+      "released": "2026-07-19",
+      "updated": "2026-08-16",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 65536
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "echo",
+        "name": "Echo"
+      },
+      "price": {
+        "input": 10,
+        "output": 50
+      },
+      "status": "beta"
+    }
+  }
+}

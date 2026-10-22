@@ -1,0 +1,31 @@
+{
+  "mlabonne/neuraldaredevil-8b-abliterated": {
+    "id": "mlabonne/neuraldaredevil-8b-abliterated",
+    "lab": "mlabonne",
+    "name": "Neuraldaredevil 8B Abliterated",
+    "family": "llama",
+    "released": "2024-01-01",
+    "updated": "2024-12-01",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "structured_output": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 8192,
+      "input": 8192,
+      "output": 8192
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  }
+}

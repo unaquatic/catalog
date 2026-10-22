@@ -1,0 +1,60 @@
+{
+  "id": "llmtech",
+  "name": "LLM Tech",
+  "kind": "gateway",
+  "endpoint": {
+    "format": "openai-chat",
+    "api": "https://api.llmtech.eu/v1",
+    "auth": {
+      "scheme": "bearer"
+    },
+    "env": [
+      "LLMTECH_API_KEY"
+    ]
+  },
+  "doc": "https://llmtech.eu/models/qwen3.8-27b",
+  "models": {
+    "alibaba/qwen3.8-27b": {
+      "name": "Qwen3.8 27B",
+      "family": "qwen",
+      "released": "2026-08-14",
+      "updated": "2026-08-14",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 32768
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "medium",
+          "xhigh"
+        ]
+      },
+      "provider_options": {
+        "id": "nvidia/Qwen3.8-27B-NVFP4",
+        "name": "Qwen3.8 27B"
+      },
+      "price": {
+        "input": 0.25,
+        "output": 2.09,
+        "cache_read": 0.04
+      }
+    }
+  }
+}

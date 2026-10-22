@@ -1,0 +1,872 @@
+{
+  "minimax/image-01": {
+    "id": "minimax/image-01",
+    "lab": "minimax",
+    "name": "Image 01",
+    "family": "minimax",
+    "type": "image",
+    "released": "2025-02-15",
+    "updated": "2026-08-25",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "image"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": []
+  },
+  "minimax/minimax-01": {
+    "id": "minimax/minimax-01",
+    "lab": "minimax",
+    "name": "MiniMax 01",
+    "family": "minimax",
+    "released": "2025-01-15",
+    "updated": "2025-01-15",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "structured_output": false,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000192,
+      "output": 900172
+    },
+    "providers": [
+      "kilo",
+      "nano-gpt",
+      "openrouter"
+    ]
+  },
+  "minimax/minimax-h3": {
+    "id": "minimax/minimax-h3",
+    "lab": "minimax",
+    "name": "MiniMax H3",
+    "family": "minimax",
+    "type": "video",
+    "released": "2026-07-31",
+    "updated": "2026-10-04",
+    "open_weights": true,
+    "license": "MiniMax H3 Community License Agreement",
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image",
+        "video",
+        "audio"
+      ],
+      "output": [
+        "video",
+        "audio"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "weights": [
+      {
+        "label": "Hugging Face: H3-Base FL2VA / Ref2VA",
+        "url": "https://huggingface.co/MiniMaxAI/MiniMax-H3",
+        "format": "safetensors"
+      }
+    ],
+    "links": [
+      {
+        "url": "https://www.minimax.io/blog/minimax-h3",
+        "type": "announcement"
+      },
+      {
+        "url": "https://www.minimax.io/news/minimax-h3-open-source",
+        "type": "announcement"
+      },
+      {
+        "url": "https://huggingface.co/MiniMaxAI/MiniMax-H3",
+        "type": "model_card"
+      },
+      {
+        "url": "https://huggingface.co/MiniMaxAI/MiniMax-H3/blob/main/LICENSE",
+        "type": "license"
+      }
+    ],
+    "providers": [
+      "vercel"
+    ]
+  },
+  "minimax/minimax-h3-max": {
+    "id": "minimax/minimax-h3-max",
+    "lab": "minimax",
+    "name": "MiniMax H3 Max",
+    "family": "minimax",
+    "type": "video",
+    "released": "2026-08-26",
+    "updated": "2026-08-26",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "video"
+      ]
+    },
+    "limit": {
+      "context": 0,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "minimax/minimax-m1": {
+    "id": "minimax/minimax-m1",
+    "lab": "minimax",
+    "name": "MiniMax M1",
+    "family": "minimax",
+    "released": "2025-06-16",
+    "updated": "2025-06-16",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 128000
+    },
+    "providers": [
+      "302ai",
+      "kilo",
+      "nano-gpt",
+      "openrouter",
+      "qiniu-ai"
+    ]
+  },
+  "minimax/minimax-m1-80k": {
+    "id": "minimax/minimax-m1-80k",
+    "lab": "minimax",
+    "name": "MiniMax M1 80K",
+    "family": "minimax",
+    "released": "2025-06-17",
+    "updated": "2025-06-17",
+    "open_weights": true,
+    "license": "Apache-2.0",
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 80000
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/MiniMaxAI/MiniMax-M1-80k"
+      }
+    ],
+    "providers": [
+      "huggingface",
+      "jiekou",
+      "nano-gpt",
+      "novita-ai"
+    ]
+  },
+  "minimax/minimax-m2": {
+    "id": "minimax/minimax-m2",
+    "lab": "minimax",
+    "name": "MiniMax M2",
+    "family": "minimax",
+    "released": "2025-10-27",
+    "updated": "2025-10-27",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 204800,
+      "output": 131072
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/MiniMaxAI/MiniMax-M2"
+      }
+    ],
+    "providers": [
+      "302ai",
+      "amazon-bedrock",
+      "cortecs",
+      "edenai",
+      "huggingface",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "merge-gateway",
+      "minimax",
+      "minimax-cn",
+      "minimax-cn-coding-plan",
+      "minimax-coding-plan",
+      "nano-gpt",
+      "ofox",
+      "openrouter",
+      "qiniu-ai",
+      "vercel",
+      "zenmux"
+    ]
+  },
+  "minimax/minimax-m2-5-high-throughput": {
+    "id": "minimax/minimax-m2-5-high-throughput",
+    "lab": "minimax",
+    "name": "MiniMax M2.5 High Throughput",
+    "family": "minimax",
+    "released": "2026-02-12",
+    "updated": "2026-02-25",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 204800,
+      "output": 131072
+    },
+    "providers": [
+      "clarifai"
+    ]
+  },
+  "minimax/minimax-m2-her": {
+    "id": "minimax/minimax-m2-her",
+    "lab": "minimax",
+    "name": "MiniMax M2 Her",
+    "family": "minimax",
+    "released": "2026-01-23",
+    "updated": "2026-01-23",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 65536,
+      "output": 2048
+    },
+    "providers": [
+      "kilo",
+      "nano-gpt",
+      "ofox",
+      "openrouter"
+    ]
+  },
+  "minimax/minimax-m2.1": {
+    "id": "minimax/minimax-m2.1",
+    "lab": "minimax",
+    "name": "MiniMax M2.1",
+    "family": "minimax",
+    "released": "2025-12-23",
+    "updated": "2025-12-23",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 204800,
+      "output": 131072
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/MiniMaxAI/MiniMax-M2.1"
+      }
+    ],
+    "providers": [
+      "302ai",
+      "amazon-bedrock",
+      "cortecs",
+      "edenai",
+      "huggingface",
+      "jiekou",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "meganova",
+      "merge-gateway",
+      "minimax",
+      "minimax-cn",
+      "minimax-cn-coding-plan",
+      "minimax-coding-plan",
+      "moark",
+      "nano-gpt",
+      "ofox",
+      "opencode",
+      "openrouter",
+      "poe",
+      "qiniu-ai",
+      "vercel",
+      "zenmux"
+    ]
+  },
+  "minimax/minimax-m2.5": {
+    "id": "minimax/minimax-m2.5",
+    "lab": "minimax",
+    "name": "MiniMax M2.5",
+    "family": "minimax",
+    "released": "2026-02-12",
+    "updated": "2026-02-12",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 204800,
+      "output": 131072
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/MiniMaxAI/MiniMax-M2.5"
+      }
+    ],
+    "providers": [
+      "302ai",
+      "alibaba-cn",
+      "alibaba-coding-plan",
+      "alibaba-coding-plan-cn",
+      "alibaba-token-plan",
+      "alibaba-token-plan-cn",
+      "amazon-bedrock",
+      "baseten",
+      "cloudferro-sherlock",
+      "commandcode",
+      "cortecs",
+      "deepinfra",
+      "digitalocean",
+      "dinference",
+      "drun",
+      "edenai",
+      "friendli",
+      "frogbot",
+      "greenpt",
+      "hpc-ai",
+      "huggingface",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "meganova",
+      "merge-gateway",
+      "minimax",
+      "minimax-cn",
+      "minimax-cn-coding-plan",
+      "minimax-coding-plan",
+      "nano-gpt",
+      "novita-ai",
+      "ofox",
+      "ollama-cloud",
+      "opencode",
+      "openrouter",
+      "orcarouter",
+      "qiniu-ai",
+      "scnet-token-plan",
+      "siliconflow",
+      "siliconflow-cn",
+      "tencent-coding-plan",
+      "tensorx",
+      "togetherai",
+      "tokengo",
+      "vercel",
+      "zenmux"
+    ]
+  },
+  "minimax/minimax-m2.5-highspeed": {
+    "id": "minimax/minimax-m2.5-highspeed",
+    "lab": "minimax",
+    "name": "MiniMax M2.5 Highspeed",
+    "family": "minimax",
+    "released": "2026-02-13",
+    "updated": "2026-02-13",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 204800,
+      "output": 131072
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/MiniMaxAI/MiniMax-M2.5"
+      }
+    ],
+    "providers": [
+      "llmgateway",
+      "llmgateway-providers",
+      "merge-gateway",
+      "minimax",
+      "minimax-cn",
+      "minimax-cn-coding-plan",
+      "minimax-coding-plan",
+      "ofox",
+      "orcarouter",
+      "qiniu-ai",
+      "vercel",
+      "zenmux"
+    ]
+  },
+  "minimax/minimax-m2.7": {
+    "id": "minimax/minimax-m2.7",
+    "lab": "minimax",
+    "name": "MiniMax M2.7",
+    "family": "minimax",
+    "released": "2026-03-18",
+    "updated": "2026-03-18",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 204800,
+      "output": 131072
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/MiniMaxAI/MiniMax-M2.7"
+      }
+    ],
+    "providers": [
+      "302ai",
+      "abacus",
+      "aihubmix",
+      "alibaba-cn",
+      "auriko",
+      "commandcode",
+      "crossmodel",
+      "deepinfra",
+      "edenai",
+      "empiriolabs",
+      "fastrouter",
+      "frogbot",
+      "gmicloud",
+      "huggingface",
+      "hyper",
+      "kenari",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "merge-gateway",
+      "minimax",
+      "minimax-cn",
+      "minimax-cn-coding-plan",
+      "minimax-coding-plan",
+      "moark",
+      "nano-gpt",
+      "novita-ai",
+      "nvidia",
+      "ofox",
+      "ollama-cloud",
+      "opencode",
+      "opencode-go",
+      "openrouter",
+      "opper",
+      "orcarouter",
+      "pioneer",
+      "requesty",
+      "scnet-token-plan",
+      "scx-ai",
+      "tempr",
+      "togetherai",
+      "unorouter",
+      "vercel",
+      "zenmux"
+    ]
+  },
+  "minimax/minimax-m2.7-highspeed": {
+    "id": "minimax/minimax-m2.7-highspeed",
+    "lab": "minimax",
+    "name": "MiniMax M2.7 Highspeed",
+    "family": "minimax",
+    "released": "2026-03-18",
+    "updated": "2026-03-18",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 204800,
+      "output": 131072
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/MiniMaxAI/MiniMax-M2.7"
+      }
+    ],
+    "providers": [
+      "aihubmix",
+      "auriko",
+      "empiriolabs",
+      "fastrouter",
+      "kenari",
+      "llmgateway",
+      "llmgateway-providers",
+      "merge-gateway",
+      "minimax",
+      "minimax-cn",
+      "minimax-cn-coding-plan",
+      "minimax-coding-plan",
+      "novita-ai",
+      "ofox",
+      "orcarouter",
+      "requesty",
+      "tempr",
+      "vercel",
+      "zenmux"
+    ]
+  },
+  "minimax/minimax-m2.7-turbo": {
+    "id": "minimax/minimax-m2.7-turbo",
+    "lab": "minimax",
+    "name": "MiniMax M2.7 Turbo",
+    "family": "minimax-m2.7",
+    "released": "2026-03-18",
+    "updated": "2026-03-18",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "structured_output": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 204800,
+      "input": 204800,
+      "output": 131072
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "minimax/minimax-m3": {
+    "id": "minimax/minimax-m3",
+    "lab": "minimax",
+    "name": "MiniMax M3",
+    "family": "minimax",
+    "released": "2026-06-01",
+    "updated": "2026-06-01",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "output": 512000
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/MiniMaxAI/MiniMax-M3"
+      }
+    ],
+    "providers": [
+      "302ai",
+      "abacus",
+      "aihubmix",
+      "ambient",
+      "boundless",
+      "cline-pass",
+      "commandcode",
+      "cortecs",
+      "crossmodel",
+      "deepinfra",
+      "edenai",
+      "empiriolabs",
+      "fireworks-ai",
+      "gmicloud",
+      "huggingface",
+      "hyper",
+      "inco",
+      "iteracompute",
+      "jalapeno",
+      "kenari",
+      "kilo",
+      "lilac",
+      "llmgateway",
+      "llmgateway-providers",
+      "merge-gateway",
+      "minimax",
+      "minimax-cn",
+      "minimax-cn-coding-plan",
+      "minimax-coding-plan",
+      "nano-gpt",
+      "nebius",
+      "novita-ai",
+      "nvidia",
+      "ofox",
+      "ollama-cloud",
+      "opencode",
+      "opencode-go",
+      "openrouter",
+      "opper",
+      "orcarouter",
+      "pioneer",
+      "requesty",
+      "sambanova",
+      "scnet-token-plan",
+      "siliconflow",
+      "standardcompute",
+      "synthetic",
+      "tempr",
+      "tensorx",
+      "the-grid-ai",
+      "togetherai",
+      "vancine",
+      "vercel",
+      "volcengine-coding-plan",
+      "vultr",
+      "wafer.ai",
+      "wandb",
+      "zenmux"
+    ]
+  },
+  "minimax/minimax-m3.1-flash": {
+    "id": "minimax/minimax-m3.1-flash",
+    "lab": "minimax",
+    "name": "MiniMax M3.1 Flash",
+    "family": "minimax",
+    "released": "2026-10-19",
+    "updated": "2026-10-19",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 512000
+    },
+    "providers": [
+      "edenai",
+      "empiriolabs",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "merge-gateway",
+      "minimax",
+      "minimax-cn",
+      "minimax-cn-coding-plan",
+      "minimax-coding-plan",
+      "nano-gpt",
+      "ollama-cloud",
+      "opencode",
+      "opencode-go",
+      "openrouter",
+      "requesty",
+      "vercel",
+      "zenmux"
+    ]
+  },
+  "minimax/minimax-m3.1-flash-preview": {
+    "id": "minimax/minimax-m3.1-flash-preview",
+    "lab": "minimax",
+    "name": "MiniMax M3.1 Flash Preview",
+    "family": "minimax",
+    "released": "2026-09-27",
+    "updated": "2026-09-27",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 512000
+    },
+    "providers": [
+      "minimax-cn-coding-plan",
+      "minimax-coding-plan"
+    ]
+  },
+  "minimax/minimax-text-01": {
+    "id": "minimax/minimax-text-01",
+    "lab": "minimax",
+    "name": "MiniMax Text 01",
+    "family": "minimax",
+    "released": "2025-01-15",
+    "updated": "2025-01-15",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 131072
+    },
+    "providers": [
+      "llmgateway",
+      "llmgateway-providers"
+    ]
+  }
+}
