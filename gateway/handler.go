@@ -14,6 +14,7 @@ import (
 // Handler serves a catalog over HTTP:
 //
 //	GET /catalog.json                   the whole catalog document
+//	GET /schema.json                    its JSON Schema, SchemaDocument
 //	GET /v1/models                      {"models": [...]}, in ID order
 //	GET /v1/models/{id...}              one model and every provider's offering of it, such as /v1/models/openai/gpt-6.1-sol
 //	GET /v1/providers                   {"providers": [...]}, without their offerings, in ID order
@@ -45,7 +46,8 @@ func NewHandler(c *Catalog) (*Handler, error) {
 	if err := h.Set(c); err != nil {
 		return nil, err
 	}
-	h.mux.HandleFunc("GET /catalog.json", h.document)
+	h.mux.HandleFunc("GET "+DocumentPath, h.document)
+	h.mux.HandleFunc("GET "+SchemaPath, h.schema)
 	h.mux.HandleFunc("GET /v1/models", h.models)
 	h.mux.HandleFunc("GET /v1/models/{id...}", h.model)
 	h.mux.HandleFunc("GET /v1/providers", h.providers)

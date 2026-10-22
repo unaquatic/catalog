@@ -32,6 +32,15 @@ go generate ./data/                               # update data/ from models.dev
 go run ./cmd/catalog serve -in data/models-dev.json   # serve the committed data, with no network
 ```
 
+## Hosted catalog
+
+CI rebuilds the catalog from models.dev every six hours and, when it changed, commits `data/`, publishes a `data-YYYY.MM.DD.N` release with both files, and deploys the browser and `catalog.json` to:
+
+- https://aquatic.dev/catalog/ — what flow reads (`gateway.DefaultSource`)
+- https://unaquatic.github.io/catalog/ — a mirror
+
+`catalog.json` names its JSON Schema (draft 2020-12) in `"$schema"`: https://aquatic.dev/catalog/schema.json, generated from the Go types into `gateway/catalog.schema.json`.
+
 ## Packages
 
 - `gateway` — the catalog format, the mapping from models.dev to it and its rules (`gateway/rules.json`), the HTTP handler, and the `Store` that clients such as flow read it with.

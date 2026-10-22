@@ -41,8 +41,9 @@ import (
 )
 
 // Version is the version of the catalog document format that this package
-// writes and reads.
-const Version = 7
+// writes and reads. Version 8 replaced a reasoning's toggle with mandatory,
+// and added its default_enabled and default_effort.
+const Version = 8
 
 // ErrVersion reports a catalog document of a format version this package
 // does not read.
@@ -326,6 +327,9 @@ var Modes = []string{ModeThinking}
 // reasoning off.
 type Effort string
 
+// EffortNone is the effort that turns reasoning off.
+const EffortNone Effort = "none"
+
 // Modality is a kind of content a model takes or makes, such as "text".
 type Modality string
 
@@ -346,13 +350,16 @@ const (
 // Catalog is the gateway catalog: the models by ID, and the providers, each
 // with its offerings of the models by model ID.
 type Catalog struct {
+	// Schema is the URL of the JSON Schema of the catalog document,
+	// SchemaURL, so that editors and validators find it.
+	Schema string `json:"$schema,omitempty"`
 	// Version is the format version, Version.
 	Version int `json:"version"`
 	// Source names where the catalog was built from, such as
 	// "https://models.dev".
 	Source string `json:"source,omitempty"`
 	// Generated is when the catalog was built.
-	Generated time.Time `json:"generated,omitzero"`
+	Generated time.Time `json:"generated"`
 	// Spellings spell the words of the catalog's IDs that Spell would spell
 	// otherwise with none: every model's Name, and every offering's, is
 	// NameOf its model's ID with them, and every unlisted offering's
@@ -477,8 +484,8 @@ type Offering struct {
 	Family string `json:"family,omitempty"`
 	// Type is the kind of model, or empty for a language model.
 	Type         ModelType    `json:"type,omitempty"`
-	Released     string       `json:"released,omitempty"`
-	Updated      string       `json:"updated,omitempty"`
+	Released     string       `json:"released"`
+	Updated      string       `json:"updated"`
 	Knowledge    string       `json:"knowledge,omitempty"`
 	OpenWeights  bool         `json:"open_weights"`
 	Capabilities Capabilities `json:"capabilities"`
@@ -497,8 +504,9 @@ type Offering struct {
 	Status Status `json:"status,omitempty"`
 	// Basis says how the mapping tied the provider's model ID to the model,
 	// and ModelsDev the model models.dev ties it to, as Listing has them.
-	Basis     Basis   `json:"basis,omitempty"`
-	ModelsDev ModelID `json:"models_dev,omitempty"`
+	// The build reads them; the catalog document leaves them out.
+	Basis     Basis   `json:"-"`
+	ModelsDev ModelID `json:"-"`
 	// Variants are the tiers and modes the provider offers on top of the
 	// call, by VariantKey, such as "fast" and "thinking:fast".
 	Variants map[string]Variant `json:"variants,omitempty"`
@@ -696,9 +704,10 @@ type Model struct {
 	Family string     `json:"family,omitempty"`
 	// Type is the kind of model, or empty for a language model.
 	Type ModelType `json:"type,omitempty"`
-	// Released and Updated are dates, as YYYY-MM-DD.
-	Released string `json:"released,omitempty"`
-	Updated  string `json:"updated,omitempty"`
+	// Released and Updated are dates, as YYYY-MM-DD, or YYYY-MM when only
+	// the month is known. Every model has both.
+	Released string `json:"released"`
+	Updated  string `json:"updated"`
 	// Knowledge is the training cutoff, as YYYY-MM or YYYY-MM-DD.
 	Knowledge    string       `json:"knowledge,omitempty"`
 	OpenWeights  bool         `json:"open_weights"`
@@ -707,24 +716,26 @@ type Model struct {
 	Capabilities Capabilities `json:"capabilities"`
 	Limit        Limit        `json:"limit"`
 	Weights      []Weight     `json:"weights,omitempty"`
-	Benchmarks   []Benchmark  `json:"benchmarks,omitempty"`
 	Links        []Link       `json:"links,omitempty"`
 	// Derived is set for a model models.dev does not list, which the
 	// mapping derived from a model that one of its offerings runs in a
-	// mode, as GPT-6 Astra Pro is GPT-6 Astra in mode pro.
-	Derived *Derivation `json:"derived,omitempty"`
+	// mode, as GPT-6 Astra Pro is GPT-6 Astra in mode pro. The build reads
+	// it; the catalog document leaves it out.
+	Derived *Derivation `json:"-"`
 	// Merged lists the models.dev models merged into this one, as
 	// models.dev's openai/gpt-6-astra-fast is the fast tier of
 	// openai/gpt-6-astra.
 	Merged []ModelID `json:"merged,omitempty"`
 	// Inferred is set for a model models.dev does not list, which the
 	// mapping made for providers' model IDs that name its lab, as
-	// shareUnlisted makes them.
-	Inferred *Inference `json:"inferred,omitempty"`
+	// shareUnlisted makes them. The build reads it; the catalog document
+	// leaves it out.
+	Inferred *Inference `json:"-"`
 	// Finetuned is set for an inferred model that tunes another, as
 	// NanoGPT's "huihui-ai/Llama-3.3-70B-Instruct-abliterated" tunes
-	// meta/llama-3.3-70b-instruct; its lab is the tuned model's.
-	Finetuned *Finetuned `json:"finetuned,omitempty"`
+	// meta/llama-3.3-70b-instruct; its lab is the tuned model's. The build
+	// reads it; the catalog document leaves it out.
+	Finetuned *Finetuned `json:"-"`
 	// Providers are the providers that offer the model, in ID order: each
 	// has an Offering of it under the model's ID.
 	Providers []ProviderID `json:"providers"`
@@ -751,19 +762,6 @@ type Weight struct {
 	URL          string `json:"url"`
 	Format       string `json:"format,omitempty"`
 	Quantization string `json:"quantization,omitempty"`
-}
-
-// Benchmark is a model's score on a benchmark, as its source reports it.
-type Benchmark struct {
-	Name    string  `json:"name"`
-	Score   float64 `json:"score"`
-	Metric  string  `json:"metric,omitempty"`
-	Source  string  `json:"source"`
-	Date    string  `json:"date,omitempty"`
-	Version string  `json:"version,omitempty"`
-	Variant string  `json:"variant,omitempty"`
-	Dataset string  `json:"dataset,omitempty"`
-	Harness string  `json:"harness,omitempty"`
 }
 
 // Link is a page about a model, such as its model card.
@@ -866,13 +864,24 @@ type Limit struct {
 	Output  int `json:"output"`
 }
 
-// Reasoning lists the reasoning controls of an offering.
+// Reasoning lists the reasoning controls of an offering, and how its model
+// reasons when a request sets none: models.dev's controls, and the facts
+// the rules set, as ApplyReasoning does. A nil fact is one neither lists.
 type Reasoning struct {
+	// Mandatory reports whether reasoning cannot be turned off: a rule's,
+	// or else false when models.dev lists a toggle or an effort "none".
+	Mandatory *bool `json:"mandatory,omitempty"`
+	// DefaultEnabled reports whether the model reasons when a request says
+	// nothing of reasoning, as a rule says.
+	DefaultEnabled *bool `json:"default_enabled,omitempty"`
 	// Efforts are the effort levels the offering takes, least first, as its
-	// provider names them. "none" turns reasoning off.
+	// provider names them. "none", first, turns reasoning off, however the
+	// provider's API does: the catalog lists it whenever reasoning can be
+	// turned off, as ListOff does.
 	Efforts []Effort `json:"efforts,omitempty"`
-	// Toggle reports that reasoning can be turned on and off.
-	Toggle bool `json:"toggle,omitempty"`
+	// DefaultEffort is the effort the model reasons at when a request names
+	// none, as a rule says, when Efforts lists it.
+	DefaultEffort Effort `json:"default_effort,omitempty"`
 	// Budget is the range of reasoning token budgets the offering takes, nil
 	// when it takes none.
 	Budget *Budget `json:"budget,omitempty"`

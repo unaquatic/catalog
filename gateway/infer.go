@@ -208,7 +208,7 @@ func (b *builder) derivePro() {
 		m.ID = pro
 		m.Name = NameOf(pro, b.spell)
 		m.Derived = &Derivation{From: id, Mode: "pro"}
-		m.Merged, m.Benchmarks, m.Links, m.Weights, m.Inferred, m.Finetuned = nil, nil, nil, nil, nil, nil
+		m.Merged, m.Links, m.Weights, m.Inferred, m.Finetuned = nil, nil, nil, nil, nil
 		b.out.Models[pro] = m
 		b.report.Derived = append(b.report.Derived, pro)
 	}

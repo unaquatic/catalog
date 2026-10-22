@@ -1,0 +1,866 @@
+{
+  "$defs": {
+    "auth": {
+      "description": "How an API authenticates requests.",
+      "properties": {
+        "header": {
+          "description": "The header that carries the API key, when \"scheme\" is \"header\", such as \"x-api-key\".",
+          "type": "string"
+        },
+        "scheme": {
+          "$ref": "#/$defs/auth_scheme",
+          "description": "How a request carries its credentials."
+        }
+      },
+      "required": [
+        "scheme"
+      ],
+      "type": "object"
+    },
+    "auth_scheme": {
+      "description": "How a request carries its credentials: \"bearer\" sends the API key as \"Authorization: Bearer <key>\", \"header\" sends it in the header \"header\" names, \"aws\" signs the request with AWS credentials, and \"google\" uses Google Cloud credentials.",
+      "examples": [
+        "bearer",
+        "header",
+        "aws",
+        "google"
+      ],
+      "type": "string"
+    },
+    "budget": {
+      "description": "A range of reasoning token budgets. A bound that is absent is not known.",
+      "properties": {
+        "max": {
+          "description": "The largest budget, in tokens.",
+          "type": "integer"
+        },
+        "min": {
+          "description": "The smallest budget, in tokens.",
+          "type": "integer"
+        }
+      },
+      "type": "object"
+    },
+    "capabilities": {
+      "description": "What a model can do.",
+      "properties": {
+        "attachments": {
+          "description": "Whether a request can attach files, such as images or PDFs.",
+          "type": "boolean"
+        },
+        "input": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/modality"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "The kinds of content the model takes."
+        },
+        "output": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/modality"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "The kinds of content the model makes."
+        },
+        "structured_output": {
+          "description": "Whether the model can answer in a JSON schema the request gives. Absent when not known.",
+          "type": "boolean"
+        },
+        "temperature": {
+          "description": "Whether a request can set the sampling temperature. Absent when not known.",
+          "type": "boolean"
+        },
+        "tools": {
+          "description": "Whether the model can call tools.",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "tools",
+        "attachments",
+        "input",
+        "output"
+      ],
+      "type": "object"
+    },
+    "catalog": {
+      "description": "The model catalog: every model by its ID, and every provider with its offerings of those models, built from models.dev.",
+      "properties": {
+        "$schema": {
+          "description": "URL of this JSON Schema.",
+          "type": "string"
+        },
+        "families": {
+          "additionalProperties": {
+            "$ref": "#/$defs/family"
+          },
+          "description": "The model families, by family ID.",
+          "type": "object"
+        },
+        "generated": {
+          "description": "When the catalog was built. Every catalog lists it.",
+          "format": "date-time",
+          "type": "string"
+        },
+        "labs": {
+          "additionalProperties": {
+            "$ref": "#/$defs/lab"
+          },
+          "description": "The labs that make the models, by lab ID.",
+          "propertyNames": {
+            "$ref": "#/$defs/provider_id"
+          },
+          "type": "object"
+        },
+        "models": {
+          "anyOf": [
+            {
+              "additionalProperties": {
+                "$ref": "#/$defs/model"
+              },
+              "propertyNames": {
+                "$ref": "#/$defs/model_id"
+              },
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Every model, by model ID."
+        },
+        "providers": {
+          "anyOf": [
+            {
+              "additionalProperties": {
+                "$ref": "#/$defs/provider"
+              },
+              "propertyNames": {
+                "$ref": "#/$defs/provider_id"
+              },
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Every provider, by provider ID."
+        },
+        "source": {
+          "description": "Where the catalog was built from, such as \"https://models.dev\".",
+          "type": "string"
+        },
+        "spellings": {
+          "$ref": "#/$defs/spellings",
+          "description": "How model names spell words of model IDs."
+        },
+        "version": {
+          "const": 8,
+          "description": "Version of the document's format. A reader accepts only the version it knows.",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "version",
+        "generated",
+        "models",
+        "providers"
+      ],
+      "type": "object"
+    },
+    "effort": {
+      "description": "A reasoning effort level. \"none\" turns reasoning off.",
+      "examples": [
+        "none",
+        "minimal",
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ],
+      "type": "string"
+    },
+    "endpoint": {
+      "description": "How to call an API: its request format, its base URL, how it authenticates, and the environment variables it reads.",
+      "properties": {
+        "api": {
+          "description": "The API's base URL. It may hold environment variables as ${NAME}, such as ${AWS_REGION}, for a client to fill in.",
+          "type": "string"
+        },
+        "api_default": {
+          "description": "True when models.dev lists no base URL, and \"api\" is the one the provider's SDK uses by default.",
+          "type": "boolean"
+        },
+        "auth": {
+          "$ref": "#/$defs/auth",
+          "description": "How the API authenticates requests. Absent when not known."
+        },
+        "env": {
+          "description": "The environment variables the API reads: its keys and settings, such as \"OPENAI_API_KEY\" and \"AWS_REGION\".",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "format": {
+          "$ref": "#/$defs/format",
+          "description": "The request format the API takes. Absent when not known."
+        }
+      },
+      "type": "object"
+    },
+    "family": {
+      "description": "A family of models, and its name, such as \"Claude Opus\" for \"claude-opus\".",
+      "properties": {
+        "id": {
+          "description": "The family's ID, as a model's \"family\" names it.",
+          "type": "string"
+        },
+        "name": {
+          "description": "The family's display name.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "name"
+      ],
+      "type": "object"
+    },
+    "format": {
+      "description": "An API's request format: how a client builds a request and reads the response. \"openai-chat\" is OpenAI's Chat Completions, \"openai-responses\" OpenAI's Responses, \"anthropic-messages\" Anthropic's Messages, \"anthropic-vertex\" Anthropic's Messages on Google Vertex AI, \"gemini\" Google's Gemini generateContent, and \"bedrock-converse\" Amazon Bedrock's Converse.",
+      "examples": [
+        "openai-chat",
+        "openai-responses",
+        "anthropic-messages",
+        "anthropic-vertex",
+        "gemini",
+        "bedrock-converse"
+      ],
+      "type": "string"
+    },
+    "interleaved": {
+      "description": "How a provider streams reasoning between the parts of an answer.",
+      "properties": {
+        "field": {
+          "description": "The response field that carries the reasoning text, such as \"reasoning_content\". Absent when not known.",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "lab": {
+      "description": "A lab that makes models, and its name, such as \"ByteDance Seed\" for \"bytedance-seed\".",
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/provider_id",
+          "description": "The lab's ID: the part of its models' IDs before the slash."
+        },
+        "name": {
+          "description": "The lab's display name.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "name"
+      ],
+      "type": "object"
+    },
+    "limit": {
+      "description": "A model's token limits.",
+      "properties": {
+        "context": {
+          "description": "The context window, in tokens: the input and the output together.",
+          "type": "integer"
+        },
+        "input": {
+          "description": "The most input tokens. Absent when the input may fill the context window.",
+          "type": "integer"
+        },
+        "output": {
+          "description": "The most output tokens.",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "context",
+        "output"
+      ],
+      "type": "object"
+    },
+    "link": {
+      "description": "A page about a model.",
+      "properties": {
+        "label": {
+          "description": "The link's text.",
+          "type": "string"
+        },
+        "type": {
+          "description": "What the page is, such as \"model_card\", \"paper\", \"blog\" or \"docs\".",
+          "type": "string"
+        },
+        "url": {
+          "description": "The page's URL.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "url"
+      ],
+      "type": "object"
+    },
+    "modality": {
+      "description": "A kind of content a model takes or makes.",
+      "examples": [
+        "text",
+        "image",
+        "audio",
+        "video",
+        "pdf"
+      ],
+      "type": "string"
+    },
+    "model": {
+      "description": "A model as its lab describes it, apart from any provider, and the providers that offer it.",
+      "properties": {
+        "capabilities": {
+          "$ref": "#/$defs/capabilities",
+          "description": "What the model can do."
+        },
+        "family": {
+          "description": "The ID of the model's family, a key of \"families\".",
+          "type": "string"
+        },
+        "id": {
+          "$ref": "#/$defs/model_id",
+          "description": "The model's ID."
+        },
+        "knowledge": {
+          "description": "The cutoff of the model's training data, as YYYY-MM or YYYY-MM-DD. Absent when not known.",
+          "pattern": "^\\d{4}-\\d{2}(-\\d{2})?$",
+          "type": "string"
+        },
+        "lab": {
+          "$ref": "#/$defs/provider_id",
+          "description": "The ID of the lab that made the model: the part of the model's ID before the slash. A key of \"labs\"."
+        },
+        "license": {
+          "description": "The license of the model's weights, such as \"Apache-2.0\".",
+          "type": "string"
+        },
+        "limit": {
+          "$ref": "#/$defs/limit",
+          "description": "The model's token limits."
+        },
+        "links": {
+          "description": "Pages about the model, such as its model card.",
+          "items": {
+            "$ref": "#/$defs/link"
+          },
+          "type": "array"
+        },
+        "merged": {
+          "description": "IDs of models that models.dev lists apart, but that are tiers of this model, such as \"openai/gpt-6-astra-fast\". Their offerings are this model's variants.",
+          "items": {
+            "$ref": "#/$defs/model_id"
+          },
+          "type": "array"
+        },
+        "name": {
+          "description": "The model's display name.",
+          "type": "string"
+        },
+        "open_weights": {
+          "description": "Whether the model's weights are published.",
+          "type": "boolean"
+        },
+        "providers": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/provider_id"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "IDs of the providers that offer the model, in order. Each lists an offering of it under the model's ID."
+        },
+        "reasoning": {
+          "description": "Whether the model can reason before it answers.",
+          "type": "boolean"
+        },
+        "released": {
+          "description": "When the model was released, as YYYY-MM-DD, or YYYY-MM when only the month is known. Every model lists it.",
+          "pattern": "^\\d{4}-\\d{2}(-\\d{2})?$",
+          "type": "string"
+        },
+        "type": {
+          "$ref": "#/$defs/model_type",
+          "description": "The kind of model. Absent for a language model."
+        },
+        "updated": {
+          "description": "When the model was last updated, as YYYY-MM-DD, or YYYY-MM when only the month is known. Every model lists it.",
+          "pattern": "^\\d{4}-\\d{2}(-\\d{2})?$",
+          "type": "string"
+        },
+        "weights": {
+          "description": "Where the model's weights can be downloaded.",
+          "items": {
+            "$ref": "#/$defs/weight"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "lab",
+        "name",
+        "released",
+        "updated",
+        "open_weights",
+        "reasoning",
+        "capabilities",
+        "limit",
+        "providers"
+      ],
+      "type": "object"
+    },
+    "model_id": {
+      "description": "A model's ID: its lab's ID, a slash, and the model's ID at the lab, such as \"anthropic/claude-opus-5-5\", in lower-case letters, digits, \".\" and \"-\".",
+      "type": "string"
+    },
+    "model_type": {
+      "description": "A kind of model other than a language model.",
+      "examples": [
+        "embedding",
+        "reranking",
+        "image",
+        "video",
+        "speech",
+        "transcription",
+        "realtime"
+      ],
+      "type": "string"
+    },
+    "offering": {
+      "description": "A model as one provider serves it: the model's facts at that provider, and how to call it there.",
+      "properties": {
+        "aliases": {
+          "description": "Other model IDs the provider takes for this model, such as a dated snapshot or another region. They have no price or variants of their own.",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "capabilities": {
+          "$ref": "#/$defs/capabilities",
+          "description": "What the model can do at this provider."
+        },
+        "family": {
+          "description": "The ID of the model's family, as the provider lists it.",
+          "type": "string"
+        },
+        "interleaved": {
+          "$ref": "#/$defs/interleaved",
+          "description": "Present when the provider streams reasoning between the parts of the answer."
+        },
+        "knowledge": {
+          "description": "The cutoff of the model's training data, as the provider lists it: YYYY-MM or YYYY-MM-DD. Absent when not known.",
+          "pattern": "^\\d{4}-\\d{2}(-\\d{2})?$",
+          "type": "string"
+        },
+        "lab": {
+          "$ref": "#/$defs/provider_id",
+          "description": "For an unlisted offering, the ID of the lab its model ID names, if it names one."
+        },
+        "limit": {
+          "$ref": "#/$defs/limit",
+          "description": "The model's token limits at this provider."
+        },
+        "name": {
+          "description": "The offering's display name: its model's name, or, for an unlisted offering, one made from its key. The provider's own name is \"provider_options.name\".",
+          "type": "string"
+        },
+        "open_weights": {
+          "description": "Whether the model's weights are published.",
+          "type": "boolean"
+        },
+        "price": {
+          "$ref": "#/$defs/price",
+          "description": "What a call costs. Absent when no price is listed."
+        },
+        "provider_options": {
+          "$ref": "#/$defs/provider_options",
+          "description": "How to call the model at this provider: the model ID to send, and any endpoint, request fields and headers."
+        },
+        "reasoning": {
+          "$ref": "#/$defs/reasoning",
+          "description": "The reasoning controls the offering takes. Absent when the model does not reason."
+        },
+        "released": {
+          "description": "When the model was released, as the provider lists it: YYYY-MM-DD, or YYYY-MM when only the month is known. Every offering lists it.",
+          "pattern": "^\\d{4}-\\d{2}(-\\d{2})?$",
+          "type": "string"
+        },
+        "status": {
+          "$ref": "#/$defs/status",
+          "description": "The offering's lifecycle state. Absent when it is active."
+        },
+        "type": {
+          "$ref": "#/$defs/model_type",
+          "description": "The kind of model. Absent for a language model."
+        },
+        "updated": {
+          "description": "When the model was last updated, as the provider lists it: YYYY-MM-DD, or YYYY-MM when only the month is known. Every offering lists it.",
+          "pattern": "^\\d{4}-\\d{2}(-\\d{2})?$",
+          "type": "string"
+        },
+        "variants": {
+          "additionalProperties": {
+            "$ref": "#/$defs/variant"
+          },
+          "description": "Tiers and modes the provider offers on top of the offering, by key: the tier, the mode, or both as \"mode:tier\", such as \"fast\" and \"thinking:fast\".",
+          "type": "object"
+        }
+      },
+      "required": [
+        "name",
+        "released",
+        "updated",
+        "open_weights",
+        "capabilities",
+        "limit",
+        "provider_options"
+      ],
+      "type": "object"
+    },
+    "price": {
+      "description": "What a call costs, in US dollars per million tokens.",
+      "properties": {
+        "cache_read": {
+          "description": "Per million input tokens read from the prompt cache.",
+          "type": "number"
+        },
+        "cache_write": {
+          "description": "Per million input tokens written to the prompt cache.",
+          "type": "number"
+        },
+        "input": {
+          "description": "Per million input tokens.",
+          "type": "number"
+        },
+        "input_audio": {
+          "description": "Per million input audio tokens.",
+          "type": "number"
+        },
+        "output": {
+          "description": "Per million output tokens.",
+          "type": "number"
+        },
+        "output_audio": {
+          "description": "Per million output audio tokens.",
+          "type": "number"
+        },
+        "reasoning": {
+          "description": "Per million reasoning tokens, when they cost other than output tokens.",
+          "type": "number"
+        },
+        "tiers": {
+          "description": "The rates of long prompts, from the shortest: each applies to prompts longer than its \"above\".",
+          "items": {
+            "$ref": "#/$defs/price_tier"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "input",
+        "output"
+      ],
+      "type": "object"
+    },
+    "price_tier": {
+      "description": "The rates of prompts longer than \"above\" tokens, in US dollars per million tokens.",
+      "properties": {
+        "above": {
+          "description": "The prompt length, in tokens, above which these rates apply.",
+          "type": "integer"
+        },
+        "cache_read": {
+          "description": "Per million input tokens read from the prompt cache.",
+          "type": "number"
+        },
+        "cache_write": {
+          "description": "Per million input tokens written to the prompt cache.",
+          "type": "number"
+        },
+        "estimated": {
+          "description": "True when no source lists these rates, and the catalog estimated them from the standard tier's rates of long prompts.",
+          "type": "boolean"
+        },
+        "input": {
+          "description": "Per million input tokens.",
+          "type": "number"
+        },
+        "input_audio": {
+          "description": "Per million input audio tokens.",
+          "type": "number"
+        },
+        "output": {
+          "description": "Per million output tokens.",
+          "type": "number"
+        },
+        "output_audio": {
+          "description": "Per million output audio tokens.",
+          "type": "number"
+        },
+        "reasoning": {
+          "description": "Per million reasoning tokens, when they cost other than output tokens.",
+          "type": "number"
+        }
+      },
+      "required": [
+        "above",
+        "input",
+        "output"
+      ],
+      "type": "object"
+    },
+    "provider": {
+      "description": "A provider of models, and its offerings of them.",
+      "properties": {
+        "doc": {
+          "description": "URL of the provider's documentation of its models.",
+          "type": "string"
+        },
+        "endpoint": {
+          "$ref": "#/$defs/endpoint",
+          "description": "How to call the provider's API, unless an offering's \"provider_options\" names an endpoint of its own."
+        },
+        "id": {
+          "$ref": "#/$defs/provider_id",
+          "description": "The provider's ID."
+        },
+        "kind": {
+          "$ref": "#/$defs/provider_kind",
+          "description": "Whether the provider is a lab or a gateway."
+        },
+        "models": {
+          "anyOf": [
+            {
+              "additionalProperties": {
+                "$ref": "#/$defs/offering"
+              },
+              "propertyNames": {
+                "$ref": "#/$defs/model_id"
+              },
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "The provider's offerings, by model ID: the keys are keys of the catalog's \"models\"."
+        },
+        "name": {
+          "description": "The provider's display name.",
+          "type": "string"
+        },
+        "unlisted": {
+          "additionalProperties": {
+            "$ref": "#/$defs/offering"
+          },
+          "description": "The provider's models that are not in the catalog's \"models\", by the provider's model ID.",
+          "type": "object"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "kind",
+        "endpoint",
+        "models"
+      ],
+      "type": "object"
+    },
+    "provider_id": {
+      "description": "A provider's ID, such as \"openrouter\".",
+      "type": "string"
+    },
+    "provider_kind": {
+      "description": "\"lab\" for a provider that serves the models it makes, \"gateway\" for one that serves models other labs make.",
+      "examples": [
+        "lab",
+        "gateway"
+      ],
+      "type": "string"
+    },
+    "provider_options": {
+      "description": "How to send a request to a provider: the model ID, and any endpoint, request fields and headers.",
+      "properties": {
+        "body": {
+          "additionalProperties": {},
+          "description": "Fields to merge into the request body, object by object.",
+          "type": "object"
+        },
+        "endpoint": {
+          "$ref": "#/$defs/endpoint",
+          "description": "The API to call, in place of the provider's \"endpoint\"."
+        },
+        "headers": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "description": "Headers to send with the request.",
+          "type": "object"
+        },
+        "id": {
+          "description": "The model ID to send.",
+          "type": "string"
+        },
+        "name": {
+          "description": "The provider's own name for the model.",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "reasoning": {
+      "description": "The reasoning controls an offering takes, and how its model reasons when a request sets none. A fact that is absent is not known.",
+      "properties": {
+        "budget": {
+          "$ref": "#/$defs/budget",
+          "description": "The range of reasoning token budgets the offering takes. Absent when it takes none."
+        },
+        "default_effort": {
+          "$ref": "#/$defs/effort",
+          "description": "The effort the model reasons at when a request names none, one of \"efforts\"."
+        },
+        "default_enabled": {
+          "description": "Whether the model reasons when a request says nothing of reasoning.",
+          "type": "boolean"
+        },
+        "efforts": {
+          "description": "The effort levels the offering takes, lowest first. \"none\" turns reasoning off, whatever field the provider's API turns it off by: a client sends it as its API does, such as Anthropic's thinking type \"disabled\".",
+          "items": {
+            "$ref": "#/$defs/effort"
+          },
+          "type": "array"
+        },
+        "mandatory": {
+          "description": "Whether reasoning cannot be turned off. When it can, \"efforts\" starts with \"none\".",
+          "type": "boolean"
+        }
+      },
+      "type": "object"
+    },
+    "spellings": {
+      "additionalProperties": {
+        "type": "string"
+      },
+      "description": "How model names spell words of model IDs: from the word in lower case to its spelling, such as \"glm\" to \"GLM\" and \"minimax\" to \"MiniMax\". A word not listed is capitalized.",
+      "type": "object"
+    },
+    "status": {
+      "description": "A lifecycle state other than active.",
+      "examples": [
+        "alpha",
+        "beta",
+        "deprecated"
+      ],
+      "type": "string"
+    },
+    "tier": {
+      "description": "A service tier other than the standard one, which trades price for speed.",
+      "examples": [
+        "flex",
+        "fast",
+        "ultrafast",
+        "free"
+      ],
+      "type": "string"
+    },
+    "variant": {
+      "description": "A tier or a mode that an offering offers on top of its call, or both. Its \"provider_options\" change the offering's: an \"id\" or \"endpoint\" replaces the offering's, and \"body\" and \"headers\" merge into the offering's.",
+      "properties": {
+        "mode": {
+          "description": "The mode the variant runs the model in, such as \"thinking\".",
+          "type": "string"
+        },
+        "name": {
+          "description": "The variant's display name: the offering's name and the variant's key, such as \"GPT-6.1 Sol Ultrafast\".",
+          "type": "string"
+        },
+        "price": {
+          "$ref": "#/$defs/price",
+          "description": "What a call costs. Absent when it costs what the offering costs."
+        },
+        "provider_options": {
+          "$ref": "#/$defs/provider_options",
+          "description": "How the variant's call differs from the offering's."
+        },
+        "status": {
+          "$ref": "#/$defs/status",
+          "description": "The variant's lifecycle state. Absent when it is active."
+        },
+        "tier": {
+          "$ref": "#/$defs/tier",
+          "description": "The service tier the variant runs in."
+        }
+      },
+      "required": [
+        "name",
+        "provider_options"
+      ],
+      "type": "object"
+    },
+    "weight": {
+      "description": "Where a model's weights can be downloaded.",
+      "properties": {
+        "format": {
+          "description": "The format of the weight files, such as \"safetensors\".",
+          "type": "string"
+        },
+        "label": {
+          "description": "The link's text, such as \"Hugging Face\".",
+          "type": "string"
+        },
+        "quantization": {
+          "description": "The precision the weights are stored at, such as \"fp8\".",
+          "type": "string"
+        },
+        "url": {
+          "description": "The download page's URL.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "url"
+      ],
+      "type": "object"
+    }
+  },
+  "$id": "https://aquatic.dev/catalog/schema.json",
+  "$ref": "#/$defs/catalog",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Catalog"
+}

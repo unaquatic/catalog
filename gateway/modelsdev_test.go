@@ -391,7 +391,7 @@ func TestModels(t *testing.T) {
 		t.Errorf("astra pro = %+v", pro)
 	}
 	acme := mustModel(t, c.Models, "acme/open-1")
-	if !acme.OpenWeights || acme.License != "Apache-2.0" || len(acme.Weights) != 1 || acme.Benchmarks[0].Score != 61.2 ||
+	if !acme.OpenWeights || acme.License != "Apache-2.0" || len(acme.Weights) != 1 ||
 		acme.Links[0].Type != "model_card" {
 		t.Errorf("acme = %+v", acme)
 	}
@@ -515,12 +515,15 @@ func TestOfferingFields(t *testing.T) {
 	if want := []Effort{"none", "low", "medium", "high", "xhigh", "max"}; sol.Reasoning == nil || !slices.Equal(sol.Reasoning.Efforts, want) {
 		t.Errorf("gpt-5.6-sol efforts = %+v, want %v without null and default", sol.Reasoning, want)
 	}
-	if s := mustListing(t, c, "anthropic", "claude-sonnet-4-5"); s.Reasoning == nil || *s.Reasoning.Budget != (Budget{Min: 1024}) {
-		t.Errorf("sonnet reasoning = %+v, want a budget from 1024", s.Reasoning)
+	if sol.Reasoning == nil || sol.Reasoning.Mandatory == nil || *sol.Reasoning.Mandatory {
+		t.Errorf("gpt-5.6-sol reasoning = %+v, want it not mandatory: it takes effort none", sol.Reasoning)
+	}
+	if s := mustListing(t, c, "anthropic", "claude-sonnet-4-5"); s.Reasoning == nil || *s.Reasoning.Budget != (Budget{Min: 1024}) || s.Reasoning.Mandatory != nil {
+		t.Errorf("sonnet reasoning = %+v, want a budget from 1024, and mandatory unknown", s.Reasoning)
 	}
 	pickle := mustListing(t, c, "opencode", "big-pickle")
-	if pickle.Reasoning == nil || !pickle.Reasoning.Toggle || pickle.Status != StatusBeta || !pickle.OpenWeights {
-		t.Errorf("big-pickle = %+v, want a toggle, beta and open weights", pickle)
+	if r := pickle.Reasoning; r == nil || r.Mandatory == nil || *r.Mandatory || pickle.Status != StatusBeta || !pickle.OpenWeights {
+		t.Errorf("big-pickle = %+v, want reasoning not mandatory for its toggle, beta and open weights", pickle)
 	}
 	if nano := mustListing(t, c, "openai", "gpt-5.4-nano"); nano.Reasoning != nil {
 		t.Errorf("gpt-5.4-nano reasoning = %+v, want nil for a model that does not reason", nano.Reasoning)

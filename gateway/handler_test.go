@@ -6,6 +6,7 @@ import (
 	"net/http"
 	"net/http/httptest"
 	"slices"
+	"strings"
 	"testing"
 )
 
@@ -135,10 +136,17 @@ func TestHandlerModel(t *testing.T) {
 		t.Errorf("/v1/models/anthropic/claude-opus-latest = %d, want 404: no alias models", resp.StatusCode)
 	}
 
+	// The mapping derives the pro model; the API serves it as any other,
+	// with no word of how the mapping made it or tied its offerings.
 	_, body = get(t, srv, "/v1/models/openai/gpt-6-astra-pro", nil)
 	pro := decodeAs[ModelDetail](t, body)
-	if pro.Derived == nil || len(pro.Offerings) != 2 || pro.Offerings[0].Provider != "openai" {
+	if len(pro.Offerings) != 2 || pro.Offerings[0].Provider != "openai" {
 		t.Fatalf("derived pro model = %+v", pro)
+	}
+	for _, key := range []string{`"derived"`, `"inferred"`, `"basis"`, `"models_dev"`} {
+		if strings.Contains(string(body), key) {
+			t.Errorf("derived pro model's JSON has %s: %s", key, body)
+		}
 	}
 	if o := pro.Offerings[0]; o.ProviderOptions.ID != "gpt-6-astra" || o.ProviderOptions.Body["reasoning"] == nil || len(o.Variants) != 0 {
 		t.Errorf("OpenAI's pro offering = %+v, want gpt-6-astra with the pro mode's fields", o)

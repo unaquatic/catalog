@@ -151,8 +151,11 @@ type Report struct {
 //     other mode keeps its name as a mode, with a note. An option without
 //     long-prompt prices of its own gets the offering's, scaled as its
 //     short-prompt prices scale them, marked estimated.
-//   - Effort controls list their levels without null and "default"; toggle
-//     and budget_tokens controls set Toggle and Budget.
+//   - Effort controls list their levels without null and "default";
+//     budget_tokens controls set Budget; a toggle, or an effort "none", sets
+//     Mandatory false. The rules' reasoning facts follow, as
+//     ApplyReasoning sets them, and then the effort none of every offering
+//     whose reasoning can be turned off, as ListOff lists it.
 //
 // With opts.Infer, the mapping's own steps follow, in this order. They ask
 // opts.Rules, the declarative rules, what the parts of IDs they read mean:
@@ -194,9 +197,11 @@ func FromModelsDev(b modelsdev.Bundle, opts Options) (*Catalog, Report, error) {
 		return nil, Report{}, err
 	}
 	c := bl.Group()
-	c.Version, c.Source, c.Generated = Version, opts.Source, opts.Generated
+	c.Schema, c.Version, c.Source, c.Generated = SchemaURL, Version, opts.Source, opts.Generated
 	c.Spellings = bl.spell.For(c.NameParts())
 	c.Labs, c.Families = bl.names(c.Models)
+	bl.report.Notes = append(bl.report.Notes, c.ApplyReasoning(bl.rules)...)
+	c.ListOff()
 	return c, bl.report, nil
 }
 
@@ -400,9 +405,6 @@ func labModel(id ModelID, lm modelsdev.LabModel, sp Spellings) Model {
 	}
 	for _, w := range lm.Weights {
 		m.Weights = append(m.Weights, Weight(w))
-	}
-	for _, bm := range lm.Benchmarks {
-		m.Benchmarks = append(m.Benchmarks, Benchmark(bm))
 	}
 	for _, l := range lm.Links {
 		m.Links = append(m.Links, Link(l))
@@ -705,7 +707,8 @@ func limitOf(l modelsdev.Limit) Limit {
 }
 
 // reasoningOf returns the reasoning controls models.dev lists for m, or nil
-// when m does not reason.
+// when m does not reason. A toggle, or an effort "none", says reasoning is
+// not mandatory.
 func reasoningOf(m modelsdev.Model) *Reasoning {
 	if !m.Reasoning {
 		return nil
@@ -721,7 +724,7 @@ func reasoningOf(m modelsdev.Model) *Reasoning {
 				r.Efforts = append(r.Efforts, Effort(*v))
 			}
 		case modelsdev.ReasoningToggle:
-			r.Toggle = true
+			r.Mandatory = new(false)
 		case modelsdev.ReasoningBudgetTokens:
 			bud := &Budget{}
 			if o.Min != nil {
@@ -732,6 +735,9 @@ func reasoningOf(m modelsdev.Model) *Reasoning {
 			}
 			r.Budget = bud
 		}
+	}
+	if slices.Contains(r.Efforts, EffortNone) {
+		r.Mandatory = new(false)
 	}
 	return r
 }

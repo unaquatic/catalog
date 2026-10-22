@@ -485,8 +485,9 @@ type Resolved struct {
 	ProviderOptions ProviderOptions `json:"provider_options"`
 	Price           *Price          `json:"price,omitempty"`
 	Status          Status          `json:"status,omitempty"`
-	Basis           Basis           `json:"basis,omitempty"`
-	ModelsDev       ModelID         `json:"models_dev,omitempty"`
+	// Basis and ModelsDev are the offering's, which the API leaves out.
+	Basis     Basis   `json:"-"`
+	ModelsDev ModelID `json:"-"`
 }
 
 // Variants returns every call of provider p, resolved: offering by offering

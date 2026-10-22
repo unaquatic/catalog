@@ -35,8 +35,8 @@ var DefaultRules = sync.OnceValue(func() *Rules {
 })
 
 // Rules are the mapping's rules, as one list: each rule matches part of a
-// provider's model ID, or a listing, and says one thing of what it
-// matches. Of rules that say the same kind of thing of the same match, the
+// provider's model ID, a listing, or the catalog's models, and says one
+// thing of what it matches. Of rules that say the same kind of thing of the same match, the
 // first wins. The mapping's steps, which FromModelsDev describes, ask the
 // rules; the steps themselves, and their order, are the mapping's own.
 type Rules struct {
@@ -61,6 +61,7 @@ type Rules struct {
 	pins     []Rule
 	labNames map[ProviderID]string
 	famNames map[string]string
+	reasons  []Rule
 }
 
 // Rule is one rule: what it matches, and the one thing it says of it, by
@@ -110,7 +111,11 @@ type Rule struct {
 	// Name names Match's lab or family in the catalog, where the name the
 	// mapping would give it is wrong, as TheDrummer of thedrummer.
 	Name string `json:"name,omitempty"`
-	Why  string `json:"why,omitempty"`
+	// Reasoning sets facts of how Match's models reason, which models.dev
+	// lists wrong or not at all, on their offerings at every provider, as
+	// ApplyReasoning does.
+	Reasoning *ReasoningFacts `json:"reasoning,omitempty"`
+	Why       string          `json:"why,omitempty"`
 }
 
 // Match is what a rule matches. A rule matches when all that is set does.
@@ -145,6 +150,18 @@ type Match struct {
 	// the IDs models' Lab and Family hold; only a name matches them.
 	Lab    ProviderID `json:"lab,omitempty"`
 	Family string     `json:"family,omitempty"`
+	// Models are catalog model IDs, or a list of them; only reasoning
+	// facts match them.
+	Models Strings `json:"models,omitempty"`
+}
+
+// ReasoningFacts are facts of how a model reasons, as a rule sets them on
+// its offerings' Reasoning. A nil or empty fact is one the rule does not
+// set.
+type ReasoningFacts struct {
+	Mandatory      *bool  `json:"mandatory,omitempty"`
+	DefaultEnabled *bool  `json:"default_enabled,omitempty"`
+	DefaultEffort  Effort `json:"default_effort,omitempty"`
 }
 
 // Strings is a list of strings, which JSON may write as one string alone.
@@ -193,7 +210,7 @@ func (r *Rules) add(rule Rule) error {
 	says := 0
 	for _, set := range []bool{rule.Lab != "", rule.AddLab != "", rule.Skip, rule.Strip, rule.Service != "",
 		rule.Finetune != "", rule.Tier != "" || rule.Mode != "" || rule.Alias, rule.Regions != nil, rule.Listed, rule.Exclude,
-		rule.Separator != "", rule.Model != "", rule.Name != ""} {
+		rule.Separator != "", rule.Model != "", rule.Name != "", rule.Reasoning != nil} {
 		if set {
 			says++
 		}
@@ -203,6 +220,9 @@ func (r *Rules) add(rule Rule) error {
 	}
 	if (m.Lab != "" || m.Family != "") && rule.Name == "" {
 		return errors.New("a match of lab or family is for a name")
+	}
+	if len(m.Models) > 0 && rule.Reasoning == nil {
+		return errors.New("a match of models is for reasoning")
 	}
 	only := func(what string, ok ...bool) error {
 		if !slices.Contains(ok, true) {
@@ -294,6 +314,14 @@ func (r *Rules) add(rule Rule) error {
 			return err
 		}
 		r.pins = append(r.pins, rule)
+	case rule.Reasoning != nil:
+		if err := only("models", len(m.Models) > 0); err != nil {
+			return err
+		}
+		if f := rule.Reasoning; *f == (ReasoningFacts{}) {
+			return errors.New("reasoning sets no fact")
+		}
+		r.reasons = append(r.reasons, rule)
 	case rule.Name != "":
 		if err := only("lab or family", (m.Lab != "") != (m.Family != "")); err != nil {
 			return err
@@ -330,6 +358,8 @@ func ruleKind(rule Rule) string {
 		return "a model"
 	case rule.Name != "":
 		return "a name"
+	case rule.Reasoning != nil:
+		return "reasoning"
 	}
 	return "a suffix"
 }

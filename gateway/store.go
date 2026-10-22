@@ -223,7 +223,7 @@ func (s *Store) cached() *modelsdev.Entry {
 // of them offers, and their labs and families, as the Snapshot keeps the
 // built-in providers.
 func (c *Catalog) Keep(ps ...ProviderID) *Catalog {
-	out := &Catalog{Version: c.Version, Source: c.Source, Generated: c.Generated,
+	out := &Catalog{Schema: c.Schema, Version: c.Version, Source: c.Source, Generated: c.Generated,
 		Models: make(map[ModelID]Model), Providers: make(map[ProviderID]Provider)}
 	for _, id := range ps {
 		if p, ok := c.Providers[id]; ok {

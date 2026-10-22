@@ -139,7 +139,6 @@ tbody tr.second > td { background: #171717; }
 .badge.lab { color: var(--ok); border-color: color-mix(in srgb, var(--ok) 40%, transparent); }
 .badge.gateway { color: var(--flex); border-color: color-mix(in srgb, var(--flex) 40%, transparent); }
 .badge.specific { color: var(--warn); border-color: color-mix(in srgb, var(--warn) 40%, transparent); }
-.badge.inferred { color: var(--inf); border-color: color-mix(in srgb, var(--inf) 45%, transparent); }
 .banner { border: 2px solid color-mix(in srgb, var(--inf) 45%, transparent); background: color-mix(in srgb, var(--inf) 7%, transparent);
   padding: 8px 12px; margin: 6px 0 14px; max-width: 90ch; color: #cfe; }
 .banner a { color: var(--inf); }
@@ -234,9 +233,6 @@ const usd = (n) => (n == null ? "-" : "$" + n.toFixed(n !== 0 && n < 0.01 ? 4 : 
 const yesno = (v) => (v == null ? h("span", { class: "no" }, "-") : v ? h("span", { class: "yes" }, "Yes") : h("span", { class: "no" }, "No"));
 const href = (...parts) => "#/" + parts.map((p) => String(p).split("/").map(encodeURIComponent).join("/")).join("/");
 const modelHref = (id) => href("models", id);
-function hostOf(url) {
-  try { return new URL(url).host; } catch { return url; }
-}
 // capital starts word w with a capital letter: "ultrafast" is "Ultrafast".
 const capital = (w) => w[0].toUpperCase() + w.slice(1);
 // labName and familyName are the names the catalog gives a lab and a family,
@@ -282,7 +278,7 @@ function mergeBody(base, over) {
 function resolve(parent, v, id) {
   const po = v.provider_options || {};
   const r = { id, name: v.name || parent.name, tier: v.tier, mode: v.mode, price: v.price || parent.price,
-    inherited_price: !v.price && !!parent.price, status: v.status || parent.status, basis: parent.basis, models_dev: parent.models_dev,
+    inherited_price: !v.price && !!parent.price, status: v.status || parent.status,
     own_endpoint: !!po.endpoint || !!parent.own_endpoint };
   const headers = { ...(parent.provider_options?.headers || {}), ...(po.headers || {}) };
   r.provider_options = { id: po.id || parent.provider_options?.id, endpoint: po.endpoint || parent.provider_options?.endpoint,
@@ -300,7 +296,7 @@ const variantKeys = (off) => Object.keys(off.variants || {}).sort((a, b) => {
 // (null for an unlisted one): its own call, depth 0, then each of its
 // variants, depth 1.
 function addRows(p, model, off, key) {
-  const call = resolve({ provider_options: { endpoint: p.endpoint }, name: off.name, basis: off.basis, models_dev: off.models_dev },
+  const call = resolve({ provider_options: { endpoint: p.endpoint }, name: off.name },
     { provider_options: off.provider_options, price: off.price, status: off.status }, key);
   const top = { provider: p.id, model, off, v: call, depth: 0, key: "", raw: off };
   db.rows.push(top);
@@ -314,20 +310,6 @@ function addRows(p, model, off, key) {
 function suffix(row) {
   if (row.depth) return row.key;
   return row.model ? "default" : row.v.id;
-}
-// BASIS explains the ties that flow's rules make, which models.dev does not.
-const BASIS = {
-  id: ["by ID", "models.dev ties it to no model; flow ties it by its model ID"],
-  tier: ["tier", "its ID names a tier of the model; flow ties it to the model, in that tier"],
-  pro: ["pro", "its ID names the pro mode of a model; flow ties it to the model derived for that mode"],
-  rule: ["rule", "a rule in flow's rules ties this listing to the model"],
-  inferred: ["inferred", "models.dev lists no such model; flow made one for this ID, under the lab it names: as its maker, as the provider itself, or by its name"],
-};
-function basisBadge(row) {
-  const b = BASIS[row.v.basis];
-  if (!b || row.depth) return null;
-  const title = b[1] + (row.v.models_dev && row.v.models_dev !== row.model ? `; models.dev: ${row.v.models_dev}` : "");
-  return h("span", { class: "badge inferred", title }, b[0]);
 }
 // labelBadges shows what a row's variant is: its tier and mode, and the
 // aliases of an offering's own call.
@@ -377,11 +359,15 @@ function endpointView(ep, own) {
     h("div", { class: "sub" }, "auth: ", authText(ep.auth)),
     ep.env?.length ? h("div", { class: "sub" }, "env: ", ep.env.join(" ")) : null);
 }
+// effortBadge shows reasoning effort e, set apart when it is r's default.
+const effortBadge = (r, e) => e === r.default_effort
+  ? h("span", { class: "badge mode", title: "the default effort" }, e)
+  : h("span", { class: "badge" }, e);
 // effortBadges shows, as badges, every reasoning effort a model takes, in
-// order, or how else its reasoning is controlled.
+// order, its default set apart, or how else its reasoning is controlled.
 function effortBadges(r) {
-  const e = r.efforts?.length ? r.efforts : [r.toggle ? "on/off" : r.budget ? "budget" : "yes"];
-  return e.map((x) => h("span", { class: "badge" }, x));
+  if (r.efforts?.length) return r.efforts.map((e) => effortBadge(r, e));
+  return [h("span", { class: "badge" }, r.mandatory === false ? "on/off" : r.budget ? "budget" : "yes")];
 }
 
 // Routing: #/models, #/models/<lab>/<id>, #/providers, #/providers/<id>, with a query.
@@ -472,10 +458,7 @@ function modelsPage(q) {
     });
     const head = sortTable(rows, MODEL_COLS, q, { key: "updated", desc: true });
     const body = rows.map((m) => h("tr", { class: "row", onclick: () => (location.hash = modelHref(m.id)) },
-      h("td", {}, h("a", { href: modelHref(m.id) }, h("div", {}, m.name,
-        m.derived ? [" ", h("span", { class: "badge inferred", title: "derived by flow: " + m.derived.from + " in mode " + m.derived.mode }, "derived")] : null,
-        m.inferred ? [" ", h("span", { class: "badge inferred", title: "made by flow for providers' model IDs that name its lab; facts from " + m.inferred.facts }, "inferred")] : null,
-        m.finetuned ? [" ", h("span", { class: "badge mode", title: "a " + m.finetuned.kind + " of " + (m.finetuned.of || m.finetuned.base || "a " + m.lab + " model") + (m.finetuned.by ? " by " + m.finetuned.by : "") }, "finetuned")] : null)),
+      h("td", {}, h("a", { href: modelHref(m.id) }, h("div", {}, m.name)),
         h("div", { class: "sub" }, idNode(m.id, ""))),
       h("td", { class: "num" }, m._providers || h("span", { class: "no" }, "0")),
       h("td", { class: "num" }, commas(m.limit.context)),
@@ -543,8 +526,9 @@ function priceView(p) {
 }
 function reasoningView(r) {
   if (!r) return h("span", { class: "no" }, "does not reason");
-  const out = (r.efforts || []).map((e) => h("span", { class: "badge" }, e));
-  if (r.toggle) out.push(h("span", { class: "badge" }, "on/off"));
+  const out = (r.efforts || []).map((e) => effortBadge(r, e));
+  if (r.mandatory != null) out.push(h("span", { class: "badge" }, r.mandatory ? "always on" : "can turn off"));
+  if (r.default_enabled != null) out.push(h("span", { class: "badge" }, r.default_enabled ? "on by default" : "off by default"));
   if (r.budget) out.push(h("span", { class: "badge" }, `budget ${r.budget.min ? tokens(r.budget.min) : "?"}-${r.budget.max ? tokens(r.budget.max) : "?"}`));
   return out.length ? out : h("span", { class: "sub" }, "reasons; no controls listed");
 }
@@ -560,8 +544,7 @@ function variantDetail(row, span) {
   for (const k of Object.keys(resolved)) if (resolved[k] == null) delete resolved[k];
   return h("tr", { class: "detail" }, h("td", { colspan: span },
     kv("Variant", h("span", {}, h("span", { class: "mid" }, v.id), " ", copyButton(v.id), h("span", { class: "sub" }, "  GET " + apiPath(row)))),
-    kv("Serves", row.model ? h("span", {}, tie(row.model), " ", basisBadge(row), v.basis && BASIS[v.basis] ? h("span", { class: "sub" }, " " + BASIS[v.basis][1]) : "",
-      v.models_dev && v.models_dev !== row.model ? h("span", { class: "sub" }, "; models.dev ties it to " + v.models_dev) : "")
+    kv("Serves", row.model ? tie(row.model)
       : h("span", {}, h("span", { class: "badge specific" }, "unlisted"), " neither models.dev nor flow's rules tie it to a model",
           row.off.lab ? h("span", { class: "sub" }, "; its ID names lab " + row.off.lab) : "")),
     kv("Send model", h("span", {}, h("span", { class: "mid" }, po.id), " ", copyButton(po.id), row.depth && !row.raw.provider_options?.id ? h("span", { class: "sub" }, "  the offering's model ID") : "")),
@@ -620,7 +603,7 @@ const offerHead = () => OFFER_HEAD.map((t, i) => h("th", { class: i < 3 ? "num f
 function variantCells(row) {
   const po = row.v.provider_options;
   return [
-    h("td", {}, row.depth ? h("span", { class: "indent" }, "└ ") : null, h("span", { class: row.model || row.depth ? null : "mid" }, suffix(row)), " ", labelBadges(row), basisBadge(row)),
+    h("td", {}, row.depth ? h("span", { class: "indent" }, "└ ") : null, h("span", { class: row.model || row.depth ? null : "mid" }, suffix(row)), " ", labelBadges(row)),
     h("td", {}, idNode(po.id), " ",
       row.raw.provider_options?.body ? [h("span", { class: "badge", title: JSON.stringify(row.raw.provider_options.body) }, "+ fields"), " "] : null,
       copyButton(po.id)),
@@ -642,7 +625,6 @@ function modelPage(id, q) {
     const p = db.cat.providers[row.provider];
     return [h("td", {}, first ? [h("a", { href: providerHref(row.provider) }, p.name), " ", h("span", { class: "badge " + p.kind }, p.kind)] : null), variantCells(row)];
   };
-  const inferred = list.filter((r) => !r.depth && BASIS[r.v.basis]).length;
   return h("div", { class: "page" },
     h("div", { class: "crumbs" }, h("a", { href: "#/models" }, "Models"), " / ", h("a", { href: "#/models?lab=" + encodeURIComponent(m.lab) }, labName(m.lab)), " / ", m.name),
     h("h1", {}, m.name),
@@ -651,21 +633,7 @@ function modelPage(id, q) {
       m.family ? h("a", { class: "badge", href: "#/models?family=" + encodeURIComponent(m.family) }, m.family) : null,
       m.type ? h("span", { class: "badge" }, m.type) : null,
       h("span", { class: "badge" }, m.open_weights ? "open weights" : "closed weights"),
-      (m._derivedTo || []).map((d) => h("a", { class: "badge mode", href: modelHref(d.id), title: "flow derived " + d.id + ": this model in mode " + d.derived.mode }, d.derived.mode + " → " + d.name)),
       m.license ? h("span", { class: "badge" }, m.license) : null),
-    m.derived ? h("div", { class: "banner" }, "models.dev lists no such model. flow derived it: it is ",
-      h("a", { href: modelHref(m.derived.from), class: "mid" }, m.derived.from), " in mode ", h("b", {}, m.derived.mode),
-      ", which its lab offers as a mode and gateways sell under IDs of its own, such as ", h("code", {}, m.id.split("/")[1]), ".") : null,
-    m.inferred ? h("div", { class: "banner" }, "models.dev lists no such model. flow made one for the ID ",
-      m.providers.length > 1 ? m.providers.length + " providers name alike" : "its provider names",
-      ", under the lab it names (found by its ", h("b", {}, m.inferred.lab_by),
-      "). The facts below are ", h("a", { href: providerHref(m.inferred.facts) }, db.cat.providers[m.inferred.facts]?.name || m.inferred.facts), "'s.") : null,
-    m.finetuned ? h("div", { class: "banner" }, "A ", h("b", {}, m.finetuned.kind), " of ",
-      m.finetuned.of ? h("a", { href: modelHref(m.finetuned.of) }, db.cat.models[m.finetuned.of]?.name || m.finetuned.of)
-        : m.finetuned.base ? h("code", {}, m.finetuned.base) : "a " + m.lab + " model",
-      m.finetuned.by ? [" by ", h("b", {}, m.finetuned.by)] : null,
-      m.finetuned.kind === "quantized" && !m.finetuned.by ? "." :
-        [", listed under the lab of the model it tunes; ", m.lab, " did not make it."]) : null,
     m.merged?.length ? h("div", { class: "banner" }, "flow merged models.dev's ",
       m.merged.map((id, i) => [i ? ", " : "", h("code", {}, id)]), " into this model: its offerings serve this model in that tier.") : null,
     h("div", { class: "facts" },
@@ -677,13 +645,7 @@ function modelPage(id, q) {
     (m.links?.length || m.weights?.length) ? [h("h2", {}, "Links"), h("div", { class: "links" },
       (m.links || []).map((l) => h("a", { href: l.url, target: "_blank", rel: "noopener" }, l.label || l.type || l.url)),
       (m.weights || []).map((w) => h("a", { href: w.url, target: "_blank", rel: "noopener" }, "weights: " + (w.label || w.url) + (w.quantization ? ` (${w.quantization})` : ""))))] : null,
-    m.benchmarks?.length ? [h("h2", {}, "Benchmarks", h("span", { class: "count" }, m.benchmarks.length)), h("table", {},
-      h("thead", {}, h("tr", {}, h("th", {}, "Benchmark"), h("th", { class: "num" }, "Score"), h("th", {}, "Metric"), h("th", {}, "Variant"), h("th", {}, "Date"), h("th", {}, "Source"))),
-      h("tbody", {}, m.benchmarks.map((b) => h("tr", {}, h("td", {}, b.name), h("td", { class: "num" }, b.score), h("td", { class: "sub" }, b.metric || ""),
-        h("td", { class: "sub" }, b.variant || ""), h("td", { class: "sub" }, b.date || ""),
-        h("td", {}, h("a", { href: b.source, target: "_blank", rel: "noopener", class: "sub" }, hostOf(b.source)))))))] : null,
-    h("h2", {}, "Providers", h("span", { class: "count" }, `${m.providers.length} providers · ${list.length} variants` +
-      (inferred ? ` · ${inferred} tied by flow's rules, not models.dev` : ""))),
+    h("h2", {}, "Providers", h("span", { class: "count" }, `${m.providers.length} providers · ${list.length} variants`)),
     list.length ? h("table", {}, h("thead", {}, head), h("tbody", {}, variantRows(list, lead, 10, (r) => q.get("p") === r.provider && q.get("v") === r.v.id)))
       : h("div", { class: "note" }, "No provider offers this model."));
 }
@@ -918,9 +880,6 @@ async function main() {
     p._variants = (db.byProvider.get(p.id) || []).length;
   }
   db.models = Object.values(cat.models);
-  for (const m of db.models) {
-    if (m.derived && cat.models[m.derived.from]) (cat.models[m.derived.from]._derivedTo ||= []).push(m);
-  }
   for (const m of db.models) {
     const rows = db.byModel.get(m.id) || [];
     m._providers = m.providers.length;

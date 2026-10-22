@@ -1,5 +1,6 @@
 {
-  "version": 7,
+  "$schema": "https://aquatic.dev/catalog/schema.json",
+  "version": 8,
   "source": "testdata/catalog.json",
   "generated": "2026-10-19T00:00:00Z",
   "spellings": {
@@ -95,15 +96,6 @@
           "label": "Hugging Face",
           "url": "https://huggingface.co/acme/open-1",
           "format": "safetensors"
-        }
-      ],
-      "benchmarks": [
-        {
-          "name": "SWE-bench Verified",
-          "score": 61.2,
-          "metric": "percent resolved",
-          "source": "https://acme.example/blog",
-          "date": "2026-01-10"
         }
       ],
       "links": [
@@ -260,10 +252,6 @@
         "context": 4096,
         "output": 4096
       },
-      "inferred": {
-        "lab_by": "maker",
-        "facts": "vercel"
-      },
       "providers": [
         "vercel"
       ]
@@ -381,10 +369,6 @@
         "context": 1050000,
         "output": 128000
       },
-      "derived": {
-        "from": "openai/gpt-6-astra",
-        "mode": "pro"
-      },
       "providers": [
         "openai",
         "openrouter"
@@ -448,10 +432,6 @@
         "input": 922000,
         "output": 128000
       },
-      "derived": {
-        "from": "openai/gpt-6.1-sol",
-        "mode": "pro"
-      },
       "providers": [
         "openai",
         "openrouter"
@@ -480,10 +460,6 @@
         "context": 1050000,
         "output": 128000
       },
-      "inferred": {
-        "lab_by": "brand",
-        "facts": "llmgateway"
-      },
       "providers": [
         "llmgateway"
       ]
@@ -510,10 +486,6 @@
       "limit": {
         "context": 1050000,
         "output": 128000
-      },
-      "inferred": {
-        "lab_by": "maker",
-        "facts": "llmgateway"
       },
       "providers": [
         "llmgateway",
@@ -570,10 +542,6 @@
       "limit": {
         "context": 200000,
         "output": 32000
-      },
-      "inferred": {
-        "lab_by": "provider",
-        "facts": "opencode"
       },
       "providers": [
         "opencode"
@@ -673,13 +641,17 @@
             "output": 128000
           },
           "reasoning": {
+            "mandatory": false,
+            "default_enabled": false,
             "efforts": [
+              "none",
               "low",
               "medium",
               "high",
               "xhigh",
               "max"
-            ]
+            ],
+            "default_effort": "high"
           },
           "provider_options": {
             "id": "claude-opus-4-8",
@@ -690,9 +662,7 @@
             "output": 25,
             "cache_read": 0.5,
             "cache_write": 6.25
-          },
-          "basis": "lab",
-          "models_dev": "anthropic/claude-opus-4-8"
+          }
         },
         "anthropic/claude-opus-5-5": {
           "name": "Claude Opus 5.5",
@@ -720,13 +690,16 @@
             "output": 128000
           },
           "reasoning": {
+            "mandatory": true,
+            "default_enabled": true,
             "efforts": [
               "low",
               "medium",
               "high",
               "xhigh",
               "max"
-            ]
+            ],
+            "default_effort": "medium"
           },
           "provider_options": {
             "id": "claude-opus-5-5",
@@ -738,8 +711,6 @@
             "cache_read": 0.2,
             "cache_write": 5
           },
-          "basis": "canonical",
-          "models_dev": "anthropic/claude-opus-5-5",
           "variants": {
             "fast": {
               "name": "Claude Opus 5.5 Fast",
@@ -783,6 +754,8 @@
             "output": 64000
           },
           "reasoning": {
+            "mandatory": false,
+            "default_enabled": false,
             "budget": {
               "min": 1024
             }
@@ -794,9 +767,7 @@
           "price": {
             "input": 3,
             "output": 15
-          },
-          "basis": "lab",
-          "models_dev": "anthropic/claude-sonnet-4-5"
+          }
         }
       }
     },
@@ -837,11 +808,14 @@
             "output": 64000
           },
           "reasoning": {
+            "mandatory": true,
+            "default_enabled": true,
             "efforts": [
               "low",
               "medium",
               "high"
-            ]
+            ],
+            "default_effort": "medium"
           },
           "interleaved": {
             "field": "reasoning_text"
@@ -863,9 +837,7 @@
           "price": {
             "input": 0,
             "output": 0
-          },
-          "basis": "canonical",
-          "models_dev": "anthropic/claude-opus-5-5"
+          }
         }
       }
     },
@@ -905,7 +877,10 @@
             "context": 1000000,
             "output": 128000
           },
-          "reasoning": {},
+          "reasoning": {
+            "mandatory": true,
+            "default_enabled": true
+          },
           "provider_options": {
             "id": "anthropic/claude-opus-latest",
             "name": "Claude Opus Latest (Claude Opus 5.5)"
@@ -913,9 +888,7 @@
           "price": {
             "input": 4,
             "output": 20
-          },
-          "basis": "canonical",
-          "models_dev": "anthropic/claude-opus-5-5"
+          }
         },
         "openai/gpt-6-astra": {
           "name": "GPT-6 Astra",
@@ -953,8 +926,7 @@
           "price": {
             "input": 10,
             "output": 50
-          },
-          "basis": "id"
+          }
         },
         "openai/gpt-astra-fast-latest": {
           "name": "GPT Astra Fast Latest",
@@ -992,8 +964,7 @@
           "price": {
             "input": 20,
             "output": 100
-          },
-          "basis": "inferred"
+          }
         },
         "openai/gpt-astra-latest": {
           "name": "GPT Astra Latest",
@@ -1031,8 +1002,7 @@
           "price": {
             "input": 10,
             "output": 50
-          },
-          "basis": "inferred"
+          }
         },
         "xai/grok-9": {
           "name": "Grok 9",
@@ -1070,8 +1040,7 @@
           "price": {
             "input": 1,
             "output": 2
-          },
-          "basis": "id"
+          }
         }
       }
     },
@@ -1120,8 +1089,6 @@
             "output": 1.25,
             "cache_read": 0.02
           },
-          "basis": "lab",
-          "models_dev": "openai/gpt-5.4-nano",
           "variants": {
             "flex": {
               "name": "GPT-5.4 Nano Flex",
@@ -1161,6 +1128,7 @@
             "output": 128000
           },
           "reasoning": {
+            "mandatory": false,
             "efforts": [
               "none",
               "low",
@@ -1185,8 +1153,6 @@
               }
             ]
           },
-          "basis": "canonical",
-          "models_dev": "openai/gpt-5.6-sol",
           "aliases": [
             "gpt-5.6"
           ]
@@ -1228,8 +1194,6 @@
             "input": 10,
             "output": 50
           },
-          "basis": "canonical",
-          "models_dev": "openai/gpt-6-astra",
           "variants": {
             "fast": {
               "name": "GPT-6 Astra Fast",
@@ -1354,8 +1318,6 @@
               }
             ]
           },
-          "basis": "canonical",
-          "models_dev": "openai/gpt-6.1-sol",
           "variants": {
             "fast": {
               "name": "GPT-6.1 Sol Fast",
@@ -1503,9 +1465,7 @@
             "input": 2,
             "output": 8,
             "cache_read": 0.5
-          },
-          "basis": "lab",
-          "models_dev": "openai/o3"
+          }
         }
       }
     },
@@ -1546,13 +1506,17 @@
             "output": 128000
           },
           "reasoning": {
+            "mandatory": false,
+            "default_enabled": false,
             "efforts": [
+              "none",
               "low",
               "medium",
               "high",
               "xhigh",
               "max"
-            ]
+            ],
+            "default_effort": "high"
           },
           "provider_options": {
             "id": "claude-opus-4-8",
@@ -1572,8 +1536,7 @@
           "price": {
             "input": 5,
             "output": 25
-          },
-          "basis": "id"
+          }
         },
         "openai/gpt-5.6-sol": {
           "name": "GPT-5.6 Sol",
@@ -1596,6 +1559,7 @@
             "output": 128000
           },
           "reasoning": {
+            "mandatory": false,
             "efforts": [
               "none",
               "low",
@@ -1622,8 +1586,7 @@
           "price": {
             "input": 4,
             "output": 20
-          },
-          "basis": "id"
+          }
         },
         "opencode/big-pickle": {
           "name": "Big Pickle",
@@ -1645,7 +1608,7 @@
             "output": 32000
           },
           "reasoning": {
-            "toggle": true
+            "mandatory": false
           },
           "provider_options": {
             "id": "big-pickle",
@@ -1655,8 +1618,7 @@
             "input": 0,
             "output": 0
           },
-          "status": "beta",
-          "basis": "inferred"
+          "status": "beta"
         }
       }
     },
@@ -1697,13 +1659,17 @@
             "output": 128000
           },
           "reasoning": {
+            "mandatory": false,
+            "default_enabled": false,
             "efforts": [
+              "none",
               "low",
               "medium",
               "high",
               "xhigh",
               "max"
-            ]
+            ],
+            "default_effort": "high"
           },
           "provider_options": {
             "id": "anthropic/claude-opus-4.8",
@@ -1713,7 +1679,6 @@
             "input": 5,
             "output": 25
           },
-          "basis": "id",
           "variants": {
             "free": {
               "name": "Claude Opus 4.8 Free",
@@ -1749,7 +1714,10 @@
             "context": 1000000,
             "output": 128000
           },
-          "reasoning": {},
+          "reasoning": {
+            "mandatory": true,
+            "default_enabled": true
+          },
           "provider_options": {
             "id": "~anthropic/claude-opus-latest",
             "name": "Anthropic: Claude Opus (latest)"
@@ -1757,8 +1725,7 @@
           "price": {
             "input": 4,
             "output": 20
-          },
-          "basis": "id"
+          }
         },
         "openai/gpt-5.6-sol": {
           "name": "GPT-5.6 Sol",
@@ -1796,9 +1763,7 @@
           "price": {
             "input": 4,
             "output": 20
-          },
-          "basis": "canonical",
-          "models_dev": "openai/gpt-5.6-sol"
+          }
         },
         "openai/gpt-6-astra-pro": {
           "name": "GPT-6 Astra Pro",
@@ -1836,8 +1801,7 @@
           "price": {
             "input": 10,
             "output": 50
-          },
-          "basis": "pro"
+          }
         },
         "openai/gpt-6.1-sol-pro": {
           "name": "GPT-6.1 Sol Pro",
@@ -1875,9 +1839,7 @@
           "price": {
             "input": 2,
             "output": 10
-          },
-          "basis": "pro",
-          "models_dev": "openai/gpt-6.1-sol"
+          }
         },
         "openai/gpt-astra-latest": {
           "name": "GPT Astra Latest",
@@ -1915,8 +1877,7 @@
           "price": {
             "input": 10,
             "output": 50
-          },
-          "basis": "inferred"
+          }
         }
       }
     },
@@ -1960,13 +1921,16 @@
             "output": 128000
           },
           "reasoning": {
+            "mandatory": true,
+            "default_enabled": true,
             "efforts": [
               "low",
               "medium",
               "high",
               "xhigh",
               "max"
-            ]
+            ],
+            "default_effort": "medium"
           },
           "provider_options": {
             "id": "anthropic/claude-opus-5.5",
@@ -1978,8 +1942,6 @@
             "cache_read": 0.2,
             "cache_write": 5
           },
-          "basis": "canonical",
-          "models_dev": "anthropic/claude-opus-5-5",
           "variants": {
             "fast": {
               "name": "Claude Opus 5.5 Fast",
@@ -2021,8 +1983,7 @@
           "provider_options": {
             "id": "bytedance/seedance-2.0",
             "name": "Seedance 2.0"
-          },
-          "basis": "id"
+          }
         },
         "bytedance-seed/seedance-2.0-fast": {
           "name": "Seedance 2.0 Fast",
@@ -2048,8 +2009,7 @@
           "provider_options": {
             "id": "bytedance/seedance-2.0-fast",
             "name": "Seedance 2.0 Fast"
-          },
-          "basis": "inferred"
+          }
         },
         "openai/gpt-6-astra": {
           "name": "GPT-6 Astra",
@@ -2088,8 +2048,6 @@
             "input": 10,
             "output": 50
           },
-          "basis": "canonical",
-          "models_dev": "openai/gpt-6-astra",
           "variants": {
             "fast": {
               "name": "GPT-6 Astra Fast",
@@ -2141,8 +2099,6 @@
             "output": 8,
             "cache_read": 0.5
           },
-          "basis": "canonical",
-          "models_dev": "openai/o3",
           "variants": {
             "fast": {
               "name": "o3 Fast",

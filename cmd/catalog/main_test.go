@@ -362,6 +362,7 @@ func TestSite(t *testing.T) {
 	}{
 		{"/", "text/html; charset=utf-8", "<title>Catalog</title>", http.StatusOK},
 		{"/catalog.json", "application/json", `"anthropic/claude-opus-5-5"`, http.StatusOK},
+		{"/schema.json", "application/schema+json", `"$id": "https://aquatic.dev/catalog/schema.json"`, http.StatusOK},
 		{"/v1/providers/opencode", "application/json", `"big-pickle"`, http.StatusOK},
 		{"/index.html", "application/json", `"not_found"`, http.StatusNotFound},
 	}
