@@ -433,9 +433,13 @@ func (b *builder) provider(pid ProviderID, p modelsdev.Provider) ListedProvider 
 	if b.rules.Official(pid) {
 		typ = ProviderOfficial
 	}
+	name, ok := b.rules.ProviderName(pid)
+	if !ok {
+		name = p.Name
+	}
 	prov := ListedProvider{
 		ID:       pid,
-		Name:     p.Name,
+		Name:     name,
 		Kind:     kind,
 		Type:     typ,
 		Endpoint: b.endpoint(pid, "", p.NPM, "", p.API),

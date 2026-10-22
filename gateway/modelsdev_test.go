@@ -135,8 +135,9 @@ func TestFromModelsDevGolden(t *testing.T) {
 }
 
 // TestNames checks that the catalog names the labs and the families of its
-// models: by the rules, the first of them winning; else a lab by the name
-// of the provider of its ID; else by the words of the ID.
+// models, and its providers: by the rules, the first of them winning, a
+// lab by its own rule or else by that of the provider of its ID; else a lab
+// by the name of the provider of its ID; else by the words of the ID.
 func TestNames(t *testing.T) {
 	c, _ := groupFixture(t)
 	// Each catalog names exactly the labs and families of its own models,
@@ -181,6 +182,8 @@ func TestNames(t *testing.T) {
 	opts := fixtureOptions(true)
 	opts.Rules = withRules(t, []string{
 		`{"match": {"lab": "openai"}, "name": "Open AI"}`,
+		`{"match": {"provider": "openai"}, "name": "OpenAI Platform"}`,
+		`{"match": {"provider": "anthropic"}, "name": "Anthropic PBC"}`,
 		`{"match": {"family": "claude-opus"}, "name": "Opus"}`,
 		`{"match": {"family": "claude-opus"}, "name": "Not Opus"}`,
 	})
@@ -188,11 +191,16 @@ func TestNames(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	if got := c.Labs["openai"].Name; got != "Open AI" {
-		t.Errorf("a rule's lab name: %q, want it over the provider's", got)
-	}
-	if got := c.Families["claude-opus"].Name; got != "Opus" {
-		t.Errorf("two rules' family names: %q, want the first's", got)
+	for _, tt := range []struct{ got, want, why string }{
+		{c.Labs["openai"].Name, "Open AI", "a lab's name rule, over its provider's"},
+		{c.Providers["openai"].Name, "OpenAI Platform", "a provider's name rule"},
+		{c.Providers["anthropic"].Name, "Anthropic PBC", "a provider's name rule"},
+		{c.Labs["anthropic"].Name, "Anthropic PBC", "the name rule of the provider of the lab's ID"},
+		{c.Families["claude-opus"].Name, "Opus", "the first of two rules' family names"},
+	} {
+		if tt.got != tt.want {
+			t.Errorf("name %q, want %q: %s", tt.got, tt.want, tt.why)
+		}
 	}
 }
 

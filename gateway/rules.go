@@ -60,6 +60,7 @@ type Rules struct {
 	official  []ProviderID
 	seps      map[ProviderID][]string
 	pins      []Rule
+	provNames map[ProviderID]string
 	labNames  map[ProviderID]string
 	famNames  map[string]string
 	effNames  map[Effort]string
@@ -115,9 +116,10 @@ type Rule struct {
 	// Model ties Match's listing to this model, which the catalog lists,
 	// whatever the other rules say.
 	Model ModelID `json:"model,omitempty"`
-	// Name names Match's lab, family, effort, tier or mode in the catalog,
-	// where the name the mapping would give it is wrong, as TheDrummer of
-	// thedrummer and Extra High of xhigh.
+	// Name names Match's provider, lab, family, effort, tier or mode in the
+	// catalog, where the name the mapping would give it is wrong, as
+	// TheDrummer of thedrummer and Extra High of xhigh. A provider's name
+	// names the lab of its ID too, unless a rule names that lab.
 	Name string `json:"name,omitempty"`
 	// Reasoning sets facts of how Match's models reason, which models.dev
 	// lists wrong or not at all, on their offerings at every provider, as
@@ -207,7 +209,7 @@ func DecodeRules(data []byte) (*Rules, error) {
 	}
 	r.makers, r.segments, r.prefixes, r.bases, r.seps = make(map[string]ProviderID), make(map[string]bool),
 		make(map[ProviderID][]string), make(map[string]FinetuneBase), make(map[ProviderID][]string)
-	r.labNames, r.famNames, r.effNames = make(map[ProviderID]string), make(map[string]string), make(map[Effort]string)
+	r.provNames, r.labNames, r.famNames, r.effNames = make(map[ProviderID]string), make(map[ProviderID]string), make(map[string]string), make(map[Effort]string)
 	r.tierNames, r.modeNames = make(map[Tier]string), make(map[string]string)
 	for i, rule := range r.Rules {
 		if err := r.add(rule); err != nil {
@@ -344,15 +346,19 @@ func (r *Rules) add(rule Rule) error {
 		r.reasons = append(r.reasons, rule)
 	case rule.Name != "":
 		matched := 0
-		for _, set := range []bool{m.Lab != "", m.Family != "", m.Effort != "", m.Tier != "", m.Mode != ""} {
+		for _, set := range []bool{len(m.Provider) == 1, m.Lab != "", m.Family != "", m.Effort != "", m.Tier != "", m.Mode != ""} {
 			if set {
 				matched++
 			}
 		}
-		if matched != 1 {
-			return errors.New("a name needs a match of one lab, family, effort, tier or mode")
+		if matched != 1 || len(m.Provider) > 1 {
+			return errors.New("a name needs a match of one provider, lab, family, effort, tier or mode")
 		}
 		switch {
+		case len(m.Provider) == 1:
+			if _, ok := r.provNames[ProviderID(m.Provider[0])]; !ok {
+				r.provNames[ProviderID(m.Provider[0])] = rule.Name
+			}
 		case m.Lab != "":
 			if _, ok := r.labNames[m.Lab]; !ok {
 				r.labNames[m.Lab] = rule.Name
@@ -415,9 +421,19 @@ func (r *Rules) MakerLab(maker string) (ProviderID, bool) {
 }
 
 // LabName returns the name the rules give lab, and reports whether they
-// give it one.
+// give it one: a lab's name rule's, or else that of the provider of its ID.
 func (r *Rules) LabName(lab ProviderID) (string, bool) {
-	n, ok := r.labNames[lab]
+	if n, ok := r.labNames[lab]; ok {
+		return n, true
+	}
+	n, ok := r.provNames[lab]
+	return n, ok
+}
+
+// ProviderName returns the name the rules give provider pid, and reports
+// whether they give it one.
+func (r *Rules) ProviderName(pid ProviderID) (string, bool) {
+	n, ok := r.provNames[pid]
 	return n, ok
 }
 
