@@ -16,9 +16,9 @@ import (
 )
 
 // DefaultSource is the catalog server flow reads its catalog from: the
-// catalog's site, which the repository's Refresh workflow rebuilds from
-// models.dev and deploys. A local cmd/catalog serve is at
-// http://127.0.0.1:4100.
+// catalog's site, which aquatic, the repository of aquatic.dev, deploys from
+// the latest release of this repository. aquatic's go run ./cmd/catalog
+// serve serves one locally, at http://127.0.0.1:4100.
 const DefaultSource = "https://aquatic.dev/catalog"
 
 // DocumentPath is where a catalog server serves the whole catalog.

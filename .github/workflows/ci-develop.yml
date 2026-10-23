@@ -3,8 +3,8 @@ name: CI Develop
 run-name: Release ${{ github.sha }}
 
 # Every push to main, as a squash-merged pull request is, is checked and
-# released: tagged as the next semantic version, released on GitHub, and
-# deployed, as release.yml does.
+# released: tagged as the next semantic version and released on GitHub, as
+# release.yml does.
 on:
   push:
     branches:
@@ -27,6 +27,4 @@ jobs:
       ref: ${{ github.sha }}
     permissions:
       contents: write
-      pages: write
-      id-token: write
     secrets: inherit

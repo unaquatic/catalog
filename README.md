@@ -35,21 +35,16 @@ c, err := data.Catalog() // *gateway.Catalog, embedded: no network
 
 ```sh
 go generate ./data/                               # apply models.dev's changes to our catalog, data/catalog
-go run ./cmd/catalog serve -catalog data/catalog  # serve our catalog, and browse it at http://localhost:4100
 go run ./cmd/catalog join -o catalog.json         # write our catalog as one catalog.json
 go run ./cmd/catalog remap -in data/models-dev.json   # write remap.json: how the current mapping differs from our catalog
 go run ./cmd/catalog apply -patch remap.json      # apply a reviewed patch to our catalog
 go run ./cmd/catalog build -o catalog.json        # map models.dev alone, as a catalog of its own
-go run ./cmd/catalog serve                        # serve that, mapped live from models.dev
 go run ./cmd/catalog snapshot -providers anthropic,openai -o snapshot.json   # the catalog flow compiles in
 ```
 
 ## Hosted catalog
 
-Our catalog, `data/catalog`, is its own source of truth, a file per lab's models and per provider: models.dev is where its data comes from, not what it is. Every six hours CI applies what models.dev changed since its last version to the catalog, as a patch, keeping what the catalog holds of its own, and opens a pull request of it to review and squash-merge; its merge is released as the next version, as every merge is, and deploys the browser and `catalog.json` to:
-
-- https://aquatic.dev/catalog/ — what flow reads (`gateway.DefaultSource`)
-- https://unaquatic.github.io/catalog/ — a mirror
+Our catalog, `data/catalog`, is its own source of truth, a file per lab's models and per provider: models.dev is where its data comes from, not what it is. Every six hours CI applies what models.dev changed since its last version to the catalog, as a patch, keeping what the catalog holds of its own, and opens a pull request of it to review and squash-merge; its merge is released as the next version, as every merge is. aquatic, the repository of aquatic.dev, deploys the latest release's `catalog.json` and its schema, within an hour of it, to https://aquatic.dev/catalog/, which flow reads (`gateway.DefaultSource`), with a page that browses the catalog; its `go run ./cmd/catalog serve` serves the same locally.
 
 `catalog.json` names its JSON Schema (draft 2020-12) in `"$schema"`: https://aquatic.dev/catalog/schema.json, generated from the Go types into `gateway/catalog.schema.json`.
 
@@ -63,7 +58,7 @@ The public API, which every release versions:
 
 Internal to the module:
 
-- `cmd/catalog` — applies models.dev's changes to the catalog (`update`), remaps and patches it (`remap`, `apply`), joins it into one document (`join`), builds a catalog from models.dev alone, serves a catalog as the site does (the page, `catalog.json` and `schema.json`), and writes snapshots.
+- `cmd/catalog` — applies models.dev's changes to the catalog (`update`), remaps and patches it (`remap`, `apply`), joins it into one document (`join`), builds a catalog from models.dev alone, and writes snapshots.
 - `internal/build` — the mapping from models.dev to the catalog, and its rules (`internal/build/rules.json`).
 - `internal/catalogdir` — the file layout of `data/catalog`.
 - `internal/modelsdev` — models.dev's catalog.json, and the cache and fetcher of downloads.

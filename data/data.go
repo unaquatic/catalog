@@ -15,9 +15,9 @@
 // it changed that models.dev changed too, as a conflict in patch.json. Edit
 // the catalog's files by hand for what models.dev lacks or has wrong.
 //
-// Serve the catalog with no network with go run ./cmd/catalog serve
-// -catalog data/catalog, and write it as one catalog.json with go run
-// ./cmd/catalog join.
+// Write the catalog as one catalog.json with go run ./cmd/catalog join, and
+// browse it with go run ./cmd/catalog serve -catalog catalog.json in aquatic,
+// the repository of aquatic.dev.
 package data
 
 import (
