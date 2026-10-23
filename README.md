@@ -12,7 +12,7 @@
   <a href="https://github.com/unaquatic/catalog/blob/main/LICENSE"><img src="https://img.shields.io/github/license/unaquatic/catalog?labelColor=888&color=555&style=flat-square" alt="License"></a>
 </p>
 
-<p align="center"><b>The model catalog of flow, built from models.dev, written in golang.</b></p>
+<p align="center"><b>A model catalog written in golang.</b></p>
 
 ---
 
