@@ -7,8 +7,10 @@ run-name: Release ${{ inputs.ref || github.sha }}
 # catalog with it; next-version.sh picks the version from the commit's
 # Conventional Commits type. It attaches the catalog, joined into one
 # catalog.json, its schema.json, data/models-dev.json and data/patch.json to
-# a GitHub release of the version, and deploys both sites. A commit
-# released before is deployed again, not tagged again.
+# a GitHub release of the version. aquatic, the repository of aquatic.dev,
+# deploys catalog.json and schema.json to https://aquatic.dev/catalog/, with
+# its catalog browser, from the latest release. A commit released before is
+# not released again.
 on:
   workflow_dispatch:
 
@@ -25,16 +27,12 @@ concurrency:
 
 permissions:
   contents: write
-  pages: write
-  id-token: write
 
 jobs:
   release:
     name: Release
     runs-on: ubuntu-latest
     timeout-minutes: 10
-    outputs:
-      sha: ${{ steps.tag.outputs.sha }}
     steps:
       - name: Checkout
         uses: actions/checkout@v7
@@ -52,7 +50,6 @@ jobs:
           REPO: ${{ github.repository }}
         run: |
           sha=$(git rev-parse HEAD)
-          echo "sha=$sha" >> "$GITHUB_OUTPUT"
           if tag=$(git tag --points-at HEAD --list 'v[0-9]*' | head -1) && [ -n "$tag" ]; then
             echo "$sha is released already as $tag"
             exit 0
@@ -110,25 +107,3 @@ jobs:
           gh release create "$tag" "${assets[@]}" \
             --target "$sha" --title "$tag" --notes-file notes.md --latest
 
-  # GitHub Pages needs a public repository on the free plan; set the
-  # repository variable PAGES to true once it is public.
-  deploy-pages:
-    name: Deploy Pages
-    needs: release
-    if: vars.PAGES == 'true'
-    uses: ./.github/workflows/pages-deploy.yml
-    with:
-      ref: ${{ needs.release.outputs.sha }}
-    permissions:
-      contents: read
-      pages: write
-      id-token: write
-    secrets: inherit
-
-  deploy-workers:
-    name: Deploy Workers
-    needs: release
-    uses: ./.github/workflows/workers-build.yml
-    with:
-      ref: ${{ needs.release.outputs.sha }}
-    secrets: inherit

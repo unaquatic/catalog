@@ -1,11 +1,11 @@
 // Command catalog builds flow's model catalog from models.dev's catalog.json,
 // following models.dev's structure: its models, as the site lists them at
 // /models, and its providers with every model each lists, provider-specific
-// ones included. It serves the catalog over HTTP as the site does: a page at
-// / that browses it, the catalog at /catalog.json and its schema at
-// /schema.json. Package gateway holds the catalog format, internal/build
+// ones included. Package gateway holds the catalog format, internal/build
 // the steps that map models.dev to it, and internal/build/rules.json the
 // rules those steps ask, which -rules replaces with a file of their own.
+// aquatic, the repository of aquatic.dev, serves the catalog with a page
+// that browses it.
 // It keeps every provider, or those
 // -providers names: "listed" keeps the providers the rules list.
 //
@@ -14,8 +14,6 @@
 //	go run ./cmd/catalog build -providers listed -o catalog-listed.json
 //	go run ./cmd/catalog build -rules my-rules.json -notes
 //	go run ./cmd/catalog build -in catalog-models-dev.json -providers anthropic,openai,vercel -notes
-//	go run ./cmd/catalog serve                      # browse http://localhost:4100
-//	go run ./cmd/catalog serve -catalog catalog.json -refresh 1h
 //	go run ./cmd/catalog snapshot -providers anthropic,openai -o snapshot.json   # the catalog flow compiles in, of this version
 package main
 
@@ -27,10 +25,8 @@ import (
 	"fmt"
 	"io"
 	"os"
-	"os/signal"
 	"slices"
 	"strings"
-	"syscall"
 	"time"
 
 	"github.com/unaquatic/catalog/data"
@@ -46,9 +42,9 @@ func main() {
 
 var rootCmd = &cmdline.Command[cmdline.NoOptions]{
 	Name:     "catalog",
-	Short:    "Build and serve flow's model catalog",
-	Banner:   "Build flow's model catalog from models.dev, and serve it with a page that browses it.",
-	Commands: []cmdline.Node{buildCmd, updateCmd, remapCmd, applyCmd, joinCmd, serveCmd, snapshotCmd},
+	Short:    "Build flow's model catalog",
+	Banner:   "Build flow's model catalog from models.dev.",
+	Commands: []cmdline.Node{buildCmd, updateCmd, remapCmd, applyCmd, joinCmd, snapshotCmd},
 }
 
 // SourceOptions choose the models.dev catalog to build from, and what to
@@ -288,36 +284,6 @@ func PrintReport(w io.Writer, rep build.Report, all bool) {
 	for _, note := range rep.Notes {
 		fmt.Fprintf(w, "note: %s\n", note)
 	}
-}
-
-// ServeOptions are the flags of the serve command.
-type ServeOptions struct {
-	SourceOptions
-	// Catalog is a file holding a catalog that build wrote, served in place
-	// of one built from models.dev.
-	Catalog string
-	Host    string
-	Port    int
-	// Refresh is how often to load the catalog again; zero never does.
-	Refresh time.Duration
-}
-
-var serveCmd = &cmdline.Command[ServeOptions]{
-	Name:  "serve",
-	Short: "Serve the catalog and a page that browses it over HTTP",
-	Flags: func(fs *flag.FlagSet, o *ServeOptions) {
-		BindSourceFlags(fs, &o.SourceOptions)
-		fs.StringVar(&o.Catalog, "catalog", "", "Serve the catalog at `path`, a catalog directory, as data/catalog, or a .json file, instead of building one")
-		fs.StringVar(&o.Host, "host", "127.0.0.1", "Listen on `address`")
-		fs.IntVar(&o.Port, "port", 4100, "Port to listen on")
-		fs.DurationVar(&o.Refresh, "refresh", 0, "Load the catalog again every `interval`, such as 1h; 0 never does")
-	},
-	Exclusive: [][]string{{"catalog", "source", "in"}},
-	Run: func(ctx context.Context, o ServeOptions, _ []string) error {
-		ctx, stop := signal.NotifyContext(ctx, syscall.SIGINT, syscall.SIGTERM)
-		defer stop()
-		return Serve(ctx, o, os.Stderr)
-	},
 }
 
 // SnapshotOptions are the flags of the snapshot command.
