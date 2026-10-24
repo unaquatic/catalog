@@ -31,13 +31,10 @@
       }
     ],
     "providers": [
-      "huggingface",
       "jiekou",
       "meganova",
       "opencode",
-      "qiniu-ai",
-      "xiaomi",
-      "zenmux"
+      "qiniu-ai"
     ]
   },
   "xiaomi/mimo-v2-omni": {
@@ -70,9 +67,7 @@
       "output": 131072
     },
     "providers": [
-      "opencode",
-      "xiaomi",
-      "zenmux"
+      "opencode"
     ]
   },
   "xiaomi/mimo-v2-pro": {
@@ -102,12 +97,7 @@
     },
     "providers": [
       "abacus",
-      "opencode",
-      "xiaomi",
-      "xiaomi-token-plan-ams",
-      "xiaomi-token-plan-cn",
-      "xiaomi-token-plan-sgp",
-      "zenmux"
+      "opencode"
     ]
   },
   "xiaomi/mimo-v2-tts": {
@@ -135,11 +125,7 @@
       "context": 8192,
       "output": 8192
     },
-    "providers": [
-      "xiaomi-token-plan-ams",
-      "xiaomi-token-plan-cn",
-      "xiaomi-token-plan-sgp"
-    ]
+    "providers": []
   },
   "xiaomi/mimo-v2.5": {
     "id": "xiaomi/mimo-v2.5",
@@ -177,7 +163,6 @@
     ],
     "providers": [
       "aimlapi",
-      "ambient",
       "cline-pass",
       "deepinfra",
       "huggingface",
@@ -185,15 +170,12 @@
       "inferx",
       "kenari",
       "kilo",
-      "llmgateway",
-      "llmgateway-providers",
       "llmtr",
       "nano-gpt",
       "novita-ai",
       "opencode",
       "opencode-go",
       "openrouter",
-      "pioneer",
       "requesty",
       "standardcompute",
       "vercel",
@@ -243,14 +225,11 @@
       "huggingface",
       "kenari",
       "kilo",
-      "llmgateway",
-      "llmgateway-providers",
       "llmtr",
       "nano-gpt",
       "novita-ai",
       "opencode-go",
       "openrouter",
-      "pioneer",
       "requesty",
       "standardcompute",
       "vercel",

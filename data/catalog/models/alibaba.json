@@ -1041,75 +1041,12 @@
       }
     ],
     "providers": [
-      "alibaba",
-      "alibaba-cn",
       "cortecs",
       "kilo",
       "nano-gpt",
       "openrouter",
       "ovhcloud",
       "qiniu-ai"
-    ]
-  },
-  "alibaba/qwen2.5-14b-instruct": {
-    "id": "alibaba/qwen2.5-14b-instruct",
-    "lab": "alibaba",
-    "name": "Qwen2.5 14B Instruct",
-    "family": "qwen",
-    "released": "2024-09-19",
-    "updated": "2024-09-19",
-    "knowledge": "2024-04",
-    "open_weights": true,
-    "reasoning": false,
-    "capabilities": {
-      "tools": true,
-      "attachments": false,
-      "temperature": true,
-      "input": [
-        "text"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 131072,
-      "output": 8192
-    },
-    "providers": [
-      "alibaba",
-      "alibaba-cn",
-      "digitalocean"
-    ]
-  },
-  "alibaba/qwen2.5-32b-instruct": {
-    "id": "alibaba/qwen2.5-32b-instruct",
-    "lab": "alibaba",
-    "name": "Qwen2.5 32B Instruct",
-    "family": "qwen",
-    "released": "2024-09-19",
-    "updated": "2024-09-19",
-    "knowledge": "2024-04",
-    "open_weights": true,
-    "reasoning": false,
-    "capabilities": {
-      "tools": true,
-      "attachments": false,
-      "temperature": true,
-      "input": [
-        "text"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 131072,
-      "output": 8192
-    },
-    "providers": [
-      "alibaba",
-      "alibaba-cn"
     ]
   },
   "alibaba/qwen2.5-32b-instruct-abliterated": {
@@ -1148,7 +1085,6 @@
     "family": "qwen",
     "released": "2024-09-19",
     "updated": "2024-09-19",
-    "knowledge": "2024-04",
     "open_weights": true,
     "reasoning": false,
     "capabilities": {
@@ -1163,13 +1099,11 @@
       ]
     },
     "limit": {
-      "context": 131072,
+      "context": 128000,
       "output": 8192
     },
     "providers": [
       "abacus",
-      "alibaba",
-      "alibaba-cn",
       "kilo",
       "nano-gpt",
       "openrouter",
@@ -1209,8 +1143,6 @@
       }
     ],
     "providers": [
-      "alibaba",
-      "alibaba-cn",
       "edenai",
       "kilo",
       "openrouter",
@@ -1280,9 +1212,7 @@
         "url": "https://huggingface.co/Qwen/Qwen2.5-Coder-0.5B"
       }
     ],
-    "providers": [
-      "pioneer"
-    ]
+    "providers": []
   },
   "alibaba/qwen2.5-coder-32b-instruct": {
     "id": "alibaba/qwen2.5-coder-32b-instruct",
@@ -1316,7 +1246,6 @@
     ],
     "providers": [
       "abacus",
-      "alibaba-cn",
       "cloudflare-workers-ai",
       "edenai",
       "huggingface",
@@ -1352,93 +1281,6 @@
     },
     "providers": [
       "helicone"
-    ]
-  },
-  "alibaba/qwen2.5-coder-7b-instruct": {
-    "id": "alibaba/qwen2.5-coder-7b-instruct",
-    "lab": "alibaba",
-    "name": "Qwen2.5 Coder 7B Instruct",
-    "family": "qwen",
-    "released": "2024-09-19",
-    "updated": "2024-11-01",
-    "knowledge": "2024-04",
-    "open_weights": true,
-    "reasoning": false,
-    "capabilities": {
-      "tools": true,
-      "attachments": false,
-      "temperature": true,
-      "input": [
-        "text"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 131072,
-      "output": 8192
-    },
-    "providers": [
-      "alibaba-cn"
-    ]
-  },
-  "alibaba/qwen2.5-math-72b-instruct": {
-    "id": "alibaba/qwen2.5-math-72b-instruct",
-    "lab": "alibaba",
-    "name": "Qwen2.5 Math 72B Instruct",
-    "family": "qwen",
-    "released": "2024-09-19",
-    "updated": "2024-09-19",
-    "knowledge": "2024-04",
-    "open_weights": true,
-    "reasoning": false,
-    "capabilities": {
-      "tools": true,
-      "attachments": false,
-      "temperature": true,
-      "input": [
-        "text"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 4096,
-      "output": 3072
-    },
-    "providers": [
-      "alibaba-cn"
-    ]
-  },
-  "alibaba/qwen2.5-math-7b-instruct": {
-    "id": "alibaba/qwen2.5-math-7b-instruct",
-    "lab": "alibaba",
-    "name": "Qwen2.5 Math 7B Instruct",
-    "family": "qwen",
-    "released": "2024-09-19",
-    "updated": "2024-09-19",
-    "knowledge": "2024-04",
-    "open_weights": true,
-    "reasoning": false,
-    "capabilities": {
-      "tools": true,
-      "attachments": false,
-      "temperature": true,
-      "input": [
-        "text"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 4096,
-      "output": 3072
-    },
-    "providers": [
-      "alibaba-cn"
     ]
   },
   "alibaba/qwen2.5-omni-7b": {
@@ -1504,65 +1346,6 @@
     "providers": [
       "io-net",
       "meganova"
-    ]
-  },
-  "alibaba/qwen2.5-vl-7b-instruct": {
-    "id": "alibaba/qwen2.5-vl-7b-instruct",
-    "lab": "alibaba",
-    "name": "Qwen2.5 VL 7B Instruct",
-    "family": "qwen",
-    "released": "2025-01-26",
-    "updated": "2025-01-26",
-    "knowledge": "2024-04",
-    "open_weights": true,
-    "reasoning": false,
-    "capabilities": {
-      "tools": true,
-      "attachments": true,
-      "temperature": true,
-      "input": [
-        "text",
-        "image"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 131072,
-      "output": 8192
-    },
-    "providers": [
-      "alibaba",
-      "alibaba-cn",
-      "qiniu-ai"
-    ]
-  },
-  "alibaba/qwen3-1.7b-base": {
-    "id": "alibaba/qwen3-1.7b-base",
-    "lab": "alibaba",
-    "name": "Qwen3 1.7B Base",
-    "released": "2025-03-31",
-    "updated": "2025-03-31",
-    "open_weights": false,
-    "reasoning": false,
-    "capabilities": {
-      "tools": true,
-      "attachments": false,
-      "temperature": true,
-      "input": [
-        "text"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 32768,
-      "output": 32768
-    },
-    "providers": [
-      "pioneer"
     ]
   },
   "alibaba/qwen3-14b": {
@@ -1639,7 +1422,6 @@
       "alibaba",
       "alibaba-cn",
       "huggingface",
-      "iflowcn",
       "jiekou",
       "llmgateway-providers",
       "nano-gpt",
@@ -1715,7 +1497,6 @@
       "edenai",
       "greenpt",
       "huggingface",
-      "iflowcn",
       "jiekou",
       "kilo",
       "llmgateway",
@@ -1725,7 +1506,6 @@
       "nano-gpt",
       "nebius",
       "openrouter",
-      "pioneer",
       "poe",
       "qiniu-ai",
       "scaleway",
@@ -1800,7 +1580,6 @@
       "edenai",
       "helicone",
       "huggingface",
-      "iflowcn",
       "io-net",
       "jiekou",
       "kilo",
@@ -1810,7 +1589,6 @@
       "nano-gpt",
       "openrouter",
       "qiniu-ai",
-      "siliconflow-cn",
       "submodel"
     ]
   },
@@ -1977,76 +1755,19 @@
       "chutes",
       "cortecs",
       "deepinfra",
-      "digitalocean",
       "helicone",
       "huggingface",
-      "iflowcn",
       "jiekou",
       "kilo",
       "llmgateway",
       "llmgateway-providers",
       "nano-gpt",
       "openrouter",
-      "pioneer",
       "poe",
       "qiniu-ai",
       "siliconflow",
       "siliconflow-cn",
       "vercel"
-    ]
-  },
-  "alibaba/qwen3-4b-base": {
-    "id": "alibaba/qwen3-4b-base",
-    "lab": "alibaba",
-    "name": "Qwen3 4B Base",
-    "released": "2025-03-31",
-    "updated": "2025-03-31",
-    "open_weights": false,
-    "reasoning": false,
-    "capabilities": {
-      "tools": true,
-      "attachments": false,
-      "temperature": true,
-      "input": [
-        "text"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 32768,
-      "output": 32768
-    },
-    "providers": [
-      "pioneer"
-    ]
-  },
-  "alibaba/qwen3-4b-instruct-2507": {
-    "id": "alibaba/qwen3-4b-instruct-2507",
-    "lab": "alibaba",
-    "name": "Qwen3 4B Instruct 2507",
-    "released": "2025-07-31",
-    "updated": "2025-07-31",
-    "open_weights": false,
-    "reasoning": false,
-    "capabilities": {
-      "tools": true,
-      "attachments": false,
-      "temperature": true,
-      "input": [
-        "text"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 32768,
-      "output": 32768
-    },
-    "providers": [
-      "pioneer"
     ]
   },
   "alibaba/qwen3-8b": {
@@ -2085,7 +1806,6 @@
       "alibaba-cn",
       "huggingface",
       "nano-gpt",
-      "pioneer",
       "siliconflow",
       "siliconflow-cn",
       "thinkingmachines"
@@ -2214,7 +1934,6 @@
       "alibaba-cn",
       "deepinfra",
       "edenai",
-      "fastrouter",
       "helicone",
       "huggingface",
       "io-net",
@@ -2227,7 +1946,6 @@
       "openrouter",
       "qiniu-ai",
       "siliconflow",
-      "siliconflow-cn",
       "submodel",
       "togetherai",
       "vercel"
@@ -2261,7 +1979,6 @@
     "providers": [
       "alibaba",
       "alibaba-cn",
-      "digitalocean",
       "edenai",
       "kilo",
       "llmgateway",
@@ -2354,7 +2071,6 @@
       "alibaba-cn",
       "alibaba-coding-plan",
       "alibaba-coding-plan-cn",
-      "iflowcn",
       "llmtr",
       "ofox",
       "zenmux"
@@ -2533,7 +2249,6 @@
       "alibaba-cn",
       "deepinfra",
       "edenai",
-      "iflowcn",
       "llmgateway",
       "llmgateway-providers",
       "llmtr",
@@ -2601,7 +2316,6 @@
       "output": 32768
     },
     "providers": [
-      "iflowcn",
       "qiniu-ai"
     ]
   },
@@ -2720,7 +2434,6 @@
     "providers": [
       "alibaba",
       "alibaba-cn",
-      "huggingface",
       "jalapeno",
       "jiekou",
       "kilo",
@@ -3376,7 +3089,6 @@
     "providers": [
       "alibaba",
       "alibaba-cn",
-      "iflowcn",
       "llmgateway",
       "llmgateway-providers",
       "llmtr"
@@ -3765,14 +3477,12 @@
       "nebius",
       "novita-ai",
       "ofox",
-      "ollama-cloud",
       "openrouter",
       "orcarouter",
       "ovhcloud",
       "qiniu-ai",
       "scaleway",
       "siliconflow",
-      "siliconflow-cn",
       "thinkingmachines",
       "togetherai",
       "tokengo",
@@ -3863,7 +3573,6 @@
       "nano-gpt",
       "openrouter",
       "ovhcloud",
-      "pioneer",
       "regolo-ai",
       "routing-run",
       "siliconflow",
@@ -4204,7 +3913,6 @@
       "openrouter",
       "ovhcloud",
       "pendra",
-      "pioneer",
       "siliconflow",
       "stackit",
       "synthetic",
@@ -4271,7 +3979,6 @@
       "openrouter",
       "opper",
       "orcarouter",
-      "pioneer",
       "scaleway",
       "siliconflow",
       "siliconflow-cn",
@@ -4325,8 +4032,7 @@
       "nano-gpt",
       "ofox",
       "openrouter",
-      "orcarouter",
-      "pioneer"
+      "orcarouter"
     ]
   },
   "alibaba/qwen3.6-max-preview": {
@@ -4358,8 +4064,7 @@
       "alibaba",
       "alibaba-cn",
       "nano-gpt",
-      "ofox",
-      "pioneer"
+      "ofox"
     ]
   },
   "alibaba/qwen3.6-plus": {
@@ -4410,7 +4115,6 @@
       "opencode",
       "openrouter",
       "orcarouter",
-      "pioneer",
       "requesty",
       "togetherai",
       "vercel",
@@ -4508,7 +4212,6 @@
       "ofox",
       "openrouter",
       "orcarouter",
-      "pioneer",
       "requesty",
       "standardcompute",
       "togetherai",
@@ -4567,7 +4270,6 @@
       "opencode-go",
       "openrouter",
       "orcarouter",
-      "pioneer",
       "requesty",
       "standardcompute",
       "vercel",
@@ -5153,7 +4855,7 @@
     "limit": {
       "context": 1048576,
       "input": 1048576,
-      "output": 32768
+      "output": 65536
     },
     "providers": [
       "nano-gpt"
@@ -5587,7 +5289,6 @@
     ],
     "providers": [
       "abacus",
-      "alibaba-cn",
       "cloudflare-workers-ai"
     ]
   },

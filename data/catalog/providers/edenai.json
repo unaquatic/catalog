@@ -199,10 +199,11 @@
         "name": "Qwen3 235B-A22B Instruct 2507 (Greenpt)"
       },
       "price": {
-        "input": 1.01106,
-        "output": 3.03318
+        "input": 1.007369,
+        "output": 3.022108
       },
       "aliases": [
+        "arkanecloud/Qwen/Qwen3-235B-A22B-Instruct-2507",
         "deepinfra/Qwen/Qwen3-235B-A22B-Instruct-2507",
         "nebius/Qwen/Qwen3-235B-A22B-Instruct-2507",
         "scaleway/qwen3-235b-a22b-instruct-2507"
@@ -399,8 +400,8 @@
         "name": "Qwen3 Coder Next (IONOS)"
       },
       "price": {
-        "input": 0.16851,
-        "output": 0.89872
+        "input": 0.167895,
+        "output": 0.89544
       },
       "aliases": [
         "amazon/qwen.qwen3-coder-next"
@@ -2246,6 +2247,7 @@
         "cache_read": 0.015
       },
       "aliases": [
+        "arkanecloud/deepseek-ai/DeepSeek-V4.1-Flash",
         "deepinfra/deepseek-ai/DeepSeek-V4.1-Flash",
         "flexai/DeepSeek-V4.1-Flash",
         "greenference/deepseek-v4.1-flash",
@@ -2302,6 +2304,8 @@
       "aliases": [
         "cloudflare/@cf/deepseek-ai/deepseek-v4.1-flash-1017",
         "deepinfra/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+        "flexai/DeepSeek-V4.1-Flash-1017",
+        "nebius/deepseek-ai/DeepSeek-V4.1-Flash-1017",
         "sference/deepseek-ai/DeepSeek-V4.1-Flash-1017",
         "tensorx/deepseek/deepseek-v4.1-flash-1017",
         "together_ai/deepseek-ai/DeepSeek-V4.1-Flash-1017"
@@ -3468,7 +3472,7 @@
       "updated": "2023-08-10",
       "open_weights": true,
       "capabilities": {
-        "tools": false,
+        "tools": true,
         "attachments": false,
         "structured_output": true,
         "temperature": true,
@@ -3530,6 +3534,72 @@
         "input": 0.06,
         "output": 0.25,
         "cache_read": 0.015
+      }
+    },
+    "meta/llama-3.1-70b-instruct": {
+      "name": "Llama 3.1 70B Instruct",
+      "family": "llama",
+      "released": "2024-07-23",
+      "updated": "2024-07-23",
+      "knowledge": "2023-12",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 131072,
+        "output": 4096
+      },
+      "provider_options": {
+        "id": "arkanecloud/meta-llama/Llama-3.1-70B-Instruct",
+        "name": "Llama-3.1-70B-Instruct (Arkanecloud)"
+      },
+      "price": {
+        "input": 0.8,
+        "output": 0.8,
+        "cache_read": 0.16
+      }
+    },
+    "meta/llama-3.1-8b-instruct": {
+      "name": "Llama 3.1 8B Instruct",
+      "family": "llama",
+      "released": "2024-07-23",
+      "updated": "2024-07-23",
+      "knowledge": "2023-12",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 131072,
+        "output": 4096
+      },
+      "provider_options": {
+        "id": "arkanecloud/meta-llama/Llama-3.1-8B-Instruct",
+        "name": "Llama-3.1-8B-Instruct (Arkanecloud)"
+      },
+      "price": {
+        "input": 0.15,
+        "output": 0.15,
+        "cache_read": 0.03
       }
     },
     "meta/llama-3.2-11b-vision-instruct": {
@@ -3660,10 +3730,11 @@
         "name": "Llama-3.3-70B-Instruct (Greenpt)"
       },
       "price": {
-        "input": 1.23574,
-        "output": 1.23574
+        "input": 1.231229,
+        "output": 1.231229
       },
       "aliases": [
+        "arkanecloud/meta-llama/Llama-3.3-70B-Instruct",
         "deepinfra/meta-llama/Llama-3.3-70B-Instruct",
         "ionos/meta-llama/Llama-3.3-70B-Instruct",
         "scaleway/llama-3.3-70b-instruct"
@@ -4268,19 +4339,21 @@
       "updated": "2026-10-19",
       "open_weights": false,
       "capabilities": {
-        "tools": false,
-        "attachments": false,
+        "tools": true,
+        "attachments": true,
         "structured_output": false,
         "temperature": true,
         "input": [
-          "text"
+          "text",
+          "image",
+          "video"
         ],
         "output": [
           "text"
         ]
       },
       "limit": {
-        "context": 1000000,
+        "context": 1048576,
         "output": 512000
       },
       "reasoning": {
@@ -4475,6 +4548,39 @@
         "cache_read": 0.15
       }
     },
+    "mistral/ministral-14b": {
+      "name": "Ministral 14B",
+      "family": "ministral",
+      "released": "2025-12-02",
+      "updated": "2025-12-02",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": false,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 32768,
+        "output": 262144
+      },
+      "provider_options": {
+        "id": "arkanecloud/ministral-14b",
+        "name": "Ministral 14B (Arkanecloud)"
+      },
+      "price": {
+        "input": 0.15,
+        "output": 0.15,
+        "cache_read": 0.15
+      }
+    },
     "mistral/ministral-14b-2512": {
       "name": "Ministral 14B 2512",
       "family": "ministral",
@@ -4536,8 +4642,8 @@
         "name": "Ministral 3 14B (Infomaniak)"
       },
       "price": {
-        "input": 0.33702,
-        "output": 0.44936
+        "input": 0.33579,
+        "output": 0.44772
       }
     },
     "mistral/ministral-3b-2512": {
@@ -5467,6 +5573,47 @@
         "cache_read": 0.3
       }
     },
+    "moonshotai/kimi-k3.1-pro": {
+      "name": "Kimi K3.1 Pro",
+      "family": "kimi-k3",
+      "released": "2026-10-23",
+      "updated": "2026-10-23",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "high",
+          "max"
+        ]
+      },
+      "provider_options": {
+        "id": "moonshot/kimi-k3.1-pro",
+        "name": "Kimi K3.1 Pro"
+      },
+      "price": {
+        "input": 2,
+        "output": 10,
+        "cache_read": 0.2
+      }
+    },
     "nousresearch/hermes-3-llama-3.1-405b": {
       "name": "Hermes 3 Llama 3.1 405B",
       "family": "nousresearch",
@@ -5636,6 +5783,7 @@
         "output": 0.4
       },
       "aliases": [
+        "arkanecloud/nvidia/nemotron-3-super-120b-a12b",
         "nebius/nvidia/nemotron-3-super-120b-a12b"
       ]
     },
@@ -5680,6 +5828,7 @@
         "cache_read": 0.1
       },
       "aliases": [
+        "arkanecloud/nvidia/nemotron-3-ultra-550b-a55b",
         "nebius/nvidia/Nemotron-3-Ultra-550b-a55b"
       ]
     },
@@ -7324,6 +7473,7 @@
         "cache_read": 0.0075
       },
       "aliases": [
+        "arkanecloud/openai/gpt-oss-120b",
         "cerebras/gpt-oss-120b",
         "cloudflare/@cf/openai/gpt-oss-120b",
         "databricks/databricks-gpt-oss-120b",
@@ -7380,6 +7530,7 @@
         "cache_read": 0.003
       },
       "aliases": [
+        "arkanecloud/openai/gpt-oss-20b",
         "cloudflare/@cf/openai/gpt-oss-20b",
         "databricks/databricks-gpt-oss-20b",
         "databricks/databricks-gpt-oss-20b@eu",

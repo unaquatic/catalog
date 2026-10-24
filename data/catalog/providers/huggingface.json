@@ -456,39 +456,6 @@
         "output": 1
       }
     },
-    "alibaba/qwen3-next-80b-a3b-thinking": {
-      "name": "Qwen3 Next 80B A3B Thinking",
-      "family": "qwen",
-      "released": "2025-09-12",
-      "updated": "2025-09-12",
-      "knowledge": "2025-04",
-      "open_weights": true,
-      "capabilities": {
-        "tools": true,
-        "attachments": false,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 262144,
-        "output": 32768
-      },
-      "reasoning": {},
-      "provider_options": {
-        "id": "Qwen/Qwen3-Next-80B-A3B-Thinking",
-        "name": "Qwen3-Next-80B-A3B-Thinking"
-      },
-      "price": {
-        "input": 0.3,
-        "output": 2
-      },
-      "status": "deprecated"
-    },
     "alibaba/qwen3-vl-235b-a22b-instruct": {
       "name": "Qwen3 VL 235B A22B Instruct",
       "family": "qwen",
@@ -2386,39 +2353,6 @@
         "output": 1.2
       }
     },
-    "xiaomi/mimo-v2-flash": {
-      "name": "MiMo V2 Flash",
-      "family": "mimo",
-      "released": "2025-12-16",
-      "updated": "2026-02-04",
-      "knowledge": "2024-12-01",
-      "open_weights": true,
-      "capabilities": {
-        "tools": true,
-        "attachments": false,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 262144,
-        "output": 4096
-      },
-      "reasoning": {},
-      "provider_options": {
-        "id": "XiaomiMiMo/MiMo-V2-Flash",
-        "name": "MiMo-V2-Flash"
-      },
-      "price": {
-        "input": 0.1,
-        "output": 0.3
-      },
-      "status": "deprecated"
-    },
     "xiaomi/mimo-v2.5": {
       "name": "MiMo V2.5",
       "family": "mimo",
@@ -2533,39 +2467,6 @@
         "input": 0.035,
         "output": 0.138
       }
-    },
-    "zhipuai/glm-4.5": {
-      "name": "GLM 4.5",
-      "family": "glm",
-      "released": "2025-07-28",
-      "updated": "2025-07-28",
-      "knowledge": "2025-04",
-      "open_weights": true,
-      "capabilities": {
-        "tools": true,
-        "attachments": false,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 131072,
-        "output": 98304
-      },
-      "reasoning": {},
-      "provider_options": {
-        "id": "zai-org/GLM-4.5",
-        "name": "GLM-4.5"
-      },
-      "price": {
-        "input": 0.6,
-        "output": 2.2
-      },
-      "status": "deprecated"
     },
     "zhipuai/glm-4.5-air": {
       "name": "GLM 4.5 Air",

@@ -185,49 +185,6 @@
         "output": 1
       }
     },
-    "cloudflare/clairic": {
-      "name": "Clairic",
-      "type": "decision",
-      "released": "2026-10-14",
-      "updated": "2026-10-14",
-      "open_weights": true,
-      "capabilities": {
-        "tools": false,
-        "attachments": true,
-        "structured_output": true,
-        "temperature": true,
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 65536,
-        "output": 65536
-      },
-      "provider_options": {
-        "id": "@cf/cloudflare/clairic",
-        "name": "Clairic",
-        "endpoint": {
-          "format": "openai-chat",
-          "api": "https://api.cloudflare.com/client/v4/accounts/${CLOUDFLARE_ACCOUNT_ID}/ai/run",
-          "auth": {
-            "scheme": "bearer"
-          },
-          "env": [
-            "CLOUDFLARE_ACCOUNT_ID",
-            "CLOUDFLARE_API_KEY"
-          ]
-        }
-      },
-      "price": {
-        "input": 0.1,
-        "output": 0
-      }
-    },
     "cloudflare/clef": {
       "name": "Clef",
       "type": "decision",

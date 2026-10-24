@@ -1,34 +1,4 @@
 {
-  "cloudflare/clairic": {
-    "id": "cloudflare/clairic",
-    "lab": "cloudflare",
-    "name": "Clairic",
-    "type": "decision",
-    "released": "2026-10-14",
-    "updated": "2026-10-14",
-    "open_weights": true,
-    "reasoning": false,
-    "capabilities": {
-      "tools": false,
-      "attachments": true,
-      "structured_output": true,
-      "temperature": true,
-      "input": [
-        "text",
-        "image"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 65536,
-      "output": 65536
-    },
-    "providers": [
-      "cloudflare-workers-ai"
-    ]
-  },
   "cloudflare/clef": {
     "id": "cloudflare/clef",
     "lab": "cloudflare",

@@ -936,58 +936,6 @@
         "cache_read": 0.1
       }
     },
-    "microsoft/mai-code-1-flash": {
-      "name": "MAI Code 1 Flash",
-      "family": "mai",
-      "released": "2026-06-02",
-      "updated": "2026-06-08",
-      "knowledge": "2025-12",
-      "open_weights": false,
-      "capabilities": {
-        "tools": true,
-        "attachments": false,
-        "structured_output": true,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 256000,
-        "input": 128000,
-        "output": 128000
-      },
-      "reasoning": {
-        "efforts": [
-          "low",
-          "medium",
-          "high"
-        ]
-      },
-      "provider_options": {
-        "id": "mai-code-1-flash-picker",
-        "name": "MAI-Code-1-Flash",
-        "endpoint": {
-          "format": "openai-responses",
-          "api": "https://api.githubcopilot.com",
-          "auth": {
-            "scheme": "bearer"
-          },
-          "env": [
-            "GITHUB_TOKEN"
-          ]
-        }
-      },
-      "price": {
-        "input": 0.75,
-        "output": 4.5,
-        "cache_read": 0.075
-      },
-      "status": "deprecated"
-    },
     "microsoft/mai-code-1.1-flash": {
       "name": "MAI Code 1.1 Flash",
       "family": "mai",

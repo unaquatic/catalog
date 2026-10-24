@@ -2252,6 +2252,50 @@
         "cache_read": 0.5
       }
     },
+    "zhipuai/glm-5.3": {
+      "name": "GLM 5.3",
+      "family": "glm",
+      "released": "2026-08-14",
+      "updated": "2026-08-14",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "high",
+          "max"
+        ]
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "z-ai/glm-5.3",
+        "name": "GLM-5.3"
+      },
+      "price": {
+        "input": 1.8,
+        "output": 5.75,
+        "cache_read": 0.45
+      }
+    },
     "zhipuai/glm-5.3-flash": {
       "name": "GLM 5.3 Flash",
       "family": "glm-flash",

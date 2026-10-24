@@ -1262,6 +1262,38 @@
         "cache_write": 2.813
       }
     },
+    "cortecs/kolibri-1": {
+      "name": "Kolibri 1",
+      "released": "2026-10-22",
+      "updated": "2026-10-22",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 81920
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "kolibri-1",
+        "name": "kolibri-1"
+      },
+      "price": {
+        "input": 0.167,
+        "output": 0.613,
+        "cache_read": 0.084
+      }
+    },
     "deepseek/deepseek-v3.2": {
       "name": "DeepSeek V3.2",
       "family": "deepseek",
@@ -1502,9 +1534,9 @@
         "name": "DeepSeek V4.1 Flash 1017"
       },
       "price": {
-        "input": 0.511,
-        "output": 1.534,
-        "cache_read": 0.128
+        "input": 0.279,
+        "output": 1.114,
+        "cache_read": 0.111
       }
     },
     "google/gemini-2.5-flash": {
@@ -2533,8 +2565,8 @@
         ]
       },
       "limit": {
-        "context": 128000,
-        "output": 128000
+        "context": 118000,
+        "output": 118000
       },
       "provider_options": {
         "id": "mistral-nemo-instruct-2407",
