@@ -318,61 +318,6 @@
       },
       "status": "beta"
     },
-    "anthropic/claude-opus-4-1": {
-      "name": "Claude Opus 4.1",
-      "family": "claude-opus",
-      "released": "2025-11-18",
-      "updated": "2025-11-18",
-      "knowledge": "2025-03-31",
-      "open_weights": false,
-      "capabilities": {
-        "tools": true,
-        "attachments": true,
-        "structured_output": true,
-        "temperature": true,
-        "input": [
-          "text",
-          "image",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 200000,
-        "output": 32000
-      },
-      "reasoning": {
-        "mandatory": false,
-        "default_enabled": false,
-        "budget": {
-          "min": 1024
-        }
-      },
-      "provider_options": {
-        "id": "claude-opus-4-1",
-        "name": "Claude Opus 4.1",
-        "endpoint": {
-          "format": "anthropic-messages",
-          "api": "https://${AZURE_COGNITIVE_SERVICES_RESOURCE_NAME}.services.ai.azure.com/anthropic/v1",
-          "auth": {
-            "scheme": "header",
-            "header": "x-api-key"
-          },
-          "env": [
-            "AZURE_COGNITIVE_SERVICES_RESOURCE_NAME",
-            "AZURE_COGNITIVE_SERVICES_API_KEY"
-          ]
-        }
-      },
-      "price": {
-        "input": 15,
-        "output": 75,
-        "cache_read": 1.5,
-        "cache_write": 18.75
-      }
-    },
     "anthropic/claude-opus-4-5": {
       "name": "Claude Opus 4.5",
       "family": "claude-opus",
@@ -1022,7 +967,20 @@
       "reasoning": {},
       "provider_options": {
         "id": "cohere-command-a",
-        "name": "Command A"
+        "name": "Command A",
+        "endpoint": {
+          "format": "openai-chat",
+          "api": "https://${AZURE_COGNITIVE_SERVICES_RESOURCE_NAME}.cognitiveservices.azure.com/openai/v1",
+          "api_default": true,
+          "auth": {
+            "scheme": "header",
+            "header": "api-key"
+          },
+          "env": [
+            "AZURE_COGNITIVE_SERVICES_RESOURCE_NAME",
+            "AZURE_COGNITIVE_SERVICES_API_KEY"
+          ]
+        }
       },
       "price": {
         "input": 2.5,
@@ -1032,6 +990,7 @@
     "cohere/embed-v3-english": {
       "name": "Embed V3 English",
       "family": "cohere-embed",
+      "type": "embedding",
       "released": "2023-11-07",
       "updated": "2023-11-07",
       "open_weights": true,
@@ -1052,7 +1011,18 @@
       },
       "provider_options": {
         "id": "cohere-embed-v3-english",
-        "name": "Embed v3 English"
+        "name": "Embed v3 English",
+        "endpoint": {
+          "format": "openai-chat",
+          "api": "https://${AZURE_COGNITIVE_SERVICES_RESOURCE_NAME}.services.ai.azure.com/models",
+          "auth": {
+            "scheme": "bearer"
+          },
+          "env": [
+            "AZURE_COGNITIVE_SERVICES_RESOURCE_NAME",
+            "AZURE_COGNITIVE_SERVICES_API_KEY"
+          ]
+        }
       },
       "price": {
         "input": 0.1,
@@ -1062,6 +1032,7 @@
     "cohere/embed-v3-multilingual": {
       "name": "Embed V3 Multilingual",
       "family": "cohere-embed",
+      "type": "embedding",
       "released": "2023-11-07",
       "updated": "2023-11-07",
       "open_weights": true,
@@ -1082,7 +1053,18 @@
       },
       "provider_options": {
         "id": "cohere-embed-v3-multilingual",
-        "name": "Embed v3 Multilingual"
+        "name": "Embed v3 Multilingual",
+        "endpoint": {
+          "format": "openai-chat",
+          "api": "https://${AZURE_COGNITIVE_SERVICES_RESOURCE_NAME}.services.ai.azure.com/models",
+          "auth": {
+            "scheme": "bearer"
+          },
+          "env": [
+            "AZURE_COGNITIVE_SERVICES_RESOURCE_NAME",
+            "AZURE_COGNITIVE_SERVICES_API_KEY"
+          ]
+        }
       },
       "price": {
         "input": 0.1,
@@ -1092,6 +1074,7 @@
     "cohere/embed-v4.0": {
       "name": "Embed V4.0",
       "family": "cohere-embed",
+      "type": "embedding",
       "released": "2025-04-15",
       "updated": "2025-04-15",
       "open_weights": true,
@@ -1113,45 +1096,23 @@
       },
       "provider_options": {
         "id": "cohere-embed-v-4-0",
-        "name": "Embed v4"
+        "name": "Embed v4",
+        "endpoint": {
+          "format": "openai-chat",
+          "api": "https://${AZURE_COGNITIVE_SERVICES_RESOURCE_NAME}.services.ai.azure.com/models",
+          "auth": {
+            "scheme": "bearer"
+          },
+          "env": [
+            "AZURE_COGNITIVE_SERVICES_RESOURCE_NAME",
+            "AZURE_COGNITIVE_SERVICES_API_KEY"
+          ]
+        }
       },
       "price": {
         "input": 0.12,
         "output": 0
       }
-    },
-    "deepseek/deepseek-r1": {
-      "name": "DeepSeek R1",
-      "family": "deepseek-thinking",
-      "released": "2025-01-20",
-      "updated": "2025-01-20",
-      "knowledge": "2024-07",
-      "open_weights": true,
-      "capabilities": {
-        "tools": false,
-        "attachments": false,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 163840,
-        "output": 163840
-      },
-      "reasoning": {},
-      "provider_options": {
-        "id": "deepseek-r1",
-        "name": "DeepSeek-R1"
-      },
-      "price": {
-        "input": 1.35,
-        "output": 5.4
-      },
-      "status": "deprecated"
     },
     "deepseek/deepseek-v3.2": {
       "name": "DeepSeek V3.2",
@@ -1178,7 +1139,20 @@
       "reasoning": {},
       "provider_options": {
         "id": "deepseek-v3.2",
-        "name": "DeepSeek-V3.2"
+        "name": "DeepSeek-V3.2",
+        "endpoint": {
+          "format": "openai-chat",
+          "api": "https://${AZURE_COGNITIVE_SERVICES_RESOURCE_NAME}.cognitiveservices.azure.com/openai/v1",
+          "api_default": true,
+          "auth": {
+            "scheme": "header",
+            "header": "api-key"
+          },
+          "env": [
+            "AZURE_COGNITIVE_SERVICES_RESOURCE_NAME",
+            "AZURE_COGNITIVE_SERVICES_API_KEY"
+          ]
+        }
       },
       "price": {
         "input": 0.58,
@@ -1210,7 +1184,20 @@
       "reasoning": {},
       "provider_options": {
         "id": "deepseek-v3.2-speciale",
-        "name": "DeepSeek-V3.2-Speciale"
+        "name": "DeepSeek-V3.2-Speciale",
+        "endpoint": {
+          "format": "openai-chat",
+          "api": "https://${AZURE_COGNITIVE_SERVICES_RESOURCE_NAME}.cognitiveservices.azure.com/openai/v1",
+          "api_default": true,
+          "auth": {
+            "scheme": "header",
+            "header": "api-key"
+          },
+          "env": [
+            "AZURE_COGNITIVE_SERVICES_RESOURCE_NAME",
+            "AZURE_COGNITIVE_SERVICES_API_KEY"
+          ]
+        }
       },
       "price": {
         "input": 0.58,
@@ -1376,7 +1363,20 @@
       },
       "provider_options": {
         "id": "llama-3.3-70b-instruct",
-        "name": "Llama-3.3-70B-Instruct"
+        "name": "Llama-3.3-70B-Instruct",
+        "endpoint": {
+          "format": "openai-chat",
+          "api": "https://${AZURE_COGNITIVE_SERVICES_RESOURCE_NAME}.cognitiveservices.azure.com/openai/v1",
+          "api_default": true,
+          "auth": {
+            "scheme": "header",
+            "header": "api-key"
+          },
+          "env": [
+            "AZURE_COGNITIVE_SERVICES_RESOURCE_NAME",
+            "AZURE_COGNITIVE_SERVICES_API_KEY"
+          ]
+        }
       },
       "price": {
         "input": 0.71,
@@ -1408,7 +1408,20 @@
       },
       "provider_options": {
         "id": "llama-4-maverick-17b-128e-instruct-fp8",
-        "name": "Llama 4 Maverick 17B 128E Instruct FP8"
+        "name": "Llama 4 Maverick 17B 128E Instruct FP8",
+        "endpoint": {
+          "format": "openai-chat",
+          "api": "https://${AZURE_COGNITIVE_SERVICES_RESOURCE_NAME}.cognitiveservices.azure.com/openai/v1",
+          "api_default": true,
+          "auth": {
+            "scheme": "header",
+            "header": "api-key"
+          },
+          "env": [
+            "AZURE_COGNITIVE_SERVICES_RESOURCE_NAME",
+            "AZURE_COGNITIVE_SERVICES_API_KEY"
+          ]
+        }
       },
       "price": {
         "input": 0.25,
@@ -1440,7 +1453,20 @@
       },
       "provider_options": {
         "id": "llama-4-scout-17b-16e-instruct",
-        "name": "Llama 4 Scout 17B 16E Instruct"
+        "name": "Llama 4 Scout 17B 16E Instruct",
+        "endpoint": {
+          "format": "openai-chat",
+          "api": "https://${AZURE_COGNITIVE_SERVICES_RESOURCE_NAME}.cognitiveservices.azure.com/openai/v1",
+          "api_default": true,
+          "auth": {
+            "scheme": "header",
+            "header": "api-key"
+          },
+          "env": [
+            "AZURE_COGNITIVE_SERVICES_RESOURCE_NAME",
+            "AZURE_COGNITIVE_SERVICES_API_KEY"
+          ]
+        }
       },
       "price": {
         "input": 0.2,
@@ -1471,7 +1497,20 @@
       },
       "provider_options": {
         "id": "phi-4",
-        "name": "Phi-4"
+        "name": "Phi-4",
+        "endpoint": {
+          "format": "openai-chat",
+          "api": "https://${AZURE_COGNITIVE_SERVICES_RESOURCE_NAME}.cognitiveservices.azure.com/openai/v1",
+          "api_default": true,
+          "auth": {
+            "scheme": "header",
+            "header": "api-key"
+          },
+          "env": [
+            "AZURE_COGNITIVE_SERVICES_RESOURCE_NAME",
+            "AZURE_COGNITIVE_SERVICES_API_KEY"
+          ]
+        }
       },
       "price": {
         "input": 0.125,
@@ -1502,7 +1541,20 @@
       },
       "provider_options": {
         "id": "phi-4-mini",
-        "name": "Phi-4-mini"
+        "name": "Phi-4-mini",
+        "endpoint": {
+          "format": "openai-chat",
+          "api": "https://${AZURE_COGNITIVE_SERVICES_RESOURCE_NAME}.cognitiveservices.azure.com/openai/v1",
+          "api_default": true,
+          "auth": {
+            "scheme": "header",
+            "header": "api-key"
+          },
+          "env": [
+            "AZURE_COGNITIVE_SERVICES_RESOURCE_NAME",
+            "AZURE_COGNITIVE_SERVICES_API_KEY"
+          ]
+        }
       },
       "price": {
         "input": 0.075,
@@ -1534,7 +1586,20 @@
       "reasoning": {},
       "provider_options": {
         "id": "phi-4-mini-reasoning",
-        "name": "Phi-4-mini-reasoning"
+        "name": "Phi-4-mini-reasoning",
+        "endpoint": {
+          "format": "openai-chat",
+          "api": "https://${AZURE_COGNITIVE_SERVICES_RESOURCE_NAME}.cognitiveservices.azure.com/openai/v1",
+          "api_default": true,
+          "auth": {
+            "scheme": "header",
+            "header": "api-key"
+          },
+          "env": [
+            "AZURE_COGNITIVE_SERVICES_RESOURCE_NAME",
+            "AZURE_COGNITIVE_SERVICES_API_KEY"
+          ]
+        }
       },
       "price": {
         "input": 0.075,
@@ -1567,7 +1632,20 @@
       },
       "provider_options": {
         "id": "phi-4-multimodal",
-        "name": "Phi-4-multimodal"
+        "name": "Phi-4-multimodal",
+        "endpoint": {
+          "format": "openai-chat",
+          "api": "https://${AZURE_COGNITIVE_SERVICES_RESOURCE_NAME}.cognitiveservices.azure.com/openai/v1",
+          "api_default": true,
+          "auth": {
+            "scheme": "header",
+            "header": "api-key"
+          },
+          "env": [
+            "AZURE_COGNITIVE_SERVICES_RESOURCE_NAME",
+            "AZURE_COGNITIVE_SERVICES_API_KEY"
+          ]
+        }
       },
       "price": {
         "input": 0.08,
@@ -1600,7 +1678,20 @@
       "reasoning": {},
       "provider_options": {
         "id": "phi-4-reasoning",
-        "name": "Phi-4-reasoning"
+        "name": "Phi-4-reasoning",
+        "endpoint": {
+          "format": "openai-chat",
+          "api": "https://${AZURE_COGNITIVE_SERVICES_RESOURCE_NAME}.cognitiveservices.azure.com/openai/v1",
+          "api_default": true,
+          "auth": {
+            "scheme": "header",
+            "header": "api-key"
+          },
+          "env": [
+            "AZURE_COGNITIVE_SERVICES_RESOURCE_NAME",
+            "AZURE_COGNITIVE_SERVICES_API_KEY"
+          ]
+        }
       },
       "price": {
         "input": 0.125,
@@ -1632,7 +1723,20 @@
       "reasoning": {},
       "provider_options": {
         "id": "phi-4-reasoning-plus",
-        "name": "Phi-4-reasoning-plus"
+        "name": "Phi-4-reasoning-plus",
+        "endpoint": {
+          "format": "openai-chat",
+          "api": "https://${AZURE_COGNITIVE_SERVICES_RESOURCE_NAME}.cognitiveservices.azure.com/openai/v1",
+          "api_default": true,
+          "auth": {
+            "scheme": "header",
+            "header": "api-key"
+          },
+          "env": [
+            "AZURE_COGNITIVE_SERVICES_RESOURCE_NAME",
+            "AZURE_COGNITIVE_SERVICES_API_KEY"
+          ]
+        }
       },
       "price": {
         "input": 0.125,
@@ -1663,7 +1767,20 @@
       },
       "provider_options": {
         "id": "codestral-2501",
-        "name": "Codestral 25.01"
+        "name": "Codestral 25.01",
+        "endpoint": {
+          "format": "openai-chat",
+          "api": "https://${AZURE_COGNITIVE_SERVICES_RESOURCE_NAME}.cognitiveservices.azure.com/openai/v1",
+          "api_default": true,
+          "auth": {
+            "scheme": "header",
+            "header": "api-key"
+          },
+          "env": [
+            "AZURE_COGNITIVE_SERVICES_RESOURCE_NAME",
+            "AZURE_COGNITIVE_SERVICES_API_KEY"
+          ]
+        }
       },
       "price": {
         "input": 0.3,
@@ -1694,7 +1811,20 @@
       },
       "provider_options": {
         "id": "ministral-3b",
-        "name": "Ministral 3B"
+        "name": "Ministral 3B",
+        "endpoint": {
+          "format": "openai-chat",
+          "api": "https://${AZURE_COGNITIVE_SERVICES_RESOURCE_NAME}.cognitiveservices.azure.com/openai/v1",
+          "api_default": true,
+          "auth": {
+            "scheme": "header",
+            "header": "api-key"
+          },
+          "env": [
+            "AZURE_COGNITIVE_SERVICES_RESOURCE_NAME",
+            "AZURE_COGNITIVE_SERVICES_API_KEY"
+          ]
+        }
       },
       "price": {
         "input": 0.04,
@@ -1726,7 +1856,20 @@
       },
       "provider_options": {
         "id": "mistral-medium-2505",
-        "name": "Mistral Medium 3"
+        "name": "Mistral Medium 3",
+        "endpoint": {
+          "format": "openai-chat",
+          "api": "https://${AZURE_COGNITIVE_SERVICES_RESOURCE_NAME}.cognitiveservices.azure.com/openai/v1",
+          "api_default": true,
+          "auth": {
+            "scheme": "header",
+            "header": "api-key"
+          },
+          "env": [
+            "AZURE_COGNITIVE_SERVICES_RESOURCE_NAME",
+            "AZURE_COGNITIVE_SERVICES_API_KEY"
+          ]
+        }
       },
       "price": {
         "input": 0.4,
@@ -1758,7 +1901,20 @@
       },
       "provider_options": {
         "id": "mistral-small-2503",
-        "name": "Mistral Small 3.1"
+        "name": "Mistral Small 3.1",
+        "endpoint": {
+          "format": "openai-chat",
+          "api": "https://${AZURE_COGNITIVE_SERVICES_RESOURCE_NAME}.cognitiveservices.azure.com/openai/v1",
+          "api_default": true,
+          "auth": {
+            "scheme": "header",
+            "header": "api-key"
+          },
+          "env": [
+            "AZURE_COGNITIVE_SERVICES_RESOURCE_NAME",
+            "AZURE_COGNITIVE_SERVICES_API_KEY"
+          ]
+        }
       },
       "price": {
         "input": 0.1,
@@ -1972,7 +2128,20 @@
       },
       "provider_options": {
         "id": "gpt-3.5-turbo-0125",
-        "name": "GPT-3.5 Turbo 0125"
+        "name": "GPT-3.5 Turbo 0125",
+        "endpoint": {
+          "format": "openai-chat",
+          "api": "https://${AZURE_COGNITIVE_SERVICES_RESOURCE_NAME}.cognitiveservices.azure.com/openai/v1",
+          "api_default": true,
+          "auth": {
+            "scheme": "header",
+            "header": "api-key"
+          },
+          "env": [
+            "AZURE_COGNITIVE_SERVICES_RESOURCE_NAME",
+            "AZURE_COGNITIVE_SERVICES_API_KEY"
+          ]
+        }
       },
       "price": {
         "input": 0.5,
@@ -2004,7 +2173,20 @@
       },
       "provider_options": {
         "id": "gpt-3.5-turbo-1106",
-        "name": "GPT-3.5 Turbo 1106"
+        "name": "GPT-3.5 Turbo 1106",
+        "endpoint": {
+          "format": "openai-chat",
+          "api": "https://${AZURE_COGNITIVE_SERVICES_RESOURCE_NAME}.cognitiveservices.azure.com/openai/v1",
+          "api_default": true,
+          "auth": {
+            "scheme": "header",
+            "header": "api-key"
+          },
+          "env": [
+            "AZURE_COGNITIVE_SERVICES_RESOURCE_NAME",
+            "AZURE_COGNITIVE_SERVICES_API_KEY"
+          ]
+        }
       },
       "price": {
         "input": 1,
@@ -2069,7 +2251,20 @@
       },
       "provider_options": {
         "id": "gpt-4-turbo",
-        "name": "GPT-4 Turbo"
+        "name": "GPT-4 Turbo",
+        "endpoint": {
+          "format": "openai-chat",
+          "api": "https://${AZURE_COGNITIVE_SERVICES_RESOURCE_NAME}.cognitiveservices.azure.com/openai/v1",
+          "api_default": true,
+          "auth": {
+            "scheme": "header",
+            "header": "api-key"
+          },
+          "env": [
+            "AZURE_COGNITIVE_SERVICES_RESOURCE_NAME",
+            "AZURE_COGNITIVE_SERVICES_API_KEY"
+          ]
+        }
       },
       "price": {
         "input": 10,
@@ -2102,7 +2297,20 @@
       },
       "provider_options": {
         "id": "gpt-4-turbo-vision",
-        "name": "GPT-4 Turbo Vision"
+        "name": "GPT-4 Turbo Vision",
+        "endpoint": {
+          "format": "openai-chat",
+          "api": "https://${AZURE_COGNITIVE_SERVICES_RESOURCE_NAME}.cognitiveservices.azure.com/openai/v1",
+          "api_default": true,
+          "auth": {
+            "scheme": "header",
+            "header": "api-key"
+          },
+          "env": [
+            "AZURE_COGNITIVE_SERVICES_RESOURCE_NAME",
+            "AZURE_COGNITIVE_SERVICES_API_KEY"
+          ]
+        }
       },
       "price": {
         "input": 10,
@@ -3181,9 +3389,7 @@
       },
       "reasoning": {
         "efforts": [
-          "low",
-          "medium",
-          "high"
+          "medium"
         ]
       },
       "provider_options": {
@@ -3982,6 +4188,7 @@
     "openai/text-embedding-3-large": {
       "name": "Text Embedding 3 Large",
       "family": "text-embedding",
+      "type": "embedding",
       "released": "2024-01-25",
       "updated": "2024-01-25",
       "open_weights": false,
@@ -4011,6 +4218,7 @@
     "openai/text-embedding-3-small": {
       "name": "Text Embedding 3 Small",
       "family": "text-embedding",
+      "type": "embedding",
       "released": "2024-01-25",
       "updated": "2024-01-25",
       "open_weights": false,
@@ -4040,6 +4248,7 @@
     "openai/text-embedding-ada-002": {
       "name": "Text Embedding Ada 002",
       "family": "text-embedding",
+      "type": "embedding",
       "released": "2022-12-15",
       "updated": "2022-12-15",
       "open_weights": false,
@@ -4090,7 +4299,20 @@
       },
       "provider_options": {
         "id": "grok-4-20-non-reasoning",
-        "name": "Grok 4.20 (Non-Reasoning)"
+        "name": "Grok 4.20 (Non-Reasoning)",
+        "endpoint": {
+          "format": "openai-chat",
+          "api": "https://${AZURE_COGNITIVE_SERVICES_RESOURCE_NAME}.cognitiveservices.azure.com/openai/v1",
+          "api_default": true,
+          "auth": {
+            "scheme": "header",
+            "header": "api-key"
+          },
+          "env": [
+            "AZURE_COGNITIVE_SERVICES_RESOURCE_NAME",
+            "AZURE_COGNITIVE_SERVICES_API_KEY"
+          ]
+        }
       },
       "price": {
         "input": 2,
@@ -4123,7 +4345,20 @@
       "reasoning": {},
       "provider_options": {
         "id": "grok-4-20-reasoning",
-        "name": "Grok 4.20 (Reasoning)"
+        "name": "Grok 4.20 (Reasoning)",
+        "endpoint": {
+          "format": "openai-chat",
+          "api": "https://${AZURE_COGNITIVE_SERVICES_RESOURCE_NAME}.cognitiveservices.azure.com/openai/v1",
+          "api_default": true,
+          "auth": {
+            "scheme": "header",
+            "header": "api-key"
+          },
+          "env": [
+            "AZURE_COGNITIVE_SERVICES_RESOURCE_NAME",
+            "AZURE_COGNITIVE_SERVICES_API_KEY"
+          ]
+        }
       },
       "price": {
         "input": 2,
@@ -4156,7 +4391,20 @@
       },
       "provider_options": {
         "id": "grok-4-1-fast-non-reasoning",
-        "name": "Grok 4.1 Fast (Non-Reasoning)"
+        "name": "Grok 4.1 Fast (Non-Reasoning)",
+        "endpoint": {
+          "format": "openai-chat",
+          "api": "https://${AZURE_COGNITIVE_SERVICES_RESOURCE_NAME}.cognitiveservices.azure.com/openai/v1",
+          "api_default": true,
+          "auth": {
+            "scheme": "header",
+            "header": "api-key"
+          },
+          "env": [
+            "AZURE_COGNITIVE_SERVICES_RESOURCE_NAME",
+            "AZURE_COGNITIVE_SERVICES_API_KEY"
+          ]
+        }
       },
       "price": {
         "input": 0.2,
@@ -4190,7 +4438,20 @@
       "reasoning": {},
       "provider_options": {
         "id": "grok-4-1-fast-reasoning",
-        "name": "Grok 4.1 Fast (Reasoning)"
+        "name": "Grok 4.1 Fast (Reasoning)",
+        "endpoint": {
+          "format": "openai-chat",
+          "api": "https://${AZURE_COGNITIVE_SERVICES_RESOURCE_NAME}.cognitiveservices.azure.com/openai/v1",
+          "api_default": true,
+          "auth": {
+            "scheme": "header",
+            "header": "api-key"
+          },
+          "env": [
+            "AZURE_COGNITIVE_SERVICES_RESOURCE_NAME",
+            "AZURE_COGNITIVE_SERVICES_API_KEY"
+          ]
+        }
       },
       "price": {
         "input": 0.2,
@@ -4232,7 +4493,20 @@
       },
       "provider_options": {
         "id": "grok-4.6",
-        "name": "Grok 4.6"
+        "name": "Grok 4.6",
+        "endpoint": {
+          "format": "openai-chat",
+          "api": "https://${AZURE_COGNITIVE_SERVICES_RESOURCE_NAME}.cognitiveservices.azure.com/openai/v1",
+          "api_default": true,
+          "auth": {
+            "scheme": "header",
+            "header": "api-key"
+          },
+          "env": [
+            "AZURE_COGNITIVE_SERVICES_RESOURCE_NAME",
+            "AZURE_COGNITIVE_SERVICES_API_KEY"
+          ]
+        }
       },
       "price": {
         "input": 2,
@@ -4276,7 +4550,20 @@
       },
       "provider_options": {
         "id": "grok-4.7",
-        "name": "Grok 4.7"
+        "name": "Grok 4.7",
+        "endpoint": {
+          "format": "openai-chat",
+          "api": "https://${AZURE_COGNITIVE_SERVICES_RESOURCE_NAME}.cognitiveservices.azure.com/openai/v1",
+          "api_default": true,
+          "auth": {
+            "scheme": "header",
+            "header": "api-key"
+          },
+          "env": [
+            "AZURE_COGNITIVE_SERVICES_RESOURCE_NAME",
+            "AZURE_COGNITIVE_SERVICES_API_KEY"
+          ]
+        }
       },
       "status": "beta"
     }

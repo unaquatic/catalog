@@ -165,7 +165,7 @@
       },
       "limit": {
         "context": 1000000,
-        "output": 65536
+        "output": 235929
       },
       "reasoning": {
         "mandatory": false,
@@ -799,7 +799,7 @@
       "price": {
         "input": 0.3,
         "output": 1.2,
-        "cache_read": 0.03,
+        "cache_read": 0.006,
         "cache_write": 0.3
       }
     },
@@ -1461,6 +1461,48 @@
       "price": {
         "input": 3.45,
         "output": 17.25
+      }
+    },
+    "moonshotai/kimi-k3.1-pro": {
+      "name": "Kimi K3.1 Pro",
+      "family": "kimi-k3",
+      "released": "2026-10-23",
+      "updated": "2026-10-23",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 943718
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "high",
+          "max"
+        ]
+      },
+      "provider_options": {
+        "id": "moonshotai/kimi-k3.1-pro",
+        "name": "Kimi K3.1 Pro"
+      },
+      "price": {
+        "input": 2,
+        "output": 10
       }
     },
     "openai/gpt-4.1": {
@@ -2760,10 +2802,10 @@
         "name": "GLM 5.3"
       },
       "price": {
-        "input": 1.4,
-        "output": 4.4,
-        "cache_read": 0.26,
-        "cache_write": 1.4
+        "input": 0.98,
+        "output": 3.08,
+        "cache_read": 0.182,
+        "cache_write": 0.98
       }
     },
     "zhipuai/glm-5.3-flash": {

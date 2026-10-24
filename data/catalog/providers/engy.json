@@ -155,12 +155,11 @@
       "open_weights": true,
       "capabilities": {
         "tools": true,
-        "attachments": true,
+        "attachments": false,
         "structured_output": true,
         "temperature": true,
         "input": [
-          "text",
-          "image"
+          "text"
         ],
         "output": [
           "text"
@@ -188,9 +187,9 @@
         "name": "DeepSeek V4.1 Flash"
       },
       "price": {
-        "input": 0.04,
-        "output": 0.08,
-        "cache_read": 0.008
+        "input": 0.03,
+        "output": 0.12,
+        "cache_read": 0.006
       }
     },
     "deepseek/deepseek-v4.1-flash-1017": {
@@ -202,12 +201,11 @@
       "open_weights": true,
       "capabilities": {
         "tools": true,
-        "attachments": true,
+        "attachments": false,
         "structured_output": true,
         "temperature": true,
         "input": [
-          "text",
-          "image"
+          "text"
         ],
         "output": [
           "text"
@@ -235,9 +233,9 @@
         "name": "DeepSeek V4.1 Flash 1017"
       },
       "price": {
-        "input": 0.04,
-        "output": 0.08,
-        "cache_read": 0.008
+        "input": 0.03,
+        "output": 0.12,
+        "cache_read": 0.006
       }
     },
     "moonshotai/kimi-k3": {

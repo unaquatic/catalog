@@ -36,8 +36,7 @@
       "kilo",
       "nano-gpt",
       "openrouter",
-      "orcarouter",
-      "zenmux"
+      "orcarouter"
     ]
   },
   "deepseek/deepseek-chat-cheaper": {
@@ -313,13 +312,10 @@
     "providers": [
       "abacus",
       "alibaba-cn",
-      "azure",
-      "azure-cognitive-services",
       "cloudflare-workers-ai",
       "drun",
       "edenai",
       "huggingface",
-      "iflowcn",
       "melious",
       "novita-ai",
       "qiniu-ai",
@@ -439,8 +435,6 @@
     },
     "providers": [
       "alibaba-cn",
-      "digitalocean",
-      "fastrouter",
       "helicone"
     ]
   },
@@ -748,14 +742,11 @@
     "providers": [
       "alibaba-cn",
       "deepinfra",
-      "digitalocean",
       "drun",
       "edenai",
       "helicone",
       "huggingface",
-      "iflowcn",
       "novita-ai",
-      "pioneer",
       "qiniu-ai",
       "togetherai"
     ]
@@ -800,7 +791,6 @@
       "jiekou",
       "meganova",
       "nano-gpt",
-      "qiniu-ai",
       "siliconflow",
       "siliconflow-cn",
       "submodel"
@@ -840,13 +830,11 @@
     "providers": [
       "abacus",
       "alibaba-cn",
-      "baseten",
       "deepinfra",
       "huggingface",
       "jiekou",
       "meganova",
       "nano-gpt",
-      "pioneer",
       "qiniu-ai",
       "sambanova",
       "siliconflow",
@@ -967,10 +955,8 @@
       "cortecs",
       "deepinfra",
       "digitalocean",
-      "friendli",
       "helicone",
       "huggingface",
-      "iflowcn",
       "kilo",
       "llmgateway",
       "llmgateway-providers",
@@ -1125,7 +1111,6 @@
       "alibaba-cn",
       "alibaba-token-plan",
       "alibaba-token-plan-cn",
-      "ambient",
       "anyapi",
       "auriko",
       "azure",
@@ -1152,7 +1137,6 @@
       "nano-gpt",
       "neuralwatt",
       "ofox",
-      "ollama-cloud",
       "openrouter",
       "opper",
       "orcarouter",
@@ -1247,7 +1231,6 @@
       "alibaba",
       "alibaba-token-plan",
       "alibaba-token-plan-cn",
-      "ambient",
       "amd",
       "arcee",
       "baseten",
@@ -1273,7 +1256,6 @@
       "neuralwatt",
       "novita-ai",
       "ofox",
-      "ollama-cloud",
       "opencode",
       "openreason",
       "openrouter",
@@ -1339,7 +1321,6 @@
       "huggingface",
       "kilo",
       "nano-gpt",
-      "ofox",
       "opencode",
       "openrouter",
       "orcarouter",
@@ -1390,7 +1371,6 @@
       "auriko",
       "azure",
       "azure-cognitive-services",
-      "baseten",
       "cline-pass",
       "commandcode",
       "cortecs",
@@ -1416,7 +1396,6 @@
       "modelis",
       "nano-gpt",
       "nebius",
-      "neuralwatt",
       "novita-ai",
       "ofox",
       "ollama-cloud",
@@ -1425,7 +1404,6 @@
       "openrouter",
       "opper",
       "orcarouter",
-      "pioneer",
       "poe",
       "prime",
       "requesty",
@@ -1690,6 +1668,7 @@
       "cortecs",
       "deepinfra",
       "deepseek",
+      "digitalocean",
       "edenai",
       "empiriolabs",
       "engy",
@@ -1714,6 +1693,35 @@
       "umans-ai",
       "umans-ai-coding-plan",
       "vercel"
+    ]
+  },
+  "deepseek/deepseek-v4.1-flash-uncensored": {
+    "id": "deepseek/deepseek-v4.1-flash-uncensored",
+    "lab": "deepseek",
+    "name": "DeepSeek V4.1 Flash Uncensored",
+    "family": "deepseek",
+    "released": "2026-10-01",
+    "updated": "2026-10-01",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "structured_output": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "input": 1048576,
+      "output": 65536
+    },
+    "providers": [
+      "nano-gpt"
     ]
   }
 }

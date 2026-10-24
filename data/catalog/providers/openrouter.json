@@ -1104,7 +1104,7 @@
       },
       "limit": {
         "context": 262144,
-        "output": 65536
+        "output": 235929
       },
       "reasoning": {
         "mandatory": false
@@ -1114,9 +1114,8 @@
         "name": "Qwen3.5 9B"
       },
       "price": {
-        "input": 0.08,
-        "output": 0.13,
-        "cache_read": 0.04
+        "input": 0.17,
+        "output": 0.25
       },
       "status": "deprecated"
     },
@@ -1610,7 +1609,7 @@
       },
       "limit": {
         "context": 1000000,
-        "output": 65536
+        "output": 235929
       },
       "reasoning": {
         "mandatory": false,
@@ -1626,9 +1625,9 @@
         "name": "Qwen3.8 27B"
       },
       "price": {
-        "input": 0.04,
-        "output": 1.35,
-        "cache_read": 0.018
+        "input": 0.2,
+        "output": 2.5,
+        "cache_read": 0.09
       }
     },
     "alibaba/qwen3.8-flash": {
@@ -3454,9 +3453,9 @@
         "name": "DeepSeek Pro Latest"
       },
       "price": {
-        "input": 0.225,
+        "input": 0.1188,
         "output": 8,
-        "cache_read": 0.23
+        "cache_read": 0.12
       }
     },
     "deepseek/deepseek-r1-0528": {
@@ -3679,9 +3678,9 @@
         "name": "DeepSeek V4 Flash 0731"
       },
       "price": {
-        "input": 0.44,
-        "output": 1.32,
-        "cache_read": 0.014
+        "input": 0.04444,
+        "output": 0.13332,
+        "cache_read": 0.001414
       },
       "aliases": [
         "~deepseek/deepseek-v4-flash-latest"
@@ -3768,9 +3767,9 @@
         "name": "DeepSeek V4 Pro"
       },
       "price": {
-        "input": 0.897318,
-        "output": 1.794636,
-        "cache_read": 0.074777
+        "input": 0.2088,
+        "output": 0.4176,
+        "cache_read": 0.0174
       }
     },
     "deepseek/deepseek-v4-pro-0813": {
@@ -3852,9 +3851,9 @@
         "name": "DeepSeek V4.1 Flash"
       },
       "price": {
-        "input": 0.3,
-        "output": 1.2,
-        "cache_read": 0.006
+        "input": 0.02,
+        "output": 1,
+        "cache_read": 0.015
       }
     },
     "deepseek/deepseek-v4.1-flash-1017": {
@@ -4054,7 +4053,8 @@
         "output": 2.5,
         "cache_read": 0.03,
         "cache_write": 0.083333,
-        "reasoning": 2.5
+        "reasoning": 2.5,
+        "input_audio": 1
       },
       "status": "deprecated"
     },
@@ -4092,7 +4092,8 @@
         "input": 0.3,
         "output": 2.5,
         "cache_read": 0.03,
-        "cache_write": 0.083333
+        "cache_write": 0.083333,
+        "input_audio": 1
       }
     },
     "google/gemini-2.5-flash-lite": {
@@ -4134,7 +4135,8 @@
         "output": 0.4,
         "cache_read": 0.01,
         "cache_write": 0.083333,
-        "reasoning": 0.4
+        "reasoning": 0.4,
+        "input_audio": 0.3
       },
       "status": "deprecated"
     },
@@ -4181,6 +4183,7 @@
         "cache_read": 0.125,
         "cache_write": 0.375,
         "reasoning": 10,
+        "input_audio": 1.25,
         "tiers": [
           {
             "above": 200000,
@@ -4234,6 +4237,7 @@
         "cache_read": 0.125,
         "cache_write": 0.375,
         "reasoning": 10,
+        "input_audio": 1.25,
         "tiers": [
           {
             "above": 200000,
@@ -4293,7 +4297,8 @@
         "output": 3,
         "cache_read": 0.05,
         "cache_write": 0.083333,
-        "reasoning": 3
+        "reasoning": 3,
+        "input_audio": 1
       }
     },
     "google/gemini-3-pro-image": {
@@ -4332,7 +4337,8 @@
         "output": 12,
         "cache_read": 0.2,
         "cache_write": 0.375,
-        "reasoning": 12
+        "reasoning": 12,
+        "input_audio": 2
       }
     },
     "google/gemini-3-pro-image-preview": {
@@ -4371,7 +4377,8 @@
         "output": 12,
         "cache_read": 0.2,
         "cache_write": 0.375,
-        "reasoning": 12
+        "reasoning": 12,
+        "input_audio": 2
       }
     },
     "google/gemini-3.1-flash-image": {
@@ -4506,7 +4513,8 @@
         "output": 1.5,
         "cache_read": 0.025,
         "cache_write": 0.083333,
-        "reasoning": 1.5
+        "reasoning": 1.5,
+        "input_audio": 0.5
       }
     },
     "google/gemini-3.1-flash-lite-image": {
@@ -4598,7 +4606,8 @@
         "output": 1.5,
         "cache_read": 0.025,
         "cache_write": 0.083333,
-        "reasoning": 1.5
+        "reasoning": 1.5,
+        "input_audio": 0.5
       }
     },
     "google/gemini-3.1-pro-preview": {
@@ -4648,6 +4657,7 @@
         "cache_read": 0.2,
         "cache_write": 0.375,
         "reasoning": 12,
+        "input_audio": 2,
         "tiers": [
           {
             "above": 200000,
@@ -4705,6 +4715,7 @@
         "cache_read": 0.2,
         "cache_write": 0.375,
         "reasoning": 12,
+        "input_audio": 2,
         "tiers": [
           {
             "above": 200000,
@@ -4759,7 +4770,8 @@
         "output": 9,
         "cache_read": 0.15,
         "cache_write": 0.083333,
-        "reasoning": 9
+        "reasoning": 9,
+        "input_audio": 3
       }
     },
     "google/gemini-3.5-flash-lite": {
@@ -4806,7 +4818,8 @@
         "output": 2.5,
         "cache_read": 0.03,
         "cache_write": 0.083333,
-        "reasoning": 2.5
+        "reasoning": 2.5,
+        "input_audio": 0.3
       }
     },
     "google/gemini-3.6-flash": {
@@ -4853,7 +4866,8 @@
         "output": 3.75,
         "cache_read": 0.075,
         "cache_write": 0.041667,
-        "reasoning": 3.75
+        "reasoning": 3.75,
+        "input_audio": 0.75
       }
     },
     "google/gemini-3.7-flash": {
@@ -4899,7 +4913,8 @@
         "output": 3.75,
         "cache_read": 0.075,
         "cache_write": 0.041667,
-        "reasoning": 3.75
+        "reasoning": 3.75,
+        "input_audio": 0.75
       }
     },
     "google/gemini-3.8-flash": {
@@ -4944,7 +4959,8 @@
         "output": 4.125,
         "cache_read": 0.0825,
         "cache_write": 0.041667,
-        "reasoning": 4.125
+        "reasoning": 4.125,
+        "input_audio": 0.825
       }
     },
     "google/gemini-4-argon": {
@@ -4990,7 +5006,8 @@
         "output": 10,
         "cache_read": 0.1,
         "cache_write": 0.1875,
-        "reasoning": 10
+        "reasoning": 10,
+        "input_audio": 2
       }
     },
     "google/gemini-flash-latest": {
@@ -5036,7 +5053,8 @@
         "output": 3.75,
         "cache_read": 0.075,
         "cache_write": 0.041667,
-        "reasoning": 3.75
+        "reasoning": 3.75,
+        "input_audio": 0.75
       }
     },
     "google/gemini-nano-banana-2.1": {
@@ -5125,6 +5143,7 @@
         "cache_read": 0.1,
         "cache_write": 0.1875,
         "reasoning": 10,
+        "input_audio": 2,
         "tiers": [
           {
             "above": 200000,
@@ -5300,9 +5319,9 @@
         "name": "Gemma 4 26B A4B IT"
       },
       "price": {
-        "input": 0.09,
-        "output": 0.3,
-        "cache_read": 0.05
+        "input": 0.0675,
+        "output": 0.225,
+        "cache_read": 0.0375
       },
       "variants": {
         "free": {
@@ -6717,7 +6736,7 @@
       },
       "limit": {
         "context": 204800,
-        "output": 32768
+        "output": 131072
       },
       "reasoning": {},
       "interleaved": {
@@ -6728,8 +6747,8 @@
         "name": "MiniMax-M2.5"
       },
       "price": {
-        "input": 0.27,
-        "output": 0.95,
+        "input": 0.3,
+        "output": 1.2,
         "cache_read": 0.03
       }
     },
@@ -6812,7 +6831,7 @@
       "capabilities": {
         "tools": true,
         "attachments": true,
-        "structured_output": false,
+        "structured_output": true,
         "temperature": true,
         "input": [
           "text",
@@ -6824,7 +6843,7 @@
         ]
       },
       "limit": {
-        "context": 1000000,
+        "context": 1048576,
         "output": 524288
       },
       "reasoning": {
@@ -6837,12 +6856,13 @@
         ]
       },
       "provider_options": {
-        "id": "minimax/minimax-m3.1-flash:free",
-        "name": "MiniMax M3.1 Flash (free)"
+        "id": "minimax/minimax-m3.1-flash",
+        "name": "MiniMax-M3.1-Flash"
       },
       "price": {
-        "input": 0,
-        "output": 0
+        "input": 0.15,
+        "output": 0.6,
+        "cache_read": 0.015
       }
     },
     "mistral/codestral-2508": {
@@ -7465,8 +7485,8 @@
         "name": "Mistral Small 3.2 24B"
       },
       "price": {
-        "input": 0.09375,
-        "output": 0.25
+        "input": 0.075,
+        "output": 0.2
       }
     },
     "mistral/mixtral-8x22b-instruct": {
@@ -7817,7 +7837,7 @@
       "price": {
         "input": 0.6712,
         "output": 3.35,
-        "cache_read": 0.18
+        "cache_read": 0.15
       }
     },
     "moonshotai/kimi-k3": {
@@ -7859,8 +7879,51 @@
       },
       "price": {
         "input": 0.239,
-        "output": 11.936,
+        "output": 10.8,
         "cache_read": 0.21
+      }
+    },
+    "moonshotai/kimi-k3.1-pro": {
+      "name": "Kimi K3.1 Pro",
+      "family": "kimi-k3",
+      "released": "2026-10-23",
+      "updated": "2026-10-23",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 943718
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "high",
+          "max"
+        ]
+      },
+      "provider_options": {
+        "id": "moonshotai/kimi-k3.1-pro",
+        "name": "Kimi K3.1 Pro"
+      },
+      "price": {
+        "input": 2,
+        "output": 10,
+        "cache_read": 0.2
       }
     },
     "moonshotai/kimi-latest": {
@@ -7901,9 +7964,9 @@
         "name": "Kimi Latest"
       },
       "price": {
-        "input": 0.238,
-        "output": 24,
-        "cache_read": 0.228
+        "input": 0.19,
+        "output": 8.94,
+        "cache_read": 0.19
       }
     },
     "morph/morph-v3-fast": {
@@ -8486,38 +8549,6 @@
         }
       }
     },
-    "openai/gpt-3.5-turbo": {
-      "name": "GPT-3.5 Turbo",
-      "family": "gpt",
-      "released": "2023-03-01",
-      "updated": "2023-11-06",
-      "knowledge": "2021-09-01",
-      "open_weights": false,
-      "capabilities": {
-        "tools": true,
-        "attachments": false,
-        "structured_output": true,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 16385,
-        "output": 4096
-      },
-      "provider_options": {
-        "id": "openai/gpt-3.5-turbo",
-        "name": "GPT-3.5-turbo"
-      },
-      "price": {
-        "input": 0.5,
-        "output": 1.5
-      }
-    },
     "openai/gpt-3.5-turbo-0613": {
       "name": "GPT-3.5 Turbo 0613",
       "family": "gpt",
@@ -8551,7 +8582,7 @@
       }
     },
     "openai/gpt-3.5-turbo-16k": {
-      "name": "GPT-3.5 Turbo 16K",
+      "name": "GPT-3.5 Turbo 16k",
       "family": "gpt",
       "released": "2023-08-28",
       "updated": "2023-08-28",
@@ -8580,38 +8611,6 @@
       "price": {
         "input": 3,
         "output": 4
-      }
-    },
-    "openai/gpt-3.5-turbo-instruct": {
-      "name": "GPT-3.5 Turbo Instruct",
-      "family": "gpt",
-      "released": "2023-09-28",
-      "updated": "2023-09-28",
-      "knowledge": "2021-09-30",
-      "open_weights": false,
-      "capabilities": {
-        "tools": false,
-        "attachments": false,
-        "structured_output": true,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 4095,
-        "output": 3685
-      },
-      "provider_options": {
-        "id": "openai/gpt-3.5-turbo-instruct",
-        "name": "GPT-3.5 Turbo Instruct"
-      },
-      "price": {
-        "input": 1.5,
-        "output": 2
       }
     },
     "openai/gpt-4": {
@@ -10840,7 +10839,9 @@
       },
       "price": {
         "input": 2.5,
-        "output": 10
+        "output": 10,
+        "input_audio": 32,
+        "output_audio": 64
       }
     },
     "openai/gpt-audio-mini": {
@@ -10875,7 +10876,9 @@
       },
       "price": {
         "input": 0.6,
-        "output": 2.4
+        "output": 2.4,
+        "input_audio": 0.6,
+        "output_audio": 2.4
       }
     },
     "openai/gpt-luna-latest": {
@@ -12569,9 +12572,9 @@
         "name": "Hy3"
       },
       "price": {
-        "input": 0.132,
-        "output": 0.528,
-        "cache_read": 0.033
+        "input": 0.0825,
+        "output": 0.33,
+        "cache_read": 0.020625
       }
     },
     "tencent/hy3-preview": {
@@ -12649,9 +12652,9 @@
         "name": "Hy4 preview"
       },
       "price": {
-        "input": 0.834,
-        "output": 2.501,
-        "cache_read": 0.042
+        "input": 0.7506,
+        "output": 2.2509,
+        "cache_read": 0.0378
       }
     },
     "thedrummer/cydonia-24b-v4.1": {
@@ -13700,8 +13703,8 @@
         "cache_read": 0.036
       }
     },
-    "xingchen-agi/xing4.0-29b-a4b-free": {
-      "name": "Xing4.0 29B A4B Free",
+    "xingchen-agi/xing4.0-29b-a4b": {
+      "name": "Xing4.0 29B A4B",
       "family": "agi",
       "released": "2026-10-16",
       "updated": "2026-10-16",
@@ -14186,9 +14189,9 @@
         "name": "GLM-5.3"
       },
       "price": {
-        "input": 0.079,
-        "output": 1.4,
-        "cache_read": 0.078
+        "input": 0.0908,
+        "output": 1.61,
+        "cache_read": 0.0897
       },
       "aliases": [
         "~z-ai/glm-latest"
@@ -14216,7 +14219,7 @@
       },
       "limit": {
         "context": 1048576,
-        "output": 943718
+        "output": 943717
       },
       "reasoning": {
         "efforts": [
@@ -14230,9 +14233,9 @@
         "name": "GLM-5.3-Flash"
       },
       "price": {
-        "input": 0.0052,
-        "output": 0.1985,
-        "cache_read": 0.0052
+        "input": 0.15,
+        "output": 0.5,
+        "cache_read": 0.03
       },
       "aliases": [
         "z-ai/glm-5.3-flashx",

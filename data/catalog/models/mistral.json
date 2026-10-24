@@ -30,9 +30,7 @@
         "url": "https://huggingface.co/mistralai/Codestral-22B-v0.1"
       }
     ],
-    "providers": [
-      "pioneer"
-    ]
+    "providers": []
   },
   "mistral/codestral-2501": {
     "id": "mistral/codestral-2501",
@@ -210,9 +208,7 @@
       "llmgateway-providers",
       "mistral",
       "nano-gpt",
-      "openrouter",
-      "opper",
-      "pioneer"
+      "openrouter"
     ]
   },
   "mistral/devstral-latest": {
@@ -270,9 +266,7 @@
       "context": 128000,
       "output": 128000
     },
-    "providers": [
-      "mistral"
-    ]
+    "providers": []
   },
   "mistral/devstral-medium-latest": {
     "id": "mistral/devstral-medium-latest",
@@ -343,19 +337,17 @@
         "url": "https://huggingface.co/mistralai/Devstral-Small-2-24B-Instruct-2512"
       }
     ],
-    "providers": [
-      "pioneer"
-    ]
+    "providers": []
   },
   "mistral/devstral-small-2505": {
     "id": "mistral/devstral-small-2505",
     "lab": "mistral",
     "name": "Devstral Small 2505",
     "family": "devstral",
-    "released": "2025-05-07",
-    "updated": "2025-05-07",
-    "knowledge": "2025-05",
-    "open_weights": true,
+    "released": "2025-05-01",
+    "updated": "2025-05-01",
+    "knowledge": "2024-12",
+    "open_weights": false,
     "reasoning": false,
     "capabilities": {
       "tools": true,
@@ -370,11 +362,10 @@
     },
     "limit": {
       "context": 128000,
-      "output": 128000
+      "output": 4096
     },
     "providers": [
       "io-net",
-      "mistral",
       "nano-gpt"
     ]
   },
@@ -409,9 +400,7 @@
         "url": "https://huggingface.co/mistralai/Devstral-Small-2507"
       }
     ],
-    "providers": [
-      "mistral"
-    ]
+    "providers": []
   },
   "mistral/labs-devstral-small-2512": {
     "id": "mistral/labs-devstral-small-2512",
@@ -528,8 +517,7 @@
     },
     "providers": [
       "edenai",
-      "mistral",
-      "pioneer"
+      "mistral"
     ]
   },
   "mistral/magistral-small-2506": {
@@ -565,8 +553,7 @@
     ],
     "providers": [
       "io-net",
-      "nvidia",
-      "pioneer"
+      "nvidia"
     ]
   },
   "mistral/magistral-small-2509": {
@@ -636,7 +623,7 @@
       }
     ],
     "providers": [
-      "pioneer",
+      "edenai",
       "vercel"
     ]
   },
@@ -847,7 +834,6 @@
       }
     ],
     "providers": [
-      "digitalocean",
       "lowrouter",
       "mistral"
     ]
@@ -880,7 +866,6 @@
     "providers": [
       "azure",
       "azure-cognitive-services",
-      "pioneer",
       "vercel"
     ]
   },
@@ -1049,9 +1034,7 @@
         "url": "https://huggingface.co/mistralai/Ministral-8B-Instruct-2410"
       }
     ],
-    "providers": [
-      "pioneer"
-    ]
+    "providers": []
   },
   "mistral/ministral-8b-latest": {
     "id": "mistral/ministral-8b-latest",
@@ -1146,9 +1129,7 @@
       }
     ],
     "providers": [
-      "digitalocean",
-      "nvidia",
-      "pioneer"
+      "nvidia"
     ]
   },
   "mistral/mistral-code-agent-latest": {
@@ -1375,8 +1356,7 @@
     ],
     "providers": [
       "helicone",
-      "io-net",
-      "mistral"
+      "io-net"
     ]
   },
   "mistral/mistral-large-2512": {
@@ -1424,7 +1404,6 @@
       "ollama-cloud",
       "openrouter",
       "opper",
-      "pioneer",
       "prime",
       "tempr",
       "vercel"
@@ -1543,8 +1522,7 @@
       "azure",
       "azure-cognitive-services",
       "edenai",
-      "mistral",
-      "pioneer"
+      "mistral"
     ]
   },
   "mistral/mistral-medium-2508": {
@@ -1615,7 +1593,6 @@
       "kenari",
       "lowrouter",
       "mistral",
-      "pioneer",
       "scaleway",
       "tempr"
     ]
@@ -1802,17 +1779,14 @@
       "aimlapi",
       "chutes",
       "cortecs",
-      "digitalocean",
       "helicone",
       "inference",
       "io-net",
       "kilo",
       "meganova",
-      "mistral",
       "nano-gpt",
       "openrouter",
       "ovhcloud",
-      "pioneer",
       "prime",
       "vercel"
     ]
@@ -1973,7 +1947,6 @@
       "nano-gpt",
       "openrouter",
       "opper",
-      "pioneer",
       "prime",
       "regolo-ai",
       "requesty",
@@ -2377,8 +2350,7 @@
     ],
     "providers": [
       "greenpt",
-      "mistral",
-      "pioneer"
+      "mistral"
     ]
   },
   "mistral/pixtral-large-2502": {
@@ -2443,9 +2415,7 @@
         "url": "https://huggingface.co/mistralai/Pixtral-Large-Instruct-2411"
       }
     ],
-    "providers": [
-      "mistral"
-    ]
+    "providers": []
   },
   "mistral/starcannon-unleashed-12b-v1.0": {
     "id": "mistral/starcannon-unleashed-12b-v1.0",

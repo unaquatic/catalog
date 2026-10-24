@@ -46,109 +46,6 @@
         "output": 0
       }
     },
-    "alibaba/qwen2.5-14b-instruct": {
-      "name": "Qwen2.5 14B Instruct",
-      "family": "qwen",
-      "released": "2024-09-19",
-      "updated": "2024-09-19",
-      "knowledge": "2024-09",
-      "open_weights": true,
-      "capabilities": {
-        "tools": true,
-        "attachments": false,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 131072,
-        "output": 131072
-      },
-      "provider_options": {
-        "id": "qwen-2.5-14b-instruct",
-        "name": "Qwen 2.5 14B Instruct"
-      }
-    },
-    "alibaba/qwen3-32b": {
-      "name": "Qwen3 32B",
-      "family": "qwen",
-      "released": "2025-04-28",
-      "updated": "2025-04-28",
-      "knowledge": "2025-04",
-      "open_weights": true,
-      "capabilities": {
-        "tools": true,
-        "attachments": false,
-        "structured_output": true,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 32768,
-        "output": 32768
-      },
-      "reasoning": {
-        "mandatory": false,
-        "efforts": [
-          "none",
-          "low",
-          "medium",
-          "high",
-          "max"
-        ]
-      },
-      "provider_options": {
-        "id": "alibaba-qwen3-32b",
-        "name": "Qwen3 32B"
-      },
-      "price": {
-        "input": 0.25,
-        "output": 0.55
-      },
-      "status": "deprecated"
-    },
-    "alibaba/qwen3-coder-flash": {
-      "name": "Qwen3 Coder Flash",
-      "family": "qwen",
-      "released": "2025-07-28",
-      "updated": "2025-07-28",
-      "knowledge": "2025-04",
-      "open_weights": false,
-      "capabilities": {
-        "tools": true,
-        "attachments": false,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 262144,
-        "output": 262144
-      },
-      "provider_options": {
-        "id": "qwen3-coder-flash",
-        "name": "Qwen3 Coder Flash"
-      },
-      "price": {
-        "input": 0.45,
-        "output": 1.7,
-        "cache_read": 0.09
-      },
-      "status": "deprecated"
-    },
     "alibaba/qwen3-embedding-0.6b": {
       "name": "Qwen3 Embedding 0.6B",
       "family": "text-embedding",
@@ -330,155 +227,6 @@
         "name": "Wan2.2-T2V-A14B"
       }
     },
-    "anthropic/claude-3-5-haiku-20241022": {
-      "name": "Claude 3.5 Haiku 20241022",
-      "family": "claude-haiku",
-      "released": "2024-10-22",
-      "updated": "2024-10-22",
-      "knowledge": "2024-07-31",
-      "open_weights": false,
-      "capabilities": {
-        "tools": true,
-        "attachments": false,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 200000,
-        "output": 8192
-      },
-      "provider_options": {
-        "id": "anthropic-claude-3.5-haiku",
-        "name": "Claude 3.5 Haiku"
-      },
-      "price": {
-        "input": 0.8,
-        "output": 4,
-        "cache_read": 0.08,
-        "cache_write": 1
-      },
-      "status": "deprecated"
-    },
-    "anthropic/claude-3-5-sonnet": {
-      "name": "Claude 3.5 Sonnet",
-      "family": "claude-sonnet",
-      "released": "2024-06-20",
-      "updated": "2024-10-22",
-      "knowledge": "2024-04",
-      "open_weights": false,
-      "capabilities": {
-        "tools": true,
-        "attachments": true,
-        "temperature": true,
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 200000,
-        "output": 8192
-      },
-      "provider_options": {
-        "id": "anthropic-claude-3.5-sonnet",
-        "name": "Claude 3.5 Sonnet"
-      },
-      "price": {
-        "input": 3,
-        "output": 15,
-        "cache_read": 0.3,
-        "cache_write": 3.75
-      },
-      "status": "deprecated"
-    },
-    "anthropic/claude-3-7-sonnet-20250219": {
-      "name": "Claude 3.7 Sonnet 20250219",
-      "family": "claude-sonnet",
-      "released": "2025-02-19",
-      "updated": "2025-02-19",
-      "knowledge": "2024-10-31",
-      "open_weights": false,
-      "capabilities": {
-        "tools": true,
-        "attachments": true,
-        "temperature": true,
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 200000,
-        "output": 64000
-      },
-      "reasoning": {
-        "mandatory": false,
-        "default_enabled": false,
-        "efforts": [
-          "none",
-          "low",
-          "medium",
-          "high"
-        ]
-      },
-      "provider_options": {
-        "id": "anthropic-claude-3.7-sonnet",
-        "name": "Claude 3.7 Sonnet"
-      },
-      "price": {
-        "input": 3,
-        "output": 15,
-        "cache_read": 0.3,
-        "cache_write": 3.75
-      },
-      "status": "deprecated"
-    },
-    "anthropic/claude-3-opus": {
-      "name": "Claude 3 Opus",
-      "family": "claude-opus",
-      "released": "2024-02-29",
-      "updated": "2024-02-29",
-      "knowledge": "2023-08",
-      "open_weights": false,
-      "capabilities": {
-        "tools": true,
-        "attachments": true,
-        "temperature": true,
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 200000,
-        "output": 4096
-      },
-      "provider_options": {
-        "id": "anthropic-claude-3-opus",
-        "name": "Claude 3 Opus"
-      },
-      "price": {
-        "input": 15,
-        "output": 75,
-        "cache_read": 1.5,
-        "cache_write": 18.75
-      },
-      "status": "deprecated"
-    },
     "anthropic/claude-fable-5": {
       "name": "Claude Fable 5",
       "family": "claude-fable",
@@ -659,99 +407,17 @@
         "input": 0.1,
         "output": 0.5,
         "cache_read": 0.01,
-        "cache_write": 0.125
+        "cache_write": 0.125,
+        "tiers": [
+          {
+            "above": 100000,
+            "input": 0.5,
+            "output": 2.5,
+            "cache_read": 0.05,
+            "cache_write": 0.625
+          }
+        ]
       }
-    },
-    "anthropic/claude-opus-4-0": {
-      "name": "Claude Opus 4.0",
-      "family": "claude-opus",
-      "released": "2025-05-22",
-      "updated": "2025-05-22",
-      "knowledge": "2025-03-31",
-      "open_weights": false,
-      "capabilities": {
-        "tools": true,
-        "attachments": true,
-        "temperature": true,
-        "input": [
-          "text",
-          "image",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 200000,
-        "output": 32000
-      },
-      "reasoning": {
-        "mandatory": false,
-        "default_enabled": false,
-        "efforts": [
-          "none",
-          "low",
-          "medium",
-          "high"
-        ]
-      },
-      "provider_options": {
-        "id": "anthropic-claude-opus-4",
-        "name": "Claude Opus 4"
-      },
-      "price": {
-        "input": 15,
-        "output": 75,
-        "cache_read": 1.5,
-        "cache_write": 18.75
-      },
-      "status": "deprecated"
-    },
-    "anthropic/claude-opus-4-1": {
-      "name": "Claude Opus 4.1",
-      "family": "claude-opus",
-      "released": "2025-08-05",
-      "updated": "2025-08-05",
-      "knowledge": "2025-03-31",
-      "open_weights": false,
-      "capabilities": {
-        "tools": true,
-        "attachments": true,
-        "temperature": true,
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 200000,
-        "output": 8192
-      },
-      "reasoning": {
-        "mandatory": false,
-        "default_enabled": false,
-        "efforts": [
-          "none",
-          "low",
-          "medium",
-          "high"
-        ]
-      },
-      "provider_options": {
-        "id": "anthropic-claude-4.1-opus",
-        "name": "Anthropic Claude 4.1 Opus"
-      },
-      "price": {
-        "input": 15,
-        "output": 75,
-        "cache_read": 1.5,
-        "cache_write": 18.75
-      },
-      "status": "deprecated"
     },
     "anthropic/claude-opus-4-5": {
       "name": "Claude Opus 4.5",
@@ -1046,61 +712,6 @@
           }
         ]
       }
-    },
-    "anthropic/claude-sonnet-4-0": {
-      "name": "Claude Sonnet 4.0",
-      "family": "claude-sonnet",
-      "released": "2025-05-22",
-      "updated": "2025-05-22",
-      "knowledge": "2025-03-31",
-      "open_weights": false,
-      "capabilities": {
-        "tools": true,
-        "attachments": true,
-        "temperature": true,
-        "input": [
-          "text",
-          "image",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 1000000,
-        "output": 64000
-      },
-      "reasoning": {
-        "mandatory": false,
-        "default_enabled": false,
-        "efforts": [
-          "none",
-          "low",
-          "medium",
-          "high"
-        ]
-      },
-      "provider_options": {
-        "id": "anthropic-claude-sonnet-4",
-        "name": "Claude Sonnet 4"
-      },
-      "price": {
-        "input": 3,
-        "output": 15,
-        "cache_read": 0.3,
-        "cache_write": 3.75,
-        "tiers": [
-          {
-            "above": 200000,
-            "input": 6,
-            "output": 22.5,
-            "cache_read": 0.3,
-            "cache_write": 3.75
-          }
-        ]
-      },
-      "status": "deprecated"
     },
     "anthropic/claude-sonnet-4-5": {
       "name": "Claude Sonnet 4.5",
@@ -1401,75 +1012,6 @@
         "output": 0
       }
     },
-    "deepseek/deepseek-r1-distill-llama-70b": {
-      "name": "DeepSeek R1 Distill Llama 70B",
-      "family": "deepseek-thinking",
-      "released": "2025-01-30",
-      "updated": "2025-01-30",
-      "open_weights": true,
-      "capabilities": {
-        "tools": true,
-        "attachments": false,
-        "structured_output": true,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 32678,
-        "output": 8192
-      },
-      "reasoning": {
-        "mandatory": false,
-        "efforts": [
-          "none",
-          "low",
-          "medium",
-          "high",
-          "max"
-        ]
-      },
-      "provider_options": {
-        "id": "deepseek-r1-distill-llama-70b",
-        "name": "DeepSeek R1 Distill Llama 70B"
-      },
-      "price": {
-        "input": 0.99,
-        "output": 0.99
-      },
-      "status": "deprecated"
-    },
-    "deepseek/deepseek-v3": {
-      "name": "DeepSeek V3",
-      "family": "deepseek",
-      "released": "2024-12-26",
-      "updated": "2025-03-24",
-      "knowledge": "2024-07",
-      "open_weights": true,
-      "capabilities": {
-        "tools": true,
-        "attachments": false,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 163840,
-        "output": 131072
-      },
-      "provider_options": {
-        "id": "deepseek-v3",
-        "name": "DeepSeek V3"
-      }
-    },
     "deepseek/deepseek-v3.2": {
       "name": "DeepSeek V3.2",
       "family": "deepseek",
@@ -1714,6 +1256,47 @@
         "cache_read": 0.006
       }
     },
+    "deepseek/deepseek-v4.1-flash-1017": {
+      "name": "DeepSeek V4.1 Flash 1017",
+      "family": "deepseek-flash",
+      "released": "2026-10-17",
+      "updated": "2026-10-17",
+      "knowledge": "2025-05",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 1048576
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "high",
+          "xhigh",
+          "max"
+        ]
+      },
+      "provider_options": {
+        "id": "deepseek-v4.1-flash-1017",
+        "name": "DeepSeek V4.1 Flash 1017"
+      },
+      "price": {
+        "input": 0.3,
+        "output": 1.2,
+        "cache_read": 0.006
+      }
+    },
     "digitalocean/fast-sdxl": {
       "name": "Fast SDXL",
       "family": "stable-diffusion",
@@ -1833,69 +1416,6 @@
         "output": 0
       }
     },
-    "meta/llama-3.1-8b-instruct": {
-      "name": "Llama 3.1 8B Instruct",
-      "family": "llama",
-      "released": "2024-07-23",
-      "updated": "2024-07-23",
-      "knowledge": "2023-12",
-      "open_weights": true,
-      "capabilities": {
-        "tools": true,
-        "attachments": false,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 131072,
-        "output": 131072
-      },
-      "provider_options": {
-        "id": "llama3-8b-instruct",
-        "name": "Llama 3.1 Instruct (8B)"
-      },
-      "price": {
-        "input": 0.198,
-        "output": 0.198
-      }
-    },
-    "meta/llama-3.3-70b-instruct": {
-      "name": "Llama 3.3 70B Instruct",
-      "family": "llama",
-      "released": "2024-12-06",
-      "updated": "2024-12-06",
-      "knowledge": "2023-12",
-      "open_weights": true,
-      "capabilities": {
-        "tools": true,
-        "attachments": false,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 128000,
-        "output": 4096
-      },
-      "provider_options": {
-        "id": "llama3.3-70b-instruct",
-        "name": "Llama 3.3 Instruct (70B)"
-      },
-      "price": {
-        "input": 0.65,
-        "output": 0.65
-      },
-      "status": "deprecated"
-    },
     "meta/llama-4-maverick-17b-instruct": {
       "name": "Llama 4 Maverick 17B Instruct",
       "family": "llama",
@@ -1969,6 +1489,47 @@
         "cache_read": 0.06
       }
     },
+    "minimax/minimax-m3.1-flash": {
+      "name": "MiniMax M3.1 Flash",
+      "family": "minimax",
+      "released": "2026-10-19",
+      "updated": "2026-10-19",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 1048576
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ]
+      },
+      "provider_options": {
+        "id": "minimax-m3.1-flash",
+        "name": "MiniMax M3.1-Flash (Public Preview)"
+      },
+      "price": {
+        "input": 0.15,
+        "output": 0.6,
+        "cache_read": 0.015
+      }
+    },
     "mistral/ministral-3-14b-instruct-2512": {
       "name": "Ministral 3 14B Instruct 2512",
       "family": "ministral",
@@ -2000,138 +1561,6 @@
         "output": 0.2,
         "cache_read": 0.04
       }
-    },
-    "mistral/ministral-3-8b-instruct-2512": {
-      "name": "Ministral 3 8B Instruct 2512",
-      "family": "ministral",
-      "released": "2025-12-02",
-      "updated": "2025-12-02",
-      "open_weights": true,
-      "capabilities": {
-        "tools": true,
-        "attachments": true,
-        "temperature": true,
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 262144,
-        "output": 262144
-      },
-      "provider_options": {
-        "id": "ministral-3-8b-instruct-2512",
-        "name": "Ministral 3 8B"
-      }
-    },
-    "mistral/mistral-7b-instruct-v0.3": {
-      "name": "Mistral 7B Instruct V0.3",
-      "family": "mistral",
-      "released": "2024-05-22",
-      "updated": "2024-05-22",
-      "open_weights": true,
-      "capabilities": {
-        "tools": true,
-        "attachments": false,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 32768,
-        "output": 32768
-      },
-      "provider_options": {
-        "id": "mistral-7b-instruct-v0.3",
-        "name": "Mistral 7B Instruct v0.3"
-      }
-    },
-    "mistral/mistral-nemo": {
-      "name": "Mistral Nemo",
-      "family": "mistral-nemo",
-      "released": "2024-07-18",
-      "updated": "2024-07-18",
-      "knowledge": "2024-07",
-      "open_weights": true,
-      "capabilities": {
-        "tools": true,
-        "attachments": false,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 128000,
-        "output": 16384
-      },
-      "provider_options": {
-        "id": "mistral-nemo-instruct-2407",
-        "name": "Mistral Nemo Instruct"
-      },
-      "price": {
-        "input": 0.3,
-        "output": 0.3
-      },
-      "status": "deprecated"
-    },
-    "moonshotai/kimi-k2.5": {
-      "name": "Kimi K2.5",
-      "family": "kimi-k2",
-      "released": "2026-01-27",
-      "updated": "2026-01-27",
-      "knowledge": "2025-01",
-      "open_weights": true,
-      "capabilities": {
-        "tools": true,
-        "attachments": true,
-        "structured_output": true,
-        "temperature": false,
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 262144,
-        "output": 262144
-      },
-      "reasoning": {
-        "mandatory": false,
-        "efforts": [
-          "none",
-          "low",
-          "medium",
-          "high"
-        ]
-      },
-      "interleaved": {
-        "field": "reasoning_content"
-      },
-      "provider_options": {
-        "id": "kimi-k2.5",
-        "name": "Kimi K2.5"
-      },
-      "price": {
-        "input": 0.5,
-        "output": 2.7,
-        "cache_read": 0.203
-      },
-      "status": "deprecated"
     },
     "moonshotai/kimi-k2.6": {
       "name": "Kimi K2.6",
@@ -2222,43 +1651,6 @@
         "cache_read": 0.3
       }
     },
-    "nvidia/nemotron-3-nano-30b-a3b": {
-      "name": "Nemotron 3 Nano 30B A3B",
-      "family": "nemotron",
-      "released": "2025-12-15",
-      "updated": "2025-12-15",
-      "knowledge": "2025-06-25",
-      "open_weights": true,
-      "capabilities": {
-        "tools": true,
-        "attachments": false,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 262144,
-        "output": 262144
-      },
-      "reasoning": {
-        "mandatory": false,
-        "efforts": [
-          "none",
-          "low",
-          "medium",
-          "high",
-          "max"
-        ]
-      },
-      "provider_options": {
-        "id": "nemotron-3-nano-30b",
-        "name": "Nemotron 3 Nano 30B A3B"
-      }
-    },
     "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning": {
       "name": "Nemotron 3 Nano Omni 30B A3B Reasoning",
       "family": "nemotron",
@@ -2302,50 +1694,6 @@
         "output": 0.9,
         "cache_read": 0.1
       }
-    },
-    "nvidia/nemotron-3-super-120b-a12b": {
-      "name": "Nemotron 3 Super 120B A12B",
-      "family": "nemotron",
-      "released": "2026-03-11",
-      "updated": "2026-03-11",
-      "knowledge": "2025-06",
-      "open_weights": true,
-      "capabilities": {
-        "tools": true,
-        "attachments": false,
-        "structured_output": true,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 1000000,
-        "output": 32768
-      },
-      "reasoning": {
-        "mandatory": false,
-        "efforts": [
-          "none",
-          "low",
-          "medium",
-          "high",
-          "max"
-        ]
-      },
-      "provider_options": {
-        "id": "nvidia-nemotron-3-super-120b",
-        "name": "NVIDIA Nemotron 3 Super 120B  (Public Preview)"
-      },
-      "price": {
-        "input": 0.3,
-        "output": 0.65,
-        "cache_read": 0.06
-      },
-      "status": "deprecated"
     },
     "nvidia/nemotron-3-ultra-550b-a55b": {
       "name": "Nemotron 3 Ultra 550B A55B",
@@ -2692,50 +2040,6 @@
         "output": 0.4,
         "cache_read": 0.005
       }
-    },
-    "openai/gpt-5.1-codex-max": {
-      "name": "GPT-5.1 Codex Max",
-      "family": "gpt-codex",
-      "released": "2025-11-13",
-      "updated": "2025-11-13",
-      "knowledge": "2024-09-30",
-      "open_weights": false,
-      "capabilities": {
-        "tools": true,
-        "attachments": true,
-        "structured_output": true,
-        "temperature": false,
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 400000,
-        "input": 272000,
-        "output": 128000
-      },
-      "reasoning": {
-        "efforts": [
-          "low",
-          "medium",
-          "high",
-          "xhigh"
-        ]
-      },
-      "provider_options": {
-        "id": "openai-gpt-5.1-codex-max",
-        "name": "GPT-5.1 Codex Max"
-      },
-      "price": {
-        "input": 1.25,
-        "output": 10,
-        "cache_read": 0.125
-      },
-      "status": "deprecated"
     },
     "openai/gpt-5.2": {
       "name": "GPT-5.2",
@@ -3151,12 +2455,14 @@
         "input": 0.2,
         "output": 1.2,
         "cache_read": 0.02,
+        "cache_write": 0.25,
         "tiers": [
           {
             "above": 272000,
             "input": 0.4,
             "output": 1.8,
-            "cache_read": 0.04
+            "cache_read": 0.04,
+            "cache_write": 0.5
           }
         ]
       }
@@ -3205,12 +2511,14 @@
         "input": 4,
         "output": 20,
         "cache_read": 0.4,
+        "cache_write": 5,
         "tiers": [
           {
             "above": 272000,
             "input": 8,
             "output": 30,
-            "cache_read": 0.8
+            "cache_read": 0.8,
+            "cache_write": 10
           }
         ]
       }
@@ -3259,12 +2567,14 @@
         "input": 2,
         "output": 12,
         "cache_read": 0.2,
+        "cache_write": 2.5,
         "tiers": [
           {
             "above": 272000,
             "input": 4,
             "output": 18,
-            "cache_read": 0.4
+            "cache_read": 0.4,
+            "cache_write": 5
           }
         ]
       }
@@ -3311,12 +2621,14 @@
         "input": 10,
         "output": 50,
         "cache_read": 1,
+        "cache_write": 12.5,
         "tiers": [
           {
             "above": 272000,
             "input": 20,
             "output": 75,
-            "cache_read": 2
+            "cache_read": 2,
+            "cache_write": 25
           }
         ]
       }
@@ -3364,12 +2676,14 @@
         "input": 0.1,
         "output": 0.5,
         "cache_read": 0.01,
+        "cache_write": 0.125,
         "tiers": [
           {
             "above": 272000,
             "input": 0.2,
             "output": 0.75,
-            "cache_read": 0.02
+            "cache_read": 0.02,
+            "cache_write": 0.25
           }
         ]
       }
@@ -3417,12 +2731,14 @@
         "input": 2,
         "output": 10,
         "cache_read": 0.2,
+        "cache_write": 2.5,
         "tiers": [
           {
             "above": 272000,
             "input": 4,
             "output": 15,
-            "cache_read": 0.4
+            "cache_read": 0.4,
+            "cache_write": 5
           }
         ]
       }
@@ -3469,12 +2785,14 @@
         "input": 2,
         "output": 10,
         "cache_read": 0.1,
+        "cache_write": 2.5,
         "tiers": [
           {
             "above": 272000,
             "input": 4,
             "output": 15,
-            "cache_read": 0.2
+            "cache_read": 0.2,
+            "cache_write": 5
           }
         ]
       }
@@ -3953,94 +3271,6 @@
         "output": 3,
         "cache_read": 0.16
       }
-    },
-    "zhipuai/glm-5": {
-      "name": "GLM 5",
-      "family": "glm",
-      "released": "2026-02-12",
-      "updated": "2026-02-12",
-      "open_weights": true,
-      "capabilities": {
-        "tools": true,
-        "attachments": false,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 64000,
-        "output": 64000
-      },
-      "reasoning": {
-        "mandatory": false,
-        "efforts": [
-          "none",
-          "low",
-          "medium",
-          "high",
-          "max"
-        ]
-      },
-      "interleaved": {
-        "field": "reasoning_content"
-      },
-      "provider_options": {
-        "id": "glm-5",
-        "name": "GLM 5"
-      },
-      "price": {
-        "input": 1,
-        "output": 3.2,
-        "cache_read": 0.2
-      },
-      "status": "deprecated"
-    },
-    "zhipuai/glm-5.1": {
-      "name": "GLM 5.1",
-      "family": "glm",
-      "released": "2026-04-07",
-      "updated": "2026-04-07",
-      "open_weights": true,
-      "capabilities": {
-        "tools": true,
-        "attachments": false,
-        "structured_output": true,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 163840,
-        "output": 163840
-      },
-      "reasoning": {
-        "efforts": [
-          "medium",
-          "high",
-          "xhigh"
-        ]
-      },
-      "interleaved": {
-        "field": "reasoning_content"
-      },
-      "provider_options": {
-        "id": "glm-5.1",
-        "name": "GLM-5.1"
-      },
-      "price": {
-        "input": 1.3,
-        "output": 4.3,
-        "cache_read": 0.26
-      },
-      "status": "deprecated"
     },
     "zhipuai/glm-5.2": {
       "name": "GLM 5.2",

@@ -26,9 +26,7 @@
     },
     "providers": [
       "aimlapi",
-      "fastrouter",
       "helicone",
-      "iflowcn",
       "kilo",
       "llmgateway",
       "llmgateway-providers",
@@ -73,7 +71,6 @@
       "aimlapi",
       "helicone",
       "huggingface",
-      "iflowcn",
       "io-net",
       "jiekou",
       "kilo",
@@ -82,8 +79,7 @@
       "opencode",
       "openrouter",
       "prime",
-      "qiniu-ai",
-      "zenmux"
+      "qiniu-ai"
     ]
   },
   "moonshotai/kimi-k2-instruct": {
@@ -202,8 +198,7 @@
       "opencode",
       "openrouter",
       "poe",
-      "qiniu-ai",
-      "zenmux"
+      "qiniu-ai"
     ]
   },
   "moonshotai/kimi-k2-thinking-maas": {
@@ -267,9 +262,7 @@
         "url": "https://huggingface.co/moonshotai/Kimi-K2-Thinking"
       }
     ],
-    "providers": [
-      "zenmux"
-    ]
+    "providers": []
   },
   "moonshotai/kimi-k2-turbo-preview": {
     "id": "moonshotai/kimi-k2-turbo-preview",
@@ -343,10 +336,8 @@
       "auriko",
       "azure",
       "azure-cognitive-services",
-      "baseten",
       "daoxe",
       "deepinfra",
-      "digitalocean",
       "edenai",
       "frogbot",
       "hpc-ai",
@@ -360,8 +351,6 @@
       "melious",
       "nano-gpt",
       "novita-ai",
-      "ofox",
-      "ollama-cloud",
       "opencode",
       "openrouter",
       "orcarouter",
@@ -373,8 +362,7 @@
       "siliconflow-cn",
       "tencent-coding-plan",
       "tensorx",
-      "vercel",
-      "zenmux"
+      "vercel"
     ]
   },
   "moonshotai/kimi-k2.6": {
@@ -416,11 +404,9 @@
       "alibaba-cn",
       "alibaba-token-plan",
       "alibaba-token-plan-cn",
-      "ambient",
       "auriko",
       "azure",
       "azure-cognitive-services",
-      "baseten",
       "chutes",
       "clarifai",
       "cline-pass",
@@ -459,7 +445,6 @@
       "opencode",
       "openrouter",
       "orcarouter",
-      "pioneer",
       "poe",
       "privatemode-ai",
       "requesty",
@@ -517,10 +502,8 @@
       "aiand",
       "alibaba-token-plan",
       "alibaba-token-plan-cn",
-      "ambient",
       "azure",
       "azure-cognitive-services",
-      "baseten",
       "cline-pass",
       "cloudflare-workers-ai",
       "commandcode",
@@ -557,7 +540,6 @@
       "openrouter",
       "orcarouter",
       "perplexity-agent",
-      "pioneer",
       "requesty",
       "routing-run",
       "scnet-token-plan",
@@ -754,6 +736,49 @@
       "volcengine-coding-plan",
       "wallaby",
       "zenmux"
+    ]
+  },
+  "moonshotai/kimi-k3.1-pro": {
+    "id": "moonshotai/kimi-k3.1-pro",
+    "lab": "moonshotai",
+    "name": "Kimi K3.1 Pro",
+    "family": "kimi-k3",
+    "released": "2026-10-23",
+    "updated": "2026-10-23",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "output": 131072
+    },
+    "providers": [
+      "edenai",
+      "kilo",
+      "kimi-code-plan-cn",
+      "kimi-code-plan-global",
+      "llmgateway",
+      "llmgateway-providers",
+      "moonshotai",
+      "moonshotai-cn",
+      "nano-gpt",
+      "opencode-go",
+      "openrouter",
+      "prime",
+      "requesty",
+      "vercel"
     ]
   },
   "moonshotai/kimi-latest": {

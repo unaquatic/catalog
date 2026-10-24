@@ -1645,9 +1645,9 @@
         "name": "Nova 2 Lite"
       },
       "price": {
-        "input": 0.3,
-        "output": 2.5,
-        "cache_read": 0.075
+        "input": 0.33,
+        "output": 2.75,
+        "cache_read": 0.0825
       }
     },
     "amazon/nova-lite": {
@@ -2324,8 +2324,8 @@
         }
       }
     },
-    "anthropic/claude-sonnet-4-5": {
-      "name": "Claude Sonnet 4.5",
+    "anthropic/claude-sonnet-4-5-20250929": {
+      "name": "Claude Sonnet 4.5 20250929",
       "family": "claude-sonnet",
       "released": "2025-09-29",
       "updated": "2025-09-29",
@@ -2346,7 +2346,7 @@
         ]
       },
       "limit": {
-        "context": 200000,
+        "context": 1000000,
         "output": 64000
       },
       "reasoning": {
@@ -2364,7 +2364,16 @@
         "input": 3,
         "output": 15,
         "cache_read": 0.3,
-        "cache_write": 3.75
+        "cache_write": 3.75,
+        "tiers": [
+          {
+            "above": 200001,
+            "input": 6,
+            "output": 22.5,
+            "cache_read": 0.6,
+            "cache_write": 7.5
+          }
+        ]
       }
     },
     "anthropic/claude-sonnet-4-6": {
@@ -3956,7 +3965,7 @@
         "id": "convaiinnovations/laya",
         "name": "Laya",
         "endpoint": {
-          "format": "openai-chat",
+          "format": "openai-responses",
           "api": "https://ai-gateway.vercel.sh/v1",
           "auth": {
             "scheme": "bearer"
@@ -4705,8 +4714,6 @@
         "input": [
           "text",
           "image",
-          "audio",
-          "video",
           "pdf"
         ],
         "output": [
@@ -4714,14 +4721,18 @@
         ]
       },
       "limit": {
-        "context": 1048576,
-        "output": 65536
+        "context": 1000000,
+        "output": 65535
       },
       "reasoning": {
         "mandatory": false,
-        "budget": {
-          "max": 24576
-        }
+        "efforts": [
+          "none",
+          "low",
+          "medium",
+          "high"
+        ],
+        "budget": {}
       },
       "provider_options": {
         "id": "google/gemini-2.5-flash",
@@ -4730,8 +4741,7 @@
       "price": {
         "input": 0.3,
         "output": 2.5,
-        "cache_read": 0.03,
-        "input_audio": 1
+        "cache_read": 0.03
       }
     },
     "google/gemini-2.5-flash-image": {
@@ -4829,8 +4839,6 @@
         "input": [
           "text",
           "image",
-          "audio",
-          "video",
           "pdf"
         ],
         "output": [
@@ -4839,13 +4847,17 @@
       },
       "limit": {
         "context": 1048576,
-        "output": 65536
+        "output": 65535
       },
       "reasoning": {
-        "budget": {
-          "min": 128,
-          "max": 32768
-        }
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "medium",
+          "high"
+        ],
+        "budget": {}
       },
       "provider_options": {
         "id": "google/gemini-2.5-pro",
@@ -4857,7 +4869,7 @@
         "cache_read": 0.125,
         "tiers": [
           {
-            "above": 200000,
+            "above": 200001,
             "input": 2.5,
             "output": 15,
             "cache_read": 0.25
@@ -6888,7 +6900,7 @@
         "id": "liquid/d1",
         "name": "Liquid d1",
         "endpoint": {
-          "format": "openai-chat",
+          "format": "openai-responses",
           "api": "https://ai-gateway.vercel.sh/v1",
           "auth": {
             "scheme": "bearer"
@@ -6929,7 +6941,7 @@
         "id": "liquid/d1-ultra",
         "name": "Liquid d1 Ultra",
         "endpoint": {
-          "format": "openai-chat",
+          "format": "openai-responses",
           "api": "https://ai-gateway.vercel.sh/v1",
           "auth": {
             "scheme": "bearer"
@@ -7503,7 +7515,7 @@
         "id": "microsoft/microsoft-decision-1",
         "name": "Decision-1",
         "endpoint": {
-          "format": "openai-chat",
+          "format": "openai-responses",
           "api": "https://ai-gateway.vercel.sh/v1",
           "auth": {
             "scheme": "bearer"
@@ -8168,8 +8180,8 @@
         ]
       },
       "limit": {
-        "context": 1000000,
-        "output": 524288
+        "context": 1048576,
+        "output": 1048576
       },
       "reasoning": {
         "efforts": [
@@ -8185,8 +8197,9 @@
         "name": "MiniMax-M3.1-Flash"
       },
       "price": {
-        "input": 0,
-        "output": 0
+        "input": 0.15,
+        "output": 0.6,
+        "cache_read": 0.015
       }
     },
     "mistral/codestral-embed-2505": {
@@ -8966,6 +8979,49 @@
         }
       }
     },
+    "moonshotai/kimi-k3.1-pro": {
+      "name": "Kimi K3.1 Pro",
+      "family": "kimi-k3",
+      "released": "2026-10-23",
+      "updated": "2026-10-23",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 1048576
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "high",
+          "max"
+        ]
+      },
+      "provider_options": {
+        "id": "moonshotai/kimi-k3.1-pro",
+        "name": "Kimi K3.1 Pro"
+      },
+      "price": {
+        "input": 2,
+        "output": 10,
+        "cache_read": 0.2,
+        "cache_write": 2
+      },
+      "aliases": [
+        "moonshotai/kimi-k3.1-pro-highspeed"
+      ]
+    },
     "morph/morph-v3-fast": {
       "name": "Morph V3 Fast",
       "family": "morph",
@@ -9325,73 +9381,6 @@
         "output": 0.23
       }
     },
-    "openai/gpt-3.5-turbo": {
-      "name": "GPT-3.5 Turbo",
-      "family": "gpt",
-      "released": "2023-03-01",
-      "updated": "2023-11-06",
-      "knowledge": "2021-09-01",
-      "open_weights": false,
-      "capabilities": {
-        "tools": false,
-        "attachments": false,
-        "structured_output": false,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 16385,
-        "input": 12289,
-        "output": 4096
-      },
-      "provider_options": {
-        "id": "openai/gpt-3.5-turbo",
-        "name": "GPT-3.5 Turbo"
-      },
-      "price": {
-        "input": 0.5,
-        "output": 1.5
-      }
-    },
-    "openai/gpt-4-turbo": {
-      "name": "GPT-4 Turbo",
-      "family": "gpt",
-      "released": "2023-11-06",
-      "updated": "2024-04-09",
-      "knowledge": "2023-12",
-      "open_weights": false,
-      "capabilities": {
-        "tools": true,
-        "attachments": true,
-        "structured_output": false,
-        "temperature": true,
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 128000,
-        "output": 4096
-      },
-      "provider_options": {
-        "id": "openai/gpt-4-turbo",
-        "name": "GPT-4 Turbo"
-      },
-      "price": {
-        "input": 10,
-        "output": 30
-      },
-      "status": "deprecated"
-    },
     "openai/gpt-4.1": {
       "name": "GPT-4.1",
       "family": "gpt",
@@ -9415,6 +9404,7 @@
       },
       "limit": {
         "context": 1047576,
+        "input": 1014808,
         "output": 32768
       },
       "provider_options": {
@@ -9465,6 +9455,7 @@
       },
       "limit": {
         "context": 1047576,
+        "input": 1014808,
         "output": 32768
       },
       "provider_options": {
@@ -9506,7 +9497,8 @@
         "temperature": true,
         "input": [
           "text",
-          "image"
+          "image",
+          "pdf"
         ],
         "output": [
           "text"
@@ -9514,6 +9506,7 @@
       },
       "limit": {
         "context": 1047576,
+        "input": 1014808,
         "output": 32768
       },
       "provider_options": {
@@ -9523,7 +9516,7 @@
       "price": {
         "input": 0.1,
         "output": 0.4,
-        "cache_read": 0.025
+        "cache_read": 0.03
       },
       "status": "deprecated",
       "variants": {
@@ -9531,13 +9524,14 @@
           "name": "GPT-4.1 Nano Fast",
           "tier": "fast",
           "provider_options": {
-            "id": "openai/gpt-4.1-nano-fast",
-            "name": "GPT-4.1 nano (Fast)"
+            "body": {
+              "service_tier": "priority"
+            }
           },
           "price": {
             "input": 0.2,
             "output": 0.8,
-            "cache_read": 0.05
+            "cache_read": 0.06
           }
         }
       }
@@ -9565,6 +9559,7 @@
       },
       "limit": {
         "context": 128000,
+        "input": 111616,
         "output": 16384
       },
       "provider_options": {
@@ -9615,6 +9610,7 @@
       },
       "limit": {
         "context": 128000,
+        "input": 111616,
         "output": 16384
       },
       "provider_options": {
@@ -9742,7 +9738,8 @@
         "temperature": false,
         "input": [
           "text",
-          "image"
+          "image",
+          "pdf"
         ],
         "output": [
           "text"
@@ -9857,7 +9854,8 @@
         "temperature": false,
         "input": [
           "text",
-          "image"
+          "image",
+          "pdf"
         ],
         "output": [
           "text"
@@ -9929,7 +9927,8 @@
         "temperature": false,
         "input": [
           "text",
-          "image"
+          "image",
+          "pdf"
         ],
         "output": [
           "text"
@@ -11208,7 +11207,7 @@
         "id": "openai/gpt-6-luna-decisions",
         "name": "GPT-6 Luna Decisions",
         "endpoint": {
-          "format": "openai-chat",
+          "format": "openai-responses",
           "api": "https://ai-gateway.vercel.sh/v1",
           "auth": {
             "scheme": "bearer"
@@ -11379,48 +11378,6 @@
             ]
           }
         }
-      }
-    },
-    "openai/gpt-image-1": {
-      "name": "GPT Image 1",
-      "family": "gpt-image",
-      "type": "image",
-      "released": "2025-04-24",
-      "updated": "2025-04-24",
-      "open_weights": false,
-      "capabilities": {
-        "tools": false,
-        "attachments": false,
-        "temperature": false,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "image"
-        ]
-      },
-      "limit": {
-        "context": 0,
-        "output": 0
-      },
-      "provider_options": {
-        "id": "openai/gpt-image-1",
-        "name": "GPT Image 1",
-        "endpoint": {
-          "format": "openai-chat",
-          "api": "https://ai-gateway.vercel.sh/v4/ai",
-          "auth": {
-            "scheme": "bearer"
-          },
-          "env": [
-            "AI_GATEWAY_API_KEY"
-          ]
-        }
-      },
-      "price": {
-        "input": 5,
-        "output": 40,
-        "cache_read": 1.25
       }
     },
     "openai/gpt-image-1-mini": {
@@ -12089,6 +12046,7 @@
       },
       "limit": {
         "context": 200000,
+        "input": 100000,
         "output": 100000
       },
       "reasoning": {
@@ -12132,6 +12090,7 @@
       },
       "limit": {
         "context": 200000,
+        "input": 100000,
         "output": 100000
       },
       "reasoning": {
@@ -12201,6 +12160,7 @@
       },
       "limit": {
         "context": 200000,
+        "input": 100000,
         "output": 100000
       },
       "reasoning": {
@@ -12277,7 +12237,8 @@
         "temperature": false,
         "input": [
           "text",
-          "image"
+          "image",
+          "pdf"
         ],
         "output": [
           "text"
@@ -12285,6 +12246,7 @@
       },
       "limit": {
         "context": 200000,
+        "input": 100000,
         "output": 100000
       },
       "reasoning": {
@@ -12309,8 +12271,9 @@
           "name": "o4 Mini Fast",
           "tier": "fast",
           "provider_options": {
-            "id": "openai/o4-mini-fast",
-            "name": "o4-mini (Fast)"
+            "body": {
+              "service_tier": "priority"
+            }
           },
           "price": {
             "input": 2,
@@ -12579,7 +12542,7 @@
         "id": "perplexity/pplx-decider-flash-v1.2",
         "name": "Decider Flash V1.2 4B",
         "endpoint": {
-          "format": "openai-chat",
+          "format": "openai-responses",
           "api": "https://ai-gateway.vercel.sh/v1",
           "auth": {
             "scheme": "bearer"
@@ -12619,7 +12582,7 @@
         "id": "perplexity/pplx-decider-v1.2",
         "name": "Decider V1.2 27B",
         "endpoint": {
-          "format": "openai-chat",
+          "format": "openai-responses",
           "api": "https://ai-gateway.vercel.sh/v1",
           "auth": {
             "scheme": "bearer"
@@ -13503,7 +13466,7 @@
         "id": "scaledown/scaledown-classify-1",
         "name": "Classify-1",
         "endpoint": {
-          "format": "openai-chat",
+          "format": "openai-responses",
           "api": "https://ai-gateway.vercel.sh/v1",
           "auth": {
             "scheme": "bearer"
@@ -14069,7 +14032,7 @@
         "id": "typesafe-ai/jev-1.13.0",
         "name": "Jev 1.13.0",
         "endpoint": {
-          "format": "openai-chat",
+          "format": "openai-responses",
           "api": "https://ai-gateway.vercel.sh/v1",
           "auth": {
             "scheme": "bearer"
@@ -14111,7 +14074,7 @@
         "id": "typesafe-ai/jev-1.14.0",
         "name": "Jev 1.14.0",
         "endpoint": {
-          "format": "openai-chat",
+          "format": "openai-responses",
           "api": "https://ai-gateway.vercel.sh/v1",
           "auth": {
             "scheme": "bearer"
@@ -14152,7 +14115,7 @@
         "id": "typesafe-ai/jev",
         "name": "Jev",
         "endpoint": {
-          "format": "openai-chat",
+          "format": "openai-responses",
           "api": "https://ai-gateway.vercel.sh/v1",
           "auth": {
             "scheme": "bearer"
@@ -14192,7 +14155,7 @@
         "id": "baseten/elephant-1",
         "name": "Elephant-1",
         "endpoint": {
-          "format": "openai-chat",
+          "format": "openai-responses",
           "api": "https://ai-gateway.vercel.sh/v1",
           "auth": {
             "scheme": "bearer"
@@ -14231,7 +14194,7 @@
         "id": "baseten/mammoth-1",
         "name": "Mammoth-1",
         "endpoint": {
-          "format": "openai-chat",
+          "format": "openai-responses",
           "api": "https://ai-gateway.vercel.sh/v1",
           "auth": {
             "scheme": "bearer"
@@ -14762,82 +14725,6 @@
             "AI_GATEWAY_API_KEY"
           ]
         }
-      }
-    },
-    "xai/grok-4.1-fast": {
-      "name": "Grok 4.1 Fast",
-      "family": "grok",
-      "released": "2025-11-19",
-      "updated": "2025-11-19",
-      "open_weights": false,
-      "capabilities": {
-        "tools": true,
-        "attachments": true,
-        "temperature": true,
-        "input": [
-          "text",
-          "image",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 1000000,
-        "output": 1000000
-      },
-      "provider_options": {
-        "id": "spacexai/grok-4.1-fast-non-reasoning",
-        "name": "Grok 4.1 Fast Non-Reasoning"
-      },
-      "price": {
-        "input": 0.2,
-        "output": 0.5,
-        "cache_read": 0.05
-      }
-    },
-    "xai/grok-4.1-fast-reasoning": {
-      "name": "Grok 4.1 Fast Reasoning",
-      "family": "grok",
-      "released": "2025-11-19",
-      "updated": "2025-11-19",
-      "open_weights": false,
-      "capabilities": {
-        "tools": true,
-        "attachments": true,
-        "structured_output": true,
-        "temperature": true,
-        "input": [
-          "text",
-          "image",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 1000000,
-        "output": 1000000
-      },
-      "reasoning": {
-        "mandatory": false,
-        "efforts": [
-          "none",
-          "low",
-          "medium",
-          "high"
-        ]
-      },
-      "provider_options": {
-        "id": "spacexai/grok-4.1-fast-reasoning",
-        "name": "Grok 4.1 Fast Reasoning"
-      },
-      "price": {
-        "input": 0.2,
-        "output": 0.5,
-        "cache_read": 0.05
       }
     },
     "xai/grok-4.20-0309-non-reasoning": {
@@ -16338,9 +16225,9 @@
         "name": "GLM 5.3"
       },
       "price": {
-        "input": 1.4,
-        "output": 4.4,
-        "cache_read": 0.14
+        "input": 1.2,
+        "output": 4,
+        "cache_read": 0.2
       },
       "variants": {
         "fast": {

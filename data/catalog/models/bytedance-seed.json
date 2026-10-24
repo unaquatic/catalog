@@ -59,7 +59,7 @@
   "bytedance-seed/doubao-1.5-pro-32k": {
     "id": "bytedance-seed/doubao-1.5-pro-32k",
     "lab": "bytedance-seed",
-    "name": "Doubao 1.5 Pro 32K",
+    "name": "Doubao 1.5 Pro 32k",
     "released": "2024-11-20",
     "updated": "2025-01-22",
     "open_weights": false,
@@ -146,7 +146,7 @@
   "bytedance-seed/doubao-1.5-vision-pro-32k": {
     "id": "bytedance-seed/doubao-1.5-vision-pro-32k",
     "lab": "bytedance-seed",
-    "name": "Doubao 1.5 Vision Pro 32K",
+    "name": "Doubao 1.5 Vision Pro 32k",
     "released": "2024-11-20",
     "updated": "2025-01-22",
     "open_weights": false,
@@ -256,7 +256,6 @@
     },
     "providers": [
       "kilo",
-      "ofox",
       "openrouter",
       "qiniu-ai",
       "vercel",
@@ -292,7 +291,6 @@
     "providers": [
       "aimlapi",
       "kilo",
-      "ofox",
       "openrouter",
       "qiniu-ai",
       "volcengine"
@@ -325,7 +323,6 @@
     },
     "providers": [
       "302ai",
-      "ofox",
       "volcengine"
     ]
   },
@@ -356,7 +353,6 @@
     },
     "providers": [
       "302ai",
-      "ofox",
       "requesty",
       "vercel",
       "volcengine",

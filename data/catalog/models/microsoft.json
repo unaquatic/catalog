@@ -63,9 +63,7 @@
         "type": "announcement"
       }
     ],
-    "providers": [
-      "github-copilot"
-    ]
+    "providers": []
   },
   "microsoft/mai-code-1.1-flash": {
     "id": "microsoft/mai-code-1.1-flash",

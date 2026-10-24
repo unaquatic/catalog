@@ -134,6 +134,50 @@
         "cache_read": 0.3
       }
     },
+    "abliteration-ai/abliterated-model-large-flash": {
+      "name": "Abliterated Model Large Flash",
+      "released": "2026-10-23",
+      "updated": "2026-10-23",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "input": 1048576,
+        "output": 262144
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "minimal",
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ]
+      },
+      "provider_options": {
+        "id": "abliteration-ai/abliterated-model-large-flash",
+        "name": "Abliterated Large Flash"
+      },
+      "price": {
+        "input": 1,
+        "output": 2,
+        "cache_read": 0.1
+      }
+    },
     "abliteration-ai/abliterated-model-large-v2": {
       "name": "Abliterated Model Large V2",
       "released": "2026-08-31",
@@ -2061,8 +2105,8 @@
         ]
       },
       "limit": {
-        "context": 262144,
-        "input": 262144,
+        "context": 1048576,
+        "input": 1048576,
         "output": 16384
       },
       "provider_options": {
@@ -2397,8 +2441,8 @@
         ]
       },
       "limit": {
-        "context": 1001536,
-        "input": 1001536,
+        "context": 1048576,
+        "input": 1048576,
         "output": 32768
       },
       "reasoning": {},
@@ -2906,7 +2950,7 @@
       "limit": {
         "context": 1048576,
         "input": 1048576,
-        "output": 32768
+        "output": 65536
       },
       "reasoning": {},
       "provider_options": {
@@ -4396,7 +4440,7 @@
       }
     },
     "bytedance-seed/doubao-1.5-pro-32k": {
-      "name": "Doubao 1.5 Pro 32K",
+      "name": "Doubao 1.5 Pro 32k",
       "released": "2024-11-20",
       "updated": "2025-01-22",
       "open_weights": false,
@@ -4427,7 +4471,7 @@
       }
     },
     "bytedance-seed/doubao-1.5-vision-pro-32k": {
-      "name": "Doubao 1.5 Vision Pro 32K",
+      "name": "Doubao 1.5 Vision Pro 32k",
       "released": "2024-11-20",
       "updated": "2025-01-22",
       "open_weights": false,
@@ -4944,9 +4988,9 @@
         "name": "DeepSeek Latest"
       },
       "price": {
-        "input": 0.2244,
-        "output": 0.6732,
-        "cache_read": 0.00714
+        "input": 0.132,
+        "output": 0.396,
+        "cache_read": 0.0042
       }
     },
     "deepseek/deepseek-r1-0528": {
@@ -5431,9 +5475,9 @@
         "name": "DeepSeek V4 Flash 0731"
       },
       "price": {
-        "input": 0.05,
-        "output": 0.16,
-        "cache_read": 0.013
+        "input": 0.04444,
+        "output": 0.13332,
+        "cache_read": 0.001414
       },
       "variants": {
         "thinking": {
@@ -5444,9 +5488,9 @@
             "name": "DeepSeek V4 Flash 0731 (Thinking)"
           },
           "price": {
-            "input": 0.05,
-            "output": 0.16,
-            "cache_read": 0.013
+            "input": 0.04444,
+            "output": 0.13332,
+            "cache_read": 0.001414
           }
         }
       },
@@ -5591,9 +5635,9 @@
         "name": "DeepSeek V4 Pro 0813"
       },
       "price": {
-        "input": 0.2244,
-        "output": 0.6732,
-        "cache_read": 0.00714
+        "input": 0.132,
+        "output": 0.396,
+        "cache_read": 0.0042
       },
       "variants": {
         "thinking": {
@@ -5604,9 +5648,9 @@
             "name": "DeepSeek V4 Pro 0813 Thinking"
           },
           "price": {
-            "input": 0.2244,
-            "output": 0.6732,
-            "cache_read": 0.00714
+            "input": 0.132,
+            "output": 0.396,
+            "cache_read": 0.0042
           }
         }
       }
@@ -5650,9 +5694,9 @@
         "name": "DeepSeek V4.1 Flash"
       },
       "price": {
-        "input": 0.09,
-        "output": 0.25,
-        "cache_read": 0.006
+        "input": 0.0537,
+        "output": 0.2148,
+        "cache_read": 0.001074
       },
       "variants": {
         "thinking": {
@@ -5663,9 +5707,9 @@
             "name": "DeepSeek V4.1 Flash Thinking"
           },
           "price": {
-            "input": 0.09,
-            "output": 0.25,
-            "cache_read": 0.006
+            "input": 0.0537,
+            "output": 0.2148,
+            "cache_read": 0.001074
           }
         }
       },
@@ -5683,7 +5727,7 @@
       "capabilities": {
         "tools": true,
         "attachments": true,
-        "structured_output": false,
+        "structured_output": true,
         "temperature": true,
         "input": [
           "text",
@@ -5728,6 +5772,62 @@
             "input": 0.1,
             "output": 0.6,
             "cache_read": 0.003
+          }
+        }
+      }
+    },
+    "deepseek/deepseek-v4.1-flash-uncensored": {
+      "name": "DeepSeek V4.1 Flash Uncensored",
+      "family": "deepseek",
+      "released": "2026-10-01",
+      "updated": "2026-10-01",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": false,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "input": 1048576,
+        "output": 65536
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "deepseek/deepseek-v4.1-flash-uncensored",
+        "name": "DeepSeek V4.1 Flash Uncensored"
+      },
+      "price": {
+        "input": 0.33,
+        "output": 1.32,
+        "cache_read": 0.00825
+      },
+      "variants": {
+        "thinking": {
+          "name": "DeepSeek V4.1 Flash Uncensored Thinking",
+          "mode": "thinking",
+          "provider_options": {
+            "id": "deepseek/deepseek-v4.1-flash-uncensored:thinking",
+            "name": "DeepSeek V4.1 Flash Uncensored Thinking"
+          },
+          "price": {
+            "input": 0.33,
+            "output": 1.32,
+            "cache_read": 0.00825
           }
         }
       }
@@ -7528,9 +7628,9 @@
         "name": "Gemma 4 26B A4B"
       },
       "price": {
-        "input": 0.09,
-        "output": 0.3,
-        "cache_read": 0.05
+        "input": 0.0675,
+        "output": 0.225,
+        "cache_read": 0.0375
       },
       "variants": {
         "thinking": {
@@ -7541,9 +7641,9 @@
             "name": "Gemma 4 26B A4B Thinking"
           },
           "price": {
-            "input": 0.09,
-            "output": 0.3,
-            "cache_read": 0.05
+            "input": 0.0675,
+            "output": 0.225,
+            "cache_read": 0.0375
           }
         }
       }
@@ -9988,10 +10088,7 @@
         "input": 0.35,
         "output": 1.5,
         "cache_read": 0.04
-      },
-      "aliases": [
-        "TEE/muse-glimmer-30b"
-      ]
+      }
     },
     "meta/muse-spark-1.1": {
       "name": "Muse Spark 1.1",
@@ -10720,8 +10817,8 @@
         ]
       },
       "limit": {
-        "context": 1000000,
-        "input": 1000000,
+        "context": 1048576,
+        "input": 1048576,
         "output": 524288
       },
       "reasoning": {
@@ -12025,7 +12122,7 @@
       "price": {
         "input": 0.6712,
         "output": 3.35,
-        "cache_read": 0.18
+        "cache_read": 0.15
       },
       "aliases": [
         "TEE/kimi-k2.7-code"
@@ -12110,6 +12207,52 @@
       },
       "aliases": [
         "TEE/kimi-k3"
+      ]
+    },
+    "moonshotai/kimi-k3.1-pro": {
+      "name": "Kimi K3.1 Pro",
+      "family": "kimi-k3",
+      "released": "2026-10-23",
+      "updated": "2026-10-23",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "input": 1048576,
+        "output": 1048576
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "high",
+          "max"
+        ]
+      },
+      "provider_options": {
+        "id": "moonshotai/kimi-k3.1-pro",
+        "name": "Kimi K3.1 Pro"
+      },
+      "price": {
+        "input": 2,
+        "output": 10,
+        "cache_read": 0.2,
+        "cache_write": 2
+      },
+      "aliases": [
+        "moonshotai/kimi-k3.1-pro-highspeed"
       ]
     },
     "moonshotai/kimi-latest": {
@@ -15300,6 +15443,38 @@
         "cache_read": 0.0375
       }
     },
+    "prism-ml/ternary-bonsai-2-9b": {
+      "name": "Ternary Bonsai 2 9B",
+      "released": "2026-10-23",
+      "updated": "2026-10-23",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": false,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "input": 262144,
+        "output": 65536
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "prism-ml/ternary-bonsai-2-9b",
+        "name": "Ternary Bonsai2 9B"
+      },
+      "price": {
+        "input": 0.08,
+        "output": 0.13,
+        "cache_read": 0.04
+      }
+    },
     "reflection/beam-1.0-501b-a23b": {
       "name": "Beam 1.0 501B A23B",
       "family": "beam",
@@ -15976,9 +16151,9 @@
         "name": "Tencent Hy4 Preview"
       },
       "price": {
-        "input": 0.834,
-        "output": 2.501,
-        "cache_read": 0.042
+        "input": 0.7506,
+        "output": 2.2509,
+        "cache_read": 0.0378
       }
     },
     "thedrummer/anubis-70b-v1": {
@@ -16429,9 +16604,9 @@
         "name": "Inkling"
       },
       "price": {
-        "input": 0.95,
+        "input": 1,
         "output": 4.05,
-        "cache_read": 0.16
+        "cache_read": 0.17
       },
       "variants": {
         "thinking": {
@@ -16442,9 +16617,9 @@
             "name": "Inkling Thinking"
           },
           "price": {
-            "input": 0.95,
+            "input": 1,
             "output": 4.05,
-            "cache_read": 0.16
+            "cache_read": 0.17
           }
         }
       }
@@ -17400,6 +17575,50 @@
         "output": 8.7,
         "cache_read": 0.036,
         "cache_write": 0
+      }
+    },
+    "xingchen-agi/xing4.0-29b-a4b": {
+      "name": "Xing4.0 29B A4B",
+      "family": "agi",
+      "released": "2026-10-24",
+      "updated": "2026-10-24",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "input": 262144,
+        "output": 262144
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "minimal",
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ]
+      },
+      "provider_options": {
+        "id": "xingchen-agi/xing4.0-29b-a4b",
+        "name": "Xing 4.0 29B A4B"
+      },
+      "price": {
+        "input": 0.22,
+        "output": 0.9,
+        "cache_read": 0.011
       }
     },
     "zhipuai/glm-4-32b-0414": {

@@ -379,8 +379,8 @@
         ]
       },
       "provider_options": {
-        "id": "gemini-4-argon-contributor",
-        "name": "Gemini 4 Argon Contributor",
+        "id": "gemini-4-argon",
+        "name": "Gemini 4 Argon",
         "endpoint": {
           "format": "gemini",
           "api": "https://opencode.ai/inference/go/google/v1beta",
@@ -394,11 +394,14 @@
         }
       },
       "price": {
-        "input": 4,
-        "output": 20,
-        "cache_read": 0.2,
-        "input_audio": 4
-      }
+        "input": 2,
+        "output": 10,
+        "cache_read": 0.1,
+        "input_audio": 2
+      },
+      "aliases": [
+        "gemini-4-argon-contributor"
+      ]
     },
     "meituan/longcat-2.0": {
       "name": "LongCat 2.0",
@@ -724,13 +727,29 @@
         "field": "reasoning_content"
       },
       "provider_options": {
-        "id": "minimax-m3.1-flash-free",
-        "name": "MiniMax M3.1 Flash Free"
+        "id": "minimax-m3.1-flash",
+        "name": "MiniMax M3.1 Flash"
       },
       "price": {
-        "input": 0,
-        "output": 0,
-        "cache_read": 0
+        "input": 0.15,
+        "output": 0.6,
+        "cache_read": 0.015
+      },
+      "variants": {
+        "free": {
+          "name": "MiniMax M3.1 Flash Free",
+          "tier": "free",
+          "provider_options": {
+            "id": "minimax-m3.1-flash-free",
+            "name": "MiniMax M3.1 Flash Free"
+          },
+          "price": {
+            "input": 0,
+            "output": 0,
+            "cache_read": 0
+          },
+          "status": "deprecated"
+        }
       }
     },
     "moonshotai/kimi-k2.7-code": {
@@ -811,7 +830,53 @@
       "price": {
         "input": 3,
         "output": 15,
-        "cache_read": 0.3
+        "cache_read": 0.3,
+        "cache_write": 3
+      }
+    },
+    "moonshotai/kimi-k3.1-pro": {
+      "name": "Kimi K3.1 Pro",
+      "family": "kimi-k3",
+      "released": "2026-10-23",
+      "updated": "2026-10-23",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "high",
+          "max"
+        ]
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "kimi-k3.1-pro",
+        "name": "Kimi K3.1 Pro"
+      },
+      "price": {
+        "input": 2,
+        "output": 10,
+        "cache_read": 0.2,
+        "cache_write": 2
       }
     },
     "openai/gpt-5.6-luna": {
@@ -1530,8 +1595,7 @@
         "input": [
           "text",
           "image",
-          "video",
-          "pdf"
+          "video"
         ],
         "output": [
           "text"

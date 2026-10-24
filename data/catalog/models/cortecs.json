@@ -1,0 +1,30 @@
+{
+  "cortecs/kolibri-1": {
+    "id": "cortecs/kolibri-1",
+    "lab": "cortecs",
+    "name": "Kolibri 1",
+    "released": "2026-10-22",
+    "updated": "2026-10-22",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "structured_output": true,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 81920
+    },
+    "providers": [
+      "cortecs"
+    ]
+  }
+}

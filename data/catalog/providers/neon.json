@@ -1534,7 +1534,7 @@
       "price": {
         "input": 0.05,
         "output": 0.4,
-        "cache_read": 0.005
+        "cache_read": 0.01
       }
     },
     "openai/gpt-5.1": {

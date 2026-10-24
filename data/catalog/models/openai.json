@@ -151,15 +151,10 @@
       "aimlapi",
       "edenai",
       "impossibl",
-      "kilo",
-      "llmgateway",
-      "llmgateway-providers",
       "nano-gpt",
       "openai",
-      "openrouter",
       "orcarouter",
-      "poe",
-      "vercel"
+      "poe"
     ]
   },
   "openai/gpt-3.5-turbo-0125": {
@@ -256,7 +251,7 @@
   "openai/gpt-3.5-turbo-16k": {
     "id": "openai/gpt-3.5-turbo-16k",
     "lab": "openai",
-    "name": "GPT-3.5 Turbo 16K",
+    "name": "GPT-3.5 Turbo 16k",
     "family": "gpt",
     "released": "2023-08-28",
     "updated": "2023-08-28",
@@ -312,8 +307,6 @@
     "providers": [
       "azure",
       "azure-cognitive-services",
-      "kilo",
-      "openrouter",
       "poe"
     ]
   },
@@ -346,41 +339,9 @@
       "aimlapi",
       "edenai",
       "kilo",
-      "llmgateway",
-      "llmgateway-providers",
       "openai",
       "openrouter",
-      "orcarouter",
-      "poe"
-    ]
-  },
-  "openai/gpt-4-classic-0314": {
-    "id": "openai/gpt-4-classic-0314",
-    "lab": "openai",
-    "name": "GPT-4 Classic 0314",
-    "family": "gpt",
-    "released": "2024-08-26",
-    "updated": "2024-08-26",
-    "open_weights": false,
-    "reasoning": false,
-    "capabilities": {
-      "tools": true,
-      "attachments": true,
-      "temperature": false,
-      "input": [
-        "text",
-        "image"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 8192,
-      "output": 4096
-    },
-    "providers": [
-      "poe"
+      "orcarouter"
     ]
   },
   "openai/gpt-4-turbo": {
@@ -416,14 +377,11 @@
       "edenai",
       "impossibl",
       "kilo",
-      "llmgateway",
-      "llmgateway-providers",
       "nano-gpt",
       "openai",
       "openrouter",
       "orcarouter",
-      "poe",
-      "vercel"
+      "poe"
     ]
   },
   "openai/gpt-4-turbo-vision": {
@@ -508,7 +466,6 @@
       "openai",
       "openrouter",
       "orcarouter",
-      "pioneer",
       "poe",
       "prime",
       "requesty",
@@ -565,7 +522,6 @@
       "openai",
       "openrouter",
       "orcarouter",
-      "pioneer",
       "poe",
       "prime",
       "requesty",
@@ -609,14 +565,11 @@
       "helicone",
       "impossibl",
       "kilo",
-      "llmgateway",
-      "llmgateway-providers",
       "nano-gpt",
       "nearai",
       "openai",
       "openrouter",
       "orcarouter",
-      "pioneer",
       "poe",
       "prime",
       "requesty",
@@ -671,7 +624,6 @@
       "openai",
       "openrouter",
       "orcarouter",
-      "pioneer",
       "poe",
       "prime",
       "vercel"
@@ -832,7 +784,6 @@
       "openai",
       "openrouter",
       "orcarouter",
-      "pioneer",
       "poe",
       "prime",
       "requesty",
@@ -1218,7 +1169,6 @@
       "openrouter",
       "orcarouter",
       "perplexity-agent",
-      "pioneer",
       "poe",
       "prime",
       "qihang-ai",
@@ -1280,7 +1230,6 @@
       "opencode",
       "openrouter",
       "orcarouter",
-      "pioneer",
       "poe",
       "prime",
       "requesty",
@@ -1419,7 +1368,6 @@
       "openrouter",
       "orcarouter",
       "perplexity-agent",
-      "pioneer",
       "poe",
       "prime",
       "requesty",
@@ -1458,8 +1406,7 @@
       "abacus",
       "helicone",
       "orcarouter",
-      "poe",
-      "zenmux"
+      "poe"
     ]
   },
   "openai/gpt-5.1-codex": {
@@ -1542,7 +1489,6 @@
       "aimlapi",
       "azure",
       "azure-cognitive-services",
-      "digitalocean",
       "edenai",
       "jiekou",
       "kilo",
@@ -1853,9 +1799,7 @@
     "providers": [
       "302ai",
       "abacus",
-      "opper",
-      "poe",
-      "zenmux"
+      "poe"
     ]
   },
   "openai/gpt-5.3-codex": {
@@ -1910,7 +1854,6 @@
       "openrouter",
       "opper",
       "orcarouter",
-      "pioneer",
       "poe",
       "prime",
       "requesty",
@@ -2014,7 +1957,6 @@
       "opper",
       "orcarouter",
       "perplexity-agent",
-      "pioneer",
       "poe",
       "prime",
       "requesty",
@@ -2118,7 +2060,6 @@
       "openrouter",
       "opper",
       "orcarouter",
-      "pioneer",
       "poe",
       "prime",
       "requesty",
@@ -2182,7 +2123,6 @@
       "openrouter",
       "opper",
       "orcarouter",
-      "pioneer",
       "poe",
       "prime",
       "requesty",
@@ -3311,8 +3251,7 @@
       "azure-cognitive-services",
       "digitalocean",
       "openai",
-      "poe",
-      "vercel"
+      "poe"
     ]
   },
   "openai/gpt-image-1-mini": {
@@ -3660,11 +3599,9 @@
       "orcarouter",
       "ovhcloud",
       "pendra",
-      "pioneer",
       "poe",
       "prime",
       "privatemode-ai",
-      "qiniu-ai",
       "regolo-ai",
       "sambanova",
       "scaleway",
@@ -3742,7 +3679,6 @@
       "openrouter",
       "opper",
       "ovhcloud",
-      "pioneer",
       "prime",
       "qiniu-ai",
       "regolo-ai",
@@ -4184,8 +4120,6 @@
       "helicone",
       "impossibl",
       "kilo",
-      "llmgateway",
-      "llmgateway-providers",
       "nano-gpt",
       "openai",
       "openrouter",
@@ -4375,8 +4309,6 @@
       "impossibl",
       "jiekou",
       "kilo",
-      "llmgateway",
-      "llmgateway-providers",
       "nano-gpt",
       "nearai",
       "openai",
@@ -4460,8 +4392,6 @@
       "impossibl",
       "jiekou",
       "kilo",
-      "llmgateway",
-      "llmgateway-providers",
       "model-oracle-ai",
       "nano-gpt",
       "nearai",

@@ -133,8 +133,7 @@
     ],
     "providers": [
       "nano-gpt",
-      "nvidia",
-      "pioneer"
+      "nvidia"
     ]
   },
   "google/gemini-2.0-flash": {
@@ -349,7 +348,6 @@
       "ofox",
       "openrouter",
       "orcarouter",
-      "perplexity-agent",
       "poe",
       "qihang-ai",
       "qiniu-ai",
@@ -727,7 +725,6 @@
       "ofox",
       "openrouter",
       "orcarouter",
-      "perplexity-agent",
       "poe",
       "qiniu-ai",
       "requesty",
@@ -975,7 +972,6 @@
       "opper",
       "orcarouter",
       "perplexity-agent",
-      "pioneer",
       "poe",
       "prime",
       "qihang-ai",
@@ -1102,7 +1098,6 @@
       "helicone",
       "jiekou",
       "opencode",
-      "poe",
       "qihang-ai",
       "qiniu-ai"
     ]
@@ -1236,7 +1231,6 @@
       "ofox",
       "openrouter",
       "orcarouter",
-      "pioneer",
       "poe",
       "requesty",
       "tempr",
@@ -1322,8 +1316,7 @@
       "neon",
       "openrouter",
       "orcarouter",
-      "vivgrid",
-      "zenmux"
+      "vivgrid"
     ]
   },
   "google/gemini-3.1-flash-live-preview": {
@@ -1445,7 +1438,6 @@
       "opper",
       "orcarouter",
       "perplexity-agent",
-      "pioneer",
       "poe",
       "prime",
       "requesty",
@@ -1553,7 +1545,6 @@
       "openrouter",
       "opper",
       "orcarouter",
-      "pioneer",
       "poe",
       "prime",
       "requesty",
@@ -1613,7 +1604,6 @@
       "openrouter",
       "opper",
       "orcarouter",
-      "pioneer",
       "poe",
       "requesty",
       "standardcompute",
@@ -1762,7 +1752,6 @@
       "openrouter",
       "orcarouter",
       "perplexity-agent",
-      "pioneer",
       "poe",
       "prime",
       "requesty",
@@ -2728,33 +2717,6 @@
       "openrouter"
     ]
   },
-  "google/gemma-3-4b-pt": {
-    "id": "google/gemma-3-4b-pt",
-    "lab": "google",
-    "name": "Gemma 3 4B Pt",
-    "released": "2025-02-28",
-    "updated": "2025-02-28",
-    "open_weights": false,
-    "reasoning": false,
-    "capabilities": {
-      "tools": true,
-      "attachments": false,
-      "temperature": true,
-      "input": [
-        "text"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 32768,
-      "output": 32768
-    },
-    "providers": [
-      "pioneer"
-    ]
-  },
   "google/gemma-3n-e2b-it": {
     "id": "google/gemma-3n-e2b-it",
     "lab": "google",
@@ -2860,7 +2822,6 @@
     ],
     "providers": [
       "nano-gpt",
-      "pioneer",
       "siliconflow"
     ]
   },
@@ -3497,7 +3458,6 @@
       "openrouter",
       "opper",
       "orcarouter",
-      "pioneer",
       "poe",
       "regolo-ai",
       "requesty",
@@ -3900,9 +3860,7 @@
         "url": "https://huggingface.co/google/gemma-4-E2B-it"
       }
     ],
-    "providers": [
-      "pioneer"
-    ]
+    "providers": []
   },
   "google/gemma-4-e4b-it": {
     "id": "google/gemma-4-e4b-it",
@@ -3938,8 +3896,7 @@
     ],
     "providers": [
       "atomic-chat",
-      "deepinfra",
-      "pioneer"
+      "deepinfra"
     ]
   },
   "google/gemma-4-giftige-blume-31b-v2": {
@@ -4438,8 +4395,7 @@
       "output": 0
     },
     "providers": [
-      "fastrouter",
-      "google"
+      "fastrouter"
     ]
   },
   "google/veo-3.1-generate-001": {
@@ -4501,7 +4457,6 @@
     },
     "providers": [
       "fastrouter",
-      "google",
       "poe"
     ]
   },
@@ -4563,8 +4518,7 @@
       "output": 0
     },
     "providers": [
-      "fastrouter",
-      "google"
+      "fastrouter"
     ]
   }
 }

@@ -1187,43 +1187,6 @@
         "cache_read": 0.202
       }
     },
-    "google/gemini-3-pro-preview": {
-      "name": "Gemini 3 Pro Preview",
-      "family": "gemini-pro",
-      "released": "2025-11-18",
-      "updated": "2025-11-18",
-      "knowledge": "2025-01",
-      "open_weights": false,
-      "capabilities": {
-        "tools": true,
-        "attachments": true,
-        "temperature": false,
-        "input": [
-          "text",
-          "image",
-          "video",
-          "audio"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 1048576,
-        "output": 65536
-      },
-      "reasoning": {},
-      "provider_options": {
-        "id": "google/gemini-3-pro",
-        "name": "Gemini-3-Pro"
-      },
-      "price": {
-        "input": 1.6,
-        "output": 9.6,
-        "cache_read": 0.16
-      },
-      "status": "deprecated"
-    },
     "google/gemini-3.1-flash-lite": {
       "name": "Gemini 3.1 Flash Lite",
       "family": "gemini-flash-lite",
@@ -2322,71 +2285,6 @@
       "price": {
         "input": 1.4,
         "output": 1.8
-      },
-      "status": "deprecated"
-    },
-    "openai/gpt-4": {
-      "name": "GPT-4",
-      "family": "gpt",
-      "released": "2023-11-06",
-      "updated": "2024-04-09",
-      "knowledge": "2023-11",
-      "open_weights": false,
-      "capabilities": {
-        "tools": true,
-        "attachments": true,
-        "temperature": false,
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 8192,
-        "output": 4096
-      },
-      "provider_options": {
-        "id": "openai/gpt-4-classic",
-        "name": "GPT-4-Classic"
-      },
-      "price": {
-        "input": 27,
-        "output": 54
-      },
-      "status": "deprecated"
-    },
-    "openai/gpt-4-classic-0314": {
-      "name": "GPT-4 Classic 0314",
-      "family": "gpt",
-      "released": "2024-08-26",
-      "updated": "2024-08-26",
-      "open_weights": false,
-      "capabilities": {
-        "tools": true,
-        "attachments": true,
-        "temperature": false,
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 8192,
-        "output": 4096
-      },
-      "provider_options": {
-        "id": "openai/gpt-4-classic-0314",
-        "name": "GPT-4-Classic-0314"
-      },
-      "price": {
-        "input": 27,
-        "output": 54
       },
       "status": "deprecated"
     },
