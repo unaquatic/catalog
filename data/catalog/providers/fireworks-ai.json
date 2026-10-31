@@ -38,7 +38,9 @@
         "output": 131072
       },
       "reasoning": {
+        "mandatory": false,
         "efforts": [
+          "none",
           "low",
           "medium",
           "xhigh"
@@ -81,7 +83,13 @@
         "output": 131072
       },
       "reasoning": {
-        "mandatory": false
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "medium",
+          "xhigh"
+        ]
       },
       "provider_options": {
         "id": "accounts/fireworks/models/qwen3p8-max",
@@ -172,7 +180,10 @@
             "cache_read": 0.0075
           }
         }
-      }
+      },
+      "aliases": [
+        "accounts/fireworks/routers/deepseek-v4p1-flash-spot"
+      ]
     },
     "deepseek/deepseek-v4.1-flash-1017": {
       "name": "DeepSeek V4.1 Flash 1017",
@@ -236,7 +247,8 @@
         }
       },
       "aliases": [
-        "accounts/fireworks/models/deepseek-v4p1-flash-1017"
+        "accounts/fireworks/models/deepseek-v4p1-flash-1017",
+        "accounts/fireworks/routers/deepseek-v4p1-flash-1017-spot"
       ]
     },
     "fireworks/ember-1": {
@@ -327,6 +339,22 @@
         "input": 1.25,
         "output": 4.25,
         "cache_read": 0.15
+      },
+      "variants": {
+        "fast": {
+          "name": "Muse Spark Open Fast",
+          "tier": "fast",
+          "provider_options": {
+            "body": {
+              "service_tier": "priority"
+            }
+          },
+          "price": {
+            "input": 1.875,
+            "output": 6.375,
+            "cache_read": 0.225
+          }
+        }
       }
     },
     "minimax/minimax-m3": {
@@ -389,6 +417,67 @@
       "aliases": [
         "accounts/fireworks/routers/minimax-latest"
       ]
+    },
+    "minimax/minimax-m3.1-flash": {
+      "name": "MiniMax M3.1 Flash",
+      "family": "minimax",
+      "released": "2026-10-19",
+      "updated": "2026-10-19",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 512000
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ]
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "accounts/fireworks/models/minimax-m3p1-flash",
+        "name": "MiniMax-M3.1-Flash"
+      },
+      "price": {
+        "input": 0.15,
+        "output": 0.6,
+        "cache_read": 0.015
+      },
+      "variants": {
+        "fast": {
+          "name": "MiniMax M3.1 Flash Fast",
+          "tier": "fast",
+          "provider_options": {
+            "body": {
+              "service_tier": "priority"
+            }
+          },
+          "price": {
+            "input": 0.225,
+            "output": 0.9,
+            "cache_read": 0.0225
+          }
+        }
+      }
     },
     "moonshotai/kimi-k3": {
       "name": "Kimi K3",
@@ -457,6 +546,7 @@
       "aliases": [
         "accounts/fireworks/routers/kimi-fast-latest",
         "accounts/fireworks/routers/kimi-k3-fast",
+        "accounts/fireworks/routers/kimi-k3-spot",
         "accounts/fireworks/routers/kimi-latest"
       ]
     },
@@ -700,7 +790,8 @@
       },
       "aliases": [
         "accounts/fireworks/models/glm-5p3",
-        "accounts/fireworks/routers/glm-5p3-fast"
+        "accounts/fireworks/routers/glm-5p3-fast",
+        "accounts/fireworks/routers/glm-5p3-spot"
       ]
     },
     "zhipuai/glm-5.3-flash": {

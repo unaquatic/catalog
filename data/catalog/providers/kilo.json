@@ -562,8 +562,9 @@
         "name": "Qwen: Qwen3 30B A3B Instruct 2507"
       },
       "price": {
-        "input": 0.09,
-        "output": 0.3
+        "input": 0.1,
+        "output": 0.3,
+        "cache_read": 0.1
       }
     },
     "alibaba/qwen3-32b": {
@@ -769,43 +770,6 @@
         "output": 1.1
       }
     },
-    "alibaba/qwen3-next-80b-a3b-thinking": {
-      "name": "Qwen3 Next 80B A3B Thinking",
-      "family": "qwen",
-      "released": "2025-09-12",
-      "updated": "2025-09-12",
-      "knowledge": "2025-04",
-      "open_weights": true,
-      "capabilities": {
-        "tools": true,
-        "attachments": false,
-        "structured_output": true,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 262144,
-        "output": 235929
-      },
-      "reasoning": {
-        "efforts": [
-          "high"
-        ]
-      },
-      "provider_options": {
-        "id": "qwen/qwen3-next-80b-a3b-thinking",
-        "name": "Qwen3-Next 80B-A3B (Thinking)"
-      },
-      "price": {
-        "input": 0.15,
-        "output": 1.2
-      }
-    },
     "alibaba/qwen3-vl-235b-a22b-instruct": {
       "name": "Qwen3 VL 235B A22B Instruct",
       "family": "qwen",
@@ -1004,7 +968,7 @@
       },
       "limit": {
         "context": 262144,
-        "output": 65536
+        "output": 81920
       },
       "reasoning": {
         "mandatory": false,
@@ -1124,7 +1088,7 @@
       },
       "limit": {
         "context": 262144,
-        "output": 65536
+        "output": 235929
       },
       "reasoning": {
         "mandatory": false,
@@ -1138,9 +1102,8 @@
         "name": "Qwen3.5 9B"
       },
       "price": {
-        "input": 0.08,
-        "output": 0.13,
-        "cache_read": 0.04
+        "input": 0.17,
+        "output": 0.25
       },
       "status": "deprecated"
     },
@@ -1342,8 +1305,8 @@
       },
       "price": {
         "input": 0.1,
-        "output": 0.95,
-        "cache_read": 0.05
+        "output": 0.9,
+        "cache_read": 0.025
       }
     },
     "alibaba/qwen3.6-flash": {
@@ -1427,10 +1390,7 @@
         "input": 0.325,
         "output": 1.95,
         "cache_write": 0.40625
-      },
-      "aliases": [
-        "stealth/qwen3.6-plus"
-      ]
+      }
     },
     "alibaba/qwen3.7-flash": {
       "name": "Qwen3.7 Flash",
@@ -1576,8 +1536,8 @@
         ]
       },
       "limit": {
-        "context": 1010000,
-        "output": 909000
+        "context": 1000000,
+        "output": 131072
       },
       "reasoning": {
         "efforts": [
@@ -1619,7 +1579,7 @@
       },
       "limit": {
         "context": 262144,
-        "output": 65536
+        "output": 235929
       },
       "reasoning": {
         "mandatory": false,
@@ -2347,10 +2307,7 @@
         "output": 25,
         "cache_read": 0.5,
         "cache_write": 6.25
-      },
-      "aliases": [
-        "stealth/claude-opus-4.6"
-      ]
+      }
     },
     "anthropic/claude-opus-4-7": {
       "name": "Claude Opus 4.7",
@@ -2399,10 +2356,7 @@
         "output": 25,
         "cache_read": 0.5,
         "cache_write": 6.25
-      },
-      "aliases": [
-        "stealth/claude-opus-4.7"
-      ]
+      }
     },
     "anthropic/claude-opus-4-8": {
       "name": "Claude Opus 4.8",
@@ -2451,10 +2405,7 @@
         "output": 25,
         "cache_read": 0.5,
         "cache_write": 6.25
-      },
-      "aliases": [
-        "stealth/claude-opus-4.8"
-      ]
+      }
     },
     "anthropic/claude-opus-5": {
       "name": "Claude Opus 5",
@@ -2645,10 +2596,7 @@
         "output": 15,
         "cache_read": 0.3,
         "cache_write": 3.75
-      },
-      "aliases": [
-        "stealth/claude-sonnet-4.6"
-      ]
+      }
     },
     "anthropic/claude-sonnet-5": {
       "name": "Claude Sonnet 5",
@@ -2749,43 +2697,6 @@
       "aliases": [
         "~anthropic/claude-sonnet-latest"
       ]
-    },
-    "arcee-ai/trinity-large-thinking": {
-      "name": "Trinity Large Thinking",
-      "family": "trinity",
-      "released": "2026-04-01",
-      "updated": "2026-05-28",
-      "open_weights": true,
-      "capabilities": {
-        "tools": true,
-        "attachments": false,
-        "structured_output": false,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 262144,
-        "output": 80000
-      },
-      "reasoning": {
-        "efforts": [
-          "high"
-        ]
-      },
-      "provider_options": {
-        "id": "arcee-ai/trinity-large-thinking",
-        "name": "Trinity Large Thinking"
-      },
-      "price": {
-        "input": 0.25,
-        "output": 0.8,
-        "cache_read": 0.06
-      }
     },
     "bytedance-seed/seed-1-6": {
       "name": "Seed 1.6",
@@ -3396,7 +3307,7 @@
       },
       "limit": {
         "context": 163840,
-        "output": 32768
+        "output": 147456
       },
       "reasoning": {
         "mandatory": false,
@@ -3451,9 +3362,9 @@
         "name": "DeepSeek: DeepSeek Pro Latest"
       },
       "price": {
-        "input": 0.225,
+        "input": 0.1035,
         "output": 8,
-        "cache_read": 0.23
+        "cache_read": 0.1
       }
     },
     "deepseek/deepseek-r1-0528": {
@@ -3551,8 +3462,8 @@
         ]
       },
       "limit": {
-        "context": 131072,
-        "output": 65536
+        "context": 163840,
+        "output": 147456
       },
       "reasoning": {
         "mandatory": false,
@@ -3566,9 +3477,9 @@
         "name": "DeepSeek V3.2"
       },
       "price": {
-        "input": 0.28,
-        "output": 0.42,
-        "cache_read": 0.028
+        "input": 0.26,
+        "output": 0.38,
+        "cache_read": 0.13
       }
     },
     "deepseek/deepseek-v3.2-exp": {
@@ -3671,7 +3582,7 @@
       },
       "limit": {
         "context": 1048576,
-        "output": 131072
+        "output": 943718
       },
       "reasoning": {
         "mandatory": false,
@@ -3757,8 +3668,8 @@
         ]
       },
       "limit": {
-        "context": 1024000,
-        "output": 384000
+        "context": 1048576,
+        "output": 393216
       },
       "reasoning": {
         "mandatory": false,
@@ -5237,7 +5148,7 @@
       },
       "limit": {
         "context": 131072,
-        "output": 117964
+        "output": 16384
       },
       "provider_options": {
         "id": "google/gemma-3-4b-it",
@@ -5285,9 +5196,9 @@
         "name": "Gemma 4 26B A4B IT"
       },
       "price": {
-        "input": 0.042,
-        "output": 0.22,
-        "cache_read": 0.021
+        "input": 0.01,
+        "output": 0.031,
+        "cache_read": 0.005
       }
     },
     "google/gemma-4-31b-it": {
@@ -5428,37 +5339,6 @@
         "output": 0.11
       }
     },
-    "ibm/granite-4-h-micro": {
-      "name": "Granite 4 H Micro",
-      "family": "granite",
-      "released": "2025-10-20",
-      "updated": "2025-10-20",
-      "open_weights": false,
-      "capabilities": {
-        "tools": false,
-        "attachments": false,
-        "structured_output": false,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 131000,
-        "output": 117900
-      },
-      "provider_options": {
-        "id": "ibm-granite/granite-4.0-h-micro",
-        "name": "IBM: Granite 4.0 Micro"
-      },
-      "price": {
-        "input": 0.017,
-        "output": 0.112
-      }
-    },
     "ibm/granite-4.2-8b": {
       "name": "Granite 4.2 8B",
       "family": "granite",
@@ -5495,7 +5375,7 @@
       },
       "price": {
         "input": 0.06,
-        "output": 0.25,
+        "output": 0.15,
         "cache_read": 0.015
       }
     },
@@ -5721,8 +5601,8 @@
         ]
       },
       "limit": {
-        "context": 262144,
-        "output": 235929
+        "context": 1000000,
+        "output": 262144
       },
       "reasoning": {
         "mandatory": false,
@@ -5739,6 +5619,47 @@
         "input": 0.3,
         "output": 0.9,
         "cache_read": 0.06
+      }
+    },
+    "inclusionai/ling-3.1-flash-1019": {
+      "name": "Ling 3.1 Flash 1019",
+      "family": "ling",
+      "released": "2025-08-26",
+      "updated": "2025-08-26",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 262144
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "inclusionai/ling-3.1-flash-1019-free",
+        "name": "inclusionAI: Ling 3.1 Flash 1019 (free)"
+      },
+      "price": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_write": 0,
+        "reasoning": 0
       }
     },
     "inference-net/schematron-v2-small": {
@@ -5822,7 +5743,7 @@
         ]
       },
       "limit": {
-        "context": 65536,
+        "context": 128000,
         "output": 8192
       },
       "reasoning": {
@@ -5831,12 +5752,27 @@
         ]
       },
       "provider_options": {
-        "id": "liquid/lfm-2.5-2.6b:free",
-        "name": "LiquidAI: LFM2.5-2.6B (free)"
+        "id": "liquid/lfm-2.5-2.6b",
+        "name": "LiquidAI: LFM2.5-2.6B"
       },
       "price": {
-        "input": 0,
-        "output": 0
+        "input": 0.35,
+        "output": 0.5,
+        "cache_read": 0.04
+      },
+      "variants": {
+        "free": {
+          "name": "LFM2.5 2.6B Free",
+          "tier": "free",
+          "provider_options": {
+            "id": "liquid/lfm-2.5-2.6b:free",
+            "name": "LiquidAI: LFM2.5-2.6B (free)"
+          },
+          "price": {
+            "input": 0,
+            "output": 0
+          }
+        }
       }
     },
     "liquid/lfm2.5-24b-a2b": {
@@ -6063,8 +5999,8 @@
         ]
       },
       "limit": {
-        "context": 80000,
-        "output": 72000
+        "context": 131072,
+        "output": 117964
       },
       "provider_options": {
         "id": "meta-llama/llama-3.2-3b-instruct",
@@ -6413,7 +6349,7 @@
       },
       "limit": {
         "context": 1048576,
-        "output": 943718
+        "output": 131072
       },
       "reasoning": {
         "efforts": [
@@ -6576,7 +6512,7 @@
         "name": "MiniMax: MiniMax M1"
       },
       "price": {
-        "input": 0.4,
+        "input": 0.55,
         "output": 2.2
       }
     },
@@ -6589,7 +6525,7 @@
       "capabilities": {
         "tools": true,
         "attachments": false,
-        "structured_output": true,
+        "structured_output": false,
         "temperature": true,
         "input": [
           "text"
@@ -6612,8 +6548,8 @@
         "name": "MiniMax-M2"
       },
       "price": {
-        "input": 0.3,
-        "output": 1.2
+        "input": 0.255,
+        "output": 1.02
       }
     },
     "minimax/minimax-m2-her": {
@@ -6809,7 +6745,7 @@
       "capabilities": {
         "tools": true,
         "attachments": true,
-        "structured_output": false,
+        "structured_output": true,
         "temperature": true,
         "input": [
           "text",
@@ -6821,7 +6757,7 @@
         ]
       },
       "limit": {
-        "context": 1000000,
+        "context": 1048576,
         "output": 524288
       },
       "reasoning": {
@@ -6834,12 +6770,13 @@
         ]
       },
       "provider_options": {
-        "id": "minimax/minimax-m3.1-flash:free",
-        "name": "MiniMax: MiniMax M3.1 Flash (free)"
+        "id": "minimax/minimax-m3.1-flash",
+        "name": "MiniMax: MiniMax M3.1 Flash"
       },
       "price": {
-        "input": 0,
-        "output": 0
+        "input": 0.15,
+        "output": 0.6,
+        "cache_read": 0.015
       }
     },
     "mistral/codestral-2508": {
@@ -7146,9 +7083,9 @@
         "name": "Mistral: Mistral Large 4"
       },
       "price": {
-        "input": 1.36,
-        "output": 4.18,
-        "cache_read": 0.14
+        "input": 0.7,
+        "output": 2.1,
+        "cache_read": 0.07
       }
     },
     "mistral/mistral-medium-3": {
@@ -7455,7 +7392,7 @@
         ]
       },
       "limit": {
-        "context": 256000,
+        "context": 128000,
         "output": 16384
       },
       "provider_options": {
@@ -7828,9 +7765,9 @@
         "name": "Kimi K2.7 Code"
       },
       "price": {
-        "input": 0.6712,
-        "output": 3.35,
-        "cache_read": 0.18
+        "input": 0.6,
+        "output": 3.5,
+        "cache_read": 0.15
       }
     },
     "moonshotai/kimi-k3": {
@@ -7877,6 +7814,49 @@
         "cache_write": 3.75
       }
     },
+    "moonshotai/kimi-k3.1-pro": {
+      "name": "Kimi K3.1 Pro",
+      "family": "kimi-k3",
+      "released": "2026-10-23",
+      "updated": "2026-10-23",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 943718
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "high",
+          "max"
+        ]
+      },
+      "provider_options": {
+        "id": "moonshotai/kimi-k3.1-pro",
+        "name": "MoonshotAI: Kimi K3.1 Pro"
+      },
+      "price": {
+        "input": 2,
+        "output": 10,
+        "cache_read": 0.2
+      }
+    },
     "moonshotai/kimi-latest": {
       "name": "Kimi Latest",
       "family": "kimi",
@@ -7915,9 +7895,9 @@
         "name": "MoonshotAI: Kimi Latest"
       },
       "price": {
-        "input": 0.238,
-        "output": 24,
-        "cache_read": 0.228
+        "input": 0.1495,
+        "output": 7.15,
+        "cache_read": 0.07475
       }
     },
     "morph/morph-v3-fast": {
@@ -8166,7 +8146,8 @@
       },
       "price": {
         "input": 1,
-        "output": 3
+        "output": 3,
+        "cache_read": 0.2
       }
     },
     "nvidia/nemotron-3-nano-30b-a3b": {
@@ -8269,8 +8250,8 @@
         ]
       },
       "limit": {
-        "context": 262144,
-        "output": 235929
+        "context": 1048576,
+        "output": 262144
       },
       "reasoning": {
         "mandatory": false,
@@ -8287,20 +8268,6 @@
       "price": {
         "input": 0.08,
         "output": 0.45
-      },
-      "variants": {
-        "free": {
-          "name": "Nemotron 3 Super 120B A12B Free",
-          "tier": "free",
-          "provider_options": {
-            "id": "nvidia/nemotron-3-super-120b-a12b:free",
-            "name": "NVIDIA: Nemotron 3 Super (free)"
-          },
-          "price": {
-            "input": 0,
-            "output": 0
-          }
-        }
       }
     },
     "nvidia/nemotron-3-ultra-550b-a55b": {
@@ -8501,9 +8468,9 @@
         "name": "NVIDIA: Nemotron 3.5 Super VL"
       },
       "price": {
-        "input": 0.1,
-        "output": 0.4,
-        "cache_read": 0.08
+        "input": 0.06,
+        "output": 0.35,
+        "cache_read": 0.01
       },
       "variants": {
         "free": {
@@ -8518,39 +8485,6 @@
             "output": 0
           }
         }
-      }
-    },
-    "openai/gpt-3.5-turbo": {
-      "name": "GPT-3.5 Turbo",
-      "family": "gpt",
-      "released": "2023-03-01",
-      "updated": "2023-11-06",
-      "knowledge": "2021-09-01",
-      "open_weights": false,
-      "capabilities": {
-        "tools": true,
-        "attachments": true,
-        "structured_output": true,
-        "temperature": true,
-        "input": [
-          "text",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 16385,
-        "output": 4096
-      },
-      "provider_options": {
-        "id": "openai/gpt-3.5-turbo",
-        "name": "GPT-3.5-turbo"
-      },
-      "price": {
-        "input": 0.5,
-        "output": 1.5
       }
     },
     "openai/gpt-3.5-turbo-0613": {
@@ -8586,7 +8520,7 @@
       }
     },
     "openai/gpt-3.5-turbo-16k": {
-      "name": "GPT-3.5 Turbo 16K",
+      "name": "GPT-3.5 Turbo 16k",
       "family": "gpt",
       "released": "2023-08-28",
       "updated": "2023-08-28",
@@ -8617,38 +8551,6 @@
         "output": 4
       }
     },
-    "openai/gpt-3.5-turbo-instruct": {
-      "name": "GPT-3.5 Turbo Instruct",
-      "family": "gpt",
-      "released": "2023-09-28",
-      "updated": "2023-09-28",
-      "open_weights": false,
-      "capabilities": {
-        "tools": false,
-        "attachments": true,
-        "structured_output": true,
-        "temperature": true,
-        "input": [
-          "text",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 4095,
-        "output": 3685
-      },
-      "provider_options": {
-        "id": "openai/gpt-3.5-turbo-instruct",
-        "name": "OpenAI: GPT-3.5 Turbo Instruct"
-      },
-      "price": {
-        "input": 1.5,
-        "output": 2
-      }
-    },
     "openai/gpt-4": {
       "name": "GPT-4",
       "family": "gpt",
@@ -8659,7 +8561,7 @@
       "capabilities": {
         "tools": true,
         "attachments": true,
-        "structured_output": true,
+        "structured_output": false,
         "temperature": true,
         "input": [
           "text",
@@ -8680,40 +8582,6 @@
       "price": {
         "input": 30,
         "output": 60
-      }
-    },
-    "openai/gpt-4-turbo": {
-      "name": "GPT-4 Turbo",
-      "family": "gpt",
-      "released": "2023-11-06",
-      "updated": "2024-04-09",
-      "knowledge": "2023-12",
-      "open_weights": false,
-      "capabilities": {
-        "tools": true,
-        "attachments": true,
-        "structured_output": true,
-        "temperature": true,
-        "input": [
-          "text",
-          "image",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 128000,
-        "output": 4096
-      },
-      "provider_options": {
-        "id": "openai/gpt-4-turbo",
-        "name": "GPT-4 Turbo"
-      },
-      "price": {
-        "input": 10,
-        "output": 30
       }
     },
     "openai/gpt-4.1": {
@@ -8809,7 +8677,7 @@
       },
       "limit": {
         "context": 1047576,
-        "output": 32768
+        "output": 942818
       },
       "provider_options": {
         "id": "openai/gpt-4.1-nano",
@@ -8818,7 +8686,7 @@
       "price": {
         "input": 0.1,
         "output": 0.4,
-        "cache_read": 0.025
+        "cache_read": 0.03
       }
     },
     "openai/gpt-4o": {
@@ -9467,41 +9335,6 @@
       "provider_options": {
         "id": "openai/gpt-5.2",
         "name": "GPT-5.2"
-      },
-      "price": {
-        "input": 1.75,
-        "output": 14,
-        "cache_read": 0.175
-      }
-    },
-    "openai/gpt-5.2-chat-latest": {
-      "name": "GPT-5.2 Chat Latest",
-      "family": "gpt",
-      "released": "2025-12-11",
-      "updated": "2025-12-11",
-      "knowledge": "2025-08-31",
-      "open_weights": false,
-      "capabilities": {
-        "tools": true,
-        "attachments": true,
-        "structured_output": true,
-        "temperature": false,
-        "input": [
-          "pdf",
-          "image",
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 128000,
-        "output": 32000
-      },
-      "provider_options": {
-        "id": "openai/gpt-5.2-chat",
-        "name": "OpenAI: GPT-5.2 Chat"
       },
       "price": {
         "input": 1.75,
@@ -10648,6 +10481,98 @@
         "cache_write": 2.5
       }
     },
+    "openai/gpt-6.1-terra": {
+      "name": "GPT-6.1 Terra",
+      "family": "gpt-terra",
+      "released": "2026-10-26",
+      "updated": "2026-10-26",
+      "knowledge": "2026-06-01",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1050000,
+        "input": 922000,
+        "output": 128000
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ]
+      },
+      "provider_options": {
+        "id": "openai/gpt-6.1-terra",
+        "name": "OpenAI: GPT-6.1 Terra"
+      },
+      "price": {
+        "input": 1,
+        "output": 5,
+        "cache_read": 0.05,
+        "cache_write": 1.25
+      }
+    },
+    "openai/gpt-6.1-terra-pro": {
+      "name": "GPT-6.1 Terra Pro",
+      "family": "gpt",
+      "released": "2026-10-26",
+      "updated": "2026-10-26",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "pdf",
+          "image",
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1050000,
+        "output": 128000
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ]
+      },
+      "provider_options": {
+        "id": "openai/gpt-6.1-terra-pro",
+        "name": "OpenAI: GPT-6.1 Terra Pro"
+      },
+      "price": {
+        "input": 1,
+        "output": 5,
+        "cache_read": 0.05,
+        "cache_write": 1.25
+      }
+    },
     "openai/gpt-astra-latest": {
       "name": "GPT Astra Latest",
       "family": "gpt-astra",
@@ -11011,89 +10936,10 @@
         "name": "OpenAI: GPT Terra Latest"
       },
       "price": {
-        "input": 2,
-        "output": 12,
-        "cache_read": 0.2,
-        "cache_write": 2.5
-      }
-    },
-    "openai/o1": {
-      "name": "o1",
-      "family": "o",
-      "released": "2024-12-05",
-      "updated": "2024-12-05",
-      "knowledge": "2023-09",
-      "open_weights": false,
-      "capabilities": {
-        "tools": true,
-        "attachments": true,
-        "structured_output": true,
-        "temperature": false,
-        "input": [
-          "text",
-          "image",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 200000,
-        "output": 100000
-      },
-      "reasoning": {
-        "efforts": [
-          "high"
-        ]
-      },
-      "provider_options": {
-        "id": "openai/o1",
-        "name": "o1"
-      },
-      "price": {
-        "input": 15,
-        "output": 60,
-        "cache_read": 7.5
-      }
-    },
-    "openai/o1-pro": {
-      "name": "o1 Pro",
-      "family": "o-pro",
-      "released": "2025-03-19",
-      "updated": "2025-03-19",
-      "knowledge": "2023-09",
-      "open_weights": false,
-      "capabilities": {
-        "tools": false,
-        "attachments": true,
-        "structured_output": true,
-        "temperature": false,
-        "input": [
-          "text",
-          "image",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 200000,
-        "output": 100000
-      },
-      "reasoning": {
-        "efforts": [
-          "high"
-        ]
-      },
-      "provider_options": {
-        "id": "openai/o1-pro",
-        "name": "o1-pro"
-      },
-      "price": {
-        "input": 150,
-        "output": 600
+        "input": 1,
+        "output": 5,
+        "cache_read": 0.05,
+        "cache_write": 1.25
       }
     },
     "openai/o3": {
@@ -11136,48 +10982,6 @@
         "cache_read": 0.5
       }
     },
-    "openai/o3-mini": {
-      "name": "o3 Mini",
-      "family": "o-mini",
-      "released": "2024-12-20",
-      "updated": "2025-01-29",
-      "knowledge": "2024-05",
-      "open_weights": false,
-      "capabilities": {
-        "tools": true,
-        "attachments": true,
-        "structured_output": true,
-        "temperature": false,
-        "input": [
-          "text",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 200000,
-        "output": 100000
-      },
-      "reasoning": {
-        "efforts": [
-          "high"
-        ]
-      },
-      "provider_options": {
-        "id": "openai/o3-mini",
-        "name": "o3-mini"
-      },
-      "price": {
-        "input": 1.1,
-        "output": 4.4,
-        "cache_read": 0.55
-      },
-      "aliases": [
-        "openai/o3-mini-high"
-      ]
-    },
     "openai/o3-pro": {
       "name": "o3 Pro",
       "family": "o-pro",
@@ -11216,49 +11020,6 @@
         "input": 20,
         "output": 80
       }
-    },
-    "openai/o4-mini": {
-      "name": "o4 Mini",
-      "family": "o-mini",
-      "released": "2025-04-16",
-      "updated": "2025-04-16",
-      "knowledge": "2024-05",
-      "open_weights": false,
-      "capabilities": {
-        "tools": true,
-        "attachments": true,
-        "structured_output": true,
-        "temperature": false,
-        "input": [
-          "image",
-          "text",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 200000,
-        "output": 100000
-      },
-      "reasoning": {
-        "efforts": [
-          "high"
-        ]
-      },
-      "provider_options": {
-        "id": "openai/o4-mini",
-        "name": "o4-mini"
-      },
-      "price": {
-        "input": 1.1,
-        "output": 4.4,
-        "cache_read": 0.275
-      },
-      "aliases": [
-        "openai/o4-mini-high"
-      ]
     },
     "perceptron/perceptron-mk1": {
       "name": "Perceptron Mk1",
@@ -11663,6 +11424,45 @@
         "input": 0.075,
         "output": 0.5,
         "cache_read": 0.0375
+      }
+    },
+    "prism-ml/ternary-bonsai-2-9b": {
+      "name": "Ternary Bonsai 2 9B",
+      "released": "2026-10-16",
+      "updated": "2026-10-16",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 65536
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "prism-ml/ternary-bonsai-2-9b",
+        "name": "PrismML: Ternary Bonsai 2 9B"
+      },
+      "price": {
+        "input": 0.08,
+        "output": 0.13,
+        "cache_read": 0.04
       }
     },
     "recursive/flint-v1.0-free": {
@@ -12205,6 +12005,7 @@
         "input": 0,
         "output": 0,
         "cache_read": 0,
+        "cache_write": 0,
         "reasoning": 0
       }
     },
@@ -12715,9 +12516,9 @@
         "name": "Inkling"
       },
       "price": {
-        "input": 0.95,
+        "input": 1,
         "output": 4.05,
-        "cache_read": 0.16
+        "cache_read": 0.17
       }
     },
     "thinkingmachines/inkling-small": {
@@ -12935,49 +12736,6 @@
         "input": 0.1,
         "output": 0.4,
         "cache_read": 0.01
-      }
-    },
-    "upstage/solar-pro3": {
-      "name": "Solar Pro 3",
-      "family": "solar-pro",
-      "released": "2026-01-26",
-      "updated": "2026-03-23",
-      "knowledge": "2025-07",
-      "open_weights": false,
-      "capabilities": {
-        "tools": true,
-        "attachments": false,
-        "structured_output": true,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 131072,
-        "output": 117964
-      },
-      "reasoning": {
-        "mandatory": false,
-        "efforts": [
-          "none",
-          "minimal",
-          "low",
-          "medium",
-          "high"
-        ]
-      },
-      "provider_options": {
-        "id": "upstage/solar-pro-3",
-        "name": "Upstage: Solar Pro 3"
-      },
-      "price": {
-        "input": 0.15,
-        "output": 0.6,
-        "cache_read": 0.015
       }
     },
     "upstage/solar-pro4": {
@@ -13374,8 +13132,8 @@
         ]
       },
       "limit": {
-        "context": 1050000,
-        "output": 945000
+        "context": 1000000,
+        "output": 65536
       },
       "reasoning": {
         "mandatory": false,
@@ -13426,8 +13184,8 @@
         ]
       },
       "limit": {
-        "context": 1050000,
-        "output": 945000
+        "context": 262144,
+        "output": 235929
       },
       "reasoning": {
         "mandatory": false,
@@ -13495,9 +13253,9 @@
         "name": "MiMo-V2.6-Flash"
       },
       "price": {
-        "input": 0.1,
-        "output": 0.28,
-        "cache_read": 0.05
+        "input": 0.087,
+        "output": 0.187,
+        "cache_read": 0.003
       }
     },
     "xiaomi/mimo-v2.6-pro": {
@@ -13537,9 +13295,9 @@
         "name": "MiMo-V2.6-Pro"
       },
       "price": {
-        "input": 0.43,
+        "input": 0.435,
         "output": 0.87,
-        "cache_read": 0.0036
+        "cache_read": 0.004
       }
     },
     "xiaomi/mimo-v2.6-pro-ultraspeed": {
@@ -13584,8 +13342,8 @@
         "cache_read": 0.036
       }
     },
-    "xingchen-agi/xing4.0-29b-a4b-free": {
-      "name": "Xing4.0 29B A4B Free",
+    "xingchen-agi/xing4.0-29b-a4b": {
+      "name": "Xing4.0 29B A4B",
       "family": "agi",
       "released": "2026-10-16",
       "updated": "2026-10-16",
@@ -13763,7 +13521,7 @@
         ]
       },
       "limit": {
-        "context": 204800,
+        "context": 202752,
         "output": 131072
       },
       "reasoning": {
@@ -13778,9 +13536,9 @@
         "name": "GLM-4.6"
       },
       "price": {
-        "input": 0.55,
-        "output": 2.2,
-        "cache_read": 0.11
+        "input": 0.5,
+        "output": 2,
+        "cache_read": 0.1
       }
     },
     "zhipuai/glm-4.6v": {
@@ -14125,7 +13883,7 @@
       },
       "limit": {
         "context": 1048576,
-        "output": 943718
+        "output": 131072
       },
       "reasoning": {
         "efforts": [

@@ -15,78 +15,6 @@
   },
   "doc": "https://llm.chutes.ai/v1/models",
   "models": {
-    "alibaba/qwen3-235b-a22b-thinking-2507": {
-      "name": "Qwen3 235B A22B Thinking 2507",
-      "family": "qwen",
-      "released": "2025-07-25",
-      "updated": "2025-07-25",
-      "open_weights": true,
-      "capabilities": {
-        "tools": true,
-        "attachments": false,
-        "structured_output": true,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 262144,
-        "output": 262144
-      },
-      "reasoning": {},
-      "interleaved": {
-        "field": "reasoning_content"
-      },
-      "provider_options": {
-        "id": "Qwen/Qwen3-235B-A22B-Thinking-2507-TEE",
-        "name": "Qwen3 235B A22B Thinking 2507 TEE"
-      },
-      "price": {
-        "input": 0.2989,
-        "output": 1.1957,
-        "cache_read": 0.029889999999999993
-      }
-    },
-    "alibaba/qwen3-32b": {
-      "name": "Qwen3 32B",
-      "family": "qwen",
-      "released": "2025-04-28",
-      "updated": "2025-04-28",
-      "knowledge": "2025-04",
-      "open_weights": true,
-      "capabilities": {
-        "tools": true,
-        "attachments": false,
-        "structured_output": true,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 40960,
-        "output": 40960
-      },
-      "reasoning": {
-        "mandatory": false
-      },
-      "provider_options": {
-        "id": "Qwen/Qwen3-32B-TEE",
-        "name": "Qwen3 32B TEE"
-      },
-      "price": {
-        "input": 0.104,
-        "output": 0.416,
-        "cache_read": 0.010399999999999998
-      }
-    },
     "alibaba/qwen3.5-397b-a17b": {
       "name": "Qwen3.5 397B A17B",
       "family": "qwen",
@@ -162,6 +90,32 @@
         "cache_read": 0.024999999999999994
       }
     },
+    "alibaba/qwen3.8-2.4t-a95b": {
+      "name": "Qwen3.8 2.4T A95B",
+      "family": "qwen",
+      "released": "2026-10-26",
+      "updated": "2026-10-26",
+      "open_weights": true,
+      "capabilities": {
+        "tools": false,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 0,
+        "output": 0
+      },
+      "provider_options": {
+        "id": "Qwen/Qwen3.8-2.4T-A95B",
+        "name": "Qwen3.8 2.4T A95B"
+      }
+    },
     "alibaba/qwen3.8-27b": {
       "name": "Qwen3.8 27B",
       "family": "qwen",
@@ -194,6 +148,32 @@
         "input": 0.039,
         "output": 1.25,
         "cache_read": 0.003899999999999999
+      }
+    },
+    "alibaba/qwen3.8-max-0902": {
+      "name": "Qwen3.8 Max 0902",
+      "family": "qwen3.8-max",
+      "released": "2026-10-20",
+      "updated": "2026-10-25",
+      "open_weights": true,
+      "capabilities": {
+        "tools": false,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 0,
+        "output": 0
+      },
+      "provider_options": {
+        "id": "Qwen/Qwen3.8-Max-0902",
+        "name": "Qwen3.8 Max 0902"
       }
     },
     "deepseek/deepseek-v3.2": {
@@ -271,6 +251,58 @@
         "cache_read": 0.04399999999999999
       }
     },
+    "deepseek/deepseek-v4-pro-0813": {
+      "name": "DeepSeek V4 Pro 0813",
+      "family": "deepseek",
+      "released": "2026-10-20",
+      "updated": "2026-10-25",
+      "open_weights": true,
+      "capabilities": {
+        "tools": false,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 0,
+        "output": 0
+      },
+      "provider_options": {
+        "id": "deepseek-ai/DeepSeek-V4-Pro-0813",
+        "name": "DeepSeek V4 Pro 0813"
+      }
+    },
+    "deepseek/deepseek-v4.1-flash-1017": {
+      "name": "DeepSeek V4.1 Flash 1017",
+      "family": "deepseek",
+      "released": "2026-10-26",
+      "updated": "2026-10-26",
+      "open_weights": true,
+      "capabilities": {
+        "tools": false,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 0,
+        "output": 0
+      },
+      "provider_options": {
+        "id": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+        "name": "DeepSeek V4.1 Flash 1017"
+      }
+    },
     "google/gemma-4-31b-it": {
       "name": "Gemma 4 31B IT",
       "family": "gemma",
@@ -306,38 +338,6 @@
         "input": 0.12,
         "output": 0.37,
         "cache_read": 0.011999999999999997
-      }
-    },
-    "mistral/mistral-nemo": {
-      "name": "Mistral Nemo",
-      "family": "mistral-nemo",
-      "released": "2024-07-18",
-      "updated": "2024-07-18",
-      "knowledge": "2024-07",
-      "open_weights": true,
-      "capabilities": {
-        "tools": false,
-        "attachments": false,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 131072,
-        "output": 131072
-      },
-      "provider_options": {
-        "id": "unsloth/Mistral-Nemo-Instruct-2407-TEE",
-        "name": "Mistral Nemo Instruct 2407 TEE"
-      },
-      "price": {
-        "input": 0.0245,
-        "output": 0.0978,
-        "cache_read": 0.0024499999999999995
       }
     },
     "moonshotai/kimi-k2.6": {
@@ -376,9 +376,35 @@
         "name": "Kimi K2.6 TEE"
       },
       "price": {
-        "input": 0.45,
-        "output": 1.95,
-        "cache_read": 0.04499999999999999
+        "input": 0.39,
+        "output": 1.8,
+        "cache_read": 0.03899999999999999
+      }
+    },
+    "moonshotai/kimi-k2.7-code": {
+      "name": "Kimi K2.7 Code",
+      "family": "kimi-k2",
+      "released": "2026-10-26",
+      "updated": "2026-10-26",
+      "open_weights": true,
+      "capabilities": {
+        "tools": false,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 0,
+        "output": 0
+      },
+      "provider_options": {
+        "id": "moonshotai/Kimi-K2.7-Code",
+        "name": "Kimi K2.7 Code"
       }
     },
     "moonshotai/kimi-k3": {
@@ -418,37 +444,6 @@
         "cache_read": 0.18499999999999997
       }
     },
-    "nvidia/nemotron-3-nano-omni-30b-tee": {
-      "name": "Nemotron 3 Nano Omni 30B TEE",
-      "family": "nemotron",
-      "released": "2026-07-23",
-      "updated": "2026-07-23",
-      "open_weights": true,
-      "capabilities": {
-        "tools": false,
-        "attachments": false,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 131072,
-        "output": 0
-      },
-      "provider_options": {
-        "id": "Nemotron-3-Nano-Omni-30B-TEE",
-        "name": "Nemotron 3 Nano Omni 30B TEE"
-      },
-      "price": {
-        "input": 0.0245,
-        "output": 0.0978,
-        "cache_read": 0.0024499999999999995
-      }
-    },
     "zhipuai/glm-5.1": {
       "name": "GLM 5.1",
       "family": "glm",
@@ -482,9 +477,9 @@
         "name": "GLM 5.1 TEE"
       },
       "price": {
-        "input": 0.98,
-        "output": 3.08,
-        "cache_read": 0.09799999999999998
+        "input": 0.9,
+        "output": 2.9,
+        "cache_read": 0.08999999999999998
       }
     },
     "zhipuai/glm-5.2": {
@@ -523,6 +518,42 @@
         "input": 1.25,
         "output": 3.95,
         "cache_read": 0.12499999999999997
+      },
+      "variants": {
+        "fast": {
+          "name": "GLM 5.2 Fast",
+          "tier": "fast",
+          "provider_options": {
+            "id": "zai-org/GLM-5.2-Fast",
+            "name": "GLM 5.2 Fast"
+          }
+        }
+      }
+    },
+    "zhipuai/glm-5.3": {
+      "name": "GLM 5.3",
+      "family": "glm",
+      "released": "2026-10-26",
+      "updated": "2026-10-26",
+      "open_weights": true,
+      "capabilities": {
+        "tools": false,
+        "attachments": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 0,
+        "output": 0
+      },
+      "provider_options": {
+        "id": "zai-org/GLM-5.3",
+        "name": "GLM 5.3"
       }
     }
   }

@@ -65,35 +65,6 @@
       "novita-ai"
     ]
   },
-  "zhipuai/glm-4-32b-0414": {
-    "id": "zhipuai/glm-4-32b-0414",
-    "lab": "zhipuai",
-    "name": "GLM 4 32B 0414",
-    "family": "glm",
-    "released": "2024-01-01",
-    "updated": "2025-04-14",
-    "open_weights": true,
-    "reasoning": false,
-    "capabilities": {
-      "tools": false,
-      "attachments": false,
-      "structured_output": false,
-      "input": [
-        "text"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 128000,
-      "input": 128000,
-      "output": 65536
-    },
-    "providers": [
-      "nano-gpt"
-    ]
-  },
   "zhipuai/glm-4-32b-0414-128k": {
     "id": "zhipuai/glm-4-32b-0414-128k",
     "lab": "zhipuai",
@@ -124,64 +95,6 @@
       "llmgateway-providers"
     ]
   },
-  "zhipuai/glm-4-9b-0414": {
-    "id": "zhipuai/glm-4-9b-0414",
-    "lab": "zhipuai",
-    "name": "GLM 4 9B 0414",
-    "family": "glm",
-    "released": "2024-01-01",
-    "updated": "2025-04-14",
-    "open_weights": true,
-    "reasoning": false,
-    "capabilities": {
-      "tools": false,
-      "attachments": false,
-      "structured_output": false,
-      "input": [
-        "text"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 32000,
-      "input": 32000,
-      "output": 8000
-    },
-    "providers": [
-      "nano-gpt"
-    ]
-  },
-  "zhipuai/glm-4-air-0111": {
-    "id": "zhipuai/glm-4-air-0111",
-    "lab": "zhipuai",
-    "name": "GLM 4 Air 0111",
-    "family": "glm",
-    "released": "2025-01-11",
-    "updated": "2025-01-11",
-    "open_weights": false,
-    "reasoning": false,
-    "capabilities": {
-      "tools": false,
-      "attachments": false,
-      "structured_output": false,
-      "input": [
-        "text"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 128000,
-      "input": 128000,
-      "output": 4096
-    },
-    "providers": [
-      "nano-gpt"
-    ]
-  },
   "zhipuai/glm-4-long": {
     "id": "zhipuai/glm-4-long",
     "lab": "zhipuai",
@@ -206,95 +119,6 @@
       "context": 1000000,
       "input": 1000000,
       "output": 4095
-    },
-    "providers": [
-      "nano-gpt"
-    ]
-  },
-  "zhipuai/glm-4-plus-0111": {
-    "id": "zhipuai/glm-4-plus-0111",
-    "lab": "zhipuai",
-    "name": "GLM 4 Plus 0111",
-    "family": "glm",
-    "released": "2025-02-19",
-    "updated": "2025-02-19",
-    "open_weights": false,
-    "reasoning": false,
-    "capabilities": {
-      "tools": false,
-      "attachments": false,
-      "structured_output": false,
-      "input": [
-        "text"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 128000,
-      "input": 128000,
-      "output": 4096
-    },
-    "providers": [
-      "nano-gpt"
-    ]
-  },
-  "zhipuai/glm-4.1v-thinking-flash": {
-    "id": "zhipuai/glm-4.1v-thinking-flash",
-    "lab": "zhipuai",
-    "name": "GLM 4.1V Thinking Flash",
-    "family": "glm-flash",
-    "released": "2025-07-09",
-    "updated": "2025-07-09",
-    "open_weights": false,
-    "reasoning": false,
-    "capabilities": {
-      "tools": false,
-      "attachments": true,
-      "structured_output": false,
-      "input": [
-        "text",
-        "image"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 64000,
-      "input": 64000,
-      "output": 8192
-    },
-    "providers": [
-      "nano-gpt"
-    ]
-  },
-  "zhipuai/glm-4.1v-thinking-flashx": {
-    "id": "zhipuai/glm-4.1v-thinking-flashx",
-    "lab": "zhipuai",
-    "name": "GLM 4.1V Thinking FlashX",
-    "family": "glm-flash",
-    "released": "2025-07-09",
-    "updated": "2025-07-09",
-    "open_weights": false,
-    "reasoning": false,
-    "capabilities": {
-      "tools": false,
-      "attachments": true,
-      "structured_output": false,
-      "input": [
-        "text",
-        "image"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 64000,
-      "input": 64000,
-      "output": 8192
     },
     "providers": [
       "nano-gpt"
@@ -334,7 +158,6 @@
     "providers": [
       "302ai",
       "abacus",
-      "huggingface",
       "impossibl",
       "jiekou",
       "kilo",
@@ -586,7 +409,6 @@
       "edenai",
       "helicone",
       "huggingface",
-      "iflowcn",
       "impossibl",
       "io-net",
       "kilo",
@@ -826,7 +648,6 @@
       "abacus",
       "alibaba-coding-plan",
       "alibaba-coding-plan-cn",
-      "baseten",
       "crossmodel",
       "deepinfra",
       "dinference",
@@ -898,8 +719,6 @@
       "jiekou",
       "kenari",
       "kilo",
-      "llmgateway",
-      "llmgateway-providers",
       "nano-gpt",
       "novita-ai",
       "openrouter",
@@ -945,6 +764,7 @@
       }
     ],
     "providers": [
+      "empiriolabs",
       "llmgateway",
       "llmgateway-providers",
       "ofox",
@@ -1023,10 +843,8 @@
       "alibaba-coding-plan-cn",
       "alibaba-token-plan",
       "alibaba-token-plan-cn",
-      "baseten",
       "crossmodel",
       "deepinfra",
-      "digitalocean",
       "dinference",
       "edenai",
       "fastrouter",
@@ -1038,7 +856,6 @@
       "llmgateway",
       "llmgateway-providers",
       "meganova",
-      "melious",
       "nano-gpt",
       "novita-ai",
       "ofox",
@@ -1142,15 +959,12 @@
       "alibaba-cn",
       "alibaba-token-plan",
       "alibaba-token-plan-cn",
-      "ambient",
       "auriko",
-      "baseten",
       "chutes",
       "cortecs",
       "crossmodel",
       "crusoe",
       "deepinfra",
-      "digitalocean",
       "dinference",
       "ebcloud",
       "edenai",
@@ -1168,15 +982,12 @@
       "kilo",
       "llmgateway",
       "llmgateway-providers",
-      "melious",
       "nano-gpt",
       "novita-ai",
       "ofox",
-      "ollama-cloud",
       "opencode",
       "openrouter",
       "orcarouter",
-      "pioneer",
       "requesty",
       "scnet-token-plan",
       "siliconflow",
@@ -1226,7 +1037,6 @@
       "302ai",
       "abacus",
       "above",
-      "aiand",
       "aimlapi",
       "alibaba",
       "alibaba-cn",
@@ -1269,10 +1079,10 @@
       "llmgateway-providers",
       "mistral",
       "model-oracle-ai",
+      "morph",
       "nano-gpt",
       "nebius",
       "neon",
-      "neuralwatt",
       "novita-ai",
       "ofox",
       "ollama-cloud",
@@ -1354,6 +1164,7 @@
       "baseten",
       "bothub",
       "boundless",
+      "chutes",
       "cline-pass",
       "cloudferro-sherlock",
       "cloudflare-workers-ai",
@@ -1381,8 +1192,10 @@
       "mistral",
       "moark",
       "modal",
+      "morph",
       "nan",
       "nano-gpt",
+      "nearai",
       "nebius",
       "neon",
       "neuralwatt",
@@ -1421,6 +1234,7 @@
       "vivgrid",
       "volcengine-coding-plan",
       "vultr",
+      "wally",
       "wandb",
       "zai",
       "zai-coding-plan",
@@ -1496,7 +1310,11 @@
       "llmgateway",
       "llmgateway-providers",
       "melious",
+      "mistral",
       "modal",
+      "morph",
+      "munito",
+      "munito-eu",
       "nan",
       "nano-gpt",
       "nearai",
@@ -1535,6 +1353,7 @@
       "volcengine",
       "volcengine-coding-plan",
       "vultr",
+      "wally",
       "wandb",
       "zai",
       "zai-coding-plan",
@@ -1802,64 +1621,6 @@
     ],
     "providers": [
       "zenmux"
-    ]
-  },
-  "zhipuai/glm-z1-9b-0414": {
-    "id": "zhipuai/glm-z1-9b-0414",
-    "lab": "zhipuai",
-    "name": "GLM Z1 9B 0414",
-    "family": "glm-z",
-    "released": "2024-01-01",
-    "updated": "2025-04-14",
-    "open_weights": true,
-    "reasoning": false,
-    "capabilities": {
-      "tools": false,
-      "attachments": false,
-      "structured_output": false,
-      "input": [
-        "text"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 32000,
-      "input": 32000,
-      "output": 8000
-    },
-    "providers": [
-      "nano-gpt"
-    ]
-  },
-  "zhipuai/glm-z1-airx": {
-    "id": "zhipuai/glm-z1-airx",
-    "lab": "zhipuai",
-    "name": "GLM Z1 AirX",
-    "family": "glm",
-    "released": "2025-04-15",
-    "updated": "2025-04-15",
-    "open_weights": false,
-    "reasoning": false,
-    "capabilities": {
-      "tools": true,
-      "attachments": false,
-      "structured_output": true,
-      "input": [
-        "text"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 32000,
-      "input": 32000,
-      "output": 16384
-    },
-    "providers": [
-      "nano-gpt"
     ]
   }
 }

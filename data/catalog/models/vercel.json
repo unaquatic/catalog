@@ -27,6 +27,33 @@
       "vercel"
     ]
   },
+  "vercel/joey-1": {
+    "id": "vercel/joey-1",
+    "lab": "vercel",
+    "name": "Joey 1",
+    "type": "decision",
+    "released": "2026-10-29",
+    "updated": "2026-10-29",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 16384,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
   "vercel/mammoth-1": {
     "id": "vercel/mammoth-1",
     "lab": "vercel",

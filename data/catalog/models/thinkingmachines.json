@@ -35,7 +35,6 @@
     "providers": [
       "abacus",
       "aimlapi",
-      "baseten",
       "commandcode",
       "deepinfra",
       "edenai",
@@ -91,7 +90,6 @@
     "providers": [
       "aimlapi",
       "arcee",
-      "baseten",
       "commandcode",
       "deepinfra",
       "edenai",
@@ -100,7 +98,6 @@
       "llmtr",
       "nano-gpt",
       "openrouter",
-      "pioneer",
       "thinkingmachines",
       "vercel"
     ]

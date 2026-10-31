@@ -291,16 +291,7 @@
         "context": 1000000,
         "output": 65536
       },
-      "reasoning": {
-        "mandatory": false,
-        "efforts": [
-          "none",
-          "minimal",
-          "low",
-          "medium",
-          "high"
-        ]
-      },
+      "reasoning": {},
       "provider_options": {
         "id": "qwen3.8-max",
         "name": "Qwen3.8 Max Preview"

@@ -2,15 +2,12 @@
   "$schema": "https://aquatic.dev/catalog/schema.json",
   "version": 8,
   "source": "https://models.dev",
-  "generated": "2026-10-22T13:34:33Z",
+  "generated": "2026-10-31T12:35:54Z",
   "spellings": {
     "128e": "128E",
-    "16k": "16K",
     "1t": "1T",
     "2.4t": "2.4T",
-    "256k": "256K",
     "32k": "32K",
-    "4.1v": "4.1V",
     "4.5v": "4.5V",
     "4.6v": "4.6V",
     "5v": "5V",
@@ -37,6 +34,7 @@
     "api": "API",
     "asi1": "ASI1",
     "asr": "ASR",
+    "assguard": "AssGuard",
     "autoglm": "AutoGLM",
     "bf16": "BF16",
     "bge": "BGE",
@@ -72,7 +70,6 @@
     "hd": "HD",
     "heygen": "HeyGen",
     "it": "IT",
-    "kat": "KAT",
     "kb": "KB",
     "lfm2": "LFM2",
     "lfm2.5": "LFM2.5",
@@ -124,17 +121,17 @@
     "rp": "RP",
     "s2.1": "S 2.1",
     "scaledown": "ScaleDown",
+    "sdft": "SDFT",
     "sdxl": "SDXL",
     "sea": "SEA",
     "sensenova": "SenseNova",
     "slerp": "SLERP",
-    "smollm3": "SmolLM3",
     "stablediffusionxl": "StableDiffusionXL",
     "stepaudio": "StepAudio",
     "stt": "STT",
+    "styletune": "StyleTune",
     "t2v": "T2V",
     "tars": "TARS",
-    "tee": "TEE",
     "tng": "TNG",
     "topazlabs": "TopazLabs",
     "tts": "TTS",
@@ -177,6 +174,10 @@
     "aisingapore": {
       "id": "aisingapore",
       "name": "AI Singapore"
+    },
+    "aleph-alpha": {
+      "id": "aleph-alpha",
+      "name": "Aleph Alpha"
     },
     "alibaba": {
       "id": "alibaba",
@@ -326,10 +327,6 @@
       "id": "greenpt",
       "name": "GreenPT"
     },
-    "groq": {
-      "id": "groq",
-      "name": "Groq"
-    },
     "gryphe": {
       "id": "gryphe",
       "name": "Gryphe"
@@ -345,10 +342,6 @@
     "heygen": {
       "id": "heygen",
       "name": "HeyGen"
-    },
-    "huggingfacetb": {
-      "id": "huggingfacetb",
-      "name": "Hugging Face"
     },
     "hyper": {
       "id": "hyper",
@@ -397,6 +390,10 @@
     "leonardo": {
       "id": "leonardo",
       "name": "Leonardo"
+    },
+    "levanto": {
+      "id": "levanto",
+      "name": "Levanto"
     },
     "lightonai": {
       "id": "lightonai",
@@ -478,6 +475,10 @@
       "id": "nace-ai",
       "name": "Nace AI"
     },
+    "nano-gpt": {
+      "id": "nano-gpt",
+      "name": "NanoGPT"
+    },
     "nanogpt": {
       "id": "nanogpt",
       "name": "NanoGPT"
@@ -545,10 +546,6 @@
     "prism-ml": {
       "id": "prism-ml",
       "name": "Prism ML"
-    },
-    "prodia": {
-      "id": "prodia",
-      "name": "Prodia"
     },
     "quiverai": {
       "id": "quiverai",
@@ -625,6 +622,10 @@
     "stepfun": {
       "id": "stepfun",
       "name": "StepFun"
+    },
+    "surogate": {
+      "id": "surogate",
+      "name": "Surogate"
     },
     "swiss-ai": {
       "id": "swiss-ai",
@@ -872,10 +873,6 @@
       "id": "glm-flash",
       "name": "GLM Flash"
     },
-    "glm-z": {
-      "id": "glm-z",
-      "name": "GLM Z"
-    },
     "gpt": {
       "id": "gpt",
       "name": "GPT"
@@ -940,10 +937,6 @@
       "id": "grok-build",
       "name": "Grok Build"
     },
-    "groq": {
-      "id": "groq",
-      "name": "Groq"
-    },
     "hermes": {
       "id": "hermes",
       "name": "Hermes"
@@ -966,7 +959,7 @@
     },
     "kat-coder": {
       "id": "kat-coder",
-      "name": "KAT Coder"
+      "name": "Kat Coder"
     },
     "kimi": {
       "id": "kimi",

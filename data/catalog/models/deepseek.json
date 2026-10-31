@@ -36,8 +36,7 @@
       "kilo",
       "nano-gpt",
       "openrouter",
-      "orcarouter",
-      "zenmux"
+      "orcarouter"
     ]
   },
   "deepseek/deepseek-chat-cheaper": {
@@ -313,14 +312,10 @@
     "providers": [
       "abacus",
       "alibaba-cn",
-      "azure",
-      "azure-cognitive-services",
       "cloudflare-workers-ai",
       "drun",
       "edenai",
       "huggingface",
-      "iflowcn",
-      "melious",
       "novita-ai",
       "qiniu-ai",
       "snowflake-cortex",
@@ -439,8 +434,6 @@
     },
     "providers": [
       "alibaba-cn",
-      "digitalocean",
-      "fastrouter",
       "helicone"
     ]
   },
@@ -748,14 +741,11 @@
     "providers": [
       "alibaba-cn",
       "deepinfra",
-      "digitalocean",
       "drun",
       "edenai",
       "helicone",
       "huggingface",
-      "iflowcn",
       "novita-ai",
-      "pioneer",
       "qiniu-ai",
       "togetherai"
     ]
@@ -800,7 +790,6 @@
       "jiekou",
       "meganova",
       "nano-gpt",
-      "qiniu-ai",
       "siliconflow",
       "siliconflow-cn",
       "submodel"
@@ -840,13 +829,11 @@
     "providers": [
       "abacus",
       "alibaba-cn",
-      "baseten",
       "deepinfra",
       "huggingface",
       "jiekou",
       "meganova",
       "nano-gpt",
-      "pioneer",
       "qiniu-ai",
       "sambanova",
       "siliconflow",
@@ -967,15 +954,12 @@
       "cortecs",
       "deepinfra",
       "digitalocean",
-      "friendli",
       "helicone",
       "huggingface",
-      "iflowcn",
       "kilo",
       "llmgateway",
       "llmgateway-providers",
       "meganova",
-      "melious",
       "nano-gpt",
       "nearai",
       "ofox",
@@ -1120,12 +1104,10 @@
     "providers": [
       "abacus",
       "agentrouter",
-      "aiand",
       "aimlapi",
       "alibaba-cn",
       "alibaba-token-plan",
       "alibaba-token-plan-cn",
-      "ambient",
       "anyapi",
       "auriko",
       "azure",
@@ -1152,7 +1134,6 @@
       "nano-gpt",
       "neuralwatt",
       "ofox",
-      "ollama-cloud",
       "openrouter",
       "opper",
       "orcarouter",
@@ -1247,7 +1228,6 @@
       "alibaba",
       "alibaba-token-plan",
       "alibaba-token-plan-cn",
-      "ambient",
       "amd",
       "arcee",
       "baseten",
@@ -1268,12 +1248,14 @@
       "kilo",
       "melious",
       "moark",
+      "morph",
+      "munito",
+      "munito-eu",
       "nano-gpt",
       "nebius",
       "neuralwatt",
       "novita-ai",
       "ofox",
-      "ollama-cloud",
       "opencode",
       "openreason",
       "openrouter",
@@ -1294,6 +1276,7 @@
       "vivgrid",
       "volcengine",
       "vultr",
+      "wally",
       "wandb"
     ]
   },
@@ -1339,7 +1322,6 @@
       "huggingface",
       "kilo",
       "nano-gpt",
-      "ofox",
       "opencode",
       "openrouter",
       "orcarouter",
@@ -1390,7 +1372,6 @@
       "auriko",
       "azure",
       "azure-cognitive-services",
-      "baseten",
       "cline-pass",
       "commandcode",
       "cortecs",
@@ -1416,7 +1397,6 @@
       "modelis",
       "nano-gpt",
       "nebius",
-      "neuralwatt",
       "novita-ai",
       "ofox",
       "ollama-cloud",
@@ -1425,7 +1405,6 @@
       "openrouter",
       "opper",
       "orcarouter",
-      "pioneer",
       "poe",
       "prime",
       "requesty",
@@ -1440,6 +1419,7 @@
       "vercel",
       "vivgrid",
       "volcengine-coding-plan",
+      "wally",
       "zenmux"
     ]
   },
@@ -1512,6 +1492,7 @@
       "baseten",
       "bothub",
       "boundless",
+      "chutes",
       "cloudflare-workers-ai",
       "cortecs",
       "deepinfra",
@@ -1601,7 +1582,6 @@
       "deepinfra",
       "digitalocean",
       "edenai",
-      "empiriolabs",
       "engy",
       "fireworks-ai",
       "greenpt",
@@ -1615,6 +1595,8 @@
       "llmgateway-providers",
       "melious",
       "modal",
+      "modular",
+      "morph",
       "nan",
       "nano-gpt",
       "nebius",
@@ -1628,7 +1610,6 @@
       "openrouter",
       "prime",
       "requesty",
-      "scaleway",
       "scnet-token-plan",
       "sensenova",
       "standardcompute",
@@ -1643,8 +1624,39 @@
       "vercel",
       "vivgrid",
       "vultr",
+      "wally",
       "wandb",
       "zenmux"
+    ]
+  },
+  "deepseek/deepseek-v4.1-flash-0910-uncensored": {
+    "id": "deepseek/deepseek-v4.1-flash-0910-uncensored",
+    "lab": "deepseek",
+    "name": "DeepSeek V4.1 Flash 0910 Uncensored",
+    "family": "deepseek",
+    "released": "2026-10-27",
+    "updated": "2026-10-27",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 524288,
+      "input": 524288,
+      "output": 32768
+    },
+    "providers": [
+      "nano-gpt"
     ]
   },
   "deepseek/deepseek-v4.1-flash-1017": {
@@ -1681,27 +1693,35 @@
       }
     ],
     "providers": [
+      "aiand",
       "alibaba-token-plan",
       "alibaba-token-plan-cn",
       "amd",
       "arcee",
       "baseten",
+      "chutes",
       "cloudflare-workers-ai",
       "cortecs",
       "deepinfra",
       "deepseek",
+      "digitalocean",
       "edenai",
       "empiriolabs",
       "engy",
       "fireworks-ai",
+      "hopper",
       "huggingface",
       "hyper",
       "kilo",
       "llmgateway",
       "llmgateway-providers",
       "melious",
+      "mistral",
+      "morph",
+      "munito",
       "nano-gpt",
       "nearai",
+      "nebius",
       "neuralwatt",
       "novita-ai",
       "ofox",
@@ -1709,11 +1729,161 @@
       "openrouter",
       "prime",
       "requesty",
+      "scaleway",
       "synthetic",
       "thinkingmachines",
       "umans-ai",
       "umans-ai-coding-plan",
       "vercel"
+    ]
+  },
+  "deepseek/deepseek-v4.1-flash-1017-abliterated": {
+    "id": "deepseek/deepseek-v4.1-flash-1017-abliterated",
+    "lab": "deepseek",
+    "name": "DeepSeek V4.1 Flash 1017 Abliterated",
+    "family": "deepseek-flash",
+    "released": "2026-10-29",
+    "updated": "2026-10-29",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "output": 384000
+    },
+    "providers": [
+      "nearai"
+    ]
+  },
+  "deepseek/deepseek-v4.1-flash-1017-heretic": {
+    "id": "deepseek/deepseek-v4.1-flash-1017-heretic",
+    "lab": "deepseek",
+    "name": "DeepSeek V4.1 Flash 1017 Heretic",
+    "family": "deepseek",
+    "released": "2026-10-31",
+    "updated": "2026-10-31",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 512000,
+      "input": 512000,
+      "output": 128000
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "deepseek/deepseek-v4.1-flash-1017-uncensored": {
+    "id": "deepseek/deepseek-v4.1-flash-1017-uncensored",
+    "lab": "deepseek",
+    "name": "DeepSeek V4.1 Flash 1017 Uncensored",
+    "family": "deepseek",
+    "released": "2026-10-27",
+    "updated": "2026-10-27",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "input": 1048576,
+      "output": 393216
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "deepseek/deepseek-v4.1-flash-cyber": {
+    "id": "deepseek/deepseek-v4.1-flash-cyber",
+    "lab": "deepseek",
+    "name": "DeepSeek V4.1 Flash Cyber",
+    "family": "deepseek",
+    "released": "2026-10-29",
+    "updated": "2026-10-29",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1040000,
+      "output": 1040000
+    },
+    "providers": [
+      "llmgateway",
+      "llmgateway-providers"
+    ]
+  },
+  "deepseek/deepseek-v4.1-flash-uncensored": {
+    "id": "deepseek/deepseek-v4.1-flash-uncensored",
+    "lab": "deepseek",
+    "name": "DeepSeek V4.1 Flash Uncensored",
+    "family": "deepseek",
+    "released": "2026-10-01",
+    "updated": "2026-10-01",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "input": 1048576,
+      "output": 393216
+    },
+    "providers": [
+      "nano-gpt"
     ]
   }
 }

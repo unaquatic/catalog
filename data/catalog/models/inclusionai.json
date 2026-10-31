@@ -25,8 +25,7 @@
       "output": 32000
     },
     "providers": [
-      "bailing",
-      "zenmux"
+      "bailing"
     ]
   },
   "inclusionai/ling-2.6-1t": {
@@ -300,6 +299,34 @@
       "vercel"
     ]
   },
+  "inclusionai/ling-3.1-flash-1019": {
+    "id": "inclusionai/ling-3.1-flash-1019",
+    "lab": "inclusionai",
+    "name": "Ling 3.1 Flash 1019",
+    "family": "ling",
+    "released": "2026-10-30",
+    "updated": "2026-10-30",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 262144
+    },
+    "providers": [
+      "kilo",
+      "vercel"
+    ]
+  },
   "inclusionai/ling-flash-2.0": {
     "id": "inclusionai/ling-flash-2.0",
     "lab": "inclusionai",
@@ -356,8 +383,7 @@
       "output": 32000
     },
     "providers": [
-      "bailing",
-      "zenmux"
+      "bailing"
     ]
   },
   "inclusionai/ring-2.6-1t": {

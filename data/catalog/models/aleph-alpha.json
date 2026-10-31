@@ -1,0 +1,40 @@
+{
+  "aleph-alpha/kolibri-1": {
+    "id": "aleph-alpha/kolibri-1",
+    "lab": "aleph-alpha",
+    "name": "Kolibri 1",
+    "released": "2026-10-03",
+    "updated": "2026-10-03",
+    "knowledge": "2026-06-18",
+    "open_weights": true,
+    "license": "Apache-2.0",
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "output": 0
+    },
+    "weights": [
+      {
+        "label": "Hugging Face",
+        "url": "https://huggingface.co/Aleph-Alpha/Kolibri-1"
+      }
+    ],
+    "providers": [
+      "cortecs",
+      "munito",
+      "munito-eu",
+      "nano-gpt"
+    ]
+  }
+}

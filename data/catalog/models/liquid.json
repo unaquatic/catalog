@@ -90,7 +90,6 @@
       }
     ],
     "providers": [
-      "pioneer",
       "togetherai"
     ]
   },
@@ -99,14 +98,15 @@
     "lab": "liquid",
     "name": "LFM2.5 2.6B",
     "family": "liquid",
-    "released": "2026-08-12",
-    "updated": "2026-08-12",
-    "open_weights": true,
+    "released": "2026-08-11",
+    "updated": "2026-08-11",
+    "open_weights": false,
     "reasoning": true,
     "capabilities": {
       "tools": true,
       "attachments": false,
       "structured_output": true,
+      "temperature": true,
       "input": [
         "text"
       ],
@@ -116,8 +116,7 @@
     },
     "limit": {
       "context": 128000,
-      "input": 128000,
-      "output": 32768
+      "output": 8192
     },
     "providers": [
       "kilo",

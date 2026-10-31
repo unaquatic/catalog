@@ -15,6 +15,47 @@
   },
   "doc": "https://api.cortecs.ai/v1/models",
   "models": {
+    "aleph-alpha/kolibri-1": {
+      "name": "Kolibri 1",
+      "released": "2026-10-03",
+      "updated": "2026-10-03",
+      "knowledge": "2026-06-18",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 81920
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "kolibri-1",
+        "name": "kolibri-1"
+      },
+      "price": {
+        "input": 0.167,
+        "output": 0.613,
+        "cache_read": 0.084
+      }
+    },
     "alibaba/qwen2-5-vl-72b-instruct": {
       "name": "Qwen2.5 VL 72B Instruct",
       "family": "qwen",
@@ -1461,9 +1502,9 @@
         "name": "DeepSeek V4.1 Flash"
       },
       "price": {
-        "input": 0.201,
-        "output": 0.6,
-        "cache_read": 0.004
+        "input": 0.3,
+        "output": 1.2,
+        "cache_read": 0.075
       }
     },
     "deepseek/deepseek-v4.1-flash-1017": {
@@ -1502,9 +1543,9 @@
         "name": "DeepSeek V4.1 Flash 1017"
       },
       "price": {
-        "input": 0.511,
-        "output": 1.534,
-        "cache_read": 0.128
+        "input": 0.203,
+        "output": 0.609,
+        "cache_read": 0.006
       }
     },
     "google/gemini-2.5-flash": {
@@ -2178,6 +2219,48 @@
         "cache_read": 0.06
       }
     },
+    "minimax/minimax-m3.1-flash": {
+      "name": "MiniMax M3.1 Flash",
+      "family": "minimax",
+      "released": "2026-10-19",
+      "updated": "2026-10-19",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 64000
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ]
+      },
+      "provider_options": {
+        "id": "minimax-m3.1-flash",
+        "name": "MiniMax-M3.1-Flash"
+      },
+      "price": {
+        "input": 0.304,
+        "output": 1.219,
+        "cache_read": 0.076
+      }
+    },
     "mistral/codestral-2508": {
       "name": "Codestral 2508",
       "family": "codestral",
@@ -2533,8 +2616,8 @@
         ]
       },
       "limit": {
-        "context": 128000,
-        "output": 128000
+        "context": 118000,
+        "output": 118000
       },
       "provider_options": {
         "id": "mistral-nemo-instruct-2407",
@@ -3659,6 +3742,50 @@
         "output": 11.999,
         "cache_read": 0.12,
         "cache_write": 3
+      }
+    },
+    "openai/gpt-6.1-terra": {
+      "name": "GPT-6.1 Terra",
+      "family": "gpt-terra",
+      "released": "2026-10-26",
+      "updated": "2026-10-26",
+      "knowledge": "2026-06-01",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1050000,
+        "input": 922000,
+        "output": 128000
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "gpt-6.1-terra",
+        "name": "GPT-6.1 Terra"
+      },
+      "price": {
+        "input": 1.176,
+        "output": 5.882,
+        "cache_read": 0.059,
+        "cache_write": 1.47
       }
     },
     "openai/gpt-oss-120b": {

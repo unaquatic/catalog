@@ -63,9 +63,7 @@
         "type": "announcement"
       }
     ],
-    "providers": [
-      "github-copilot"
-    ]
+    "providers": []
   },
   "microsoft/mai-code-1.1-flash": {
     "id": "microsoft/mai-code-1.1-flash",
@@ -115,10 +113,11 @@
     "reasoning": false,
     "capabilities": {
       "tools": false,
-      "attachments": false,
+      "attachments": true,
       "temperature": false,
       "input": [
-        "text"
+        "text",
+        "image"
       ],
       "output": [
         "image"
@@ -144,10 +143,11 @@
     "reasoning": false,
     "capabilities": {
       "tools": false,
-      "attachments": false,
+      "attachments": true,
       "temperature": false,
       "input": [
-        "text"
+        "text",
+        "image"
       ],
       "output": [
         "image"

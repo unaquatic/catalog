@@ -104,10 +104,7 @@
     "providers": [
       "arcee",
       "digitalocean",
-      "kilo",
-      "nano-gpt",
-      "openrouter",
-      "vercel"
+      "nano-gpt"
     ]
   },
   "arcee-ai/trinity-mini": {

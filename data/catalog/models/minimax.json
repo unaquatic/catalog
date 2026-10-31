@@ -11,11 +11,10 @@
     "reasoning": false,
     "capabilities": {
       "tools": false,
-      "attachments": true,
+      "attachments": false,
       "temperature": false,
       "input": [
-        "text",
-        "image"
+        "text"
       ],
       "output": [
         "image"
@@ -363,7 +362,6 @@
       "alibaba-coding-plan-cn",
       "alibaba-token-plan",
       "alibaba-token-plan-cn",
-      "baseten",
       "clarifai",
       "cloudferro-sherlock",
       "commandcode",
@@ -388,14 +386,12 @@
       "nano-gpt",
       "novita-ai",
       "ofox",
-      "ollama-cloud",
       "opencode",
       "openrouter",
       "orcarouter",
       "qiniu-ai",
       "scnet-token-plan",
       "siliconflow",
-      "siliconflow-cn",
       "tencent-coding-plan",
       "tensorx",
       "togetherai",
@@ -511,7 +507,6 @@
       "openrouter",
       "opper",
       "orcarouter",
-      "pioneer",
       "requesty",
       "scnet-token-plan",
       "scx-ai",
@@ -661,6 +656,7 @@
       "minimax-cn",
       "minimax-cn-coding-plan",
       "minimax-coding-plan",
+      "modular",
       "nano-gpt",
       "nebius",
       "novita-ai",
@@ -671,7 +667,6 @@
       "openrouter",
       "opper",
       "orcarouter",
-      "pioneer",
       "requesty",
       "sambanova",
       "scnet-token-plan",
@@ -687,6 +682,7 @@
       "volcengine-coding-plan",
       "vultr",
       "wafer.ai",
+      "wally",
       "wandb",
       "zenmux"
     ]
@@ -718,8 +714,12 @@
       "output": 512000
     },
     "providers": [
+      "cortecs",
+      "digitalocean",
       "edenai",
       "empiriolabs",
+      "fireworks-ai",
+      "huggingface",
       "kilo",
       "llmgateway",
       "llmgateway-providers",
@@ -727,7 +727,11 @@
       "minimax-cn",
       "minimax-cn-coding-plan",
       "minimax-coding-plan",
+      "modular",
       "nano-gpt",
+      "nebius",
+      "novita-ai",
+      "nvidia",
       "ollama-cloud",
       "opencode",
       "opencode-go",

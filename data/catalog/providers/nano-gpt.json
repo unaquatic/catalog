@@ -134,6 +134,50 @@
         "cache_read": 0.3
       }
     },
+    "abliteration-ai/abliterated-model-large-flash": {
+      "name": "Abliterated Model Large Flash",
+      "released": "2026-10-23",
+      "updated": "2026-10-23",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "input": 1048576,
+        "output": 262144
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "minimal",
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ]
+      },
+      "provider_options": {
+        "id": "abliteration-ai/abliterated-model-large-flash",
+        "name": "Abliterated Large Flash"
+      },
+      "price": {
+        "input": 1,
+        "output": 2,
+        "cache_read": 0.1
+      }
+    },
     "abliteration-ai/abliterated-model-large-v2": {
       "name": "Abliterated Model Large V2",
       "released": "2026-08-31",
@@ -151,8 +195,8 @@
         ]
       },
       "limit": {
-        "context": 1000000,
-        "input": 1000000,
+        "context": 1048576,
+        "input": 1048576,
         "output": 999990
       },
       "reasoning": {
@@ -425,12 +469,85 @@
         "output": 128000
       },
       "provider_options": {
-        "id": "aisingapore/Gemma-SEA-LION-v4-27B-IT",
+        "id": "aisingapore/gemma-sea-lion-v4-27b-it",
         "name": "Gemma SEA-LION v4 27B"
       },
       "price": {
         "input": 0.24,
         "output": 0.48
+      }
+    },
+    "aisingapore/qwen-sea-lion-v4-32b-it": {
+      "name": "Qwen SEA LION V4 32B IT",
+      "family": "qwen",
+      "released": "2026-10-15",
+      "updated": "2026-10-15",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": false,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 131072,
+        "input": 131072,
+        "output": 131072
+      },
+      "provider_options": {
+        "id": "aisingapore/qwen-sea-lion-v4-32b-it",
+        "name": "Qwen SEA-LION v4 32B"
+      },
+      "price": {
+        "input": 0.3,
+        "output": 0.6
+      }
+    },
+    "aleph-alpha/kolibri-1": {
+      "name": "Kolibri 1",
+      "released": "2026-10-03",
+      "updated": "2026-10-03",
+      "knowledge": "2026-06-18",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "input": 1048576,
+        "output": 943718
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "aleph-alpha/kolibri-1",
+        "name": "Kolibri 1"
+      },
+      "price": {
+        "input": 0.168,
+        "output": 0.588,
+        "cache_read": 0.0987
       }
     },
     "alibaba/cogito-v1-preview-qwen-32b": {
@@ -594,39 +711,6 @@
         "cache_read": 0.05
       }
     },
-    "alibaba/qvq-max": {
-      "name": "QVQ Max",
-      "family": "qwen",
-      "released": "2025-03-28",
-      "updated": "2025-03-28",
-      "open_weights": true,
-      "capabilities": {
-        "tools": false,
-        "attachments": true,
-        "structured_output": false,
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 128000,
-        "input": 128000,
-        "output": 8192
-      },
-      "provider_options": {
-        "id": "qvq-max",
-        "name": "Qwen: QvQ Max"
-      },
-      "price": {
-        "input": 1.2,
-        "output": 4.8,
-        "cache_read": 0.6
-      }
-    },
     "alibaba/qwen-long": {
       "name": "Qwen Long",
       "family": "qwen",
@@ -635,11 +719,10 @@
       "open_weights": false,
       "capabilities": {
         "tools": false,
-        "attachments": true,
+        "attachments": false,
         "structured_output": false,
         "input": [
-          "text",
-          "pdf"
+          "text"
         ],
         "output": [
           "text"
@@ -796,7 +879,10 @@
         "input": 0.7,
         "output": 0.7,
         "cache_read": 0.35
-      }
+      },
+      "aliases": [
+        "qwen/qwen2.5-vl-72b-instruct"
+      ]
     },
     "alibaba/qwen2.5-32b-instruct-abliterated": {
       "name": "Qwen2.5 32B Instruct Abliterated",
@@ -1123,8 +1209,8 @@
         "name": "Qwen 3 32b"
       },
       "price": {
-        "input": 0.1,
-        "output": 0.3,
+        "input": 0.08,
+        "output": 0.24,
         "cache_read": 0.05
       }
     },
@@ -1297,72 +1383,6 @@
         "cache_read": 0.079764
       }
     },
-    "alibaba/qwen3-max": {
-      "name": "Qwen3 Max",
-      "family": "qwen",
-      "released": "2025-09-23",
-      "updated": "2025-09-23",
-      "knowledge": "2025-04",
-      "open_weights": false,
-      "capabilities": {
-        "tools": false,
-        "attachments": false,
-        "structured_output": false,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 256000,
-        "input": 256000,
-        "output": 32768
-      },
-      "provider_options": {
-        "id": "qwen/qwen3-max",
-        "name": "Qwen3 Max"
-      },
-      "price": {
-        "input": 1.2002,
-        "output": 6.001,
-        "cache_read": 0.6001
-      }
-    },
-    "alibaba/qwen3-max-2026-01-23": {
-      "name": "Qwen3 Max 20260123",
-      "family": "qwen",
-      "released": "2026-01-26",
-      "updated": "2026-01-26",
-      "open_weights": false,
-      "capabilities": {
-        "tools": false,
-        "attachments": false,
-        "structured_output": false,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 256000,
-        "input": 256000,
-        "output": 32768
-      },
-      "provider_options": {
-        "id": "qwen/qwen3-max-2026-01-23",
-        "name": "Qwen3 Max 2026-01-23"
-      },
-      "price": {
-        "input": 1.2002,
-        "output": 6.001,
-        "cache_read": 0.6001
-      }
-    },
     "alibaba/qwen3-next-80b-a3b-instruct": {
       "name": "Qwen3 Next 80B A3B Instruct",
       "family": "qwen",
@@ -1392,7 +1412,7 @@
         "name": "Qwen3 Next 80B A3B (Instruct)"
       },
       "price": {
-        "input": 0.1,
+        "input": 0.09,
         "output": 1.1,
         "cache_read": 0.07
       }
@@ -1605,6 +1625,45 @@
         "TEE/qwen3.5-27b"
       ]
     },
+    "alibaba/qwen3.5-27b-blossom-v6.4-derestricted": {
+      "name": "Qwen3.5 27B Blossom V6.4 Derestricted",
+      "family": "qwen3.5",
+      "released": "2026-05-15",
+      "updated": "2026-05-15",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": false,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "input": 262144,
+        "output": 262144
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "Qwen3.5-27B-Blossom-V6.4-Derestricted",
+        "name": "Qwen3.5 27B Blossom V6.4 Derestricted"
+      },
+      "price": {
+        "input": 0.306,
+        "output": 0.306
+      }
+    },
     "alibaba/qwen3.5-27b-bluestar-v3-derestricted": {
       "name": "Qwen3.5 27B BlueStar V3 Derestricted",
       "family": "qwen3.5",
@@ -1643,6 +1702,88 @@
         "input": 0.306,
         "output": 0.306,
         "cache_read": 0.153
+      }
+    },
+    "alibaba/qwen3.5-27b-claude-4.6-opus-reasoning-distilled-derestricted": {
+      "name": "Qwen3.5 27B Claude 4.6 Opus Reasoning Distilled Derestricted",
+      "family": "qwen3.5",
+      "released": "2026-05-15",
+      "updated": "2026-05-15",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": false,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "input": 262144,
+        "output": 262144
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "Qwen3.5-27B-Claude-4.6-Opus-Reasoning-Distilled-Derestricted",
+        "name": "Qwen3.5 27B Claude 4.6 Opus Reasoning Distilled Derestricted"
+      },
+      "price": {
+        "input": 0.306,
+        "output": 0.306,
+        "cache_read": 0.0306,
+        "cache_write": 0.3825
+      }
+    },
+    "alibaba/qwen3.5-27b-claude-4.6-opus-reasoning-distilled-derestricted-lite": {
+      "name": "Qwen3.5 27B Claude 4.6 Opus Reasoning Distilled Derestricted Lite",
+      "family": "qwen3.5",
+      "released": "2026-05-15",
+      "updated": "2026-05-15",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": false,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "input": 262144,
+        "output": 262144
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "Qwen3.5-27B-Claude-4.6-Opus-Reasoning-Distilled-Derestricted-Lite",
+        "name": "Qwen3.5 27B Claude 4.6 Opus Reasoning Distilled Derestricted Lite"
+      },
+      "price": {
+        "input": 0.306,
+        "output": 0.306,
+        "cache_read": 0.0306,
+        "cache_write": 0.3825
       }
     },
     "alibaba/qwen3.5-27b-queen-derestricted": {
@@ -1823,7 +1964,7 @@
       "price": {
         "input": 0.05,
         "output": 0.15,
-        "cache_read": 0.025
+        "cache_read": 0.008
       }
     },
     "alibaba/qwen3.5-flash": {
@@ -2061,8 +2202,8 @@
         ]
       },
       "limit": {
-        "context": 262144,
-        "input": 262144,
+        "context": 1048576,
+        "input": 1048576,
         "output": 16384
       },
       "provider_options": {
@@ -2397,8 +2538,8 @@
         ]
       },
       "limit": {
-        "context": 1001536,
-        "input": 1001536,
+        "context": 1048576,
+        "input": 1048576,
         "output": 32768
       },
       "reasoning": {},
@@ -2736,55 +2877,6 @@
         "cache_read": 0.05
       }
     },
-    "alibaba/qwen3.8-27b-obliterated": {
-      "name": "Qwen3.8 27B Obliterated",
-      "family": "qwen",
-      "released": "2026-07-29",
-      "updated": "2026-08-24",
-      "open_weights": true,
-      "capabilities": {
-        "tools": true,
-        "attachments": true,
-        "structured_output": true,
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 524288,
-        "input": 524288,
-        "output": 32768
-      },
-      "reasoning": {},
-      "provider_options": {
-        "id": "qwen/qwen3.8-27b-obliterated",
-        "name": "Qwen 3.8 27B Obliterated"
-      },
-      "price": {
-        "input": 0.25,
-        "output": 1.75,
-        "cache_read": 0.225
-      },
-      "variants": {
-        "thinking": {
-          "name": "Qwen3.8 27B Obliterated Thinking",
-          "mode": "thinking",
-          "provider_options": {
-            "id": "qwen/qwen3.8-27b-obliterated:thinking",
-            "name": "Qwen 3.8 27B Obliterated Thinking"
-          },
-          "price": {
-            "input": 0.25,
-            "output": 1.75,
-            "cache_read": 0.225
-          }
-        }
-      }
-    },
     "alibaba/qwen3.8-27b-queen": {
       "name": "Qwen3.8 27B Queen",
       "family": "qwen",
@@ -2906,7 +2998,7 @@
       "limit": {
         "context": 1048576,
         "input": 1048576,
-        "output": 32768
+        "output": 65536
       },
       "reasoning": {},
       "provider_options": {
@@ -2995,8 +3087,8 @@
         ]
       },
       "limit": {
-        "context": 991808,
-        "input": 991808,
+        "context": 1000000,
+        "input": 1000000,
         "output": 131072
       },
       "reasoning": {
@@ -4364,100 +4456,6 @@
         }
       }
     },
-    "bytedance-seed/doubao-1.5-pro-256k": {
-      "name": "Doubao 1.5 Pro 256K",
-      "released": "2025-03-12",
-      "updated": "2025-03-12",
-      "open_weights": false,
-      "capabilities": {
-        "tools": false,
-        "attachments": false,
-        "structured_output": false,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 256000,
-        "input": 256000,
-        "output": 16384
-      },
-      "provider_options": {
-        "id": "doubao-1.5-pro-256k",
-        "name": "Doubao 1.5 Pro 256k"
-      },
-      "price": {
-        "input": 0.799,
-        "output": 1.445,
-        "cache_read": 0.3995
-      }
-    },
-    "bytedance-seed/doubao-1.5-pro-32k": {
-      "name": "Doubao 1.5 Pro 32K",
-      "released": "2024-11-20",
-      "updated": "2025-01-22",
-      "open_weights": false,
-      "capabilities": {
-        "tools": false,
-        "attachments": false,
-        "structured_output": false,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 32000,
-        "input": 32000,
-        "output": 8192
-      },
-      "provider_options": {
-        "id": "doubao-1.5-pro-32k",
-        "name": "Doubao 1.5 Pro 32k"
-      },
-      "price": {
-        "input": 0.1343,
-        "output": 0.3349,
-        "cache_read": 0.06715
-      }
-    },
-    "bytedance-seed/doubao-1.5-vision-pro-32k": {
-      "name": "Doubao 1.5 Vision Pro 32K",
-      "released": "2024-11-20",
-      "updated": "2025-01-22",
-      "open_weights": false,
-      "capabilities": {
-        "tools": false,
-        "attachments": true,
-        "structured_output": false,
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 32000,
-        "input": 32000,
-        "output": 8192
-      },
-      "provider_options": {
-        "id": "doubao-1.5-vision-pro-32k",
-        "name": "Doubao 1.5 Vision Pro 32k"
-      },
-      "price": {
-        "input": 0.459,
-        "output": 1.377,
-        "cache_read": 0.2295
-      }
-    },
     "bytedance-seed/seed-2.0-code": {
       "name": "Seed 2.0 Code",
       "family": "seed",
@@ -4467,7 +4465,7 @@
       "capabilities": {
         "tools": true,
         "attachments": true,
-        "structured_output": true,
+        "structured_output": false,
         "temperature": true,
         "input": [
           "text",
@@ -4571,7 +4569,7 @@
         "name": "Doubao Seed 2.0 Mini"
       },
       "price": {
-        "input": 0.0493,
+        "input": 0.1,
         "output": 0.4845,
         "cache_read": 0.02465
       }
@@ -4944,9 +4942,9 @@
         "name": "DeepSeek Latest"
       },
       "price": {
-        "input": 0.2244,
-        "output": 0.6732,
-        "cache_read": 0.00714
+        "input": 0.2838,
+        "output": 0.8514,
+        "cache_read": 0.00903
       }
     },
     "deepseek/deepseek-r1-0528": {
@@ -5591,9 +5589,9 @@
         "name": "DeepSeek V4 Pro 0813"
       },
       "price": {
-        "input": 0.2244,
-        "output": 0.6732,
-        "cache_read": 0.00714
+        "input": 0.2838,
+        "output": 0.8514,
+        "cache_read": 0.00903
       },
       "variants": {
         "thinking": {
@@ -5604,9 +5602,9 @@
             "name": "DeepSeek V4 Pro 0813 Thinking"
           },
           "price": {
-            "input": 0.2244,
-            "output": 0.6732,
-            "cache_read": 0.00714
+            "input": 0.2838,
+            "output": 0.8514,
+            "cache_read": 0.00903
           }
         }
       }
@@ -5650,9 +5648,9 @@
         "name": "DeepSeek V4.1 Flash"
       },
       "price": {
-        "input": 0.09,
-        "output": 0.25,
-        "cache_read": 0.006
+        "input": 0.022,
+        "output": 0.192,
+        "cache_read": 0.004
       },
       "variants": {
         "thinking": {
@@ -5663,15 +5661,72 @@
             "name": "DeepSeek V4.1 Flash Thinking"
           },
           "price": {
-            "input": 0.09,
-            "output": 0.25,
-            "cache_read": 0.006
+            "input": 0.022,
+            "output": 0.192,
+            "cache_read": 0.004
           }
         }
       },
       "aliases": [
         "TEE/deepseek-v4.1-flash"
       ]
+    },
+    "deepseek/deepseek-v4.1-flash-0910-uncensored": {
+      "name": "DeepSeek V4.1 Flash 0910 Uncensored",
+      "family": "deepseek",
+      "released": "2026-10-27",
+      "updated": "2026-10-27",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": false,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 524288,
+        "input": 524288,
+        "output": 32768
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "high",
+          "max"
+        ]
+      },
+      "provider_options": {
+        "id": "deepseek/deepseek-v4.1-flash-0910-uncensored",
+        "name": "DeepSeek V4.1 Flash 0910 Uncensored"
+      },
+      "price": {
+        "input": 0.33,
+        "output": 1.32,
+        "cache_read": 0.00825
+      },
+      "variants": {
+        "thinking": {
+          "name": "DeepSeek V4.1 Flash 0910 Uncensored Thinking",
+          "mode": "thinking",
+          "provider_options": {
+            "id": "deepseek/deepseek-v4.1-flash-0910-uncensored:thinking",
+            "name": "DeepSeek V4.1 Flash 0910 Uncensored Thinking"
+          },
+          "price": {
+            "input": 0.33,
+            "output": 1.32,
+            "cache_read": 0.00825
+          }
+        }
+      }
     },
     "deepseek/deepseek-v4.1-flash-1017": {
       "name": "DeepSeek V4.1 Flash 1017",
@@ -5683,7 +5738,7 @@
       "capabilities": {
         "tools": true,
         "attachments": true,
-        "structured_output": false,
+        "structured_output": true,
         "temperature": true,
         "input": [
           "text",
@@ -5712,9 +5767,9 @@
         "name": "DeepSeek V4.1 Flash 1017"
       },
       "price": {
-        "input": 0.1,
-        "output": 0.6,
-        "cache_read": 0.003
+        "input": 0.12,
+        "output": 0.72,
+        "cache_read": 0.006
       },
       "variants": {
         "thinking": {
@@ -5725,9 +5780,185 @@
             "name": "DeepSeek V4.1 Flash 1017 Thinking"
           },
           "price": {
-            "input": 0.1,
-            "output": 0.6,
-            "cache_read": 0.003
+            "input": 0.12,
+            "output": 0.72,
+            "cache_read": 0.006
+          }
+        }
+      }
+    },
+    "deepseek/deepseek-v4.1-flash-1017-heretic": {
+      "name": "DeepSeek V4.1 Flash 1017 Heretic",
+      "family": "deepseek",
+      "released": "2026-10-31",
+      "updated": "2026-10-31",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": false,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 512000,
+        "input": 512000,
+        "output": 128000
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "minimal",
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ]
+      },
+      "provider_options": {
+        "id": "pqhaz/DeepSeek-V4.1-Flash-1017-heretic",
+        "name": "DeepSeek V4.1 Flash Heretic"
+      },
+      "price": {
+        "input": 0.18,
+        "output": 0.72,
+        "cache_read": 0.012,
+        "cache_write": 0.18
+      },
+      "variants": {
+        "thinking": {
+          "name": "DeepSeek V4.1 Flash 1017 Heretic Thinking",
+          "mode": "thinking",
+          "provider_options": {
+            "id": "pqhaz/DeepSeek-V4.1-Flash-1017-heretic:thinking",
+            "name": "DeepSeek V4.1 Flash Heretic Thinking"
+          },
+          "price": {
+            "input": 0.18,
+            "output": 0.72,
+            "cache_read": 0.012,
+            "cache_write": 0.18
+          }
+        }
+      }
+    },
+    "deepseek/deepseek-v4.1-flash-1017-uncensored": {
+      "name": "DeepSeek V4.1 Flash 1017 Uncensored",
+      "family": "deepseek",
+      "released": "2026-10-27",
+      "updated": "2026-10-27",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": false,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "input": 1048576,
+        "output": 393216
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "high",
+          "max"
+        ]
+      },
+      "provider_options": {
+        "id": "deepseek/deepseek-v4.1-flash-1017-uncensored",
+        "name": "DeepSeek V4.1 Flash 1017 Uncensored"
+      },
+      "price": {
+        "input": 0.33,
+        "output": 1.32,
+        "cache_read": 0.00825
+      },
+      "variants": {
+        "thinking": {
+          "name": "DeepSeek V4.1 Flash 1017 Uncensored Thinking",
+          "mode": "thinking",
+          "provider_options": {
+            "id": "deepseek/deepseek-v4.1-flash-1017-uncensored:thinking",
+            "name": "DeepSeek V4.1 Flash 1017 Uncensored Thinking"
+          },
+          "price": {
+            "input": 0.33,
+            "output": 1.32,
+            "cache_read": 0.00825
+          }
+        }
+      }
+    },
+    "deepseek/deepseek-v4.1-flash-uncensored": {
+      "name": "DeepSeek V4.1 Flash Uncensored",
+      "family": "deepseek",
+      "released": "2026-10-01",
+      "updated": "2026-10-01",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": false,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "input": 1048576,
+        "output": 393216
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "deepseek/deepseek-v4.1-flash-uncensored",
+        "name": "DeepSeek V4.1 Flash Uncensored"
+      },
+      "price": {
+        "input": 0.33,
+        "output": 1.32,
+        "cache_read": 0.00825
+      },
+      "variants": {
+        "thinking": {
+          "name": "DeepSeek V4.1 Flash Uncensored Thinking",
+          "mode": "thinking",
+          "provider_options": {
+            "id": "deepseek/deepseek-v4.1-flash-uncensored:thinking",
+            "name": "DeepSeek V4.1 Flash Uncensored Thinking"
+          },
+          "price": {
+            "input": 0.33,
+            "output": 1.32,
+            "cache_read": 0.00825
           }
         }
       }
@@ -5805,11 +6036,10 @@
       "open_weights": false,
       "capabilities": {
         "tools": false,
-        "attachments": true,
+        "attachments": false,
         "structured_output": false,
         "input": [
-          "text",
-          "pdf"
+          "text"
         ],
         "output": [
           "text"
@@ -6648,7 +6878,7 @@
     "google/gemini-3-pro-image-preview": {
       "name": "Gemini 3 Pro Image Preview",
       "family": "gemini-pro",
-      "type": "image",
+      "type": "chat",
       "released": "2025-11-20",
       "updated": "2025-11-20",
       "knowledge": "2025-01",
@@ -7461,6 +7691,46 @@
         "cache_read": 0.025
       }
     },
+    "google/gemma-4-12b-it-starry-ocean": {
+      "name": "Gemma 4 12B IT Starry Ocean",
+      "family": "gemma",
+      "released": "2026-10-15",
+      "updated": "2026-10-15",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": false,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 131072,
+        "input": 131072,
+        "output": 131072
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "gemma-4-12b-it-starry-ocean",
+        "name": "Gemma 4 12B Starry Ocean"
+      },
+      "price": {
+        "input": 0.05,
+        "output": 0.25,
+        "cache_read": 0.025
+      }
+    },
     "google/gemma-4-12b-it-station-keeper": {
       "name": "Gemma 4 12B IT Station Keeper",
       "family": "gemma",
@@ -7528,9 +7798,9 @@
         "name": "Gemma 4 26B A4B"
       },
       "price": {
-        "input": 0.09,
-        "output": 0.3,
-        "cache_read": 0.05
+        "input": 0.01,
+        "output": 0.03,
+        "cache_read": 0.005
       },
       "variants": {
         "thinking": {
@@ -7541,9 +7811,9 @@
             "name": "Gemma 4 26B A4B Thinking"
           },
           "price": {
-            "input": 0.09,
-            "output": 0.3,
-            "cache_read": 0.05
+            "input": 0.01,
+            "output": 0.03,
+            "cache_read": 0.005
           }
         }
       }
@@ -7934,6 +8204,123 @@
         "cache_read": 0.075
       }
     },
+    "google/gemma-4-31b-agares-v1": {
+      "name": "Gemma 4 31B Agares V1",
+      "family": "gemma",
+      "released": "2026-05-15",
+      "updated": "2026-05-15",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": false,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "input": 262144,
+        "output": 262144
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "Gemma-4-31B-Agares-v1",
+        "name": "Gemma 4 31B Agares v1"
+      },
+      "price": {
+        "input": 0.306,
+        "output": 0.306
+      }
+    },
+    "google/gemma-4-31b-animus-v14.1": {
+      "name": "Gemma 4 31B Animus V14.1",
+      "family": "gemma",
+      "released": "2026-05-15",
+      "updated": "2026-05-15",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": false,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "input": 262144,
+        "output": 262144
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "Gemma-4-31B-Animus-V14.1",
+        "name": "Gemma 4 31B Animus V14.1"
+      },
+      "price": {
+        "input": 0.306,
+        "output": 0.306
+      }
+    },
+    "google/gemma-4-31b-assguard": {
+      "name": "Gemma 4 31B AssGuard",
+      "family": "gemma",
+      "released": "2026-05-15",
+      "updated": "2026-05-15",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": false,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "input": 262144,
+        "output": 262144
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "Gemma-4-31B-AssGuard",
+        "name": "Gemma 4 31B AssGuard"
+      },
+      "price": {
+        "input": 0.306,
+        "output": 0.306
+      }
+    },
     "google/gemma-4-31b-claude-4.6-opus-reasoning-distilled": {
       "name": "Gemma 4 31B Claude 4.6 Opus Reasoning Distilled",
       "family": "claude",
@@ -7971,7 +8358,8 @@
       "price": {
         "input": 0.306,
         "output": 0.306,
-        "cache_read": 0.0306
+        "cache_read": 0.0306,
+        "cache_write": 0.3825
       }
     },
     "google/gemma-4-31b-cognitive-unshackled": {
@@ -8014,6 +8402,45 @@
         "cache_read": 0.153
       }
     },
+    "google/gemma-4-31b-dark-gemistry": {
+      "name": "Gemma 4 31B Dark Gemistry",
+      "family": "gemma",
+      "released": "2026-05-15",
+      "updated": "2026-05-15",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": false,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "input": 262144,
+        "output": 262144
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "Gemma-4-31B-Dark-Gemistry",
+        "name": "Gemma 4 31B Dark Gemistry"
+      },
+      "price": {
+        "input": 0.306,
+        "output": 0.306
+      }
+    },
     "google/gemma-4-31b-darkidol": {
       "name": "Gemma 4 31B DarkIdol",
       "family": "gemma",
@@ -8054,6 +8481,45 @@
         "cache_read": 0.153
       }
     },
+    "google/gemma-4-31b-fabled": {
+      "name": "Gemma 4 31B Fabled",
+      "family": "gemma",
+      "released": "2026-05-02",
+      "updated": "2026-05-02",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": false,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "input": 262144,
+        "output": 262144
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "Gemma-4-31B-Fabled",
+        "name": "Gemma 4 31B Fabled (ArliAI)"
+      },
+      "price": {
+        "input": 0.306,
+        "output": 0.306
+      }
+    },
     "google/gemma-4-31b-garnetv2": {
       "name": "Gemma 4 31B Garnetv2",
       "family": "gemma",
@@ -8092,6 +8558,123 @@
         "input": 0.306,
         "output": 0.306,
         "cache_read": 0.153
+      }
+    },
+    "google/gemma-4-31b-gembrain-uncensored-heretic": {
+      "name": "Gemma 4 31B Gembrain Uncensored Heretic",
+      "family": "gemma",
+      "released": "2026-05-15",
+      "updated": "2026-05-15",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": false,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "input": 262144,
+        "output": 262144
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "Gemma-4-31B-Gembrain-uncensored-heretic",
+        "name": "Gemma 4 31B Gembrain Uncensored Heretic"
+      },
+      "price": {
+        "input": 0.306,
+        "output": 0.306
+      }
+    },
+    "google/gemma-4-31b-gembrain-x-core": {
+      "name": "Gemma 4 31B Gembrain X Core",
+      "family": "gemma",
+      "released": "2026-05-15",
+      "updated": "2026-05-15",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": false,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "input": 262144,
+        "output": 262144
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "Gemma-4-31B-Gembrain-X-Core",
+        "name": "Gemma 4 31B Gembrain X Core"
+      },
+      "price": {
+        "input": 0.306,
+        "output": 0.306
+      }
+    },
+    "google/gemma-4-31b-isometry-rp": {
+      "name": "Gemma 4 31B Isometry RP",
+      "family": "gemma",
+      "released": "2026-05-15",
+      "updated": "2026-05-15",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": false,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "input": 262144,
+        "output": 262144
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "Gemma-4-31B-Isometry-RP",
+        "name": "Gemma 4 31B Isometry RP"
+      },
+      "price": {
+        "input": 0.306,
+        "output": 0.306
       }
     },
     "google/gemma-4-31b-it": {
@@ -8425,6 +9008,84 @@
         "cache_read": 0.05
       }
     },
+    "google/gemma-4-31b-k1-v5": {
+      "name": "Gemma 4 31B K1 V5",
+      "family": "gemma",
+      "released": "2026-05-02",
+      "updated": "2026-05-02",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": false,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "input": 262144,
+        "output": 262144
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "Gemma-4-31B-K1-v5",
+        "name": "Gemma 4 31B K1 v5"
+      },
+      "price": {
+        "input": 0.306,
+        "output": 0.306
+      }
+    },
+    "google/gemma-4-31b-meromero": {
+      "name": "Gemma 4 31B MeroMero",
+      "family": "gemma",
+      "released": "2026-05-02",
+      "updated": "2026-05-02",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": false,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "input": 262144,
+        "output": 262144
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "Gemma-4-31B-MeroMero",
+        "name": "Gemma 4 31B MeroMero"
+      },
+      "price": {
+        "input": 0.306,
+        "output": 0.306
+      }
+    },
     "google/gemma-4-31b-meromero-v2": {
       "name": "Gemma 4 31B MeroMero V2",
       "family": "gemma",
@@ -8474,6 +9135,45 @@
         }
       }
     },
+    "google/gemma-4-31b-novelist": {
+      "name": "Gemma 4 31B Novelist",
+      "family": "gemma",
+      "released": "2026-05-15",
+      "updated": "2026-05-15",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": false,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "input": 262144,
+        "output": 262144
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "Gemma-4-31B-Novelist",
+        "name": "Gemma 4 31B Novelist (ArliAI)"
+      },
+      "price": {
+        "input": 0.306,
+        "output": 0.306
+      }
+    },
     "google/gemma-4-31b-queen": {
       "name": "Gemma 4 31B Queen",
       "family": "gemma",
@@ -8514,6 +9214,45 @@
         "cache_read": 0.153
       }
     },
+    "google/gemma-4-31b-sdft-heretic-rp": {
+      "name": "Gemma 4 31B SDFT Heretic RP",
+      "family": "gemma",
+      "released": "2026-05-15",
+      "updated": "2026-05-15",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": false,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "input": 262144,
+        "output": 262144
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "Gemma-4-31B-SDFT-Heretic-RP",
+        "name": "Gemma 4 31B SDFT Heretic RP"
+      },
+      "price": {
+        "input": 0.306,
+        "output": 0.306
+      }
+    },
     "google/gemma-4-31b-splituntied": {
       "name": "Gemma 4 31B Splituntied",
       "family": "gemma",
@@ -8546,27 +9285,28 @@
         "cache_read": 0.05
       }
     },
-    "google/gemma-4-dark-thoughts-v2-31b": {
-      "name": "Gemma 4 Dark Thoughts V2 31B",
+    "google/gemma-4-31b-styletune": {
+      "name": "Gemma 4 31B StyleTune",
       "family": "gemma",
-      "released": "2026-10-13",
-      "updated": "2026-10-13",
+      "released": "2026-05-15",
+      "updated": "2026-05-15",
       "open_weights": true,
       "capabilities": {
-        "tools": false,
-        "attachments": false,
+        "tools": true,
+        "attachments": true,
         "structured_output": false,
         "input": [
-          "text"
+          "text",
+          "image"
         ],
         "output": [
           "text"
         ]
       },
       "limit": {
-        "context": 65536,
-        "input": 65536,
-        "output": 8192
+        "context": 262144,
+        "input": 262144,
+        "output": 262144
       },
       "reasoning": {
         "mandatory": false,
@@ -8576,84 +9316,12 @@
         ]
       },
       "provider_options": {
-        "id": "ateron/gemma-4-dark-thoughts-v2-31b",
-        "name": "Gemma 4 Dark Thoughts V2 31B"
+        "id": "Gemma-4-31B-StyleTune",
+        "name": "Gemma 4 31B StyleTune"
       },
       "price": {
-        "input": 0.1,
-        "output": 0.45,
-        "cache_read": 0.05
-      }
-    },
-    "google/gemma-4-giftige-blume-31b-v2": {
-      "name": "Gemma 4 Giftige Blume 31B V2",
-      "family": "gemma",
-      "released": "2026-10-13",
-      "updated": "2026-10-13",
-      "open_weights": true,
-      "capabilities": {
-        "tools": false,
-        "attachments": false,
-        "structured_output": false,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 65536,
-        "input": 65536,
-        "output": 8192
-      },
-      "reasoning": {
-        "mandatory": false,
-        "efforts": [
-          "none",
-          "high"
-        ]
-      },
-      "provider_options": {
-        "id": "nimbz/gemma-4-giftige-blume-31b-v2",
-        "name": "Gemma 4 Giftige-Blume V2 31B"
-      },
-      "price": {
-        "input": 0.1,
-        "output": 0.45,
-        "cache_read": 0.05
-      }
-    },
-    "google/gemma-4-gutenberg-31b": {
-      "name": "Gemma 4 Gutenberg 31B",
-      "family": "gemma",
-      "released": "2026-10-13",
-      "updated": "2026-10-13",
-      "open_weights": true,
-      "capabilities": {
-        "tools": false,
-        "attachments": false,
-        "structured_output": false,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 65536,
-        "input": 65536,
-        "output": 8192
-      },
-      "provider_options": {
-        "id": "nbeerbower/gemma4-gutenberg-31b",
-        "name": "Gemma 4 Gutenberg 31B"
-      },
-      "price": {
-        "input": 0.1,
-        "output": 0.45,
-        "cache_read": 0.05
+        "input": 0.306,
+        "output": 0.306
       }
     },
     "google/veiled-calla-12b": {
@@ -8846,9 +9514,9 @@
         "name": "Granite 4.2 8B"
       },
       "price": {
-        "input": 0.1,
+        "input": 0.06,
         "output": 0.15,
-        "cache_read": 0.05
+        "cache_read": 0.015
       }
     },
     "inception/mercury-2": {
@@ -9409,7 +10077,7 @@
       },
       "reasoning": {},
       "provider_options": {
-        "id": "longcat-2.5-preview",
+        "id": "meituan/longcat-2.5-preview",
         "name": "LongCat 2.5 Preview"
       },
       "price": {
@@ -9988,10 +10656,7 @@
         "input": 0.35,
         "output": 1.5,
         "cache_read": 0.04
-      },
-      "aliases": [
-        "TEE/muse-glimmer-30b"
-      ]
+      }
     },
     "meta/muse-spark-1.1": {
       "name": "Muse Spark 1.1",
@@ -10177,6 +10842,52 @@
         "input": 1.25,
         "output": 4.25,
         "cache_read": 0.15
+      }
+    },
+    "meta/muse-wonder": {
+      "name": "Muse Wonder",
+      "family": "muse",
+      "released": "2026-10-12",
+      "updated": "2026-10-12",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "input": [
+          "text",
+          "image",
+          "video",
+          "audio",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "input": 1048576,
+        "output": 1048576
+      },
+      "reasoning": {
+        "efforts": [
+          "minimal",
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ]
+      },
+      "provider_options": {
+        "id": "meta/muse-wonder",
+        "name": "Muse Wonder"
+      },
+      "price": {
+        "input": 4,
+        "output": 20,
+        "cache_read": 0.2
       }
     },
     "meta/shisa-v2-llama3.3-70b": {
@@ -10541,8 +11252,8 @@
         "name": "MiniMax M2.1"
       },
       "price": {
-        "input": 0.33,
-        "output": 1.32,
+        "input": 0.3,
+        "output": 1.2,
         "cache_read": 0.03
       }
     },
@@ -10720,8 +11431,8 @@
         ]
       },
       "limit": {
-        "context": 1000000,
-        "input": 1000000,
+        "context": 1048576,
+        "input": 1048576,
         "output": 524288
       },
       "reasoning": {
@@ -11969,9 +12680,9 @@
         "name": "Kimi K2.6"
       },
       "price": {
-        "input": 0.44935,
-        "output": 1.892,
-        "cache_read": 0.07568
+        "input": 0.3895,
+        "output": 1.64,
+        "cache_read": 0.0656
       },
       "variants": {
         "thinking": {
@@ -11982,9 +12693,9 @@
             "name": "Kimi K2.6 Thinking"
           },
           "price": {
-            "input": 0.44935,
-            "output": 1.892,
-            "cache_read": 0.07568
+            "input": 0.3895,
+            "output": 1.64,
+            "cache_read": 0.0656
           }
         }
       },
@@ -12023,9 +12734,9 @@
         "name": "Kimi K2.7 Code"
       },
       "price": {
-        "input": 0.6712,
-        "output": 3.35,
-        "cache_read": 0.18
+        "input": 0.6,
+        "output": 3,
+        "cache_read": 0.12
       },
       "aliases": [
         "TEE/kimi-k2.7-code"
@@ -12104,12 +12815,58 @@
         "name": "Kimi K3"
       },
       "price": {
-        "input": 1.2,
-        "output": 5.5,
-        "cache_read": 0.2
+        "input": 0.1495,
+        "output": 7.15,
+        "cache_read": 0.07475
       },
       "aliases": [
         "TEE/kimi-k3"
+      ]
+    },
+    "moonshotai/kimi-k3.1-pro": {
+      "name": "Kimi K3.1 Pro",
+      "family": "kimi-k3",
+      "released": "2026-10-23",
+      "updated": "2026-10-23",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "input": 1048576,
+        "output": 1048576
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "high",
+          "max"
+        ]
+      },
+      "provider_options": {
+        "id": "moonshotai/kimi-k3.1-pro",
+        "name": "Kimi K3.1 Pro"
+      },
+      "price": {
+        "input": 2,
+        "output": 10,
+        "cache_read": 0.2,
+        "cache_write": 2
+      },
+      "aliases": [
+        "moonshotai/kimi-k3.1-pro-highspeed"
       ]
     },
     "moonshotai/kimi-latest": {
@@ -12117,7 +12874,7 @@
       "family": "kimi",
       "released": "2026-05-03",
       "updated": "2026-05-03",
-      "open_weights": true,
+      "open_weights": false,
       "capabilities": {
         "tools": true,
         "attachments": true,
@@ -12148,9 +12905,70 @@
         "name": "Kimi Latest"
       },
       "price": {
-        "input": 1.2,
-        "output": 5.5,
-        "cache_read": 0.2
+        "input": 2,
+        "output": 10,
+        "cache_read": 0.2,
+        "cache_write": 2
+      }
+    },
+    "nano-gpt/synth-2.5-flash": {
+      "name": "Synth 2.5 Flash",
+      "released": "2026-09-05",
+      "updated": "2026-09-05",
+      "open_weights": false,
+      "capabilities": {
+        "tools": false,
+        "attachments": false,
+        "structured_output": false,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 30000,
+        "input": 30000,
+        "output": 30000
+      },
+      "provider_options": {
+        "id": "synth-2.5-flash",
+        "name": "Synth 2.5 Flash Preview"
+      },
+      "price": {
+        "input": 0.03,
+        "output": 0.1
+      }
+    },
+    "nano-gpt/synth-2.5-pro": {
+      "name": "Synth 2.5 Pro",
+      "released": "2026-09-05",
+      "updated": "2026-09-05",
+      "open_weights": false,
+      "capabilities": {
+        "tools": false,
+        "attachments": false,
+        "structured_output": false,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 30000,
+        "input": 30000,
+        "output": 30000
+      },
+      "provider_options": {
+        "id": "synth-2.5-pro",
+        "name": "Synth 2.5 Pro Preview"
+      },
+      "price": {
+        "input": 0.1,
+        "output": 0.2
       }
     },
     "nanogpt/celeris-1": {
@@ -12329,6 +13147,88 @@
         "input": 1,
         "output": 1.5,
         "cache_read": 0.5
+      }
+    },
+    "nex-agi/nex-n2.5-mini": {
+      "name": "Nex N2.5 Mini",
+      "family": "agi",
+      "released": "2026-09-22",
+      "updated": "2026-09-22",
+      "open_weights": true,
+      "capabilities": {
+        "tools": false,
+        "attachments": true,
+        "structured_output": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "input": 262144,
+        "output": 262144
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "medium",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "nex-agi/nex-n2.5-mini",
+        "name": "Nex N2.5 Mini"
+      },
+      "price": {
+        "input": 0.025,
+        "output": 0.1,
+        "cache_read": 0.0025
+      }
+    },
+    "nex-agi/nex-n2.5-pro": {
+      "name": "Nex N2.5 Pro",
+      "family": "agi",
+      "released": "2026-09-22",
+      "updated": "2026-09-22",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "input": 262144,
+        "output": 262144
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "medium",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "nex-agi/nex-n2.5-pro",
+        "name": "Nex N2.5 Pro"
+      },
+      "price": {
+        "input": 0.075,
+        "output": 0.25,
+        "cache_read": 0.015
       }
     },
     "nousresearch/hermes-3-llama-3.1-70b": {
@@ -12704,8 +13604,8 @@
         ]
       },
       "limit": {
-        "context": 1000000,
-        "input": 1000000,
+        "context": 512288,
+        "input": 512288,
         "output": 65536
       },
       "reasoning": {},
@@ -12716,7 +13616,7 @@
       "price": {
         "input": 0.5,
         "output": 2.5,
-        "cache_read": 0.25
+        "cache_read": 0.15
       },
       "variants": {
         "thinking": {
@@ -12729,7 +13629,7 @@
           "price": {
             "input": 0.5,
             "output": 2.5,
-            "cache_read": 0.25
+            "cache_read": 0.15
           }
         }
       }
@@ -12868,39 +13768,6 @@
         "input": 0.15,
         "output": 0.5,
         "cache_read": 0.02
-      }
-    },
-    "openai/gpt-3.5-turbo": {
-      "name": "GPT-3.5 Turbo",
-      "family": "gpt",
-      "released": "2023-03-01",
-      "updated": "2023-11-06",
-      "knowledge": "2021-09-01",
-      "open_weights": false,
-      "capabilities": {
-        "tools": false,
-        "attachments": false,
-        "structured_output": false,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 16385,
-        "input": 16385,
-        "output": 4096
-      },
-      "provider_options": {
-        "id": "openai/gpt-3.5-turbo",
-        "name": "GPT-3.5 Turbo"
-      },
-      "price": {
-        "input": 0.5,
-        "output": 1.5
       }
     },
     "openai/gpt-4-turbo": {
@@ -13876,9 +14743,7 @@
         "output": 128000
       },
       "reasoning": {
-        "mandatory": false,
         "efforts": [
-          "none",
           "low",
           "medium",
           "high",
@@ -13893,7 +14758,7 @@
       "price": {
         "input": 2,
         "output": 10,
-        "cache_read": 0.2,
+        "cache_read": 0.1,
         "cache_write": 2.5
       }
     },
@@ -14552,6 +15417,98 @@
         "cache_write": 2.5
       }
     },
+    "openai/gpt-6.1-terra": {
+      "name": "GPT-6.1 Terra",
+      "family": "gpt-terra",
+      "released": "2026-10-26",
+      "updated": "2026-10-26",
+      "knowledge": "2026-06-01",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1050000,
+        "input": 1050000,
+        "output": 128000
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ]
+      },
+      "provider_options": {
+        "id": "openai/gpt-6.1-terra",
+        "name": "GPT 6.1 Terra"
+      },
+      "price": {
+        "input": 1,
+        "output": 5,
+        "cache_read": 0.05,
+        "cache_write": 1.25
+      }
+    },
+    "openai/gpt-6.1-terra-pro": {
+      "name": "GPT-6.1 Terra Pro",
+      "family": "gpt",
+      "released": "2026-10-27",
+      "updated": "2026-10-27",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1050000,
+        "input": 1050000,
+        "output": 128000
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ]
+      },
+      "provider_options": {
+        "id": "openai/gpt-6.1-terra-pro",
+        "name": "GPT 6.1 Terra Pro"
+      },
+      "price": {
+        "input": 1,
+        "output": 5,
+        "cache_read": 0.05,
+        "cache_write": 1.25
+      }
+    },
     "openai/gpt-astra-latest": {
       "name": "GPT Astra Latest",
       "family": "gpt-astra",
@@ -14733,7 +15690,7 @@
       "updated": "2025-10-29",
       "open_weights": true,
       "capabilities": {
-        "tools": false,
+        "tools": true,
         "attachments": false,
         "structured_output": false,
         "temperature": true,
@@ -14849,10 +15806,10 @@
         "name": "GPT Terra Latest"
       },
       "price": {
-        "input": 2,
-        "output": 12,
-        "cache_read": 0.2,
-        "cache_write": 2.5
+        "input": 1,
+        "output": 5,
+        "cache_read": 0.05,
+        "cache_write": 1.25
       }
     },
     "openai/o1": {
@@ -15147,6 +16104,7 @@
         "tools": true,
         "attachments": true,
         "structured_output": true,
+        "temperature": true,
         "input": [
           "text",
           "image",
@@ -15298,6 +16256,38 @@
         "input": 0.075,
         "output": 0.5,
         "cache_read": 0.0375
+      }
+    },
+    "prism-ml/ternary-bonsai-2-9b": {
+      "name": "Ternary Bonsai 2 9B",
+      "released": "2026-10-23",
+      "updated": "2026-10-23",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": false,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "input": 262144,
+        "output": 65536
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "prism-ml/ternary-bonsai-2-9b",
+        "name": "Ternary Bonsai2 9B"
+      },
+      "price": {
+        "input": 0.08,
+        "output": 0.13,
+        "cache_read": 0.04
       }
     },
     "reflection/beam-1.0-501b-a23b": {
@@ -15732,6 +16722,36 @@
         "cache_read": 0.0336
       }
     },
+    "speakleash/bielik-11b-v3.0-instruct": {
+      "name": "Bielik 11B V3.0 Instruct",
+      "released": "2026-10-15",
+      "updated": "2026-10-15",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": false,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 32768,
+        "input": 32768,
+        "output": 32768
+      },
+      "provider_options": {
+        "id": "speakleash/bielik-11b-v3.0-instruct",
+        "name": "Bielik 11B v3.0"
+      },
+      "price": {
+        "input": 0.48,
+        "output": 0.48
+      }
+    },
     "stepfun/step-3.5-flash": {
       "name": "Step 3.5 Flash",
       "family": "step",
@@ -15880,7 +16900,7 @@
       "limit": {
         "context": 1000000,
         "input": 1000000,
-        "output": 1000000
+        "output": 65536
       },
       "reasoning": {
         "efforts": [
@@ -15897,6 +16917,39 @@
         "input": 1,
         "output": 2.7,
         "cache_read": 0.05
+      }
+    },
+    "surogate/rune-26b-a4b": {
+      "name": "Rune 26B A4B",
+      "type": "decision",
+      "released": "2026-09-21",
+      "updated": "2026-09-21",
+      "open_weights": true,
+      "capabilities": {
+        "tools": false,
+        "attachments": false,
+        "structured_output": false,
+        "temperature": false,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "input": 262144,
+        "output": 0
+      },
+      "provider_options": {
+        "id": "surogate/rune-26b-a4b",
+        "name": "Rune 26B-A4B"
+      },
+      "price": {
+        "input": 0.042,
+        "output": 0,
+        "cache_read": 0.008
       }
     },
     "tencent/hy3": {
@@ -16233,44 +17286,6 @@
         "cache_read": 0.05015
       }
     },
-    "thedrummer/orion-26b-a4b-v1.1": {
-      "name": "Orion 26B A4B V1.1",
-      "released": "2026-10-16",
-      "updated": "2026-10-16",
-      "open_weights": true,
-      "capabilities": {
-        "tools": false,
-        "attachments": false,
-        "structured_output": false,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 65536,
-        "input": 65536,
-        "output": 8192
-      },
-      "reasoning": {
-        "mandatory": false,
-        "efforts": [
-          "none",
-          "high"
-        ]
-      },
-      "provider_options": {
-        "id": "TheDrummer/orion-26b-a4b-v1.1",
-        "name": "Orion 26B A4B v1.1"
-      },
-      "price": {
-        "input": 0.1,
-        "output": 0.45,
-        "cache_read": 0.05
-      }
-    },
     "thedrummer/rocinante-12b-v1.1": {
       "name": "Rocinante 12B V1.1",
       "released": "2024-01-01",
@@ -16300,37 +17315,6 @@
         "input": 0.408,
         "output": 0.595,
         "cache_read": 0.204
-      }
-    },
-    "thedrummer/skyfall-31b-v4.2": {
-      "name": "Skyfall 31B V4.2",
-      "released": "2026-10-12",
-      "updated": "2026-10-12",
-      "open_weights": true,
-      "capabilities": {
-        "tools": false,
-        "attachments": false,
-        "structured_output": false,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 16384,
-        "input": 16384,
-        "output": 4096
-      },
-      "provider_options": {
-        "id": "TheDrummer/skyfall-31b-v4.2",
-        "name": "TheDrummer Skyfall 31B v4.2"
-      },
-      "price": {
-        "input": 0.12,
-        "output": 0.15,
-        "cache_read": 0.06
       }
     },
     "thedrummer/skyfall-36b-v2": {
@@ -16429,9 +17413,9 @@
         "name": "Inkling"
       },
       "price": {
-        "input": 0.95,
+        "input": 1,
         "output": 4.05,
-        "cache_read": 0.16
+        "cache_read": 0.17
       },
       "variants": {
         "thinking": {
@@ -16442,9 +17426,9 @@
             "name": "Inkling Thinking"
           },
           "price": {
-            "input": 0.95,
+            "input": 1,
             "output": 4.05,
-            "cache_read": 0.16
+            "cache_read": 0.17
           }
         }
       }
@@ -17244,6 +18228,8 @@
         "mandatory": false,
         "efforts": [
           "none",
+          "low",
+          "medium",
           "high"
         ]
       },
@@ -17402,16 +18388,16 @@
         "cache_write": 0
       }
     },
-    "zhipuai/glm-4-32b-0414": {
-      "name": "GLM 4 32B 0414",
-      "family": "glm",
-      "released": "2024-01-01",
-      "updated": "2025-04-14",
+    "xingchen-agi/xing4.0-29b-a4b": {
+      "name": "Xing4.0 29B A4B",
+      "family": "agi",
+      "released": "2026-10-24",
+      "updated": "2026-10-24",
       "open_weights": true,
       "capabilities": {
-        "tools": false,
+        "tools": true,
         "attachments": false,
-        "structured_output": false,
+        "structured_output": true,
         "input": [
           "text"
         ],
@@ -17420,82 +18406,30 @@
         ]
       },
       "limit": {
-        "context": 128000,
-        "input": 128000,
-        "output": 65536
+        "context": 262144,
+        "input": 262144,
+        "output": 262144
       },
-      "provider_options": {
-        "id": "THUDM/GLM-4-32B-0414",
-        "name": "GLM 4 32B 0414"
-      },
-      "price": {
-        "input": 0.2,
-        "output": 0.2,
-        "cache_read": 0.1
-      }
-    },
-    "zhipuai/glm-4-9b-0414": {
-      "name": "GLM 4 9B 0414",
-      "family": "glm",
-      "released": "2024-01-01",
-      "updated": "2025-04-14",
-      "open_weights": true,
-      "capabilities": {
-        "tools": false,
-        "attachments": false,
-        "structured_output": false,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "minimal",
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
         ]
       },
-      "limit": {
-        "context": 32000,
-        "input": 32000,
-        "output": 8000
-      },
       "provider_options": {
-        "id": "THUDM/GLM-4-9B-0414",
-        "name": "GLM 4 9B 0414"
+        "id": "xingchen-agi/xing4.0-29b-a4b",
+        "name": "Xing 4.0 29B A4B"
       },
       "price": {
-        "input": 0.2,
-        "output": 0.2,
-        "cache_read": 0.1
-      }
-    },
-    "zhipuai/glm-4-air-0111": {
-      "name": "GLM 4 Air 0111",
-      "family": "glm",
-      "released": "2025-01-11",
-      "updated": "2025-01-11",
-      "open_weights": false,
-      "capabilities": {
-        "tools": false,
-        "attachments": false,
-        "structured_output": false,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 128000,
-        "input": 128000,
-        "output": 4096
-      },
-      "provider_options": {
-        "id": "glm-4-air-0111",
-        "name": "GLM 4 Air 0111"
-      },
-      "price": {
-        "input": 0.1394,
-        "output": 0.1394,
-        "cache_read": 0.0697
+        "input": 0.22,
+        "output": 0.9,
+        "cache_read": 0.011
       }
     },
     "zhipuai/glm-4-long": {
@@ -17528,104 +18462,6 @@
         "input": 0.2006,
         "output": 0.2006,
         "cache_read": 0.1003
-      }
-    },
-    "zhipuai/glm-4-plus-0111": {
-      "name": "GLM 4 Plus 0111",
-      "family": "glm",
-      "released": "2025-02-19",
-      "updated": "2025-02-19",
-      "open_weights": false,
-      "capabilities": {
-        "tools": false,
-        "attachments": false,
-        "structured_output": false,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 128000,
-        "input": 128000,
-        "output": 4096
-      },
-      "provider_options": {
-        "id": "glm-4-plus-0111",
-        "name": "GLM 4 Plus 0111"
-      },
-      "price": {
-        "input": 9.996,
-        "output": 9.996,
-        "cache_read": 4.998
-      }
-    },
-    "zhipuai/glm-4.1v-thinking-flash": {
-      "name": "GLM 4.1V Thinking Flash",
-      "family": "glm-flash",
-      "released": "2025-07-09",
-      "updated": "2025-07-09",
-      "open_weights": false,
-      "capabilities": {
-        "tools": false,
-        "attachments": true,
-        "structured_output": false,
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 64000,
-        "input": 64000,
-        "output": 8192
-      },
-      "provider_options": {
-        "id": "glm-4.1v-thinking-flash",
-        "name": "GLM 4.1V Thinking Flash"
-      },
-      "price": {
-        "input": 0.3,
-        "output": 0.3,
-        "cache_read": 0.15
-      }
-    },
-    "zhipuai/glm-4.1v-thinking-flashx": {
-      "name": "GLM 4.1V Thinking FlashX",
-      "family": "glm-flash",
-      "released": "2025-07-09",
-      "updated": "2025-07-09",
-      "open_weights": false,
-      "capabilities": {
-        "tools": false,
-        "attachments": true,
-        "structured_output": false,
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 64000,
-        "input": 64000,
-        "output": 8192
-      },
-      "provider_options": {
-        "id": "glm-4.1v-thinking-flashx",
-        "name": "GLM 4.1V Thinking FlashX"
-      },
-      "price": {
-        "input": 0.3,
-        "output": 0.3,
-        "cache_read": 0.15
       }
     },
     "zhipuai/glm-4.5": {
@@ -17694,9 +18530,9 @@
         "name": "GLM 4.5 Air"
       },
       "price": {
-        "input": 0.12,
-        "output": 0.8,
-        "cache_read": 0.06
+        "input": 0.13,
+        "output": 0.85,
+        "cache_read": 0.025
       },
       "variants": {
         "thinking": {
@@ -17707,9 +18543,9 @@
             "name": "GLM 4.5 Air (Thinking)"
           },
           "price": {
-            "input": 0.12,
-            "output": 0.8,
-            "cache_read": 0.06
+            "input": 0.13,
+            "output": 0.85,
+            "cache_read": 0.025
           }
         }
       }
@@ -18037,7 +18873,7 @@
       "price": {
         "input": 0.07,
         "output": 0.4,
-        "cache_read": 0.01
+        "cache_read": 0.010672
       },
       "variants": {
         "thinking": {
@@ -18050,7 +18886,7 @@
           "price": {
             "input": 0.07,
             "output": 0.4,
-            "cache_read": 0.01
+            "cache_read": 0.010672
           }
         }
       }
@@ -18502,7 +19338,8 @@
       "reasoning": {
         "efforts": [
           "low",
-          "high"
+          "high",
+          "max"
         ]
       },
       "provider_options": {
@@ -18602,70 +19439,6 @@
             "cache_read": 0.24
           }
         }
-      }
-    },
-    "zhipuai/glm-z1-9b-0414": {
-      "name": "GLM Z1 9B 0414",
-      "family": "glm-z",
-      "released": "2024-01-01",
-      "updated": "2025-04-14",
-      "open_weights": true,
-      "capabilities": {
-        "tools": false,
-        "attachments": false,
-        "structured_output": false,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 32000,
-        "input": 32000,
-        "output": 8000
-      },
-      "provider_options": {
-        "id": "THUDM/GLM-Z1-9B-0414",
-        "name": "GLM Z1 9B 0414"
-      },
-      "price": {
-        "input": 0.2,
-        "output": 0.2,
-        "cache_read": 0.1
-      }
-    },
-    "zhipuai/glm-z1-airx": {
-      "name": "GLM Z1 AirX",
-      "family": "glm",
-      "released": "2025-04-15",
-      "updated": "2025-04-15",
-      "open_weights": false,
-      "capabilities": {
-        "tools": true,
-        "attachments": false,
-        "structured_output": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 32000,
-        "input": 32000,
-        "output": 16384
-      },
-      "provider_options": {
-        "id": "glm-z1-airx",
-        "name": "GLM Z1 AirX"
-      },
-      "price": {
-        "input": 0.7,
-        "output": 0.7,
-        "cache_read": 0.35
       }
     }
   }
