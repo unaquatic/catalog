@@ -115,6 +115,32 @@
       "opencode"
     ]
   },
+  "opencode/iceman-contributor-free": {
+    "id": "opencode/iceman-contributor-free",
+    "lab": "opencode",
+    "name": "Iceman Contributor Free",
+    "released": "2026-10-24",
+    "updated": "2026-10-24",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 131072
+    },
+    "providers": [
+      "opencode-go"
+    ]
+  },
   "opencode/ll-alpha-free": {
     "id": "opencode/ll-alpha-free",
     "lab": "opencode",

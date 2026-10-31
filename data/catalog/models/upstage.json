@@ -150,10 +150,8 @@
     },
     "providers": [
       "aimlapi",
-      "kilo",
       "llmtr",
       "nano-gpt",
-      "openrouter",
       "upstage"
     ]
   },

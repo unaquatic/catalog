@@ -15,68 +15,6 @@
   },
   "doc": "https://docs.zenmux.ai",
   "models": {
-    "agnes/agnes-1.5-lite": {
-      "name": "Agnes 1.5 Lite",
-      "released": "2026-03-26",
-      "updated": "2026-03-26",
-      "open_weights": false,
-      "capabilities": {
-        "tools": true,
-        "attachments": true,
-        "temperature": true,
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 256000,
-        "output": 256000
-      },
-      "provider_options": {
-        "id": "sapiens-ai/agnes-1.5-lite",
-        "name": "Agnes 1.5 Lite"
-      },
-      "price": {
-        "input": 0.12,
-        "output": 0.6
-      },
-      "status": "deprecated"
-    },
-    "agnes/agnes-1.5-pro": {
-      "name": "Agnes 1.5 Pro",
-      "released": "2026-03-21",
-      "updated": "2026-03-21",
-      "open_weights": false,
-      "capabilities": {
-        "tools": true,
-        "attachments": false,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 256000,
-        "output": 256000
-      },
-      "reasoning": {},
-      "provider_options": {
-        "id": "sapiens-ai/agnes-1.5-pro",
-        "name": "Agnes 1.5 Pro"
-      },
-      "price": {
-        "input": 0.16,
-        "output": 0.8
-      },
-      "status": "deprecated"
-    },
     "alibaba/qwen3-coder-plus": {
       "name": "Qwen3 Coder Plus",
       "family": "qwen",
@@ -364,109 +302,6 @@
         ]
       }
     },
-    "anthropic/claude-3-5-haiku-20241022": {
-      "name": "Claude 3.5 Haiku 20241022",
-      "family": "claude-haiku",
-      "released": "2024-10-22",
-      "updated": "2024-10-22",
-      "knowledge": "2024-07-31",
-      "open_weights": false,
-      "capabilities": {
-        "tools": true,
-        "attachments": true,
-        "temperature": true,
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 200000,
-        "output": 64000
-      },
-      "provider_options": {
-        "id": "anthropic/claude-3.5-haiku",
-        "name": "Claude 3.5 Haiku",
-        "endpoint": {
-          "format": "anthropic-messages",
-          "api": "https://zenmux.ai/api/anthropic/v1",
-          "auth": {
-            "scheme": "header",
-            "header": "x-api-key"
-          },
-          "env": [
-            "ZENMUX_API_KEY"
-          ]
-        }
-      },
-      "price": {
-        "input": 0.8,
-        "output": 4,
-        "cache_read": 0.08,
-        "cache_write": 1
-      },
-      "status": "deprecated"
-    },
-    "anthropic/claude-3-7-sonnet-20250219": {
-      "name": "Claude 3.7 Sonnet 20250219",
-      "family": "claude-sonnet",
-      "released": "2025-02-19",
-      "updated": "2025-02-19",
-      "knowledge": "2024-10-31",
-      "open_weights": false,
-      "capabilities": {
-        "tools": true,
-        "attachments": true,
-        "temperature": true,
-        "input": [
-          "text",
-          "image",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 200000,
-        "output": 64000
-      },
-      "reasoning": {
-        "mandatory": false,
-        "default_enabled": false,
-        "efforts": [
-          "none",
-          "low",
-          "medium",
-          "high"
-        ]
-      },
-      "provider_options": {
-        "id": "anthropic/claude-3.7-sonnet",
-        "name": "Claude 3.7 Sonnet",
-        "endpoint": {
-          "format": "anthropic-messages",
-          "api": "https://zenmux.ai/api/anthropic/v1",
-          "auth": {
-            "scheme": "header",
-            "header": "x-api-key"
-          },
-          "env": [
-            "ZENMUX_API_KEY"
-          ]
-        }
-      },
-      "price": {
-        "input": 3,
-        "output": 15,
-        "cache_read": 0.3,
-        "cache_write": 3.75
-      },
-      "status": "deprecated"
-    },
     "anthropic/claude-fable-5": {
       "name": "Claude Fable 5",
       "family": "claude-fable",
@@ -633,63 +468,6 @@
         "cache_read": 0.1,
         "cache_write": 1.25
       }
-    },
-    "anthropic/claude-opus-4-0": {
-      "name": "Claude Opus 4.0",
-      "family": "claude-opus",
-      "released": "2025-05-22",
-      "updated": "2025-05-22",
-      "knowledge": "2025-03-31",
-      "open_weights": false,
-      "capabilities": {
-        "tools": true,
-        "attachments": true,
-        "temperature": true,
-        "input": [
-          "text",
-          "image",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 200000,
-        "output": 32000
-      },
-      "reasoning": {
-        "mandatory": false,
-        "default_enabled": false,
-        "efforts": [
-          "none",
-          "low",
-          "medium",
-          "high"
-        ]
-      },
-      "provider_options": {
-        "id": "anthropic/claude-opus-4",
-        "name": "Claude Opus 4",
-        "endpoint": {
-          "format": "anthropic-messages",
-          "api": "https://zenmux.ai/api/anthropic/v1",
-          "auth": {
-            "scheme": "header",
-            "header": "x-api-key"
-          },
-          "env": [
-            "ZENMUX_API_KEY"
-          ]
-        }
-      },
-      "price": {
-        "input": 15,
-        "output": 75,
-        "cache_read": 1.5,
-        "cache_write": 18.75
-      },
-      "status": "deprecated"
     },
     "anthropic/claude-opus-4-1": {
       "name": "Claude Opus 4.1",
@@ -1032,63 +810,6 @@
         "cache_write": 5
       }
     },
-    "anthropic/claude-sonnet-4-0": {
-      "name": "Claude Sonnet 4.0",
-      "family": "claude-sonnet",
-      "released": "2025-05-22",
-      "updated": "2025-05-22",
-      "knowledge": "2025-03-31",
-      "open_weights": false,
-      "capabilities": {
-        "tools": true,
-        "attachments": true,
-        "temperature": true,
-        "input": [
-          "text",
-          "image",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 1000000,
-        "output": 64000
-      },
-      "reasoning": {
-        "mandatory": false,
-        "default_enabled": false,
-        "efforts": [
-          "none",
-          "low",
-          "medium",
-          "high"
-        ]
-      },
-      "provider_options": {
-        "id": "anthropic/claude-sonnet-4",
-        "name": "Claude Sonnet 4",
-        "endpoint": {
-          "format": "anthropic-messages",
-          "api": "https://zenmux.ai/api/anthropic/v1",
-          "auth": {
-            "scheme": "header",
-            "header": "x-api-key"
-          },
-          "env": [
-            "ZENMUX_API_KEY"
-          ]
-        }
-      },
-      "price": {
-        "input": 3,
-        "output": 15,
-        "cache_read": 0.3,
-        "cache_write": 3.75
-      },
-      "status": "deprecated"
-    },
     "anthropic/claude-sonnet-4-5": {
       "name": "Claude Sonnet 4.5",
       "family": "claude-sonnet",
@@ -1266,23 +987,6 @@
         "output": 10,
         "cache_read": 0.2,
         "cache_write": 2.5
-      },
-      "variants": {
-        "free": {
-          "name": "Claude Sonnet 5 Free",
-          "tier": "free",
-          "provider_options": {
-            "id": "anthropic/claude-sonnet-5-free",
-            "name": "Claude Sonnet 5 (Free)"
-          },
-          "price": {
-            "input": 0,
-            "output": 0,
-            "cache_read": 0,
-            "cache_write": 0
-          },
-          "status": "deprecated"
-        }
       }
     },
     "baidu/ernie-5.0-thinking-preview": {
@@ -1672,38 +1376,6 @@
       "aliases": [
         "volcengine/doubao-seed-2.0-pro"
       ]
-    },
-    "deepseek/deepseek-chat": {
-      "name": "DeepSeek Chat",
-      "released": "2025-12-01",
-      "updated": "2025-12-01",
-      "knowledge": "2025-01-01",
-      "open_weights": false,
-      "capabilities": {
-        "tools": true,
-        "attachments": false,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 128000,
-        "output": 64000
-      },
-      "provider_options": {
-        "id": "deepseek/deepseek-chat",
-        "name": "DeepSeek-V3.2 (Non-thinking Mode)"
-      },
-      "price": {
-        "input": 0.28,
-        "output": 0.42,
-        "cache_read": 0.03
-      },
-      "status": "deprecated"
     },
     "deepseek/deepseek-v3.2": {
       "name": "DeepSeek V3.2",
@@ -2139,41 +1811,6 @@
         "input_audio": 0.5
       }
     },
-    "google/gemini-3.1-flash-lite-preview": {
-      "name": "Gemini 3.1 Flash Lite Preview",
-      "family": "gemini-flash-lite",
-      "released": "2026-03-03",
-      "updated": "2026-03-03",
-      "knowledge": "2025-01",
-      "open_weights": false,
-      "capabilities": {
-        "tools": true,
-        "attachments": true,
-        "temperature": true,
-        "input": [
-          "text",
-          "image",
-          "video",
-          "audio"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 1050000,
-        "output": 65530
-      },
-      "provider_options": {
-        "id": "google/gemini-3.1-flash-lite-preview",
-        "name": "Gemini 3.1 Flash Lite Preview"
-      },
-      "price": {
-        "input": 0.25,
-        "output": 1.5
-      },
-      "status": "deprecated"
-    },
     "google/gemini-3.1-pro-preview": {
       "name": "Gemini 3.1 Pro Preview",
       "family": "gemini-pro",
@@ -2269,71 +1906,6 @@
         "cache_read": 0.15
       }
     },
-    "inclusionai/ling-1t": {
-      "name": "Ling 1T",
-      "released": "2025-10-09",
-      "updated": "2025-10-09",
-      "knowledge": "2025-01-01",
-      "open_weights": false,
-      "capabilities": {
-        "tools": true,
-        "attachments": false,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 128000,
-        "output": 64000
-      },
-      "provider_options": {
-        "id": "inclusionai/ling-1t",
-        "name": "Ling-1T"
-      },
-      "price": {
-        "input": 0.56,
-        "output": 2.24,
-        "cache_read": 0.11
-      },
-      "status": "deprecated"
-    },
-    "inclusionai/ring-1t": {
-      "name": "Ring 1T",
-      "released": "2025-10-12",
-      "updated": "2025-10-12",
-      "knowledge": "2025-01-01",
-      "open_weights": false,
-      "capabilities": {
-        "tools": true,
-        "attachments": false,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 128000,
-        "output": 64000
-      },
-      "reasoning": {},
-      "provider_options": {
-        "id": "inclusionai/ring-1t",
-        "name": "Ring-1T"
-      },
-      "price": {
-        "input": 0.56,
-        "output": 2.24,
-        "cache_read": 0.11
-      },
-      "status": "deprecated"
-    },
     "inclusionai/ring-2.6-1t": {
       "name": "Ring 2.6 1T",
       "released": "2026-05-07",
@@ -2365,37 +1937,6 @@
         "output": 1.0984625,
         "cache_read": 0.0263631
       }
-    },
-    "kuaishou/kat-coder-pro-v2": {
-      "name": "KAT Coder Pro V2",
-      "released": "2026-03-30",
-      "updated": "2026-03-30",
-      "open_weights": false,
-      "capabilities": {
-        "tools": true,
-        "attachments": false,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 256000,
-        "output": 80000
-      },
-      "provider_options": {
-        "id": "kuaishou/kat-coder-pro-v2",
-        "name": "KAT-Coder-Pro-V2"
-      },
-      "price": {
-        "input": 0.3,
-        "output": 1.2,
-        "cache_read": 0.06
-      },
-      "status": "deprecated"
     },
     "minimax/minimax-m2": {
       "name": "MiniMax M2",
@@ -2775,148 +2316,6 @@
         "cache_read": 0.015
       }
     },
-    "moonshotai/kimi-k2-0905": {
-      "name": "Kimi K2 0905",
-      "family": "kimi-k2",
-      "released": "2025-09-05",
-      "updated": "2025-09-05",
-      "knowledge": "2025-01-01",
-      "open_weights": true,
-      "capabilities": {
-        "tools": true,
-        "attachments": false,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 262000,
-        "output": 64000
-      },
-      "provider_options": {
-        "id": "moonshotai/kimi-k2-0905",
-        "name": "Kimi K2 0905"
-      },
-      "price": {
-        "input": 0.6,
-        "output": 2.5,
-        "cache_read": 0.15
-      },
-      "status": "deprecated"
-    },
-    "moonshotai/kimi-k2-thinking": {
-      "name": "Kimi K2 Thinking",
-      "family": "kimi-thinking",
-      "released": "2025-11-06",
-      "updated": "2025-11-06",
-      "knowledge": "2024-08",
-      "open_weights": true,
-      "capabilities": {
-        "tools": true,
-        "attachments": false,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 262000,
-        "output": 64000
-      },
-      "reasoning": {},
-      "provider_options": {
-        "id": "moonshotai/kimi-k2-thinking",
-        "name": "Kimi K2 Thinking"
-      },
-      "price": {
-        "input": 0.6,
-        "output": 2.5,
-        "cache_read": 0.15
-      },
-      "status": "deprecated"
-    },
-    "moonshotai/kimi-k2-thinking-turbo": {
-      "name": "Kimi K2 Thinking Turbo",
-      "family": "kimi-thinking",
-      "released": "2025-11-06",
-      "updated": "2025-11-06",
-      "knowledge": "2024-08",
-      "open_weights": true,
-      "capabilities": {
-        "tools": true,
-        "attachments": false,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 262000,
-        "output": 64000
-      },
-      "reasoning": {},
-      "provider_options": {
-        "id": "moonshotai/kimi-k2-thinking-turbo",
-        "name": "Kimi K2 Thinking Turbo"
-      },
-      "price": {
-        "input": 1.15,
-        "output": 8,
-        "cache_read": 0.15
-      },
-      "status": "deprecated"
-    },
-    "moonshotai/kimi-k2.5": {
-      "name": "Kimi K2.5",
-      "family": "kimi-k2",
-      "released": "2026-01-27",
-      "updated": "2026-01-27",
-      "knowledge": "2025-01",
-      "open_weights": true,
-      "capabilities": {
-        "tools": true,
-        "attachments": true,
-        "temperature": false,
-        "input": [
-          "text",
-          "image",
-          "video"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 262000,
-        "output": 64000
-      },
-      "reasoning": {
-        "mandatory": false
-      },
-      "interleaved": {
-        "field": "reasoning_content"
-      },
-      "provider_options": {
-        "id": "moonshotai/kimi-k2.5",
-        "name": "Kimi K2.5"
-      },
-      "price": {
-        "input": 0.58,
-        "output": 3.02,
-        "cache_read": 0.1
-      },
-      "status": "deprecated"
-    },
     "moonshotai/kimi-k2.6": {
       "name": "Kimi K2.6",
       "family": "kimi-k2",
@@ -2992,22 +2391,6 @@
         "output": 4,
         "cache_read": 0.19
       },
-      "variants": {
-        "free": {
-          "name": "Kimi K2.7 Code Free",
-          "tier": "free",
-          "provider_options": {
-            "id": "moonshotai/kimi-k2.7-code-free",
-            "name": "Kimi K2.7 Code (Free)"
-          },
-          "price": {
-            "input": 0,
-            "output": 0,
-            "cache_read": 0
-          },
-          "status": "deprecated"
-        }
-      },
       "aliases": [
         "moonshotai/kimi-k2.7-code-highspeed"
       ]
@@ -3054,22 +2437,6 @@
         "input": 3,
         "output": 15,
         "cache_read": 0.3
-      },
-      "variants": {
-        "free": {
-          "name": "Kimi K3 Free",
-          "tier": "free",
-          "provider_options": {
-            "id": "moonshotai/kimi-k3-free",
-            "name": "Kimi K3 (Free)"
-          },
-          "price": {
-            "input": 0,
-            "output": 0,
-            "cache_read": 0
-          },
-          "status": "deprecated"
-        }
       }
     },
     "openai/gpt-5": {
@@ -3223,51 +2590,6 @@
         "output": 10,
         "cache_read": 0.125
       }
-    },
-    "openai/gpt-5.1-chat-latest": {
-      "name": "GPT-5.1 Chat Latest",
-      "family": "gpt",
-      "released": "2025-11-13",
-      "updated": "2025-11-13",
-      "knowledge": "2024-09-30",
-      "open_weights": false,
-      "capabilities": {
-        "tools": true,
-        "attachments": true,
-        "temperature": true,
-        "input": [
-          "pdf",
-          "image",
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 128000,
-        "output": 64000
-      },
-      "provider_options": {
-        "id": "openai/gpt-5.1-chat",
-        "name": "GPT-5.1 Chat",
-        "endpoint": {
-          "format": "openai-responses",
-          "api": "https://zenmux.ai/api/v1",
-          "auth": {
-            "scheme": "bearer"
-          },
-          "env": [
-            "ZENMUX_API_KEY"
-          ]
-        }
-      },
-      "price": {
-        "input": 1.25,
-        "output": 10,
-        "cache_read": 0.12
-      },
-      "status": "deprecated"
     },
     "openai/gpt-5.1-codex": {
       "name": "GPT-5.1 Codex",
@@ -3520,49 +2842,6 @@
         "input": 21,
         "output": 168
       }
-    },
-    "openai/gpt-5.3-chat-latest": {
-      "name": "GPT-5.3 Chat Latest",
-      "family": "gpt",
-      "released": "2026-03-03",
-      "updated": "2026-03-03",
-      "knowledge": "2025-08-31",
-      "open_weights": false,
-      "capabilities": {
-        "tools": true,
-        "attachments": true,
-        "temperature": true,
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 128000,
-        "output": 16380
-      },
-      "provider_options": {
-        "id": "openai/gpt-5.3-chat",
-        "name": "GPT-5.3 Chat",
-        "endpoint": {
-          "format": "openai-responses",
-          "api": "https://zenmux.ai/api/v1",
-          "auth": {
-            "scheme": "bearer"
-          },
-          "env": [
-            "ZENMUX_API_KEY"
-          ]
-        }
-      },
-      "price": {
-        "input": 1.75,
-        "output": 14
-      },
-      "status": "deprecated"
     },
     "openai/gpt-5.3-codex": {
       "name": "GPT-5.3 Codex",
@@ -3948,18 +3227,14 @@
         ]
       },
       "provider_options": {
-        "id": "openai/gpt-5.5-instant",
-        "name": "GPT-5.5 Instant"
+        "id": "openai/chat-latest",
+        "name": "Chat Latest (GPT-5.5 Instant)"
       },
       "price": {
         "input": 5,
         "output": 30,
         "cache_read": 0.5
-      },
-      "status": "deprecated",
-      "aliases": [
-        "openai/chat-latest"
-      ]
+      }
     },
     "openai/gpt-5.5-pro": {
       "name": "GPT-5.5 Pro",
@@ -4293,39 +3568,6 @@
         ]
       }
     },
-    "stepfun/step-3": {
-      "name": "Step 3",
-      "released": "2025-07-31",
-      "updated": "2025-07-31",
-      "knowledge": "2025-01-01",
-      "open_weights": false,
-      "capabilities": {
-        "tools": true,
-        "attachments": true,
-        "temperature": true,
-        "input": [
-          "image",
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 65536,
-        "output": 64000
-      },
-      "reasoning": {},
-      "provider_options": {
-        "id": "stepfun/step-3",
-        "name": "Step-3"
-      },
-      "price": {
-        "input": 0.21,
-        "output": 0.57
-      },
-      "status": "deprecated"
-    },
     "stepfun/step-3.5-flash": {
       "name": "Step 3.5 Flash",
       "family": "step",
@@ -4402,63 +3644,7 @@
         "input": 0.2,
         "output": 1.15,
         "cache_read": 0.04
-      },
-      "variants": {
-        "free": {
-          "name": "Step 3.7 Flash Free",
-          "tier": "free",
-          "provider_options": {
-            "id": "stepfun/step-3.7-flash-free",
-            "name": "Step 3.7 Flash (Free)"
-          },
-          "price": {
-            "input": 0,
-            "output": 0
-          },
-          "status": "deprecated"
-        }
       }
-    },
-    "tencent/hy3-preview": {
-      "name": "Hy3 Preview",
-      "family": "Hy",
-      "released": "2026-04-20",
-      "updated": "2026-04-20",
-      "open_weights": true,
-      "capabilities": {
-        "tools": true,
-        "attachments": false,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 256000,
-        "output": 64000
-      },
-      "reasoning": {
-        "mandatory": false,
-        "efforts": [
-          "none",
-          "low",
-          "high"
-        ]
-      },
-      "provider_options": {
-        "id": "tencent/hy3-preview",
-        "name": "Hy3 preview"
-      },
-      "price": {
-        "input": 0.172,
-        "output": 0.572,
-        "cache_read": 0.058,
-        "cache_write": 0
-      },
-      "status": "deprecated"
     },
     "xai/grok-4.20-0309-non-reasoning": {
       "name": "Grok 4.20 0309 Non Reasoning",
@@ -4805,126 +3991,6 @@
         "id": "x-ai/grok-voice-stt-1.0",
         "name": "Grok Voice STT 1.0"
       }
-    },
-    "xiaomi/mimo-v2-flash": {
-      "name": "MiMo V2 Flash",
-      "family": "mimo",
-      "released": "2025-12-16",
-      "updated": "2026-02-04",
-      "knowledge": "2024-12-01",
-      "open_weights": true,
-      "capabilities": {
-        "tools": true,
-        "attachments": false,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 262144,
-        "output": 65536
-      },
-      "reasoning": {
-        "mandatory": false
-      },
-      "provider_options": {
-        "id": "xiaomi/mimo-v2-flash",
-        "name": "MiMo-V2-Flash"
-      },
-      "price": {
-        "input": 0.1,
-        "output": 0.3,
-        "cache_read": 0.01
-      },
-      "status": "deprecated"
-    },
-    "xiaomi/mimo-v2-omni": {
-      "name": "MiMo V2 Omni",
-      "family": "mimo",
-      "released": "2026-03-18",
-      "updated": "2026-03-18",
-      "knowledge": "2024-12",
-      "open_weights": false,
-      "capabilities": {
-        "tools": true,
-        "attachments": true,
-        "temperature": true,
-        "input": [
-          "text",
-          "image",
-          "audio",
-          "video",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 265000,
-        "output": 265000
-      },
-      "reasoning": {
-        "mandatory": false
-      },
-      "provider_options": {
-        "id": "xiaomi/mimo-v2-omni",
-        "name": "MiMo V2 Omni"
-      },
-      "price": {
-        "input": 0.4,
-        "output": 2,
-        "cache_read": 0.08
-      },
-      "status": "deprecated"
-    },
-    "xiaomi/mimo-v2-pro": {
-      "name": "MiMo V2 Pro",
-      "family": "mimo",
-      "released": "2026-03-18",
-      "updated": "2026-03-18",
-      "knowledge": "2024-12",
-      "open_weights": false,
-      "capabilities": {
-        "tools": true,
-        "attachments": false,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 1000000,
-        "output": 256000
-      },
-      "reasoning": {
-        "mandatory": false
-      },
-      "provider_options": {
-        "id": "xiaomi/mimo-v2-pro",
-        "name": "MiMo V2 Pro"
-      },
-      "price": {
-        "input": 1,
-        "output": 3,
-        "cache_read": 0.2,
-        "tiers": [
-          {
-            "above": 256000,
-            "input": 2,
-            "output": 6,
-            "cache_read": 0.4
-          }
-        ]
-      },
-      "status": "deprecated"
     },
     "xiaomi/mimo-v2.5": {
       "name": "MiMo V2.5",

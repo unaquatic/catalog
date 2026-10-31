@@ -173,36 +173,6 @@
       "nano-gpt"
     ]
   },
-  "meta/llama-3-70b-instruct": {
-    "id": "meta/llama-3-70b-instruct",
-    "lab": "meta",
-    "name": "Llama 3 70B Instruct",
-    "family": "llama",
-    "released": "2024-04-18",
-    "updated": "2024-04-18",
-    "open_weights": true,
-    "reasoning": false,
-    "capabilities": {
-      "tools": false,
-      "attachments": false,
-      "structured_output": true,
-      "temperature": true,
-      "input": [
-        "text"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 8192,
-      "output": 8000
-    },
-    "providers": [
-      "llmgateway",
-      "llmgateway-providers"
-    ]
-  },
   "meta/llama-3-70b-instruct-abliterated-v3.5": {
     "id": "meta/llama-3-70b-instruct-abliterated-v3.5",
     "lab": "meta",
@@ -350,6 +320,7 @@
       }
     ],
     "providers": [
+      "edenai",
       "kilo",
       "llmgateway",
       "llmgateway-providers",
@@ -392,7 +363,7 @@
       "abacus",
       "atomic-chat",
       "cloudflare-workers-ai",
-      "digitalocean",
+      "edenai",
       "groq",
       "helicone",
       "huggingface",
@@ -402,7 +373,6 @@
       "neon",
       "novita-ai",
       "openrouter",
-      "pioneer",
       "poe",
       "vercel",
       "wandb"
@@ -539,8 +509,7 @@
       }
     ],
     "providers": [
-      "cloudflare-workers-ai",
-      "pioneer"
+      "cloudflare-workers-ai"
     ]
   },
   "meta/llama-3.2-1b-instruct": {
@@ -580,8 +549,7 @@
       "inference",
       "kilo",
       "novita-ai",
-      "openrouter",
-      "pioneer"
+      "openrouter"
     ]
   },
   "meta/llama-3.2-3b": {
@@ -617,8 +585,7 @@
       }
     ],
     "providers": [
-      "cloudflare-workers-ai",
-      "pioneer"
+      "cloudflare-workers-ai"
     ]
   },
   "meta/llama-3.2-3b-instruct": {
@@ -657,11 +624,8 @@
       "edenai",
       "inference",
       "kilo",
-      "llmgateway",
-      "llmgateway-providers",
       "nano-gpt",
-      "openrouter",
-      "pioneer"
+      "openrouter"
     ]
   },
   "meta/llama-3.2-90b-vision-instruct": {
@@ -743,7 +707,6 @@
       "cortecs",
       "crusoe",
       "deepinfra",
-      "digitalocean",
       "edenai",
       "evroc",
       "greenpt",
@@ -752,7 +715,6 @@
       "huggingface",
       "io-net",
       "kilo",
-      "llama",
       "llmgateway",
       "llmgateway-providers",
       "meganova",
@@ -763,7 +725,6 @@
       "openrouter",
       "ovhcloud",
       "pendra",
-      "pioneer",
       "poe",
       "prime",
       "regolo-ai",
@@ -834,35 +795,6 @@
     },
     "providers": [
       "google-vertex"
-    ]
-  },
-  "meta/llama-3.3-8b-instruct": {
-    "id": "meta/llama-3.3-8b-instruct",
-    "lab": "meta",
-    "name": "Llama 3.3 8B Instruct",
-    "family": "llama",
-    "released": "2024-12-06",
-    "updated": "2024-12-06",
-    "knowledge": "2023-12",
-    "open_weights": true,
-    "reasoning": false,
-    "capabilities": {
-      "tools": true,
-      "attachments": false,
-      "temperature": true,
-      "input": [
-        "text"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 128000,
-      "output": 4096
-    },
-    "providers": [
-      "llama"
     ]
   },
   "meta/llama-4-maverick-17b-128e-instruct-fp8": {
@@ -966,7 +898,6 @@
       "helicone",
       "io-net",
       "kilo",
-      "llama",
       "llmgateway",
       "llmgateway-providers",
       "nano-gpt",
@@ -1017,7 +948,6 @@
       "google-vertex",
       "helicone",
       "kilo",
-      "llama",
       "llmgateway",
       "llmgateway-providers",
       "nano-gpt",
@@ -1344,7 +1274,6 @@
       "nano-gpt",
       "openrouter",
       "orcarouter",
-      "pioneer",
       "vercel"
     ]
   },
@@ -1506,6 +1435,7 @@
       }
     ],
     "providers": [
+      "aiand",
       "edenai",
       "fireworks-ai",
       "kilo",
@@ -1551,6 +1481,7 @@
     },
     "providers": [
       "kilo",
+      "nano-gpt",
       "openrouter"
     ]
   },

@@ -115,44 +115,6 @@
         "output": 0.29889496
       }
     },
-    "alibaba/qwen3-235b-a22b-thinking-2507": {
-      "name": "Qwen3 235B A22B Thinking 2507",
-      "family": "qwen",
-      "released": "2025-07-25",
-      "updated": "2025-07-25",
-      "open_weights": true,
-      "capabilities": {
-        "tools": true,
-        "attachments": false,
-        "structured_output": true,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 262000,
-        "output": 262000
-      },
-      "reasoning": {
-        "budget": {
-          "min": 128,
-          "max": 32768
-        }
-      },
-      "provider_options": {
-        "id": "Qwen/Qwen3-235B-A22B-Thinking-2507",
-        "name": "Qwen/Qwen3-235B-A22B-Thinking-2507"
-      },
-      "price": {
-        "input": 0.13,
-        "output": 0.6
-      },
-      "status": "deprecated"
-    },
     "alibaba/qwen3-30b-a3b-instruct-2507": {
       "name": "Qwen3 30B A3B Instruct 2507",
       "family": "qwen",
@@ -292,39 +254,6 @@
         "input": 0.10461323,
         "output": 0.41845294
       }
-    },
-    "alibaba/qwen3-coder-480b-a35b-instruct": {
-      "name": "Qwen3 Coder 480B A35B Instruct",
-      "family": "qwen",
-      "released": "2025-07-22",
-      "updated": "2025-07-22",
-      "knowledge": "2025-04",
-      "open_weights": true,
-      "capabilities": {
-        "tools": true,
-        "attachments": false,
-        "structured_output": true,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 262000,
-        "output": 262000
-      },
-      "provider_options": {
-        "id": "Qwen/Qwen3-Coder-480B-A35B-Instruct",
-        "name": "Qwen/Qwen3-Coder-480B-A35B-Instruct"
-      },
-      "price": {
-        "input": 0.25,
-        "output": 1
-      },
-      "status": "deprecated"
     },
     "alibaba/qwen3-vl-30b-a3b-instruct": {
       "name": "Qwen3 VL 30B A3B Instruct",
@@ -643,47 +572,6 @@
           }
         ]
       }
-    },
-    "alibaba/qwen3.5-397b-a17b": {
-      "name": "Qwen3.5 397B A17B",
-      "family": "qwen",
-      "released": "2026-02-15",
-      "updated": "2026-02-15",
-      "knowledge": "2025-04",
-      "open_weights": true,
-      "capabilities": {
-        "tools": true,
-        "attachments": true,
-        "temperature": true,
-        "input": [
-          "text",
-          "image",
-          "video"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 262144,
-        "output": 65536
-      },
-      "reasoning": {
-        "mandatory": false,
-        "budget": {
-          "min": 128,
-          "max": 32768
-        }
-      },
-      "provider_options": {
-        "id": "Qwen/Qwen3.5-397B-A17B",
-        "name": "Qwen/Qwen3.5-397B-A17B"
-      },
-      "price": {
-        "input": 0.29,
-        "output": 1.74
-      },
-      "status": "deprecated"
     },
     "alibaba/qwen3.5-4b": {
       "name": "Qwen3.5 4B",
@@ -1131,41 +1019,6 @@
         "input": 0.14944748,
         "output": 0.59778991
       }
-    },
-    "minimax/minimax-m2.5": {
-      "name": "MiniMax M2.5",
-      "family": "minimax",
-      "released": "2026-02-12",
-      "updated": "2026-02-12",
-      "open_weights": true,
-      "capabilities": {
-        "tools": true,
-        "attachments": false,
-        "structured_output": true,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 192000,
-        "output": 131000
-      },
-      "interleaved": {
-        "field": "reasoning_content"
-      },
-      "provider_options": {
-        "id": "Pro/MiniMaxAI/MiniMax-M2.5",
-        "name": "Pro/MiniMaxAI/MiniMax-M2.5"
-      },
-      "price": {
-        "input": 0.3,
-        "output": 1.22
-      },
-      "status": "deprecated"
     },
     "moonshotai/kimi-k2.5": {
       "name": "Kimi K2.5",

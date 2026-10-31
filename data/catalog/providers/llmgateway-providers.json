@@ -178,103 +178,6 @@
         "output": 0.228
       }
     },
-    "alibaba/qwen3-235b-a22b": {
-      "name": "Qwen3 235B A22B",
-      "family": "qwen",
-      "released": "2025-04-28",
-      "updated": "2025-04-28",
-      "knowledge": "2025-04",
-      "open_weights": true,
-      "capabilities": {
-        "tools": false,
-        "attachments": false,
-        "structured_output": false,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 40960,
-        "output": 20000
-      },
-      "provider_options": {
-        "id": "novita/qwen3-235b-a22b-fp8",
-        "name": "Qwen3 235B A22B FP8 (NovitaAI)"
-      },
-      "price": {
-        "input": 0.2,
-        "output": 0.8
-      }
-    },
-    "alibaba/qwen3-235b-a22b-instruct-2507": {
-      "name": "Qwen3 235B A22B Instruct 2507",
-      "family": "qwen",
-      "released": "2025-07-21",
-      "updated": "2025-07-21",
-      "open_weights": true,
-      "capabilities": {
-        "tools": true,
-        "attachments": false,
-        "structured_output": false,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 131072,
-        "output": 16384
-      },
-      "provider_options": {
-        "id": "novita/qwen3-235b-a22b-instruct-2507",
-        "name": "Qwen3 235B A22B Instruct 2507 (NovitaAI)"
-      },
-      "price": {
-        "input": 0.09,
-        "output": 0.58
-      },
-      "aliases": [
-        "cerebras/qwen3-235b-a22b-instruct-2507"
-      ]
-    },
-    "alibaba/qwen3-235b-a22b-thinking-2507": {
-      "name": "Qwen3 235B A22B Thinking 2507",
-      "family": "qwen",
-      "released": "2025-07-25",
-      "updated": "2025-07-25",
-      "open_weights": true,
-      "capabilities": {
-        "tools": true,
-        "attachments": false,
-        "structured_output": false,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 131072,
-        "output": 32768
-      },
-      "provider_options": {
-        "id": "novita/qwen3-235b-a22b-thinking-2507",
-        "name": "Qwen3 235B A22B Thinking 2507 (NovitaAI)"
-      },
-      "price": {
-        "input": 0.3,
-        "output": 3
-      }
-    },
     "alibaba/qwen3-30b-a3b": {
       "name": "Qwen3 30B A3B",
       "family": "qwen",
@@ -341,70 +244,6 @@
         "output": 0.87
       }
     },
-    "alibaba/qwen3-coder-30b-a3b-instruct": {
-      "name": "Qwen3 Coder 30B A3B Instruct",
-      "family": "qwen",
-      "released": "2025-07-31",
-      "updated": "2025-07-31",
-      "knowledge": "2025-04",
-      "open_weights": true,
-      "capabilities": {
-        "tools": true,
-        "attachments": false,
-        "structured_output": false,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 160000,
-        "output": 32768
-      },
-      "provider_options": {
-        "id": "novita/qwen3-coder-30b-a3b-instruct",
-        "name": "Qwen3 Coder 30B A3B Instruct (NovitaAI)"
-      },
-      "price": {
-        "input": 0.07,
-        "output": 0.27
-      }
-    },
-    "alibaba/qwen3-coder-480b-a35b-instruct": {
-      "name": "Qwen3 Coder 480B A35B Instruct",
-      "family": "qwen",
-      "released": "2025-07-22",
-      "updated": "2025-07-22",
-      "knowledge": "2025-04",
-      "open_weights": true,
-      "capabilities": {
-        "tools": true,
-        "attachments": false,
-        "structured_output": false,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 262144,
-        "output": 65536
-      },
-      "provider_options": {
-        "id": "novita/qwen3-coder-480b-a35b-instruct",
-        "name": "Qwen3 Coder 480B A35B Instruct (NovitaAI)"
-      },
-      "price": {
-        "input": 0.38,
-        "output": 1.55
-      }
-    },
     "alibaba/qwen3-coder-flash": {
       "name": "Qwen3 Coder Flash",
       "family": "qwen",
@@ -439,103 +278,6 @@
         "cache_write": 0.375
       }
     },
-    "alibaba/qwen3-coder-next": {
-      "name": "Qwen3 Coder Next",
-      "family": "qwen",
-      "released": "2026-02-03",
-      "updated": "2026-02-03",
-      "knowledge": "2025-09",
-      "open_weights": true,
-      "capabilities": {
-        "tools": true,
-        "attachments": false,
-        "structured_output": false,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 262144,
-        "output": 262144
-      },
-      "provider_options": {
-        "id": "embercloud/qwen3-coder-next",
-        "name": "Qwen3 Coder Next (EmberCloud)"
-      },
-      "price": {
-        "input": 0.108,
-        "output": 0.675,
-        "cache_read": 0.06
-      }
-    },
-    "alibaba/qwen3-max": {
-      "name": "Qwen3 Max",
-      "family": "qwen",
-      "released": "2025-09-23",
-      "updated": "2025-09-23",
-      "knowledge": "2025-04",
-      "open_weights": false,
-      "capabilities": {
-        "tools": true,
-        "attachments": false,
-        "structured_output": false,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 262144,
-        "output": 65536
-      },
-      "provider_options": {
-        "id": "novita/qwen3-max",
-        "name": "Qwen3 Max (NovitaAI)"
-      },
-      "price": {
-        "input": 0.845,
-        "output": 3.38
-      }
-    },
-    "alibaba/qwen3-next-80b-a3b-instruct": {
-      "name": "Qwen3 Next 80B A3B Instruct",
-      "family": "qwen",
-      "released": "2025-09-12",
-      "updated": "2025-09-12",
-      "knowledge": "2025-04",
-      "open_weights": true,
-      "capabilities": {
-        "tools": true,
-        "attachments": false,
-        "structured_output": false,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 131072,
-        "output": 32768
-      },
-      "provider_options": {
-        "id": "novita/qwen3-next-80b-a3b-instruct",
-        "name": "Qwen3 Next 80B A3B Instruct (NovitaAI)"
-      },
-      "price": {
-        "input": 0.15,
-        "output": 1.5
-      }
-    },
     "alibaba/qwen3-vl-235b-a22b-instruct": {
       "name": "Qwen3 VL 235B A22B Instruct",
       "family": "qwen",
@@ -557,53 +299,17 @@
         ]
       },
       "limit": {
-        "context": 131072,
+        "context": 262144,
         "output": 32768
       },
       "provider_options": {
-        "id": "novita/qwen3-vl-235b-a22b-instruct",
-        "name": "Qwen3 VL 235B A22B Instruct (NovitaAI)"
+        "id": "deepinfra/qwen3-vl-235b-a22b-instruct",
+        "name": "Qwen3 VL 235B A22B Instruct (DeepInfra)"
       },
       "price": {
-        "input": 0.3,
-        "output": 1.5
-      },
-      "aliases": [
-        "deepinfra/qwen3-vl-235b-a22b-instruct"
-      ]
-    },
-    "alibaba/qwen3-vl-235b-a22b-thinking": {
-      "name": "Qwen3 VL 235B A22B Thinking",
-      "family": "qwen",
-      "released": "2025-09-23",
-      "updated": "2025-09-23",
-      "knowledge": "2025-03-31",
-      "open_weights": true,
-      "capabilities": {
-        "tools": false,
-        "attachments": true,
-        "structured_output": false,
-        "temperature": true,
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 131072,
-        "output": 32768
-      },
-      "reasoning": {},
-      "provider_options": {
-        "id": "novita/qwen3-vl-235b-a22b-thinking",
-        "name": "Qwen3 VL 235B A22B Thinking (NovitaAI)"
-      },
-      "price": {
-        "input": 0.98,
-        "output": 3.95
+        "input": 0.2,
+        "output": 0.88,
+        "cache_read": 0.11
       }
     },
     "alibaba/qwen3-vl-30b-a3b-instruct": {
@@ -1404,6 +1110,53 @@
         "novita/qwen3.8-max",
         "scx-ai-gp/qwen3.8-max"
       ]
+    },
+    "alibaba/qwen3.8-omni-flash": {
+      "name": "Qwen3.8 Omni Flash",
+      "family": "qwen",
+      "released": "2026-09-17",
+      "updated": "2026-09-17",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "audio",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 983616,
+        "output": 131072
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "minimal",
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ]
+      },
+      "provider_options": {
+        "id": "alibaba/qwen3.8-omni-flash",
+        "name": "Qwen3.8 Omni Flash (Alibaba Cloud)"
+      },
+      "price": {
+        "input": 0.15,
+        "output": 0.47,
+        "cache_read": 0.016
+      }
     },
     "anthropic/claude-fable-5": {
       "name": "Claude Fable 5",
@@ -2259,39 +2012,6 @@
         "azure-anthropic/claude-sonnet-5-5"
       ]
     },
-    "baidu/ernie-4.5-vl-424b-a47b": {
-      "name": "ERNIE 4.5 VL 424B A47B",
-      "family": "ernie",
-      "released": "2025-06-30",
-      "updated": "2025-06-30",
-      "open_weights": false,
-      "capabilities": {
-        "tools": false,
-        "attachments": true,
-        "structured_output": false,
-        "temperature": true,
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 123000,
-        "output": 16000
-      },
-      "reasoning": {},
-      "provider_options": {
-        "id": "novita/ernie-4.5-vl-424b-a47b",
-        "name": "ERNIE 4.5 VL 424B A47B (NovitaAI)"
-      },
-      "price": {
-        "input": 0.42,
-        "output": 1.25
-      }
-    },
     "bytedance-seed/seed-1.6-250615": {
       "name": "Seed 1.6 250615",
       "family": "seed",
@@ -2640,23 +2360,22 @@
         ]
       },
       "limit": {
-        "context": 163840,
-        "output": 65536
+        "context": 131072,
+        "output": 32768
       },
       "reasoning": {
         "mandatory": false
       },
       "provider_options": {
-        "id": "novita/deepseek-v3.2",
-        "name": "DeepSeek V3.2 (NovitaAI)"
+        "id": "bytedance/deepseek-v3.2",
+        "name": "DeepSeek V3.2 (ByteDance)"
       },
       "price": {
-        "input": 0.269,
-        "output": 0.4,
-        "cache_read": 0.1345
+        "input": 0.28,
+        "output": 0.42,
+        "cache_read": 0.056
       },
       "aliases": [
-        "bytedance/deepseek-v3.2",
         "deepinfra/deepseek-v3.2"
       ]
     },
@@ -2711,6 +2430,7 @@
         "alibaba/deepseek-v4-flash",
         "bytedance/deepseek-v4-flash",
         "canopywave/deepseek-v4-flash",
+        "cloudflare/deepseek-v4-flash",
         "consensusprotocol/deepseek-v4-flash",
         "deepinfra/deepseek-v4-flash",
         "novita/deepseek-v4-flash",
@@ -2758,17 +2478,17 @@
         "name": "DeepSeek V4 Pro (DeepSeek)"
       },
       "price": {
-        "input": 0.435,
-        "output": 0.87,
-        "cache_read": 0.003625
+        "input": 0.66,
+        "output": 1.98,
+        "cache_read": 0.022
       },
       "aliases": [
         "alibaba/deepseek-v4-pro",
         "baidu/deepseek-v4-pro",
         "bytedance/deepseek-v4-pro",
         "canopywave/deepseek-v4-pro",
+        "cloudflare/deepseek-v4-pro",
         "deepinfra/deepseek-v4-pro",
-        "reka-ai/deepseek-v4-pro",
         "runware/deepseek-v4-pro",
         "tencent/deepseek-v4-pro",
         "together-ai/deepseek-v4-pro"
@@ -2784,7 +2504,7 @@
       "capabilities": {
         "tools": true,
         "attachments": true,
-        "structured_output": false,
+        "structured_output": true,
         "temperature": true,
         "input": [
           "text",
@@ -2795,39 +2515,41 @@
         ]
       },
       "limit": {
-        "context": 1050000,
+        "context": 1048576,
         "output": 393216
       },
       "reasoning": {
         "mandatory": false,
         "efforts": [
           "none",
+          "minimal",
           "low",
+          "medium",
           "high",
+          "xhigh",
           "max"
         ]
       },
       "provider_options": {
-        "id": "deepseek/deepseek-v4.1-flash",
-        "name": "DeepSeek V4.1 Flash (DeepSeek)"
+        "id": "baidu/deepseek-v4.1-flash",
+        "name": "DeepSeek V4.1 Flash (Baidu)"
       },
       "price": {
-        "input": 0.15,
-        "output": 0.6,
-        "cache_read": 0.003
+        "input": 0.3,
+        "output": 1.2,
+        "cache_read": 0.006
       },
       "aliases": [
         "alibaba/deepseek-v4.1-flash",
-        "baidu/deepseek-v4.1-flash",
         "consensusprotocol/deepseek-v4.1-flash",
         "deepinfra/deepseek-v4.1-flash",
-        "entrim/deepseek-v4.1-flash",
         "fireworks/deepseek-v4.1-flash",
         "luminal/deepseek-v4.1-flash",
         "novita/deepseek-v4.1-flash",
+        "reka-ai/deepseek-v4.1-flash",
         "runware/deepseek-v4.1-flash",
-        "sciforium/deepseek-v4.1-flash",
         "scx-ai-gp/deepseek-v4.1-flash",
+        "tencent/deepseek-v4.1-flash",
         "together-ai/deepseek-v4.1-flash"
       ]
     },
@@ -2875,11 +2597,61 @@
       },
       "aliases": [
         "alibaba/deepseek-v4.1-flash-1017",
+        "baidu/deepseek-v4.1-flash-1017",
+        "cloudflare/deepseek-v4.1-flash-1017",
         "deepinfra/deepseek-v4.1-flash-1017",
+        "entrim/deepseek-v4.1-flash-1017",
         "inference.net/deepseek-v4.1-flash-1017",
         "novita/deepseek-v4.1-flash-1017",
+        "reka-ai/deepseek-v4.1-flash-1017",
+        "runware/deepseek-v4.1-flash-1017",
+        "sciforium/deepseek-v4.1-flash-1017",
+        "tencent/deepseek-v4.1-flash-1017",
         "together-ai/deepseek-v4.1-flash-1017"
       ]
+    },
+    "deepseek/deepseek-v4.1-flash-cyber": {
+      "name": "DeepSeek V4.1 Flash Cyber",
+      "family": "deepseek",
+      "released": "2026-10-29",
+      "updated": "2026-10-29",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1040000,
+        "output": 393216
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "high",
+          "xhigh",
+          "max"
+        ]
+      },
+      "provider_options": {
+        "id": "inference.net/deepseek-v4.1-flash-cyber",
+        "name": "DeepSeek V4.1 Flash Cyber (Inference.net)"
+      },
+      "price": {
+        "input": 0.3,
+        "output": 1,
+        "cache_read": 0.007
+      }
     },
     "google/gemini-3-flash-preview": {
       "name": "Gemini 3 Flash Preview",
@@ -3426,7 +3198,6 @@
         "output": 0.4
       },
       "aliases": [
-        "cerebras/gemma-4-31b-it",
         "consensusprotocol/gemma-4-31b-it",
         "deepinfra/gemma-4-31b-it",
         "runware/gemma-4-31b-it"
@@ -3557,37 +3328,6 @@
         "cache_read": 0.012
       }
     },
-    "meta/llama-3-70b-instruct": {
-      "name": "Llama 3 70B Instruct",
-      "family": "llama",
-      "released": "2024-04-18",
-      "updated": "2024-04-18",
-      "open_weights": false,
-      "capabilities": {
-        "tools": false,
-        "attachments": false,
-        "structured_output": false,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 8192,
-        "output": 8000
-      },
-      "provider_options": {
-        "id": "novita/llama-3-70b-instruct",
-        "name": "Llama 3 70B Instruct (NovitaAI)"
-      },
-      "price": {
-        "input": 0.51,
-        "output": 0.74
-      }
-    },
     "meta/llama-3.1-70b-instruct": {
       "name": "Llama 3.1 70B Instruct",
       "family": "llama",
@@ -3652,37 +3392,6 @@
         "output": 0.33
       }
     },
-    "meta/llama-3.2-3b-instruct": {
-      "name": "Llama 3.2 3B Instruct",
-      "family": "llama",
-      "released": "2024-09-18",
-      "updated": "2024-09-18",
-      "open_weights": false,
-      "capabilities": {
-        "tools": false,
-        "attachments": false,
-        "structured_output": false,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 32768,
-        "output": 32000
-      },
-      "provider_options": {
-        "id": "novita/llama-3.2-3b-instruct",
-        "name": "Llama 3.2 3B Instruct (NovitaAI)"
-      },
-      "price": {
-        "input": 0.03,
-        "output": 0.05
-      }
-    },
     "meta/llama-3.3-70b-instruct": {
       "name": "Llama 3.3 70B Instruct",
       "family": "llama",
@@ -3713,10 +3422,7 @@
       "price": {
         "input": 0.135,
         "output": 0.4
-      },
-      "aliases": [
-        "cerebras/llama-3.3-70b-instruct"
-      ]
+      }
     },
     "meta/llama-4-maverick-17b-instruct": {
       "name": "Llama 4 Maverick 17B Instruct",
@@ -4103,8 +3809,7 @@
         "output": 1.1
       },
       "aliases": [
-        "minimax/minimax-m2.1-lightning",
-        "novita/minimax-m2.1"
+        "minimax/minimax-m2.1-lightning"
       ]
     },
     "minimax/minimax-m2.5": {
@@ -4233,7 +3938,6 @@
         "cache_read": 0.06
       },
       "aliases": [
-        "gonka24/minimax-m2.7",
         "novita/minimax-m2.7",
         "scx-ai/minimax-m2.7",
         "tencent/minimax-m2.7"
@@ -4372,7 +4076,13 @@
         "input": 0.15,
         "output": 0.6,
         "cache_read": 0.015
-      }
+      },
+      "aliases": [
+        "inference.net/minimax-m3.1-flash",
+        "nebius/minimax-m3.1-flash",
+        "novita/minimax-m3.1-flash",
+        "together-ai/minimax-m3.1-flash"
+      ]
     },
     "minimax/minimax-text-01": {
       "name": "MiniMax Text 01",
@@ -4842,7 +4552,6 @@
         "output": 3.011
       },
       "aliases": [
-        "embercloud/kimi-k2.5",
         "moonshot/kimi-k2.5"
       ]
     },
@@ -4887,19 +4596,17 @@
         "field": "reasoning_content"
       },
       "provider_options": {
-        "id": "baidu/kimi-k2.6",
-        "name": "Kimi K2.6 (Baidu)"
+        "id": "novita/kimi-k2.6",
+        "name": "Kimi K2.6 (NovitaAI)"
       },
       "price": {
-        "input": 0.95,
-        "output": 4,
+        "input": 0.8,
+        "output": 3.4,
         "cache_read": 0.16
       },
       "aliases": [
         "canopywave/kimi-k2.6",
         "moonshot/kimi-k2.6",
-        "novita/kimi-k2.6",
-        "runware/kimi-k2.6",
         "tencent/kimi-k2.6"
       ]
     },
@@ -5006,6 +4713,52 @@
         "moonshot/kimi-k2.7-code-highspeed"
       ]
     },
+    "moonshotai/kimi-k2.8-preview": {
+      "name": "Kimi K2.8 Preview",
+      "family": "kimi-k2",
+      "released": "2026-09-11",
+      "updated": "2026-09-11",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 1000000
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "minimal",
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ]
+      },
+      "provider_options": {
+        "id": "tencent/kimi-k2.8-preview",
+        "name": "Kimi K2.8 Preview (Tencent Cloud)"
+      },
+      "price": {
+        "input": 1,
+        "output": 4,
+        "cache_read": 0.25
+      }
+    },
     "moonshotai/kimi-k3": {
       "name": "Kimi K3",
       "family": "kimi-k3",
@@ -5078,6 +4831,51 @@
         "together-ai/kimi-k3"
       ]
     },
+    "moonshotai/kimi-k3.1-pro": {
+      "name": "Kimi K3.1 Pro",
+      "family": "kimi-k3",
+      "released": "2026-10-23",
+      "updated": "2026-10-23",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 1048576
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "high",
+          "max"
+        ]
+      },
+      "provider_options": {
+        "id": "moonshot/kimi-k3.1-pro",
+        "name": "Kimi K3.1 Pro (Moonshot AI)"
+      },
+      "price": {
+        "input": 2,
+        "output": 10,
+        "cache_read": 0.2,
+        "cache_write": 2
+      },
+      "aliases": [
+        "moonshot/kimi-k3.1-pro-highspeed"
+      ]
+    },
     "nvidia/nemotron-3-ultra-550b-a55b": {
       "name": "Nemotron 3 Ultra 550B A55B",
       "family": "nemotron",
@@ -5110,106 +4908,6 @@
         "output": 2.2,
         "cache_read": 0.1
       }
-    },
-    "openai/gpt-3.5-turbo": {
-      "name": "GPT-3.5 Turbo",
-      "family": "gpt",
-      "released": "2023-03-01",
-      "updated": "2023-11-06",
-      "knowledge": "2021-09-01",
-      "open_weights": false,
-      "capabilities": {
-        "tools": true,
-        "attachments": false,
-        "structured_output": false,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 16385,
-        "output": 4096
-      },
-      "provider_options": {
-        "id": "openai/gpt-3.5-turbo",
-        "name": "GPT-3.5 Turbo (OpenAI)"
-      },
-      "price": {
-        "input": 0.5,
-        "output": 1.5
-      },
-      "status": "deprecated"
-    },
-    "openai/gpt-4": {
-      "name": "GPT-4",
-      "family": "gpt",
-      "released": "2023-11-06",
-      "updated": "2024-04-09",
-      "knowledge": "2023-11",
-      "open_weights": false,
-      "capabilities": {
-        "tools": true,
-        "attachments": false,
-        "structured_output": false,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 8192,
-        "output": 8192
-      },
-      "provider_options": {
-        "id": "openai/gpt-4",
-        "name": "GPT-4 (OpenAI)"
-      },
-      "price": {
-        "input": 30,
-        "output": 60
-      },
-      "status": "deprecated"
-    },
-    "openai/gpt-4-turbo": {
-      "name": "GPT-4 Turbo",
-      "family": "gpt",
-      "released": "2023-11-06",
-      "updated": "2024-04-09",
-      "knowledge": "2023-12",
-      "open_weights": false,
-      "capabilities": {
-        "tools": true,
-        "attachments": true,
-        "structured_output": true,
-        "temperature": true,
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 128000,
-        "output": 4096
-      },
-      "provider_options": {
-        "id": "openai/gpt-4-turbo",
-        "name": "GPT-4 Turbo (OpenAI)"
-      },
-      "price": {
-        "input": 10,
-        "output": 30
-      },
-      "status": "deprecated"
     },
     "openai/gpt-4.1": {
       "name": "GPT-4.1",
@@ -5286,41 +4984,6 @@
       "aliases": [
         "azure/gpt-4.1-mini"
       ]
-    },
-    "openai/gpt-4.1-nano": {
-      "name": "GPT-4.1 Nano",
-      "family": "gpt-nano",
-      "released": "2025-04-14",
-      "updated": "2025-04-14",
-      "knowledge": "2024-04",
-      "open_weights": false,
-      "capabilities": {
-        "tools": true,
-        "attachments": true,
-        "structured_output": true,
-        "temperature": true,
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 1000000,
-        "output": 32768
-      },
-      "provider_options": {
-        "id": "openai/gpt-4.1-nano",
-        "name": "GPT-4.1 Nano (OpenAI)"
-      },
-      "price": {
-        "input": 0.1,
-        "output": 0.4,
-        "cache_read": 0.025
-      },
-      "status": "deprecated"
     },
     "openai/gpt-4o": {
       "name": "GPT-4o",
@@ -5635,7 +5298,10 @@
       "price": {
         "input": 15,
         "output": 120
-      }
+      },
+      "aliases": [
+        "azure/gpt-5-pro"
+      ]
     },
     "openai/gpt-5.1": {
       "name": "GPT-5.1",
@@ -6601,6 +6267,57 @@
         "azure/gpt-6.1-sol"
       ]
     },
+    "openai/gpt-6.1-terra": {
+      "name": "GPT-6.1 Terra",
+      "family": "gpt-terra",
+      "released": "2026-10-26",
+      "updated": "2026-10-26",
+      "knowledge": "2026-06-01",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1050000,
+        "input": 922000,
+        "output": 128000
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ]
+      },
+      "provider_options": {
+        "id": "openai/gpt-6.1-terra",
+        "name": "GPT-6.1 Terra (OpenAI)"
+      },
+      "price": {
+        "input": 1,
+        "output": 5,
+        "cache_read": 0.05,
+        "cache_write": 1.25
+      },
+      "aliases": [
+        "azure/gpt-6.1-terra"
+      ]
+    },
     "openai/gpt-live-transcribe": {
       "name": "GPT Live Transcribe",
       "family": "gpt",
@@ -6676,7 +6393,6 @@
         "azure/gpt-oss-120b",
         "bytedance/gpt-oss-120b",
         "cerebras/gpt-oss-120b",
-        "runware/gpt-oss-120b",
         "scx-ai/gpt-oss-120b",
         "together-ai/gpt-oss-120b"
       ]
@@ -6756,49 +6472,6 @@
         "output": 0
       }
     },
-    "openai/o1": {
-      "name": "o1",
-      "family": "o",
-      "released": "2024-12-05",
-      "updated": "2024-12-05",
-      "knowledge": "2023-09",
-      "open_weights": false,
-      "capabilities": {
-        "tools": false,
-        "attachments": true,
-        "structured_output": true,
-        "temperature": false,
-        "input": [
-          "text",
-          "image",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 200000,
-        "output": 100000
-      },
-      "reasoning": {
-        "efforts": [
-          "low",
-          "medium",
-          "high"
-        ]
-      },
-      "provider_options": {
-        "id": "openai/o1",
-        "name": "o1 (OpenAI)"
-      },
-      "price": {
-        "input": 15,
-        "output": 60,
-        "cache_read": 7.5
-      },
-      "status": "deprecated"
-    },
     "openai/o3": {
       "name": "o3",
       "family": "o",
@@ -6833,82 +6506,6 @@
         "output": 8,
         "cache_read": 0.5
       }
-    },
-    "openai/o3-mini": {
-      "name": "o3 Mini",
-      "family": "o-mini",
-      "released": "2024-12-20",
-      "updated": "2025-01-29",
-      "knowledge": "2024-05",
-      "open_weights": false,
-      "capabilities": {
-        "tools": false,
-        "attachments": false,
-        "structured_output": true,
-        "temperature": false,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 200000,
-        "output": 100000
-      },
-      "provider_options": {
-        "id": "openai/o3-mini",
-        "name": "o3 Mini (OpenAI)"
-      },
-      "price": {
-        "input": 1.1,
-        "output": 4.4,
-        "cache_read": 0.55
-      },
-      "status": "deprecated"
-    },
-    "openai/o4-mini": {
-      "name": "o4 Mini",
-      "family": "o-mini",
-      "released": "2025-04-16",
-      "updated": "2025-04-16",
-      "knowledge": "2024-05",
-      "open_weights": false,
-      "capabilities": {
-        "tools": true,
-        "attachments": true,
-        "structured_output": true,
-        "temperature": false,
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 200000,
-        "output": 100000
-      },
-      "reasoning": {
-        "efforts": [
-          "low",
-          "medium",
-          "high"
-        ]
-      },
-      "provider_options": {
-        "id": "openai/o4-mini",
-        "name": "o4 Mini (OpenAI)"
-      },
-      "price": {
-        "input": 1.1,
-        "output": 4.4,
-        "cache_read": 0.275
-      },
-      "status": "deprecated"
     },
     "perplexity/sonar": {
       "name": "Sonar",
@@ -7142,6 +6739,80 @@
         "cache_read": 0.04
       }
     },
+    "stepfun/step-5-preview": {
+      "name": "Step 5 Preview",
+      "released": "2026-09-16",
+      "updated": "2026-09-20",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "input": 1000000,
+        "output": 65536
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "tencent/step-5-preview",
+        "name": "Step 5 Preview (Tencent Cloud)"
+      },
+      "price": {
+        "input": 1,
+        "output": 2.7,
+        "cache_read": 0.05
+      }
+    },
+    "tencent/glm-5.3-flashx": {
+      "name": "GLM 5.3 FlashX",
+      "family": "glm",
+      "released": "2026-09-18",
+      "updated": "2026-09-18",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "reasoning": {
+        "efforts": [
+          "xhigh",
+          "max"
+        ]
+      },
+      "provider_options": {
+        "id": "tencent/glm-5.3-flashx",
+        "name": "GLM-5.3 FlashX (Tencent Cloud)"
+      },
+      "price": {
+        "input": 0.37,
+        "output": 1.25,
+        "cache_read": 0.075
+      }
+    },
     "tencent/hy-mt2-plus": {
       "name": "Hy MT2 Plus",
       "family": "Hy",
@@ -7297,38 +6968,6 @@
         "cache_read": 0.75
       }
     },
-    "xai/grok-4.1-fast": {
-      "name": "Grok 4.1 Fast",
-      "family": "grok",
-      "released": "2025-11-19",
-      "updated": "2025-11-19",
-      "open_weights": false,
-      "capabilities": {
-        "tools": true,
-        "attachments": true,
-        "structured_output": false,
-        "temperature": true,
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 2000000,
-        "output": 30000
-      },
-      "provider_options": {
-        "id": "azure-ai-foundry/grok-4-1-fast-non-reasoning",
-        "name": "Grok 4.1 Fast Non-Reasoning (Azure AI Foundry)"
-      },
-      "price": {
-        "input": 0.2,
-        "output": 0.5
-      }
-    },
     "xai/grok-4.1-fast-reasoning": {
       "name": "Grok 4.1 Fast Reasoning",
       "family": "grok",
@@ -7349,8 +6988,8 @@
         ]
       },
       "limit": {
-        "context": 2000000,
-        "output": 30000
+        "context": 128000,
+        "output": 128000
       },
       "reasoning": {
         "efforts": [
@@ -7360,13 +6999,16 @@
         ]
       },
       "provider_options": {
-        "id": "azure-ai-foundry/grok-4-1-fast-reasoning",
-        "name": "Grok 4.1 Fast Reasoning (Azure AI Foundry)"
+        "id": "azure/grok-4-1-fast-reasoning",
+        "name": "Grok 4.1 Fast Reasoning (Azure)"
       },
       "price": {
         "input": 0.2,
         "output": 0.5
-      }
+      },
+      "aliases": [
+        "azure-ai-foundry/grok-4-1-fast-reasoning"
+      ]
     },
     "xai/grok-4.20-0309-non-reasoning": {
       "name": "Grok 4.20 0309 Non Reasoning",
@@ -7517,7 +7159,8 @@
       },
       "aliases": [
         "aws-bedrock/grok-4-3",
-        "azure-ai-foundry/grok-4-3"
+        "azure-ai-foundry/grok-4-3",
+        "azure/grok-4-3"
       ]
     },
     "xai/grok-4.5": {
@@ -7702,116 +7345,6 @@
         ]
       }
     },
-    "xiaomi/mimo-v2.5": {
-      "name": "MiMo V2.5",
-      "family": "mimo",
-      "released": "2026-04-22",
-      "updated": "2026-04-22",
-      "knowledge": "2024-12",
-      "open_weights": true,
-      "capabilities": {
-        "tools": true,
-        "attachments": true,
-        "structured_output": false,
-        "temperature": true,
-        "input": [
-          "text",
-          "image",
-          "audio",
-          "video"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 1048576,
-        "output": 131072
-      },
-      "reasoning": {
-        "mandatory": false,
-        "efforts": [
-          "none",
-          "low",
-          "medium",
-          "high"
-        ]
-      },
-      "interleaved": {
-        "field": "reasoning_content"
-      },
-      "provider_options": {
-        "id": "novita/mimo-v2.5",
-        "name": "MiMo V2.5 (NovitaAI)"
-      },
-      "price": {
-        "input": 0.168,
-        "output": 0.336,
-        "cache_read": 0.0034,
-        "tiers": [
-          {
-            "above": 256000,
-            "input": 0.8,
-            "output": 4,
-            "cache_read": 0.16
-          }
-        ]
-      }
-    },
-    "xiaomi/mimo-v2.5-pro": {
-      "name": "MiMo V2.5 Pro",
-      "family": "mimo",
-      "released": "2026-04-22",
-      "updated": "2026-04-22",
-      "knowledge": "2024-12",
-      "open_weights": true,
-      "capabilities": {
-        "tools": true,
-        "attachments": false,
-        "structured_output": false,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 1048576,
-        "output": 131072
-      },
-      "reasoning": {
-        "mandatory": false,
-        "efforts": [
-          "none",
-          "minimal",
-          "low",
-          "medium",
-          "high"
-        ]
-      },
-      "interleaved": {
-        "field": "reasoning_content"
-      },
-      "provider_options": {
-        "id": "novita/mimo-v2.5-pro",
-        "name": "MiMo V2.5 Pro (NovitaAI)"
-      },
-      "price": {
-        "input": 0.522,
-        "output": 1.044,
-        "cache_read": 0.0043,
-        "tiers": [
-          {
-            "above": 256000,
-            "input": 2,
-            "output": 6,
-            "cache_read": 0.4
-          }
-        ]
-      }
-    },
     "xiaomi/mimo-v2.6-flash": {
       "name": "MiMo V2.6 Flash",
       "family": "mimo",
@@ -7857,7 +7390,8 @@
       },
       "aliases": [
         "consensusprotocol/mimo-v2.6-flash",
-        "deepinfra/mimo-v2.6-flash"
+        "deepinfra/mimo-v2.6-flash",
+        "tencent/mimo-v2.6-flash"
       ]
     },
     "xiaomi/mimo-v2.6-pro": {
@@ -7904,7 +7438,8 @@
         "cache_read": 0.0036
       },
       "aliases": [
-        "deepinfra/mimo-v2.6-pro"
+        "deepinfra/mimo-v2.6-pro",
+        "tencent/mimo-v2.6-pro"
       ]
     },
     "zhipuai/glm-4-32b-0414-128k": {
@@ -7972,10 +7507,7 @@
         "input": 0.6,
         "output": 2.2,
         "cache_read": 0.11
-      },
-      "aliases": [
-        "embercloud/glm-4.5"
-      ]
+      }
     },
     "zhipuai/glm-4.5-air": {
       "name": "GLM 4.5 Air",
@@ -8008,10 +7540,7 @@
         "input": 0.2,
         "output": 1.1,
         "cache_read": 0.03
-      },
-      "aliases": [
-        "embercloud/glm-4.5-air"
-      ]
+      }
     },
     "zhipuai/glm-4.5-airx": {
       "name": "GLM 4.5 AirX",
@@ -8277,44 +7806,9 @@
       },
       "aliases": [
         "bytedance/glm-4.7",
-        "cerebras/glm-4.7",
-        "embercloud/glm-4.7",
         "novita/glm-4.7",
         "together-ai/glm-4.7"
       ]
-    },
-    "zhipuai/glm-4.7-flash": {
-      "name": "GLM 4.7 Flash",
-      "family": "glm-flash",
-      "released": "2026-01-19",
-      "updated": "2026-01-19",
-      "knowledge": "2025-04",
-      "open_weights": true,
-      "capabilities": {
-        "tools": true,
-        "attachments": false,
-        "structured_output": false,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 200000,
-        "output": 131000
-      },
-      "provider_options": {
-        "id": "embercloud/glm-4.7-flash",
-        "name": "GLM-4.7 Flash (EmberCloud)"
-      },
-      "price": {
-        "input": 0.06,
-        "output": 0.4,
-        "cache_read": 0.01
-      }
     },
     "zhipuai/glm-4.7-flashx": {
       "name": "GLM 4.7 FlashX",
@@ -8400,7 +7894,6 @@
       },
       "aliases": [
         "alibaba/glm-5",
-        "embercloud/glm-5",
         "novita/glm-5",
         "tencent/glm-5"
       ]
@@ -8494,7 +7987,6 @@
       },
       "aliases": [
         "baidu/glm-5.1",
-        "embercloud/glm-5.1",
         "novita/glm-5.1",
         "tencent/glm-5.1"
       ]
@@ -8565,7 +8057,6 @@
         "baidu/glm-5.2",
         "bytedance/glm-5.2",
         "canopywave/glm-5.2",
-        "embercloud/glm-5.2",
         "novita/glm-5.2",
         "runware/glm-5.2",
         "tencent/glm-5.2",
@@ -8628,6 +8119,7 @@
       "aliases": [
         "alibaba/glm-5.3",
         "baidu/glm-5.3",
+        "cloudflare/glm-5.3",
         "entrim/glm-5.3",
         "fireworks/glm-5.3",
         "inference.net/glm-5.3",
@@ -8635,6 +8127,7 @@
         "novita/glm-5.3",
         "reka-ai/glm-5.3",
         "runware/glm-5.3",
+        "tencent/glm-5.3",
         "together-ai/glm-5.3",
         "zai/glm-5.3"
       ]
@@ -8681,6 +8174,8 @@
         "cache_read": 0.03
       },
       "aliases": [
+        "baidu/glm-5.3-flash",
+        "cloudflare/glm-5.3-flash",
         "consensusprotocol/glm-5.3-flash",
         "entrim/glm-5.3-flash",
         "fireworks/glm-5.3-flash",
@@ -8690,6 +8185,7 @@
         "reka-ai/glm-5.3-flash",
         "runware/glm-5.3-flash",
         "scx-ai-gp/glm-5.3-flash",
+        "tencent/glm-5.3-flash",
         "together-ai/glm-5.3-flash"
       ]
     },

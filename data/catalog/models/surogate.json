@@ -1,0 +1,32 @@
+{
+  "surogate/rune-26b-a4b": {
+    "id": "surogate/rune-26b-a4b",
+    "lab": "surogate",
+    "name": "Rune 26B A4B",
+    "type": "decision",
+    "released": "2026-09-21",
+    "updated": "2026-09-21",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "structured_output": false,
+      "temperature": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "input": 262144,
+      "output": 0
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  }
+}

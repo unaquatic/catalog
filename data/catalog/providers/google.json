@@ -228,7 +228,8 @@
         "input": 0.3,
         "output": 30,
         "cache_read": 0.075
-      }
+      },
+      "status": "deprecated"
     },
     "google/gemini-2.5-flash-lite": {
       "name": "Gemini 2.5 Flash Lite",
@@ -476,41 +477,6 @@
         "output": 120
       }
     },
-    "google/gemini-3-pro-image-preview": {
-      "name": "Gemini 3 Pro Image Preview",
-      "family": "gemini-pro",
-      "type": "image",
-      "released": "2025-11-20",
-      "updated": "2025-11-20",
-      "knowledge": "2025-01",
-      "open_weights": false,
-      "capabilities": {
-        "tools": false,
-        "attachments": true,
-        "temperature": true,
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text",
-          "image"
-        ]
-      },
-      "limit": {
-        "context": 131072,
-        "output": 32768
-      },
-      "reasoning": {},
-      "provider_options": {
-        "id": "gemini-3-pro-image-preview",
-        "name": "Nano Banana Pro"
-      },
-      "price": {
-        "input": 2,
-        "output": 120
-      }
-    },
     "google/gemini-3.1-flash-image": {
       "name": "Gemini 3.1 Flash Image",
       "family": "gemini-flash",
@@ -546,47 +512,6 @@
       },
       "provider_options": {
         "id": "gemini-3.1-flash-image",
-        "name": "Nano Banana 2"
-      },
-      "price": {
-        "input": 0.5,
-        "output": 60
-      }
-    },
-    "google/gemini-3.1-flash-image-preview": {
-      "name": "Gemini 3.1 Flash Image Preview",
-      "family": "gemini-flash",
-      "type": "image",
-      "released": "2026-02-26",
-      "updated": "2026-02-26",
-      "knowledge": "2025-01",
-      "open_weights": false,
-      "capabilities": {
-        "tools": false,
-        "attachments": true,
-        "temperature": true,
-        "input": [
-          "text",
-          "image",
-          "pdf"
-        ],
-        "output": [
-          "text",
-          "image"
-        ]
-      },
-      "limit": {
-        "context": 65536,
-        "output": 65536
-      },
-      "reasoning": {
-        "efforts": [
-          "minimal",
-          "high"
-        ]
-      },
-      "provider_options": {
-        "id": "gemini-3.1-flash-image-preview",
         "name": "Nano Banana 2"
       },
       "price": {
@@ -1540,92 +1465,6 @@
       "price": {
         "input": 0,
         "output": 0
-      }
-    },
-    "google/veo-3.1-fast-generate-preview": {
-      "name": "Veo 3.1 Fast Generate Preview",
-      "family": "veo",
-      "type": "video",
-      "released": "2025-10-15",
-      "updated": "2026-01-01",
-      "open_weights": false,
-      "capabilities": {
-        "tools": false,
-        "attachments": true,
-        "temperature": false,
-        "input": [
-          "text",
-          "image",
-          "video"
-        ],
-        "output": [
-          "video"
-        ]
-      },
-      "limit": {
-        "context": 480,
-        "output": 8192
-      },
-      "provider_options": {
-        "id": "veo-3.1-fast-generate-preview",
-        "name": "Veo 3.1 fast"
-      }
-    },
-    "google/veo-3.1-generate-preview": {
-      "name": "Veo 3.1 Generate Preview",
-      "family": "veo",
-      "type": "video",
-      "released": "2025-10-15",
-      "updated": "2026-01-01",
-      "open_weights": false,
-      "capabilities": {
-        "tools": false,
-        "attachments": true,
-        "temperature": false,
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "video"
-        ]
-      },
-      "limit": {
-        "context": 480,
-        "output": 8192
-      },
-      "provider_options": {
-        "id": "veo-3.1-generate-preview",
-        "name": "Veo 3.1"
-      },
-      "status": "beta"
-    },
-    "google/veo-3.1-lite-generate-preview": {
-      "name": "Veo 3.1 Lite Generate Preview",
-      "family": "veo",
-      "type": "video",
-      "released": "2026-03-31",
-      "updated": "2026-03-31",
-      "open_weights": false,
-      "capabilities": {
-        "tools": false,
-        "attachments": true,
-        "temperature": false,
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "video"
-        ]
-      },
-      "limit": {
-        "context": 480,
-        "output": 8192
-      },
-      "provider_options": {
-        "id": "veo-3.1-lite-generate-preview",
-        "name": "Veo 3.1 lite"
       }
     }
   }

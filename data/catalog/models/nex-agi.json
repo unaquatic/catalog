@@ -61,6 +61,7 @@
     },
     "providers": [
       "kilo",
+      "nano-gpt",
       "openrouter"
     ]
   },
@@ -92,6 +93,7 @@
     },
     "providers": [
       "kilo",
+      "nano-gpt",
       "openrouter"
     ]
   }

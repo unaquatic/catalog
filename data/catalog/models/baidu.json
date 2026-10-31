@@ -152,9 +152,7 @@
       "output": 16000
     },
     "providers": [
-      "jiekou",
-      "llmgateway",
-      "llmgateway-providers"
+      "jiekou"
     ]
   },
   "baidu/ernie-5.0-thinking-preview": {

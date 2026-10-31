@@ -1,4 +1,34 @@
 {
+  "tencent/glm-5.3-flashx": {
+    "id": "tencent/glm-5.3-flashx",
+    "lab": "tencent",
+    "name": "GLM 5.3 FlashX",
+    "family": "glm",
+    "released": "2026-09-18",
+    "updated": "2026-09-18",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 131072
+    },
+    "providers": [
+      "llmgateway-providers"
+    ]
+  },
   "tencent/hunyuan-2.0-instruct": {
     "id": "tencent/hunyuan-2.0-instruct",
     "lab": "tencent",
@@ -408,8 +438,7 @@
       "kilo",
       "opencode",
       "openrouter",
-      "tencent-tokenhub",
-      "zenmux"
+      "tencent-tokenhub"
     ]
   },
   "tencent/hy4-preview": {

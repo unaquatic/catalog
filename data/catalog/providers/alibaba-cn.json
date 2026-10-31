@@ -147,16 +147,22 @@
       "price": {
         "input": 0.022,
         "output": 0.216,
+        "cache_read": 0.0044,
+        "cache_write": 0.0275,
         "tiers": [
           {
             "above": 128000,
             "input": 0.087,
-            "output": 0.861
+            "output": 0.861,
+            "cache_read": 0.0174,
+            "cache_write": 0.10875
           },
           {
             "above": 256000,
             "input": 0.173,
-            "output": 1.721
+            "output": 1.721,
+            "cache_read": 0.0346,
+            "cache_write": 0.21625
           }
         ]
       }
@@ -474,7 +480,7 @@
       "price": {
         "input": 0.115,
         "output": 0.287,
-        "cache_read": 0.012,
+        "cache_read": 0.023,
         "cache_write": 0.144,
         "reasoning": 1.147,
         "tiers": [
@@ -482,12 +488,16 @@
             "above": 128000,
             "input": 0.345,
             "output": 2.868,
+            "cache_read": 0.069,
+            "cache_write": 0.43125,
             "reasoning": 3.441
           },
           {
             "above": 256000,
             "input": 0.689,
             "output": 6.881,
+            "cache_read": 0.1378,
+            "cache_write": 0.86125,
             "reasoning": 9.175
           }
         ]
@@ -661,295 +671,6 @@
       },
       "status": "deprecated"
     },
-    "alibaba/qwen2-5-vl-72b-instruct": {
-      "name": "Qwen2.5 VL 72B Instruct",
-      "family": "qwen",
-      "released": "2025-01-26",
-      "updated": "2025-01-26",
-      "knowledge": "2024-04",
-      "open_weights": true,
-      "capabilities": {
-        "tools": true,
-        "attachments": true,
-        "temperature": true,
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 131072,
-        "output": 8192
-      },
-      "provider_options": {
-        "id": "qwen2-5-vl-72b-instruct",
-        "name": "Qwen2.5-VL 72B Instruct"
-      },
-      "price": {
-        "input": 2.294,
-        "output": 6.881
-      },
-      "status": "deprecated"
-    },
-    "alibaba/qwen2.5-14b-instruct": {
-      "name": "Qwen2.5 14B Instruct",
-      "family": "qwen",
-      "released": "2024-09-19",
-      "updated": "2024-09-19",
-      "knowledge": "2024-04",
-      "open_weights": true,
-      "capabilities": {
-        "tools": true,
-        "attachments": false,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 131072,
-        "output": 8192
-      },
-      "provider_options": {
-        "id": "qwen2-5-14b-instruct",
-        "name": "Qwen2.5 14B Instruct"
-      },
-      "price": {
-        "input": 0.144,
-        "output": 0.431
-      },
-      "status": "deprecated"
-    },
-    "alibaba/qwen2.5-32b-instruct": {
-      "name": "Qwen2.5 32B Instruct",
-      "family": "qwen",
-      "released": "2024-09-19",
-      "updated": "2024-09-19",
-      "knowledge": "2024-04",
-      "open_weights": true,
-      "capabilities": {
-        "tools": true,
-        "attachments": false,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 131072,
-        "output": 8192
-      },
-      "provider_options": {
-        "id": "qwen2-5-32b-instruct",
-        "name": "Qwen2.5 32B Instruct"
-      },
-      "price": {
-        "input": 0.287,
-        "output": 0.861
-      },
-      "status": "deprecated"
-    },
-    "alibaba/qwen2.5-72b-instruct": {
-      "name": "Qwen2.5 72B Instruct",
-      "family": "qwen",
-      "released": "2024-09-19",
-      "updated": "2024-09-19",
-      "knowledge": "2024-04",
-      "open_weights": true,
-      "capabilities": {
-        "tools": true,
-        "attachments": false,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 131072,
-        "output": 8192
-      },
-      "provider_options": {
-        "id": "qwen2-5-72b-instruct",
-        "name": "Qwen2.5 72B Instruct"
-      },
-      "price": {
-        "input": 0.574,
-        "output": 1.721
-      },
-      "status": "deprecated"
-    },
-    "alibaba/qwen2.5-7b-instruct": {
-      "name": "Qwen2.5 7B Instruct",
-      "family": "qwen",
-      "released": "2024-09-19",
-      "updated": "2024-09-19",
-      "knowledge": "2024-04",
-      "open_weights": true,
-      "capabilities": {
-        "tools": true,
-        "attachments": false,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 131072,
-        "output": 8192
-      },
-      "provider_options": {
-        "id": "qwen2-5-7b-instruct",
-        "name": "Qwen2.5 7B Instruct"
-      },
-      "price": {
-        "input": 0.072,
-        "output": 0.144
-      },
-      "status": "deprecated"
-    },
-    "alibaba/qwen2.5-coder-32b-instruct": {
-      "name": "Qwen2.5 Coder 32B Instruct",
-      "family": "qwen",
-      "released": "2024-11-12",
-      "updated": "2024-11-12",
-      "knowledge": "2024-04",
-      "open_weights": true,
-      "capabilities": {
-        "tools": true,
-        "attachments": false,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 131072,
-        "output": 8192
-      },
-      "provider_options": {
-        "id": "qwen2-5-coder-32b-instruct",
-        "name": "Qwen2.5-Coder 32B Instruct"
-      },
-      "price": {
-        "input": 0.287,
-        "output": 0.861
-      },
-      "status": "deprecated"
-    },
-    "alibaba/qwen2.5-coder-7b-instruct": {
-      "name": "Qwen2.5 Coder 7B Instruct",
-      "family": "qwen",
-      "released": "2024-09-19",
-      "updated": "2024-11-01",
-      "knowledge": "2024-04",
-      "open_weights": true,
-      "capabilities": {
-        "tools": true,
-        "attachments": false,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 131072,
-        "output": 8192
-      },
-      "provider_options": {
-        "id": "qwen2-5-coder-7b-instruct",
-        "name": "Qwen2.5-Coder 7B Instruct"
-      },
-      "price": {
-        "input": 0.144,
-        "output": 0.287
-      },
-      "status": "deprecated"
-    },
-    "alibaba/qwen2.5-math-72b-instruct": {
-      "name": "Qwen2.5 Math 72B Instruct",
-      "family": "qwen",
-      "released": "2024-09-19",
-      "updated": "2024-09-19",
-      "knowledge": "2024-04",
-      "open_weights": true,
-      "capabilities": {
-        "tools": true,
-        "attachments": false,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 4096,
-        "output": 3072
-      },
-      "provider_options": {
-        "id": "qwen2-5-math-72b-instruct",
-        "name": "Qwen2.5-Math 72B Instruct"
-      },
-      "price": {
-        "input": 0.574,
-        "output": 1.721
-      },
-      "status": "deprecated"
-    },
-    "alibaba/qwen2.5-math-7b-instruct": {
-      "name": "Qwen2.5 Math 7B Instruct",
-      "family": "qwen",
-      "released": "2024-09-19",
-      "updated": "2024-09-19",
-      "knowledge": "2024-04",
-      "open_weights": true,
-      "capabilities": {
-        "tools": true,
-        "attachments": false,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 4096,
-        "output": 3072
-      },
-      "provider_options": {
-        "id": "qwen2-5-math-7b-instruct",
-        "name": "Qwen2.5-Math 7B Instruct"
-      },
-      "price": {
-        "input": 0.144,
-        "output": 0.287
-      },
-      "status": "deprecated"
-    },
     "alibaba/qwen2.5-omni-7b": {
       "name": "Qwen2.5 Omni 7B",
       "family": "qwen",
@@ -984,39 +705,6 @@
         "input": 0.087,
         "output": 0.345,
         "input_audio": 5.448
-      },
-      "status": "deprecated"
-    },
-    "alibaba/qwen2.5-vl-7b-instruct": {
-      "name": "Qwen2.5 VL 7B Instruct",
-      "family": "qwen",
-      "released": "2025-01-26",
-      "updated": "2025-01-26",
-      "knowledge": "2024-04",
-      "open_weights": true,
-      "capabilities": {
-        "tools": true,
-        "attachments": true,
-        "temperature": true,
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 131072,
-        "output": 8192
-      },
-      "provider_options": {
-        "id": "qwen2-5-vl-7b-instruct",
-        "name": "Qwen2.5-VL 7B Instruct"
-      },
-      "price": {
-        "input": 0.287,
-        "output": 0.717
       },
       "status": "deprecated"
     },
@@ -1322,21 +1010,29 @@
       "price": {
         "input": 0.144,
         "output": 0.574,
+        "cache_read": 0.0288,
+        "cache_write": 0.18,
         "tiers": [
           {
             "above": 32000,
             "input": 0.216,
-            "output": 0.861
+            "output": 0.861,
+            "cache_read": 0.0432,
+            "cache_write": 0.27
           },
           {
             "above": 128000,
             "input": 0.359,
-            "output": 1.434
+            "output": 1.434,
+            "cache_read": 0.0718,
+            "cache_write": 0.44875
           },
           {
             "above": 256000,
             "input": 0.717,
-            "output": 3.584
+            "output": 3.584,
+            "cache_read": 0.1434,
+            "cache_write": 0.89625
           }
         ]
       }
@@ -1709,16 +1405,22 @@
       "price": {
         "input": 0.143353,
         "output": 1.433525,
+        "cache_read": 0.028671,
+        "cache_write": 0.179191,
         "tiers": [
           {
             "above": 32000,
             "input": 0.215,
-            "output": 2.15
+            "output": 2.15,
+            "cache_read": 0.043,
+            "cache_write": 0.26875
           },
           {
             "above": 128000,
             "input": 0.43,
-            "output": 4.301
+            "output": 4.301,
+            "cache_read": 0.086,
+            "cache_write": 0.5375
           }
         ]
       }
@@ -2066,21 +1768,21 @@
       "price": {
         "input": 0.02962,
         "output": 0.1185,
-        "cache_read": 0.002962,
+        "cache_read": 0.005924,
         "cache_write": 0.03703,
         "tiers": [
           {
             "above": 32000,
             "input": 0.08887,
             "output": 0.35549,
-            "cache_read": 0.008887,
+            "cache_read": 0.017774,
             "cache_write": 0.11109
           },
           {
             "above": 256000,
             "input": 0.17774,
             "output": 0.71098,
-            "cache_read": 0.017774,
+            "cache_read": 0.035548,
             "cache_write": 0.22218
           }
         ]
@@ -2163,14 +1865,14 @@
       "price": {
         "input": 0.276,
         "output": 1.101,
-        "cache_read": 0.0276,
+        "cache_read": 0.0552,
         "cache_write": 0.345,
         "tiers": [
           {
             "above": 256000,
             "input": 0.826,
             "output": 3.301,
-            "cache_read": 0.0826,
+            "cache_read": 0.1652,
             "cache_write": 1.0325
           }
         ]
@@ -2222,8 +1924,8 @@
       "price": {
         "input": 0.11875,
         "output": 0.40073,
-        "cache_read": 0.01187,
-        "cache_write": 0.14844
+        "cache_read": 0.014844,
+        "cache_write": 0.185547
       }
     },
     "alibaba/qwen3.8-max": {
@@ -2323,39 +2025,6 @@
         "output": 0.382,
         "cache_read": 0.014
       }
-    },
-    "alibaba/qwq-32b": {
-      "name": "QwQ 32B",
-      "family": "qwen",
-      "released": "2025-03-05",
-      "updated": "2025-03-05",
-      "knowledge": "2024-04",
-      "open_weights": true,
-      "capabilities": {
-        "tools": true,
-        "attachments": false,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 131072,
-        "output": 8192
-      },
-      "reasoning": {},
-      "provider_options": {
-        "id": "qwq-32b",
-        "name": "QwQ 32B"
-      },
-      "price": {
-        "input": 0.287,
-        "output": 0.861
-      },
-      "status": "deprecated"
     },
     "alibaba/qwq-plus": {
       "name": "QwQ Plus",
@@ -3181,7 +2850,9 @@
       },
       "price": {
         "input": 0.574,
-        "output": 3.011
+        "output": 3.011,
+        "cache_read": 0.1148,
+        "cache_write": 0.7175
       },
       "aliases": [
         "kimi/kimi-k2.5"
@@ -3227,7 +2898,9 @@
       },
       "price": {
         "input": 0.929,
-        "output": 3.858
+        "output": 3.858,
+        "cache_read": 0.1858,
+        "cache_write": 1.16125
       }
     },
     "moonshotai/kimi-k3": {
@@ -3359,12 +3032,15 @@
       "price": {
         "input": 0.825,
         "output": 3.301,
-        "cache_read": 0.17,
+        "cache_read": 0.165,
+        "cache_write": 1.03125,
         "tiers": [
           {
             "above": 32000,
             "input": 1.1,
-            "output": 3.851
+            "output": 3.851,
+            "cache_read": 0.22,
+            "cache_write": 1.375
           }
         ]
       }

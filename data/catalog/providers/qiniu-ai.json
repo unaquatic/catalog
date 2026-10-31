@@ -153,36 +153,6 @@
       },
       "status": "deprecated"
     },
-    "alibaba/qwen2.5-vl-7b-instruct": {
-      "name": "Qwen2.5 VL 7B Instruct",
-      "released": "2025-08-05",
-      "updated": "2025-08-05",
-      "open_weights": false,
-      "capabilities": {
-        "tools": true,
-        "attachments": true,
-        "structured_output": false,
-        "temperature": true,
-        "input": [
-          "text",
-          "image",
-          "audio",
-          "video"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 128000,
-        "output": 8192
-      },
-      "provider_options": {
-        "id": "qwen2.5-vl-7b-instruct",
-        "name": "Qwen 2.5 VL 7B Instruct"
-      },
-      "status": "deprecated"
-    },
     "alibaba/qwen3-235b-a22b": {
       "name": "Qwen3 235B A22B",
       "family": "qwen",
@@ -1549,34 +1519,6 @@
       },
       "status": "deprecated"
     },
-    "deepseek/deepseek-v3-0324": {
-      "name": "DeepSeek V3 0324",
-      "family": "deepseek",
-      "released": "2025-03-24",
-      "updated": "2025-03-24",
-      "open_weights": true,
-      "capabilities": {
-        "tools": true,
-        "attachments": false,
-        "structured_output": false,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 128000,
-        "output": 16000
-      },
-      "provider_options": {
-        "id": "deepseek-v3-0324",
-        "name": "DeepSeek-V3-0324"
-      },
-      "status": "deprecated"
-    },
     "deepseek/deepseek-v3.1": {
       "name": "DeepSeek V3.1",
       "family": "deepseek",
@@ -2475,36 +2417,6 @@
       },
       "status": "deprecated"
     },
-    "openai/gpt-oss-120b": {
-      "name": "GPT OSS 120B",
-      "family": "gpt-oss",
-      "released": "2025-08-05",
-      "updated": "2025-08-05",
-      "knowledge": "2024-06",
-      "open_weights": true,
-      "capabilities": {
-        "tools": true,
-        "attachments": false,
-        "structured_output": false,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 128000,
-        "output": 4096
-      },
-      "reasoning": {},
-      "provider_options": {
-        "id": "gpt-oss-120b",
-        "name": "gpt-oss-120b"
-      },
-      "status": "deprecated"
-    },
     "openai/gpt-oss-20b": {
       "name": "GPT OSS 20B",
       "family": "gpt-oss",
@@ -2801,18 +2713,15 @@
       },
       "reasoning": {},
       "provider_options": {
-        "id": "xiaomi/mimo-v2-flash",
-        "name": "Xiaomi/Mimo-V2-Flash"
+        "id": "mimo-v2-flash",
+        "name": "Mimo-V2-Flash"
       },
       "price": {
         "input": 0.1,
         "output": 0.3,
         "cache_read": 0.01
       },
-      "status": "deprecated",
-      "aliases": [
-        "mimo-v2-flash"
-      ]
+      "status": "deprecated"
     },
     "zhipuai/autoglm-phone-9b": {
       "name": "AutoGLM Phone 9B",

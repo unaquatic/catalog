@@ -133,8 +133,7 @@
     ],
     "providers": [
       "nano-gpt",
-      "nvidia",
-      "pioneer"
+      "nvidia"
     ]
   },
   "google/gemini-2.0-flash": {
@@ -349,7 +348,6 @@
       "ofox",
       "openrouter",
       "orcarouter",
-      "perplexity-agent",
       "poe",
       "qihang-ai",
       "qiniu-ai",
@@ -727,7 +725,6 @@
       "ofox",
       "openrouter",
       "orcarouter",
-      "perplexity-agent",
       "poe",
       "qiniu-ai",
       "requesty",
@@ -975,7 +972,6 @@
       "opper",
       "orcarouter",
       "perplexity-agent",
-      "pioneer",
       "poe",
       "prime",
       "qihang-ai",
@@ -1058,7 +1054,6 @@
       "abacus",
       "edenai",
       "fastrouter",
-      "google",
       "kilo",
       "nano-gpt",
       "openrouter",
@@ -1102,7 +1097,6 @@
       "helicone",
       "jiekou",
       "opencode",
-      "poe",
       "qihang-ai",
       "qiniu-ai"
     ]
@@ -1183,7 +1177,6 @@
       "abacus",
       "edenai",
       "fastrouter",
-      "google",
       "kilo",
       "openrouter",
       "vercel"
@@ -1236,7 +1229,6 @@
       "ofox",
       "openrouter",
       "orcarouter",
-      "pioneer",
       "poe",
       "requesty",
       "tempr",
@@ -1322,8 +1314,7 @@
       "neon",
       "openrouter",
       "orcarouter",
-      "vivgrid",
-      "zenmux"
+      "vivgrid"
     ]
   },
   "google/gemini-3.1-flash-live-preview": {
@@ -1445,7 +1436,6 @@
       "opper",
       "orcarouter",
       "perplexity-agent",
-      "pioneer",
       "poe",
       "prime",
       "requesty",
@@ -1553,7 +1543,6 @@
       "openrouter",
       "opper",
       "orcarouter",
-      "pioneer",
       "poe",
       "prime",
       "requesty",
@@ -1613,7 +1602,6 @@
       "openrouter",
       "opper",
       "orcarouter",
-      "pioneer",
       "poe",
       "requesty",
       "standardcompute",
@@ -1762,7 +1750,6 @@
       "openrouter",
       "orcarouter",
       "perplexity-agent",
-      "pioneer",
       "poe",
       "prime",
       "requesty",
@@ -2051,6 +2038,7 @@
       "llmgateway",
       "llmgateway-providers",
       "nano-gpt",
+      "neon",
       "ofox",
       "opencode",
       "opencode-go",
@@ -2728,33 +2716,6 @@
       "openrouter"
     ]
   },
-  "google/gemma-3-4b-pt": {
-    "id": "google/gemma-3-4b-pt",
-    "lab": "google",
-    "name": "Gemma 3 4B Pt",
-    "released": "2025-02-28",
-    "updated": "2025-02-28",
-    "open_weights": false,
-    "reasoning": false,
-    "capabilities": {
-      "tools": true,
-      "attachments": false,
-      "temperature": true,
-      "input": [
-        "text"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 32768,
-      "output": 32768
-    },
-    "providers": [
-      "pioneer"
-    ]
-  },
   "google/gemma-3n-e2b-it": {
     "id": "google/gemma-3n-e2b-it",
     "lab": "google",
@@ -2860,7 +2821,6 @@
     ],
     "providers": [
       "nano-gpt",
-      "pioneer",
       "siliconflow"
     ]
   },
@@ -2889,6 +2849,36 @@
       "context": 131072,
       "input": 131072,
       "output": 32768
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "google/gemma-4-12b-it-starry-ocean": {
+    "id": "google/gemma-4-12b-it-starry-ocean",
+    "lab": "google",
+    "name": "Gemma 4 12B IT Starry Ocean",
+    "family": "gemma",
+    "released": "2026-10-15",
+    "updated": "2026-10-15",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "input": 131072,
+      "output": 131072
     },
     "providers": [
       "nano-gpt"
@@ -3313,6 +3303,96 @@
       "nano-gpt"
     ]
   },
+  "google/gemma-4-31b-agares-v1": {
+    "id": "google/gemma-4-31b-agares-v1",
+    "lab": "google",
+    "name": "Gemma 4 31B Agares V1",
+    "family": "gemma",
+    "released": "2026-05-15",
+    "updated": "2026-05-15",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "input": 262144,
+      "output": 262144
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "google/gemma-4-31b-animus-v14.1": {
+    "id": "google/gemma-4-31b-animus-v14.1",
+    "lab": "google",
+    "name": "Gemma 4 31B Animus V14.1",
+    "family": "gemma",
+    "released": "2026-05-15",
+    "updated": "2026-05-15",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "input": 262144,
+      "output": 262144
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "google/gemma-4-31b-assguard": {
+    "id": "google/gemma-4-31b-assguard",
+    "lab": "google",
+    "name": "Gemma 4 31B AssGuard",
+    "family": "gemma",
+    "released": "2026-05-15",
+    "updated": "2026-05-15",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "input": 262144,
+      "output": 262144
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
   "google/gemma-4-31b-claude-4.6-opus-reasoning-distilled": {
     "id": "google/gemma-4-31b-claude-4.6-opus-reasoning-distilled",
     "lab": "google",
@@ -3373,6 +3453,36 @@
       "nano-gpt"
     ]
   },
+  "google/gemma-4-31b-dark-gemistry": {
+    "id": "google/gemma-4-31b-dark-gemistry",
+    "lab": "google",
+    "name": "Gemma 4 31B Dark Gemistry",
+    "family": "gemma",
+    "released": "2026-05-15",
+    "updated": "2026-05-15",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "input": 262144,
+      "output": 262144
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
   "google/gemma-4-31b-darkidol": {
     "id": "google/gemma-4-31b-darkidol",
     "lab": "google",
@@ -3403,6 +3513,36 @@
       "nano-gpt"
     ]
   },
+  "google/gemma-4-31b-fabled": {
+    "id": "google/gemma-4-31b-fabled",
+    "lab": "google",
+    "name": "Gemma 4 31B Fabled",
+    "family": "gemma",
+    "released": "2026-05-02",
+    "updated": "2026-05-02",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "input": 262144,
+      "output": 262144
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
   "google/gemma-4-31b-garnetv2": {
     "id": "google/gemma-4-31b-garnetv2",
     "lab": "google",
@@ -3428,6 +3568,96 @@
       "context": 262144,
       "input": 262144,
       "output": 16384
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "google/gemma-4-31b-gembrain-uncensored-heretic": {
+    "id": "google/gemma-4-31b-gembrain-uncensored-heretic",
+    "lab": "google",
+    "name": "Gemma 4 31B Gembrain Uncensored Heretic",
+    "family": "gemma",
+    "released": "2026-05-15",
+    "updated": "2026-05-15",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "input": 262144,
+      "output": 262144
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "google/gemma-4-31b-gembrain-x-core": {
+    "id": "google/gemma-4-31b-gembrain-x-core",
+    "lab": "google",
+    "name": "Gemma 4 31B Gembrain X Core",
+    "family": "gemma",
+    "released": "2026-05-15",
+    "updated": "2026-05-15",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "input": 262144,
+      "output": 262144
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "google/gemma-4-31b-isometry-rp": {
+    "id": "google/gemma-4-31b-isometry-rp",
+    "lab": "google",
+    "name": "Gemma 4 31B Isometry RP",
+    "family": "gemma",
+    "released": "2026-05-15",
+    "updated": "2026-05-15",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "input": 262144,
+      "output": 262144
     },
     "providers": [
       "nano-gpt"
@@ -3489,6 +3719,7 @@
       "llmgateway",
       "llmgateway-providers",
       "llmtr",
+      "modular",
       "nano-gpt",
       "neuralwatt",
       "novita-ai",
@@ -3497,7 +3728,6 @@
       "openrouter",
       "opper",
       "orcarouter",
-      "pioneer",
       "poe",
       "regolo-ai",
       "requesty",
@@ -3750,6 +3980,66 @@
       "nano-gpt"
     ]
   },
+  "google/gemma-4-31b-k1-v5": {
+    "id": "google/gemma-4-31b-k1-v5",
+    "lab": "google",
+    "name": "Gemma 4 31B K1 V5",
+    "family": "gemma",
+    "released": "2026-05-02",
+    "updated": "2026-05-02",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "input": 262144,
+      "output": 262144
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "google/gemma-4-31b-meromero": {
+    "id": "google/gemma-4-31b-meromero",
+    "lab": "google",
+    "name": "Gemma 4 31B MeroMero",
+    "family": "gemma",
+    "released": "2026-05-02",
+    "updated": "2026-05-02",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "input": 262144,
+      "output": 262144
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
   "google/gemma-4-31b-meromero-v2": {
     "id": "google/gemma-4-31b-meromero-v2",
     "lab": "google",
@@ -3775,6 +4065,36 @@
       "context": 262144,
       "input": 262144,
       "output": 32768
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "google/gemma-4-31b-novelist": {
+    "id": "google/gemma-4-31b-novelist",
+    "lab": "google",
+    "name": "Gemma 4 31B Novelist",
+    "family": "gemma",
+    "released": "2026-05-15",
+    "updated": "2026-05-15",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "input": 262144,
+      "output": 262144
     },
     "providers": [
       "nano-gpt"
@@ -3810,6 +4130,36 @@
       "nano-gpt"
     ]
   },
+  "google/gemma-4-31b-sdft-heretic-rp": {
+    "id": "google/gemma-4-31b-sdft-heretic-rp",
+    "lab": "google",
+    "name": "Gemma 4 31B SDFT Heretic RP",
+    "family": "gemma",
+    "released": "2026-05-15",
+    "updated": "2026-05-15",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "input": 262144,
+      "output": 262144
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
   "google/gemma-4-31b-splituntied": {
     "id": "google/gemma-4-31b-splituntied",
     "lab": "google",
@@ -3839,30 +4189,31 @@
       "nano-gpt"
     ]
   },
-  "google/gemma-4-dark-thoughts-v2-31b": {
-    "id": "google/gemma-4-dark-thoughts-v2-31b",
+  "google/gemma-4-31b-styletune": {
+    "id": "google/gemma-4-31b-styletune",
     "lab": "google",
-    "name": "Gemma 4 Dark Thoughts V2 31B",
+    "name": "Gemma 4 31B StyleTune",
     "family": "gemma",
-    "released": "2026-10-13",
-    "updated": "2026-10-13",
+    "released": "2026-05-15",
+    "updated": "2026-05-15",
     "open_weights": true,
     "reasoning": true,
     "capabilities": {
-      "tools": false,
-      "attachments": false,
+      "tools": true,
+      "attachments": true,
       "structured_output": false,
       "input": [
-        "text"
+        "text",
+        "image"
       ],
       "output": [
         "text"
       ]
     },
     "limit": {
-      "context": 65536,
-      "input": 65536,
-      "output": 8192
+      "context": 262144,
+      "input": 262144,
+      "output": 262144
     },
     "providers": [
       "nano-gpt"
@@ -3900,9 +4251,7 @@
         "url": "https://huggingface.co/google/gemma-4-E2B-it"
       }
     ],
-    "providers": [
-      "pioneer"
-    ]
+    "providers": []
   },
   "google/gemma-4-e4b-it": {
     "id": "google/gemma-4-e4b-it",
@@ -3938,66 +4287,7 @@
     ],
     "providers": [
       "atomic-chat",
-      "deepinfra",
-      "pioneer"
-    ]
-  },
-  "google/gemma-4-giftige-blume-31b-v2": {
-    "id": "google/gemma-4-giftige-blume-31b-v2",
-    "lab": "google",
-    "name": "Gemma 4 Giftige Blume 31B V2",
-    "family": "gemma",
-    "released": "2026-10-13",
-    "updated": "2026-10-13",
-    "open_weights": true,
-    "reasoning": true,
-    "capabilities": {
-      "tools": false,
-      "attachments": false,
-      "structured_output": false,
-      "input": [
-        "text"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 65536,
-      "input": 65536,
-      "output": 8192
-    },
-    "providers": [
-      "nano-gpt"
-    ]
-  },
-  "google/gemma-4-gutenberg-31b": {
-    "id": "google/gemma-4-gutenberg-31b",
-    "lab": "google",
-    "name": "Gemma 4 Gutenberg 31B",
-    "family": "gemma",
-    "released": "2026-10-13",
-    "updated": "2026-10-13",
-    "open_weights": true,
-    "reasoning": false,
-    "capabilities": {
-      "tools": false,
-      "attachments": false,
-      "structured_output": false,
-      "input": [
-        "text"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 65536,
-      "input": 65536,
-      "output": 8192
-    },
-    "providers": [
-      "nano-gpt"
+      "deepinfra"
     ]
   },
   "google/imagen-3": {
@@ -4438,8 +4728,7 @@
       "output": 0
     },
     "providers": [
-      "fastrouter",
-      "google"
+      "fastrouter"
     ]
   },
   "google/veo-3.1-generate-001": {
@@ -4501,7 +4790,6 @@
     },
     "providers": [
       "fastrouter",
-      "google",
       "poe"
     ]
   },
@@ -4563,8 +4851,7 @@
       "output": 0
     },
     "providers": [
-      "fastrouter",
-      "google"
+      "fastrouter"
     ]
   }
 }

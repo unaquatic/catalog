@@ -615,6 +615,51 @@
         "output": 0
       }
     },
+    "minimax/minimax-m3.1-flash": {
+      "name": "MiniMax M3.1 Flash",
+      "family": "minimax",
+      "released": "2026-10-19",
+      "updated": "2026-10-19",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ]
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "minimaxai/minimax-m3.1-flash",
+        "name": "MiniMax-M3.1-Flash"
+      },
+      "price": {
+        "input": 0,
+        "output": 0
+      }
+    },
     "mistral/magistral-small-2506": {
       "name": "Magistral Small 2506",
       "family": "magistral",
@@ -1796,7 +1841,8 @@
       "price": {
         "input": 0,
         "output": 0
-      }
+      },
+      "status": "deprecated"
     },
     "zhipuai/glm-5.3-flash": {
       "name": "GLM 5.3 Flash",

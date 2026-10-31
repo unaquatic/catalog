@@ -1,0 +1,198 @@
+{
+  "id": "munito-eu",
+  "name": "Munito AI (EU)",
+  "kind": "gateway",
+  "type": "community",
+  "endpoint": {
+    "format": "openai-chat",
+    "api": "https://api.eu.munito.ai/inference/v1",
+    "auth": {
+      "scheme": "bearer"
+    },
+    "env": [
+      "MUNITO_API_KEY"
+    ]
+  },
+  "doc": "https://docs.munito.ai/regions",
+  "models": {
+    "aleph-alpha/kolibri-1": {
+      "name": "Kolibri 1",
+      "released": "2026-10-03",
+      "updated": "2026-10-03",
+      "knowledge": "2026-06-18",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 943718
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "aleph-alpha/kolibri-1",
+        "name": "Kolibri 1"
+      },
+      "price": {
+        "input": 0.16,
+        "output": 0.56,
+        "cache_read": 0.094
+      }
+    },
+    "alibaba/qwen3.8-27b": {
+      "name": "Qwen3.8 27B",
+      "family": "qwen",
+      "released": "2026-08-14",
+      "updated": "2026-08-14",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 235929
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "medium",
+          "xhigh"
+        ]
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "qwen/qwen3.8-27b",
+        "name": "Qwen3.8 27B"
+      },
+      "price": {
+        "input": 0.2,
+        "output": 2.7,
+        "cache_read": 0.11
+      }
+    },
+    "deepseek/deepseek-v4-flash-0731": {
+      "name": "DeepSeek V4 Flash 0731",
+      "family": "deepseek-flash",
+      "released": "2026-07-31",
+      "updated": "2026-07-31",
+      "knowledge": "2025-05",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 943718
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "high",
+          "max"
+        ]
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "deepseek-ai/deepseek-v4-flash",
+        "name": "DeepSeek V4 Flash 0731"
+      },
+      "price": {
+        "input": 0.11,
+        "output": 0.28,
+        "cache_read": 0.022
+      }
+    },
+    "zhipuai/glm-5.3-flash": {
+      "name": "GLM 5.3 Flash",
+      "family": "glm-flash",
+      "released": "2026-08-26",
+      "updated": "2026-08-26",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 943718
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "high",
+          "max"
+        ]
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "zai-org/glm-5.3-flash",
+        "name": "GLM-5.3-Flash"
+      },
+      "price": {
+        "input": 0.15,
+        "output": 0.5,
+        "cache_read": 0.03
+      }
+    }
+  }
+}

@@ -9,11 +9,10 @@
     "reasoning": false,
     "capabilities": {
       "tools": false,
-      "attachments": true,
+      "attachments": false,
       "structured_output": false,
       "input": [
-        "text",
-        "pdf"
+        "text"
       ],
       "output": [
         "text"

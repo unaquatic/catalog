@@ -107,50 +107,6 @@
         "cache_read": 0.2
       }
     },
-    "deepseek/deepseek-v4-flash": {
-      "name": "DeepSeek V4 Flash",
-      "family": "deepseek-flash",
-      "released": "2026-04-24",
-      "updated": "2026-04-24",
-      "knowledge": "2025-05",
-      "open_weights": true,
-      "capabilities": {
-        "tools": true,
-        "attachments": false,
-        "structured_output": true,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 1048576,
-        "output": 384000
-      },
-      "reasoning": {
-        "mandatory": false,
-        "efforts": [
-          "none",
-          "high",
-          "max"
-        ]
-      },
-      "interleaved": {
-        "field": "reasoning_content"
-      },
-      "provider_options": {
-        "id": "deepseek-ai/deepseek-v4-flash",
-        "name": "DeepSeek V4 Flash"
-      },
-      "price": {
-        "input": 0.15,
-        "output": 0.25,
-        "cache_read": 0.08
-      }
-    },
     "deepseek/deepseek-v4-pro": {
       "name": "DeepSeek V4 Pro",
       "family": "deepseek-thinking",
@@ -224,7 +180,9 @@
         "mandatory": false,
         "efforts": [
           "none",
+          "low",
           "high",
+          "xhigh",
           "max"
         ]
       },
@@ -234,6 +192,54 @@
       "provider_options": {
         "id": "deepseek-ai/deepseek-v4.1-flash",
         "name": "DeepSeek V4.1 Flash"
+      },
+      "price": {
+        "input": 0.3,
+        "output": 0.6,
+        "cache_read": 0.02
+      }
+    },
+    "deepseek/deepseek-v4.1-flash-1017": {
+      "name": "DeepSeek V4.1 Flash 1017",
+      "family": "deepseek-flash",
+      "released": "2026-10-17",
+      "updated": "2026-10-17",
+      "knowledge": "2025-05",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 384000
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "high",
+          "xhigh",
+          "max"
+        ]
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "deepseek-ai/deepseek-v4.1-flash-1017",
+        "name": "DeepSeek V4.1 Flash 1017"
       },
       "price": {
         "input": 0.3,
@@ -287,47 +293,50 @@
         "cache_read": 0.05
       }
     },
-    "moonshotai/kimi-k2.7-code": {
-      "name": "Kimi K2.7 Code",
-      "family": "kimi-k2",
-      "released": "2026-06-12",
-      "updated": "2026-06-12",
-      "knowledge": "2025-01",
+    "meta/muse-spark-open": {
+      "name": "Muse Spark Open",
+      "family": "muse",
+      "released": "2026-10-15",
+      "updated": "2026-10-15",
+      "knowledge": "2026-01-04",
       "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": true,
-        "structured_output": true,
+        "structured_output": false,
         "temperature": true,
         "input": [
           "text",
           "image",
-          "pdf"
+          "video"
         ],
         "output": [
           "text"
         ]
       },
       "limit": {
-        "context": 262144,
-        "output": 262144
+        "context": 1048576,
+        "output": 943718
       },
       "reasoning": {
         "efforts": [
-          "high"
+          "low",
+          "medium",
+          "high",
+          "xhigh"
         ]
       },
       "interleaved": {
         "field": "reasoning_content"
       },
       "provider_options": {
-        "id": "moonshotai/kimi-k2.7-code",
-        "name": "Kimi K2.7 Code"
+        "id": "meta/muse-spark-open",
+        "name": "Muse Spark Open"
       },
       "price": {
-        "input": 0.75,
-        "output": 3.5,
-        "cache_read": 0.2
+        "input": 1.25,
+        "output": 4.25,
+        "cache_read": 0.15
       }
     },
     "moonshotai/kimi-k3": {
@@ -457,49 +466,6 @@
         "input": 0.15,
         "output": 0.6,
         "cache_read": 0.08
-      }
-    },
-    "zhipuai/glm-5.2": {
-      "name": "GLM 5.2",
-      "family": "glm",
-      "released": "2026-06-13",
-      "updated": "2026-06-13",
-      "open_weights": true,
-      "capabilities": {
-        "tools": true,
-        "attachments": false,
-        "structured_output": true,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 1048576,
-        "output": 131072
-      },
-      "reasoning": {
-        "mandatory": false,
-        "efforts": [
-          "none",
-          "high",
-          "max"
-        ]
-      },
-      "interleaved": {
-        "field": "reasoning_content"
-      },
-      "provider_options": {
-        "id": "zai-org/glm-5.2",
-        "name": "GLM-5.2"
-      },
-      "price": {
-        "input": 1,
-        "output": 4,
-        "cache_read": 0.3
       }
     },
     "zhipuai/glm-5.3": {

@@ -227,34 +227,6 @@
       "nano-gpt"
     ]
   },
-  "thedrummer/orion-26b-a4b-v1.1": {
-    "id": "thedrummer/orion-26b-a4b-v1.1",
-    "lab": "thedrummer",
-    "name": "Orion 26B A4B V1.1",
-    "released": "2026-10-16",
-    "updated": "2026-10-16",
-    "open_weights": true,
-    "reasoning": true,
-    "capabilities": {
-      "tools": false,
-      "attachments": false,
-      "structured_output": false,
-      "input": [
-        "text"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 65536,
-      "input": 65536,
-      "output": 8192
-    },
-    "providers": [
-      "nano-gpt"
-    ]
-  },
   "thedrummer/rocinante-12b-v1.1": {
     "id": "thedrummer/rocinante-12b-v1.1",
     "lab": "thedrummer",
@@ -278,34 +250,6 @@
       "context": 16384,
       "input": 16384,
       "output": 8192
-    },
-    "providers": [
-      "nano-gpt"
-    ]
-  },
-  "thedrummer/skyfall-31b-v4.2": {
-    "id": "thedrummer/skyfall-31b-v4.2",
-    "lab": "thedrummer",
-    "name": "Skyfall 31B V4.2",
-    "released": "2026-10-12",
-    "updated": "2026-10-12",
-    "open_weights": true,
-    "reasoning": false,
-    "capabilities": {
-      "tools": false,
-      "attachments": false,
-      "structured_output": false,
-      "input": [
-        "text"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 16384,
-      "input": 16384,
-      "output": 4096
     },
     "providers": [
       "nano-gpt"

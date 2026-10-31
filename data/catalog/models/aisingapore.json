@@ -35,5 +35,34 @@
       "edenai",
       "nano-gpt"
     ]
+  },
+  "aisingapore/qwen-sea-lion-v4-32b-it": {
+    "id": "aisingapore/qwen-sea-lion-v4-32b-it",
+    "lab": "aisingapore",
+    "name": "Qwen SEA LION V4 32B IT",
+    "family": "qwen",
+    "released": "2026-10-15",
+    "updated": "2026-10-15",
+    "open_weights": true,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "structured_output": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 131072,
+      "input": 131072,
+      "output": 131072
+    },
+    "providers": [
+      "nano-gpt"
+    ]
   }
 }

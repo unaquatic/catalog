@@ -348,13 +348,10 @@
       "google-vertex",
       "helicone",
       "jiekou",
-      "llmgateway",
-      "llmgateway-providers",
       "ofox",
       "perplexity-agent",
       "poe",
-      "qiniu-ai",
-      "vercel"
+      "qiniu-ai"
     ]
   },
   "xai/grok-4.1-fast-reasoning": {
@@ -393,8 +390,7 @@
       "llmgateway",
       "llmgateway-providers",
       "poe",
-      "qiniu-ai",
-      "vercel"
+      "qiniu-ai"
     ]
   },
   "xai/grok-4.20": {
@@ -765,7 +761,6 @@
       "opper",
       "orcarouter",
       "perplexity-agent",
-      "pioneer",
       "requesty",
       "tempr",
       "vercel",

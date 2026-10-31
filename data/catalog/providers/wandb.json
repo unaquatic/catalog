@@ -46,9 +46,9 @@
         "name": "Qwen3.6 35B A3B"
       },
       "price": {
-        "input": 0.25,
-        "output": 1.25,
-        "cache_read": 0.25
+        "input": 0.1,
+        "output": 0.95,
+        "cache_read": 0.05
       }
     },
     "alibaba/qwen3.8-27b": {
@@ -222,7 +222,7 @@
         "name": "DeepSeek V4.1 Flash"
       },
       "price": {
-        "input": 0.15,
+        "input": 0.13,
         "output": 0.65,
         "cache_read": 0.002
       }
@@ -330,9 +330,9 @@
         "name": "Granite 4.2 8B"
       },
       "price": {
-        "input": 0.1,
+        "input": 0.06,
         "output": 0.15,
-        "cache_read": 0.05
+        "cache_read": 0.015
       }
     },
     "meta/llama-3.1-8b-instruct": {
@@ -500,9 +500,9 @@
         "name": "Kimi K2.7 Code"
       },
       "price": {
-        "input": 0.71,
-        "output": 3.5,
-        "cache_read": 0.15
+        "input": 0.6,
+        "output": 3,
+        "cache_read": 0.12
       }
     },
     "nvidia/nemotron-3-ultra-550b-a55b": {
@@ -827,8 +827,8 @@
         "name": "GLM 5.3 Flash"
       },
       "price": {
-        "input": 0.15,
-        "output": 0.5,
+        "input": 0.12,
+        "output": 0.38,
         "cache_read": 0.02
       }
     }

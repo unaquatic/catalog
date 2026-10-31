@@ -199,10 +199,11 @@
         "name": "Qwen3 235B-A22B Instruct 2507 (Greenpt)"
       },
       "price": {
-        "input": 1.01106,
-        "output": 3.03318
+        "input": 1.00548,
+        "output": 3.01644
       },
       "aliases": [
+        "arkanecloud/Qwen/Qwen3-235B-A22B-Instruct-2507",
         "deepinfra/Qwen/Qwen3-235B-A22B-Instruct-2507",
         "nebius/Qwen/Qwen3-235B-A22B-Instruct-2507",
         "scaleway/qwen3-235b-a22b-instruct-2507"
@@ -399,8 +400,8 @@
         "name": "Qwen3 Coder Next (IONOS)"
       },
       "price": {
-        "input": 0.16851,
-        "output": 0.89872
+        "input": 0.16758,
+        "output": 0.89376
       },
       "aliases": [
         "amazon/qwen.qwen3-coder-next"
@@ -2053,6 +2054,7 @@
         "cache_read": 0.022
       },
       "aliases": [
+        "arkanecloud/deepseek-ai/DeepSeek-V4-Flash-0731",
         "cloudflare/@cf/deepseek-ai/deepseek-v4-flash-0731",
         "databricks/databricks-deepseek-v4-flash-0731",
         "deepinfra/deepseek-ai/DeepSeek-V4-Flash-0731",
@@ -2062,8 +2064,7 @@
         "nebius/deepseek-ai/DeepSeek-V4-Flash-0731",
         "scaleway/deepseek-v4-flash-0731",
         "sference/deepseek-ai/DeepSeek-V4-Flash-0731",
-        "tensorx/deepseek/deepseek-v4-flash-0731",
-        "together_ai/deepseek-ai/DeepSeek-V4-Flash-0731"
+        "tensorx/deepseek/deepseek-v4-flash-0731"
       ]
     },
     "deepseek/deepseek-v4-flash-vision-exp": {
@@ -2195,7 +2196,6 @@
       },
       "aliases": [
         "cloudflare/@cf/deepseek-ai/deepseek-v4-pro-0813",
-        "databricks/databricks-deepseek-v4-pro-0813",
         "deepinfra/deepseek-ai/DeepSeek-V4-Pro-0813",
         "nebius/deepseek-ai/DeepSeek-V4-Pro-0813",
         "tencent/deepseek-v4-pro-0813",
@@ -2246,9 +2246,8 @@
         "cache_read": 0.015
       },
       "aliases": [
+        "arkanecloud/deepseek-ai/DeepSeek-V4.1-Flash",
         "deepinfra/deepseek-ai/DeepSeek-V4.1-Flash",
-        "flexai/DeepSeek-V4.1-Flash",
-        "greenference/deepseek-v4.1-flash",
         "greenpt/deepseek-v4.1-flash",
         "nebius/deepseek-ai/DeepSeek-V4.1-Flash",
         "scaleway/deepseek-v4.1-flash",
@@ -2300,9 +2299,14 @@
         "cache_read": 0.015
       },
       "aliases": [
+        "arkanecloud/deepseek-ai/DeepSeek-V4.1-Flash-1017",
         "cloudflare/@cf/deepseek-ai/deepseek-v4.1-flash-1017",
         "deepinfra/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+        "flexai/DeepSeek-V4.1-Flash-1017",
+        "nebius/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+        "scaleway/deepseek-v4.1-flash-1017",
         "sference/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+        "tencent/deepseek-v4.1-flash-1017",
         "tensorx/deepseek/deepseek-v4.1-flash-1017",
         "together_ai/deepseek-ai/DeepSeek-V4.1-Flash-1017"
       ]
@@ -2669,7 +2673,9 @@
         "output": 65536
       },
       "reasoning": {
+        "mandatory": false,
         "efforts": [
+          "none",
           "minimal",
           "high"
         ]
@@ -3468,7 +3474,7 @@
       "updated": "2023-08-10",
       "open_weights": true,
       "capabilities": {
-        "tools": false,
+        "tools": true,
         "attachments": false,
         "structured_output": true,
         "temperature": true,
@@ -3530,6 +3536,72 @@
         "input": 0.06,
         "output": 0.25,
         "cache_read": 0.015
+      }
+    },
+    "meta/llama-3.1-70b-instruct": {
+      "name": "Llama 3.1 70B Instruct",
+      "family": "llama",
+      "released": "2024-07-23",
+      "updated": "2024-07-23",
+      "knowledge": "2023-12",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 131072,
+        "output": 4096
+      },
+      "provider_options": {
+        "id": "arkanecloud/meta-llama/Llama-3.1-70B-Instruct",
+        "name": "Llama-3.1-70B-Instruct (Arkanecloud)"
+      },
+      "price": {
+        "input": 0.8,
+        "output": 0.8,
+        "cache_read": 0.16
+      }
+    },
+    "meta/llama-3.1-8b-instruct": {
+      "name": "Llama 3.1 8B Instruct",
+      "family": "llama",
+      "released": "2024-07-23",
+      "updated": "2024-07-23",
+      "knowledge": "2023-12",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 131072,
+        "output": 4096
+      },
+      "provider_options": {
+        "id": "arkanecloud/meta-llama/Llama-3.1-8B-Instruct",
+        "name": "Llama-3.1-8B-Instruct (Arkanecloud)"
+      },
+      "price": {
+        "input": 0.15,
+        "output": 0.15,
+        "cache_read": 0.03
       }
     },
     "meta/llama-3.2-11b-vision-instruct": {
@@ -3660,10 +3732,11 @@
         "name": "Llama-3.3-70B-Instruct (Greenpt)"
       },
       "price": {
-        "input": 1.23574,
-        "output": 1.23574
+        "input": 1.22892,
+        "output": 1.22892
       },
       "aliases": [
+        "arkanecloud/meta-llama/Llama-3.3-70B-Instruct",
         "deepinfra/meta-llama/Llama-3.3-70B-Instruct",
         "ionos/meta-llama/Llama-3.3-70B-Instruct",
         "scaleway/llama-3.3-70b-instruct"
@@ -4268,19 +4341,21 @@
       "updated": "2026-10-19",
       "open_weights": false,
       "capabilities": {
-        "tools": false,
-        "attachments": false,
+        "tools": true,
+        "attachments": true,
         "structured_output": false,
         "temperature": true,
         "input": [
-          "text"
+          "text",
+          "image",
+          "video"
         ],
         "output": [
           "text"
         ]
       },
       "limit": {
-        "context": 1000000,
+        "context": 1048576,
         "output": 512000
       },
       "reasoning": {
@@ -4333,7 +4408,10 @@
         "input": 0.3,
         "output": 0.9,
         "cache_read": 0.03
-      }
+      },
+      "aliases": [
+        "mistral/codestral-2508@eu"
+      ]
     },
     "mistral/codestral-latest": {
       "name": "Codestral Latest",
@@ -4366,7 +4444,10 @@
         "input": 0.3,
         "output": 0.9,
         "cache_read": 0.03
-      }
+      },
+      "aliases": [
+        "mistral/codestral-latest@eu"
+      ]
     },
     "mistral/devstral-2512": {
       "name": "Devstral 2512",
@@ -4400,7 +4481,10 @@
         "input": 0.4,
         "output": 2,
         "cache_read": 0.04
-      }
+      },
+      "aliases": [
+        "mistral/devstral-2512@eu"
+      ]
     },
     "mistral/devstral-medium-latest": {
       "name": "Devstral Medium Latest",
@@ -4432,7 +4516,10 @@
       "price": {
         "input": 0.4,
         "output": 2
-      }
+      },
+      "aliases": [
+        "mistral/devstral-medium-latest@eu"
+      ]
     },
     "mistral/magistral-medium-latest": {
       "name": "Magistral Medium Latest",
@@ -4473,6 +4560,42 @@
         "input": 1.5,
         "output": 7.5,
         "cache_read": 0.15
+      },
+      "aliases": [
+        "mistral/magistral-medium-latest@eu"
+      ]
+    },
+    "mistral/ministral-14b": {
+      "name": "Ministral 14B",
+      "family": "ministral",
+      "released": "2025-12-02",
+      "updated": "2025-12-02",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": false,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 32768,
+        "output": 262144
+      },
+      "provider_options": {
+        "id": "arkanecloud/ministral-14b",
+        "name": "Ministral 14B (Arkanecloud)"
+      },
+      "price": {
+        "input": 0.15,
+        "output": 0.15,
+        "cache_read": 0.15
       }
     },
     "mistral/ministral-14b-2512": {
@@ -4506,7 +4629,10 @@
         "input": 0.2,
         "output": 0.2,
         "cache_read": 0.02
-      }
+      },
+      "aliases": [
+        "mistral/ministral-14b-2512@eu"
+      ]
     },
     "mistral/ministral-3-14b-instruct-2512": {
       "name": "Ministral 3 14B Instruct 2512",
@@ -4536,8 +4662,8 @@
         "name": "Ministral 3 14B (Infomaniak)"
       },
       "price": {
-        "input": 0.33702,
-        "output": 0.44936
+        "input": 0.33516,
+        "output": 0.44688
       }
     },
     "mistral/ministral-3b-2512": {
@@ -4571,7 +4697,10 @@
         "input": 0.1,
         "output": 0.1,
         "cache_read": 0.01
-      }
+      },
+      "aliases": [
+        "mistral/ministral-3b-2512@eu"
+      ]
     },
     "mistral/ministral-8b-2512": {
       "name": "Ministral 8B 2512",
@@ -4604,7 +4733,10 @@
         "input": 0.15,
         "output": 0.15,
         "cache_read": 0.015
-      }
+      },
+      "aliases": [
+        "mistral/ministral-8b-2512@eu"
+      ]
     },
     "mistral/mistral-large-2407": {
       "name": "Mistral Large 2407",
@@ -4638,7 +4770,10 @@
         "input": 2,
         "output": 6,
         "cache_read": 0.2
-      }
+      },
+      "aliases": [
+        "mistral/mistral-large-2407@eu"
+      ]
     },
     "mistral/mistral-large-2512": {
       "name": "Mistral Large 2512",
@@ -4673,6 +4808,50 @@
         "input": 0.5,
         "output": 1.5,
         "cache_read": 0.05
+      },
+      "aliases": [
+        "mistral/mistral-large-2512@eu"
+      ]
+    },
+    "mistral/mistral-large-4": {
+      "name": "Mistral Large 4",
+      "family": "mistral-large",
+      "released": "2026-10-06",
+      "updated": "2026-10-06",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 524288,
+        "output": 262144
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "mistral/mistral-large-4@eu",
+        "name": "Mistral Large 4 (EU)"
+      },
+      "price": {
+        "input": 0.748,
+        "output": 2.299,
+        "cache_read": 0.077
       }
     },
     "mistral/mistral-large-latest": {
@@ -4708,7 +4887,10 @@
         "input": 2,
         "output": 6,
         "cache_read": 0.2
-      }
+      },
+      "aliases": [
+        "mistral/mistral-large-latest@eu"
+      ]
     },
     "mistral/mistral-medium-2505": {
       "name": "Mistral Medium 2505",
@@ -4741,7 +4923,10 @@
       "price": {
         "input": 0.4,
         "output": 2
-      }
+      },
+      "aliases": [
+        "mistral/mistral-medium-2505@eu"
+      ]
     },
     "mistral/mistral-medium-2604": {
       "name": "Mistral Medium 2604",
@@ -4781,7 +4966,10 @@
         "input": 1.5,
         "output": 7.5,
         "cache_read": 0.15
-      }
+      },
+      "aliases": [
+        "mistral/mistral-medium-2604@eu"
+      ]
     },
     "mistral/mistral-medium-3": {
       "name": "Mistral Medium 3",
@@ -4816,7 +5004,10 @@
         "input": 0.4,
         "output": 2,
         "cache_read": 0.04
-      }
+      },
+      "aliases": [
+        "mistral/mistral-medium-3@eu"
+      ]
     },
     "mistral/mistral-medium-3-5": {
       "name": "Mistral Medium 3.5",
@@ -4857,7 +5048,10 @@
         "input": 1.5,
         "output": 7.5,
         "cache_read": 0.15
-      }
+      },
+      "aliases": [
+        "mistral/mistral-medium-3-5@eu"
+      ]
     },
     "mistral/mistral-medium-latest": {
       "name": "Mistral Medium Latest",
@@ -4897,7 +5091,10 @@
         "input": 1.5,
         "output": 7.5,
         "cache_read": 0.15
-      }
+      },
+      "aliases": [
+        "mistral/mistral-medium-latest@eu"
+      ]
     },
     "mistral/mistral-small-24b-instruct-2501": {
       "name": "Mistral Small 24B Instruct 2501",
@@ -4970,7 +5167,10 @@
         "input": 0.15,
         "output": 0.6,
         "cache_read": 0.015
-      }
+      },
+      "aliases": [
+        "mistral/mistral-small-2603@eu"
+      ]
     },
     "mistral/mistral-small-3.1-24b-instruct": {
       "name": "Mistral Small 3.1 24B Instruct",
@@ -5044,7 +5244,10 @@
         "input": 0.15,
         "output": 0.6,
         "cache_read": 0.015
-      }
+      },
+      "aliases": [
+        "mistral/mistral-small-latest@eu"
+      ]
     },
     "mistral/mixtral-8x7b-instruct-v0.1": {
       "name": "Mixtral 8x7B Instruct V0.1",
@@ -5213,7 +5416,10 @@
         "input": 0.1,
         "output": 0.4,
         "cache_read": 0.01
-      }
+      },
+      "aliases": [
+        "mistral/voxtral-small-latest@eu"
+      ]
     },
     "moonshotai/kimi-k2-instruct": {
       "name": "Kimi K2 Instruct",
@@ -5464,7 +5670,50 @@
       "price": {
         "input": 3,
         "output": 15,
-        "cache_read": 0.3
+        "cache_read": 0.3,
+        "cache_write": 3
+      }
+    },
+    "moonshotai/kimi-k3.1-pro": {
+      "name": "Kimi K3.1 Pro",
+      "family": "kimi-k3",
+      "released": "2026-10-23",
+      "updated": "2026-10-23",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "high",
+          "max"
+        ]
+      },
+      "provider_options": {
+        "id": "moonshot/kimi-k3.1-pro",
+        "name": "Kimi K3.1 Pro"
+      },
+      "price": {
+        "input": 2,
+        "output": 10,
+        "cache_read": 0.2,
+        "cache_write": 2
       }
     },
     "nousresearch/hermes-3-llama-3.1-405b": {
@@ -5636,6 +5885,7 @@
         "output": 0.4
       },
       "aliases": [
+        "arkanecloud/nvidia/nemotron-3-super-120b-a12b",
         "nebius/nvidia/nemotron-3-super-120b-a12b"
       ]
     },
@@ -5680,40 +5930,9 @@
         "cache_read": 0.1
       },
       "aliases": [
+        "arkanecloud/nvidia/nemotron-3-ultra-550b-a55b",
         "nebius/nvidia/Nemotron-3-Ultra-550b-a55b"
       ]
-    },
-    "openai/gpt-3.5-turbo": {
-      "name": "GPT-3.5 Turbo",
-      "family": "gpt",
-      "released": "2023-03-01",
-      "updated": "2023-11-06",
-      "knowledge": "2021-09-01",
-      "open_weights": false,
-      "capabilities": {
-        "tools": true,
-        "attachments": false,
-        "structured_output": true,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 16385,
-        "output": 4096
-      },
-      "provider_options": {
-        "id": "openai/gpt-3.5-turbo",
-        "name": "GPT-3.5-turbo"
-      },
-      "price": {
-        "input": 0.5,
-        "output": 1.5
-      }
     },
     "openai/gpt-4": {
       "name": "GPT-4",
@@ -5739,46 +5958,12 @@
         "output": 8192
       },
       "provider_options": {
-        "id": "openai/gpt-4",
-        "name": "GPT-4"
+        "id": "microsoft/gpt-4",
+        "name": "GPT-4 (Microsoft)"
       },
       "price": {
         "input": 30,
         "output": 60
-      }
-    },
-    "openai/gpt-4-turbo": {
-      "name": "GPT-4 Turbo",
-      "family": "gpt",
-      "released": "2023-11-06",
-      "updated": "2024-04-09",
-      "knowledge": "2023-12",
-      "open_weights": false,
-      "capabilities": {
-        "tools": true,
-        "attachments": true,
-        "structured_output": true,
-        "temperature": true,
-        "input": [
-          "text",
-          "image",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 128000,
-        "output": 4096
-      },
-      "provider_options": {
-        "id": "openai/gpt-4-turbo",
-        "name": "GPT-4 Turbo"
-      },
-      "price": {
-        "input": 10,
-        "output": 30
       }
     },
     "openai/gpt-4.1": {
@@ -5864,8 +6049,8 @@
         "structured_output": true,
         "temperature": true,
         "input": [
-          "image",
           "text",
+          "image",
           "pdf"
         ],
         "output": [
@@ -5877,14 +6062,17 @@
         "output": 32768
       },
       "provider_options": {
-        "id": "openai/gpt-4.1-nano",
-        "name": "GPT-4.1 nano"
+        "id": "azure/gpt-4.1-nano",
+        "name": "GPT-4.1 nano (Azure)"
       },
       "price": {
         "input": 0.1,
         "output": 0.4,
         "cache_read": 0.025
-      }
+      },
+      "aliases": [
+        "azure/gpt-4.1-nano@eu"
+      ]
     },
     "openai/gpt-4o": {
       "name": "GPT-4o",
@@ -7284,6 +7472,63 @@
         ]
       }
     },
+    "openai/gpt-6.1-terra": {
+      "name": "GPT-6.1 Terra",
+      "family": "gpt-terra",
+      "released": "2026-10-26",
+      "updated": "2026-10-26",
+      "knowledge": "2026-06-01",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1050000,
+        "input": 922000,
+        "output": 128000
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ]
+      },
+      "provider_options": {
+        "id": "openai/gpt-6.1-terra",
+        "name": "GPT-6.1 Terra"
+      },
+      "price": {
+        "input": 1,
+        "output": 5,
+        "cache_read": 0.05,
+        "cache_write": 1.25,
+        "tiers": [
+          {
+            "above": 272000,
+            "input": 2,
+            "output": 7.5,
+            "cache_read": 0.1,
+            "cache_write": 2.5
+          }
+        ]
+      }
+    },
     "openai/gpt-oss-120b": {
       "name": "GPT OSS 120B",
       "family": "gpt-oss",
@@ -7324,6 +7569,7 @@
         "cache_read": 0.0075
       },
       "aliases": [
+        "arkanecloud/openai/gpt-oss-120b",
         "cerebras/gpt-oss-120b",
         "cloudflare/@cf/openai/gpt-oss-120b",
         "databricks/databricks-gpt-oss-120b",
@@ -7380,6 +7626,7 @@
         "cache_read": 0.003
       },
       "aliases": [
+        "arkanecloud/openai/gpt-oss-20b",
         "cloudflare/@cf/openai/gpt-oss-20b",
         "databricks/databricks-gpt-oss-20b",
         "databricks/databricks-gpt-oss-20b@eu",
@@ -7432,89 +7679,6 @@
         "amazon/openai.gpt-oss-safeguard-20b@us"
       ]
     },
-    "openai/o1": {
-      "name": "o1",
-      "family": "o",
-      "released": "2024-12-05",
-      "updated": "2024-12-05",
-      "knowledge": "2023-09",
-      "open_weights": false,
-      "capabilities": {
-        "tools": true,
-        "attachments": true,
-        "structured_output": true,
-        "temperature": false,
-        "input": [
-          "text",
-          "image",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 200000,
-        "output": 100000
-      },
-      "reasoning": {
-        "efforts": [
-          "low",
-          "medium",
-          "high"
-        ]
-      },
-      "provider_options": {
-        "id": "openai/o1",
-        "name": "o1"
-      },
-      "price": {
-        "input": 15,
-        "output": 60,
-        "cache_read": 7.5
-      }
-    },
-    "openai/o1-pro": {
-      "name": "o1 Pro",
-      "family": "o-pro",
-      "released": "2025-03-19",
-      "updated": "2025-03-19",
-      "knowledge": "2023-09",
-      "open_weights": false,
-      "capabilities": {
-        "tools": true,
-        "attachments": true,
-        "structured_output": true,
-        "temperature": false,
-        "input": [
-          "text",
-          "image",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 200000,
-        "output": 100000
-      },
-      "reasoning": {
-        "efforts": [
-          "low",
-          "medium",
-          "high"
-        ]
-      },
-      "provider_options": {
-        "id": "openai/o1-pro",
-        "name": "o1-pro"
-      },
-      "price": {
-        "input": 150,
-        "output": 600
-      }
-    },
     "openai/o3": {
       "name": "o3",
       "family": "o",
@@ -7565,13 +7729,12 @@
       "knowledge": "2024-05",
       "open_weights": false,
       "capabilities": {
-        "tools": true,
-        "attachments": true,
+        "tools": false,
+        "attachments": false,
         "structured_output": true,
         "temperature": false,
         "input": [
-          "text",
-          "pdf"
+          "text"
         ],
         "output": [
           "text"
@@ -7589,8 +7752,8 @@
         ]
       },
       "provider_options": {
-        "id": "openai/o3-mini",
-        "name": "o3-mini"
+        "id": "microsoft/o3-mini",
+        "name": "o3-mini (Microsoft)"
       },
       "price": {
         "input": 1.1,
@@ -7637,48 +7800,6 @@
       "price": {
         "input": 20,
         "output": 80
-      }
-    },
-    "openai/o4-mini": {
-      "name": "o4 Mini",
-      "family": "o-mini",
-      "released": "2025-04-16",
-      "updated": "2025-04-16",
-      "knowledge": "2024-05",
-      "open_weights": false,
-      "capabilities": {
-        "tools": true,
-        "attachments": true,
-        "structured_output": true,
-        "temperature": false,
-        "input": [
-          "image",
-          "text",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 200000,
-        "output": 100000
-      },
-      "reasoning": {
-        "efforts": [
-          "low",
-          "medium",
-          "high"
-        ]
-      },
-      "provider_options": {
-        "id": "openai/o4-mini",
-        "name": "o4-mini"
-      },
-      "price": {
-        "input": 1.1,
-        "output": 4.4,
-        "cache_read": 0.275
       }
     },
     "perplexity/sonar": {
@@ -8130,7 +8251,6 @@
         "cache_read": 0.16
       },
       "aliases": [
-        "databricks/databricks-inkling",
         "fireworks_ai/accounts/fireworks/models/inkling",
         "together_ai/thinkingmachines/Inkling"
       ]

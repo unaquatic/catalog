@@ -36,7 +36,7 @@
         ]
       },
       "limit": {
-        "context": 256000,
+        "context": 258048,
         "output": 64000
       },
       "reasoning": {
@@ -50,7 +50,7 @@
         ],
         "budget": {
           "min": 1,
-          "max": 80000
+          "max": 81920
         }
       },
       "provider_options": {
@@ -92,7 +92,7 @@
         ]
       },
       "limit": {
-        "context": 256000,
+        "context": 258048,
         "output": 64000
       },
       "reasoning": {
@@ -106,7 +106,7 @@
         ],
         "budget": {
           "min": 1,
-          "max": 80000
+          "max": 81920
         }
       },
       "provider_options": {
@@ -148,7 +148,7 @@
         ]
       },
       "limit": {
-        "context": 256000,
+        "context": 258048,
         "output": 64000
       },
       "reasoning": {
@@ -162,7 +162,7 @@
         ],
         "budget": {
           "min": 1,
-          "max": 80000
+          "max": 81920
         }
       },
       "provider_options": {
@@ -204,7 +204,7 @@
         ]
       },
       "limit": {
-        "context": 256000,
+        "context": 258048,
         "output": 64000
       },
       "reasoning": {
@@ -218,7 +218,7 @@
         ],
         "budget": {
           "min": 1,
-          "max": 80000
+          "max": 81920
         }
       },
       "provider_options": {
@@ -357,7 +357,7 @@
         ]
       },
       "limit": {
-        "context": 1000000,
+        "context": 995904,
         "output": 32768
       },
       "reasoning": {
@@ -399,7 +399,7 @@
         ]
       },
       "limit": {
-        "context": 1000000,
+        "context": 983616,
         "output": 65536
       },
       "reasoning": {
@@ -449,7 +449,7 @@
         ]
       },
       "limit": {
-        "context": 256000,
+        "context": 229376,
         "output": 64000
       },
       "reasoning": {
@@ -463,7 +463,7 @@
         ],
         "budget": {
           "min": 1,
-          "max": 80000
+          "max": 131072
         }
       },
       "provider_options": {
@@ -596,11 +596,22 @@
         ]
       },
       "limit": {
-        "context": 1000000,
+        "context": 983616,
         "output": 65536
       },
       "reasoning": {
-        "mandatory": false
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "medium",
+          "high",
+          "max"
+        ],
+        "budget": {
+          "min": 1,
+          "max": 131072
+        }
       },
       "provider_options": {
         "id": "qwen3-6-plus",
@@ -641,7 +652,7 @@
         ]
       },
       "limit": {
-        "context": 1000000,
+        "context": 983616,
         "input": 991808,
         "output": 65536
       },
@@ -702,7 +713,7 @@
         ]
       },
       "limit": {
-        "context": 1000000,
+        "context": 983616,
         "output": 65536
       },
       "reasoning": {
@@ -716,7 +727,7 @@
         ],
         "budget": {
           "min": 1,
-          "max": 64000
+          "max": 262144
         }
       },
       "provider_options": {
@@ -751,7 +762,7 @@
         ]
       },
       "limit": {
-        "context": 1000000,
+        "context": 983616,
         "output": 65536
       },
       "reasoning": {
@@ -765,7 +776,7 @@
         ],
         "budget": {
           "min": 1,
-          "max": 256000
+          "max": 262144
         }
       },
       "provider_options": {
@@ -850,7 +861,7 @@
         ]
       },
       "limit": {
-        "context": 1000000,
+        "context": 983616,
         "output": 131072
       },
       "reasoning": {
@@ -898,7 +909,7 @@
         ]
       },
       "limit": {
-        "context": 1000000,
+        "context": 983616,
         "output": 131072
       },
       "reasoning": {
@@ -946,7 +957,7 @@
         ]
       },
       "limit": {
-        "context": 1000000,
+        "context": 983616,
         "output": 131072
       },
       "reasoning": {
@@ -995,7 +1006,7 @@
         ]
       },
       "limit": {
-        "context": 1000000,
+        "context": 1006592,
         "output": 131072
       },
       "reasoning": {
@@ -1409,55 +1420,6 @@
         "cache_read": 1.32
       }
     },
-    "deepseek/deepseek-v4.1-flash": {
-      "name": "DeepSeek V4.1 Flash",
-      "family": "deepseek-flash",
-      "released": "2026-09-10",
-      "updated": "2026-09-10",
-      "knowledge": "2025-05",
-      "open_weights": true,
-      "capabilities": {
-        "tools": true,
-        "attachments": true,
-        "structured_output": true,
-        "temperature": true,
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 1000000,
-        "output": 393216
-      },
-      "reasoning": {
-        "mandatory": false,
-        "efforts": [
-          "none",
-          "low",
-          "medium",
-          "high",
-          "max"
-        ],
-        "budget": {
-          "min": 1,
-          "max": 393216
-        }
-      },
-      "provider_options": {
-        "id": "deepseek-v4-1-flash",
-        "name": "DeepSeek V4.1 Flash"
-      },
-      "price": {
-        "input": 0.3,
-        "output": 1.2,
-        "cache_read": 0.3
-      },
-      "status": "deprecated"
-    },
     "deepseek/deepseek-v4.1-flash-1017": {
       "name": "DeepSeek V4.1 Flash 1017",
       "family": "deepseek-flash",
@@ -1527,8 +1489,8 @@
         ]
       },
       "limit": {
-        "context": 128000,
-        "output": 8192
+        "context": 131072,
+        "output": 16384
       },
       "provider_options": {
         "id": "gemma-3-27b",
@@ -1781,8 +1743,8 @@
         ]
       },
       "limit": {
-        "context": 200000,
-        "output": 32768
+        "context": 204800,
+        "output": 131072
       },
       "reasoning": {},
       "provider_options": {
@@ -1815,8 +1777,8 @@
         ]
       },
       "limit": {
-        "context": 200000,
-        "output": 32768
+        "context": 204800,
+        "output": 131072
       },
       "reasoning": {},
       "provider_options": {
@@ -1939,7 +1901,7 @@
         ]
       },
       "limit": {
-        "context": 256000,
+        "context": 262144,
         "output": 65536
       },
       "provider_options": {
@@ -1974,7 +1936,7 @@
         ]
       },
       "limit": {
-        "context": 256000,
+        "context": 262144,
         "output": 16000
       },
       "reasoning": {
@@ -2023,7 +1985,7 @@
         ]
       },
       "limit": {
-        "context": 256000,
+        "context": 262144,
         "output": 131072
       },
       "reasoning": {},
@@ -2059,7 +2021,7 @@
         ]
       },
       "limit": {
-        "context": 256000,
+        "context": 262144,
         "output": 131072
       },
       "reasoning": {},
@@ -2094,7 +2056,7 @@
         ]
       },
       "limit": {
-        "context": 1000000,
+        "context": 1048576,
         "output": 131072
       },
       "reasoning": {
@@ -2274,7 +2236,7 @@
         ]
       },
       "limit": {
-        "context": 256000,
+        "context": 262144,
         "input": 256000,
         "output": 131072
       },
@@ -2309,7 +2271,7 @@
         ]
       },
       "limit": {
-        "context": 256000,
+        "context": 262144,
         "input": 256000,
         "output": 131072
       },
@@ -2350,7 +2312,7 @@
         ]
       },
       "limit": {
-        "context": 256000,
+        "context": 262144,
         "input": 256000,
         "output": 131072
       },
@@ -2433,7 +2395,7 @@
         ]
       },
       "limit": {
-        "context": 1000000,
+        "context": 1048576,
         "output": 131072
       },
       "reasoning": {
@@ -2471,7 +2433,7 @@
         ]
       },
       "limit": {
-        "context": 1000000,
+        "context": 1048576,
         "output": 131072
       },
       "reasoning": {
@@ -2509,7 +2471,7 @@
         ]
       },
       "limit": {
-        "context": 1000000,
+        "context": 1048576,
         "output": 131072
       },
       "reasoning": {
@@ -2582,7 +2544,7 @@
         ]
       },
       "limit": {
-        "context": 128000,
+        "context": 131072,
         "output": 32768
       },
       "reasoning": {
@@ -2632,6 +2594,42 @@
         "output": 0
       }
     },
+    "zhipuai/glm-4.7-flashx": {
+      "name": "GLM 4.7 FlashX",
+      "family": "glm-flash",
+      "released": "2026-01-19",
+      "updated": "2026-01-19",
+      "knowledge": "2025-04",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 200000,
+        "output": 131072
+      },
+      "reasoning": {
+        "mandatory": false
+      },
+      "provider_options": {
+        "id": "glm-4-7-flashx",
+        "name": "GLM 4.7 FlashX"
+      },
+      "price": {
+        "input": 0.07,
+        "output": 0.4,
+        "cache_read": 0.063
+      }
+    },
     "zhipuai/glm-5.1": {
       "name": "GLM 5.1",
       "family": "glm",
@@ -2651,7 +2649,7 @@
         ]
       },
       "limit": {
-        "context": 202000,
+        "context": 202745,
         "output": 128000
       },
       "reasoning": {

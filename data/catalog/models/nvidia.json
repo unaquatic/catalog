@@ -458,7 +458,6 @@
       "cortecs",
       "crusoe",
       "deepinfra",
-      "digitalocean",
       "edenai",
       "infomaniak",
       "kenari",
@@ -467,7 +466,6 @@
       "novita-ai",
       "ollama-cloud",
       "openrouter",
-      "pioneer",
       "thinkingmachines",
       "vercel"
     ]
@@ -510,34 +508,6 @@
       "vultr"
     ]
   },
-  "nvidia/nemotron-3-nano-omni-30b-tee": {
-    "id": "nvidia/nemotron-3-nano-omni-30b-tee",
-    "lab": "nvidia",
-    "name": "Nemotron 3 Nano Omni 30B TEE",
-    "family": "nemotron",
-    "released": "2026-07-23",
-    "updated": "2026-07-23",
-    "open_weights": true,
-    "reasoning": false,
-    "capabilities": {
-      "tools": false,
-      "attachments": false,
-      "temperature": true,
-      "input": [
-        "text"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 131072,
-      "output": 0
-    },
-    "providers": [
-      "chutes"
-    ]
-  },
   "nvidia/nemotron-3-super-120b-a12b": {
     "id": "nvidia/nemotron-3-super-120b-a12b",
     "lab": "nvidia",
@@ -564,11 +534,9 @@
       "output": 262144
     },
     "providers": [
-      "baseten",
       "boundless",
       "cloudflare-workers-ai",
       "crusoe",
-      "digitalocean",
       "edenai",
       "kenari",
       "kilo",
@@ -578,7 +546,6 @@
       "opencode",
       "openrouter",
       "perplexity-agent",
-      "pioneer",
       "requesty",
       "synthetic",
       "thinkingmachines",
@@ -627,7 +594,6 @@
       "ollama-cloud",
       "opencode",
       "openrouter",
-      "pioneer",
       "requesty",
       "routing-run",
       "thinkingmachines",

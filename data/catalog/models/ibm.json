@@ -31,9 +31,7 @@
     ],
     "providers": [
       "aimlapi",
-      "cloudflare-workers-ai",
-      "kilo",
-      "openrouter"
+      "cloudflare-workers-ai"
     ]
   },
   "ibm/granite-4-h-small": {
