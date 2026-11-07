@@ -174,60 +174,6 @@
       },
       "status": "beta"
     },
-    "groq/compound": {
-      "name": "Compound",
-      "family": "groq",
-      "released": "2025-09-04",
-      "updated": "2025-09-04",
-      "open_weights": false,
-      "capabilities": {
-        "tools": false,
-        "attachments": false,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 131072,
-        "output": 8192
-      },
-      "provider_options": {
-        "id": "groq/compound",
-        "name": "Compound"
-      },
-      "status": "deprecated"
-    },
-    "groq/compound-mini": {
-      "name": "Compound Mini",
-      "family": "groq",
-      "released": "2025-09-04",
-      "updated": "2025-09-04",
-      "open_weights": false,
-      "capabilities": {
-        "tools": false,
-        "attachments": false,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 131072,
-        "output": 8192
-      },
-      "provider_options": {
-        "id": "groq/compound-mini",
-        "name": "Compound Mini"
-      },
-      "status": "deprecated"
-    },
     "meta/llama-3.1-8b-instruct": {
       "name": "Llama 3.1 8B Instruct",
       "family": "llama",

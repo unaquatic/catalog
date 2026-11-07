@@ -261,7 +261,7 @@
       "family": "minimax",
       "released": "2026-10-19",
       "updated": "2026-10-19",
-      "open_weights": false,
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": true,

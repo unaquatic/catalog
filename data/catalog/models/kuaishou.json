@@ -27,33 +27,6 @@
       "requesty"
     ]
   },
-  "kuaishou/kat-coder-pro-v2": {
-    "id": "kuaishou/kat-coder-pro-v2",
-    "lab": "kuaishou",
-    "name": "KAT Coder Pro V2",
-    "released": "2026-03-30",
-    "updated": "2026-03-30",
-    "open_weights": false,
-    "reasoning": false,
-    "capabilities": {
-      "tools": true,
-      "attachments": false,
-      "temperature": true,
-      "input": [
-        "text"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 256000,
-      "output": 80000
-    },
-    "providers": [
-      "zenmux"
-    ]
-  },
   "kuaishou/kling-v2-6": {
     "id": "kuaishou/kling-v2-6",
     "lab": "kuaishou",

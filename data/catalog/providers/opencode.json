@@ -1381,6 +1381,7 @@
         "output": 0.28,
         "cache_read": 0.028
       },
+      "status": "deprecated",
       "variants": {
         "free": {
           "name": "DeepSeek V4 Flash 0731 Free",
@@ -2764,7 +2765,7 @@
       "family": "minimax",
       "released": "2026-10-19",
       "updated": "2026-10-19",
-      "open_weights": false,
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": true,
@@ -2802,7 +2803,8 @@
         "input": 0,
         "output": 0,
         "cache_read": 0
-      }
+      },
+      "status": "deprecated"
     },
     "mistral/mistral-large-4": {
       "name": "Mistral Large 4",
@@ -3092,7 +3094,8 @@
       "price": {
         "input": 3,
         "output": 15,
-        "cache_read": 0.3
+        "cache_read": 0.3,
+        "cache_write": 3
       }
     },
     "nvidia/nemotron-3-super-120b-a12b": {
@@ -3166,7 +3169,8 @@
         "input": 0,
         "output": 0,
         "cache_read": 0
-      }
+      },
+      "status": "deprecated"
     },
     "nvidia/nemotron-3.5-lightning": {
       "name": "Nemotron 3.5 Lightning",
@@ -4732,6 +4736,60 @@
       },
       "status": "deprecated"
     },
+    "opencode/crouton-alpha-free": {
+      "name": "Crouton Alpha Free",
+      "released": "2026-11-03",
+      "updated": "2026-11-03",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "video",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 270000
+      },
+      "reasoning": {
+        "efforts": [
+          "minimal",
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ]
+      },
+      "provider_options": {
+        "id": "crouton-alpha-free",
+        "name": "Crouton Alpha Free",
+        "endpoint": {
+          "format": "openai-responses",
+          "api": "https://opencode.ai/inference/openai/v1",
+          "auth": {
+            "scheme": "bearer"
+          },
+          "env": [
+            "OPENCODE_API_KEY"
+          ]
+        }
+      },
+      "price": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0
+      }
+    },
     "opencode/exo-free": {
       "name": "Exo Free",
       "released": "2026-10-06",
@@ -4806,6 +4864,36 @@
       },
       "status": "deprecated"
     },
+    "opencode/iceman-free": {
+      "name": "Iceman Free",
+      "released": "2026-11-06",
+      "updated": "2026-11-06",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 131072
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "iceman-free",
+        "name": "Iceman Free"
+      },
+      "price": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0
+      }
+    },
     "opencode/ll-alpha-free": {
       "name": "LL Alpha Free",
       "released": "2026-10-15",
@@ -4843,6 +4931,45 @@
       "provider_options": {
         "id": "ll-alpha-free",
         "name": "LL Alpha Free"
+      },
+      "price": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0
+      },
+      "status": "deprecated"
+    },
+    "opencode/pulse-alpha-free": {
+      "name": "Pulse Alpha Free",
+      "released": "2026-11-02",
+      "updated": "2026-11-02",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "high",
+          "max"
+        ]
+      },
+      "provider_options": {
+        "id": "pulse-alpha-free",
+        "name": "Pulse Alpha Free"
       },
       "price": {
         "input": 0,
@@ -5195,6 +5322,53 @@
         "cache_read": 0
       },
       "status": "deprecated"
+    },
+    "thinkingmachines/inkling-2-small": {
+      "name": "Inkling 2 Small",
+      "family": "ling",
+      "released": "2026-11-05",
+      "updated": "2026-11-05",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "minimal",
+          "low",
+          "medium",
+          "high",
+          "max"
+        ]
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "inkling-2-small-free",
+        "name": "Inkling 2 Small Free"
+      },
+      "price": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_write": 0
+      }
     },
     "xai/grok-4.5": {
       "name": "Grok 4.5",
@@ -5926,8 +6100,7 @@
         "input": [
           "text",
           "image",
-          "video",
-          "pdf"
+          "video"
         ],
         "output": [
           "text"

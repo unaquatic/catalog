@@ -1,0 +1,36 @@
+{
+  "levanto/levanto-sage-v1.4": {
+    "id": "levanto/levanto-sage-v1.4",
+    "lab": "levanto",
+    "name": "Levanto Sage V1.4",
+    "type": "decision",
+    "released": "2026-10-04",
+    "updated": "2026-10-04",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 32768,
+      "output": 0
+    },
+    "links": [
+      {
+        "label": "Documentation",
+        "url": "https://docs.levanto.ai/",
+        "type": "docs"
+      }
+    ],
+    "providers": []
+  }
+}

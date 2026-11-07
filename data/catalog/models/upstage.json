@@ -149,11 +149,8 @@
       "output": 8192
     },
     "providers": [
-      "aimlapi",
-      "kilo",
       "llmtr",
       "nano-gpt",
-      "openrouter",
       "upstage"
     ]
   },

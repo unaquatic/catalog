@@ -15,87 +15,6 @@
   },
   "doc": "https://melious.ai/docs/reference/models",
   "models": {
-    "deepseek/deepseek-r1": {
-      "name": "DeepSeek R1",
-      "family": "deepseek-thinking",
-      "released": "2025-01-20",
-      "updated": "2025-05-29",
-      "knowledge": "2024-07",
-      "open_weights": true,
-      "capabilities": {
-        "tools": true,
-        "attachments": false,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 164000,
-        "output": 32768
-      },
-      "reasoning": {},
-      "interleaved": {
-        "field": "reasoning_content"
-      },
-      "provider_options": {
-        "id": "deepseek-r1-0528",
-        "name": "DeepSeek-R1"
-      },
-      "price": {
-        "input": 0.69552,
-        "output": 2.78208,
-        "cache_read": 0.185472
-      },
-      "status": "deprecated"
-    },
-    "deepseek/deepseek-v3.2": {
-      "name": "DeepSeek V3.2",
-      "family": "deepseek",
-      "released": "2025-12-01",
-      "updated": "2025-12-01",
-      "knowledge": "2024-07",
-      "open_weights": true,
-      "capabilities": {
-        "tools": true,
-        "attachments": false,
-        "structured_output": true,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 164000,
-        "output": 64000
-      },
-      "reasoning": {
-        "mandatory": false,
-        "efforts": [
-          "none",
-          "high"
-        ]
-      },
-      "interleaved": {
-        "field": "reasoning_content"
-      },
-      "provider_options": {
-        "id": "deepseek-v3.2",
-        "name": "DeepSeek V3.2"
-      },
-      "price": {
-        "input": 0.34776,
-        "output": 0.5796,
-        "cache_read": 0.092736
-      },
-      "status": "deprecated"
-    },
     "deepseek/deepseek-v4-flash-0731": {
       "name": "DeepSeek V4 Flash 0731",
       "family": "deepseek-flash",
@@ -123,7 +42,9 @@
         "mandatory": false,
         "efforts": [
           "none",
-          "high"
+          "low",
+          "high",
+          "max"
         ]
       },
       "interleaved": {
@@ -134,9 +55,9 @@
         "name": "DeepSeek V4 Flash 0731"
       },
       "price": {
-        "input": 0.11592,
-        "output": 0.2898,
-        "cache_read": 0.023184
+        "input": 0.1115,
+        "output": 0.27875,
+        "cache_read": 0.0223
       }
     },
     "deepseek/deepseek-v4.1-flash": {
@@ -167,7 +88,9 @@
         "mandatory": false,
         "efforts": [
           "none",
-          "high"
+          "low",
+          "high",
+          "max"
         ]
       },
       "interleaved": {
@@ -178,9 +101,9 @@
         "name": "DeepSeek V4.1 Flash"
       },
       "price": {
-        "input": 0.23184,
-        "output": 1.1592,
-        "cache_read": 0.011592
+        "input": 0.223,
+        "output": 1.115,
+        "cache_read": 0.01115
       }
     },
     "deepseek/deepseek-v4.1-flash-1017": {
@@ -211,7 +134,9 @@
         "mandatory": false,
         "efforts": [
           "none",
-          "high"
+          "low",
+          "high",
+          "max"
         ]
       },
       "interleaved": {
@@ -222,49 +147,10 @@
         "name": "DeepSeek V4.1 Flash 1017"
       },
       "price": {
-        "input": 0.33675,
-        "output": 1.347,
-        "cache_read": 0.033675
+        "input": 0.3345,
+        "output": 1.338,
+        "cache_read": 0.03345
       }
-    },
-    "moonshotai/kimi-k2.5": {
-      "name": "Kimi K2.5",
-      "family": "kimi-k2",
-      "released": "2026-01-27",
-      "updated": "2026-01-27",
-      "knowledge": "2025-01",
-      "open_weights": true,
-      "capabilities": {
-        "tools": true,
-        "attachments": true,
-        "structured_output": true,
-        "temperature": false,
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 262000,
-        "output": 262000
-      },
-      "reasoning": {},
-      "interleaved": {
-        "field": "reasoning_content"
-      },
-      "provider_options": {
-        "id": "kimi-k2.5",
-        "name": "Kimi K2.5"
-      },
-      "price": {
-        "input": 0.5796,
-        "output": 2.95596,
-        "cache_read": 0.139104
-      },
-      "status": "deprecated"
     },
     "moonshotai/kimi-k2.6": {
       "name": "Kimi K2.6",
@@ -292,11 +178,7 @@
         "output": 256000
       },
       "reasoning": {
-        "mandatory": false,
-        "efforts": [
-          "none",
-          "high"
-        ]
+        "mandatory": false
       },
       "interleaved": {
         "field": "reasoning_content"
@@ -306,9 +188,9 @@
         "name": "Kimi K2.6"
       },
       "price": {
-        "input": 0.78505,
-        "output": 3.3645,
-        "cache_read": 0.280375
+        "input": 0.669,
+        "output": 4.014,
+        "cache_read": 0.16725
       }
     },
     "moonshotai/kimi-k2.7-code": {
@@ -337,11 +219,7 @@
         "output": 262144
       },
       "reasoning": {
-        "mandatory": false,
-        "efforts": [
-          "none",
-          "high"
-        ]
+        "mandatory": false
       },
       "interleaved": {
         "field": "reasoning_content"
@@ -351,9 +229,9 @@
         "name": "Kimi K2.7 Code"
       },
       "price": {
-        "input": 0.728975,
-        "output": 3.644875,
-        "cache_read": 0.190655
+        "input": 0.61325,
+        "output": 3.28925,
+        "cache_read": 0.16725
       }
     },
     "moonshotai/kimi-k3": {
@@ -384,7 +262,9 @@
         "mandatory": false,
         "efforts": [
           "none",
-          "high"
+          "low",
+          "high",
+          "max"
         ]
       },
       "interleaved": {
@@ -395,89 +275,10 @@
         "name": "Kimi K3"
       },
       "price": {
-        "input": 3.196275,
-        "output": 15.981375,
-        "cache_read": 0.841125
+        "input": 3.17775,
+        "output": 15.88875,
+        "cache_read": 0.79165
       }
-    },
-    "zhipuai/glm-5": {
-      "name": "GLM 5",
-      "family": "glm",
-      "released": "2026-02-12",
-      "updated": "2026-02-12",
-      "open_weights": true,
-      "capabilities": {
-        "tools": true,
-        "attachments": false,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 203000,
-        "output": 131072
-      },
-      "reasoning": {},
-      "interleaved": {
-        "field": "reasoning_content"
-      },
-      "provider_options": {
-        "id": "glm-5",
-        "name": "GLM-5"
-      },
-      "price": {
-        "input": 1.10124,
-        "output": 3.36168,
-        "cache_read": 0.266616
-      },
-      "status": "deprecated"
-    },
-    "zhipuai/glm-5.1": {
-      "name": "GLM 5.1",
-      "family": "glm",
-      "released": "2026-04-07",
-      "updated": "2026-04-07",
-      "open_weights": true,
-      "capabilities": {
-        "tools": true,
-        "attachments": false,
-        "structured_output": true,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 203000,
-        "output": 131072
-      },
-      "reasoning": {
-        "mandatory": false,
-        "efforts": [
-          "none",
-          "high"
-        ]
-      },
-      "interleaved": {
-        "field": "reasoning_content"
-      },
-      "provider_options": {
-        "id": "glm-5.1",
-        "name": "GLM-5.1"
-      },
-      "price": {
-        "input": 1.50696,
-        "output": 4.6368,
-        "cache_read": 0.370944
-      },
-      "status": "deprecated"
     },
     "zhipuai/glm-5.3": {
       "name": "GLM 5.3",
@@ -502,10 +303,10 @@
         "output": 131072
       },
       "reasoning": {
-        "mandatory": false,
         "efforts": [
-          "none",
-          "high"
+          "low",
+          "high",
+          "max"
         ]
       },
       "interleaved": {
@@ -516,9 +317,9 @@
         "name": "GLM-5.3"
       },
       "price": {
-        "input": 1.1592,
-        "output": 3.4776,
-        "cache_read": 0.23184
+        "input": 1.115,
+        "output": 3.345,
+        "cache_read": 0.223
       }
     },
     "zhipuai/glm-5.3-flash": {
@@ -546,10 +347,10 @@
         "output": 131072
       },
       "reasoning": {
-        "mandatory": false,
         "efforts": [
-          "none",
-          "high"
+          "low",
+          "high",
+          "max"
         ]
       },
       "interleaved": {
@@ -560,9 +361,9 @@
         "name": "GLM-5.3-Flash"
       },
       "price": {
-        "input": 0.11592,
-        "output": 0.46368,
-        "cache_read": 0.023184
+        "input": 0.1115,
+        "output": 0.446,
+        "cache_read": 0.0223
       }
     }
   }

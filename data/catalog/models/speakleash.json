@@ -25,7 +25,8 @@
       "output": 32000
     },
     "providers": [
-      "cloudferro-sherlock"
+      "cloudferro-sherlock",
+      "nano-gpt"
     ]
   }
 }

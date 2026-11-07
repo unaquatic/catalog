@@ -41,7 +41,6 @@
     "capabilities": {
       "tools": true,
       "attachments": true,
-      "structured_output": true,
       "temperature": true,
       "input": [
         "text",
@@ -58,6 +57,7 @@
       "output": 8192
     },
     "providers": [
+      "aimlapi",
       "kilo",
       "nano-gpt",
       "openrouter"

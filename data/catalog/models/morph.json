@@ -20,8 +20,8 @@
       ]
     },
     "limit": {
-      "context": 81920,
-      "output": 38000
+      "context": 262144,
+      "output": 131072
     },
     "providers": [
       "aimlapi",

@@ -243,51 +243,6 @@
         "cache_read": 0.028
       }
     },
-    "deepseek/deepseek-v4-pro": {
-      "name": "DeepSeek V4 Pro",
-      "family": "deepseek-thinking",
-      "released": "2026-04-24",
-      "updated": "2026-04-24",
-      "knowledge": "2025-05",
-      "open_weights": true,
-      "capabilities": {
-        "tools": true,
-        "attachments": false,
-        "structured_output": true,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 1048560,
-        "output": 393216
-      },
-      "reasoning": {
-        "mandatory": false,
-        "efforts": [
-          "none",
-          "low",
-          "high",
-          "max"
-        ],
-        "budget": {}
-      },
-      "interleaved": {},
-      "provider_options": {
-        "id": "deepseek-v4-pro",
-        "name": "DeepSeek V4 Pro"
-      },
-      "price": {
-        "input": 1,
-        "output": 3,
-        "cache_read": 0.1
-      },
-      "status": "deprecated"
-    },
     "deepseek/deepseek-v4.1-flash-1017": {
       "name": "DeepSeek V4.1 Flash 1017",
       "family": "deepseek-flash",
@@ -587,85 +542,6 @@
           }
         }
       }
-    },
-    "zhipuai/glm-5.2": {
-      "name": "GLM 5.2",
-      "family": "glm",
-      "released": "2026-06-13",
-      "updated": "2026-06-13",
-      "open_weights": true,
-      "capabilities": {
-        "tools": true,
-        "attachments": false,
-        "structured_output": false,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 1048560,
-        "output": 1048560
-      },
-      "reasoning": {
-        "mandatory": false,
-        "efforts": [
-          "none",
-          "high",
-          "max"
-        ],
-        "budget": {}
-      },
-      "interleaved": {},
-      "provider_options": {
-        "id": "glm-5.2",
-        "name": "GLM 5.2"
-      },
-      "price": {
-        "input": 1.45,
-        "output": 4.5,
-        "cache_read": 0.145
-      },
-      "status": "deprecated",
-      "variants": {
-        "fast": {
-          "name": "GLM 5.2 Fast",
-          "tier": "fast",
-          "provider_options": {
-            "id": "glm-5.2-fast",
-            "name": "GLM 5.2 Fast"
-          },
-          "price": {
-            "input": 1.45,
-            "output": 4.5,
-            "cache_read": 0.145
-          },
-          "status": "deprecated"
-        },
-        "flex": {
-          "name": "GLM 5.2 Flex",
-          "tier": "flex",
-          "provider_options": {
-            "id": "glm-5.2-flex",
-            "name": "GLM 5.2 Flex"
-          },
-          "price": {
-            "input": 0.9425,
-            "output": 2.925,
-            "cache_read": 0.09425
-          },
-          "status": "deprecated"
-        }
-      },
-      "aliases": [
-        "glm-5.2-short",
-        "glm-5.2-short-fast",
-        "glm-5.2-short-fast-flex",
-        "glm-5.2-short-flex"
-      ]
     },
     "zhipuai/glm-5.3": {
       "name": "GLM 5.3",
