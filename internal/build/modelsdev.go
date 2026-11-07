@@ -303,10 +303,14 @@ func list(b modelsdev.Bundle, opts Options) (*builder, error) {
 		}
 	}
 	b.Models = CatalogModels(b.Models)
+	// The rules' spellings hold whatever models.dev's names vote, so that a
+	// word keeps its spelling when the models that spelt it are gone.
+	spell := SpellingsOf(BundleNames(b))
+	maps.Insert(spell, rules.Spellings())
 	bl := &builder{
 		rules:   rules,
 		bundle:  b,
-		spell:   SpellingsOf(BundleNames(b)),
+		spell:   spell,
 		infer:   opts.Infer,
 		labs:    make(map[gateway.ProviderID]bool),
 		merged:  make(map[gateway.ModelID]merge),
