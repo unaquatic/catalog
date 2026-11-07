@@ -28,95 +28,6 @@
       "qiniu-ai"
     ]
   },
-  "stepfun/step-1-32k": {
-    "id": "stepfun/step-1-32k",
-    "lab": "stepfun",
-    "name": "Step 1 32K",
-    "released": "2025-01-01",
-    "updated": "2026-02-13",
-    "knowledge": "2024-06",
-    "open_weights": false,
-    "reasoning": false,
-    "capabilities": {
-      "tools": true,
-      "attachments": false,
-      "temperature": true,
-      "input": [
-        "text"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 32768,
-      "input": 32768,
-      "output": 32768
-    },
-    "providers": [
-      "stepfun",
-      "stepfun-ai"
-    ]
-  },
-  "stepfun/step-2-16k": {
-    "id": "stepfun/step-2-16k",
-    "lab": "stepfun",
-    "name": "Step 2 16K",
-    "released": "2025-01-01",
-    "updated": "2026-02-13",
-    "knowledge": "2024-06",
-    "open_weights": false,
-    "reasoning": false,
-    "capabilities": {
-      "tools": true,
-      "attachments": false,
-      "temperature": true,
-      "input": [
-        "text"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 16384,
-      "input": 16384,
-      "output": 8192
-    },
-    "providers": [
-      "stepfun",
-      "stepfun-ai"
-    ]
-  },
-  "stepfun/step-3": {
-    "id": "stepfun/step-3",
-    "lab": "stepfun",
-    "name": "Step 3",
-    "released": "2025-07-31",
-    "updated": "2025-07-31",
-    "knowledge": "2025-01-01",
-    "open_weights": false,
-    "reasoning": true,
-    "capabilities": {
-      "tools": true,
-      "attachments": true,
-      "temperature": true,
-      "input": [
-        "image",
-        "text"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 65536,
-      "output": 64000
-    },
-    "providers": [
-      "zenmux"
-    ]
-  },
   "stepfun/step-3.5-flash": {
     "id": "stepfun/step-3.5-flash",
     "lab": "stepfun",
@@ -242,7 +153,6 @@
       }
     ],
     "providers": [
-      "ambient",
       "commandcode",
       "deepinfra",
       "edenai",
@@ -304,6 +214,8 @@
       "edenai",
       "empiriolabs",
       "kilo",
+      "llmgateway",
+      "llmgateway-providers",
       "nano-gpt",
       "novita-ai",
       "nvidia",

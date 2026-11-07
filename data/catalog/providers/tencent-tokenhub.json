@@ -96,6 +96,46 @@
         "cache_write": 0
       }
     },
+    "tencent/hy4": {
+      "name": "Hy4",
+      "family": "Hy",
+      "released": "2026-11-04",
+      "updated": "2026-11-04",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "input": 983010,
+        "output": 65536
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "hy4",
+        "name": "Hy4"
+      },
+      "price": {
+        "input": 0.834,
+        "output": 2.501,
+        "cache_read": 0.042
+      }
+    },
     "tencent/hy4-preview": {
       "name": "Hy4 Preview",
       "family": "Hy",

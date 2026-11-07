@@ -28,46 +28,19 @@
       "the-grid-ai"
     ]
   },
-  "bytedance-seed/doubao-1.5-pro-256k": {
-    "id": "bytedance-seed/doubao-1.5-pro-256k",
-    "lab": "bytedance-seed",
-    "name": "Doubao 1.5 Pro 256K",
-    "released": "2025-03-12",
-    "updated": "2025-03-12",
-    "open_weights": false,
-    "reasoning": false,
-    "capabilities": {
-      "tools": false,
-      "attachments": false,
-      "structured_output": false,
-      "input": [
-        "text"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 256000,
-      "input": 256000,
-      "output": 16384
-    },
-    "providers": [
-      "nano-gpt"
-    ]
-  },
   "bytedance-seed/doubao-1.5-pro-32k": {
     "id": "bytedance-seed/doubao-1.5-pro-32k",
     "lab": "bytedance-seed",
     "name": "Doubao 1.5 Pro 32K",
-    "released": "2024-11-20",
-    "updated": "2025-01-22",
+    "released": "2025-08-05",
+    "updated": "2025-08-05",
     "open_weights": false,
     "reasoning": false,
     "capabilities": {
-      "tools": false,
+      "tools": true,
       "attachments": false,
-      "structured_output": false,
+      "structured_output": true,
+      "temperature": true,
       "input": [
         "text"
       ],
@@ -76,12 +49,10 @@
       ]
     },
     "limit": {
-      "context": 32000,
-      "input": 32000,
-      "output": 8192
+      "context": 128000,
+      "output": 12000
     },
     "providers": [
-      "nano-gpt",
       "qiniu-ai"
     ]
   },
@@ -141,35 +112,6 @@
     },
     "providers": [
       "qiniu-ai"
-    ]
-  },
-  "bytedance-seed/doubao-1.5-vision-pro-32k": {
-    "id": "bytedance-seed/doubao-1.5-vision-pro-32k",
-    "lab": "bytedance-seed",
-    "name": "Doubao 1.5 Vision Pro 32K",
-    "released": "2024-11-20",
-    "updated": "2025-01-22",
-    "open_weights": false,
-    "reasoning": false,
-    "capabilities": {
-      "tools": false,
-      "attachments": true,
-      "structured_output": false,
-      "input": [
-        "text",
-        "image"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 32000,
-      "input": 32000,
-      "output": 8192
-    },
-    "providers": [
-      "nano-gpt"
     ]
   },
   "bytedance-seed/doubao-seed-1-6-thinking-250715": {
@@ -256,7 +198,6 @@
     },
     "providers": [
       "kilo",
-      "ofox",
       "openrouter",
       "qiniu-ai",
       "vercel",
@@ -292,7 +233,6 @@
     "providers": [
       "aimlapi",
       "kilo",
-      "ofox",
       "openrouter",
       "qiniu-ai",
       "volcengine"
@@ -325,7 +265,6 @@
     },
     "providers": [
       "302ai",
-      "ofox",
       "volcengine"
     ]
   },
@@ -356,7 +295,6 @@
     },
     "providers": [
       "302ai",
-      "ofox",
       "requesty",
       "vercel",
       "volcengine",
@@ -1154,10 +1092,11 @@
     "reasoning": false,
     "capabilities": {
       "tools": false,
-      "attachments": false,
+      "attachments": true,
       "temperature": false,
       "input": [
-        "text"
+        "text",
+        "image"
       ],
       "output": [
         "image"
@@ -1183,10 +1122,11 @@
     "reasoning": false,
     "capabilities": {
       "tools": false,
-      "attachments": false,
+      "attachments": true,
       "temperature": false,
       "input": [
-        "text"
+        "text",
+        "image"
       ],
       "output": [
         "image"
@@ -1212,10 +1152,11 @@
     "reasoning": false,
     "capabilities": {
       "tools": false,
-      "attachments": false,
+      "attachments": true,
       "temperature": false,
       "input": [
-        "text"
+        "text",
+        "image"
       ],
       "output": [
         "image"
@@ -1241,10 +1182,11 @@
     "reasoning": false,
     "capabilities": {
       "tools": false,
-      "attachments": false,
+      "attachments": true,
       "temperature": false,
       "input": [
-        "text"
+        "text",
+        "image"
       ],
       "output": [
         "image"

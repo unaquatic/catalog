@@ -348,13 +348,10 @@
       "google-vertex",
       "helicone",
       "jiekou",
-      "llmgateway",
-      "llmgateway-providers",
       "ofox",
       "perplexity-agent",
       "poe",
-      "qiniu-ai",
-      "vercel"
+      "qiniu-ai"
     ]
   },
   "xai/grok-4.1-fast-reasoning": {
@@ -393,8 +390,7 @@
       "llmgateway",
       "llmgateway-providers",
       "poe",
-      "qiniu-ai",
-      "vercel"
+      "qiniu-ai"
     ]
   },
   "xai/grok-4.20": {
@@ -765,7 +761,6 @@
       "opper",
       "orcarouter",
       "perplexity-agent",
-      "pioneer",
       "requesty",
       "tempr",
       "vercel",
@@ -1055,9 +1050,7 @@
       "context": 16000,
       "output": 0
     },
-    "providers": [
-      "xai"
-    ]
+    "providers": []
   },
   "xai/grok-imagine-video": {
     "id": "xai/grok-imagine-video",
@@ -1210,37 +1203,6 @@
     "providers": [
       "vercel",
       "zenmux"
-    ]
-  },
-  "xai/grok-voice-think-fast-2.0": {
-    "id": "xai/grok-voice-think-fast-2.0",
-    "lab": "xai",
-    "name": "Grok Voice Think Fast 2.0",
-    "family": "grok",
-    "type": "realtime",
-    "released": "2026-07-29",
-    "updated": "2026-07-29",
-    "open_weights": false,
-    "reasoning": false,
-    "capabilities": {
-      "tools": true,
-      "attachments": true,
-      "temperature": true,
-      "input": [
-        "text",
-        "audio"
-      ],
-      "output": [
-        "text",
-        "audio"
-      ]
-    },
-    "limit": {
-      "context": 0,
-      "output": 0
-    },
-    "providers": [
-      "vercel"
     ]
   },
   "xai/grok-voice-transcribe-2.0": {

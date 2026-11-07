@@ -11,6 +11,7 @@
     "capabilities": {
       "tools": false,
       "attachments": true,
+      "temperature": false,
       "input": [
         "text",
         "image"
@@ -20,7 +21,7 @@
       ]
     },
     "limit": {
-      "context": 32000,
+      "context": 64000,
       "output": 0
     },
     "providers": [
@@ -38,10 +39,11 @@
     "reasoning": false,
     "capabilities": {
       "tools": false,
-      "attachments": false,
+      "attachments": true,
       "temperature": false,
       "input": [
-        "text"
+        "text",
+        "image"
       ],
       "output": [
         "text"
@@ -66,10 +68,11 @@
     "reasoning": false,
     "capabilities": {
       "tools": false,
-      "attachments": false,
+      "attachments": true,
       "temperature": false,
       "input": [
-        "text"
+        "text",
+        "image"
       ],
       "output": [
         "text"

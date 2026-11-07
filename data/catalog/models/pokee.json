@@ -19,8 +19,8 @@
       ]
     },
     "limit": {
-      "context": 10000000,
-      "input": 10000000,
+      "context": 250000,
+      "input": 250000,
       "output": 60000
     },
     "providers": [

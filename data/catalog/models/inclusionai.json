@@ -25,8 +25,7 @@
       "output": 32000
     },
     "providers": [
-      "bailing",
-      "zenmux"
+      "bailing"
     ]
   },
   "inclusionai/ling-2.6-1t": {
@@ -242,14 +241,15 @@
     "lab": "inclusionai",
     "name": "Ling 3.0 Tiny",
     "family": "ling",
-    "released": "2026-08-05",
-    "updated": "2026-08-05",
+    "released": "2026-08-06",
+    "updated": "2026-08-06",
     "open_weights": false,
     "reasoning": true,
     "capabilities": {
       "tools": true,
       "attachments": false,
-      "structured_output": false,
+      "structured_output": true,
+      "temperature": true,
       "input": [
         "text"
       ],
@@ -259,10 +259,13 @@
     },
     "limit": {
       "context": 262144,
-      "output": 32768
+      "output": 250000
     },
     "providers": [
+      "kilo",
+      "nano-gpt",
       "opencode",
+      "openrouter",
       "requesty"
     ]
   },
@@ -297,6 +300,33 @@
       "novita-ai",
       "opencode",
       "openrouter",
+      "vercel"
+    ]
+  },
+  "inclusionai/ling-3.1-flash-1019": {
+    "id": "inclusionai/ling-3.1-flash-1019",
+    "lab": "inclusionai",
+    "name": "Ling 3.1 Flash 1019",
+    "family": "ling",
+    "released": "2026-10-30",
+    "updated": "2026-10-30",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 262144
+    },
+    "providers": [
       "vercel"
     ]
   },
@@ -356,8 +386,7 @@
       "output": 32000
     },
     "providers": [
-      "bailing",
-      "zenmux"
+      "bailing"
     ]
   },
   "inclusionai/ring-2.6-1t": {

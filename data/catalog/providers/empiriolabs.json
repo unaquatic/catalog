@@ -36,7 +36,7 @@
         ]
       },
       "limit": {
-        "context": 256000,
+        "context": 258048,
         "output": 64000
       },
       "reasoning": {
@@ -50,7 +50,7 @@
         ],
         "budget": {
           "min": 1,
-          "max": 80000
+          "max": 81920
         }
       },
       "provider_options": {
@@ -92,7 +92,7 @@
         ]
       },
       "limit": {
-        "context": 256000,
+        "context": 258048,
         "output": 64000
       },
       "reasoning": {
@@ -106,7 +106,7 @@
         ],
         "budget": {
           "min": 1,
-          "max": 80000
+          "max": 81920
         }
       },
       "provider_options": {
@@ -148,7 +148,7 @@
         ]
       },
       "limit": {
-        "context": 256000,
+        "context": 258048,
         "output": 64000
       },
       "reasoning": {
@@ -162,7 +162,7 @@
         ],
         "budget": {
           "min": 1,
-          "max": 80000
+          "max": 81920
         }
       },
       "provider_options": {
@@ -204,7 +204,7 @@
         ]
       },
       "limit": {
-        "context": 256000,
+        "context": 258048,
         "output": 64000
       },
       "reasoning": {
@@ -218,7 +218,7 @@
         ],
         "budget": {
           "min": 1,
-          "max": 80000
+          "max": 81920
         }
       },
       "provider_options": {
@@ -357,7 +357,7 @@
         ]
       },
       "limit": {
-        "context": 1000000,
+        "context": 995904,
         "output": 32768
       },
       "reasoning": {
@@ -399,7 +399,7 @@
         ]
       },
       "limit": {
-        "context": 1000000,
+        "context": 983616,
         "output": 65536
       },
       "reasoning": {
@@ -420,9 +420,9 @@
         "tiers": [
           {
             "above": 256000,
-            "input": 1.08,
-            "output": 6.62,
-            "cache_read": 1.08
+            "input": 0.45,
+            "output": 2.76,
+            "cache_read": 0.45
           }
         ]
       },
@@ -449,7 +449,7 @@
         ]
       },
       "limit": {
-        "context": 256000,
+        "context": 229376,
         "output": 64000
       },
       "reasoning": {
@@ -463,7 +463,7 @@
         ],
         "budget": {
           "min": 1,
-          "max": 80000
+          "max": 131072
         }
       },
       "provider_options": {
@@ -539,7 +539,7 @@
         ]
       },
       "limit": {
-        "context": 1000000,
+        "context": 983616,
         "output": 65536
       },
       "reasoning": {
@@ -596,11 +596,22 @@
         ]
       },
       "limit": {
-        "context": 1000000,
+        "context": 983616,
         "output": 65536
       },
       "reasoning": {
-        "mandatory": false
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "medium",
+          "high",
+          "max"
+        ],
+        "budget": {
+          "min": 1,
+          "max": 131072
+        }
       },
       "provider_options": {
         "id": "qwen3-6-plus",
@@ -641,7 +652,7 @@
         ]
       },
       "limit": {
-        "context": 1000000,
+        "context": 983616,
         "input": 991808,
         "output": 65536
       },
@@ -702,7 +713,7 @@
         ]
       },
       "limit": {
-        "context": 1000000,
+        "context": 983616,
         "output": 65536
       },
       "reasoning": {
@@ -716,7 +727,7 @@
         ],
         "budget": {
           "min": 1,
-          "max": 64000
+          "max": 262144
         }
       },
       "provider_options": {
@@ -751,7 +762,7 @@
         ]
       },
       "limit": {
-        "context": 1000000,
+        "context": 983616,
         "output": 65536
       },
       "reasoning": {
@@ -765,7 +776,7 @@
         ],
         "budget": {
           "min": 1,
-          "max": 256000
+          "max": 262144
         }
       },
       "provider_options": {
@@ -850,7 +861,7 @@
         ]
       },
       "limit": {
-        "context": 1000000,
+        "context": 983616,
         "output": 131072
       },
       "reasoning": {
@@ -898,7 +909,7 @@
         ]
       },
       "limit": {
-        "context": 1000000,
+        "context": 983616,
         "output": 131072
       },
       "reasoning": {
@@ -946,7 +957,7 @@
         ]
       },
       "limit": {
-        "context": 1000000,
+        "context": 983616,
         "output": 131072
       },
       "reasoning": {
@@ -995,7 +1006,7 @@
         ]
       },
       "limit": {
-        "context": 1000000,
+        "context": 1006592,
         "output": 131072
       },
       "reasoning": {
@@ -1043,7 +1054,7 @@
         ]
       },
       "limit": {
-        "context": 256000,
+        "context": 229096,
         "output": 128000
       },
       "reasoning": {
@@ -1094,7 +1105,7 @@
         ]
       },
       "limit": {
-        "context": 256000,
+        "context": 229096,
         "output": 128000
       },
       "reasoning": {
@@ -1145,7 +1156,7 @@
         ]
       },
       "limit": {
-        "context": 256000,
+        "context": 229156,
         "output": 128000
       },
       "reasoning": {
@@ -1196,7 +1207,7 @@
         ]
       },
       "limit": {
-        "context": 256000,
+        "context": 229096,
         "output": 128000
       },
       "reasoning": {
@@ -1247,7 +1258,7 @@
         ]
       },
       "limit": {
-        "context": 256000,
+        "context": 229093,
         "output": 65536
       },
       "reasoning": {
@@ -1409,55 +1420,6 @@
         "cache_read": 1.32
       }
     },
-    "deepseek/deepseek-v4.1-flash": {
-      "name": "DeepSeek V4.1 Flash",
-      "family": "deepseek-flash",
-      "released": "2026-09-10",
-      "updated": "2026-09-10",
-      "knowledge": "2025-05",
-      "open_weights": true,
-      "capabilities": {
-        "tools": true,
-        "attachments": true,
-        "structured_output": true,
-        "temperature": true,
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 1000000,
-        "output": 393216
-      },
-      "reasoning": {
-        "mandatory": false,
-        "efforts": [
-          "none",
-          "low",
-          "medium",
-          "high",
-          "max"
-        ],
-        "budget": {
-          "min": 1,
-          "max": 393216
-        }
-      },
-      "provider_options": {
-        "id": "deepseek-v4-1-flash",
-        "name": "DeepSeek V4.1 Flash"
-      },
-      "price": {
-        "input": 0.3,
-        "output": 1.2,
-        "cache_read": 0.3
-      },
-      "status": "deprecated"
-    },
     "deepseek/deepseek-v4.1-flash-1017": {
       "name": "DeepSeek V4.1 Flash 1017",
       "family": "deepseek-flash",
@@ -1501,9 +1463,9 @@
         "name": "DeepSeek V4.1 Flash 1017"
       },
       "price": {
-        "input": 0.3,
-        "output": 1.2,
-        "cache_read": 0.3
+        "input": 0.2,
+        "output": 0.8,
+        "cache_read": 0.02
       }
     },
     "google/gemma-3-27b-it": {
@@ -1527,8 +1489,8 @@
         ]
       },
       "limit": {
-        "context": 128000,
-        "output": 8192
+        "context": 131072,
+        "output": 16384
       },
       "provider_options": {
         "id": "gemma-3-27b",
@@ -1537,7 +1499,8 @@
       "price": {
         "input": 0,
         "output": 0
-      }
+      },
+      "status": "deprecated"
     },
     "google/gemma-4-26b-a4b-it": {
       "name": "Gemma 4 26B A4B IT",
@@ -1781,8 +1744,8 @@
         ]
       },
       "limit": {
-        "context": 200000,
-        "output": 32768
+        "context": 204800,
+        "output": 131072
       },
       "reasoning": {},
       "provider_options": {
@@ -1815,8 +1778,8 @@
         ]
       },
       "limit": {
-        "context": 200000,
-        "output": 32768
+        "context": 204800,
+        "output": 131072
       },
       "reasoning": {},
       "provider_options": {
@@ -1851,7 +1814,7 @@
         ]
       },
       "limit": {
-        "context": 1000000,
+        "context": 1048576,
         "output": 524288
       },
       "reasoning": {
@@ -1880,7 +1843,7 @@
       "family": "minimax",
       "released": "2026-10-19",
       "updated": "2026-10-19",
-      "open_weights": false,
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": true,
@@ -1896,7 +1859,7 @@
         ]
       },
       "limit": {
-        "context": 1000000,
+        "context": 1048576,
         "output": 524288
       },
       "reasoning": {
@@ -1939,7 +1902,7 @@
         ]
       },
       "limit": {
-        "context": 256000,
+        "context": 262144,
         "output": 65536
       },
       "provider_options": {
@@ -1974,7 +1937,7 @@
         ]
       },
       "limit": {
-        "context": 256000,
+        "context": 262144,
         "output": 16000
       },
       "reasoning": {
@@ -2023,7 +1986,7 @@
         ]
       },
       "limit": {
-        "context": 256000,
+        "context": 262144,
         "output": 131072
       },
       "reasoning": {},
@@ -2059,7 +2022,7 @@
         ]
       },
       "limit": {
-        "context": 256000,
+        "context": 262144,
         "output": 131072
       },
       "reasoning": {},
@@ -2094,7 +2057,7 @@
         ]
       },
       "limit": {
-        "context": 1000000,
+        "context": 1048576,
         "output": 131072
       },
       "reasoning": {
@@ -2112,6 +2075,49 @@
         "input": 3,
         "output": 15,
         "cache_read": 3
+      }
+    },
+    "moonshotai/kimi-k3.1-pro": {
+      "name": "Kimi K3.1 Pro",
+      "family": "kimi-k3",
+      "released": "2026-10-23",
+      "updated": "2026-10-23",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "medium",
+          "high",
+          "max"
+        ]
+      },
+      "provider_options": {
+        "id": "kimi-k3-1-pro",
+        "name": "Kimi K3.1 Pro"
+      },
+      "price": {
+        "input": 2,
+        "output": 10,
+        "cache_read": 1.8
       }
     },
     "sakana/fugu-max": {
@@ -2274,7 +2280,7 @@
         ]
       },
       "limit": {
-        "context": 256000,
+        "context": 262144,
         "input": 256000,
         "output": 131072
       },
@@ -2309,7 +2315,7 @@
         ]
       },
       "limit": {
-        "context": 256000,
+        "context": 262144,
         "input": 256000,
         "output": 131072
       },
@@ -2350,7 +2356,7 @@
         ]
       },
       "limit": {
-        "context": 256000,
+        "context": 262144,
         "input": 256000,
         "output": 131072
       },
@@ -2408,7 +2414,7 @@
       "price": {
         "input": 1,
         "output": 2.7,
-        "cache_read": 0.05
+        "cache_read": 0.1
       }
     },
     "xiaomi/mimo-v2.6-flash": {
@@ -2433,7 +2439,7 @@
         ]
       },
       "limit": {
-        "context": 1000000,
+        "context": 1048576,
         "output": 131072
       },
       "reasoning": {
@@ -2471,7 +2477,7 @@
         ]
       },
       "limit": {
-        "context": 1000000,
+        "context": 1048576,
         "output": 131072
       },
       "reasoning": {
@@ -2509,7 +2515,7 @@
         ]
       },
       "limit": {
-        "context": 1000000,
+        "context": 1048576,
         "output": 131072
       },
       "reasoning": {
@@ -2545,7 +2551,7 @@
         ]
       },
       "limit": {
-        "context": 200000,
+        "context": 131072,
         "output": 98304
       },
       "reasoning": {
@@ -2582,7 +2588,7 @@
         ]
       },
       "limit": {
-        "context": 128000,
+        "context": 131072,
         "output": 32768
       },
       "reasoning": {
@@ -2617,7 +2623,7 @@
         ]
       },
       "limit": {
-        "context": 200000,
+        "context": 202752,
         "output": 131072
       },
       "reasoning": {
@@ -2630,6 +2636,42 @@
       "price": {
         "input": 0,
         "output": 0
+      }
+    },
+    "zhipuai/glm-4.7-flashx": {
+      "name": "GLM 4.7 FlashX",
+      "family": "glm-flash",
+      "released": "2026-01-19",
+      "updated": "2026-01-19",
+      "knowledge": "2025-04",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 202752,
+        "output": 131072
+      },
+      "reasoning": {
+        "mandatory": false
+      },
+      "provider_options": {
+        "id": "glm-4-7-flashx",
+        "name": "GLM 4.7 FlashX"
+      },
+      "price": {
+        "input": 0.07,
+        "output": 0.4,
+        "cache_read": 0.063
       }
     },
     "zhipuai/glm-5.1": {
@@ -2651,7 +2693,7 @@
         ]
       },
       "limit": {
-        "context": 202000,
+        "context": 202745,
         "output": 128000
       },
       "reasoning": {
@@ -2705,7 +2747,7 @@
         ]
       },
       "limit": {
-        "context": 1000000,
+        "context": 1048576,
         "output": 131072
       },
       "reasoning": {
@@ -2749,7 +2791,7 @@
         ]
       },
       "limit": {
-        "context": 1000000,
+        "context": 1048576,
         "output": 131072
       },
       "reasoning": {
@@ -2791,7 +2833,7 @@
         ]
       },
       "limit": {
-        "context": 1000000,
+        "context": 1048576,
         "output": 131072
       },
       "reasoning": {
