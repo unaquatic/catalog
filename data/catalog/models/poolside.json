@@ -53,11 +53,7 @@
       "output": 32768
     },
     "providers": [
-      "kilo",
-      "nano-gpt",
       "opencode",
-      "openrouter",
-      "pioneer",
       "poolside",
       "vercel",
       "vultr"
@@ -88,10 +84,8 @@
       "output": 32768
     },
     "providers": [
-      "kilo",
       "llmtr",
       "nvidia",
-      "openrouter",
       "poolside"
     ]
   },

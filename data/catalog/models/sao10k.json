@@ -146,7 +146,6 @@
       "output": 16384
     },
     "providers": [
-      "aimlapi",
       "nano-gpt"
     ]
   },

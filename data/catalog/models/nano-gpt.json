@@ -1,0 +1,58 @@
+{
+  "nano-gpt/synth-2.5-flash": {
+    "id": "nano-gpt/synth-2.5-flash",
+    "lab": "nano-gpt",
+    "name": "Synth 2.5 Flash",
+    "released": "2026-09-05",
+    "updated": "2026-09-05",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "structured_output": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 30000,
+      "input": 30000,
+      "output": 30000
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "nano-gpt/synth-2.5-pro": {
+    "id": "nano-gpt/synth-2.5-pro",
+    "lab": "nano-gpt",
+    "name": "Synth 2.5 Pro",
+    "released": "2026-09-05",
+    "updated": "2026-09-05",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": false,
+      "structured_output": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 30000,
+      "input": 30000,
+      "output": 30000
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  }
+}

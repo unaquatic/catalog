@@ -249,6 +249,50 @@
         "cache_read": 0.0127776
       }
     },
+    "deepseek/deepseek-v4.1-flash-1017": {
+      "name": "DeepSeek V4.1 Flash 1017",
+      "family": "deepseek-flash",
+      "released": "2026-10-17",
+      "updated": "2026-10-17",
+      "knowledge": "2025-05",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": false,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 384000
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "minimal",
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "deepseek-v4.1-flash-1017",
+        "name": "DeepSeek V4.1 Flash 1017"
+      },
+      "price": {
+        "input": 0.402192,
+        "output": 1.61994,
+        "cache_read": 0.044688
+      }
+    },
     "google/gemma-3-27b-it": {
       "name": "Gemma 3 27B IT",
       "family": "gemma",

@@ -33,6 +33,34 @@
       "siliconflow"
     ]
   },
+  "meituan/longcat-2.5": {
+    "id": "meituan/longcat-2.5",
+    "lab": "meituan",
+    "name": "LongCat 2.5",
+    "family": "longcat",
+    "released": "2026-11-02",
+    "updated": "2026-11-02",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "output": 131072
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
   "meituan/longcat-2.5-preview": {
     "id": "meituan/longcat-2.5-preview",
     "lab": "meituan",
@@ -62,8 +90,7 @@
       "longcat",
       "nano-gpt",
       "opencode",
-      "opencode-go",
-      "vercel"
+      "opencode-go"
     ]
   },
   "meituan/longcat-flash-chat": {

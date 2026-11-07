@@ -62,9 +62,7 @@
     },
     "providers": [
       "aimlapi",
-      "edenai",
-      "kilo",
-      "openrouter"
+      "edenai"
     ]
   },
   "nousresearch/hermes-3-llama-3.1-70b": {
@@ -94,10 +92,7 @@
     },
     "providers": [
       "aimlapi",
-      "edenai",
-      "kilo",
-      "nano-gpt",
-      "openrouter"
+      "edenai"
     ]
   },
   "nousresearch/hermes-4-405b": {
@@ -128,7 +123,6 @@
     "providers": [
       "cortecs",
       "kilo",
-      "nano-gpt",
       "nebius",
       "openrouter"
     ]

@@ -120,10 +120,11 @@
     "reasoning": false,
     "capabilities": {
       "tools": false,
-      "attachments": false,
+      "attachments": true,
       "temperature": false,
       "input": [
-        "text"
+        "text",
+        "image"
       ],
       "output": [
         "image"
@@ -181,10 +182,11 @@
     "reasoning": false,
     "capabilities": {
       "tools": false,
-      "attachments": false,
+      "attachments": true,
       "temperature": false,
       "input": [
-        "text"
+        "text",
+        "image"
       ],
       "output": [
         "image"
@@ -210,10 +212,11 @@
     "reasoning": false,
     "capabilities": {
       "tools": false,
-      "attachments": false,
+      "attachments": true,
       "temperature": false,
       "input": [
-        "text"
+        "text",
+        "image"
       ],
       "output": [
         "image"
@@ -239,10 +242,11 @@
     "reasoning": false,
     "capabilities": {
       "tools": false,
-      "attachments": false,
+      "attachments": true,
       "temperature": false,
       "input": [
-        "text"
+        "text",
+        "image"
       ],
       "output": [
         "image"
@@ -268,10 +272,11 @@
     "reasoning": false,
     "capabilities": {
       "tools": false,
-      "attachments": false,
+      "attachments": true,
       "temperature": false,
       "input": [
-        "text"
+        "text",
+        "image"
       ],
       "output": [
         "image"
@@ -297,10 +302,11 @@
     "reasoning": false,
     "capabilities": {
       "tools": false,
-      "attachments": false,
+      "attachments": true,
       "temperature": false,
       "input": [
-        "text"
+        "text",
+        "image"
       ],
       "output": [
         "image"
@@ -357,10 +363,11 @@
     "reasoning": false,
     "capabilities": {
       "tools": false,
-      "attachments": false,
+      "attachments": true,
       "temperature": false,
       "input": [
-        "text"
+        "text",
+        "image"
       ],
       "output": [
         "image"
@@ -386,10 +393,11 @@
     "reasoning": false,
     "capabilities": {
       "tools": false,
-      "attachments": false,
+      "attachments": true,
       "temperature": false,
       "input": [
-        "text"
+        "text",
+        "image"
       ],
       "output": [
         "image"
@@ -415,10 +423,11 @@
     "reasoning": false,
     "capabilities": {
       "tools": false,
-      "attachments": false,
+      "attachments": true,
       "temperature": false,
       "input": [
-        "text"
+        "text",
+        "image"
       ],
       "output": [
         "image"

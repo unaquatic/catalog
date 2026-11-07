@@ -150,6 +150,54 @@
       "aliases": [
         "k3-256k"
       ]
+    },
+    "moonshotai/kimi-k3.1-pro": {
+      "name": "Kimi K3.1 Pro",
+      "family": "kimi-k3",
+      "released": "2026-10-23",
+      "updated": "2026-10-23",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "high",
+          "max"
+        ]
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "k3.1-pro",
+        "name": "Kimi K3.1 Pro"
+      },
+      "price": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_write": 0
+      },
+      "aliases": [
+        "k3.1-pro-highspeed"
+      ]
     }
   }
 }

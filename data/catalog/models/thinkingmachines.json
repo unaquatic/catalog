@@ -35,7 +35,6 @@
     "providers": [
       "abacus",
       "aimlapi",
-      "baseten",
       "commandcode",
       "deepinfra",
       "edenai",
@@ -53,6 +52,46 @@
       "thinkingmachines",
       "togetherai",
       "vercel"
+    ]
+  },
+  "thinkingmachines/inkling-2-small": {
+    "id": "thinkingmachines/inkling-2-small",
+    "lab": "thinkingmachines",
+    "name": "Inkling 2 Small",
+    "family": "ling",
+    "released": "2026-11-05",
+    "updated": "2026-11-05",
+    "open_weights": false,
+    "license": "Proprietary",
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "output": 131072
+    },
+    "links": [
+      {
+        "url": "https://thinkingmachines.ai/news/inkling-2-small/",
+        "type": "announcement"
+      },
+      {
+        "url": "https://thinkingmachines.ai/model-card/inkling-2-small/",
+        "type": "model_card"
+      }
+    ],
+    "providers": [
+      "opencode"
     ]
   },
   "thinkingmachines/inkling-small": {
@@ -91,7 +130,6 @@
     "providers": [
       "aimlapi",
       "arcee",
-      "baseten",
       "commandcode",
       "deepinfra",
       "edenai",
@@ -100,7 +138,6 @@
       "llmtr",
       "nano-gpt",
       "openrouter",
-      "pioneer",
       "thinkingmachines",
       "vercel"
     ]

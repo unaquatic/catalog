@@ -2,7 +2,7 @@
   "perplexity/pplx-decider-flash-v1.2": {
     "id": "perplexity/pplx-decider-flash-v1.2",
     "lab": "perplexity",
-    "name": "PPLX Decider Flash V1.2",
+    "name": "Pplx Decider Flash V1.2",
     "type": "decision",
     "released": "2026-10-16",
     "updated": "2026-10-16",
@@ -30,7 +30,7 @@
   "perplexity/pplx-decider-v1.2": {
     "id": "perplexity/pplx-decider-v1.2",
     "lab": "perplexity",
-    "name": "PPLX Decider V1.2",
+    "name": "Pplx Decider V1.2",
     "type": "decision",
     "released": "2026-10-16",
     "updated": "2026-10-16",
@@ -58,7 +58,7 @@
   "perplexity/pplx-embed-v1-0.6b": {
     "id": "perplexity/pplx-embed-v1-0.6b",
     "lab": "perplexity",
-    "name": "PPLX Embed V1 0.6B",
+    "name": "Pplx Embed V1 0.6B",
     "family": "v0",
     "type": "embedding",
     "released": "2026-02-26",
@@ -87,7 +87,7 @@
   "perplexity/pplx-embed-v1-4b": {
     "id": "perplexity/pplx-embed-v1-4b",
     "lab": "perplexity",
-    "name": "PPLX Embed V1 4B",
+    "name": "Pplx Embed V1 4B",
     "type": "embedding",
     "released": "2026-02-26",
     "updated": "2026-02-26",
