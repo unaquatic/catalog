@@ -7,6 +7,7 @@ import (
 	"errors"
 	"fmt"
 	"iter"
+	"maps"
 	"regexp"
 	"slices"
 	"strings"
@@ -67,6 +68,7 @@ type Rules struct {
 	effNames  map[gateway.Effort]string
 	tierNames map[gateway.Tier]string
 	modeNames map[string]string
+	spellings gateway.Spellings
 	reasons   []Rule
 }
 
@@ -120,7 +122,9 @@ type Rule struct {
 	// Name names Match's provider, lab, family, effort, tier or mode in the
 	// catalog, where the name the mapping would give it is wrong, as
 	// TheDrummer of thedrummer and Extra High of xhigh. A provider's name
-	// names the lab of its ID too, unless a rule names that lab.
+	// names the lab of its ID too, unless a rule names that lab. Of Match's
+	// spelling, it is how every name the catalog makes of IDs spells that
+	// word, whatever models.dev's names spell it most, as KAT of kat.
 	Name string `json:"name,omitempty"`
 	// Reasoning sets facts of how Match's models reason, which models.dev
 	// lists wrong or not at all, on their offerings at every provider, as
@@ -165,6 +169,9 @@ type Match struct {
 	Effort gateway.Effort     `json:"effort,omitempty"`
 	Tier   gateway.Tier       `json:"tier,omitempty"`
 	Mode   string             `json:"mode,omitempty"`
+	// Spelling is a word of a catalog ID, in lower case, as IDWords splits
+	// it: "kat" of kuaishou/kat-coder-pro; only a name matches it.
+	Spelling string `json:"spelling,omitempty"`
 	// Models are catalog model IDs, or a list of them; only reasoning
 	// facts match them.
 	Models Strings `json:"models,omitempty"`
@@ -211,7 +218,7 @@ func DecodeRules(data []byte) (*Rules, error) {
 	r.makers, r.segments, r.prefixes, r.bases, r.seps = make(map[string]gateway.ProviderID), make(map[string]bool),
 		make(map[gateway.ProviderID][]string), make(map[string]FinetuneBase), make(map[gateway.ProviderID][]string)
 	r.provNames, r.labNames, r.famNames, r.effNames = make(map[gateway.ProviderID]string), make(map[gateway.ProviderID]string), make(map[string]string), make(map[gateway.Effort]string)
-	r.tierNames, r.modeNames = make(map[gateway.Tier]string), make(map[string]string)
+	r.tierNames, r.modeNames, r.spellings = make(map[gateway.Tier]string), make(map[string]string), make(gateway.Spellings)
 	for i, rule := range r.Rules {
 		if err := r.add(rule); err != nil {
 			return nil, fmt.Errorf("%w: rule %d: %w", ErrRules, i+1, err)
@@ -234,8 +241,8 @@ func (r *Rules) add(rule Rule) error {
 	if says != 1 {
 		return fmt.Errorf("says %d things; a rule says one", says)
 	}
-	if (m.Lab != "" || m.Family != "" || m.Effort != "" || m.Tier != "" || m.Mode != "") && rule.Name == "" {
-		return errors.New("a match of lab, family, effort, tier or mode is for a name")
+	if (m.Lab != "" || m.Family != "" || m.Effort != "" || m.Tier != "" || m.Mode != "" || m.Spelling != "") && rule.Name == "" {
+		return errors.New("a match of lab, family, effort, tier, mode or spelling is for a name")
 	}
 	if len(m.Models) > 0 && rule.Reasoning == nil {
 		return errors.New("a match of models is for reasoning")
@@ -347,15 +354,22 @@ func (r *Rules) add(rule Rule) error {
 		r.reasons = append(r.reasons, rule)
 	case rule.Name != "":
 		matched := 0
-		for _, set := range []bool{len(m.Provider) == 1, m.Lab != "", m.Family != "", m.Effort != "", m.Tier != "", m.Mode != ""} {
+		for _, set := range []bool{len(m.Provider) == 1, m.Lab != "", m.Family != "", m.Effort != "", m.Tier != "", m.Mode != "", m.Spelling != ""} {
 			if set {
 				matched++
 			}
 		}
 		if matched != 1 || len(m.Provider) > 1 {
-			return errors.New("a name needs a match of one provider, lab, family, effort, tier or mode")
+			return errors.New("a name needs a match of one provider, lab, family, effort, tier, mode or spelling")
 		}
 		switch {
+		case m.Spelling != "":
+			if m.Spelling != strings.ToLower(m.Spelling) || !strings.EqualFold(rule.Name, m.Spelling) {
+				return fmt.Errorf("spelling %q is a word in lower case, and its name %q that word in other case", m.Spelling, rule.Name)
+			}
+			if _, ok := r.spellings[m.Spelling]; !ok {
+				r.spellings[m.Spelling] = rule.Name
+			}
 		case len(m.Provider) == 1:
 			if _, ok := r.provNames[gateway.ProviderID(m.Provider[0])]; !ok {
 				r.provNames[gateway.ProviderID(m.Provider[0])] = rule.Name
@@ -465,6 +479,10 @@ func (r *Rules) FamilyName(family string) (string, bool) {
 	n, ok := r.famNames[family]
 	return n, ok
 }
+
+// Spellings returns the words of IDs the rules spell, each with its
+// spelling.
+func (r *Rules) Spellings() iter.Seq2[string, string] { return maps.All(r.spellings) }
 
 // AddedLabs returns the labs the rules add to models.dev's.
 func (r *Rules) AddedLabs() iter.Seq[gateway.ProviderID] { return slices.Values(r.added) }

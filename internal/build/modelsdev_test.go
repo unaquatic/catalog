@@ -187,6 +187,8 @@ func TestNames(t *testing.T) {
 		`{"match": {"provider": "anthropic"}, "name": "Anthropic PBC"}`,
 		`{"match": {"family": "claude-opus"}, "name": "Opus"}`,
 		`{"match": {"family": "claude-opus"}, "name": "Not Opus"}`,
+		`{"match": {"spelling": "sol"}, "name": "SOL"}`,
+		`{"match": {"spelling": "sol"}, "name": "sOL"}`,
 	})
 	c, _, err := FromModelsDev(loadFixture(t), opts)
 	if err != nil {
@@ -198,6 +200,9 @@ func TestNames(t *testing.T) {
 		{c.Providers["anthropic"].Name, "Anthropic PBC", "a provider's name rule"},
 		{c.Labs["anthropic"].Name, "Anthropic PBC", "the name rule of the provider of the lab's ID"},
 		{c.Families["claude-opus"].Name, "Opus", "the first of two rules' family names"},
+		{c.Families["gpt-sol"].Name, "GPT SOL", "the first of two rules' spellings, over the names' votes"},
+		{c.Models["openai/gpt-6.1-sol"].Name, "GPT-6.1 SOL", "a model's name, spelt by the rules"},
+		{c.Spellings["sol"], "SOL", "the catalog's spellings, as the rules spell"},
 	} {
 		if tt.got != tt.want {
 			t.Errorf("name %q, want %q: %s", tt.got, tt.want, tt.why)
