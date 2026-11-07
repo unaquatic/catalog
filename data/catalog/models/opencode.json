@@ -59,6 +59,38 @@
       "opencode-go"
     ]
   },
+  "opencode/crouton-alpha-free": {
+    "id": "opencode/crouton-alpha-free",
+    "lab": "opencode",
+    "name": "Crouton Alpha Free",
+    "released": "2026-11-03",
+    "updated": "2026-11-03",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "output": 270000
+    },
+    "providers": [
+      "opencode",
+      "opencode-go"
+    ]
+  },
   "opencode/exo-free": {
     "id": "opencode/exo-free",
     "lab": "opencode",
@@ -115,6 +147,58 @@
       "opencode"
     ]
   },
+  "opencode/iceman-contributor-free": {
+    "id": "opencode/iceman-contributor-free",
+    "lab": "opencode",
+    "name": "Iceman Contributor Free",
+    "released": "2026-10-24",
+    "updated": "2026-10-24",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 131072
+    },
+    "providers": [
+      "opencode-go"
+    ]
+  },
+  "opencode/iceman-free": {
+    "id": "opencode/iceman-free",
+    "lab": "opencode",
+    "name": "Iceman Free",
+    "released": "2026-11-06",
+    "updated": "2026-11-06",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 131072
+    },
+    "providers": [
+      "opencode"
+    ]
+  },
   "opencode/ll-alpha-free": {
     "id": "opencode/ll-alpha-free",
     "lab": "opencode",
@@ -139,6 +223,34 @@
     "limit": {
       "context": 262144,
       "output": 65536
+    },
+    "providers": [
+      "opencode"
+    ]
+  },
+  "opencode/pulse-alpha-free": {
+    "id": "opencode/pulse-alpha-free",
+    "lab": "opencode",
+    "name": "Pulse Alpha Free",
+    "released": "2026-11-02",
+    "updated": "2026-11-02",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "output": 131072
     },
     "providers": [
       "opencode"

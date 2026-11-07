@@ -1,4 +1,38 @@
 {
+  "stealth/crouton-alpha": {
+    "id": "stealth/crouton-alpha",
+    "lab": "stealth",
+    "name": "Crouton Alpha",
+    "family": "alpha",
+    "released": "2026-11-03",
+    "updated": "2026-11-03",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video",
+        "pdf",
+        "audio"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "output": 943718
+    },
+    "providers": [
+      "kilo",
+      "openrouter"
+    ]
+  },
   "stealth/glyph-cluster": {
     "id": "stealth/glyph-cluster",
     "lab": "stealth",

@@ -426,35 +426,6 @@
         "name": "Grok Imagine Image"
       }
     },
-    "xai/grok-imagine-image-quality": {
-      "name": "Grok Imagine Image Quality",
-      "family": "grok",
-      "type": "image",
-      "released": "2026-04-03",
-      "updated": "2026-04-03",
-      "open_weights": false,
-      "capabilities": {
-        "tools": false,
-        "attachments": true,
-        "temperature": false,
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "image"
-        ]
-      },
-      "limit": {
-        "context": 16000,
-        "output": 0
-      },
-      "provider_options": {
-        "id": "grok-imagine-image-quality",
-        "name": "Grok Imagine Image Quality"
-      },
-      "status": "deprecated"
-    },
     "xai/grok-imagine-video": {
       "name": "Grok Imagine Video",
       "family": "grok",

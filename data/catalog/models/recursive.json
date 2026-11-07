@@ -59,7 +59,7 @@
     "family": "flint",
     "released": "2026-10-21",
     "updated": "2026-10-21",
-    "open_weights": false,
+    "open_weights": true,
     "reasoning": true,
     "capabilities": {
       "tools": true,
@@ -78,7 +78,6 @@
       "output": 235929
     },
     "providers": [
-      "kilo",
       "openrouter"
     ]
   }

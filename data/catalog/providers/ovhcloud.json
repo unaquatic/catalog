@@ -304,38 +304,6 @@
         "output": 0.74
       }
     },
-    "mistral/mistral-nemo": {
-      "name": "Mistral Nemo",
-      "family": "mistral-nemo",
-      "released": "2024-07-18",
-      "updated": "2024-07-18",
-      "knowledge": "2024-07",
-      "open_weights": true,
-      "capabilities": {
-        "tools": true,
-        "attachments": false,
-        "structured_output": true,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 65536,
-        "output": 65536
-      },
-      "provider_options": {
-        "id": "mistral-nemo-instruct-2407",
-        "name": "Mistral-Nemo-Instruct-2407"
-      },
-      "price": {
-        "input": 0.14,
-        "output": 0.14
-      }
-    },
     "mistral/mistral-small-3.2-24b-instruct": {
       "name": "Mistral Small 3.2 24B Instruct",
       "family": "mistral-small",

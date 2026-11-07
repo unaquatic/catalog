@@ -1130,7 +1130,8 @@
       "price": {
         "input": 0.09,
         "output": 0.18,
-        "cache_read": 0.018
+        "cache_read": 0.018,
+        "cache_write": 0.1125
       }
     },
     "deepseek/deepseek-v4-flash-0731": {
@@ -1986,7 +1987,8 @@
       "price": {
         "input": 0.68,
         "output": 3.4,
-        "cache_read": 0.136
+        "cache_read": 0.136,
+        "cache_write": 0.85
       },
       "status": "deprecated"
     },
@@ -2027,7 +2029,8 @@
       "price": {
         "input": 2.85,
         "output": 14.25,
-        "cache_read": 0.285
+        "cache_read": 0.285,
+        "cache_write": 3.5625
       }
     },
     "nvidia/llama-3.3-nemotron-super-49b-v1.5": {
@@ -2286,7 +2289,8 @@
         "input": 1,
         "output": 2.7,
         "cache_read": 0.1
-      }
+      },
+      "status": "deprecated"
     },
     "tencent/hy3": {
       "name": "Hy3",
@@ -2829,7 +2833,8 @@
       "price": {
         "input": 0.75,
         "output": 2.4,
-        "cache_read": 0.14
+        "cache_read": 0.14,
+        "cache_write": 0.9375
       }
     },
     "zhipuai/glm-5.3": {

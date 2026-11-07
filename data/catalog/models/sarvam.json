@@ -54,7 +54,6 @@
       "output": 128000
     },
     "providers": [
-      "fastrouter",
       "sarvam"
     ]
   },
