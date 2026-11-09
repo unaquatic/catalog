@@ -24,12 +24,8 @@ const DefaultTimeout = 30 * time.Second
 
 // Response is the result of a catalog fetch.
 type Response struct {
-	// Data is the catalog document. It is nil when NotModified is set.
+	// Data is the catalog document.
 	Data []byte
-	// ETag is the validator for Data, if the source supplied one.
-	ETag string
-	// NotModified reports that the supplied validator is still current.
-	NotModified bool
 }
 
 // Fetcher loads catalog documents from a models.dev compatible source.
@@ -50,23 +46,19 @@ func NewFetcher(source string, client *http.Client) *Fetcher {
 	return &Fetcher{client: client, source: source}
 }
 
-// Fetch returns the catalog document. When etag is non-empty the source may
-// report that the cached copy is still current.
-func (f *Fetcher) Fetch(ctx context.Context, etag string) (*Response, error) {
-	return f.FetchPath(ctx, documentPath, etag)
+// Fetch returns the catalog document.
+func (f *Fetcher) Fetch(ctx context.Context) (*Response, error) {
+	return f.FetchPath(ctx, documentPath)
 }
 
 // FetchPath returns the document at path of the source, such as
 // BundlePath, as Fetch returns the catalog document.
-func (f *Fetcher) FetchPath(ctx context.Context, path, etag string) (*Response, error) {
+func (f *Fetcher) FetchPath(ctx context.Context, path string) (*Response, error) {
 	req, err := http.NewRequestWithContext(ctx, http.MethodGet, f.source+path, nil)
 	if err != nil {
 		return nil, fmt.Errorf("catalog: build request: %w", err)
 	}
 	req.Header.Set("Accept", "application/json")
-	if etag != "" {
-		req.Header.Set("If-None-Match", etag)
-	}
 
 	resp, err := f.client.Do(req)
 	if err != nil {
@@ -74,9 +66,6 @@ func (f *Fetcher) FetchPath(ctx context.Context, path, etag string) (*Response, 
 	}
 	defer resp.Body.Close()
 
-	if resp.StatusCode == http.StatusNotModified {
-		return &Response{ETag: etag, NotModified: true}, nil
-	}
 	if resp.StatusCode != http.StatusOK {
 		return nil, fmt.Errorf("catalog: fetch: unexpected status %s", resp.Status)
 	}
@@ -90,5 +79,5 @@ func (f *Fetcher) FetchPath(ctx context.Context, path, etag string) (*Response, 
 	if len(data) > maxDocument {
 		return nil, fmt.Errorf("catalog: document exceeds %d bytes", maxDocument)
 	}
-	return &Response{Data: data, ETag: resp.Header.Get("ETag")}, nil
+	return &Response{Data: data}, nil
 }
