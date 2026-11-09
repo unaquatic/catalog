@@ -23,10 +23,8 @@ const cacheMode = 0o600
 // ErrNoCache reports that no catalog cache is present.
 var ErrNoCache = errors.New("no catalog cache")
 
-// Entry is a cached catalog payload and the metadata needed to revalidate it.
+// Entry is a cached catalog payload and when it was fetched and checked.
 type Entry struct {
-	// ETag is the validator returned with the payload, if any.
-	ETag string `json:"etag,omitempty"`
 	// Fetched is when the source last confirmed the payload.
 	Fetched time.Time `json:"fetched"`
 	// Checked is when the source was last asked, whether or not it

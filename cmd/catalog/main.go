@@ -204,7 +204,7 @@ func ReadSource(ctx context.Context, o SourceOptions) (data []byte, source strin
 		data, err = os.ReadFile(o.In)
 		return data, o.In, err
 	}
-	resp, err := modelsdev.NewFetcher(o.Source, nil).FetchPath(ctx, modelsdev.BundlePath, "")
+	resp, err := modelsdev.NewFetcher(o.Source, nil).FetchPath(ctx, modelsdev.BundlePath)
 	if err != nil {
 		return nil, "", err
 	}
@@ -326,7 +326,7 @@ func Snapshot(ctx context.Context, o SnapshotOptions, stderr io.Writer) error {
 			return fmt.Errorf("the embedded catalog: %w", err)
 		}
 	} else {
-		resp, err := modelsdev.NewFetcher(o.Source, nil).FetchPath(ctx, gateway.DocumentPath, "")
+		resp, err := modelsdev.NewFetcher(o.Source, nil).FetchPath(ctx, gateway.DocumentPath)
 		if err != nil {
 			return err
 		}

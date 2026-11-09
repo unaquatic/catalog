@@ -175,28 +175,17 @@ func (s *Store) dueFor(entry *modelsdev.Entry) bool {
 func (s *Store) Refresh(ctx context.Context) (*Catalog, error) {
 	ctx, cancel := context.WithTimeout(ctx, modelsdev.DefaultTimeout)
 	defer cancel()
-	prev := s.cached()
-	var etag string
-	if prev != nil && len(prev.Data) > 0 {
-		etag = prev.ETag
-	}
-	resp, err := s.fetcher.FetchPath(ctx, DocumentPath, etag)
+	resp, err := s.fetcher.FetchPath(ctx, DocumentPath)
 	if err != nil {
 		return nil, fmt.Errorf("%w: %w", ErrSource, err)
 	}
 	data := resp.Data
-	if resp.NotModified {
-		if etag == "" {
-			return nil, fmt.Errorf("%w: it reported no change without a cached copy", ErrSource)
-		}
-		data = prev.Data
-	}
 	c, err := Decode(data)
 	if err != nil {
 		return nil, fmt.Errorf("%w: %w", ErrSource, err)
 	}
 	now := time.Now()
-	if err := s.cache.Store(&modelsdev.Entry{ETag: resp.ETag, Fetched: now, Checked: now, Data: data}); err != nil {
+	if err := s.cache.Store(&modelsdev.Entry{Fetched: now, Checked: now, Data: data}); err != nil {
 		return nil, err
 	}
 	return c, nil

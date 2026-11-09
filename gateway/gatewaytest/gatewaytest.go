@@ -78,18 +78,17 @@ func WriteCache(t testing.TB, dir string, c *gateway.Catalog) {
 }
 
 // Entry is a Store's cached download: the catalog document as the server
-// sent it, its ETag, and when it was fetched.
+// sent it, and when it was fetched.
 type Entry struct {
 	Data    []byte
-	ETag    string
 	Fetched time.Time
 }
 
 // WriteEntry writes e into dir as a Store's cached download, as a test of a
-// stale or a validated cache needs it.
+// fresh or a stale cache needs it.
 func WriteEntry(t testing.TB, dir string, e Entry) {
 	t.Helper()
-	if err := modelsdev.NewCacheFile(dir, gateway.StoreFile).Store(&modelsdev.Entry{Data: e.Data, ETag: e.ETag, Fetched: e.Fetched}); err != nil {
+	if err := modelsdev.NewCacheFile(dir, gateway.StoreFile).Store(&modelsdev.Entry{Data: e.Data, Fetched: e.Fetched}); err != nil {
 		t.Fatal(err)
 	}
 }
