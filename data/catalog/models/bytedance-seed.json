@@ -734,7 +734,6 @@
       "output": 256000
     },
     "providers": [
-      "nano-gpt",
       "ofox",
       "volcengine"
     ]

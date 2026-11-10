@@ -15,6 +15,60 @@
   },
   "doc": "https://dev.meta.ai/docs",
   "models": {
+    "meta/muse-ember-1.0": {
+      "name": "Muse Ember 1.0",
+      "family": "muse",
+      "released": "2026-11-09",
+      "updated": "2026-11-09",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "video",
+          "pdf",
+          "audio"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 524288
+      },
+      "reasoning": {
+        "efforts": [
+          "minimal",
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ]
+      },
+      "provider_options": {
+        "id": "muse-ember-1.0",
+        "name": "Muse Ember"
+      },
+      "price": {
+        "input": 0.1,
+        "output": 0.5,
+        "cache_read": 0.004,
+        "tiers": [
+          {
+            "above": 200000,
+            "input": 0.3,
+            "output": 1.5,
+            "cache_read": 0.012
+          }
+        ]
+      }
+    },
     "meta/muse-spark-1.1": {
       "name": "Muse Spark 1.1",
       "family": "muse",

@@ -1136,6 +1136,83 @@
       "helicone"
     ]
   },
+  "meta/muse-ember": {
+    "id": "meta/muse-ember",
+    "lab": "meta",
+    "name": "Muse Ember",
+    "family": "muse",
+    "released": "2026-11-09",
+    "updated": "2026-11-09",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video",
+        "pdf",
+        "audio"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "output": 943718
+    },
+    "providers": [
+      "kilo",
+      "openrouter",
+      "vercel"
+    ]
+  },
+  "meta/muse-ember-1.0": {
+    "id": "meta/muse-ember-1.0",
+    "lab": "meta",
+    "name": "Muse Ember 1.0",
+    "family": "muse",
+    "released": "2026-11-09",
+    "updated": "2026-11-09",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image",
+        "video",
+        "pdf",
+        "audio"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "output": 524288
+    },
+    "links": [
+      {
+        "label": "Announcement",
+        "url": "https://research.meta.ai/blog/muse-ember",
+        "type": "announcement"
+      }
+    ],
+    "providers": [
+      "llmgateway",
+      "llmgateway-providers",
+      "meta",
+      "opencode"
+    ]
+  },
   "meta/muse-glimmer-30b": {
     "id": "meta/muse-glimmer-30b",
     "lab": "meta",

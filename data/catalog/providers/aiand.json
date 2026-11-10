@@ -340,7 +340,7 @@
       "family": "kimi-k3",
       "released": "2026-10-23",
       "updated": "2026-10-23",
-      "open_weights": false,
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": true,

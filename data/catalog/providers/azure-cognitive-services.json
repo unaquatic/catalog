@@ -137,6 +137,65 @@
         "cache_write": 12.5
       }
     },
+    "anthropic/claude-fable-5-2": {
+      "name": "Claude Fable 5.2",
+      "family": "claude-fable",
+      "released": "2026-11-09",
+      "updated": "2026-11-09",
+      "knowledge": "2026-06",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "reasoning": {
+        "mandatory": true,
+        "default_enabled": true,
+        "efforts": [
+          "low",
+          "medium",
+          "high",
+          "xhigh"
+        ],
+        "default_effort": "high"
+      },
+      "provider_options": {
+        "id": "claude-fable-5-2",
+        "name": "Claude Fable 5.2",
+        "endpoint": {
+          "format": "anthropic-messages",
+          "api": "https://${AZURE_COGNITIVE_SERVICES_RESOURCE_NAME}.services.ai.azure.com/anthropic/v1",
+          "auth": {
+            "scheme": "header",
+            "header": "x-api-key"
+          },
+          "env": [
+            "AZURE_COGNITIVE_SERVICES_RESOURCE_NAME",
+            "AZURE_COGNITIVE_SERVICES_API_KEY"
+          ]
+        }
+      },
+      "price": {
+        "input": 8,
+        "output": 40,
+        "cache_read": 0.2,
+        "cache_write": 10
+      }
+    },
     "anthropic/claude-haiku-4-5": {
       "name": "Claude Haiku 4.5",
       "family": "claude-haiku",

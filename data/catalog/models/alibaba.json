@@ -3221,6 +3221,7 @@
     ],
     "providers": [
       "alibaba",
+      "chutes",
       "deepinfra",
       "empiriolabs",
       "huggingface",

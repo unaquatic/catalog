@@ -96,5 +96,36 @@
       "nano-gpt",
       "openrouter"
     ]
+  },
+  "nex-agi/nex-n2.6": {
+    "id": "nex-agi/nex-n2.6",
+    "lab": "nex-agi",
+    "name": "Nex N2.6",
+    "family": "agi",
+    "released": "2026-11-10",
+    "updated": "2026-11-10",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 235929
+    },
+    "providers": [
+      "kilo",
+      "openrouter"
+    ]
   }
 }

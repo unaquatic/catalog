@@ -1885,6 +1885,69 @@
         "cache_write": 12.5
       }
     },
+    "anthropic/claude-fable-5-2": {
+      "name": "Claude Fable 5.2",
+      "family": "claude-fable",
+      "released": "2026-11-09",
+      "updated": "2026-11-09",
+      "knowledge": "2026-06",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "reasoning": {
+        "mandatory": true,
+        "default_enabled": true,
+        "efforts": [
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ],
+        "default_effort": "high"
+      },
+      "provider_options": {
+        "id": "anthropic/claude-fable-5.2",
+        "name": "Claude Fable 5.2"
+      },
+      "price": {
+        "input": 8,
+        "output": 40,
+        "cache_read": 0.2,
+        "cache_write": 10
+      },
+      "variants": {
+        "fast": {
+          "name": "Claude Fable 5.2 Fast",
+          "tier": "fast",
+          "provider_options": {
+            "id": "anthropic/claude-fable-5.2-fast",
+            "name": "Claude Fable 5.2 (Fast)"
+          },
+          "price": {
+            "input": 16,
+            "output": 80,
+            "cache_read": 0.4,
+            "cache_write": 20
+          }
+        }
+      }
+    },
     "anthropic/claude-haiku-4-5": {
       "name": "Claude Haiku 4.5",
       "family": "claude-haiku",
@@ -5877,8 +5940,8 @@
       "name": "Text Embedding 005",
       "family": "text-embedding",
       "type": "embedding",
-      "released": "2024-08-01",
-      "updated": "2024-08-01",
+      "released": "2024-11-18",
+      "updated": "2024-11-18",
       "open_weights": false,
       "capabilities": {
         "tools": false,
@@ -5892,7 +5955,7 @@
         ]
       },
       "limit": {
-        "context": 8192,
+        "context": 2048,
         "output": 0
       },
       "provider_options": {
@@ -5914,8 +5977,8 @@
       "name": "Text Multilingual Embedding 002",
       "family": "text-embedding",
       "type": "embedding",
-      "released": "2024-03-01",
-      "updated": "2024-03-01",
+      "released": "2024-05-14",
+      "updated": "2024-05-14",
       "open_weights": false,
       "capabilities": {
         "tools": false,
@@ -5929,7 +5992,7 @@
         ]
       },
       "limit": {
-        "context": 8192,
+        "context": 2048,
         "output": 0
       },
       "provider_options": {
@@ -6986,13 +7049,7 @@
         "output": 131072
       },
       "reasoning": {
-        "mandatory": false,
-        "efforts": [
-          "none",
-          "low",
-          "medium",
-          "high"
-        ]
+        "mandatory": false
       },
       "provider_options": {
         "id": "meituan/longcat-2.5",
@@ -7159,6 +7216,48 @@
       "price": {
         "input": 0.17,
         "output": 0.66
+      }
+    },
+    "meta/muse-ember": {
+      "name": "Muse Ember",
+      "family": "muse",
+      "released": "2026-11-09",
+      "updated": "2026-11-09",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 1048576
+      },
+      "reasoning": {
+        "efforts": [
+          "minimal",
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ]
+      },
+      "provider_options": {
+        "id": "meta/muse-ember",
+        "name": "Muse Ember"
+      },
+      "price": {
+        "input": 0.1,
+        "output": 0.5,
+        "cache_read": 0.004
       }
     },
     "meta/muse-glimmer-30b": {
@@ -8959,7 +9058,7 @@
       "family": "kimi-k3",
       "released": "2026-10-23",
       "updated": "2026-10-23",
-      "open_weights": false,
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": true,
@@ -9054,6 +9153,126 @@
       "price": {
         "input": 0.9,
         "output": 1.9
+      }
+    },
+    "nace-ai/drex-max-finance": {
+      "name": "Drex Max Finance",
+      "type": "decision",
+      "released": "2026-11-09",
+      "updated": "2026-11-09",
+      "open_weights": false,
+      "capabilities": {
+        "tools": false,
+        "attachments": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 0
+      },
+      "provider_options": {
+        "id": "nace-ai/drex-max-finance",
+        "name": "Drex Max Finance",
+        "endpoint": {
+          "format": "openai-responses",
+          "api": "https://ai-gateway.vercel.sh/v1",
+          "auth": {
+            "scheme": "bearer"
+          },
+          "env": [
+            "AI_GATEWAY_API_KEY"
+          ]
+        }
+      },
+      "price": {
+        "input": 0.03,
+        "output": 0
+      }
+    },
+    "nace-ai/drex-max-v1.1": {
+      "name": "Drex Max V1.1",
+      "type": "decision",
+      "released": "2026-11-09",
+      "updated": "2026-11-09",
+      "open_weights": false,
+      "capabilities": {
+        "tools": false,
+        "attachments": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 0
+      },
+      "provider_options": {
+        "id": "nace-ai/drex-max-v1.1",
+        "name": "Drex Max v1.1",
+        "endpoint": {
+          "format": "openai-responses",
+          "api": "https://ai-gateway.vercel.sh/v1",
+          "auth": {
+            "scheme": "bearer"
+          },
+          "env": [
+            "AI_GATEWAY_API_KEY"
+          ]
+        }
+      },
+      "price": {
+        "input": 0.03,
+        "output": 0
+      }
+    },
+    "nace-ai/drex-v2.0": {
+      "name": "Drex V2.0",
+      "type": "decision",
+      "released": "2026-10-06",
+      "updated": "2026-10-12",
+      "open_weights": true,
+      "capabilities": {
+        "tools": false,
+        "attachments": false,
+        "temperature": false,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 0
+      },
+      "provider_options": {
+        "id": "nace-ai/drex-v2.0",
+        "name": "Drex 2.0",
+        "endpoint": {
+          "format": "openai-responses",
+          "api": "https://ai-gateway.vercel.sh/v1",
+          "auth": {
+            "scheme": "bearer"
+          },
+          "env": [
+            "AI_GATEWAY_API_KEY"
+          ]
+        }
+      },
+      "price": {
+        "input": 0.03,
+        "output": 0
       }
     },
     "nvidia/nemotron-3-nano-30b-a3b": {

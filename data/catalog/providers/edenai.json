@@ -199,8 +199,8 @@
         "name": "Qwen3 235B-A22B Instruct 2507 (Greenpt)"
       },
       "price": {
-        "input": 1.00485,
-        "output": 3.01455
+        "input": 1.007369,
+        "output": 3.022108
       },
       "aliases": [
         "arkanecloud/Qwen/Qwen3-235B-A22B-Instruct-2507",
@@ -400,8 +400,8 @@
         "name": "Qwen3 Coder Next (IONOS)"
       },
       "price": {
-        "input": 0.167475,
-        "output": 0.8932
+        "input": 0.167895,
+        "output": 0.89544
       },
       "aliases": [
         "amazon/qwen.qwen3-coder-next"
@@ -1013,6 +1013,54 @@
       "aliases": [
         "anthropic/claude-fable-latest"
       ]
+    },
+    "anthropic/claude-fable-5-2": {
+      "name": "Claude Fable 5.2",
+      "family": "claude-fable",
+      "released": "2026-11-09",
+      "updated": "2026-11-09",
+      "knowledge": "2026-06",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "reasoning": {
+        "mandatory": true,
+        "default_enabled": true,
+        "efforts": [
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ],
+        "default_effort": "high"
+      },
+      "provider_options": {
+        "id": "anthropic/claude-fable-5-2",
+        "name": "Claude Fable 5.2"
+      },
+      "price": {
+        "input": 8,
+        "output": 40,
+        "cache_read": 0.2,
+        "cache_write": 10
+      }
     },
     "anthropic/claude-haiku-5-5": {
       "name": "Claude Haiku 5.5",
@@ -2060,7 +2108,6 @@
         "flexai/DeepSeek-V4-Flash-0731",
         "flexai/DeepSeek-V4-Flash-0731@eu",
         "greenpt/deepseek-v4-flash-0731",
-        "nebius/deepseek-ai/DeepSeek-V4-Flash-0731",
         "scaleway/deepseek-v4-flash-0731",
         "sference/deepseek-ai/DeepSeek-V4-Flash-0731",
         "tensorx/deepseek/deepseek-v4-flash-0731"
@@ -2248,7 +2295,6 @@
         "arkanecloud/deepseek-ai/DeepSeek-V4.1-Flash",
         "deepinfra/deepseek-ai/DeepSeek-V4.1-Flash",
         "greenpt/deepseek-v4.1-flash",
-        "nebius/deepseek-ai/DeepSeek-V4.1-Flash",
         "scaleway/deepseek-v4.1-flash",
         "tencent/deepseek-v4.1-flash",
         "tensorx/deepseek/deepseek-v4.1-flash",
@@ -3665,8 +3711,8 @@
         "name": "Llama-3.3-70B-Instruct (Greenpt)"
       },
       "price": {
-        "input": 1.22815,
-        "output": 1.22815
+        "input": 1.231229,
+        "output": 1.231229
       },
       "aliases": [
         "deepinfra/meta-llama/Llama-3.3-70B-Instruct",
@@ -4304,9 +4350,9 @@
         "name": "MiniMax-M3.1-Flash"
       },
       "price": {
-        "input": 0.075,
-        "output": 0.3,
-        "cache_read": 0.0075
+        "input": 0.15,
+        "output": 0.6,
+        "cache_read": 0.015
       }
     },
     "mistral/codestral-2508": {
@@ -4594,8 +4640,8 @@
         "name": "Ministral 3 14B (Infomaniak)"
       },
       "price": {
-        "input": 0.33495,
-        "output": 0.4466
+        "input": 0.33579,
+        "output": 0.44772
       }
     },
     "mistral/ministral-3b-2512": {
@@ -5611,7 +5657,7 @@
       "family": "kimi-k3",
       "released": "2026-10-23",
       "updated": "2026-10-23",
-      "open_weights": false,
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": true,

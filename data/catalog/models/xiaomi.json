@@ -592,5 +592,34 @@
       "vercel",
       "xiaomi"
     ]
+  },
+  "xiaomi/orcacyber-mimo-flash": {
+    "id": "xiaomi/orcacyber-mimo-flash",
+    "lab": "xiaomi",
+    "name": "OrcaCyber MiMo Flash",
+    "family": "mimo",
+    "released": "2026-11-09",
+    "updated": "2026-11-09",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "structured_output": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048064,
+      "input": 1048064,
+      "output": 131072
+    },
+    "providers": [
+      "nano-gpt"
+    ]
   }
 }

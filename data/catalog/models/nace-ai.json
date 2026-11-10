@@ -1,4 +1,60 @@
 {
+  "nace-ai/drex-max-finance": {
+    "id": "nace-ai/drex-max-finance",
+    "lab": "nace-ai",
+    "name": "Drex Max Finance",
+    "type": "decision",
+    "released": "2026-11-09",
+    "updated": "2026-11-09",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
+  "nace-ai/drex-max-v1.1": {
+    "id": "nace-ai/drex-max-v1.1",
+    "lab": "nace-ai",
+    "name": "Drex Max V1.1",
+    "type": "decision",
+    "released": "2026-11-09",
+    "updated": "2026-11-09",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 0
+    },
+    "providers": [
+      "vercel"
+    ]
+  },
   "nace-ai/drex-v1.5": {
     "id": "nace-ai/drex-v1.5",
     "lab": "nace-ai",
@@ -87,6 +143,8 @@
         "type": "license"
       }
     ],
-    "providers": []
+    "providers": [
+      "vercel"
+    ]
   }
 }

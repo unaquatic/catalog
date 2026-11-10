@@ -95,35 +95,6 @@
       "llmgateway-providers"
     ]
   },
-  "zhipuai/glm-4-long": {
-    "id": "zhipuai/glm-4-long",
-    "lab": "zhipuai",
-    "name": "GLM 4 Long",
-    "family": "glm",
-    "released": "2024-01-01",
-    "updated": "2024-08-01",
-    "open_weights": false,
-    "reasoning": false,
-    "capabilities": {
-      "tools": false,
-      "attachments": false,
-      "structured_output": false,
-      "input": [
-        "text"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 1000000,
-      "input": 1000000,
-      "output": 4095
-    },
-    "providers": [
-      "nano-gpt"
-    ]
-  },
   "zhipuai/glm-4.5": {
     "id": "zhipuai/glm-4.5",
     "lab": "zhipuai",
@@ -1657,6 +1628,36 @@
     ],
     "providers": [
       "zenmux"
+    ]
+  },
+  "zhipuai/orcacyber-glm-5.3-flash": {
+    "id": "zhipuai/orcacyber-glm-5.3-flash",
+    "lab": "zhipuai",
+    "name": "OrcaCyber GLM 5.3 Flash",
+    "family": "glm",
+    "released": "2026-11-09",
+    "updated": "2026-11-09",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048064,
+      "input": 1048064,
+      "output": 131072
+    },
+    "providers": [
+      "nano-gpt"
     ]
   }
 }

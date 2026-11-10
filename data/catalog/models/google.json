@@ -4567,8 +4567,8 @@
     "name": "Text Embedding 005",
     "family": "text-embedding",
     "type": "embedding",
-    "released": "2024-08-01",
-    "updated": "2024-08-01",
+    "released": "2024-11-18",
+    "updated": "2024-11-18",
     "open_weights": false,
     "reasoning": false,
     "capabilities": {
@@ -4583,7 +4583,7 @@
       ]
     },
     "limit": {
-      "context": 8192,
+      "context": 2048,
       "output": 0
     },
     "providers": [
@@ -4596,8 +4596,8 @@
     "name": "Text Multilingual Embedding 002",
     "family": "text-embedding",
     "type": "embedding",
-    "released": "2024-03-01",
-    "updated": "2024-03-01",
+    "released": "2024-05-14",
+    "updated": "2024-05-14",
     "open_weights": false,
     "reasoning": false,
     "capabilities": {
@@ -4612,7 +4612,7 @@
       ]
     },
     "limit": {
-      "context": 8192,
+      "context": 2048,
       "output": 0
     },
     "providers": [

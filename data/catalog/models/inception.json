@@ -26,9 +26,7 @@
     "providers": [
       "aimlapi",
       "inception",
-      "kilo",
       "nano-gpt",
-      "openrouter",
       "vercel"
     ]
   },
@@ -59,8 +57,6 @@
     "providers": [
       "aimlapi",
       "inception",
-      "kilo",
-      "openrouter",
       "vercel"
     ]
   },
@@ -119,9 +115,7 @@
     },
     "providers": [
       "inception",
-      "kilo",
       "nano-gpt",
-      "openrouter",
       "vercel"
     ]
   },

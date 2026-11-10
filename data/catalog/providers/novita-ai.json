@@ -2355,7 +2355,7 @@
       "family": "kimi-k3",
       "released": "2026-10-23",
       "updated": "2026-10-23",
-      "open_weights": false,
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": true,
@@ -2671,6 +2671,50 @@
         "input": 0.14,
         "output": 0.58,
         "cache_read": 0.035
+      }
+    },
+    "tencent/hy4": {
+      "name": "Hy4",
+      "family": "Hy",
+      "released": "2026-11-04",
+      "updated": "2026-11-04",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "input": 983010,
+        "output": 64000
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "high"
+        ]
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "tencent/hy4",
+        "name": "Hy4"
+      },
+      "price": {
+        "input": 0.417,
+        "output": 1.2505,
+        "cache_read": 0.021
       }
     },
     "tencent/hy4-preview": {
@@ -3350,7 +3394,10 @@
         "input": 0.15,
         "output": 0.5,
         "cache_read": 0.03
-      }
+      },
+      "aliases": [
+        "zai-org/glm-5.3-flashX"
+      ]
     }
   }
 }

@@ -108,7 +108,8 @@
       "price": {
         "input": 0.0509,
         "output": 0.335
-      }
+      },
+      "status": "deprecated"
     },
     "alibaba/qwen3.8-27b": {
       "name": "Qwen3.8 27B",
@@ -183,7 +184,8 @@
       "price": {
         "input": 0.66,
         "output": 1
-      }
+      },
+      "status": "deprecated"
     },
     "cloudflare/clef": {
       "name": "Clef",
@@ -347,7 +349,8 @@
       "price": {
         "input": 0.497,
         "output": 4.881
-      }
+      },
+      "status": "deprecated"
     },
     "deepseek/deepseek-v4-flash-0731": {
       "name": "DeepSeek V4 Flash 0731",
@@ -389,7 +392,8 @@
         "input": 0.44,
         "output": 1.32,
         "cache_read": 0.014
-      }
+      },
+      "status": "deprecated"
     },
     "deepseek/deepseek-v4-pro-0813": {
       "name": "DeepSeek V4 Pro 0813",
@@ -430,7 +434,8 @@
         "input": 1.32,
         "output": 3.96,
         "cache_read": 0.044
-      }
+      },
+      "status": "deprecated"
     },
     "deepseek/deepseek-v4.1-flash-1017": {
       "name": "DeepSeek V4.1 Flash 1017",
@@ -573,7 +578,8 @@
       "price": {
         "input": 0.152,
         "output": 0.287
-      }
+      },
+      "status": "deprecated"
     },
     "meta/llama-3.2-11b-vision-instruct": {
       "name": "Llama 3.2 11B Vision Instruct",
@@ -638,7 +644,8 @@
       "price": {
         "input": 0.027,
         "output": 0.201
-      }
+      },
+      "status": "deprecated"
     },
     "meta/llama-3.2-3b": {
       "name": "Llama 3.2 3B",
@@ -670,7 +677,8 @@
       "price": {
         "input": 0.0509,
         "output": 0.335
-      }
+      },
+      "status": "deprecated"
     },
     "meta/llama-3.3-70b-instruct": {
       "name": "Llama 3.3 70B Instruct",
@@ -844,7 +852,8 @@
         "input": 0.95,
         "output": 4,
         "cache_read": 0.16
-      }
+      },
+      "status": "deprecated"
     },
     "moonshotai/kimi-k2.7-code": {
       "name": "Kimi K2.7 Code",
@@ -879,7 +888,8 @@
         "input": 0.95,
         "output": 4,
         "cache_read": 0.19
-      }
+      },
+      "status": "deprecated"
     },
     "nvidia/nemotron-3-super-120b-a12b": {
       "name": "Nemotron 3 Super 120B A12B",
@@ -920,7 +930,8 @@
       "price": {
         "input": 0.5,
         "output": 1.5
-      }
+      },
+      "status": "deprecated"
     },
     "openai/gpt-oss-120b": {
       "name": "GPT OSS 120B",
@@ -1076,7 +1087,8 @@
         "input": 1.4,
         "output": 4.4,
         "cache_read": 0.26
-      }
+      },
+      "status": "deprecated"
     },
     "zhipuai/glm-5.3": {
       "name": "GLM 5.3",
@@ -1155,7 +1167,8 @@
         "input": 0.15,
         "output": 0.5,
         "cache_read": 0.03
-      }
+      },
+      "status": "deprecated"
     }
   }
 }
