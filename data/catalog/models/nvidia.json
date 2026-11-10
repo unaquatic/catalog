@@ -583,7 +583,6 @@
       "commandcode",
       "digitalocean",
       "edenai",
-      "fireworks-ai",
       "kenari",
       "kilo",
       "llmgateway",
@@ -691,7 +690,6 @@
       "output": 262144
     },
     "providers": [
-      "fireworks-ai",
       "kilo",
       "nano-gpt",
       "nebius",

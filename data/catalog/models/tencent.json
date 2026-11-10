@@ -469,9 +469,11 @@
     },
     "providers": [
       "chutes",
+      "crossmodel",
       "edenai",
       "kilo",
       "nano-gpt",
+      "novita-ai",
       "opencode-go",
       "openrouter",
       "tencent-token-plan",

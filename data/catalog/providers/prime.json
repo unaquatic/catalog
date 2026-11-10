@@ -797,10 +797,10 @@
         "name": "DeepSeek V4.1 Flash"
       },
       "price": {
-        "input": 0.156,
+        "input": 0.039,
         "output": 1.2,
-        "cache_read": 0.0048,
-        "cache_write": 0.156
+        "cache_read": 0.0012,
+        "cache_write": 0.039
       }
     },
     "deepseek/deepseek-v4.1-flash-1017": {
@@ -841,10 +841,10 @@
         "name": "DeepSeek V4.1 Flash 1017"
       },
       "price": {
-        "input": 0.1092,
-        "output": 1.2,
-        "cache_read": 0.006,
-        "cache_write": 0.1092
+        "input": 0.04368,
+        "output": 0.7,
+        "cache_read": 0.0024,
+        "cache_write": 0.04368
       }
     },
     "google/gemini-3-flash-preview": {
@@ -1199,7 +1199,7 @@
       },
       "limit": {
         "context": 131072,
-        "output": 32768
+        "output": 115200
       },
       "provider_options": {
         "id": "meta-llama/llama-3.3-70b-instruct",
@@ -1234,7 +1234,7 @@
       },
       "limit": {
         "context": 1048576,
-        "output": 943718
+        "output": 131072
       },
       "reasoning": {
         "efforts": [
@@ -1468,7 +1468,7 @@
       "family": "kimi-k3",
       "released": "2026-10-23",
       "updated": "2026-10-23",
-      "open_weights": false,
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": true,
@@ -2802,10 +2802,10 @@
         "name": "GLM 5.3"
       },
       "price": {
-        "input": 0.5,
-        "output": 3.08,
-        "cache_read": 0.093,
-        "cache_write": 0.5
+        "input": 0.4,
+        "output": 2.464,
+        "cache_read": 0.0744,
+        "cache_write": 0.4
       }
     },
     "zhipuai/glm-5.3-flash": {
@@ -2844,10 +2844,10 @@
         "name": "GLM 5.3 Flash"
       },
       "price": {
-        "input": 0.15,
-        "output": 0.5,
-        "cache_read": 0.03,
-        "cache_write": 0.15
+        "input": 0.0525,
+        "output": 0.25,
+        "cache_read": 0.0105,
+        "cache_write": 0.0525
       }
     }
   }

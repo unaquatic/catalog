@@ -2,7 +2,7 @@
   "$schema": "https://aquatic.dev/catalog/schema.json",
   "version": 8,
   "source": "https://models.dev",
-  "generated": "2026-11-07T17:07:29Z",
+  "generated": "2026-11-10T07:22:02Z",
   "spellings": {
     "128e": "128E",
     "16k": "16K",
@@ -33,7 +33,6 @@
     "airx": "AirX",
     "allam": "ALLaM",
     "api": "API",
-    "asi1": "ASI1",
     "asr": "ASR",
     "assguard": "AssGuard",
     "autoglm": "AutoGLM",
@@ -311,10 +310,6 @@
     "featherless-ai": {
       "id": "featherless-ai",
       "name": "Featherless AI"
-    },
-    "fetch-ai": {
-      "id": "fetch-ai",
-      "name": "Fetch AI"
     },
     "fireworks": {
       "id": "fireworks",

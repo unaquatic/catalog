@@ -45,6 +45,7 @@
     "capabilities": {
       "tools": true,
       "attachments": true,
+      "temperature": false,
       "input": [
         "text",
         "image"
@@ -54,10 +55,12 @@
       ]
     },
     "limit": {
-      "context": 1048576,
-      "output": 131072
+      "context": 1000000,
+      "output": 262144
     },
     "providers": [
+      "opencode",
+      "opencode-go",
       "vercel"
     ]
   },

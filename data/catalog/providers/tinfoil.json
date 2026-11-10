@@ -43,9 +43,7 @@
         "mandatory": false,
         "efforts": [
           "none",
-          "minimal",
           "low",
-          "medium",
           "high",
           "xhigh",
           "max"
@@ -179,6 +177,46 @@
         "cache_read": 0.6
       }
     },
+    "moonshotai/kimi-k3.1-pro": {
+      "name": "Kimi K3.1 Pro",
+      "family": "kimi-k3",
+      "released": "2026-10-23",
+      "updated": "2026-10-23",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 131072
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "high",
+          "max"
+        ]
+      },
+      "provider_options": {
+        "id": "kimi-k3-1-pro",
+        "name": "Kimi K3.1 Pro"
+      },
+      "price": {
+        "input": 4,
+        "output": 20,
+        "cache_read": 0.4
+      }
+    },
     "nomic/nomic-embed-text": {
       "name": "Nomic Embed Text",
       "released": "2024-02-01",
@@ -270,6 +308,13 @@
       "limit": {
         "context": 131072,
         "output": 32768
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "medium",
+          "high"
+        ]
       },
       "provider_options": {
         "id": "gpt-oss-safeguard-120b",

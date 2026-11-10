@@ -440,6 +440,44 @@
         "cache_read": 0.006
       }
     },
+    "meituan/longcat-2.5": {
+      "name": "LongCat 2.5",
+      "family": "longcat",
+      "released": "2026-11-02",
+      "updated": "2026-11-02",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 262144
+      },
+      "reasoning": {
+        "mandatory": false
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "provider_options": {
+        "id": "longcat-2.5-free",
+        "name": "LongCat 2.5 Free"
+      },
+      "price": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0
+      }
+    },
     "meituan/longcat-2.5-preview": {
       "name": "LongCat 2.5 Preview",
       "family": "longcat",
@@ -839,7 +877,7 @@
       "family": "kimi-k3",
       "released": "2026-10-23",
       "updated": "2026-10-23",
-      "open_weights": false,
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": true,
@@ -1109,7 +1147,8 @@
         "input": 0,
         "output": 0,
         "cache_read": 0
-      }
+      },
+      "status": "deprecated"
     },
     "opencode/iceman-contributor-free": {
       "name": "Iceman Contributor Free",

@@ -1245,6 +1245,8 @@
       "huggingface",
       "inceptron",
       "kilo",
+      "llmgateway",
+      "llmgateway-providers",
       "melious",
       "moark",
       "morph",
@@ -1823,36 +1825,6 @@
       "nano-gpt"
     ]
   },
-  "deepseek/deepseek-v4.1-flash-1017-uncensored": {
-    "id": "deepseek/deepseek-v4.1-flash-1017-uncensored",
-    "lab": "deepseek",
-    "name": "DeepSeek V4.1 Flash 1017 Uncensored",
-    "family": "deepseek",
-    "released": "2026-10-27",
-    "updated": "2026-10-27",
-    "open_weights": true,
-    "reasoning": true,
-    "capabilities": {
-      "tools": true,
-      "attachments": true,
-      "structured_output": false,
-      "input": [
-        "text",
-        "image"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 1048576,
-      "input": 1048576,
-      "output": 393216
-    },
-    "providers": [
-      "nano-gpt"
-    ]
-  },
   "deepseek/deepseek-v4.1-flash-cyber": {
     "id": "deepseek/deepseek-v4.1-flash-cyber",
     "lab": "deepseek",
@@ -1889,14 +1861,15 @@
     "lab": "deepseek",
     "name": "DeepSeek V4.1 Flash Uncensored",
     "family": "deepseek",
-    "released": "2026-10-01",
-    "updated": "2026-10-01",
-    "open_weights": true,
+    "released": "2026-11-09",
+    "updated": "2026-11-09",
+    "open_weights": false,
     "reasoning": true,
     "capabilities": {
       "tools": true,
       "attachments": true,
       "structured_output": false,
+      "temperature": true,
       "input": [
         "text",
         "image"
@@ -1907,11 +1880,11 @@
     },
     "limit": {
       "context": 1048576,
-      "input": 1048576,
-      "output": 393216
+      "output": 1048576
     },
     "providers": [
-      "nano-gpt"
+      "llmgateway",
+      "llmgateway-providers"
     ]
   }
 }

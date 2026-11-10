@@ -38,7 +38,6 @@
       "commandcode",
       "deepinfra",
       "edenai",
-      "fireworks-ai",
       "huggingface",
       "hyper",
       "impossibl",
@@ -91,7 +90,9 @@
       }
     ],
     "providers": [
-      "opencode"
+      "kilo",
+      "opencode",
+      "openrouter"
     ]
   },
   "thinkingmachines/inkling-small": {

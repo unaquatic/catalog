@@ -412,7 +412,7 @@
       },
       "limit": {
         "context": 40960,
-        "output": 16384
+        "output": 36864
       },
       "reasoning": {
         "mandatory": false,
@@ -426,8 +426,8 @@
         "name": "Qwen: Qwen3 14B"
       },
       "price": {
-        "input": 0.12,
-        "output": 0.24
+        "input": 0.1,
+        "output": 0.22
       }
     },
     "alibaba/qwen3-235b-a22b-instruct-2507": {
@@ -1048,8 +1048,8 @@
         ]
       },
       "limit": {
-        "context": 262144,
-        "output": 235929
+        "context": 256000,
+        "output": 64000
       },
       "reasoning": {
         "mandatory": false,
@@ -1251,7 +1251,7 @@
       },
       "limit": {
         "context": 262144,
-        "output": 65536
+        "output": 81920
       },
       "reasoning": {
         "mandatory": false,
@@ -2078,6 +2078,54 @@
       "aliases": [
         "~anthropic/claude-fable-latest"
       ]
+    },
+    "anthropic/claude-fable-5-2": {
+      "name": "Claude Fable 5.2",
+      "family": "claude-fable",
+      "released": "2026-11-09",
+      "updated": "2026-11-09",
+      "knowledge": "2026-06",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "reasoning": {
+        "mandatory": true,
+        "default_enabled": true,
+        "efforts": [
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ],
+        "default_effort": "high"
+      },
+      "provider_options": {
+        "id": "anthropic/claude-fable-5.2",
+        "name": "Anthropic: Claude Fable 5.2"
+      },
+      "price": {
+        "input": 8,
+        "output": 40,
+        "cache_read": 0.2,
+        "cache_write": 10
+      }
     },
     "anthropic/claude-haiku-4-5": {
       "name": "Claude Haiku 4.5",
@@ -3797,7 +3845,7 @@
       },
       "limit": {
         "context": 1048576,
-        "output": 393216
+        "output": 943718
       },
       "reasoning": {
         "mandatory": false,
@@ -5266,8 +5314,8 @@
         ]
       },
       "limit": {
-        "context": 262144,
-        "output": 235929
+        "context": 256000,
+        "output": 128000
       },
       "reasoning": {
         "mandatory": false,
@@ -5281,9 +5329,9 @@
         "name": "Gemma 4 26B A4B IT"
       },
       "price": {
-        "input": 0.04,
-        "output": 0.15,
-        "cache_read": 0.01
+        "input": 0.034,
+        "output": 0.103,
+        "cache_read": 0.017
       }
     },
     "google/gemma-4-31b-it": {
@@ -5462,129 +5510,6 @@
         "input": 0.06,
         "output": 0.15,
         "cache_read": 0.015
-      }
-    },
-    "inception/mercury-2": {
-      "name": "Mercury 2",
-      "family": "mercury",
-      "released": "2026-02-24",
-      "updated": "2026-02-24",
-      "open_weights": false,
-      "capabilities": {
-        "tools": true,
-        "attachments": false,
-        "structured_output": true,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 128000,
-        "output": 50000
-      },
-      "reasoning": {
-        "mandatory": false,
-        "efforts": [
-          "none",
-          "low",
-          "medium",
-          "high"
-        ]
-      },
-      "provider_options": {
-        "id": "inception/mercury-2",
-        "name": "Inception: Mercury 2 (retires Nov 8)"
-      },
-      "price": {
-        "input": 0.25,
-        "output": 0.75,
-        "cache_read": 0.025
-      }
-    },
-    "inception/mercury-2.5": {
-      "name": "Mercury 2.5",
-      "family": "mercury",
-      "released": "2026-09-08",
-      "updated": "2026-09-08",
-      "open_weights": false,
-      "capabilities": {
-        "tools": true,
-        "attachments": false,
-        "structured_output": true,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 260000,
-        "output": 65536
-      },
-      "reasoning": {
-        "mandatory": false,
-        "efforts": [
-          "none",
-          "low",
-          "medium",
-          "high"
-        ]
-      },
-      "provider_options": {
-        "id": "inception/mercury-2.5",
-        "name": "Inception: Mercury 2.5 (retires Nov 8)"
-      },
-      "price": {
-        "input": 0.2,
-        "output": 0.75,
-        "cache_read": 0.02
-      }
-    },
-    "inception/mercury-3": {
-      "name": "Mercury 3",
-      "family": "mercury",
-      "released": "2026-10-16",
-      "updated": "2026-10-16",
-      "open_weights": false,
-      "capabilities": {
-        "tools": true,
-        "attachments": false,
-        "structured_output": true,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 1000000,
-        "output": 131072
-      },
-      "reasoning": {
-        "mandatory": false,
-        "efforts": [
-          "none",
-          "low",
-          "medium",
-          "high"
-        ]
-      },
-      "provider_options": {
-        "id": "inception/mercury-3",
-        "name": "Inception: Mercury 3 (retires Nov 8)"
-      },
-      "price": {
-        "input": 0.2,
-        "output": 0.7,
-        "cache_read": 0.02
       }
     },
     "inclusionai/ling-3.0-flash": {
@@ -6057,7 +5982,7 @@
       },
       "limit": {
         "context": 131072,
-        "output": 117964
+        "output": 16384
       },
       "provider_options": {
         "id": "meta-llama/llama-3.1-8b-instruct",
@@ -6120,12 +6045,12 @@
         ]
       },
       "limit": {
-        "context": 80000,
-        "output": 72000
+        "context": 131072,
+        "output": 117964
       },
       "provider_options": {
         "id": "meta-llama/llama-3.2-3b-instruct",
-        "name": "Meta: Llama 3.2 3B Instruct (retires Nov 20)"
+        "name": "Meta: Llama 3.2 3B Instruct"
       },
       "price": {
         "input": 0.05,
@@ -6152,8 +6077,8 @@
         ]
       },
       "limit": {
-        "context": 131072,
-        "output": 32768
+        "context": 128000,
+        "output": 115200
       },
       "provider_options": {
         "id": "meta-llama/llama-3.3-70b-instruct",
@@ -6193,9 +6118,9 @@
         "name": "Meta: Llama 4 Maverick"
       },
       "price": {
-        "input": 0.1875,
-        "output": 0.6525,
-        "cache_read": 0.05
+        "input": 0.35,
+        "output": 1,
+        "cache_read": 0.17
       }
     },
     "meta/llama-4-scout-17b-instruct": {
@@ -6261,6 +6186,53 @@
       "price": {
         "input": 0.144,
         "output": 0.144
+      }
+    },
+    "meta/muse-ember": {
+      "name": "Muse Ember",
+      "family": "muse",
+      "released": "2026-11-09",
+      "updated": "2026-11-09",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "video",
+          "pdf",
+          "audio"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 943718
+      },
+      "reasoning": {
+        "efforts": [
+          "minimal",
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ]
+      },
+      "provider_options": {
+        "id": "meta/muse-ember",
+        "name": "Meta: Muse Ember"
+      },
+      "price": {
+        "input": 0.1,
+        "output": 0.5,
+        "cache_read": 0.004,
+        "cache_write": 0.125
       }
     },
     "meta/muse-glimmer-30b": {
@@ -6470,7 +6442,7 @@
       },
       "limit": {
         "context": 1048576,
-        "output": 943718
+        "output": 131072
       },
       "reasoning": {
         "efforts": [
@@ -6567,44 +6539,6 @@
         "output": 0.112
       }
     },
-    "minimax/minimax-m1-80k": {
-      "name": "MiniMax M1 80K",
-      "family": "minimax",
-      "released": "2025-06-17",
-      "updated": "2025-06-17",
-      "open_weights": false,
-      "capabilities": {
-        "tools": true,
-        "attachments": false,
-        "structured_output": false,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 1000000,
-        "output": 40000
-      },
-      "reasoning": {
-        "mandatory": false,
-        "efforts": [
-          "none",
-          "high"
-        ]
-      },
-      "provider_options": {
-        "id": "minimax/minimax-m1",
-        "name": "MiniMax: MiniMax M1"
-      },
-      "price": {
-        "input": 0.55,
-        "output": 2.2
-      }
-    },
     "minimax/minimax-m2.5": {
       "name": "MiniMax M2.5",
       "family": "minimax",
@@ -6639,7 +6573,7 @@
       "price": {
         "input": 0.3,
         "output": 1.2,
-        "cache_read": 0.03
+        "cache_read": 0.06
       }
     },
     "minimax/minimax-m2.7": {
@@ -6674,9 +6608,9 @@
         "name": "MiniMax-M2.7"
       },
       "price": {
-        "input": 0.3,
-        "output": 1.2,
-        "cache_read": 0.06
+        "input": 0.21,
+        "output": 0.84,
+        "cache_read": 0.042
       }
     },
     "minimax/minimax-m3": {
@@ -7376,8 +7310,8 @@
         ]
       },
       "limit": {
-        "context": 128000,
-        "output": 16384
+        "context": 32768,
+        "output": 26214
       },
       "provider_options": {
         "id": "mistralai/mistral-small-3.2-24b-instruct",
@@ -7655,8 +7589,8 @@
         ]
       },
       "limit": {
-        "context": 262144,
-        "output": 235929
+        "context": 256000,
+        "output": 65536
       },
       "reasoning": {
         "mandatory": false,
@@ -7803,7 +7737,7 @@
       "family": "kimi-k3",
       "released": "2026-10-23",
       "updated": "2026-10-23",
-      "open_weights": false,
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": true,
@@ -7879,9 +7813,9 @@
         "name": "MoonshotAI: Kimi Latest"
       },
       "price": {
-        "input": 0.1653,
-        "output": 10.1427,
-        "cache_read": 0.16
+        "input": 0.1824,
+        "output": 10.1489,
+        "cache_read": 0.18
       }
     },
     "morph/morph-v3-fast": {
@@ -8026,6 +7960,45 @@
         "input": 0.075,
         "output": 0.25,
         "cache_read": 0.015
+      }
+    },
+    "nex-agi/nex-n2.6": {
+      "name": "Nex N2.6",
+      "family": "agi",
+      "released": "2026-11-10",
+      "updated": "2026-11-10",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 235929
+      },
+      "reasoning": {
+        "efforts": [
+          "medium",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "nex-agi/nex-n2.6",
+        "name": "Nex AGI: Nex-N2.6"
+      },
+      "price": {
+        "input": 0.15,
+        "output": 0.5,
+        "cache_read": 0.03
       }
     },
     "nousresearch/hermes-4-405b": {
@@ -10675,9 +10648,9 @@
         "name": "GPT OSS 120B"
       },
       "price": {
-        "input": 0.019,
-        "output": 0.072,
-        "cache_read": 0.017
+        "input": 0.03,
+        "output": 0.15,
+        "cache_read": 0.015
       }
     },
     "openai/gpt-oss-20b": {
@@ -10715,9 +10688,9 @@
         "name": "GPT OSS 20B"
       },
       "price": {
-        "input": 0.004,
-        "output": 0.017,
-        "cache_read": 0.003
+        "input": 0.018,
+        "output": 0.09,
+        "cache_read": 0.009
       }
     },
     "openai/gpt-oss-safeguard-20b": {
@@ -11302,10 +11275,7 @@
         "input": 0.25,
         "output": 1,
         "cache_read": 0.05
-      },
-      "aliases": [
-        "reflection/beam-free"
-      ]
+      }
     },
     "rekaai/reka-edge": {
       "name": "Reka Edge",
@@ -11729,51 +11699,6 @@
         "output": 0
       }
     },
-    "stealth/crouton-alpha": {
-      "name": "Crouton Alpha",
-      "family": "alpha",
-      "released": "2026-11-03",
-      "updated": "2026-11-03",
-      "open_weights": false,
-      "capabilities": {
-        "tools": true,
-        "attachments": true,
-        "structured_output": true,
-        "temperature": true,
-        "input": [
-          "text",
-          "image",
-          "video",
-          "pdf",
-          "audio"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 1048576,
-        "output": 943718
-      },
-      "reasoning": {
-        "efforts": [
-          "minimal",
-          "low",
-          "medium",
-          "high",
-          "xhigh",
-          "max"
-        ]
-      },
-      "provider_options": {
-        "id": "stealth/crouton-alpha",
-        "name": "Crouton Alpha"
-      },
-      "price": {
-        "input": 0,
-        "output": 0
-      }
-    },
     "stealth/glyph-cluster": {
       "name": "Glyph Cluster",
       "released": "2025-08-26",
@@ -12102,9 +12027,9 @@
         "name": "Hy3"
       },
       "price": {
-        "input": 0.0825,
-        "output": 0.33,
-        "cache_read": 0.020625
+        "input": 0.132,
+        "output": 0.528,
+        "cache_read": 0.033
       }
     },
     "tencent/hy3-preview": {
@@ -12224,9 +12149,9 @@
         "name": "Hy4 preview"
       },
       "price": {
-        "input": 0.7506,
-        "output": 2.2509,
-        "cache_read": 0.0378
+        "input": 0.834,
+        "output": 2.501,
+        "cache_read": 0.042
       }
     },
     "thedrummer/cydonia-24b-v4.1": {
@@ -12367,6 +12292,47 @@
         "input": 1,
         "output": 4.05,
         "cache_read": 0.17
+      }
+    },
+    "thinkingmachines/inkling-2-small": {
+      "name": "Inkling 2 Small",
+      "family": "ling",
+      "released": "2026-11-05",
+      "updated": "2026-11-05",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": false,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "reasoning": {
+        "efforts": [
+          "minimal",
+          "low",
+          "medium",
+          "high",
+          "max"
+        ]
+      },
+      "provider_options": {
+        "id": "thinkingmachines/inkling-2-small:free",
+        "name": "Thinking Machines: Inkling 2 Small (free)"
+      },
+      "price": {
+        "input": 0,
+        "output": 0
       }
     },
     "thinkingmachines/inkling-small": {
@@ -13054,7 +13020,7 @@
       "price": {
         "input": 0.435,
         "output": 0.87,
-        "cache_read": 0.004,
+        "cache_read": 0.0036,
         "tiers": [
           {
             "above": 256000,
@@ -13267,9 +13233,9 @@
         "name": "GLM-4.5-Air"
       },
       "price": {
-        "input": 0.13,
-        "output": 0.85,
-        "cache_read": 0.025
+        "input": 0.2,
+        "output": 1.1,
+        "cache_read": 0.03
       }
     },
     "zhipuai/glm-4.5v": {
@@ -13415,7 +13381,7 @@
         ]
       },
       "limit": {
-        "context": 202752,
+        "context": 204800,
         "output": 131072
       },
       "reasoning": {

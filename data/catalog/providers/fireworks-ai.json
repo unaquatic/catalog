@@ -248,7 +248,8 @@
       },
       "aliases": [
         "accounts/fireworks/models/deepseek-v4p1-flash-1017",
-        "accounts/fireworks/routers/deepseek-v4p1-flash-1017-spot"
+        "accounts/fireworks/routers/deepseek-v4p1-flash-1017-spot",
+        "accounts/fireworks/routers/deepseek-v4p1-flash-1017-ultrafast"
       ]
     },
     "fireworks/ember-1": {
@@ -281,10 +282,7 @@
           "medium",
           "high",
           "max"
-        ],
-        "budget": {
-          "min": 1024
-        }
+        ]
       },
       "interleaved": {
         "field": "reasoning_content"
@@ -510,10 +508,7 @@
           "medium",
           "high",
           "max"
-        ],
-        "budget": {
-          "min": 1024
-        }
+        ]
       },
       "interleaved": {
         "field": "reasoning_content"
@@ -550,164 +545,17 @@
         "accounts/fireworks/routers/kimi-latest"
       ]
     },
-    "nvidia/nemotron-3-ultra-550b-a55b": {
-      "name": "Nemotron 3 Ultra 550B A55B",
-      "family": "nemotron",
-      "released": "2026-06-04",
-      "updated": "2026-06-04",
-      "knowledge": "2025-09",
-      "open_weights": true,
-      "capabilities": {
-        "tools": true,
-        "attachments": false,
-        "structured_output": true,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 262144,
-        "output": 128000
-      },
-      "reasoning": {
-        "mandatory": false
-      },
-      "provider_options": {
-        "id": "accounts/fireworks/models/nemotron-3-ultra-nvfp4",
-        "name": "Nemotron 3 Ultra 550B A55B"
-      },
-      "price": {
-        "input": 0.6,
-        "output": 2.4,
-        "cache_read": 0.12
-      },
-      "status": "deprecated"
-    },
-    "nvidia/nemotron-3.5-lightning": {
-      "name": "Nemotron 3.5 Lightning",
-      "family": "nemotron",
-      "released": "2026-08-11",
-      "updated": "2026-08-11",
-      "knowledge": "2025-09",
-      "open_weights": true,
-      "capabilities": {
-        "tools": true,
-        "attachments": false,
-        "structured_output": true,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 262144,
-        "output": 262144
-      },
-      "reasoning": {
-        "mandatory": false
-      },
-      "provider_options": {
-        "id": "accounts/fireworks/models/nemotron-lightning-3p5-30b-a3b",
-        "name": "Nemotron 3.5 Lightning 30B A3B"
-      },
-      "price": {
-        "input": 0.05,
-        "output": 0.2,
-        "cache_read": 0.01
-      },
-      "status": "deprecated",
-      "variants": {
-        "fast": {
-          "name": "Nemotron 3.5 Lightning Fast",
-          "tier": "fast",
-          "provider_options": {
-            "body": {
-              "service_tier": "priority"
-            }
-          },
-          "price": {
-            "input": 0.0625,
-            "output": 0.25,
-            "cache_read": 0.0125
-          }
-        }
-      }
-    },
-    "openai/gpt-oss-120b": {
-      "name": "GPT OSS 120B",
-      "family": "gpt-oss",
-      "released": "2025-08-05",
-      "updated": "2025-08-05",
-      "knowledge": "2024-06",
-      "open_weights": true,
-      "capabilities": {
-        "tools": true,
-        "attachments": false,
-        "structured_output": true,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 131072,
-        "output": 32768
-      },
-      "reasoning": {
-        "efforts": [
-          "low",
-          "medium",
-          "high"
-        ]
-      },
-      "provider_options": {
-        "id": "accounts/fireworks/models/gpt-oss-120b",
-        "name": "GPT OSS 120B"
-      },
-      "price": {
-        "input": 0.15,
-        "output": 0.6,
-        "cache_read": 0.015
-      },
-      "status": "deprecated",
-      "variants": {
-        "fast": {
-          "name": "GPT OSS 120B Fast",
-          "tier": "fast",
-          "provider_options": {
-            "body": {
-              "service_tier": "priority"
-            }
-          },
-          "price": {
-            "input": 0.18,
-            "output": 0.72,
-            "cache_read": 0.018
-          }
-        }
-      }
-    },
-    "thinkingmachines/inkling": {
-      "name": "Inkling",
-      "family": "ling",
-      "released": "2026-07-15",
-      "updated": "2026-07-15",
+    "moonshotai/kimi-k3.1-pro": {
+      "name": "Kimi K3.1 Pro",
+      "family": "kimi-k3",
+      "released": "2026-10-23",
+      "updated": "2026-10-23",
       "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": true,
         "structured_output": true,
-        "temperature": true,
+        "temperature": false,
         "input": [
           "text",
           "image"
@@ -718,19 +566,46 @@
       },
       "limit": {
         "context": 1048576,
-        "output": 1048576
+        "output": 131072
       },
-      "reasoning": {},
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "medium",
+          "high",
+          "max"
+        ]
+      },
+      "interleaved": {
+        "field": "reasoning_content"
+      },
       "provider_options": {
-        "id": "accounts/fireworks/models/inkling",
-        "name": "Inkling"
+        "id": "accounts/fireworks/models/kimi-k3p1-pro",
+        "name": "Kimi K3.1 Pro"
       },
       "price": {
-        "input": 1,
-        "output": 4.05,
-        "cache_read": 0.17
+        "input": 2,
+        "output": 10,
+        "cache_read": 0.2
       },
-      "status": "deprecated"
+      "variants": {
+        "fast": {
+          "name": "Kimi K3.1 Pro Fast",
+          "tier": "fast",
+          "provider_options": {
+            "body": {
+              "service_tier": "priority"
+            }
+          },
+          "price": {
+            "input": 3,
+            "output": 15,
+            "cache_read": 0.3
+          }
+        }
+      }
     },
     "zhipuai/glm-5.3": {
       "name": "GLM 5.3",

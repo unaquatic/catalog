@@ -1057,6 +1057,7 @@
         "cache_write": 0.2
       },
       "aliases": [
+        "canopywave/qwen3.8-flash",
         "novita/qwen3.8-flash"
       ]
     },
@@ -1257,6 +1258,57 @@
       "aliases": [
         "aws-bedrock/claude-fable-5-1",
         "azure-anthropic/claude-fable-5-1"
+      ]
+    },
+    "anthropic/claude-fable-5-2": {
+      "name": "Claude Fable 5.2",
+      "family": "claude-fable",
+      "released": "2026-11-09",
+      "updated": "2026-11-09",
+      "knowledge": "2026-06",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "reasoning": {
+        "mandatory": true,
+        "default_enabled": true,
+        "efforts": [
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ],
+        "default_effort": "high"
+      },
+      "provider_options": {
+        "id": "anthropic/claude-fable-5-2",
+        "name": "Claude Fable 5.2 (Anthropic)"
+      },
+      "price": {
+        "input": 8,
+        "output": 40,
+        "cache_read": 0.2,
+        "cache_write": 10
+      },
+      "aliases": [
+        "aws-bedrock/claude-fable-5-2"
       ]
     },
     "anthropic/claude-haiku-4-5": {
@@ -2436,6 +2488,40 @@
         "tencent/deepseek-v4-flash"
       ]
     },
+    "deepseek/deepseek-v4-flash-0731": {
+      "name": "DeepSeek V4 Flash 0731",
+      "family": "deepseek-flash",
+      "released": "2026-07-31",
+      "updated": "2026-07-31",
+      "knowledge": "2025-05",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": false,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 384000
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "canopywave/deepseek-v4-flash-0731",
+        "name": "deepseek-v4-flash-0731 (CanopyWave)"
+      },
+      "price": {
+        "input": 0.44,
+        "output": 1.32,
+        "cache_read": 0.04
+      }
+    },
     "deepseek/deepseek-v4-pro": {
       "name": "DeepSeek V4 Pro",
       "family": "deepseek-thinking",
@@ -2649,6 +2735,47 @@
         "input": 0.3,
         "output": 1,
         "cache_read": 0.007
+      }
+    },
+    "deepseek/deepseek-v4.1-flash-uncensored": {
+      "name": "DeepSeek V4.1 Flash Uncensored",
+      "family": "deepseek",
+      "released": "2026-11-09",
+      "updated": "2026-11-09",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": false,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 1048576
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "high",
+          "xhigh",
+          "max"
+        ]
+      },
+      "provider_options": {
+        "id": "consensusprotocol/deepseek-v4.1-flash-uncensored",
+        "name": "DeepSeek V4.1 Flash 1017 Uncensored (HeimdaLLM) (consensusprotocol)"
+      },
+      "price": {
+        "input": 0.18,
+        "output": 0.65,
+        "cache_read": 0.005
       }
     },
     "google/gemini-3-flash-preview": {
@@ -3493,6 +3620,52 @@
       "aliases": [
         "aws-bedrock/llama-4-scout-17b-instruct"
       ]
+    },
+    "meta/muse-ember-1.0": {
+      "name": "Muse Ember 1.0",
+      "family": "muse",
+      "released": "2026-11-09",
+      "updated": "2026-11-09",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "video",
+          "pdf",
+          "audio"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 524288
+      },
+      "reasoning": {
+        "efforts": [
+          "minimal",
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ]
+      },
+      "provider_options": {
+        "id": "meta/muse-ember-1.0",
+        "name": "Muse Ember 1.0 (Meta)"
+      },
+      "price": {
+        "input": 0.1,
+        "output": 0.5,
+        "cache_read": 0.004
+      }
     },
     "meta/muse-glimmer-30b": {
       "name": "Muse Glimmer 30B",
@@ -4836,7 +5009,7 @@
       "family": "kimi-k3",
       "released": "2026-10-23",
       "updated": "2026-10-23",
-      "open_weights": false,
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": true,
@@ -4880,6 +5053,7 @@
         "inference.net/kimi-k3.1-pro",
         "moonshot/kimi-k3.1-pro",
         "moonshot/kimi-k3.1-pro-highspeed",
+        "runware/kimi-k3.1-pro",
         "scx-ai-gp/kimi-k3.1-pro"
       ]
     },

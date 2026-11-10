@@ -159,18 +159,19 @@
     "id": "baidu/ernie-5.0-thinking-preview",
     "lab": "baidu",
     "name": "ERNIE 5.0 Thinking Preview",
-    "family": "ernie",
-    "released": "2025-11-18",
-    "updated": "2025-11-18",
+    "released": "2026-01-22",
+    "updated": "2026-01-22",
+    "knowledge": "2025-01-01",
     "open_weights": false,
     "reasoning": true,
     "capabilities": {
-      "tools": false,
+      "tools": true,
       "attachments": true,
-      "structured_output": false,
+      "temperature": true,
       "input": [
         "text",
-        "image"
+        "image",
+        "video"
       ],
       "output": [
         "text"
@@ -178,41 +179,10 @@
     },
     "limit": {
       "context": 128000,
-      "input": 128000,
-      "output": 16384
-    },
-    "providers": [
-      "nano-gpt",
-      "zenmux"
-    ]
-  },
-  "baidu/ernie-5.1": {
-    "id": "baidu/ernie-5.1",
-    "lab": "baidu",
-    "name": "ERNIE 5.1",
-    "family": "ernie",
-    "released": "2026-05-10",
-    "updated": "2026-05-10",
-    "open_weights": false,
-    "reasoning": false,
-    "capabilities": {
-      "tools": false,
-      "attachments": false,
-      "structured_output": false,
-      "input": [
-        "text"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 119000,
-      "input": 119000,
       "output": 64000
     },
     "providers": [
-      "nano-gpt"
+      "zenmux"
     ]
   }
 }

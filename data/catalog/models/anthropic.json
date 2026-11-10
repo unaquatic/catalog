@@ -265,6 +265,49 @@
       "zenmux"
     ]
   },
+  "anthropic/claude-fable-5-2": {
+    "id": "anthropic/claude-fable-5-2",
+    "lab": "anthropic",
+    "name": "Claude Fable 5.2",
+    "family": "claude-fable",
+    "released": "2026-11-09",
+    "updated": "2026-11-09",
+    "knowledge": "2026-06",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1000000,
+      "output": 128000
+    },
+    "providers": [
+      "anthropic",
+      "azure",
+      "azure-cognitive-services",
+      "edenai",
+      "google-vertex",
+      "google-vertex-anthropic",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "nano-gpt",
+      "opencode",
+      "openrouter",
+      "vercel"
+    ]
+  },
   "anthropic/claude-haiku-4-5": {
     "id": "anthropic/claude-haiku-4-5",
     "lab": "anthropic",
