@@ -4,10 +4,7 @@
 package gatewaytest
 
 import (
-	"cmp"
 	"encoding/json"
-	"maps"
-	"slices"
 	"strings"
 	"testing"
 	"time"
@@ -25,20 +22,14 @@ var npms = map[modelsdev.ProviderID]string{
 
 // FromAPI returns the catalog of doc, a models.dev api.json document, as
 // production builds it, with the mapping's own rules: each provider with
-// the models it lists, all of them the catalog's, and not unlisted.
-//
-// A model that names its lab's model in canonical_model_id, such as
-// "lab-a/model-a", is that model of that lab, as a provider serving
-// another lab's model is in models.dev; the lab offers it with the same
-// modes, but is no provider of the catalog. A model that names none is the
-// model of a lab of the provider's ID, under an ID such as
-// "openai/gpt-5.6". A pro mode makes a model of its own, such as
-// "openai/gpt-5.6-pro".
-//
-// A provider that names no npm package speaks its own: Anthropic Messages
-// for anthropic, OpenAI Responses for openai, and OpenAI Chat Completions
-// for any other, at a base URL that reaches nothing unless the document
-// names one.
+// the models it lists, all of them the catalog's, and not unlisted. A
+// model listed under a lab's model ID, such as "lab-a/model-a", is that
+// lab's model, as a gateway lists another lab's; any other is the model of
+// a lab of the provider's ID, under an ID such as "openai/gpt-5.6". A pro
+// mode makes a model of its own, such as "openai/gpt-5.6-pro". A provider that
+// names no npm package speaks its own: Anthropic Messages for anthropic,
+// OpenAI Responses for openai, and OpenAI Chat Completions for any other,
+// at a base URL that reaches nothing unless the document names one.
 func FromAPI(t testing.TB, doc string) *gateway.Catalog {
 	t.Helper()
 	var api modelsdev.Catalog
@@ -46,12 +37,7 @@ func FromAPI(t testing.TB, doc string) *gateway.Catalog {
 		t.Fatalf("gatewaytest: decode api.json: %v", err)
 	}
 	b := modelsdev.Bundle{Providers: api, Models: make(map[string]modelsdev.LabModel)}
-	// The labs that are no provider of doc, with the models doc's
-	// providers serve of theirs, which the build reads their modes from.
-	labs := make(map[modelsdev.ProviderID]modelsdev.Provider)
-	providers := slices.Sorted(maps.Keys(api))
-	for _, pid := range providers {
-		p := api[pid]
+	for pid, p := range api {
 		p.ID = pid
 		if p.NPM == "" {
 			p.NPM = npms[pid]
@@ -63,12 +49,7 @@ func FromAPI(t testing.TB, doc string) *gateway.Catalog {
 			}
 		}
 		api[pid] = p
-		for _, mid := range slices.Sorted(maps.Keys(p.Models)) {
-			m := p.Models[mid]
-			id := cmp.Or(m.CanonicalModelID, string(pid)+"/"+string(mid))
-			if _, ok := b.Models[id]; ok {
-				continue
-			}
+		for mid, m := range p.Models {
 			raw, err := json.Marshal(m)
 			if err != nil {
 				t.Fatal(err)
@@ -77,30 +58,14 @@ func FromAPI(t testing.TB, doc string) *gateway.Catalog {
 			if err := json.Unmarshal(raw, &lm); err != nil {
 				t.Fatal(err)
 			}
-			lm.ID = id
-			b.Models[id] = lm
-			lab, tail, ok := strings.Cut(id, "/")
-			if !ok {
-				t.Fatalf("gatewaytest: canonical_model_id %q of %s/%s names no lab", id, pid, mid)
+			lm.ID = string(mid)
+			if !strings.Contains(lm.ID, "/") {
+				lm.ID = string(pid) + "/" + lm.ID
 			}
-			if _, ok := api[modelsdev.ProviderID(lab)]; ok {
-				continue
-			}
-			l := labs[modelsdev.ProviderID(lab)]
-			if l.Models == nil {
-				l = modelsdev.Provider{ID: modelsdev.ProviderID(lab), Models: make(map[modelsdev.ModelID]modelsdev.Model)}
-			}
-			m.ID, m.CanonicalModelID = modelsdev.ModelID(tail), ""
-			l.Models[m.ID] = m
-			labs[l.ID] = l
+			b.Models[lm.ID] = lm
 		}
 	}
-	maps.Copy(api, labs)
-	opts := build.Options{Source: "gatewaytest", Infer: true}
-	for _, pid := range providers {
-		opts.Providers = append(opts.Providers, gateway.ProviderID(pid))
-	}
-	c, _, err := build.FromModelsDev(b, opts)
+	c, _, err := build.FromModelsDev(b, build.Options{Source: "gatewaytest", Infer: true})
 	if err != nil {
 		t.Fatalf("gatewaytest: build the catalog: %v", err)
 	}
