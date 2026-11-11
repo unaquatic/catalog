@@ -1547,11 +1547,11 @@
         "cache_read": 0.145
       }
     },
-    "deepseek/deepseek-v4.1-flash": {
-      "name": "DeepSeek V4.1 Flash",
+    "deepseek/deepseek-v4.1-flash-1017": {
+      "name": "DeepSeek V4.1 Flash 1017",
       "family": "deepseek-flash",
-      "released": "2026-09-10",
-      "updated": "2026-09-10",
+      "released": "2026-10-17",
+      "updated": "2026-10-17",
       "knowledge": "2025-05",
       "open_weights": true,
       "capabilities": {
@@ -1585,7 +1585,7 @@
       },
       "provider_options": {
         "id": "deepseek-v4.1-flash",
-        "name": "DeepSeek V4.1 Flash"
+        "name": "DeepSeek V4.1 Flash 1017"
       },
       "price": {
         "input": 0.3,
@@ -1594,7 +1594,7 @@
       },
       "variants": {
         "free": {
-          "name": "DeepSeek V4.1 Flash Free",
+          "name": "DeepSeek V4.1 Flash 1017 Free",
           "tier": "free",
           "provider_options": {
             "id": "deepseek-v4.1-flash-free",
@@ -2127,6 +2127,62 @@
         "input_audio": 2
       }
     },
+    "google/gemini-4-carbon": {
+      "name": "Gemini 4 Carbon",
+      "family": "gemini",
+      "released": "2026-11-10",
+      "updated": "2026-11-10",
+      "knowledge": "2026-03",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image",
+          "video",
+          "audio",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "gemini-4-carbon",
+        "name": "Gemini 4 Carbon",
+        "endpoint": {
+          "format": "gemini",
+          "api": "https://opencode.ai/inference/google/v1beta",
+          "auth": {
+            "scheme": "header",
+            "header": "x-goog-api-key"
+          },
+          "env": [
+            "OPENCODE_API_KEY"
+          ]
+        }
+      },
+      "price": {
+        "input": 2,
+        "output": 10,
+        "cache_read": 0.1,
+        "input_audio": 2
+      }
+    },
     "inclusionai/ling-2.6-flash": {
       "name": "Ling 2.6 Flash",
       "family": "ling-flash-free",
@@ -2508,7 +2564,16 @@
         "input": 0.1,
         "output": 0.5,
         "cache_read": 0.004,
-        "cache_write": 0
+        "cache_write": 0,
+        "tiers": [
+          {
+            "above": 200000,
+            "input": 0.3,
+            "output": 1.5,
+            "cache_read": 0.012,
+            "cache_write": 0
+          }
+        ]
       }
     },
     "meta/muse-spark-1.2": {

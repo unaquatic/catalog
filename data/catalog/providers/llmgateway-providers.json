@@ -2482,6 +2482,7 @@
         "consensusprotocol/deepseek-v4-flash",
         "deepinfra/deepseek-v4-flash",
         "flexai/deepseek-v4-flash",
+        "inference.net/deepseek-v4-flash",
         "novita/deepseek-v4-flash",
         "ranoai/deepseek-v4-flash",
         "runware/deepseek-v4-flash",
@@ -2508,19 +2509,39 @@
         ]
       },
       "limit": {
-        "context": 1000000,
-        "output": 384000
+        "context": 1048576,
+        "output": 131072
       },
-      "reasoning": {},
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "minimal",
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ]
+      },
       "provider_options": {
-        "id": "canopywave/deepseek-v4-flash-0731",
-        "name": "deepseek-v4-flash-0731 (CanopyWave)"
+        "id": "baidu/deepseek-v4-flash-0731",
+        "name": "DeepSeek V4 Flash 0731 (Baidu)"
       },
       "price": {
         "input": 0.44,
         "output": 1.32,
-        "cache_read": 0.04
-      }
+        "cache_read": 0.014
+      },
+      "aliases": [
+        "alibaba/deepseek-v4-flash-0731",
+        "bytedance/deepseek-v4-flash-0731",
+        "canopywave/deepseek-v4-flash-0731",
+        "cloudflare/deepseek-v4-flash-0731",
+        "deepinfra/deepseek-v4-flash-0731",
+        "novita/deepseek-v4-flash-0731",
+        "tencent/deepseek-v4-flash-0731"
+      ]
     },
     "deepseek/deepseek-v4-pro": {
       "name": "DeepSeek V4 Pro",
@@ -3214,6 +3235,53 @@
       },
       "aliases": [
         "google-ai-studio/gemini-4-argon"
+      ]
+    },
+    "google/gemini-4-carbon": {
+      "name": "Gemini 4 Carbon",
+      "family": "gemini",
+      "released": "2026-11-10",
+      "updated": "2026-11-10",
+      "knowledge": "2026-03",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image",
+          "video",
+          "audio",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 1048576
+      },
+      "reasoning": {
+        "efforts": [
+          "medium",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "google-vertex/gemini-4-carbon",
+        "name": "Gemini 4 Carbon (Google Vertex AI)"
+      },
+      "price": {
+        "input": 4,
+        "output": 20,
+        "cache_read": 0.2,
+        "cache_write": 0.375
+      },
+      "aliases": [
+        "google-ai-studio/gemini-4-carbon"
       ]
     },
     "google/gemini-pro-latest": {

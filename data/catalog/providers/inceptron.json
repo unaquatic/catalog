@@ -174,7 +174,7 @@
       "price": {
         "input": 1.4,
         "output": 4.4,
-        "cache_read": 0.19,
+        "cache_read": 0.26,
         "cache_write": 0
       }
     },

@@ -1040,8 +1040,8 @@
         "name": "Qwen 3 235b A22B"
       },
       "price": {
-        "input": 0.0875,
-        "output": 0.35,
+        "input": 0.09,
+        "output": 0.55,
         "cache_read": 0.0175
       }
     },
@@ -1073,8 +1073,8 @@
         "name": "Qwen 3 235b A22B 2507"
       },
       "price": {
-        "input": 0.0875,
-        "output": 0.35,
+        "input": 0.09,
+        "output": 0.55,
         "cache_read": 0.0175
       }
     },
@@ -3453,8 +3453,8 @@
         "name": "Magnum v4 72B"
       },
       "price": {
-        "input": 2.006,
-        "output": 2.992,
+        "input": 2.65,
+        "output": 5.3,
         "cache_read": 1.003
       }
     },
@@ -3554,10 +3554,7 @@
         "output": 50,
         "cache_read": 0.25,
         "cache_write": 12.5
-      },
-      "aliases": [
-        "anthropic/claude-fable-latest"
-      ]
+      }
     },
     "anthropic/claude-fable-5-2": {
       "name": "Claude Fable 5.2",
@@ -3606,7 +3603,10 @@
         "output": 50,
         "cache_read": 0.25,
         "cache_write": 12.5
-      }
+      },
+      "aliases": [
+        "anthropic/claude-fable-latest"
+      ]
     },
     "anthropic/claude-haiku-4-5": {
       "name": "Claude Haiku 4.5",
@@ -4400,40 +4400,6 @@
         "anthropic/claude-sonnet-latest"
       ]
     },
-    "arcee-ai/trinity-large-thinking": {
-      "name": "Trinity Large Thinking",
-      "family": "trinity",
-      "released": "2026-04-01",
-      "updated": "2026-05-28",
-      "open_weights": true,
-      "capabilities": {
-        "tools": true,
-        "attachments": false,
-        "structured_output": false,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 262144,
-        "input": 262144,
-        "output": 80000
-      },
-      "reasoning": {},
-      "provider_options": {
-        "id": "arcee-ai/trinity-large-thinking",
-        "name": "Trinity Large Thinking"
-      },
-      "price": {
-        "input": 0.25,
-        "output": 0.9,
-        "cache_read": 0.125
-      }
-    },
     "bytedance-seed/seed-2.0-code": {
       "name": "Seed 2.0 Code",
       "family": "seed",
@@ -4885,8 +4851,8 @@
       },
       "price": {
         "input": 0.66,
-        "output": 1.98,
-        "cache_read": 0.022
+        "output": 4.0139,
+        "cache_read": 0.105
       }
     },
     "deepseek/deepseek-r1-0528": {
@@ -5257,7 +5223,7 @@
       "price": {
         "input": 0.14,
         "output": 0.28,
-        "cache_read": 0.0028
+        "cache_read": 0.028
       },
       "variants": {
         "thinking": {
@@ -5270,7 +5236,7 @@
           "price": {
             "input": 0.14,
             "output": 0.28,
-            "cache_read": 0.0028
+            "cache_read": 0.028
           }
         }
       }
@@ -5532,8 +5498,8 @@
       },
       "price": {
         "input": 0.66,
-        "output": 1.98,
-        "cache_read": 0.022
+        "output": 4.1267,
+        "cache_read": 0.0921
       },
       "variants": {
         "thinking": {
@@ -5545,8 +5511,8 @@
           },
           "price": {
             "input": 0.66,
-            "output": 1.98,
-            "cache_read": 0.022
+            "output": 4.0139,
+            "cache_read": 0.105
           }
         }
       }
@@ -5644,63 +5610,6 @@
       "aliases": [
         "TEE/deepseek-v4.1-flash"
       ]
-    },
-    "deepseek/deepseek-v4.1-flash-0910-uncensored": {
-      "name": "DeepSeek V4.1 Flash 0910 Uncensored",
-      "family": "deepseek",
-      "released": "2026-10-27",
-      "updated": "2026-10-27",
-      "open_weights": true,
-      "capabilities": {
-        "tools": true,
-        "attachments": true,
-        "structured_output": false,
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 524288,
-        "input": 524288,
-        "output": 32768
-      },
-      "reasoning": {
-        "mandatory": false,
-        "efforts": [
-          "none",
-          "low",
-          "high",
-          "max"
-        ]
-      },
-      "provider_options": {
-        "id": "deepseek/deepseek-v4.1-flash-0910-uncensored",
-        "name": "DeepSeek V4.1 Flash 0910 Uncensored"
-      },
-      "price": {
-        "input": 0.33,
-        "output": 1.32,
-        "cache_read": 0.00825
-      },
-      "variants": {
-        "thinking": {
-          "name": "DeepSeek V4.1 Flash 0910 Uncensored Thinking",
-          "mode": "thinking",
-          "provider_options": {
-            "id": "deepseek/deepseek-v4.1-flash-0910-uncensored:thinking",
-            "name": "DeepSeek V4.1 Flash 0910 Uncensored Thinking"
-          },
-          "price": {
-            "input": 0.33,
-            "output": 1.32,
-            "cache_read": 0.00825
-          }
-        }
-      }
     },
     "deepseek/deepseek-v4.1-flash-1017": {
       "name": "DeepSeek V4.1 Flash 1017",
@@ -5819,6 +5728,63 @@
             "output": 0.792,
             "cache_read": 0.0132,
             "cache_write": 0.198
+          }
+        }
+      }
+    },
+    "deepseek/deepseek-v4.1-flash-1017-uncensored": {
+      "name": "DeepSeek V4.1 Flash 1017 Uncensored",
+      "family": "deepseek",
+      "released": "2026-10-27",
+      "updated": "2026-10-27",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": false,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "input": 1048576,
+        "output": 65536
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "high",
+          "max"
+        ]
+      },
+      "provider_options": {
+        "id": "deepseek/deepseek-v4.1-flash-1017-uncensored",
+        "name": "DeepSeek V4.1 Flash 1017 Uncensored"
+      },
+      "price": {
+        "input": 0.33,
+        "output": 1.32,
+        "cache_read": 0.011
+      },
+      "variants": {
+        "thinking": {
+          "name": "DeepSeek V4.1 Flash 1017 Uncensored Thinking",
+          "mode": "thinking",
+          "provider_options": {
+            "id": "deepseek/deepseek-v4.1-flash-1017-uncensored:thinking",
+            "name": "DeepSeek V4.1 Flash 1017 Uncensored Thinking"
+          },
+          "price": {
+            "input": 0.33,
+            "output": 1.32,
+            "cache_read": 0.011
           }
         }
       }
@@ -7176,6 +7142,51 @@
         "cache_write": 0.1875
       }
     },
+    "google/gemini-4-carbon": {
+      "name": "Gemini 4 Carbon",
+      "family": "gemini",
+      "released": "2026-11-10",
+      "updated": "2026-11-10",
+      "knowledge": "2026-03",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image",
+          "video",
+          "audio",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "input": 1048576,
+        "output": 32768
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "google/gemini-4-carbon",
+        "name": "Gemini 4 Carbon"
+      },
+      "price": {
+        "input": 2,
+        "output": 10,
+        "cache_read": 0.1
+      }
+    },
     "google/gemini-exp-1206": {
       "name": "Gemini Exp 1206",
       "family": "gemini",
@@ -7627,9 +7638,9 @@
         "name": "Gemma 4 26B A4B"
       },
       "price": {
-        "input": 0.032,
-        "output": 0.095,
-        "cache_read": 0.016
+        "input": 0.01,
+        "output": 0.03,
+        "cache_read": 0.005
       },
       "variants": {
         "thinking": {
@@ -7640,9 +7651,9 @@
             "name": "Gemma 4 26B A4B Thinking"
           },
           "price": {
-            "input": 0.032,
-            "output": 0.095,
-            "cache_read": 0.016
+            "input": 0.01,
+            "output": 0.03,
+            "cache_read": 0.005
           }
         }
       }
@@ -12610,9 +12621,9 @@
             "name": "Kimi K2.6 Thinking"
           },
           "price": {
-            "input": 0.39,
-            "output": 1.8,
-            "cache_read": 0.039
+            "input": 0.88,
+            "output": 4.13,
+            "cache_read": 0.231
           }
         }
       },
@@ -13144,6 +13155,45 @@
         "input": 0.075,
         "output": 0.25,
         "cache_read": 0.015
+      }
+    },
+    "nex-agi/nex-n2.6": {
+      "name": "Nex N2.6",
+      "family": "agi",
+      "released": "2026-11-10",
+      "updated": "2026-11-10",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "input": 262144,
+        "output": 262144
+      },
+      "reasoning": {
+        "efforts": [
+          "medium",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "nex-agi/nex-n2.6",
+        "name": "Nex N2.6"
+      },
+      "price": {
+        "input": 0.15,
+        "output": 0.5,
+        "cache_read": 0.03
       }
     },
     "nousresearch/hermes-high": {
@@ -15474,9 +15524,9 @@
         "name": "GPT OSS 20B"
       },
       "price": {
-        "input": 0.02,
-        "output": 0.03,
-        "cache_read": 0.018
+        "input": 0.018,
+        "output": 0.09,
+        "cache_read": 0.009
       }
     },
     "openai/gpt-oss-safeguard-20b": {
@@ -16790,8 +16840,8 @@
         ]
       },
       "limit": {
-        "context": 32000,
-        "input": 32000,
+        "context": 32768,
+        "input": 32768,
         "output": 16384
       },
       "provider_options": {
@@ -16980,8 +17030,8 @@
         ]
       },
       "limit": {
-        "context": 131072,
-        "input": 131072,
+        "context": 65536,
+        "input": 65536,
         "output": 32768
       },
       "provider_options": {
@@ -18385,9 +18435,9 @@
         "name": "GLM 4.6"
       },
       "price": {
-        "input": 0.5,
-        "output": 2,
-        "cache_read": 0.1
+        "input": 0.55,
+        "output": 2.2,
+        "cache_read": 0.11
       },
       "variants": {
         "thinking": {
@@ -18474,9 +18524,9 @@
         "name": "GLM 4.6 Turbo"
       },
       "price": {
-        "input": 1,
-        "output": 3,
-        "cache_read": 0.5
+        "input": 0.55,
+        "output": 2.2,
+        "cache_read": 0.11
       },
       "variants": {
         "thinking": {

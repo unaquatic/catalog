@@ -330,37 +330,6 @@
         "output": 0.4
       }
     },
-    "alibaba/qwen2.5-7b-instruct": {
-      "name": "Qwen2.5 7B Instruct",
-      "family": "qwen",
-      "released": "2024-10-16",
-      "updated": "2024-10-16",
-      "open_weights": false,
-      "capabilities": {
-        "tools": true,
-        "attachments": false,
-        "structured_output": true,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 32768,
-        "output": 29491
-      },
-      "provider_options": {
-        "id": "qwen/qwen-2.5-7b-instruct",
-        "name": "Qwen: Qwen2.5 7B Instruct"
-      },
-      "price": {
-        "input": 0.1,
-        "output": 0.2
-      }
-    },
     "alibaba/qwen2.5-coder-32b-instruct": {
       "name": "Qwen2.5 Coder 32B Instruct",
       "family": "qwen",
@@ -2074,10 +2043,7 @@
         "output": 50,
         "cache_read": 0.25,
         "cache_write": 12.5
-      },
-      "aliases": [
-        "~anthropic/claude-fable-latest"
-      ]
+      }
     },
     "anthropic/claude-fable-5-2": {
       "name": "Claude Fable 5.2",
@@ -2125,7 +2091,10 @@
         "output": 40,
         "cache_read": 0.2,
         "cache_write": 10
-      }
+      },
+      "aliases": [
+        "~anthropic/claude-fable-latest"
+      ]
     },
     "anthropic/claude-haiku-4-5": {
       "name": "Claude Haiku 4.5",
@@ -2747,6 +2716,84 @@
       "aliases": [
         "~anthropic/claude-sonnet-latest"
       ]
+    },
+    "baidu/ernie-5.5-flash-preview": {
+      "name": "ERNIE 5.5 Flash Preview",
+      "family": "ernie",
+      "released": "2026-11-10",
+      "updated": "2026-11-10",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1024000,
+        "output": 921600
+      },
+      "reasoning": {
+        "efforts": [
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "baidu/ernie-5.5-flash-preview",
+        "name": "Baidu: ERNIE-5.5-Flash-Preview"
+      },
+      "price": {
+        "input": 0.28,
+        "output": 1.13,
+        "cache_read": 0.028
+      }
+    },
+    "baidu/ernie-light-dt-1.0-intl": {
+      "name": "ERNIE Light DT 1.0 Intl",
+      "family": "ernie",
+      "released": "2026-11-10",
+      "updated": "2026-11-10",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1024000,
+        "output": 131072
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "low",
+          "high",
+          "max"
+        ]
+      },
+      "provider_options": {
+        "id": "baidu/ernie-light-dt-1.0-intl",
+        "name": "Baidu: ERNIE-Light-DT-1.0"
+      },
+      "price": {
+        "input": 1.13,
+        "output": 3.94,
+        "cache_read": 0.113
+      }
     },
     "bytedance-seed/seed-1-6": {
       "name": "Seed 1.6",
@@ -3590,8 +3637,8 @@
         ]
       },
       "limit": {
-        "context": 1048575,
-        "output": 943717
+        "context": 1048576,
+        "output": 393216
       },
       "reasoning": {
         "mandatory": false,
@@ -3606,9 +3653,9 @@
         "name": "DeepSeek V4 Flash"
       },
       "price": {
-        "input": 0.091,
-        "output": 0.182,
-        "cache_read": 0.0182
+        "input": 0.09,
+        "output": 0.18,
+        "cache_read": 0.018
       }
     },
     "deepseek/deepseek-v4-flash-0731": {
@@ -4945,6 +4992,52 @@
         "reasoning": 10
       }
     },
+    "google/gemini-4-carbon": {
+      "name": "Gemini 4 Carbon",
+      "family": "gemini",
+      "released": "2026-11-10",
+      "updated": "2026-11-10",
+      "knowledge": "2026-03",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "video",
+          "audio",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 943718
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "google/gemini-4-carbon",
+        "name": "Google: Gemini 4 Carbon"
+      },
+      "price": {
+        "input": 2,
+        "output": 10,
+        "cache_read": 0.1,
+        "cache_write": 0.1875,
+        "reasoning": 10
+      }
+    },
     "google/gemini-flash-latest": {
       "name": "Gemini Flash Latest",
       "family": "gemini-flash",
@@ -5078,6 +5171,7 @@
     "google/gemini-omni-1.2-flash": {
       "name": "Gemini Omni 1.2 Flash",
       "family": "gemini",
+      "type": "video",
       "released": "2026-11-05",
       "updated": "2026-11-05",
       "open_weights": false,
@@ -5329,9 +5423,9 @@
         "name": "Gemma 4 26B A4B IT"
       },
       "price": {
-        "input": 0.034,
-        "output": 0.103,
-        "cache_read": 0.017
+        "input": 0.011,
+        "output": 0.034,
+        "cache_read": 0.006
       }
     },
     "google/gemma-4-31b-it": {
@@ -5640,7 +5734,7 @@
       "capabilities": {
         "tools": true,
         "attachments": false,
-        "structured_output": false,
+        "structured_output": true,
         "temperature": true,
         "input": [
           "text"
@@ -5885,9 +5979,9 @@
         "name": "Mancer: Weaver (alpha)"
       },
       "price": {
-        "input": 0.4,
-        "output": 0.75,
-        "cache_read": 0.4
+        "input": 0.3,
+        "output": 0.5,
+        "cache_read": 0.3
       }
     },
     "meituan/longcat-2.0": {
@@ -6231,8 +6325,7 @@
       "price": {
         "input": 0.1,
         "output": 0.5,
-        "cache_read": 0.004,
-        "cache_write": 0.125
+        "cache_read": 0.004
       }
     },
     "meta/muse-glimmer-30b": {
@@ -6441,8 +6534,8 @@
         ]
       },
       "limit": {
-        "context": 1048576,
-        "output": 131072
+        "context": 1000000,
+        "output": 262144
       },
       "reasoning": {
         "efforts": [
@@ -7814,7 +7907,7 @@
       },
       "price": {
         "input": 0.1824,
-        "output": 10.1489,
+        "output": 9.3388,
         "cache_read": 0.18
       }
     },
@@ -7878,6 +7971,45 @@
       "price": {
         "input": 0.9,
         "output": 1.9
+      }
+    },
+    "motif-technologies/motif-3": {
+      "name": "Motif 3",
+      "family": "motif",
+      "released": "2026-11-02",
+      "updated": "2026-11-02",
+      "open_weights": false,
+      "capabilities": {
+        "tools": false,
+        "attachments": false,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 235929
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "motif-technologies/motif-3",
+        "name": "Motif Technologies: Motif 3"
+      },
+      "price": {
+        "input": 0.3,
+        "output": 1.2,
+        "cache_read": 0.06
       }
     },
     "nex-agi/nex-n2.5-mini": {
@@ -12503,9 +12635,9 @@
         "name": "ReMM SLERP 13B"
       },
       "price": {
-        "input": 0.35,
-        "output": 0.65,
-        "cache_read": 0.35
+        "input": 0.3,
+        "output": 0.5,
+        "cache_read": 0.2
       }
     },
     "upstage/solar-mini4": {
@@ -13071,7 +13203,7 @@
       "price": {
         "input": 0.1,
         "output": 0.28,
-        "cache_read": 0.05
+        "cache_read": 0.003
       }
     },
     "xiaomi/mimo-v2.6-pro": {
@@ -13537,7 +13669,7 @@
         ]
       },
       "limit": {
-        "context": 202752,
+        "context": 202745,
         "output": 131072
       },
       "reasoning": {
@@ -13660,8 +13792,8 @@
         ]
       },
       "limit": {
-        "context": 1048575,
-        "output": 943717
+        "context": 1048576,
+        "output": 131072
       },
       "reasoning": {
         "efforts": [

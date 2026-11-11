@@ -766,7 +766,8 @@
         "output": 15,
         "cache_read": 0.3,
         "cache_write": 3.75
-      }
+      },
+      "status": "deprecated"
     },
     "anthropic/claude-sonnet-4-5-20250929": {
       "name": "Claude Sonnet 4.5 20250929",
@@ -809,7 +810,8 @@
         "output": 15,
         "cache_read": 0.3,
         "cache_write": 3.75
-      }
+      },
+      "status": "deprecated"
     },
     "anthropic/claude-sonnet-4-6": {
       "name": "Claude Sonnet 4.6",
