@@ -1632,8 +1632,6 @@
       "nvidia",
       "ofox",
       "ollama-cloud",
-      "opencode",
-      "opencode-go",
       "openrouter",
       "prime",
       "requesty",
@@ -1654,36 +1652,6 @@
       "wally",
       "wandb",
       "zenmux"
-    ]
-  },
-  "deepseek/deepseek-v4.1-flash-0910-uncensored": {
-    "id": "deepseek/deepseek-v4.1-flash-0910-uncensored",
-    "lab": "deepseek",
-    "name": "DeepSeek V4.1 Flash 0910 Uncensored",
-    "family": "deepseek",
-    "released": "2026-10-27",
-    "updated": "2026-10-27",
-    "open_weights": true,
-    "reasoning": true,
-    "capabilities": {
-      "tools": true,
-      "attachments": true,
-      "structured_output": false,
-      "input": [
-        "text",
-        "image"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 524288,
-      "input": 524288,
-      "output": 32768
-    },
-    "providers": [
-      "nano-gpt"
     ]
   },
   "deepseek/deepseek-v4.1-flash-1017": {
@@ -1755,6 +1723,8 @@
       "novita-ai",
       "ofox",
       "ollama-cloud",
+      "opencode",
+      "opencode-go",
       "openrouter",
       "prime",
       "requesty",
@@ -1820,6 +1790,36 @@
       "context": 512000,
       "input": 512000,
       "output": 128000
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
+  "deepseek/deepseek-v4.1-flash-1017-uncensored": {
+    "id": "deepseek/deepseek-v4.1-flash-1017-uncensored",
+    "lab": "deepseek",
+    "name": "DeepSeek V4.1 Flash 1017 Uncensored",
+    "family": "deepseek",
+    "released": "2026-10-27",
+    "updated": "2026-10-27",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "input": 1048576,
+      "output": 65536
     },
     "providers": [
       "nano-gpt"

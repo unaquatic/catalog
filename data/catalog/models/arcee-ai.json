@@ -103,8 +103,7 @@
     ],
     "providers": [
       "arcee",
-      "digitalocean",
-      "nano-gpt"
+      "digitalocean"
     ]
   },
   "arcee-ai/trinity-mini": {

@@ -32,7 +32,9 @@
       }
     ],
     "providers": [
-      "aiand"
+      "aiand",
+      "kilo",
+      "openrouter"
     ]
   }
 }

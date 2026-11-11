@@ -312,9 +312,9 @@
         "name": "Prism"
       },
       "price": {
-        "input": 3.2664,
-        "output": 16.332,
-        "cache_read": 0.32664
+        "input": 2.2,
+        "output": 11,
+        "cache_read": 0.22
       }
     },
     "hyper/prism-core": {

@@ -199,8 +199,8 @@
         "name": "Qwen3 235B-A22B Instruct 2507 (Greenpt)"
       },
       "price": {
-        "input": 1.007369,
-        "output": 3.022108
+        "input": 1.009261,
+        "output": 3.027782
       },
       "aliases": [
         "arkanecloud/Qwen/Qwen3-235B-A22B-Instruct-2507",
@@ -400,8 +400,8 @@
         "name": "Qwen3 Coder Next (IONOS)"
       },
       "price": {
-        "input": 0.167895,
-        "output": 0.89544
+        "input": 0.16821,
+        "output": 0.89712
       },
       "aliases": [
         "amazon/qwen.qwen3-coder-next"
@@ -1009,10 +1009,7 @@
         "output": 50,
         "cache_read": 0.25,
         "cache_write": 12.5
-      },
-      "aliases": [
-        "anthropic/claude-fable-latest"
-      ]
+      }
     },
     "anthropic/claude-fable-5-2": {
       "name": "Claude Fable 5.2",
@@ -1060,7 +1057,10 @@
         "output": 40,
         "cache_read": 0.2,
         "cache_write": 10
-      }
+      },
+      "aliases": [
+        "anthropic/claude-fable-latest"
+      ]
     },
     "anthropic/claude-haiku-5-5": {
       "name": "Claude Haiku 5.5",
@@ -2289,7 +2289,7 @@
       "price": {
         "input": 0.15,
         "output": 0.6,
-        "cache_read": 0.015
+        "cache_read": 0.003
       },
       "aliases": [
         "arkanecloud/deepseek-ai/DeepSeek-V4.1-Flash",
@@ -2341,7 +2341,7 @@
       "price": {
         "input": 0.15,
         "output": 0.6,
-        "cache_read": 0.015
+        "cache_read": 0.003
       },
       "aliases": [
         "arkanecloud/deepseek-ai/DeepSeek-V4.1-Flash-1017",
@@ -3310,6 +3310,58 @@
         "vertex/gemini-pro-latest"
       ]
     },
+    "google/gemini-4-carbon": {
+      "name": "Gemini 4 Carbon",
+      "family": "gemini",
+      "released": "2026-11-10",
+      "updated": "2026-11-10",
+      "knowledge": "2026-03",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image",
+          "video",
+          "audio",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "google/gemini-4-carbon",
+        "name": "Gemini 4 Carbon"
+      },
+      "price": {
+        "input": 4,
+        "output": 20,
+        "cache_read": 0.2,
+        "cache_write": 0.375,
+        "reasoning": 20,
+        "input_audio": 4
+      },
+      "aliases": [
+        "vertex/gemini-4-carbon",
+        "vertex/gemini-4-carbon@eu",
+        "vertex/gemini-4-carbon@us"
+      ]
+    },
     "google/gemini-nano-banana-2.1": {
       "name": "Gemini Nano Banana 2.1",
       "family": "gemini-flash",
@@ -3711,8 +3763,8 @@
         "name": "Llama-3.3-70B-Instruct (Greenpt)"
       },
       "price": {
-        "input": 1.231229,
-        "output": 1.231229
+        "input": 1.233541,
+        "output": 1.233541
       },
       "aliases": [
         "deepinfra/meta-llama/Llama-3.3-70B-Instruct",
@@ -4640,8 +4692,8 @@
         "name": "Ministral 3 14B (Infomaniak)"
       },
       "price": {
-        "input": 0.33579,
-        "output": 0.44772
+        "input": 0.33642,
+        "output": 0.44856
       }
     },
     "mistral/ministral-3b-2512": {

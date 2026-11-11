@@ -2398,18 +2398,29 @@
         ]
       },
       "limit": {
-        "context": 1000000,
+        "context": 1050000,
         "output": 384000
       },
-      "reasoning": {},
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "minimal",
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ]
+      },
       "provider_options": {
         "id": "deepseek-v4-flash-0731",
         "name": "deepseek-v4-flash-0731"
       },
       "price": {
-        "input": 0.44,
-        "output": 1.32,
-        "cache_read": 0.04
+        "input": 0.08,
+        "output": 0.18,
+        "cache_read": 0.016
       }
     },
     "deepseek/deepseek-v4-pro": {
@@ -3028,6 +3039,49 @@
       "provider_options": {
         "id": "gemini-4-argon",
         "name": "Gemini 4 Argon"
+      },
+      "price": {
+        "input": 4,
+        "output": 20,
+        "cache_read": 0.2,
+        "cache_write": 0.375
+      }
+    },
+    "google/gemini-4-carbon": {
+      "name": "Gemini 4 Carbon",
+      "family": "gemini",
+      "released": "2026-11-10",
+      "updated": "2026-11-10",
+      "knowledge": "2026-03",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image",
+          "video",
+          "audio",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "reasoning": {
+        "efforts": [
+          "medium",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "gemini-4-carbon",
+        "name": "Gemini 4 Carbon"
       },
       "price": {
         "input": 4,

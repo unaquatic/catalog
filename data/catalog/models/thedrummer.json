@@ -47,8 +47,8 @@
       ]
     },
     "limit": {
-      "context": 32000,
-      "input": 32000,
+      "context": 32768,
+      "input": 32768,
       "output": 16384
     },
     "providers": [
@@ -219,8 +219,8 @@
       ]
     },
     "limit": {
-      "context": 131072,
-      "input": 131072,
+      "context": 65536,
+      "input": 65536,
       "output": 32768
     },
     "providers": [

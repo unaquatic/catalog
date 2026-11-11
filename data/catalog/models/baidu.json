@@ -184,5 +184,65 @@
     "providers": [
       "zenmux"
     ]
+  },
+  "baidu/ernie-5.5-flash-preview": {
+    "id": "baidu/ernie-5.5-flash-preview",
+    "lab": "baidu",
+    "name": "ERNIE 5.5 Flash Preview",
+    "family": "ernie",
+    "released": "2026-11-10",
+    "updated": "2026-11-10",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1024000,
+      "output": 921600
+    },
+    "providers": [
+      "kilo",
+      "openrouter"
+    ]
+  },
+  "baidu/ernie-light-dt-1.0-intl": {
+    "id": "baidu/ernie-light-dt-1.0-intl",
+    "lab": "baidu",
+    "name": "ERNIE Light DT 1.0 Intl",
+    "family": "ernie",
+    "released": "2026-11-10",
+    "updated": "2026-11-10",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1024000,
+      "output": 131072
+    },
+    "providers": [
+      "kilo",
+      "openrouter"
+    ]
   }
 }

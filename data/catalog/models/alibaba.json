@@ -1199,8 +1199,6 @@
     ],
     "providers": [
       "edenai",
-      "kilo",
-      "openrouter",
       "siliconflow",
       "siliconflow-cn",
       "togetherai"
@@ -3567,7 +3565,6 @@
       "llmtr",
       "mixlayer",
       "nano-gpt",
-      "nearai",
       "nebius",
       "novita-ai",
       "ofox",
@@ -4080,6 +4077,7 @@
       "thinkingmachines",
       "umans-ai",
       "umans-ai-coding-plan",
+      "vercel",
       "wandb",
       "zenifra"
     ]

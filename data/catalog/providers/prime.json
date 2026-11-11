@@ -275,6 +275,51 @@
         "output": 50
       }
     },
+    "anthropic/claude-fable-5-2": {
+      "name": "Claude Fable 5.2",
+      "family": "claude-fable",
+      "released": "2026-11-09",
+      "updated": "2026-11-09",
+      "knowledge": "2026-06",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "reasoning": {
+        "mandatory": true,
+        "default_enabled": true,
+        "efforts": [
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ],
+        "default_effort": "high"
+      },
+      "provider_options": {
+        "id": "anthropic/claude-fable-5.2",
+        "name": "Claude Fable 5.2"
+      },
+      "price": {
+        "input": 8,
+        "output": 40
+      }
+    },
     "anthropic/claude-opus-4-6": {
       "name": "Claude Opus 4.6",
       "family": "claude-opus",
@@ -659,7 +704,7 @@
       },
       "limit": {
         "context": 1048576,
-        "output": 943717
+        "output": 393216
       },
       "reasoning": {
         "mandatory": false,
@@ -1145,6 +1190,48 @@
         "output": 10
       }
     },
+    "google/gemini-4-carbon": {
+      "name": "Gemini 4 Carbon",
+      "family": "gemini",
+      "released": "2026-11-10",
+      "updated": "2026-11-10",
+      "knowledge": "2026-03",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "audio",
+          "image",
+          "text",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 943718
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "google/gemini-4-carbon",
+        "name": "Gemini 4 Carbon"
+      },
+      "price": {
+        "input": 2,
+        "output": 10
+      }
+    },
     "google/gemma-3-27b-it": {
       "name": "Gemma 3 27B IT",
       "family": "gemma",
@@ -1234,7 +1321,7 @@
       },
       "limit": {
         "context": 1048576,
-        "output": 131072
+        "output": 262144
       },
       "reasoning": {
         "efforts": [

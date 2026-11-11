@@ -2048,6 +2048,50 @@
       "vercel"
     ]
   },
+  "google/gemini-4-carbon": {
+    "id": "google/gemini-4-carbon",
+    "lab": "google",
+    "name": "Gemini 4 Carbon",
+    "family": "gemini",
+    "released": "2026-11-10",
+    "updated": "2026-11-10",
+    "knowledge": "2026-03",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image",
+        "video",
+        "audio",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "output": 65536
+    },
+    "providers": [
+      "edenai",
+      "github-copilot",
+      "google",
+      "google-vertex",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "nano-gpt",
+      "opencode",
+      "openrouter",
+      "prime",
+      "vercel"
+    ]
+  },
   "google/gemini-deep-research": {
     "id": "google/gemini-deep-research",
     "lab": "google",
@@ -2326,6 +2370,7 @@
     "lab": "google",
     "name": "Gemini Omni 1.2 Flash",
     "family": "gemini",
+    "type": "video",
     "released": "2026-11-05",
     "updated": "2026-11-05",
     "open_weights": false,
