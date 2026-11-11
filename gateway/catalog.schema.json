@@ -536,16 +536,12 @@
           "pattern": "^\\d{4}-\\d{2}(-\\d{2})?$",
           "type": "string"
         },
-        "lab": {
-          "$ref": "#/$defs/provider_id",
-          "description": "For an unlisted offering, the ID of the lab its model ID names, if it names one."
-        },
         "limit": {
           "$ref": "#/$defs/limit",
           "description": "The model's token limits at this provider."
         },
         "name": {
-          "description": "The offering's display name: its model's name, or, for an unlisted offering, one made from its key. The provider's own name is \"provider_options.name\".",
+          "description": "The offering's display name: its model's name. The provider's own name is \"provider_options.name\".",
           "type": "string"
         },
         "open_weights": {
@@ -736,13 +732,6 @@
         "type": {
           "$ref": "#/$defs/provider_type",
           "description": "Whether the provider is official or a community one."
-        },
-        "unlisted": {
-          "additionalProperties": {
-            "$ref": "#/$defs/offering"
-          },
-          "description": "The provider's models that are not in the catalog's \"models\", by the provider's model ID.",
-          "type": "object"
         }
       },
       "required": [

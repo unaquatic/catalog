@@ -75,7 +75,6 @@ func ApplyReasoning(c *gateway.Catalog, r *Rules) []Note {
 func ListOff(c *gateway.Catalog) {
 	for _, p := range c.Providers {
 		listOff(p.Models)
-		listOff(p.Unlisted)
 	}
 }
 

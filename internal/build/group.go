@@ -2,7 +2,6 @@ package build
 
 import (
 	"cmp"
-	"fmt"
 	"maps"
 	"slices"
 	"strings"
@@ -11,8 +10,8 @@ import (
 )
 
 // Group groups each provider's listings into offerings, one per model it
-// serves, keyed by the model's ID, and its provider-specific listings into
-// Unlisted, keyed by its own IDs:
+// serves, keyed by the model's ID. A listing tied to no model, as one is
+// without Options.Infer, is left out, and listed in the report's Unknown:
 //
 //   - One listing is the offering's call, its ProviderOptions and price:
 //     of those that are no tier or mode of another, the one whose ID names
@@ -37,19 +36,12 @@ func (b *builder) Group() *gateway.Catalog {
 		prov := gateway.Provider{ID: lp.ID, Name: lp.Name, Kind: lp.Kind, Type: lp.Type, Endpoint: lp.Endpoint, Doc: lp.Doc,
 			Models: make(map[gateway.ModelID]gateway.Offering)}
 		tied := make(map[gateway.ModelID][]Listing)
-		var unlisted []Listing
 		for o := range lp.Sorted() {
 			if o.Model == "" {
-				unlisted = append(unlisted, o)
+				b.report.Unknown = append(b.report.Unknown, Note{Provider: lp.ID, Model: o.ID, Text: "models.dev ties it to no model"})
 				continue
 			}
 			tied[o.Model] = append(tied[o.Model], o)
-		}
-		for key, ls := range b.unlistedGroups(prov.ID, unlisted) {
-			if prov.Unlisted == nil {
-				prov.Unlisted = make(map[string]gateway.Offering)
-			}
-			prov.Unlisted[key] = named(b.offering(prov, gateway.ModelID(key), ls, nil), UnlistedName(key, b.spell))
 		}
 		runs := make(map[gateway.ModelID][]run)
 		for _, ls := range tied {
@@ -73,12 +65,8 @@ func (b *builder) Group() *gateway.Catalog {
 	}
 	LinkProviders(c)
 	for _, p := range c.Providers {
-		b.report.Offerings += len(p.Models) + len(p.Unlisted)
+		b.report.Offerings += len(p.Models)
 		for _, o := range p.Models {
-			b.report.Variants += len(o.Variants)
-			b.report.AliasIDs += len(o.Aliases)
-		}
-		for _, o := range p.Unlisted {
 			b.report.Variants += len(o.Variants)
 			b.report.AliasIDs += len(o.Aliases)
 		}
@@ -97,41 +85,12 @@ func named(off gateway.Offering, name string) gateway.Offering {
 	return off
 }
 
-// unlistedGroups groups a provider's unlisted listings ls into one per model
-// they serve, as offering groups a model's: a listing that is a tier or
-// mode of another, as stepOf finds it, or the other in a region its "@"
-// suffix names, as Requesty's "leanstral-1-5@eu" is, goes with the other.
-// It keys each group by the ID of the listing the others lead to, as
-// CatalogID writes it, numbering a key that two groups would share, with a
-// note.
-func (b *builder) unlistedGroups(pid gateway.ProviderID, ls []Listing) map[string][]Listing {
-	root := b.rules.unlistedRoot(ls)
-	groups := make(map[string][]Listing)
-	for _, o := range ls {
-		r := root(o.ID)
-		groups[r] = append(groups[r], o)
-	}
-	out := make(map[string][]Listing, len(groups))
-	for _, r := range slices.Sorted(maps.Keys(groups)) {
-		base := cmp.Or(CatalogID(r), "model")
-		key := base
-		for n := 2; out[key] != nil; n++ {
-			key = fmt.Sprintf("%s-%d", base, n)
-			if out[key] == nil {
-				b.note(pid, r, "its ID is another's as the catalog writes IDs; keyed %s", key)
-			}
-		}
-		out[key] = groups[r]
-	}
-	return out
-}
-
-// unlistedRoot returns the function that gives, of the ID of one of a
-// provider's unlisted listings ls, the ID of the listing it is a tier or
-// mode of, as stepOf finds it, or a region of, as its "@" suffix names it,
-// following such steps to the end: Requesty's "leanstral-1-5@eu" leads to
-// "leanstral-1-5", and Kilo's "x:free" to "x".
-func (r *Rules) unlistedRoot(ls []Listing) func(id string) string {
+// untiedRoot returns the function that gives, of the ID of one of a
+// provider's listings ls that serve no model yet, the ID of the listing it
+// is a tier or mode of, as stepOf finds it, or a region of, as its "@"
+// suffix names it, following such steps to the end: Requesty's
+// "leanstral-1-5@eu" leads to "leanstral-1-5", and Kilo's "x:free" to "x".
+func (r *Rules) untiedRoot(ls []Listing) func(id string) string {
 	listed := make(map[string]bool, len(ls))
 	for _, o := range ls {
 		listed[o.ID] = true
@@ -262,8 +221,7 @@ func known(tier gateway.Tier, mode string) bool {
 }
 
 // offering returns provider prov's offering of model m from its listings ls
-// of m and the listings rs that run m in a mode. For an unlisted listing, m
-// is its own ID.
+// of m and the listings rs that run m in a mode.
 func (b *builder) offering(prov gateway.Provider, m gateway.ModelID, ls []Listing, rs []run) gateway.Offering {
 	byID := make(map[string]Listing, len(ls))
 	steps := make(map[string]step)
@@ -325,7 +283,7 @@ func (b *builder) offering(prov gateway.Provider, m gateway.ModelID, ls []Listin
 	default:
 		return off
 	}
-	off.Family, off.Type, off.Lab = base.Family, base.Type, base.Lab
+	off.Family, off.Type = base.Family, base.Type
 	off.Released, off.Updated, off.Knowledge, off.OpenWeights = base.Released, base.Updated, base.Knowledge, base.OpenWeights
 	off.Capabilities, off.Limit, off.Reasoning, off.Interleaved = base.Capabilities, base.Limit, base.Reasoning, base.Interleaved
 	if len(roots) == 0 {

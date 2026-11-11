@@ -110,8 +110,7 @@
       "type": "Whether the provider is official or a community one.",
       "endpoint": "How to call the provider's API, unless an offering's \"provider_options\" names an endpoint of its own.",
       "doc": "URL of the provider's documentation of its models.",
-      "models": "The provider's offerings, by model ID: the keys are keys of the catalog's \"models\".",
-      "unlisted": "The provider's models that are not in the catalog's \"models\", by the provider's model ID."
+      "models": "The provider's offerings, by model ID: the keys are keys of the catalog's \"models\"."
     }
   },
   "provider_id": {
@@ -149,7 +148,7 @@
   "offering": {
     "description": "A model as one provider serves it: the model's facts at that provider, and how to call it there.",
     "properties": {
-      "name": "The offering's display name: its model's name, or, for an unlisted offering, one made from its key. The provider's own name is \"provider_options.name\".",
+      "name": "The offering's display name: its model's name. The provider's own name is \"provider_options.name\".",
       "family": "The ID of the model's family, as the provider lists it.",
       "type": "The kind of model. Absent for a language model.",
       "released": "When the model was released, as the provider lists it, as YYYY-MM-DD. Every offering lists it.",
@@ -164,8 +163,7 @@
       "price": "What a call costs. Absent when no price is listed.",
       "status": "The offering's lifecycle state. Absent when it is active.",
       "variants": "Tiers and modes the provider offers on top of the offering, by key: the tier, the mode, or both as \"mode:tier\", such as \"fast\" and \"thinking:fast\".",
-      "aliases": "Other model IDs the provider takes for this model, such as a dated snapshot or another region. They have no price or variants of their own.",
-      "lab": "For an unlisted offering, the ID of the lab its model ID names, if it names one."
+      "aliases": "Other model IDs the provider takes for this model, such as a dated snapshot or another region. They have no price or variants of their own."
     }
   },
   "provider_options": {

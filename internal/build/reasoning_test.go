@@ -74,7 +74,7 @@ func TestApplyReasoning(t *testing.T) {
 }
 
 // TestListOff checks that reasoning that can be turned off lists the effort
-// none first, at every provider and for unlisted offerings too; and that
+// none first, at every provider; and that
 // reasoning that cannot, or of which no source says, or that lists no
 // efforts or none already, keeps its efforts.
 func TestListOff(t *testing.T) {
@@ -91,7 +91,6 @@ func TestListOff(t *testing.T) {
 				"acme/own-none":  {Reasoning: r(new(false), "none", "low")},
 				"acme/no-reason": {},
 			},
-			Unlisted: map[string]gateway.Offering{"x": {Reasoning: r(new(false), "low")}},
 		},
 	}}
 	ListOff(c)
@@ -105,7 +104,6 @@ func TestListOff(t *testing.T) {
 		{p.Models["acme/unknown"].Reasoning, []gateway.Effort{"low", "high"}},
 		{p.Models["acme/budget"].Reasoning, nil},
 		{p.Models["acme/own-none"].Reasoning, []gateway.Effort{"none", "low"}},
-		{p.Unlisted["x"].Reasoning, []gateway.Effort{"none", "low"}},
 	} {
 		if !slices.Equal(tt.got.Efforts, tt.want) {
 			t.Errorf("efforts = %v, want %v", tt.got.Efforts, tt.want)

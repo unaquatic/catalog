@@ -22,7 +22,7 @@ var npms = map[modelsdev.ProviderID]string{
 
 // FromAPI returns the catalog of doc, a models.dev api.json document, as
 // production builds it, with the mapping's own rules: each provider with
-// the models it lists, all of them the catalog's, and not unlisted. A
+// the models it lists, all of them the catalog's. A
 // model listed under a lab's model ID, such as "lab-a/model-a", is that
 // lab's model, as a gateway lists another lab's; any other is the model of
 // a lab of the provider's ID, under an ID such as "openai/gpt-5.6". A pro

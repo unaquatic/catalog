@@ -12,8 +12,9 @@ import (
 	"github.com/unaquatic/catalog/internal/modelsdev"
 )
 
-// groupEndpoints maps testdata/endpoints.json to the catalog.
-func groupEndpoints(t *testing.T) (*gateway.Catalog, Report) {
+// groupEndpoints maps testdata/endpoints.json to the catalog, applying the
+// mapping's rules when infer is set.
+func groupEndpoints(t *testing.T, infer bool) (*gateway.Catalog, Report) {
 	t.Helper()
 	data, err := os.ReadFile("testdata/endpoints.json")
 	if err != nil {
@@ -23,7 +24,7 @@ func groupEndpoints(t *testing.T) (*gateway.Catalog, Report) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	c, rep, err := FromModelsDev(b, Options{})
+	c, rep, err := FromModelsDev(b, Options{Infer: infer})
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -79,22 +80,30 @@ func TestGroupCalls(t *testing.T) {
 		t.Errorf("o3 fast = %+v, want the -fast listing's price", v)
 	}
 	// A provider's own model, which names no maker, is a model of the
-	// provider's, not unlisted.
-	if u := c.Providers["opencode"].Unlisted; len(u) != 0 || mustOffering(t, c, "opencode", "opencode/big-pickle").ProviderOptions.ID != "big-pickle" {
-		t.Errorf("opencode unlisted = %+v, want big-pickle as opencode/big-pickle", u)
+	// provider's.
+	if mustOffering(t, c, "opencode", "opencode/big-pickle").ProviderOptions.ID != "big-pickle" {
+		t.Error("opencode's big-pickle is not opencode/big-pickle")
 	}
-	// A listing no rule ties is left out, and listed in the report; without
-	// the rules, it is unlisted, under its own ID.
-	if u := c.Providers["openrouter"].Unlisted; len(u) != 0 ||
+	// A listing no rule ties is left out, and listed in the report; so it is
+	// without the rules, which tie it to nothing.
+	if sends(c.Providers["openrouter"], "~google/gemini-pro-latest") ||
 		!slices.Contains(rep.Unknown, Note{Provider: "openrouter", Model: "~google/gemini-pro-latest", Text: "no model or lab known"}) {
-		t.Errorf("openrouter unlisted = %+v, unknown %v; want ~google/gemini-pro-latest left out", u, rep.Unknown)
+		t.Errorf("openrouter unknown %v; want ~google/gemini-pro-latest left out", rep.Unknown)
 	}
-	plain, _, err := FromModelsDev(loadFixture(t), fixtureOptions(false))
+	plain, plainRep, err := FromModelsDev(loadFixture(t), fixtureOptions(false))
 	if err != nil {
 		t.Fatal(err)
 	}
-	if u := plain.Providers["openrouter"].Unlisted; u["google/gemini-pro-latest"].ProviderOptions.ID != "~google/gemini-pro-latest" {
-		t.Errorf("openrouter unlisted without the rules = %+v", u)
+	if sends(plain.Providers["openrouter"], "~google/gemini-pro-latest") ||
+		!slices.Contains(plainRep.Unknown, Note{Provider: "openrouter", Model: "~google/gemini-pro-latest", Text: "models.dev ties it to no model"}) {
+		t.Errorf("openrouter unknown without the rules %v; want ~google/gemini-pro-latest left out", plainRep.Unknown)
+	}
+	for pid, p := range plain.Providers {
+		for id := range p.Models {
+			if _, ok := plain.Models[id]; !ok {
+				t.Errorf("%s offers %s, which the catalog without the rules does not list", pid, id)
+			}
+		}
 	}
 	// Every model lists the providers that offer it.
 	if got := mustModel(t, c.Models, "openai/gpt-6-astra-pro").Providers; !slices.Equal(got, []gateway.ProviderID{"openai", "openrouter"}) {
@@ -130,10 +139,10 @@ func TestGroupCalls(t *testing.T) {
 // mode that slips past the list fails here.
 func TestVariantVocabulary(t *testing.T) {
 	f, _ := groupFixture(t)
-	e, _ := groupEndpoints(t)
+	e, _ := groupEndpoints(t, false)
 	for _, c := range []*gateway.Catalog{f, e} {
 		for _, p := range c.Providers {
-			for _, off := range slices.Concat(slices.Collect(maps.Values(p.Models)), slices.Collect(maps.Values(p.Unlisted))) {
+			for off := range maps.Values(p.Models) {
 				for k, v := range off.Variants {
 					if !known(v.Tier, v.Mode) || v.Tier == "" && v.Mode == "" || k != v.Key() {
 						t.Errorf("%s: variant %q is tier %q, mode %q", p.ID, k, v.Tier, v.Mode)
@@ -190,16 +199,17 @@ func TestGroupAliases(t *testing.T) {
 }
 
 func TestResolve(t *testing.T) {
-	c, _ := groupEndpoints(t)
-	// Azure's gpt-5.1, unlisted here, in its fast tier.
-	r, ok := c.Resolve("azure", "gpt-5.1:fast")
+	c, _ := groupEndpoints(t, true)
+	// Azure's gpt-5.1, which the rules tie to openai/gpt-5.1, in its fast
+	// tier.
+	r, ok := c.Resolve("azure", "openai/gpt-5.1:fast")
 	want := map[string]any{"service_tier": "priority"}
-	if !ok || r.Model != "" || r.Tier != gateway.TierFast || r.ProviderOptions.ID != "gpt-5.1" ||
+	if !ok || r.Model != "openai/gpt-5.1" || r.Tier != gateway.TierFast || r.ProviderOptions.ID != "gpt-5.1" ||
 		!reflect.DeepEqual(r.ProviderOptions.Body, want) || r.ProviderOptions.Endpoint == nil ||
 		r.ProviderOptions.Endpoint.Format != gateway.FormatOpenAIResponses {
 		t.Errorf("Resolve = %+v, %v; want gpt-5.1, the tier's fields, Azure's endpoint", r, ok)
 	}
-	if _, ok := c.Resolve("azure", "gpt-5.1:ultrafast"); ok {
+	if _, ok := c.Resolve("azure", "openai/gpt-5.1:ultrafast"); ok {
 		t.Error("Resolve found a tier Azure does not offer")
 	}
 
@@ -218,15 +228,27 @@ func TestResolve(t *testing.T) {
 	if !ok || r.Model != "opencode/big-pickle" || r.ProviderOptions.ID != "big-pickle" || r.ProviderOptions.Endpoint == nil {
 		t.Errorf("opencode's own big-pickle = %+v, %v", r, ok)
 	}
-	// An unlisted offering, as a catalog without the rules has them.
+	// A listing tied to no model resolves to nothing.
 	plain, _, err := FromModelsDev(loadFixture(t), fixtureOptions(false))
 	if err != nil {
 		t.Fatal(err)
 	}
-	r, ok = plain.Resolve("openrouter", "google/gemini-pro-latest")
-	if !ok || r.Model != "" || r.ID != "google/gemini-pro-latest" || r.ProviderOptions.ID != "~google/gemini-pro-latest" || r.ProviderOptions.Endpoint == nil {
-		t.Errorf("unlisted gemini-pro-latest = %+v, %v", r, ok)
+	if r, ok := plain.Resolve("openrouter", "google/gemini-pro-latest"); ok {
+		t.Errorf("gemini-pro-latest, tied to no model, resolves to %+v", r)
 	}
+}
+
+// sends reports whether an offering of p, or a variant of one, sends model
+// ID id.
+func sends(p gateway.Provider, id string) bool {
+	for _, o := range p.Models {
+		if o.ProviderOptions.ID == id || slices.ContainsFunc(slices.Collect(maps.Values(o.Variants)), func(v gateway.Variant) bool {
+			return v.ProviderOptions.ID == id
+		}) {
+			return true
+		}
+	}
+	return false
 }
 
 // caseDoc is a models.dev catalog whose lab writes its model IDs with
@@ -263,8 +285,8 @@ func TestLowerCaseIDs(t *testing.T) {
 	if o := mustOffering(t, c, "gw", "minimax/minimax-m2.7"); o.ProviderOptions.ID != "MiniMaxAI/MiniMax-M2.7" || rep.Ties["gw"]["minimax/minimax-m2.7"].ModelsDev != "minimax/minimax-m2.7" {
 		t.Errorf("gateway offering = %+v", o)
 	}
-	if o, ok := c.Providers["gw"].Unlisted["org/special-model"]; !ok || o.ProviderOptions.ID != "Org/Special-Model" {
-		t.Errorf("unlisted = %v, want org/special-model sending Org/Special-Model", c.Providers["gw"].Unlisted)
+	if sends(c.Providers["gw"], "Org/Special-Model") || !slices.Contains(rep.Unknown, Note{Provider: "gw", Model: "Org/Special-Model", Text: "models.dev ties it to no model"}) {
+		t.Errorf("unknown = %v, want Org/Special-Model, tied to no model, left out", rep.Unknown)
 	}
 	for _, id := range []string{"minimax/MiniMax-M2.7", "MINIMAX/minimax-m2.7"} {
 		if r, ok := c.Resolve("gw", id); !ok || r.ID != "minimax/minimax-m2.7" || r.ProviderOptions.ID != "MiniMaxAI/MiniMax-M2.7" {
@@ -341,12 +363,6 @@ func TestNameOf(t *testing.T) {
 	if n := NameIn(c, "MiniMax/MiniMax-M2.5"); n != "MiniMax M2.5" {
 		t.Errorf("NameIn(MiniMax/MiniMax-M2.5) = %q, want MiniMax M2.5", n)
 	}
-	for key, want := range map[string]string{"meta-llama/llama-4-scout": "Llama 4 Scout", "minimax-m2.5": "MiniMax M2.5",
-		"accounts/fireworks/models/qwen3-8b": "Qwen3 8B"} {
-		if n := UnlistedNameIn(c, key); n != want {
-			t.Errorf("UnlistedName(%s) = %q, want %q", key, n, want)
-		}
-	}
 	for key, want := range map[string]string{"ultrafast": "GPT-6.1 Sol Ultrafast", "fast": "GPT-6.1 Sol Fast", "thinking:fast": "GPT-6.1 Sol Thinking Fast"} {
 		if n := VariantName("GPT-6.1 Sol", key); n != want {
 			t.Errorf("VariantName(GPT-6.1 Sol, %s) = %q, want %q", key, n, want)
@@ -381,9 +397,6 @@ func TestNamesMatchIDs(t *testing.T) {
 			for id, o := range p.Models {
 				check(string(pid)+"/"+string(id), c.Models[id].Name, o)
 			}
-			for key, o := range p.Unlisted {
-				check(string(pid)+"/"+key+" (unlisted)", UnlistedNameIn(c, key), o)
-			}
 		}
 		if extra := maps.Collect(func(yield func(string, string) bool) {
 			used := SpellingsFor(c.Spellings, NameParts(c))
@@ -398,24 +411,19 @@ func TestNamesMatchIDs(t *testing.T) {
 	}
 }
 
-// unlistedDoc is a models.dev catalog of a gateway's provider-specific
-// models: one with a free tier, a thinking version and an EU region, one
-// whose ID holds characters the catalog does not write, and two whose IDs
-// the catalog writes alike.
-const unlistedDoc = `{"models": {}, "providers": {"gw": {"id": "gw", "name": "GW", "npm": "@ai-sdk/openai-compatible", "api": "https://gw.invalid/v1", "models": {
-  "Vendor/Model-X":          {"id": "Vendor/Model-X", "cost": {"input": 1, "output": 2}},
-  "Vendor/Model-X:free":     {"id": "Vendor/Model-X:free", "cost": {"input": 0, "output": 0}},
-  "Vendor/Model-X:thinking": {"id": "Vendor/Model-X:thinking", "cost": {"input": 1, "output": 2}},
-  "Vendor/Model-X@eu":       {"id": "Vendor/Model-X@eu", "cost": {"input": 1.1, "output": 2.2}},
-  "@cf/odd_model":           {"id": "@cf/odd_model"},
-  "same_id":                 {"id": "same_id"},
-  "same-id":                 {"id": "same-id"}
+// untiedDoc is a models.dev catalog of a gateway's models that models.dev
+// ties to no model: one with a free tier, and one whose ID holds characters
+// the catalog does not write.
+const untiedDoc = `{"models": {}, "providers": {"gw": {"id": "gw", "name": "GW", "npm": "@ai-sdk/openai-compatible", "api": "https://gw.invalid/v1", "models": {
+  "Vendor/Model-X":      {"id": "Vendor/Model-X", "cost": {"input": 1, "output": 2}},
+  "Vendor/Model-X:free": {"id": "Vendor/Model-X:free", "cost": {"input": 0, "output": 0}},
+  "@cf/odd_model":       {"id": "@cf/odd_model"}
 }}}}`
 
-// TestGroupUnlisted checks that unlisted models group as listed ones do,
-// under keys the catalog writes, sending the provider's own IDs.
-func TestGroupUnlisted(t *testing.T) {
-	b, err := modelsdev.DecodeBundle([]byte(unlistedDoc))
+// TestGroupUntied checks that, without the rules, listings tied to no model
+// are left out of the catalog, and listed in the report's Unknown.
+func TestGroupUntied(t *testing.T) {
+	b, err := modelsdev.DecodeBundle([]byte(untiedDoc))
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -423,22 +431,15 @@ func TestGroupUnlisted(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	u := c.Providers["gw"].Unlisted
-	if got, want := slices.Sorted(maps.Keys(u)), []string{"cf/odd-model", "same-id", "same-id-2", "vendor/model-x"}; !slices.Equal(got, want) {
-		t.Fatalf("unlisted keys = %q, want %q", got, want)
+	if m := c.Providers["gw"].Models; len(m) != 0 {
+		t.Errorf("gw offers %v, want nothing", slices.Collect(maps.Keys(m)))
 	}
-	if got, want := calls(u["vendor/model-x"]), []string{"= Vendor/Model-X", "free = Vendor/Model-X:free",
-		"thinking = Vendor/Model-X:thinking", "alias Vendor/Model-X@eu"}; !slices.Equal(got, want) {
-		t.Errorf("vendor/model-x calls = %q, want %q", got, want)
+	var unknown []string
+	for _, n := range rep.Unknown {
+		unknown = append(unknown, n.Model)
 	}
-	if o := u["cf/odd-model"]; o.ProviderOptions.ID != "@cf/odd_model" {
-		t.Errorf("cf/odd-model sends %q, want the provider's own ID", o.ProviderOptions.ID)
-	}
-	if !slices.ContainsFunc(rep.Notes, func(n Note) bool { return strings.Contains(n.Text, "keyed same-id-2") }) {
-		t.Errorf("no note of the shared key in %v", rep.Notes)
-	}
-	if r, ok := c.Resolve("gw", "vendor/model-x:free"); !ok || r.Model != "" || r.ProviderOptions.ID != "Vendor/Model-X:free" {
-		t.Errorf("Resolve(vendor/model-x:free) = %+v, %v", r, ok)
+	if want := []string{"@cf/odd_model", "Vendor/Model-X", "Vendor/Model-X:free"}; !slices.Equal(unknown, want) {
+		t.Errorf("unknown = %q, want %q", unknown, want)
 	}
 }
 
@@ -487,14 +488,14 @@ const sharedDoc = `{
   "databricks": {"id": "databricks", "name": "Databricks", "npm": "@ai-sdk/openai-compatible", "api": "https://db.invalid/v1", "models": {
     "databricks-gpt-oss-120b": {"id": "databricks-gpt-oss-120b", "name": "GPT OSS 120B"}}}}}`
 
-// TestShareUnlisted checks that a model ID that two or more providers list
+// TestShareUntied checks that a model ID that two or more providers list
 // alike, and models.dev does not, is a model of the catalog's own, under the
 // lab the IDs name, with the lab's facts; that so is one provider's ID that
 // names the lab as its maker, or of the lab's own, or by its brand alone;
 // that routers, makers
 // without a lab and fine-tunes get none; and that an ID naming a model the
 // catalog lists, as the ID or with the lab's name before it, ties to it.
-func TestShareUnlisted(t *testing.T) {
+func TestShareUntied(t *testing.T) {
 	b, err := modelsdev.DecodeBundle([]byte(sharedDoc))
 	if err != nil {
 		t.Fatal(err)
@@ -556,7 +557,7 @@ func TestShareUnlisted(t *testing.T) {
 	if !slices.ContainsFunc(rep.Unknown, func(n Note) bool { return n.Provider == "hf" && n.Model == "acme-tools/rerank-3" }) {
 		t.Errorf("hf's acme-tools/rerank-3 not in the report's unknown %v; want it left out, of no lab", rep.Unknown)
 	}
-	if _, ok := c.Providers["hf"].Unlisted["openrouter/auto"]; ok {
+	if sends(c.Providers["hf"], "openrouter/auto") {
 		t.Error("hf's router openrouter/auto in the catalog; want it left out")
 	}
 	if o := mustOffering(t, c, "databricks", "openai/gpt-oss-120b"); rep.Ties["databricks"]["openai/gpt-oss-120b"].Basis != BasisID || o.ProviderOptions.ID != "databricks-gpt-oss-120b" {
@@ -564,7 +565,7 @@ func TestShareUnlisted(t *testing.T) {
 	}
 }
 
-// matchDoc is a models.dev catalog of unlisted IDs that name models it
+// matchDoc is a models.dev catalog of untied IDs that name models it
 // lists, in another order, without a date, or as models.dev ties the ID at
 // another provider; of a dated ID of an undated model; of two spellings of
 // one model at two providers; and of one model a provider lists twice,
@@ -592,12 +593,12 @@ const matchDoc = `{
     "glm-9-air": {"id": "glm-9-air"},
     "glm-9.air": {"id": "glm-9.air"}}}}}`
 
-// TestShareUnlistedMatches checks that an unlisted ID ties to a model the
+// TestShareUntiedMatches checks that an untied ID ties to a model the
 // catalog lists when it names it in another order or punctuation, or when
 // models.dev ties it so at another provider; that an undated ID of a dated
 // model, and a dated ID of an undated one, are models of their own; and
 // that two spellings of one ID make one model, at two providers or at one.
-func TestShareUnlistedMatches(t *testing.T) {
+func TestShareUntiedMatches(t *testing.T) {
 	b, err := modelsdev.DecodeBundle([]byte(matchDoc))
 	if err != nil {
 		t.Fatal(err)
@@ -640,7 +641,7 @@ func TestShareUnlistedMatches(t *testing.T) {
 	}
 }
 
-// copyDoc is a models.dev catalog of unlisted copies of models it lists: free,
+// copyDoc is a models.dev catalog of untied copies of models it lists: free,
 // thinking and no-thinking copies at a provider that lists the model too, a
 // free copy at one that does not, a preview, GitLab's names without
 // "claude", and an ID without it at a provider whose IDs name no host, an
@@ -682,7 +683,7 @@ const copyDoc = `{
     "gemma-4-31b-it-garnet": {"id": "gemma-4-31b-it-garnet", "name": "Garnet",
       "description": "Garnet is a multimodal Gemma 4 31B creative finetune for expressive dialogue"}}}}}`
 
-// TestCopiesAndTunes checks that an unlisted copy of a model the catalog
+// TestCopiesAndTunes checks that an untied copy of a model the catalog
 // lists is that model, not one of its own: a free or thinking copy of a
 // listing of its provider's is that offering's variant, and a no-thinking
 // copy its alias; a free copy alone is the offering; a name without its
@@ -827,10 +828,8 @@ func TestOwnModelsAndServices(t *testing.T) {
 			if _, ok := got[string(pid)+"/"+id]; !ok {
 				t.Errorf("%s's %s not in the report's services %v", pid, id, rep.Services)
 			}
-			for key, u := range c.Providers[pid].Unlisted {
-				if u.ProviderOptions.ID == id {
-					t.Errorf("%s's service %s in the catalog, unlisted as %s", pid, id, key)
-				}
+			if sends(c.Providers[pid], id) {
+				t.Errorf("%s's service %s in the catalog", pid, id)
 			}
 		}
 	}

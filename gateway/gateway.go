@@ -174,8 +174,7 @@ type Catalog struct {
 	Generated time.Time `json:"generated"`
 	// Spellings spell the words of the catalog's IDs that Spell would spell
 	// otherwise with none: every model's Name, and every offering's, is
-	// NameOf its model's ID with them, and every unlisted offering's
-	// UnlistedName of its key.
+	// NameOf its model's ID with them.
 	Spellings Spellings `json:"spellings,omitempty"`
 	// Labs and Families name the labs and the families of the catalog's
 	// models, by the IDs the models' Lab and Family hold.
@@ -241,7 +240,7 @@ func sortedValues[K cmp.Ordered, V any](m map[K]V) iter.Seq[V] {
 }
 
 // Provider is a provider and what it serves: its offerings of the models,
-// by model ID, and the models it lists that are none of the catalog's.
+// by model ID.
 type Provider struct {
 	ID   ProviderID   `json:"id"`
 	Name string       `json:"name"`
@@ -257,18 +256,14 @@ type Provider struct {
 	// Models are the provider's offerings of the catalog's models, by model
 	// ID.
 	Models map[ModelID]Offering `json:"models"`
-	// Unlisted are the provider's models that are none of the catalog's,
-	// such as OpenCode's "space-bunny-free", by the provider's model ID.
-	Unlisted map[string]Offering `json:"unlisted,omitempty"`
 }
 
 // Offering is a model as one provider serves it: the model's facts there,
 // and how to call it: its ProviderOptions, its price, and the variants it
 // offers on top.
 type Offering struct {
-	// Name is the catalog's name of the offering: its model's name, or, for
-	// an unlisted offering, UnlistedName of its key. The provider's own
-	// name is ProviderOptions.Name.
+	// Name is the catalog's name of the offering, its model's name. The
+	// provider's own name is ProviderOptions.Name.
 	Name   string `json:"name"`
 	Family string `json:"family,omitempty"`
 	// Type is the kind of model, or empty for a language model.
@@ -299,9 +294,6 @@ type Offering struct {
 	// for callers to send as they see fit. The catalog lists no price or
 	// variants of them.
 	Aliases []string `json:"aliases,omitempty"`
-	// Lab is, for an unlisted offering, the lab its ID names, as LabOf
-	// reads it, when it names one.
-	Lab ProviderID `json:"lab,omitempty"`
 }
 
 // Variant is a tier or mode that an offering offers on top of its call, or

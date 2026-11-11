@@ -620,7 +620,7 @@ func TestKeepProviders(t *testing.T) {
 	}
 }
 
-func TestUnlistedCanonical(t *testing.T) {
+func TestUntiedCanonical(t *testing.T) {
 	b := modelsdev.Bundle{
 		Models: map[string]modelsdev.LabModel{},
 		Providers: modelsdev.Catalog{"reseller": {ID: "reseller", Name: "Reseller", NPM: "@ai-sdk/openai-compatible", Models: map[modelsdev.ModelID]modelsdev.Model{

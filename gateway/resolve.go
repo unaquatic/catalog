@@ -15,7 +15,7 @@ import (
 type Resolved struct {
 	Provider     ProviderID `json:"provider"`
 	ProviderName string     `json:"provider_name"`
-	// Model is the model called, empty for an unlisted one.
+	// Model is the model called.
 	Model ModelID `json:"model,omitempty"`
 	// ID is the call's variant ID, as VariantID writes it.
 	ID   string `json:"id"`
@@ -29,43 +29,32 @@ type Resolved struct {
 }
 
 // Variants returns every call of provider p, resolved: offering by offering
-// in model ID order and then unlisted ones in ID order, each offering's own
-// call followed by its variants, in VariantKeys order.
+// in model ID order, each offering's own call followed by its variants, in
+// VariantKeys order.
 func (c *Catalog) Variants(p ProviderID) iter.Seq[Resolved] {
 	return func(yield func(Resolved) bool) {
 		prov, ok := c.Providers[p]
 		if !ok {
 			return
 		}
-		each := func(key string, model ModelID, off Offering) bool {
-			if !yield(resolve(prov, key, model, off, "")) {
-				return false
+		for _, m := range slices.Sorted(maps.Keys(prov.Models)) {
+			off := prov.Models[m]
+			if !yield(resolve(prov, m, off, "")) {
+				return
 			}
 			for _, k := range off.VariantKeys() {
-				if !yield(resolve(prov, key, model, off, k)) {
-					return false
+				if !yield(resolve(prov, m, off, k)) {
+					return
 				}
-			}
-			return true
-		}
-		for _, m := range slices.Sorted(maps.Keys(prov.Models)) {
-			if !each(string(m), m, prov.Models[m]) {
-				return
-			}
-		}
-		for _, id := range slices.Sorted(maps.Keys(prov.Unlisted)) {
-			if !each(id, "", prov.Unlisted[id]) {
-				return
 			}
 		}
 	}
 }
 
 // resolve returns the call of variant k, or the offering's own for "", of
-// offering off, keyed key at provider prov, of model, empty for an unlisted
-// one.
-func resolve(prov Provider, key string, model ModelID, off Offering, k string) Resolved {
-	r := Resolved{Provider: prov.ID, ProviderName: prov.Name, Model: model, ID: VariantID(key, k), Name: off.Name,
+// offering off of model at provider prov.
+func resolve(prov Provider, model ModelID, off Offering, k string) Resolved {
+	r := Resolved{Provider: prov.ID, ProviderName: prov.Name, Model: model, ID: VariantID(string(model), k), Name: off.Name,
 		ProviderOptions: off.ProviderOptions, Price: off.Price, Status: off.Status}
 	r.ProviderOptions.Body = mergeBody(nil, off.ProviderOptions.Body)
 	if v, ok := off.Variants[k]; ok {
@@ -86,26 +75,18 @@ func resolve(prov Provider, key string, model ModelID, off Offering, k string) R
 	return r
 }
 
-// Lookup returns the key of the offering that provider p's variant id
-// calls, in the provider's Models or, when unlisted is set, its Unlisted,
-// and the variant's key, "" for the offering's own call. It reports whether
-// the catalog lists the variant. It ignores case, as the catalog's IDs are
-// all lower case.
-func (c *Catalog) Lookup(p ProviderID, id string) (offering string, unlisted bool, variant string, ok bool) {
+// Lookup returns the model of the offering that provider p's variant id
+// calls, and the variant's key, "" for the offering's own call. It reports
+// whether the catalog lists the variant. It ignores case, as the catalog's
+// IDs are all lower case.
+func (c *Catalog) Lookup(p ProviderID, id string) (model ModelID, variant string, ok bool) {
 	id = strings.ToLower(id)
 	prov, ok := c.Providers[p]
 	if !ok {
-		return "", false, "", false
+		return "", "", false
 	}
-	find := func(key string) (Offering, bool, bool) {
-		if o, ok := prov.Models[ModelID(key)]; ok {
-			return o, false, true
-		}
-		o, ok := prov.Unlisted[key]
-		return o, true, ok
-	}
-	if _, u, ok := find(id); ok {
-		return id, u, "", true
+	if _, ok := prov.Models[ModelID(id)]; ok {
+		return ModelID(id), "", true
 	}
 	// A variant's key holds a mode, a tier, or both: one or two segments.
 	for cut, segs := id, 0; segs < 2; segs++ {
@@ -114,27 +95,24 @@ func (c *Catalog) Lookup(p ProviderID, id string) (offering string, unlisted boo
 			break
 		}
 		cut = cut[:i]
-		if o, u, ok := find(cut); ok {
+		if o, ok := prov.Models[ModelID(cut)]; ok {
 			if _, has := o.Variants[id[i+1:]]; has {
-				return cut, u, id[i+1:], true
+				return ModelID(cut), id[i+1:], true
 			}
 		}
 	}
-	return "", false, "", false
+	return "", "", false
 }
 
 // Resolve returns provider p's variant id, resolved, and reports whether
 // the catalog lists it.
 func (c *Catalog) Resolve(p ProviderID, id string) (Resolved, bool) {
-	key, unlisted, k, ok := c.Lookup(p, id)
+	m, k, ok := c.Lookup(p, id)
 	if !ok {
 		return Resolved{}, false
 	}
 	prov := c.Providers[p]
-	if unlisted {
-		return resolve(prov, key, "", prov.Unlisted[key], k), true
-	}
-	return resolve(prov, key, ModelID(key), prov.Models[ModelID(key)], k), true
+	return resolve(prov, m, prov.Models[m], k), true
 }
 
 // mergeBody returns request fields over merged into base deeply: an object
