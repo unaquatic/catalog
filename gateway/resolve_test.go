@@ -23,30 +23,33 @@ func TestVariantKeys(t *testing.T) {
 }
 
 // TestCatalogLookup checks that a variant ID finds its offering and variant, with
-// keys of one and two segments, and an unlisted offering whose own ID holds
-// colons.
+// keys of one and two segments, and a model whose own ID holds colons.
 func TestCatalogLookup(t *testing.T) {
 	c := &Catalog{Providers: map[ProviderID]Provider{"p": {
-		Models: map[ModelID]Offering{"lab/m": {Variants: map[string]Variant{
-			"fast": {Tier: TierFast}, "thinking:fast": {Mode: ModeThinking, Tier: TierFast}}}},
-		Unlisted: map[string]Offering{"ft:m:org": {Variants: map[string]Variant{"fast": {Tier: TierFast}}}},
+		Models: map[ModelID]Offering{
+			"lab/m": {Variants: map[string]Variant{
+				"fast": {Tier: TierFast}, "thinking:fast": {Mode: ModeThinking, Tier: TierFast}}},
+			"lab/ft:m:org": {Variants: map[string]Variant{"fast": {Tier: TierFast}}},
+		},
 	}}}
 	tests := []struct {
-		id, offering, variant string
-		unlisted, ok          bool
+		id      string
+		model   ModelID
+		variant string
+		ok      bool
 	}{
-		{"lab/m", "lab/m", "", false, true},
-		{"lab/m:fast", "lab/m", "fast", false, true},
-		{"lab/m:thinking:fast", "lab/m", "thinking:fast", false, true},
-		{"lab/m:turbo", "", "", false, false},
-		{"ft:m:org", "ft:m:org", "", true, true},
-		{"ft:m:org:fast", "ft:m:org", "fast", true, true},
-		{"nope", "", "", false, false},
+		{"lab/m", "lab/m", "", true},
+		{"lab/m:fast", "lab/m", "fast", true},
+		{"lab/m:thinking:fast", "lab/m", "thinking:fast", true},
+		{"lab/m:turbo", "", "", false},
+		{"lab/ft:m:org", "lab/ft:m:org", "", true},
+		{"lab/ft:m:org:fast", "lab/ft:m:org", "fast", true},
+		{"nope", "", "", false},
 	}
 	for _, tt := range tests {
-		off, unlisted, v, ok := c.Lookup("p", tt.id)
-		if off != tt.offering || unlisted != tt.unlisted || v != tt.variant || ok != tt.ok {
-			t.Errorf("Lookup(%s) = %q, %v, %q, %v", tt.id, off, unlisted, v, ok)
+		m, v, ok := c.Lookup("p", tt.id)
+		if m != tt.model || v != tt.variant || ok != tt.ok {
+			t.Errorf("Lookup(%s) = %q, %q, %v", tt.id, m, v, ok)
 		}
 	}
 }

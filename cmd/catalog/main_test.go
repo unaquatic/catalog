@@ -106,8 +106,18 @@ func TestBuildWithoutRules(t *testing.T) {
 	if _, ok := c.Model("openai/gpt-6-astra-fast"); !ok || len(c.Models) != 13 {
 		t.Errorf("%d models, astra fast listed %v; want models.dev's 13, astra fast among them", len(c.Models), ok)
 	}
-	if _, ok := c.Providers["llmgateway"].Unlisted["gpt-6-astra"]; !ok {
-		t.Errorf("llmgateway unlisted = %v, want gpt-6-astra among them without the rules", c.Providers["llmgateway"].Unlisted)
+	// Without the rules, a listing models.dev ties to no model is left out.
+	for pid, p := range c.Providers {
+		for id := range p.Models {
+			if _, ok := c.Models[id]; !ok {
+				t.Errorf("%s offers %s, which the catalog does not list", pid, id)
+			}
+		}
+	}
+	for _, o := range c.Providers["llmgateway"].Models {
+		if o.ProviderOptions.ID == "gpt-6-astra" {
+			t.Error("llmgateway's gpt-6-astra, tied to no model without the rules, is in the catalog")
+		}
 	}
 }
 

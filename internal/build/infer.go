@@ -535,8 +535,8 @@ func (b *builder) LabOf(pid gateway.ProviderID, id, name string) (lab gateway.Pr
 	return "", "", "", false
 }
 
-// shared is a model ID that a provider's unlisted listings name, as
-// shareUnlisted reads them: the lab the ID names, how, the provider, and
+// shared is a model ID that a provider's untied listings name, as
+// shareUntied reads them: the lab the ID names, how, the provider, and
 // its listings, the one that names the model first and then its tiers and
 // modes.
 type shared struct {
@@ -547,10 +547,10 @@ type shared struct {
 	ft *Finetuned
 }
 
-// shareUnlisted ties the listings that no rule ties to a model, by the
+// shareUntied ties the listings that no rule ties to a model, by the
 // model IDs LabOf reads in them, under the lab: lab/model, as CatalogID
-// writes it. A listing that is a tier or mode of another, as unlistedGroups
-// groups them, goes with the other.
+// writes it. A listing that is a tier or mode of another, as untiedRoot
+// finds it, goes with the other.
 //
 // IDs of the same words, in another order or punctuation, as looseKey
 // reads them, name one model: xai/grok-4-1-fast-non-reasoning and
@@ -593,9 +593,9 @@ type shared struct {
 //     provider's owner, as ownerOf finds it: OpenCode's "big-pickle" is
 //     opencode/big-pickle, and OpenCode Go's "space-bunny"
 //     opencode/space-bunny.
-//   - Any other listing stays provider-specific: one whose maker part names
-//     no lab, with the lab in its Lab.
-func (b *builder) shareUnlisted() {
+//   - Any other listing, one whose maker part names no lab, stays tied to
+//     no model, and dropUnknown leaves it out of the catalog.
+func (b *builder) shareUntied() {
 	// The labs the catalog lists models of, and those some of whose models'
 	// IDs start with the lab's own, as mistral/mistral-large does, and
 	// meta/llama-4 does not.
@@ -650,7 +650,7 @@ func (b *builder) shareUnlisted() {
 			}
 		}
 		groups := make(map[string][]string)
-		root := b.rules.unlistedRoot(ls)
+		root := b.rules.untiedRoot(ls)
 		for _, o := range ls {
 			r := root(o.ID)
 			groups[r] = append(groups[r], o.ID)
@@ -674,11 +674,6 @@ func (b *builder) shareUnlisted() {
 			// "mistral/codestral-embed" is mistral/codestral-embed-2505.
 			raw := b.bundle.Providers[modelsdev.ProviderID(pid)].Models[modelsdev.ModelID(r)]
 			if c := gateway.ModelID(CatalogID(raw.CanonicalModelID)); strings.Count(string(c), "/") == 1 {
-				for _, id := range members {
-					o := prov.Models[id]
-					o.Lab = c.Lab()
-					prov.Models[id] = o
-				}
 				ids[c] = append(ids[c], shared{pid: pid, by: LabByCanonical, listings: members})
 				continue
 			}
@@ -698,11 +693,6 @@ func (b *builder) shareUnlisted() {
 			id, ok := candidate(lab, model)
 			if !ok {
 				continue
-			}
-			for _, id := range members {
-				o := prov.Models[id]
-				o.Lab = lab
-				prov.Models[id] = o
 			}
 			if tuned {
 				tunes[id] = append(tunes[id], shared{pid: pid, by: by, listings: members, ft: &ft})
@@ -950,7 +940,7 @@ func (b *builder) tieShared(ss []shared, into gateway.ModelID, basis Basis, tier
 		prov := b.out.Providers[s.pid]
 		for _, lid := range s.listings {
 			o := prov.Models[lid]
-			o.Model, o.Basis, o.Lab = into, basis, ""
+			o.Model, o.Basis = into, basis
 			if lid == s.listings[0] && tier != "" {
 				o.Tier = tier
 			}
@@ -980,7 +970,7 @@ func looseKey(id gateway.ModelID) string {
 	return string(lab) + "/" + strings.Join(slices.Concat(words, numbers), "-")
 }
 
-// sharedModel returns the model shareUnlisted makes for model ID id, which
+// sharedModel returns the model shareUntied makes for model ID id, which
 // ss name: named by NameOf, with the facts of the lab's own listing, or else
 // of the first provider's, in byte order. It records the model's Origin, as
 // inferred.

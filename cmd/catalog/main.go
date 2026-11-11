@@ -266,7 +266,7 @@ func PrintReport(w io.Writer, rep build.Report, all bool) {
 		fmt.Fprintf(w, "catalog: %d listings left out as routers, presets or tools\n", len(rep.Services))
 	}
 	if len(rep.Unknown) > 0 {
-		fmt.Fprintf(w, "catalog: %d listings left out: no rule finds their model or lab\n", len(rep.Unknown))
+		fmt.Fprintf(w, "catalog: %d listings left out: tied to no model\n", len(rep.Unknown))
 	}
 	if !all {
 		fmt.Fprintf(w, "catalog: %d tier listings, %d notes (-notes lists them)\n", len(rep.Tiers), len(rep.Notes))

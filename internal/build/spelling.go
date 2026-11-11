@@ -13,8 +13,8 @@ import (
 	"github.com/unaquatic/catalog/gateway"
 )
 
-// CatalogID returns id as the catalog writes the IDs it keys models and
-// unlisted offerings by: in lower case, of segments joined by "/", each of
+// CatalogID returns id as the catalog writes the IDs it keys models by: in
+// lower case, of segments joined by "/", each of
 // a-z, 0-9, "." and "-" alone, a run of any other characters a "-", with no
 // "-" at either end and no empty segment, so that Kilo's
 // "cohere/north-mini-code:free" is "cohere/north-mini-code-free" and
@@ -149,19 +149,6 @@ func NameOf(id gateway.ModelID, sp gateway.Spellings) string {
 	return SpellName(sp, own)
 }
 
-// UnlistedName returns the name of the unlisted offering keyed key: the
-// Name of the key's last segment, which names the model where the others
-// name its maker or host. "meta-llama/llama-4-scout" is "Llama 4 Scout".
-func UnlistedName(key string, sp gateway.Spellings) string {
-	return SpellName(sp, UnlistedPart(key))
-}
-
-// UnlistedPart returns the part of unlisted key that UnlistedName names: its
-// last segment.
-func UnlistedPart(key string) string {
-	return key[strings.LastIndexByte(key, '/')+1:]
-}
-
 // VariantName returns the name of variant key of an offering named name:
 // the offering's name and the key's words, each with a capital, as "GPT-6.1
 // Sol Ultrafast" and "Claude Opus 5 Thinking Fast".
@@ -233,27 +220,13 @@ func NameIn(c *gateway.Catalog, id gateway.ModelID) string {
 	return NameOf(gateway.ModelID(CatalogID(string(id))), c.Spellings)
 }
 
-// UnlistedNameIn returns the name of the unlisted offering keyed key, as the
-// catalog names them, whether or not it lists one.
-func UnlistedNameIn(c *gateway.Catalog, key string) string {
-	return UnlistedName(CatalogID(key), c.Spellings)
-}
-
 // NameParts returns the parts of the catalog's IDs that its names are made
-// of: each model's ID after its lab, and each unlisted offering's
-// UnlistedPart.
+// of: each model's ID after its lab.
 func NameParts(c *gateway.Catalog) iter.Seq[string] {
 	return func(yield func(string) bool) {
 		for id := range c.Models {
 			if _, own := SplitModelID(id); !yield(own) {
 				return
-			}
-		}
-		for _, p := range c.Providers {
-			for key := range p.Unlisted {
-				if !yield(UnlistedPart(key)) {
-					return
-				}
 			}
 		}
 	}

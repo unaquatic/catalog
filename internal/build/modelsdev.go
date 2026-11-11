@@ -108,7 +108,7 @@ type Report struct {
 	Merged  []gateway.ModelID
 	Derived []gateway.ModelID
 	// Inferred lists the models made for providers' model IDs that name
-	// their lab, as shareUnlisted makes them.
+	// their lab, as shareUntied makes them.
 	Inferred []gateway.ModelID
 	// Origins say how the mapping made each model models.dev does not
 	// list, by its ID: derived for a mode, or inferred from providers'
@@ -122,7 +122,8 @@ type Report struct {
 	// tool, the Note's Text.
 	Services []Note
 	// Unknown lists the providers' model IDs left out of the catalog
-	// because no rule ties them to a model or finds the lab that made them,
+	// because nothing ties them to a model: neither models.dev nor, with
+	// Options.Infer, a rule that finds the model or the lab that made it,
 	// as Poe's "trytako/tako".
 	Unknown []Note
 	// Tiers lists the offerings whose IDs name a tier of another offering.
@@ -139,7 +140,7 @@ type Origin struct {
 	// in mode pro.
 	Derived *Derivation
 	// Inferred is set for a model the mapping made for providers' model
-	// IDs that name its lab, as shareUnlisted makes them.
+	// IDs that name its lab, as shareUntied makes them.
 	Inferred *Inference
 	// Finetuned is set for an inferred model that tunes another, as
 	// NanoGPT's "huihui-ai/Llama-3.3-70B-Instruct-abliterated" tunes
@@ -167,8 +168,7 @@ type Tie struct {
 //   - Every model of a kept provider is an Offering of the provider. It
 //     serves the model its canonical_model_id names; or, when it has none
 //     and the provider is a lab, the lab's model of the same ID; or else no
-//     model: it is provider-specific. A provider is a lab when b lists
-//     models of its ID.
+//     model yet. A provider is a lab when b lists models of its ID.
 //   - The npm package of the provider and its base URL give its Endpoint,
 //     by FormatOf and AuthOf, with the package's default base URL where
 //     models.dev lists none. An offering whose npm package, API shape or
@@ -205,8 +205,8 @@ type Tie struct {
 //     model derived for the mode too (BasisPro), keeping models.dev's tie
 //     in ModelsDev.
 //  3. The offerings still tied to nothing are tied, or make models of their
-//     own, as shareUnlisted does; a "-latest" ID is no different from any
-//     other. What is left is left out, with a note in the report.
+//     own, as shareUntied does; a "-latest" ID is no different from any
+//     other.
 //  4. Every model whose lab, or any provider, offers a pro mode gets a
 //     derived model, its ID with "-pro", unless b lists one: GPT-6 Astra
 //     Pro, openai/gpt-6-astra-pro, served by OpenAI's gpt-6-astra in mode
@@ -216,7 +216,9 @@ type Tie struct {
 // with a tier suffix, and which serves the same model, is marked as that
 // tier of the other.
 //
-// Group then groups each provider's listings into offerings.
+// Group then groups each provider's listings into offerings, leaving out,
+// with or without opts.Infer, those tied to no model: every offering the
+// catalog lists serves one of its models.
 //
 // It fails with ErrUnknownProvider when b lacks a provider to keep.
 func FromModelsDev(b modelsdev.Bundle, opts Options) (*gateway.Catalog, Report, error) {
@@ -351,7 +353,7 @@ func list(b modelsdev.Bundle, opts Options) (*builder, error) {
 		out.Providers[pid] = bl.provider(pid, p)
 	}
 	if bl.infer {
-		bl.shareUnlisted()
+		bl.shareUntied()
 		bl.derivePro()
 		bl.dropUnknown()
 	}
@@ -379,7 +381,7 @@ type builder struct {
 	// merged maps the models merged into another to that model and tier.
 	merged map[gateway.ModelID]merge
 	// byWords holds the catalog's models by their words, as looseKey reads
-	// them, as shareUnlisted finds them before it makes models of its own.
+	// them, as shareUntied finds them before it makes models of its own.
 	byWords map[string][]gateway.ModelID
 	// hosts holds hostWords, once read.
 	hosts []string

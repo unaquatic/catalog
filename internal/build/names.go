@@ -16,15 +16,13 @@ func capitalize[T ~string](id T) string {
 	return string(unicode.ToUpper(first)) + string(id[size:])
 }
 
-// allOfferings yields every offering of c, its providers' unlisted ones too.
+// allOfferings yields every offering of c.
 func allOfferings(c *gateway.Catalog) iter.Seq[gateway.Offering] {
 	return func(yield func(gateway.Offering) bool) {
 		for _, p := range c.Providers {
-			for _, offs := range []iter.Seq[gateway.Offering]{maps.Values(p.Models), maps.Values(p.Unlisted)} {
-				for off := range offs {
-					if !yield(off) {
-						return
-					}
+			for off := range maps.Values(p.Models) {
+				if !yield(off) {
+					return
 				}
 			}
 		}

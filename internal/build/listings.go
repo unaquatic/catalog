@@ -118,14 +118,11 @@ type Listing struct {
 	ID   string `json:"id"`
 	Name string `json:"name"`
 	// Model is the model the offering serves, which Basis says how the
-	// mapping found. It is empty for a provider-specific offering, which
-	// neither models.dev nor the mapping's rules tie to a model.
+	// mapping found. It is empty for a listing that neither models.dev nor
+	// the mapping's rules tie to a model, which the catalog leaves out.
 	Model gateway.ModelID `json:"model,omitempty"`
 	// Basis says how the mapping tied the offering to Model.
 	Basis Basis `json:"basis,omitempty"`
-	// Lab is the lab a provider-specific offering's ID names, as LabOf
-	// reads it, or empty when it names none.
-	Lab gateway.ProviderID `json:"lab,omitempty"`
 	// ModelsDev is the model models.dev ties the offering to, by its
 	// canonical_model_id or as a lab's own: Model, unless a rule moved
 	// it, as from a merged model. It is empty when models.dev ties it to
