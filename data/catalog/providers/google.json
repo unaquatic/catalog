@@ -1191,6 +1191,52 @@
         "input_audio": 2
       }
     },
+    "google/gemini-4-hydrogen": {
+      "name": "Gemini 4 Hydrogen",
+      "family": "gemini",
+      "released": "2026-11-12",
+      "updated": "2026-11-12",
+      "knowledge": "2026-03",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image",
+          "video",
+          "audio",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "medium",
+          "high",
+          "xhigh"
+        ]
+      },
+      "provider_options": {
+        "id": "gemini-4-hydrogen",
+        "name": "Gemini 4 Hydrogen"
+      },
+      "price": {
+        "input": 1.5,
+        "output": 7.5,
+        "cache_read": 0.075,
+        "input_audio": 1.5
+      }
+    },
     "google/gemini-embedding-001": {
       "name": "Gemini Embedding 001",
       "family": "gemini",

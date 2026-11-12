@@ -1167,6 +1167,7 @@
     },
     "providers": [
       "kilo",
+      "nano-gpt",
       "openrouter",
       "vercel"
     ]

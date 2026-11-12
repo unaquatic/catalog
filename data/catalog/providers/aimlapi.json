@@ -1153,49 +1153,6 @@
         "output": 0.3174
       }
     },
-    "bytedance-seed/seed-2.0-code": {
-      "name": "Seed 2.0 Code",
-      "family": "seed",
-      "released": "2026-02-14",
-      "updated": "2026-02-14",
-      "open_weights": false,
-      "capabilities": {
-        "tools": true,
-        "attachments": true,
-        "structured_output": true,
-        "temperature": true,
-        "input": [
-          "text",
-          "image",
-          "video"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 262144,
-        "output": 131072
-      },
-      "reasoning": {
-        "efforts": [
-          "low",
-          "medium",
-          "high"
-        ]
-      },
-      "interleaved": {
-        "field": "reasoning_details"
-      },
-      "provider_options": {
-        "id": "bytedance-seed/seed-2.0-code",
-        "name": "Seed-2.0-Code"
-      },
-      "price": {
-        "input": 0.529,
-        "output": 3.174
-      }
-    },
     "bytedance-seed/seed-2.0-lite": {
       "name": "Seed 2.0 Lite",
       "family": "seed",

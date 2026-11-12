@@ -380,7 +380,7 @@
       },
       "limit": {
         "context": 40960,
-        "output": 36864
+        "output": 16384
       },
       "reasoning": {
         "mandatory": false
@@ -390,8 +390,8 @@
         "name": "Qwen3 14B"
       },
       "price": {
-        "input": 0.1,
-        "output": 0.22
+        "input": 0.12,
+        "output": 0.24
       }
     },
     "alibaba/qwen3-235b-a22b-instruct-2507": {
@@ -1040,7 +1040,7 @@
       },
       "limit": {
         "context": 262144,
-        "output": 235929
+        "output": 40960
       },
       "reasoning": {
         "mandatory": false
@@ -1050,8 +1050,9 @@
         "name": "Qwen3.5 9B"
       },
       "price": {
-        "input": 0.17,
-        "output": 0.25
+        "input": 0.162,
+        "output": 0.238,
+        "cache_read": 0.145
       },
       "status": "deprecated"
     },
@@ -2728,8 +2729,8 @@
         "~anthropic/claude-sonnet-latest"
       ]
     },
-    "baidu/ernie-5.5-flash-preview": {
-      "name": "ERNIE 5.5 Flash Preview",
+    "baidu/ernie-5.5-flash-preview-free": {
+      "name": "ERNIE 5.5 Flash Preview Free",
       "family": "ernie",
       "released": "2026-11-10",
       "updated": "2026-11-10",
@@ -2756,13 +2757,12 @@
         ]
       },
       "provider_options": {
-        "id": "baidu/ernie-5.5-flash-preview",
-        "name": "ERNIE-5.5-Flash-Preview"
+        "id": "baidu/ernie-5.5-flash-preview:free",
+        "name": "ERNIE-5.5-Flash-Preview (free)"
       },
       "price": {
-        "input": 0.28,
-        "output": 1.13,
-        "cache_read": 0.028
+        "input": 0,
+        "output": 0
       }
     },
     "baidu/ernie-light-dt-1.0-intl": {
@@ -2805,144 +2805,6 @@
         "output": 3.94,
         "cache_read": 0.113
       }
-    },
-    "bytedance-seed/seed-1-6": {
-      "name": "Seed 1.6",
-      "family": "seed",
-      "released": "2025-10-15",
-      "updated": "2025-10-15",
-      "open_weights": false,
-      "capabilities": {
-        "tools": true,
-        "attachments": true,
-        "structured_output": true,
-        "temperature": true,
-        "input": [
-          "text",
-          "image",
-          "video"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 262144,
-        "output": 32768
-      },
-      "reasoning": {
-        "mandatory": false
-      },
-      "provider_options": {
-        "id": "bytedance-seed/seed-1.6",
-        "name": "Seed 1.6"
-      },
-      "price": {
-        "input": 0.25,
-        "output": 2,
-        "tiers": [
-          {
-            "above": 128000,
-            "input": 0.5,
-            "output": 4
-          }
-        ]
-      },
-      "status": "deprecated"
-    },
-    "bytedance-seed/seed-1-6-flash": {
-      "name": "Seed 1.6 Flash",
-      "family": "seed",
-      "released": "2025-08-28",
-      "updated": "2025-08-28",
-      "open_weights": false,
-      "capabilities": {
-        "tools": true,
-        "attachments": true,
-        "structured_output": true,
-        "temperature": true,
-        "input": [
-          "text",
-          "image",
-          "video"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 262144,
-        "output": 32768
-      },
-      "reasoning": {
-        "mandatory": false
-      },
-      "provider_options": {
-        "id": "bytedance-seed/seed-1.6-flash",
-        "name": "Seed 1.6 Flash"
-      },
-      "price": {
-        "input": 0.075,
-        "output": 0.3,
-        "tiers": [
-          {
-            "above": 128000,
-            "input": 0.1,
-            "output": 0.8
-          }
-        ]
-      },
-      "status": "deprecated"
-    },
-    "bytedance-seed/seed-2.0-code": {
-      "name": "Seed 2.0 Code",
-      "family": "seed",
-      "released": "2026-02-14",
-      "updated": "2026-02-14",
-      "open_weights": false,
-      "capabilities": {
-        "tools": true,
-        "attachments": true,
-        "structured_output": true,
-        "temperature": true,
-        "input": [
-          "text",
-          "image",
-          "video"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 262144,
-        "output": 131072
-      },
-      "reasoning": {
-        "mandatory": false,
-        "efforts": [
-          "none",
-          "low",
-          "medium",
-          "high"
-        ]
-      },
-      "provider_options": {
-        "id": "bytedance-seed/seed-2.0-code",
-        "name": "Seed 2.0 Code"
-      },
-      "price": {
-        "input": 0.5,
-        "output": 3,
-        "tiers": [
-          {
-            "above": 128000,
-            "input": 1,
-            "output": 6
-          }
-        ]
-      },
-      "status": "deprecated"
     },
     "bytedance-seed/seed-2.0-lite": {
       "name": "Seed 2.0 Lite",
@@ -3796,9 +3658,9 @@
         "name": "DeepSeek V4 Pro"
       },
       "price": {
-        "input": 0.95526,
-        "output": 1.91052,
-        "cache_read": 0.079605
+        "input": 0.892272,
+        "output": 1.784544,
+        "cache_read": 0.074356
       }
     },
     "deepseek/deepseek-v4-pro-0813": {
@@ -3880,9 +3742,9 @@
         "name": "DeepSeek V4.1 Flash"
       },
       "price": {
-        "input": 0.051,
-        "output": 0.567,
-        "cache_read": 0.018
+        "input": 0.3,
+        "output": 1.2,
+        "cache_read": 0.006
       }
     },
     "deepseek/deepseek-v4.1-flash-1017": {
@@ -3907,7 +3769,7 @@
       },
       "limit": {
         "context": 1048576,
-        "output": 943718
+        "output": 393216
       },
       "reasoning": {
         "mandatory": false,
@@ -3923,9 +3785,9 @@
         "name": "DeepSeek V4.1 Flash 1017"
       },
       "price": {
-        "input": 0.006,
-        "output": 0.5,
-        "cache_read": 0.005
+        "input": 0.15,
+        "output": 0.6,
+        "cache_read": 0.003
       },
       "aliases": [
         "~deepseek/deepseek-flash-latest"
@@ -3935,7 +3797,7 @@
       "name": "Dots 3 Note Preview Free",
       "released": "2026-08-14",
       "updated": "2026-08-14",
-      "open_weights": false,
+      "open_weights": true,
       "capabilities": {
         "tools": true,
         "attachments": true,
@@ -5086,6 +4948,53 @@
         "input_audio": 2
       }
     },
+    "google/gemini-4-hydrogen": {
+      "name": "Gemini 4 Hydrogen",
+      "family": "gemini",
+      "released": "2026-11-12",
+      "updated": "2026-11-12",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "audio",
+          "pdf",
+          "image",
+          "text",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 943718
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "medium",
+          "high",
+          "xhigh"
+        ]
+      },
+      "provider_options": {
+        "id": "google/gemini-4-hydrogen",
+        "name": "Gemini 4 Hydrogen"
+      },
+      "price": {
+        "input": 1.5,
+        "output": 7.5,
+        "cache_read": 0.075,
+        "cache_write": 0.083333,
+        "reasoning": 7.5,
+        "input_audio": 1.5
+      }
+    },
     "google/gemini-flash-latest": {
       "name": "Gemini Flash Latest",
       "family": "gemini-flash",
@@ -5099,11 +5008,11 @@
         "structured_output": true,
         "temperature": true,
         "input": [
-          "text",
-          "image",
-          "video",
+          "audio",
           "pdf",
-          "audio"
+          "image",
+          "text",
+          "video"
         ],
         "output": [
           "text"
@@ -5111,13 +5020,14 @@
       },
       "limit": {
         "context": 1048576,
-        "output": 65536
+        "output": 943718
       },
       "reasoning": {
         "efforts": [
           "low",
           "medium",
-          "high"
+          "high",
+          "xhigh"
         ]
       },
       "provider_options": {
@@ -5125,12 +5035,12 @@
         "name": "Gemini Flash Latest"
       },
       "price": {
-        "input": 0.75,
-        "output": 3.75,
+        "input": 1.5,
+        "output": 7.5,
         "cache_read": 0.075,
-        "cache_write": 0.041667,
-        "reasoning": 3.75,
-        "input_audio": 0.75
+        "cache_write": 0.083333,
+        "reasoning": 7.5,
+        "input_audio": 1.5
       }
     },
     "google/gemini-nano-banana-2.1": {
@@ -5407,7 +5317,7 @@
       },
       "price": {
         "input": 0.08,
-        "output": 0.45,
+        "output": 0.35,
         "cache_read": 0.04
       }
     },
@@ -5476,9 +5386,9 @@
         "name": "Gemma 4 26B A4B IT"
       },
       "price": {
-        "input": 0.08,
-        "output": 0.1,
-        "cache_read": 0.046
+        "input": 0.09,
+        "output": 0.28,
+        "cache_read": 0.049
       },
       "variants": {
         "free": {
@@ -5678,7 +5588,7 @@
       },
       "price": {
         "input": 0.06,
-        "output": 0.25,
+        "output": 0.15,
         "cache_read": 0.015
       }
     },
@@ -5798,7 +5708,7 @@
       "capabilities": {
         "tools": true,
         "attachments": false,
-        "structured_output": true,
+        "structured_output": false,
         "temperature": true,
         "input": [
           "text"
@@ -6713,7 +6623,7 @@
       },
       "limit": {
         "context": 200000,
-        "output": 58982
+        "output": 128000
       },
       "reasoning": {},
       "interleaved": {
@@ -6724,9 +6634,9 @@
         "name": "MiniMax-M2.5"
       },
       "price": {
-        "input": 0.3,
-        "output": 1.2,
-        "cache_read": 0.06
+        "input": 0.27,
+        "output": 1.08,
+        "cache_read": 0.027
       }
     },
     "minimax/minimax-m2.7": {
@@ -6837,9 +6747,9 @@
         "name": "MiniMax-M3.1-Flash"
       },
       "price": {
-        "input": 0.15,
-        "output": 0.6,
-        "cache_read": 0.015
+        "input": 0.075,
+        "output": 0.3,
+        "cache_read": 0.0075
       }
     },
     "mistral/codestral-2508": {
@@ -7725,7 +7635,7 @@
       },
       "limit": {
         "context": 262144,
-        "output": 65536
+        "output": 235929
       },
       "reasoning": {
         "mandatory": false
@@ -7738,9 +7648,9 @@
         "name": "Kimi K2.5"
       },
       "price": {
-        "input": 0.532,
-        "output": 3.325,
-        "cache_read": 0.209
+        "input": 0.5,
+        "output": 2.5,
+        "cache_read": 0.15
       }
     },
     "moonshotai/kimi-k2.6": {
@@ -7899,9 +7809,9 @@
         "name": "Kimi K3.1 Pro"
       },
       "price": {
-        "input": 2,
-        "output": 10,
-        "cache_read": 0.2
+        "input": 0.2375,
+        "output": 8.7856,
+        "cache_read": 0.19
       }
     },
     "moonshotai/kimi-latest": {
@@ -7943,7 +7853,7 @@
       },
       "price": {
         "input": 0.1824,
-        "output": 9.3388,
+        "output": 11.0055,
         "cache_read": 0.18
       }
     },
@@ -8295,7 +8205,7 @@
         ]
       },
       "limit": {
-        "context": 1048576,
+        "context": 262144,
         "output": 16384
       },
       "reasoning": {
@@ -12350,9 +12260,9 @@
         "name": "Hy3"
       },
       "price": {
-        "input": 0.132,
-        "output": 0.528,
-        "cache_read": 0.033
+        "input": 0.0825,
+        "output": 0.33,
+        "cache_read": 0.020625
       }
     },
     "tencent/hy3-preview": {
@@ -12472,9 +12382,9 @@
         "name": "Hy4 preview"
       },
       "price": {
-        "input": 0.834,
-        "output": 2.501,
-        "cache_read": 0.042
+        "input": 0.7506,
+        "output": 2.2509,
+        "cache_read": 0.0378
       }
     },
     "thedrummer/cydonia-24b-v4.1": {
@@ -12728,6 +12638,38 @@
       "provider_options": {
         "id": "unbiased/pareto-26.10",
         "name": "Pareto 26.10"
+      },
+      "price": {
+        "input": 0.8,
+        "output": 3.2,
+        "cache_read": 0.03
+      }
+    },
+    "unbiased/pareto-26.10-preview": {
+      "name": "Pareto 26.10 Preview",
+      "released": "2026-10-01",
+      "updated": "2026-10-01",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": false,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "provider_options": {
+        "id": "unbiased/pareto-26.10-preview",
+        "name": "Pareto 26.10 Preview"
       },
       "price": {
         "input": 0.8,
@@ -13864,9 +13806,9 @@
         "name": "GLM-5.1"
       },
       "price": {
-        "input": 1.33,
-        "output": 4.18,
-        "cache_read": 0.247
+        "input": 1.4,
+        "output": 4.4,
+        "cache_read": 0.26
       }
     },
     "zhipuai/glm-5.2": {

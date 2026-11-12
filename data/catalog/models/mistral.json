@@ -1394,7 +1394,6 @@
     "providers": [
       "302ai",
       "anyapi",
-      "cortecs",
       "edenai",
       "kilo",
       "llmgateway",
@@ -1778,7 +1777,6 @@
     ],
     "providers": [
       "aimlapi",
-      "cortecs",
       "helicone",
       "inference",
       "io-net",

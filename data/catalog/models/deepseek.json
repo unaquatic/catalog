@@ -39,36 +39,6 @@
       "orcarouter"
     ]
   },
-  "deepseek/deepseek-chat-cheaper": {
-    "id": "deepseek/deepseek-chat-cheaper",
-    "lab": "deepseek",
-    "name": "DeepSeek Chat Cheaper",
-    "family": "deepseek",
-    "released": "2025-04-15",
-    "updated": "2025-04-15",
-    "open_weights": true,
-    "reasoning": false,
-    "capabilities": {
-      "tools": true,
-      "attachments": true,
-      "structured_output": true,
-      "input": [
-        "text",
-        "pdf"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 128000,
-      "input": 128000,
-      "output": 8192
-    },
-    "providers": [
-      "nano-gpt"
-    ]
-  },
   "deepseek/deepseek-chat-v3-0324": {
     "id": "deepseek/deepseek-chat-v3-0324",
     "lab": "deepseek",
@@ -1253,7 +1223,6 @@
       "munito",
       "munito-eu",
       "nano-gpt",
-      "nebius",
       "neuralwatt",
       "novita-ai",
       "ofox",
@@ -1396,8 +1365,6 @@
       "moark",
       "model-oracle-ai",
       "modelis",
-      "nano-gpt",
-      "nebius",
       "novita-ai",
       "ofox",
       "ollama-cloud",
@@ -1528,6 +1495,35 @@
       "wandb"
     ]
   },
+  "deepseek/deepseek-v4-pro-20260423": {
+    "id": "deepseek/deepseek-v4-pro-20260423",
+    "lab": "deepseek",
+    "name": "DeepSeek V4 Pro 20260423",
+    "family": "deepseek",
+    "released": "2026-04-24",
+    "updated": "2026-04-24",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": false,
+      "structured_output": true,
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "input": 1048576,
+      "output": 384000
+    },
+    "providers": [
+      "nano-gpt"
+    ]
+  },
   "deepseek/deepseek-v4-pro-qwen3.5-9b-uncensored-heretic": {
     "id": "deepseek/deepseek-v4-pro-qwen3.5-9b-uncensored-heretic",
     "lab": "deepseek",
@@ -1626,7 +1622,6 @@
       "morph",
       "nan",
       "nano-gpt",
-      "nebius",
       "neon",
       "novita-ai",
       "nvidia",
@@ -1652,6 +1647,36 @@
       "wally",
       "wandb",
       "zenmux"
+    ]
+  },
+  "deepseek/deepseek-v4.1-flash-0910-uncensored": {
+    "id": "deepseek/deepseek-v4.1-flash-0910-uncensored",
+    "lab": "deepseek",
+    "name": "DeepSeek V4.1 Flash 0910 Uncensored",
+    "family": "deepseek",
+    "released": "2026-10-27",
+    "updated": "2026-10-27",
+    "open_weights": true,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": false,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 524288,
+      "input": 524288,
+      "output": 32768
+    },
+    "providers": [
+      "nano-gpt"
     ]
   },
   "deepseek/deepseek-v4.1-flash-1017": {
@@ -1704,6 +1729,7 @@
       "empiriolabs",
       "engy",
       "fireworks-ai",
+      "frogbot",
       "greenpt",
       "hopper",
       "huggingface",
@@ -1856,6 +1882,36 @@
       "llmgateway-providers"
     ]
   },
+  "deepseek/deepseek-v4.1-flash-latest": {
+    "id": "deepseek/deepseek-v4.1-flash-latest",
+    "lab": "deepseek",
+    "name": "DeepSeek V4.1 Flash Latest",
+    "family": "deepseek",
+    "released": "2026-10-17",
+    "updated": "2026-10-17",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": true,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1050000,
+      "output": 1050000
+    },
+    "providers": [
+      "llmgateway"
+    ]
+  },
   "deepseek/deepseek-v4.1-flash-uncensored": {
     "id": "deepseek/deepseek-v4.1-flash-uncensored",
     "lab": "deepseek",
@@ -1884,7 +1940,8 @@
     },
     "providers": [
       "llmgateway",
-      "llmgateway-providers"
+      "llmgateway-providers",
+      "nano-gpt"
     ]
   }
 }

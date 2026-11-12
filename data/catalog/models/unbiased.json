@@ -58,6 +58,36 @@
       "openrouter"
     ]
   },
+  "unbiased/pareto-26.10-preview": {
+    "id": "unbiased/pareto-26.10-preview",
+    "lab": "unbiased",
+    "name": "Pareto 26.10 Preview",
+    "released": "2026-10-01",
+    "updated": "2026-10-01",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "structured_output": false,
+      "temperature": true,
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "output": 131072
+    },
+    "providers": [
+      "kilo",
+      "openrouter"
+    ]
+  },
   "unbiased/pareto-26.9": {
     "id": "unbiased/pareto-26.9",
     "lab": "unbiased",

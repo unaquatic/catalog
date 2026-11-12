@@ -115,43 +115,6 @@
         "output": 0
       }
     },
-    "alibaba/qwen3.5-397b-a17b": {
-      "name": "Qwen3.5 397B A17B",
-      "family": "qwen",
-      "released": "2026-02-15",
-      "updated": "2026-02-15",
-      "knowledge": "2025-07",
-      "open_weights": true,
-      "capabilities": {
-        "tools": true,
-        "attachments": false,
-        "structured_output": true,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 262144,
-        "input": 250000,
-        "output": 8192
-      },
-      "reasoning": {
-        "mandatory": false
-      },
-      "provider_options": {
-        "id": "Qwen/Qwen3.5-397B-A17B",
-        "name": "Qwen3.5-397B-A17B"
-      },
-      "price": {
-        "input": 0.6,
-        "output": 3.6,
-        "cache_read": 0.12
-      }
-    },
     "alibaba/qwen3.8-27b": {
       "name": "Qwen3.8 27B",
       "family": "qwen",
@@ -197,96 +160,6 @@
         "cache_read": 0.1
       }
     },
-    "deepseek/deepseek-v4-flash-0731": {
-      "name": "DeepSeek V4 Flash 0731",
-      "family": "deepseek-flash",
-      "released": "2026-07-31",
-      "updated": "2026-07-31",
-      "knowledge": "2025-05",
-      "open_weights": true,
-      "capabilities": {
-        "tools": true,
-        "attachments": false,
-        "structured_output": true,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 1024000,
-        "output": 1024000
-      },
-      "reasoning": {
-        "mandatory": false,
-        "efforts": [
-          "none",
-          "low",
-          "high",
-          "max"
-        ]
-      },
-      "interleaved": {
-        "field": "reasoning_content"
-      },
-      "provider_options": {
-        "id": "deepseek-ai/DeepSeek-V4-Flash-0731",
-        "name": "DeepSeek V4 Flash 0731"
-      },
-      "price": {
-        "input": 0.14,
-        "output": 0.28,
-        "cache_read": 0.01
-      }
-    },
-    "deepseek/deepseek-v4-pro": {
-      "name": "DeepSeek V4 Pro",
-      "family": "deepseek-thinking",
-      "released": "2026-04-24",
-      "updated": "2026-04-24",
-      "knowledge": "2025-05",
-      "open_weights": true,
-      "capabilities": {
-        "tools": true,
-        "attachments": false,
-        "structured_output": true,
-        "temperature": true,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 1048576,
-        "output": 1048576
-      },
-      "reasoning": {
-        "mandatory": false,
-        "efforts": [
-          "none",
-          "low",
-          "high",
-          "max"
-        ]
-      },
-      "interleaved": {
-        "field": "reasoning_content"
-      },
-      "provider_options": {
-        "id": "deepseek-ai/DeepSeek-V4-Pro",
-        "name": "DeepSeek V4 Pro"
-      },
-      "price": {
-        "input": 1.75,
-        "output": 3.5,
-        "cache_read": 1.75
-      }
-    },
     "deepseek/deepseek-v4-pro-0813": {
       "name": "DeepSeek V4 Pro 0813",
       "family": "deepseek-thinking",
@@ -329,52 +202,6 @@
         "input": 1.32,
         "output": 3.96,
         "cache_read": 0.04
-      }
-    },
-    "deepseek/deepseek-v4.1-flash": {
-      "name": "DeepSeek V4.1 Flash",
-      "family": "deepseek-flash",
-      "released": "2026-09-10",
-      "updated": "2026-09-10",
-      "knowledge": "2025-05",
-      "open_weights": true,
-      "capabilities": {
-        "tools": true,
-        "attachments": true,
-        "structured_output": true,
-        "temperature": true,
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 1048000,
-        "output": 1048000
-      },
-      "reasoning": {
-        "mandatory": false,
-        "efforts": [
-          "none",
-          "low",
-          "high",
-          "max"
-        ]
-      },
-      "interleaved": {
-        "field": "reasoning_content"
-      },
-      "provider_options": {
-        "id": "deepseek-ai/DeepSeek-V4.1-Flash",
-        "name": "DeepSeek V4.1 Flash"
-      },
-      "price": {
-        "input": 0.3,
-        "output": 1.2,
-        "cache_read": 0.01
       }
     },
     "deepseek/deepseek-v4.1-flash-1017": {
@@ -578,43 +405,6 @@
         "input": 0.15,
         "output": 0.6,
         "cache_read": 0.015
-      }
-    },
-    "moonshotai/kimi-k2.7-code": {
-      "name": "Kimi K2.7 Code",
-      "family": "kimi-k2",
-      "released": "2026-06-12",
-      "updated": "2026-06-12",
-      "knowledge": "2025-01",
-      "open_weights": true,
-      "capabilities": {
-        "tools": true,
-        "attachments": false,
-        "structured_output": true,
-        "temperature": false,
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 262144,
-        "output": 8000
-      },
-      "reasoning": {},
-      "interleaved": {
-        "field": "reasoning_content"
-      },
-      "provider_options": {
-        "id": "moonshotai/Kimi-K2.7-Code",
-        "name": "Kimi K2.7 Code"
-      },
-      "price": {
-        "input": 0.95,
-        "output": 4,
-        "cache_read": 0.15
       }
     },
     "moonshotai/kimi-k3": {

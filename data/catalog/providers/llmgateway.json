@@ -971,29 +971,33 @@
       "open_weights": true,
       "capabilities": {
         "tools": true,
-        "attachments": false,
-        "structured_output": false,
+        "attachments": true,
         "temperature": true,
         "input": [
-          "text"
+          "text",
+          "image",
+          "video"
         ],
         "output": [
           "text"
         ]
       },
       "limit": {
-        "context": 262000,
+        "context": 1000000,
         "output": 32768
       },
       "reasoning": {
+        "mandatory": false,
         "efforts": [
+          "none",
           "low",
           "medium",
+          "high",
           "xhigh"
         ]
       },
       "provider_options": {
-        "id": "Qwen3.8-27B",
+        "id": "qwen3.8-27b",
         "name": "Qwen3.8 27B"
       },
       "price": {
@@ -1969,170 +1973,6 @@
         "cache_write": 2.5
       }
     },
-    "bytedance-seed/seed-1.6-250615": {
-      "name": "Seed 1.6 250615",
-      "family": "seed",
-      "released": "2025-06-25",
-      "updated": "2025-06-25",
-      "open_weights": true,
-      "capabilities": {
-        "tools": true,
-        "attachments": true,
-        "structured_output": true,
-        "temperature": true,
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 256000,
-        "output": 8192
-      },
-      "reasoning": {
-        "efforts": [
-          "minimal",
-          "low",
-          "medium",
-          "high"
-        ]
-      },
-      "provider_options": {
-        "id": "seed-1-6-250615",
-        "name": "Seed 1.6 (250615)"
-      },
-      "price": {
-        "input": 0.25,
-        "output": 2,
-        "cache_read": 0.05
-      }
-    },
-    "bytedance-seed/seed-1.6-250915": {
-      "name": "Seed 1.6 250915",
-      "family": "seed",
-      "released": "2025-09-15",
-      "updated": "2025-09-15",
-      "open_weights": true,
-      "capabilities": {
-        "tools": true,
-        "attachments": true,
-        "structured_output": true,
-        "temperature": true,
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 256000,
-        "output": 8192
-      },
-      "reasoning": {
-        "efforts": [
-          "minimal",
-          "low",
-          "medium",
-          "high"
-        ]
-      },
-      "provider_options": {
-        "id": "seed-1-6-250915",
-        "name": "Seed 1.6 (250915)"
-      },
-      "price": {
-        "input": 0.25,
-        "output": 2,
-        "cache_read": 0.05
-      }
-    },
-    "bytedance-seed/seed-1.6-flash-250715": {
-      "name": "Seed 1.6 Flash 250715",
-      "family": "seed",
-      "released": "2025-07-26",
-      "updated": "2025-07-26",
-      "open_weights": true,
-      "capabilities": {
-        "tools": true,
-        "attachments": true,
-        "structured_output": true,
-        "temperature": true,
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 256000,
-        "output": 8192
-      },
-      "reasoning": {
-        "efforts": [
-          "minimal",
-          "low",
-          "medium",
-          "high"
-        ]
-      },
-      "provider_options": {
-        "id": "seed-1-6-flash-250715",
-        "name": "Seed 1.6 Flash (250715)"
-      },
-      "price": {
-        "input": 0.07,
-        "output": 0.3,
-        "cache_read": 0.015
-      }
-    },
-    "bytedance-seed/seed-1.8-251228": {
-      "name": "Seed 1.8 251228",
-      "family": "seed",
-      "released": "2025-12-18",
-      "updated": "2025-12-18",
-      "open_weights": true,
-      "capabilities": {
-        "tools": true,
-        "attachments": true,
-        "structured_output": true,
-        "temperature": true,
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 256000,
-        "output": 8192
-      },
-      "reasoning": {
-        "efforts": [
-          "minimal",
-          "low",
-          "medium",
-          "high"
-        ]
-      },
-      "provider_options": {
-        "id": "seed-1-8-251228",
-        "name": "Seed 1.8 (251228)"
-      },
-      "price": {
-        "input": 0.25,
-        "output": 2,
-        "cache_read": 0.05
-      }
-    },
     "bytedance-seed/seed-2.0-code-preview-260328": {
       "name": "Seed 2.0 Code Preview 260328",
       "family": "seed",
@@ -2595,6 +2435,51 @@
         "input": 0.3,
         "output": 1,
         "cache_read": 0.007
+      }
+    },
+    "deepseek/deepseek-v4.1-flash-latest": {
+      "name": "DeepSeek V4.1 Flash Latest",
+      "family": "deepseek",
+      "released": "2026-10-17",
+      "updated": "2026-10-17",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1050000,
+        "output": 1050000
+      },
+      "reasoning": {
+        "mandatory": false,
+        "efforts": [
+          "none",
+          "minimal",
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ]
+      },
+      "provider_options": {
+        "id": "deepseek-v4.1-flash-latest",
+        "name": "deepseek-v4.1-flash-latest"
+      },
+      "price": {
+        "input": 0.135,
+        "output": 0.54,
+        "cache_read": 0.003
       }
     },
     "deepseek/deepseek-v4.1-flash-uncensored": {

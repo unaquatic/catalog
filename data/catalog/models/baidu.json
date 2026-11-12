@@ -185,10 +185,10 @@
       "zenmux"
     ]
   },
-  "baidu/ernie-5.5-flash-preview": {
-    "id": "baidu/ernie-5.5-flash-preview",
+  "baidu/ernie-5.5-flash-preview-free": {
+    "id": "baidu/ernie-5.5-flash-preview-free",
     "lab": "baidu",
-    "name": "ERNIE 5.5 Flash Preview",
+    "name": "ERNIE 5.5 Flash Preview Free",
     "family": "ernie",
     "released": "2026-11-10",
     "updated": "2026-11-10",
@@ -242,6 +242,7 @@
     },
     "providers": [
       "kilo",
+      "nano-gpt",
       "openrouter"
     ]
   }
