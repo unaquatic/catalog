@@ -319,6 +319,52 @@
         "cache_write": 12.5
       }
     },
+    "anthropic/claude-fable-5-2": {
+      "name": "Claude Fable 5.2",
+      "family": "claude-fable",
+      "released": "2026-11-09",
+      "updated": "2026-11-09",
+      "knowledge": "2026-06",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "reasoning": {
+        "mandatory": true,
+        "default_enabled": true,
+        "efforts": [
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ],
+        "default_effort": "high"
+      },
+      "provider_options": {
+        "id": "anthropic-claude-fable-5.2",
+        "name": "Anthropic Claude Fable 5.2"
+      },
+      "price": {
+        "input": 8,
+        "output": 40,
+        "cache_read": 0.2,
+        "cache_write": 10
+      }
+    },
     "anthropic/claude-haiku-4-5": {
       "name": "Claude Haiku 4.5",
       "family": "claude-haiku",
@@ -1649,6 +1695,39 @@
         "input": 3,
         "output": 15,
         "cache_read": 0.3
+      }
+    },
+    "moonshotai/kimi-k3.1-pro": {
+      "name": "Kimi K3.1 Pro",
+      "family": "kimi-k3",
+      "released": "2026-10-23",
+      "updated": "2026-10-23",
+      "open_weights": true,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 1048576
+      },
+      "reasoning": {},
+      "provider_options": {
+        "id": "kimi-k3.1-pro",
+        "name": "Kimi K3.1 Pro"
+      },
+      "price": {
+        "input": 2,
+        "output": 10,
+        "cache_read": 0.2
       }
     },
     "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning": {

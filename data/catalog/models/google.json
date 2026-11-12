@@ -1,33 +1,4 @@
 {
-  "google/amoral-gemma3-27b-v2": {
-    "id": "google/amoral-gemma3-27b-v2",
-    "lab": "google",
-    "name": "Amoral Gemma 3 27B V2",
-    "family": "gemma",
-    "released": "2025-05-23",
-    "updated": "2025-05-23",
-    "open_weights": true,
-    "reasoning": false,
-    "capabilities": {
-      "tools": false,
-      "attachments": false,
-      "structured_output": false,
-      "input": [
-        "text"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 32768,
-      "input": 32768,
-      "output": 8192
-    },
-    "providers": [
-      "nano-gpt"
-    ]
-  },
   "google/deep-research-max-preview-04-2026": {
     "id": "google/deep-research-max-preview-04-2026",
     "lab": "google",
@@ -203,67 +174,6 @@
       "302ai",
       "poe",
       "qiniu-ai"
-    ]
-  },
-  "google/gemini-2.0-pro-exp-02-05": {
-    "id": "google/gemini-2.0-pro-exp-02-05",
-    "lab": "google",
-    "name": "Gemini 2.0 Pro Exp 02 05",
-    "family": "gemini",
-    "released": "2025-02-05",
-    "updated": "2025-02-05",
-    "open_weights": false,
-    "reasoning": false,
-    "capabilities": {
-      "tools": false,
-      "attachments": true,
-      "structured_output": false,
-      "input": [
-        "text",
-        "image",
-        "audio"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 2097152,
-      "input": 2097152,
-      "output": 8192
-    },
-    "providers": [
-      "nano-gpt"
-    ]
-  },
-  "google/gemini-2.0-pro-reasoner": {
-    "id": "google/gemini-2.0-pro-reasoner",
-    "lab": "google",
-    "name": "Gemini 2.0 Pro Reasoner",
-    "family": "gemini",
-    "released": "2024-01-01",
-    "updated": "2025-02-05",
-    "open_weights": false,
-    "reasoning": false,
-    "capabilities": {
-      "tools": false,
-      "attachments": true,
-      "structured_output": false,
-      "input": [
-        "text",
-        "audio"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 128000,
-      "input": 128000,
-      "output": 65536
-    },
-    "providers": [
-      "nano-gpt"
     ]
   },
   "google/gemini-2.5-computer-use-preview-10-2025": {
@@ -480,8 +390,7 @@
       "output": 65536
     },
     "providers": [
-      "jiekou",
-      "nano-gpt"
+      "jiekou"
     ]
   },
   "google/gemini-2.5-flash-lite-preview-09-2025": {
@@ -515,39 +424,7 @@
     },
     "providers": [
       "302ai",
-      "jiekou",
-      "nano-gpt"
-    ]
-  },
-  "google/gemini-2.5-flash-preview-04-17": {
-    "id": "google/gemini-2.5-flash-preview-04-17",
-    "lab": "google",
-    "name": "Gemini 2.5 Flash Preview 04 17",
-    "family": "gemini",
-    "released": "2025-04-17",
-    "updated": "2025-04-17",
-    "open_weights": false,
-    "reasoning": true,
-    "capabilities": {
-      "tools": false,
-      "attachments": true,
-      "structured_output": false,
-      "input": [
-        "text",
-        "image",
-        "audio"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 1048576,
-      "input": 1048576,
-      "output": 65536
-    },
-    "providers": [
-      "nano-gpt"
+      "jiekou"
     ]
   },
   "google/gemini-2.5-flash-preview-05-20": {
@@ -580,8 +457,7 @@
       "output": 65536
     },
     "providers": [
-      "jiekou",
-      "nano-gpt"
+      "jiekou"
     ]
   },
   "google/gemini-2.5-flash-preview-09-2025": {
@@ -610,8 +486,7 @@
       "output": 65536
     },
     "providers": [
-      "302ai",
-      "nano-gpt"
+      "302ai"
     ]
   },
   "google/gemini-2.5-flash-preview-tts": {
@@ -733,37 +608,6 @@
       "zenmux"
     ]
   },
-  "google/gemini-2.5-pro-exp-03-25": {
-    "id": "google/gemini-2.5-pro-exp-03-25",
-    "lab": "google",
-    "name": "Gemini 2.5 Pro Exp 03 25",
-    "family": "gemini",
-    "released": "2025-03-25",
-    "updated": "2025-03-25",
-    "open_weights": false,
-    "reasoning": true,
-    "capabilities": {
-      "tools": false,
-      "attachments": true,
-      "structured_output": false,
-      "input": [
-        "text",
-        "image",
-        "audio"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 1048576,
-      "input": 1048576,
-      "output": 65536
-    },
-    "providers": [
-      "nano-gpt"
-    ]
-  },
   "google/gemini-2.5-pro-preview": {
     "id": "google/gemini-2.5-pro-preview",
     "lab": "google",
@@ -797,68 +641,6 @@
       "kilo",
       "nano-gpt",
       "openrouter"
-    ]
-  },
-  "google/gemini-2.5-pro-preview-03-25": {
-    "id": "google/gemini-2.5-pro-preview-03-25",
-    "lab": "google",
-    "name": "Gemini 2.5 Pro Preview 03 25",
-    "family": "gemini",
-    "released": "2025-03-25",
-    "updated": "2025-03-25",
-    "open_weights": false,
-    "reasoning": true,
-    "capabilities": {
-      "tools": false,
-      "attachments": true,
-      "structured_output": false,
-      "input": [
-        "text",
-        "image",
-        "audio"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 1048576,
-      "input": 1048576,
-      "output": 65536
-    },
-    "providers": [
-      "nano-gpt"
-    ]
-  },
-  "google/gemini-2.5-pro-preview-05-06": {
-    "id": "google/gemini-2.5-pro-preview-05-06",
-    "lab": "google",
-    "name": "Gemini 2.5 Pro Preview 05 06",
-    "family": "gemini",
-    "released": "2025-05-06",
-    "updated": "2025-05-06",
-    "open_weights": false,
-    "reasoning": true,
-    "capabilities": {
-      "tools": false,
-      "attachments": true,
-      "structured_output": false,
-      "input": [
-        "text",
-        "image",
-        "audio"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 1048576,
-      "input": 1048576,
-      "output": 65536
-    },
-    "providers": [
-      "nano-gpt"
     ]
   },
   "google/gemini-2.5-pro-preview-tts": {
@@ -1588,6 +1370,7 @@
       "cortecs",
       "crossmodel",
       "edenai",
+      "frogbot",
       "google",
       "google-vertex",
       "impossibl",
@@ -1734,6 +1517,7 @@
       "cortecs",
       "crossmodel",
       "edenai",
+      "frogbot",
       "github-copilot",
       "google",
       "google-vertex",
@@ -1851,6 +1635,7 @@
       "cortecs",
       "crossmodel",
       "edenai",
+      "frogbot",
       "github-copilot",
       "google",
       "google-vertex",
@@ -2030,6 +1815,7 @@
       "cortecs",
       "crossmodel",
       "edenai",
+      "frogbot",
       "github-copilot",
       "google",
       "google-vertex",
@@ -2078,6 +1864,8 @@
       "output": 65536
     },
     "providers": [
+      "cortecs",
+      "crossmodel",
       "edenai",
       "github-copilot",
       "google",
@@ -2089,6 +1877,74 @@
       "opencode",
       "openrouter",
       "prime",
+      "vercel"
+    ]
+  },
+  "google/gemini-4-hydrogen": {
+    "id": "google/gemini-4-hydrogen",
+    "lab": "google",
+    "name": "Gemini 4 Hydrogen",
+    "family": "gemini",
+    "released": "2026-11-12",
+    "updated": "2026-11-12",
+    "knowledge": "2026-03",
+    "open_weights": false,
+    "reasoning": true,
+    "capabilities": {
+      "tools": true,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image",
+        "video",
+        "audio",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 1048576,
+      "output": 65536
+    },
+    "providers": [
+      "google",
+      "google-vertex",
+      "opencode",
+      "openrouter",
+      "vercel"
+    ]
+  },
+  "google/gemini-decision-1": {
+    "id": "google/gemini-decision-1",
+    "lab": "google",
+    "name": "Gemini Decision 1",
+    "family": "gemini",
+    "type": "decision",
+    "released": "2026-11-11",
+    "updated": "2026-11-11",
+    "open_weights": false,
+    "reasoning": false,
+    "capabilities": {
+      "tools": false,
+      "attachments": true,
+      "temperature": false,
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "limit": {
+      "context": 262144,
+      "output": 0
+    },
+    "providers": [
       "vercel"
     ]
   },
@@ -2188,37 +2044,6 @@
       "google",
       "tempr",
       "vercel"
-    ]
-  },
-  "google/gemini-exp-1206": {
-    "id": "google/gemini-exp-1206",
-    "lab": "google",
-    "name": "Gemini Exp 1206",
-    "family": "gemini",
-    "released": "2024-12-06",
-    "updated": "2024-12-06",
-    "open_weights": false,
-    "reasoning": false,
-    "capabilities": {
-      "tools": false,
-      "attachments": true,
-      "structured_output": false,
-      "input": [
-        "text",
-        "image",
-        "audio"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 2097152,
-      "input": 2097152,
-      "output": 8192
-    },
-    "providers": [
-      "nano-gpt"
     ]
   },
   "google/gemini-flash-latest": {
@@ -4262,8 +4087,8 @@
       ]
     },
     "limit": {
-      "context": 262144,
-      "input": 262144,
+      "context": 32768,
+      "input": 32768,
       "output": 32768
     },
     "providers": [

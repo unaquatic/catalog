@@ -2183,6 +2183,63 @@
         "input_audio": 2
       }
     },
+    "google/gemini-4-hydrogen": {
+      "name": "Gemini 4 Hydrogen",
+      "family": "gemini",
+      "released": "2026-11-12",
+      "updated": "2026-11-12",
+      "knowledge": "2026-03",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image",
+          "video",
+          "audio",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "medium",
+          "high",
+          "xhigh"
+        ]
+      },
+      "provider_options": {
+        "id": "gemini-4-hydrogen",
+        "name": "Gemini 4 Hydrogen",
+        "endpoint": {
+          "format": "gemini",
+          "api": "https://opencode.ai/inference/google/v1beta",
+          "auth": {
+            "scheme": "header",
+            "header": "x-goog-api-key"
+          },
+          "env": [
+            "OPENCODE_API_KEY"
+          ]
+        }
+      },
+      "price": {
+        "input": 1.5,
+        "output": 7.5,
+        "cache_read": 0.075,
+        "input_audio": 1.5
+      }
+    },
     "inclusionai/ling-2.6-flash": {
       "name": "Ling 2.6 Flash",
       "family": "ling-flash-free",

@@ -91,9 +91,9 @@
         "name": "Kimi K2.6"
       },
       "price": {
-        "input": 0.7995,
+        "input": 0.7985,
         "output": 3.75,
-        "cache_read": 0.156,
+        "cache_read": 0.19,
         "cache_write": 0
       }
     },
@@ -216,7 +216,7 @@
       },
       "price": {
         "input": 1,
-        "output": 4.9,
+        "output": 4.2,
         "cache_read": 0.14,
         "cache_write": 0
       }
@@ -259,8 +259,8 @@
       },
       "price": {
         "input": 0.175,
-        "output": 0.45,
-        "cache_read": 0.03,
+        "output": 0.47,
+        "cache_read": 0.04,
         "cache_write": 0
       }
     }

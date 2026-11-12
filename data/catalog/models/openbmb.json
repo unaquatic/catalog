@@ -1,32 +1,4 @@
 {
-  "openbmb/minicpm-v-4.5": {
-    "id": "openbmb/minicpm-v-4.5",
-    "lab": "openbmb",
-    "name": "MiniCPM V 4.5",
-    "released": "2026-06-02",
-    "updated": "2026-06-02",
-    "open_weights": false,
-    "reasoning": false,
-    "capabilities": {
-      "tools": true,
-      "attachments": false,
-      "structured_output": true,
-      "temperature": false,
-      "input": [
-        "text"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 32000,
-      "output": 32000
-    },
-    "providers": [
-      "cortecs"
-    ]
-  },
   "openbmb/minicpm-v-4.7-1b": {
     "id": "openbmb/minicpm-v-4.7-1b",
     "lab": "openbmb",

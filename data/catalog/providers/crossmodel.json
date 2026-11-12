@@ -1666,6 +1666,50 @@
         "cache_write": 2
       }
     },
+    "google/gemini-4-carbon": {
+      "name": "Gemini 4 Carbon",
+      "family": "gemini",
+      "released": "2026-11-10",
+      "updated": "2026-11-10",
+      "knowledge": "2026-03",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "structured_output": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image",
+          "audio",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "provider_options": {
+        "id": "gemini/gemini-4-carbon",
+        "name": "Gemini 4 Carbon"
+      },
+      "price": {
+        "input": 2,
+        "output": 10,
+        "cache_read": 0.1,
+        "cache_write": 2
+      }
+    },
     "minimax/minimax-m2.7": {
       "name": "MiniMax M2.7",
       "family": "minimax",

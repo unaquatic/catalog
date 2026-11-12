@@ -197,10 +197,7 @@
       "output": 64000
     },
     "providers": [
-      "kilo",
-      "openrouter",
       "qiniu-ai",
-      "vercel",
       "volcengine"
     ]
   },
@@ -232,8 +229,6 @@
     },
     "providers": [
       "aimlapi",
-      "kilo",
-      "openrouter",
       "qiniu-ai",
       "volcengine"
     ]
@@ -296,133 +291,8 @@
     "providers": [
       "302ai",
       "requesty",
-      "vercel",
       "volcengine",
       "zenmux"
-    ]
-  },
-  "bytedance-seed/seed-1.6-250615": {
-    "id": "bytedance-seed/seed-1.6-250615",
-    "lab": "bytedance-seed",
-    "name": "Seed 1.6 250615",
-    "family": "seed",
-    "released": "2025-06-25",
-    "updated": "2025-06-25",
-    "open_weights": true,
-    "reasoning": true,
-    "capabilities": {
-      "tools": true,
-      "attachments": true,
-      "structured_output": true,
-      "temperature": true,
-      "input": [
-        "text",
-        "image"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 256000,
-      "output": 8192
-    },
-    "providers": [
-      "llmgateway",
-      "llmgateway-providers"
-    ]
-  },
-  "bytedance-seed/seed-1.6-250915": {
-    "id": "bytedance-seed/seed-1.6-250915",
-    "lab": "bytedance-seed",
-    "name": "Seed 1.6 250915",
-    "family": "seed",
-    "released": "2025-09-15",
-    "updated": "2025-09-15",
-    "open_weights": true,
-    "reasoning": true,
-    "capabilities": {
-      "tools": true,
-      "attachments": true,
-      "structured_output": true,
-      "temperature": true,
-      "input": [
-        "text",
-        "image"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 256000,
-      "output": 8192
-    },
-    "providers": [
-      "llmgateway",
-      "llmgateway-providers"
-    ]
-  },
-  "bytedance-seed/seed-1.6-flash-250715": {
-    "id": "bytedance-seed/seed-1.6-flash-250715",
-    "lab": "bytedance-seed",
-    "name": "Seed 1.6 Flash 250715",
-    "family": "seed",
-    "released": "2025-07-26",
-    "updated": "2025-07-26",
-    "open_weights": true,
-    "reasoning": true,
-    "capabilities": {
-      "tools": true,
-      "attachments": true,
-      "structured_output": true,
-      "temperature": true,
-      "input": [
-        "text",
-        "image"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 256000,
-      "output": 8192
-    },
-    "providers": [
-      "llmgateway",
-      "llmgateway-providers"
-    ]
-  },
-  "bytedance-seed/seed-1.8-251228": {
-    "id": "bytedance-seed/seed-1.8-251228",
-    "lab": "bytedance-seed",
-    "name": "Seed 1.8 251228",
-    "family": "seed",
-    "released": "2025-12-18",
-    "updated": "2025-12-18",
-    "open_weights": true,
-    "reasoning": true,
-    "capabilities": {
-      "tools": true,
-      "attachments": true,
-      "structured_output": true,
-      "temperature": true,
-      "input": [
-        "text",
-        "image"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "limit": {
-      "context": 256000,
-      "output": 8192
-    },
-    "providers": [
-      "llmgateway",
-      "llmgateway-providers"
     ]
   },
   "bytedance-seed/seed-2.0-code": {
@@ -452,14 +322,11 @@
       "output": 131072
     },
     "providers": [
-      "aimlapi",
       "deepinfra",
       "edenai",
       "empiriolabs",
-      "kilo",
       "nano-gpt",
       "ofox",
-      "openrouter",
       "qiniu-ai",
       "requesty",
       "volcengine",
@@ -1027,36 +894,6 @@
     "type": "video",
     "released": "2025-06-11",
     "updated": "2025-06-11",
-    "open_weights": false,
-    "reasoning": false,
-    "capabilities": {
-      "tools": false,
-      "attachments": true,
-      "temperature": false,
-      "input": [
-        "text",
-        "image"
-      ],
-      "output": [
-        "video"
-      ]
-    },
-    "limit": {
-      "context": 0,
-      "output": 0
-    },
-    "providers": [
-      "vercel"
-    ]
-  },
-  "bytedance-seed/seedance-v1.5-pro": {
-    "id": "bytedance-seed/seedance-v1.5-pro",
-    "lab": "bytedance-seed",
-    "name": "Seedance V1.5 Pro",
-    "family": "seed",
-    "type": "video",
-    "released": "2025-12-16",
-    "updated": "2025-12-16",
     "open_weights": false,
     "reasoning": false,
     "capabilities": {

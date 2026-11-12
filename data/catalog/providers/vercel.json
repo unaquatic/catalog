@@ -711,13 +711,7 @@
         "output": 65536
       },
       "reasoning": {
-        "mandatory": false,
-        "efforts": [
-          "none",
-          "low",
-          "medium",
-          "high"
-        ]
+        "mandatory": false
       },
       "provider_options": {
         "id": "alibaba/qwen3.6-35b-a3b",
@@ -1039,7 +1033,7 @@
       },
       "price": {
         "input": 0.06,
-        "output": 2.3,
+        "output": 2.2,
         "cache_read": 0.059
       }
     },
@@ -1671,12 +1665,9 @@
         "output": 65535
       },
       "reasoning": {
-        "mandatory": false,
         "efforts": [
-          "none",
           "low",
-          "medium",
-          "high"
+          "medium"
         ]
       },
       "provider_options": {
@@ -2220,8 +2211,7 @@
           "xhigh",
           "max"
         ],
-        "default_effort": "high",
-        "budget": {}
+        "default_effort": "high"
       },
       "provider_options": {
         "id": "anthropic/claude-opus-4.7",
@@ -2269,8 +2259,7 @@
           "xhigh",
           "max"
         ],
-        "default_effort": "high",
-        "budget": {}
+        "default_effort": "high"
       },
       "provider_options": {
         "id": "anthropic/claude-opus-4.8",
@@ -2334,8 +2323,7 @@
           "xhigh",
           "max"
         ],
-        "default_effort": "high",
-        "budget": {}
+        "default_effort": "high"
       },
       "provider_options": {
         "id": "anthropic/claude-opus-5",
@@ -2571,8 +2559,7 @@
           "xhigh",
           "max"
         ],
-        "default_effort": "high",
-        "budget": {}
+        "default_effort": "high"
       },
       "provider_options": {
         "id": "anthropic/claude-sonnet-5",
@@ -3125,101 +3112,6 @@
         }
       }
     },
-    "bytedance-seed/seed-1-6": {
-      "name": "Seed 1.6",
-      "family": "seed",
-      "released": "2025-10-15",
-      "updated": "2025-10-15",
-      "open_weights": false,
-      "capabilities": {
-        "tools": true,
-        "attachments": true,
-        "structured_output": true,
-        "temperature": true,
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 256000,
-        "output": 32000
-      },
-      "reasoning": {
-        "mandatory": false
-      },
-      "provider_options": {
-        "id": "bytedance/seed-1.6",
-        "name": "Seed 1.6"
-      },
-      "price": {
-        "input": 0.25,
-        "output": 2,
-        "cache_read": 0.05,
-        "tiers": [
-          {
-            "above": 128001,
-            "input": 0.5,
-            "output": 4,
-            "cache_read": 0.05
-          }
-        ]
-      }
-    },
-    "bytedance-seed/seed-1-8": {
-      "name": "Seed 1.8",
-      "family": "seed",
-      "released": "2025-12-28",
-      "updated": "2025-12-28",
-      "open_weights": false,
-      "capabilities": {
-        "tools": true,
-        "attachments": true,
-        "structured_output": true,
-        "temperature": true,
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "limit": {
-        "context": 256000,
-        "output": 32768
-      },
-      "reasoning": {
-        "mandatory": false,
-        "efforts": [
-          "none",
-          "minimal",
-          "low",
-          "medium",
-          "high"
-        ]
-      },
-      "provider_options": {
-        "id": "bytedance/seed-1.8",
-        "name": "Seed 1.8"
-      },
-      "price": {
-        "input": 0.25,
-        "output": 2,
-        "cache_read": 0.05,
-        "tiers": [
-          {
-            "above": 128001,
-            "input": 0.5,
-            "output": 4,
-            "cache_read": 0.05
-          }
-        ]
-      }
-    },
     "bytedance-seed/seed-2.1-turbo": {
       "name": "Seed 2.1 Turbo",
       "family": "seed",
@@ -3462,44 +3354,6 @@
             "id": "bytedance/seedance-v1.0-pro-fast",
             "name": "Seedance v1.0 Pro Fast"
           }
-        }
-      }
-    },
-    "bytedance-seed/seedance-v1.5-pro": {
-      "name": "Seedance V1.5 Pro",
-      "family": "seed",
-      "type": "video",
-      "released": "2025-12-16",
-      "updated": "2025-12-16",
-      "open_weights": false,
-      "capabilities": {
-        "tools": false,
-        "attachments": true,
-        "temperature": false,
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "video"
-        ]
-      },
-      "limit": {
-        "context": 0,
-        "output": 0
-      },
-      "provider_options": {
-        "id": "bytedance/seedance-v1.5-pro",
-        "name": "Seedance v1.5 Pro",
-        "endpoint": {
-          "format": "openai-chat",
-          "api": "https://ai-gateway.vercel.sh/v4/ai",
-          "auth": {
-            "scheme": "bearer"
-          },
-          "env": [
-            "AI_GATEWAY_API_KEY"
-          ]
         }
       }
     },
@@ -4205,7 +4059,8 @@
           "low",
           "medium",
           "high"
-        ]
+        ],
+        "budget": {}
       },
       "provider_options": {
         "id": "deepseek/deepseek-v4-flash",
@@ -4887,7 +4742,9 @@
           "medium",
           "high"
         ],
-        "budget": {}
+        "budget": {
+          "min": 512
+        }
       },
       "provider_options": {
         "id": "google/gemini-2.5-flash-lite",
@@ -4925,14 +4782,14 @@
         "output": 65535
       },
       "reasoning": {
-        "mandatory": false,
         "efforts": [
-          "none",
           "low",
           "medium",
           "high"
         ],
-        "budget": {}
+        "budget": {
+          "min": 128
+        }
       },
       "provider_options": {
         "id": "google/gemini-2.5-pro",
@@ -5053,8 +4910,10 @@
         "output": 32768
       },
       "reasoning": {
+        "mandatory": false,
         "efforts": [
-          "low",
+          "none",
+          "minimal",
           "high"
         ]
       },
@@ -5136,8 +4995,10 @@
         "output": 4096
       },
       "reasoning": {
+        "mandatory": false,
         "efforts": [
-          "low",
+          "none",
+          "minimal",
           "high"
         ]
       },
@@ -5226,11 +5087,8 @@
         "output": 64000
       },
       "reasoning": {
-        "mandatory": false,
         "efforts": [
-          "none",
           "low",
-          "medium",
           "high"
         ]
       },
@@ -5431,11 +5289,8 @@
         "output": 65535
       },
       "reasoning": {
-        "mandatory": false,
         "efforts": [
-          "none",
           "low",
-          "medium",
           "high"
         ]
       },
@@ -5744,6 +5599,89 @@
         "input": 2,
         "output": 10,
         "cache_read": 0.1
+      }
+    },
+    "google/gemini-4-hydrogen": {
+      "name": "Gemini 4 Hydrogen",
+      "family": "gemini",
+      "released": "2026-11-12",
+      "updated": "2026-11-12",
+      "open_weights": false,
+      "capabilities": {
+        "tools": true,
+        "attachments": true,
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 1000000
+      },
+      "reasoning": {
+        "efforts": [
+          "low",
+          "medium",
+          "high",
+          "xhigh"
+        ]
+      },
+      "provider_options": {
+        "id": "google/gemini-4-hydrogen",
+        "name": "Gemini 4 Hydrogen"
+      },
+      "price": {
+        "input": 1.5,
+        "output": 7.5,
+        "cache_read": 0.075
+      }
+    },
+    "google/gemini-decision-1": {
+      "name": "Gemini Decision 1",
+      "family": "gemini",
+      "type": "decision",
+      "released": "2026-11-11",
+      "updated": "2026-11-11",
+      "open_weights": false,
+      "capabilities": {
+        "tools": false,
+        "attachments": true,
+        "temperature": false,
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "limit": {
+        "context": 262144,
+        "output": 0
+      },
+      "provider_options": {
+        "id": "google/gemini-decision-1",
+        "name": "Gemini Decision 1",
+        "endpoint": {
+          "format": "openai-responses",
+          "api": "https://ai-gateway.vercel.sh/v1",
+          "auth": {
+            "scheme": "bearer"
+          },
+          "env": [
+            "AI_GATEWAY_API_KEY"
+          ]
+        }
+      },
+      "price": {
+        "input": 0.1,
+        "output": 0
       }
     },
     "google/gemini-embedding-001": {
@@ -8306,6 +8244,7 @@
         "output": 512000
       },
       "reasoning": {
+        "mandatory": false,
         "budget": {}
       },
       "provider_options": {
@@ -10316,9 +10255,7 @@
         "output": 128000
       },
       "reasoning": {
-        "mandatory": false,
         "efforts": [
-          "none",
           "low",
           "medium",
           "high"
@@ -10361,12 +10298,11 @@
         "output": 128000
       },
       "reasoning": {
-        "mandatory": false,
         "efforts": [
-          "none",
           "low",
           "medium",
-          "high"
+          "high",
+          "xhigh"
         ]
       },
       "provider_options": {
@@ -10406,9 +10342,7 @@
         "output": 128000
       },
       "reasoning": {
-        "mandatory": false,
         "efforts": [
-          "none",
           "low",
           "medium",
           "high"
@@ -10453,11 +10387,9 @@
         "mandatory": false,
         "efforts": [
           "none",
-          "minimal",
           "low",
           "medium",
-          "high",
-          "xhigh"
+          "high"
         ]
       },
       "provider_options": {
@@ -10515,7 +10447,6 @@
         "mandatory": false,
         "efforts": [
           "none",
-          "minimal",
           "low",
           "medium",
           "high",
@@ -10574,12 +10505,11 @@
         "output": 128000
       },
       "reasoning": {
-        "mandatory": false,
         "efforts": [
-          "none",
           "low",
           "medium",
-          "high"
+          "high",
+          "xhigh"
         ]
       },
       "provider_options": {
@@ -10664,7 +10594,6 @@
         "mandatory": false,
         "efforts": [
           "none",
-          "minimal",
           "low",
           "medium",
           "high",
@@ -10726,7 +10655,6 @@
         "mandatory": false,
         "efforts": [
           "none",
-          "minimal",
           "low",
           "medium",
           "high",
@@ -10796,7 +10724,6 @@
         "mandatory": false,
         "efforts": [
           "none",
-          "minimal",
           "low",
           "medium",
           "high",
@@ -10858,7 +10785,6 @@
         "mandatory": false,
         "efforts": [
           "none",
-          "minimal",
           "low",
           "medium",
           "high",
@@ -10902,11 +10828,7 @@
         "output": 128000
       },
       "reasoning": {
-        "mandatory": false,
         "efforts": [
-          "none",
-          "minimal",
-          "low",
           "medium",
           "high",
           "xhigh"
@@ -10958,7 +10880,6 @@
         "mandatory": false,
         "efforts": [
           "none",
-          "minimal",
           "low",
           "medium",
           "high",
@@ -11159,7 +11080,6 @@
         "mandatory": false,
         "efforts": [
           "none",
-          "minimal",
           "low",
           "medium",
           "high",
@@ -11242,7 +11162,6 @@
         "mandatory": false,
         "efforts": [
           "none",
-          "minimal",
           "low",
           "medium",
           "high",
@@ -15251,9 +15170,7 @@
         "output": 2000000
       },
       "reasoning": {
-        "mandatory": false,
         "efforts": [
-          "none",
           "low",
           "medium",
           "high"
@@ -15300,9 +15217,7 @@
         "output": 2000000
       },
       "reasoning": {
-        "mandatory": false,
         "efforts": [
-          "none",
           "low",
           "medium",
           "high"

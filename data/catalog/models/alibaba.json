@@ -1476,7 +1476,6 @@
       "alibaba-cn",
       "huggingface",
       "jiekou",
-      "nano-gpt",
       "qiniu-ai"
     ]
   },
@@ -3565,7 +3564,6 @@
       "llmtr",
       "mixlayer",
       "nano-gpt",
-      "nebius",
       "novita-ai",
       "ofox",
       "openrouter",
@@ -4649,8 +4647,8 @@
       ]
     },
     "limit": {
-      "context": 524288,
-      "input": 524288,
+      "context": 1048576,
+      "input": 1048576,
       "output": 32768
     },
     "providers": [
@@ -4858,8 +4856,8 @@
       ]
     },
     "limit": {
-      "context": 524288,
-      "input": 524288,
+      "context": 1048576,
+      "input": 1048576,
       "output": 32768
     },
     "providers": [
@@ -4977,8 +4975,8 @@
       ]
     },
     "limit": {
-      "context": 524288,
-      "input": 524288,
+      "context": 1048576,
+      "input": 1048576,
       "output": 235929
     },
     "providers": [
